@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163b38">
+  <meta name="description" content="Cheney 的城市足迹全录，按城市翻阅到访时间、地点与旅途片段。">
+  <title>足迹全录 · Cheney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261009-23">
+  <link rel="stylesheet" href="../assets/travels.css?v=20261012-02">
+  <script src="../assets/travels.js?v=20261012-02" defer></script>
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-atmosphere.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-chapters.css?v=20261019-review-02">
+<script src="../assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="../assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="../assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="../assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+<body class="travel-page travel-directory-page" data-ink-page="travel">
+  <a class="skip" href="#travel-main">跳到足迹全录</a>
+  <header class="travel-bar">
+    <a class="travel-brand" href="../index.html#travels">Cheney <small>足迹</small></a>
+    <a class="travel-back" href="../index.html#travels">回到主页</a>
+  </header>
+  <main id="travel-main" class="travel-main">
+    <nav class="travel-crumb" aria-label="当前位置"><a href="../index.html#travels">足迹</a><span aria-hidden="true">／</span><span>足迹全录</span></nav>
+    <header class="travel-hero">
+      <div class="travel-hero-copy">
+        <p class="travel-overline">山河行记 · 城市为序</p>
+        <p class="travel-region">步履所至，皆成一卷</p>
+        <h1>足迹全录</h1>
+        <p class="travel-lead">以城市为索引，收下每一次抵达与重逢。</p>
+      </div>
+      <div class="travel-hero-summary" aria-label="城市足迹总览">
+        <div class="travel-directory-metric"><span>收录</span><strong id="travel-directory-cities">—</strong><span>座城</span></div>
+        <small id="travel-directory-visits">— 次抵达</small>
+      </div>
+    </header>
+    <section class="travel-directory" aria-labelledby="travel-directory-title">
+      <div class="travel-directory-heading">
+        <div><p class="travel-overline">CITY INDEX</p><h2 id="travel-directory-title">循城寻迹</h2></div>
+        <p>同城连游满三日，方录入足迹。</p>
+      </div>
+      <div class="travel-directory-tools">
+        <div class="travel-region-controls"><p>按地域阅览</p><div class="travel-region-filters" id="travel-region-filters" role="group" aria-label="按地域筛选城市"></div></div>
+        <label class="travel-search-wrap"><span class="travel-search-label">检索城市</span><input class="travel-city-search" id="travel-city-search" type="search" placeholder="城市、省份或地标" autocomplete="off"></label>
+      </div>
+      <p class="travel-directory-result" id="travel-directory-result" aria-live="polite">全部城市</p>
+      <ul class="travel-city-grid" id="travel-cities" aria-label="全部到访城市"></ul>
+      <p class="travel-search-empty" id="travel-search-empty" hidden>未寻得此城，试试别的名字。</p>
+    </section>
+    <footer class="travel-footer"><span>一城一卷 · 足迹全录</span><a href="../index.html#travels">回到主页足迹</a></footer>
+  </main>
+</body>
+</html>

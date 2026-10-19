@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="zh-CN" data-ink-preserve="ai">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#071217">
+ <meta name="description" content="Cheney 的 AI 探索图谱：通用推理、编程、图像、视频、语音与音乐模型，按用途查找并直达官方入口。">
+ <title>AI 探索 · Cheney</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23071217'/%3E%3Cpath d='m7 23 9-15 9 15M11 18h10' fill='none' stroke='%238ee7db' stroke-width='2'/%3E%3C/svg%3E">
+ <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="../assets/ai-exploration.css?v=20261019-ai-01">
+ <script src="../assets/ai-exploration.js?v=20261019-ai-01" defer></script>
+</head>
+<body class="ai-page">
+ <a class="ai-skip" href="#model-atlas">跳到模型图谱</a>
+ <header class="ai-bar"><a class="ai-brand" href="../index.html#about">Cheney<span> / AI EXPLORATION</span></a><a class="ai-home" href="../index.html#about">返回主页 <span aria-hidden="true">↗</span></a></header>
+ <main id="ai-main">
+  <section class="ai-hero" aria-labelledby="ai-title">
+   <div class="ai-hero-copy"><p class="ai-eyebrow"><span class="ai-live-dot" aria-hidden="true"></span>INTELLIGENCE / ATLAS</p>
+    <h1 id="ai-title"><span>AI</span> 探索<span class="ai-title-period" aria-hidden="true">.</span></h1>
+    <p class="ai-hero-lead">从语言到影像，从思考到创造。</p><p class="ai-hero-description">走近主流模型，找到适合此刻想法的工具。<br>按用途浏览，或从一个熟悉的名字开始。</p>
+    <a class="ai-primary" href="#model-atlas">浏览模型图谱 <span aria-hidden="true">↓</span></a>
+    <dl class="ai-hero-stats"><div><dt>模型系列</dt><dd>42<span> / MODELS</span></dd></div><div><dt>探索方向</dt><dd>05<span> / FIELDS</span></dd></div><div><dt>整理时间</dt><dd>2026<span> / 10.19</span></dd></div></dl>
+   </div>
+   <figure class="ai-network" aria-labelledby="network-caption"><div class="ai-network-frame" aria-hidden="true"><span>NEURAL FIELD / 01</span><span>INTERACTIVE VIEW</span></div><canvas id="ai-network-canvas" aria-hidden="true"></canvas><div class="ai-network-core" aria-hidden="true"><span>AI</span><small>CONNECT THE POSSIBILITIES</small></div><figcaption id="network-caption"><span>拖动旋转 · 探索智能的连接</span><button id="network-motion" type="button" aria-pressed="true">暂停旋转</button></figcaption></figure>
+  </section>
+  <nav class="ai-fields" aria-label="选择探索方向"><button type="button" data-jump-category="text" style="--field-color:#8ee7db"><span>01</span><strong>语言</strong><small>LANGUAGE</small><span class="ai-field-arrow" aria-hidden="true">↘</span></button><button type="button" data-jump-category="code" style="--field-color:#a7bcff"><span>02</span><strong>代码</strong><small>CODE</small><span class="ai-field-arrow" aria-hidden="true">↘</span></button><button type="button" data-jump-category="image" style="--field-color:#e7b5fb"><span>03</span><strong>图像</strong><small>VISION</small><span class="ai-field-arrow" aria-hidden="true">↘</span></button><button type="button" data-jump-category="video" style="--field-color:#f3c493"><span>04</span><strong>视频</strong><small>MOTION</small><span class="ai-field-arrow" aria-hidden="true">↘</span></button><button type="button" data-jump-category="audio" style="--field-color:#95d3f6"><span>05</span><strong>声音</strong><small>AUDIO</small><span class="ai-field-arrow" aria-hidden="true">↘</span></button></nav>
+  <section class="ai-atlas" id="model-atlas" aria-labelledby="atlas-title">
+   <header class="ai-section-head"><div><p class="ai-eyebrow">01 / DISCOVER</p><h2 id="atlas-title">模型图谱<span aria-hidden="true"> /</span></h2></div><p>了解能力，也找到入口。</p></header>
+   <div class="ai-tools"><div class="ai-search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="ai-sr-only" for="model-search">搜索模型、团队或用途</label><input id="model-search" type="search" placeholder="搜索模型、团队或用途…" autocomplete="off" spellcheck="false"><button type="button" id="clear-search" aria-label="清空搜索" hidden>×</button></div><div class="ai-access-filter"><label for="access-filter">体验方式</label><select id="access-filter"><option value="all">全部方式</option><option value="web">网页体验</option><option value="api">API 开发</option><option value="weights">开放权重</option></select></div></div>
+   <div class="ai-filters" role="group" aria-label="按用途筛选"><button type="button" data-category="all" aria-pressed="true">全部<span>42</span></button><button type="button" data-category="text" aria-pressed="false">通用与推理<span>18</span></button><button type="button" data-category="code" aria-pressed="false">编程与开发<span>17</span></button><button type="button" data-category="image" aria-pressed="false">图像与设计<span>8</span></button><button type="button" data-category="video" aria-pressed="false">视频与动态<span>6</span></button><button type="button" data-category="audio" aria-pressed="false">语音与音乐<span>7</span></button></div>
+   <div class="ai-results-line"><p id="model-results" role="status" aria-live="polite">共 42 个模型系列</p><span id="category-description">文字、代码、影像与声音，在这里相遇。</span></div>
+   <div class="ai-model-grid" id="model-grid"><article class="ai-model" data-id="gpt" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="gpt" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解GPT">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">G</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">01</span></span>
+  <span class="ai-model-name">GPT</span><span class="ai-model-provider">OpenAI</span>
+  <span class="ai-model-summary">面向文字、推理、代码与多模态任务的通用模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" aria-label="打开GPT官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="claude" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="claude" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Claude">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">C</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">02</span></span>
+  <span class="ai-model-name">Claude</span><span class="ai-model-provider">Anthropic</span>
+  <span class="ai-model-summary">围绕知识工作、推理与编程展开的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://claude.ai/" target="_blank" rel="noopener noreferrer" aria-label="打开Claude官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="gemini" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="gemini" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Gemini">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Ge</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">03</span></span>
+  <span class="ai-model-name">Gemini</span><span class="ai-model-provider">Google DeepMind</span>
+  <span class="ai-model-summary">覆盖文字、图像理解与多模态交互的通用模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Gemini官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="deepseek" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="deepseek" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解DeepSeek">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">D</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">04</span></span>
+  <span class="ai-model-name">DeepSeek</span><span class="ai-model-provider">深度求索</span>
+  <span class="ai-model-summary">覆盖通用对话、推理与代码任务，提供开放模型资料。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer" aria-label="打开DeepSeek官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="qwen" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="qwen" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解通义千问 · Qwen">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Q</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">05</span></span>
+  <span class="ai-model-name">通义千问 · Qwen</span><span class="ai-model-provider">阿里巴巴 Qwen 团队</span>
+  <span class="ai-model-summary">提供通用、多模态与代码等方向的模型家族。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://chat.qwen.ai/" target="_blank" rel="noopener noreferrer" aria-label="打开通义千问 · Qwen官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="doubao" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="doubao" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解豆包 · Seed">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">豆</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">06</span></span>
+  <span class="ai-model-name">豆包 · Seed</span><span class="ai-model-provider">字节跳动 Seed</span>
+  <span class="ai-model-summary">面向日常对话、内容处理与任务执行的通用模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://www.doubao.com/chat/" target="_blank" rel="noopener noreferrer" aria-label="打开豆包 · Seed官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="kimi" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="kimi" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Kimi">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">K</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">07</span></span>
+  <span class="ai-model-name">Kimi</span><span class="ai-model-provider">月之暗面 · Moonshot AI</span>
+  <span class="ai-model-summary">围绕资料处理、知识工作与智能体编程的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Kimi官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="glm" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="glm" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解智谱 · GLM">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">智</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">08</span></span>
+  <span class="ai-model-name">智谱 · GLM</span><span class="ai-model-provider">智谱 · Z.ai</span>
+  <span class="ai-model-summary">提供通用推理、代码与智能体能力的模型家族。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://chatglm.cn/" target="_blank" rel="noopener noreferrer" aria-label="打开智谱 · GLM官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="hunyuan" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="hunyuan" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解腾讯混元">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">混</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">09</span></span>
+  <span class="ai-model-name">腾讯混元</span><span class="ai-model-provider">腾讯</span>
+  <span class="ai-model-summary">腾讯的通用与多模态模型系列，覆盖内容理解和生成。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://yuanbao.tencent.com/" target="_blank" rel="noopener noreferrer" aria-label="打开腾讯混元官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="ernie" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="ernie" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解文心 · ERNIE">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">文</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">10</span></span>
+  <span class="ai-model-name">文心 · ERNIE</span><span class="ai-model-provider">百度</span>
+  <span class="ai-model-summary">百度的语言与多模态模型，提供企业级开发服务。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://cloud.baidu.com/product-s/qianfan_home" target="_blank" rel="noopener noreferrer" aria-label="打开文心 · ERNIE官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="spark" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="spark" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解讯飞星火">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">星</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">11</span></span>
+  <span class="ai-model-name">讯飞星火</span><span class="ai-model-provider">科大讯飞</span>
+  <span class="ai-model-summary">面向中文问答、内容创作与场景应用的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://xinghuo.xfyun.cn/" target="_blank" rel="noopener noreferrer" aria-label="打开讯飞星火官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="minimax" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="minimax" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解MiniMax">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">M</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">12</span></span>
+  <span class="ai-model-name">MiniMax</span><span class="ai-model-provider">MiniMax</span>
+  <span class="ai-model-summary">以代码、智能体和多模态任务为方向的语言模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://www.minimax.io/" target="_blank" rel="noopener noreferrer" aria-label="打开MiniMax官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="step" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="step" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解阶跃 · Step">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">阶</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">13</span></span>
+  <span class="ai-model-name">阶跃 · Step</span><span class="ai-model-provider">阶跃星辰 · StepFun</span>
+  <span class="ai-model-summary">面向代码、智能体与多模态任务的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://www.stepfun.com/" target="_blank" rel="noopener noreferrer" aria-label="打开阶跃 · Step官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="grok" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="grok" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Grok">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">X</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">14</span></span>
+  <span class="ai-model-name">Grok</span><span class="ai-model-provider">xAI / SpaceXAI</span>
+  <span class="ai-model-summary">覆盖对话、推理与工具调用的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://grok.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Grok官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="mistral" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="mistral" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Mistral">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Mi</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">15</span></span>
+  <span class="ai-model-name">Mistral</span><span class="ai-model-provider">Mistral AI</span>
+  <span class="ai-model-summary">包含通用、多模态和开放权重模型的模型家族。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://chat.mistral.ai/" target="_blank" rel="noopener noreferrer" aria-label="打开Mistral官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="llama" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="llama" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Llama">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">L</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">16</span></span>
+  <span class="ai-model-name">Llama</span><span class="ai-model-provider">Meta</span>
+  <span class="ai-model-summary">Meta 发布的开放权重模型家族。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://huggingface.co/meta-llama" target="_blank" rel="noopener noreferrer" aria-label="打开Llama官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="gemma" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="gemma" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Gemma">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Ga</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">17</span></span>
+  <span class="ai-model-name">Gemma</span><span class="ai-model-provider">Google DeepMind</span>
+  <span class="ai-model-summary">Google 提供的开放模型系列，用于研究和应用开发。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://deepmind.google/models/gemma/" target="_blank" rel="noopener noreferrer" aria-label="打开Gemma官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="command" style="--model-color:#8ee7db">
+ <button class="ai-model-open" type="button" data-open-model="command" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Command">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Co</span><span class="ai-model-category">LANGUAGE</span><span class="ai-model-number" aria-hidden="true">18</span></span>
+  <span class="ai-model-name">Command</span><span class="ai-model-provider">Cohere</span>
+  <span class="ai-model-summary">面向企业知识、检索增强与业务应用的语言模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://cohere.com/command" target="_blank" rel="noopener noreferrer" aria-label="打开Command官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="qwen-coder" style="--model-color:#a7bcff">
+ <button class="ai-model-open" type="button" data-open-model="qwen-coder" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Qwen Coder">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Q_</span><span class="ai-model-category">CODE</span><span class="ai-model-number" aria-hidden="true">19</span></span>
+  <span class="ai-model-name">Qwen Coder</span><span class="ai-model-provider">阿里巴巴 Qwen 团队</span>
+  <span class="ai-model-summary">专门面向代码生成、理解与编程智能体的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://coder.qwen.ai/" target="_blank" rel="noopener noreferrer" aria-label="打开Qwen Coder官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="devstral" style="--model-color:#a7bcff">
+ <button class="ai-model-open" type="button" data-open-model="devstral" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Devstral">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Dv</span><span class="ai-model-category">CODE</span><span class="ai-model-number" aria-hidden="true">20</span></span>
+  <span class="ai-model-name">Devstral</span><span class="ai-model-provider">Mistral AI</span>
+  <span class="ai-model-summary">为软件工程与代码智能体任务设计的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://docs.mistral.ai/models/devstral-2-25-12" target="_blank" rel="noopener noreferrer" aria-label="打开Devstral官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="codestral" style="--model-color:#a7bcff">
+ <button class="ai-model-open" type="button" data-open-model="codestral" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Codestral">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Cs</span><span class="ai-model-category">CODE</span><span class="ai-model-number" aria-hidden="true">21</span></span>
+  <span class="ai-model-name">Codestral</span><span class="ai-model-provider">Mistral AI</span>
+  <span class="ai-model-summary">针对代码补全、填充与程序生成的代码模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://docs.mistral.ai/models" target="_blank" rel="noopener noreferrer" aria-label="打开Codestral官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="gpt-image" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="gpt-image" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解GPT Image">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Gi</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">22</span></span>
+  <span class="ai-model-name">GPT Image</span><span class="ai-model-provider">OpenAI</span>
+  <span class="ai-model-summary">面向图像生成与编辑的模型，支持文字与图片输入。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" aria-label="打开GPT Image官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="flux" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="flux" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解FLUX">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">F</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">23</span></span>
+  <span class="ai-model-name">FLUX</span><span class="ai-model-provider">Black Forest Labs</span>
+  <span class="ai-model-summary">覆盖图像创作、编辑与开放模型生态的视觉模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://bfl.ai/" target="_blank" rel="noopener noreferrer" aria-label="打开FLUX官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="stable-diffusion" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="stable-diffusion" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Stable Diffusion">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">SD</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">24</span></span>
+  <span class="ai-model-name">Stable Diffusion</span><span class="ai-model-provider">Stability AI</span>
+  <span class="ai-model-summary">常用于图像生成、编辑和定制工作流的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://stability.ai/stable-image" target="_blank" rel="noopener noreferrer" aria-label="打开Stable Diffusion官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="gemini-image" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="gemini-image" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Gemini Image">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Ni</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">25</span></span>
+  <span class="ai-model-name">Gemini Image</span><span class="ai-model-provider">Google DeepMind</span>
+  <span class="ai-model-summary">Google 的图像生成与对话式编辑模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Gemini Image官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="midjourney" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="midjourney" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Midjourney">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Mj</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">26</span></span>
+  <span class="ai-model-name">Midjourney</span><span class="ai-model-provider">Midjourney</span>
+  <span class="ai-model-summary">面向视觉构思、艺术图像与风格探索的生成模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Midjourney官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="ideogram" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="ideogram" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Ideogram">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Id</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">27</span></span>
+  <span class="ai-model-name">Ideogram</span><span class="ai-model-provider">Ideogram</span>
+  <span class="ai-model-summary">围绕图像设计、文字画面与视觉创作的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://ideogram.ai/" target="_blank" rel="noopener noreferrer" aria-label="打开Ideogram官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="seedream" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="seedream" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Seedream">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Sr</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">28</span></span>
+  <span class="ai-model-name">Seedream</span><span class="ai-model-provider">字节跳动 Seed</span>
+  <span class="ai-model-summary">面向图像生成、编辑与内容创作的多模态模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://jimeng.jianying.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Seedream官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="qwen-image" style="--model-color:#e7b5fb">
+ <button class="ai-model-open" type="button" data-open-model="qwen-image" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Qwen Image">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Qi</span><span class="ai-model-category">VISION</span><span class="ai-model-number" aria-hidden="true">29</span></span>
+  <span class="ai-model-name">Qwen Image</span><span class="ai-model-provider">阿里巴巴 Qwen 团队</span>
+  <span class="ai-model-summary">支持复杂文字渲染与图像编辑的开放图像模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://github.com/QwenLM/Qwen-Image" target="_blank" rel="noopener noreferrer" aria-label="打开Qwen Image官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="veo" style="--model-color:#f3c493">
+ <button class="ai-model-open" type="button" data-open-model="veo" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Veo">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">V</span><span class="ai-model-category">MOTION</span><span class="ai-model-number" aria-hidden="true">30</span></span>
+  <span class="ai-model-name">Veo</span><span class="ai-model-provider">Google DeepMind</span>
+  <span class="ai-model-summary">Google 的视频生成模型，覆盖画面与视听创作。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://deepmind.google/technologies/veo/" target="_blank" rel="noopener noreferrer" aria-label="打开Veo官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="kling" style="--model-color:#f3c493">
+ <button class="ai-model-open" type="button" data-open-model="kling" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解可灵 · Kling">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">灵</span><span class="ai-model-category">MOTION</span><span class="ai-model-number" aria-hidden="true">31</span></span>
+  <span class="ai-model-name">可灵 · Kling</span><span class="ai-model-provider">快手</span>
+  <span class="ai-model-summary">围绕文生视频、图生视频与多模态参考的生成模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://app.klingai.com/cn/" target="_blank" rel="noopener noreferrer" aria-label="打开可灵 · Kling官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="runway" style="--model-color:#f3c493">
+ <button class="ai-model-open" type="button" data-open-model="runway" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Runway Gen">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">R</span><span class="ai-model-category">MOTION</span><span class="ai-model-number" aria-hidden="true">32</span></span>
+  <span class="ai-model-name">Runway Gen</span><span class="ai-model-provider">Runway</span>
+  <span class="ai-model-summary">面向视频生成、控制和视觉制作的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://runway.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Runway Gen官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="hailuo" style="--model-color:#f3c493">
+ <button class="ai-model-open" type="button" data-open-model="hailuo" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解海螺 · Hailuo">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">H</span><span class="ai-model-category">MOTION</span><span class="ai-model-number" aria-hidden="true">33</span></span>
+  <span class="ai-model-name">海螺 · Hailuo</span><span class="ai-model-provider">MiniMax</span>
+  <span class="ai-model-summary">面向动态场景、人物表现与参考生成的视频模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://hailuoai.video/" target="_blank" rel="noopener noreferrer" aria-label="打开海螺 · Hailuo官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="wan" style="--model-color:#f3c493">
+ <button class="ai-model-open" type="button" data-open-model="wan" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解通义万相 · Wan">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">万</span><span class="ai-model-category">MOTION</span><span class="ai-model-number" aria-hidden="true">34</span></span>
+  <span class="ai-model-name">通义万相 · Wan</span><span class="ai-model-provider">阿里巴巴</span>
+  <span class="ai-model-summary">面向视频与视觉内容生成的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://wan.video/" target="_blank" rel="noopener noreferrer" aria-label="打开通义万相 · Wan官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="seedance" style="--model-color:#f3c493">
+ <button class="ai-model-open" type="button" data-open-model="seedance" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Seedance">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Sa</span><span class="ai-model-category">MOTION</span><span class="ai-model-number" aria-hidden="true">35</span></span>
+  <span class="ai-model-name">Seedance</span><span class="ai-model-provider">字节跳动 Seed</span>
+  <span class="ai-model-summary">结合多模态参考、镜头叙事与编辑的视频生成模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://jimeng.jianying.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Seedance官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="gpt-audio" style="--model-color:#95d3f6">
+ <button class="ai-model-open" type="button" data-open-model="gpt-audio" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解GPT Live / Audio">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Au</span><span class="ai-model-category">AUDIO</span><span class="ai-model-number" aria-hidden="true">36</span></span>
+  <span class="ai-model-name">GPT Live / Audio</span><span class="ai-model-provider">OpenAI</span>
+  <span class="ai-model-summary">面向实时语音、语音理解与音频交互的模型系列。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://developers.openai.com/api/docs/models" target="_blank" rel="noopener noreferrer" aria-label="打开GPT Live / Audio官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="elevenlabs" style="--model-color:#95d3f6">
+ <button class="ai-model-open" type="button" data-open-model="elevenlabs" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解ElevenLabs">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">El</span><span class="ai-model-category">AUDIO</span><span class="ai-model-number" aria-hidden="true">37</span></span>
+  <span class="ai-model-name">ElevenLabs</span><span class="ai-model-provider">ElevenLabs</span>
+  <span class="ai-model-summary">面向文字转语音、配音与语音交互的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer" aria-label="打开ElevenLabs官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="suno" style="--model-color:#95d3f6">
+ <button class="ai-model-open" type="button" data-open-model="suno" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Suno">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Su</span><span class="ai-model-category">AUDIO</span><span class="ai-model-number" aria-hidden="true">38</span></span>
+  <span class="ai-model-name">Suno</span><span class="ai-model-provider">Suno</span>
+  <span class="ai-model-summary">根据文字构思生成歌曲与音乐内容的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://suno.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Suno官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="minimax-speech" style="--model-color:#95d3f6">
+ <button class="ai-model-open" type="button" data-open-model="minimax-speech" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解MiniMax Speech">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Ms</span><span class="ai-model-category">AUDIO</span><span class="ai-model-number" aria-hidden="true">39</span></span>
+  <span class="ai-model-name">MiniMax Speech</span><span class="ai-model-provider">MiniMax</span>
+  <span class="ai-model-summary">用于多语言配音、语音生成与表达控制的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://www.minimax.io/audio" target="_blank" rel="noopener noreferrer" aria-label="打开MiniMax Speech官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="cosyvoice" style="--model-color:#95d3f6">
+ <button class="ai-model-open" type="button" data-open-model="cosyvoice" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解CosyVoice">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Cv</span><span class="ai-model-category">AUDIO</span><span class="ai-model-number" aria-hidden="true">40</span></span>
+  <span class="ai-model-name">CosyVoice</span><span class="ai-model-provider">阿里巴巴 QwenAudio 团队</span>
+  <span class="ai-model-summary">提供推理、训练和部署资料的开放语音生成模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://github.com/QwenAudio/CosyVoice" target="_blank" rel="noopener noreferrer" aria-label="打开CosyVoice官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="stable-audio" style="--model-color:#95d3f6">
+ <button class="ai-model-open" type="button" data-open-model="stable-audio" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Stable Audio">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">St</span><span class="ai-model-category">AUDIO</span><span class="ai-model-number" aria-hidden="true">41</span></span>
+  <span class="ai-model-name">Stable Audio</span><span class="ai-model-provider">Stability AI</span>
+  <span class="ai-model-summary">面向音乐、音效与声音素材创作的音频模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>开放权重</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://stableaudio.com/" target="_blank" rel="noopener noreferrer" aria-label="打开Stable Audio官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article>
+<article class="ai-model" data-id="lyria" style="--model-color:#95d3f6">
+ <button class="ai-model-open" type="button" data-open-model="lyria" aria-haspopup="dialog" aria-controls="model-dialog" aria-label="了解Lyria">
+  <span class="ai-model-top"><span class="ai-model-mark" aria-hidden="true">Ly</span><span class="ai-model-category">AUDIO</span><span class="ai-model-number" aria-hidden="true">42</span></span>
+  <span class="ai-model-name">Lyria</span><span class="ai-model-provider">Google DeepMind</span>
+  <span class="ai-model-summary">面向音乐生成、创作控制与音乐实验的模型。</span>
+  <span class="ai-model-bottom"><span class="ai-access"><span>网页体验</span><span>API 开发</span></span><span class="ai-model-read">了解 <span aria-hidden="true">↗</span></span></span>
+ </button>
+ <a class="ai-model-official" href="https://deepmind.google/models/lyria/" target="_blank" rel="noopener noreferrer" aria-label="打开Lyria官方入口，新标签页">官方入口 <span aria-hidden="true">↗</span></a>
+ </article></div>
+   <div class="ai-empty" id="model-empty" hidden><p>暂时没有找到匹配的模型</p><span>试试模型名、团队名，或切换体验方式。</span><button type="button" id="reset-filters">清空筛选</button></div>
+   <div class="ai-more"><button class="ai-secondary" id="load-more" type="button" hidden>继续浏览 <span aria-hidden="true">↓</span></button><span id="model-progress"></span></div>
+   <p class="ai-directory-note">按模型系列整理；部分系列的开放权重与网页功能对应不同版本。官方入口可能为搭载模型的产品、开发平台或模型资料库。</p>
+  </section>
+  <section class="ai-practice" aria-labelledby="practice-title"><header class="ai-section-head"><div><p class="ai-eyebrow">02 / CREATE</p><h2 id="practice-title">让想法，继续发生<span aria-hidden="true"> /</span></h2></div><p>模型之外，也回到自己的创作。</p></header><div class="ai-practice-grid">
+   <a href="../index.html#works"><small>01 / WORDS</small><h3>写下一个故事</h3><p>从一句话，到一个属于自己的世界。</p><span>走进作品 <span aria-hidden="true">↗</span></span></a>
+   <a href="../works/sd-webui/index.html"><small>02 / IMAGE</small><h3>让文字有画面</h3><p>沿着提示词与参数，探索图像的可能。</p><span>文字成像 <span aria-hidden="true">↗</span></span></a>
+   <a href="../works/z-image/index.html"><small>03 / WORKFLOW</small><h3>连接创作的节点</h3><p>把生成、调整和输出串成自己的流程。</p><span>节点绘图 <span aria-hidden="true">↗</span></span></a>
+  </div></section>
+ </main>
+ <footer class="ai-footer"><span>© 2026 Cheney<span class="ai-footer-divider"> / </span>AI 探索</span><span>整理于 <time datetime="2026-10-19">2026.10.19</time></span><a href="#ai-main">回到顶部 ↑</a></footer>
+ <dialog class="ai-dialog" id="model-dialog" aria-labelledby="dialog-model-name" aria-describedby="dialog-model-summary"><div class="ai-dialog-scroll"><button class="ai-dialog-close" type="button" aria-label="关闭模型介绍" autofocus>×</button><p class="ai-eyebrow" id="dialog-model-category"></p><div class="ai-dialog-heading"><span id="dialog-model-mark" aria-hidden="true"></span><div><h2 id="dialog-model-name"></h2><p id="dialog-model-provider"></p></div></div><p id="dialog-model-summary"></p><p class="ai-dialog-series" id="dialog-model-series"></p><section><h3>可以从这些事情开始</h3><ul id="dialog-model-uses"></ul></section><section><h3>从哪里体验</h3><p id="dialog-model-start"></p><div class="ai-access" id="dialog-model-access"></div></section><div class="ai-dialog-links"><a class="ai-primary" id="dialog-model-url" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">打开官方入口 <span aria-hidden="true">↗</span></a><a id="dialog-model-source" href="https://developers.openai.com/api/docs/models" target="_blank" rel="noopener noreferrer">官方资料 <span aria-hidden="true">↗</span></a></div><p class="ai-dialog-footnote">账号、可用地区与订阅功能，以所选官方产品为准。</p></div></dialog>
+ <script type="application/json" id="ai-model-data">{"updated":"2026-10-19","categories":[{"id":"text","name":"通用与推理","short":"语言","code":"LANGUAGE","description":"对话、写作、研究与复杂问题。","color":"#8ee7db"},{"id":"code","name":"编程与开发","short":"代码","code":"CODE","description":"理解代码、补全程序与工程任务。","color":"#a7bcff"},{"id":"image","name":"图像与设计","short":"图像","code":"VISION","description":"把文字与参考图变成视觉作品。","color":"#e7b5fb"},{"id":"video","name":"视频与动态","short":"视频","code":"MOTION","description":"从静态画面走向镜头、动作与叙事。","color":"#f3c493"},{"id":"audio","name":"语音与音乐","short":"声音","code":"AUDIO","description":"语音交互、配音、音乐与声音创作。","color":"#95d3f6"}],"models":[{"id":"gpt","name":"GPT","provider":"OpenAI","mark":"G","category":"text","topics":["text","code"],"access":["web","api"],"series":"GPT-6 Astra · GPT-6.1 Sol · GPT-6 Luna","summary":"面向文字、推理、代码与多模态任务的通用模型系列。","uses":["梳理资料、修改文章、讨论问题与编写代码。","按任务复杂程度，了解不同模型的能力与效率取向。"],"start":"在 ChatGPT 中体验对话；开发接口与各模型能力见官方模型目录。","url":"https://chatgpt.com/","source":"https://developers.openai.com/api/docs/models"},{"id":"claude","name":"Claude","provider":"Anthropic","mark":"C","category":"text","topics":["text","code"],"access":["web","api"],"series":"Fable · Opus · Sonnet · Haiku","summary":"围绕知识工作、推理与编程展开的模型系列。","uses":["阅读资料、组织长文、审阅和修改文字。","分析代码与拆解需要多步骤执行的任务。"],"start":"在 Claude 网页端体验；不同系列的功能与定位可查看官方模型说明。","url":"https://claude.ai/","source":"https://platform.claude.com/docs/en/models/overview"},{"id":"gemini","name":"Gemini","provider":"Google DeepMind","mark":"Ge","category":"text","topics":["text","code"],"access":["web","api"],"series":"Gemini 系列","summary":"覆盖文字、图像理解与多模态交互的通用模型。","uses":["结合文字与图片进行问答、学习和资料分析。","通过 AI Studio 探索提示词、模型能力与开发接口。"],"start":"普通对话可从 Gemini 开始，开发实验可进入 Google AI Studio。","url":"https://gemini.google.com/","source":"https://deepmind.google/models/"},{"id":"deepseek","name":"DeepSeek","provider":"深度求索","mark":"D","category":"text","topics":["text","code"],"access":["web","api","weights"],"series":"DeepSeek V4 系列","summary":"覆盖通用对话、推理与代码任务，提供开放模型资料。","uses":["拆解逻辑问题、讨论数学思路与编程方案。","了解模型报告、开放权重和 API 使用方式。"],"start":"从官方聊天入口体验；开放模型、技术报告与开发服务可由官网继续查看。","url":"https://chat.deepseek.com/","source":"https://www.deepseek.com/"},{"id":"qwen","name":"通义千问 · Qwen","provider":"阿里巴巴 Qwen 团队","mark":"Q","category":"text","topics":["text","code"],"access":["web","api","weights"],"series":"Qwen 系列","summary":"提供通用、多模态与代码等方向的模型家族。","uses":["中文对话、文稿整理、知识问答与代码讨论。","通过官方项目了解不同模型的权重和使用说明。"],"start":"Qwen 网页可进行对话；开放模型与研究资料见团队官方发布。","url":"https://chat.qwen.ai/","source":"https://qwenlm.github.io/"},{"id":"doubao","name":"豆包 · Seed","provider":"字节跳动 Seed","mark":"豆","category":"text","topics":["text","code"],"access":["web","api"],"series":"Seed 系列","summary":"面向日常对话、内容处理与任务执行的通用模型。","uses":["讨论问题、整理内容与辅助文字创作。","了解 Seed 模型在智能体与代码工程方面的能力。"],"start":"豆包是网页体验入口；模型介绍与开放服务由 Seed 和火山引擎提供。","url":"https://www.doubao.com/chat/","source":"https://seed.bytedance.com/zh/blog/seed2-1-officially-released-advancing-ai-productivity"},{"id":"kimi","name":"Kimi","provider":"月之暗面 · Moonshot AI","mark":"K","category":"text","topics":["text","code"],"access":["web","api"],"series":"Kimi 系列","summary":"围绕资料处理、知识工作与智能体编程的模型。","uses":["处理文档、梳理信息与组织写作思路。","探索代码开发和多步骤知识任务。"],"start":"从 Kimi 官方网页进入，查看当前产品提供的模型和工具。","url":"https://www.kimi.com/","source":"https://www.kimi.com/"},{"id":"glm","name":"智谱 · GLM","provider":"智谱 · Z.ai","mark":"智","category":"text","topics":["text","code"],"access":["web","api","weights"],"series":"GLM 系列","summary":"提供通用推理、代码与智能体能力的模型家族。","uses":["中文问答、资料整理与内容写作。","了解工具调用、编程任务与开放模型的使用方式。"],"start":"智谱清言提供中文对话入口；模型规格与开发说明见 Z.ai 官方文档。","url":"https://chatglm.cn/","source":"https://docs.z.ai/guides/llm/glm-5.3"},{"id":"hunyuan","name":"腾讯混元","provider":"腾讯","mark":"混","category":"text","topics":["text","code"],"access":["web","api","weights"],"series":"混元 · Hunyuan 系列","summary":"腾讯的通用与多模态模型系列，覆盖内容理解和生成。","uses":["通过元宝体验文字问答与资料处理。","了解混元模型的研究、开放能力和开发入口。"],"start":"元宝是体验入口之一，也可能提供其他厂商模型；混元本身的能力以模型官网说明为准。","url":"https://yuanbao.tencent.com/","source":"https://hunyuan.tencent.com/research/hy3-preview"},{"id":"ernie","name":"文心 · ERNIE","provider":"百度","mark":"文","category":"text","topics":["text"],"access":["api"],"series":"ERNIE 系列","summary":"百度的语言与多模态模型，提供企业级开发服务。","uses":["了解中文内容理解、生成与知识应用。","在千帆平台查看模型、开发工具和调用方式。"],"start":"这里通往百度千帆官方平台，可查看文心模型与开发服务。","url":"https://cloud.baidu.com/product-s/qianfan_home","source":"https://cloud.baidu.com/product-s/qianfan_home"},{"id":"spark","name":"讯飞星火","provider":"科大讯飞","mark":"星","category":"text","topics":["text"],"access":["web","api"],"series":"星火大模型系列","summary":"面向中文问答、内容创作与场景应用的模型。","uses":["进行中文对话、文字整理和问题讨论。","查看模型 API 与讯飞开放平台中的相关能力。"],"start":"从星火官方助手体验；开发服务可通过讯飞开放平台了解。","url":"https://xinghuo.xfyun.cn/","source":"https://www.xfyun.cn/site/"},{"id":"minimax","name":"MiniMax","provider":"MiniMax","mark":"M","category":"text","topics":["text","code"],"access":["api","weights"],"series":"MiniMax M 系列","summary":"以代码、智能体和多模态任务为方向的语言模型。","uses":["了解工程开发、工具使用与复杂任务执行。","查看语言模型与视频、语音等模型的不同分工。"],"start":"官网汇集模型介绍与开发入口，具体体验产品可从官网选择。","url":"https://www.minimax.io/","source":"https://www.minimax.io/"},{"id":"step","name":"阶跃 · Step","provider":"阶跃星辰 · StepFun","mark":"阶","category":"text","topics":["text","code"],"access":["api"],"series":"Step 系列","summary":"面向代码、智能体与多模态任务的模型系列。","uses":["了解语言模型和多模态模型的不同能力。","查看开放平台与面向应用开发的模型服务。"],"start":"由阶跃星辰官网查看模型信息，再进入对应的体验或开发服务。","url":"https://www.stepfun.com/","source":"https://www.stepfun.com/"},{"id":"grok","name":"Grok","provider":"xAI / SpaceXAI","mark":"X","category":"text","topics":["text","code"],"access":["web","api"],"series":"Grok 系列","summary":"覆盖对话、推理与工具调用的模型系列。","uses":["进行问题讨论、文字整理和代码分析。","结合官方工具探索网页信息检索等能力。"],"start":"Grok 网页提供体验；联网检索等功能取决于所选产品或启用的工具。","url":"https://grok.com/","source":"https://docs.x.ai/developers/models"},{"id":"mistral","name":"Mistral","provider":"Mistral AI","mark":"Mi","category":"text","topics":["text","code"],"access":["web","api","weights"],"series":"Mistral 系列","summary":"包含通用、多模态和开放权重模型的模型家族。","uses":["通过 Le Chat 体验日常问答与知识工作。","查看不同规模模型与开放部署相关资料。"],"start":"Le Chat 是面向使用者的入口；模型目录提供规格与开发说明。","url":"https://chat.mistral.ai/","source":"https://docs.mistral.ai/models"},{"id":"llama","name":"Llama","provider":"Meta","mark":"L","category":"text","topics":["text","code"],"access":["weights"],"series":"Llama 系列","summary":"Meta 发布的开放权重模型家族。","uses":["学习开放模型的使用、评估和部署方式。","根据具体模型与许可开展实验和定制。"],"start":"官方模型库提供权重、模型卡与许可说明。它是模型资料入口，需要另外准备运行环境。","url":"https://huggingface.co/meta-llama","source":"https://huggingface.co/meta-llama"},{"id":"gemma","name":"Gemma","provider":"Google DeepMind","mark":"Ga","category":"text","topics":["text"],"access":["weights"],"series":"Gemma 系列","summary":"Google 提供的开放模型系列，用于研究和应用开发。","uses":["了解不同大小与不同任务取向的开放模型。","从官方资源开始部署、微调与模型实验。"],"start":"官网提供模型资料和开发资源；运行前可先查对应模型的要求。","url":"https://deepmind.google/models/gemma/","source":"https://deepmind.google/models/gemma/"},{"id":"command","name":"Command","provider":"Cohere","mark":"Co","category":"text","topics":["text"],"access":["api"],"series":"Command 系列","summary":"面向企业知识、检索增强与业务应用的语言模型。","uses":["了解结合知识库的问答与资料检索。","探索企业文档、工具调用与多语言场景。"],"start":"从 Cohere 官方模型页了解产品，开发与试用入口由官网提供。","url":"https://cohere.com/command","source":"https://cohere.com/command"},{"id":"qwen-coder","name":"Qwen Coder","provider":"阿里巴巴 Qwen 团队","mark":"Q_","category":"code","topics":["code"],"access":["web","weights"],"series":"Qwen Coder 系列","summary":"专门面向代码生成、理解与编程智能体的模型。","uses":["阅读项目、生成和修改代码。","结合官方工具了解代码智能体的执行流程。"],"start":"网页 Coder 可用于体验；官方代码仓库提供模型和运行资料。","url":"https://coder.qwen.ai/","source":"https://github.com/QwenLM/Qwen3-Coder"},{"id":"devstral","name":"Devstral","provider":"Mistral AI","mark":"Dv","category":"code","topics":["code"],"access":["api","weights"],"series":"Devstral 系列","summary":"为软件工程与代码智能体任务设计的模型系列。","uses":["结合代码仓库理解和处理工程任务。","了解通过工具检查、修改和测试代码的工作方式。"],"start":"官方模型文档提供能力说明、模型卡与使用入口。","url":"https://docs.mistral.ai/models/devstral-2-25-12","source":"https://docs.mistral.ai/models/devstral-2-25-12"},{"id":"codestral","name":"Codestral","provider":"Mistral AI","mark":"Cs","category":"code","topics":["code"],"access":["api"],"series":"Codestral 系列","summary":"针对代码补全、填充与程序生成的代码模型。","uses":["了解编辑器里的代码补全与中间填充。","为程序片段生成和代码辅助选择专门的模型。"],"start":"从 Mistral 模型目录查看 Codestral 的当前说明与开发方式。","url":"https://docs.mistral.ai/models","source":"https://docs.mistral.ai/models"},{"id":"gpt-image","name":"GPT Image","provider":"OpenAI","mark":"Gi","category":"image","topics":["image"],"access":["web","api"],"series":"GPT Image 系列","summary":"面向图像生成与编辑的模型，支持文字与图片输入。","uses":["从文字构思生成插图、视觉方案与设计素材。","结合参考图修改画面和细节。"],"start":"可从 ChatGPT 的图像功能体验；模型与 API 说明见官方目录。","url":"https://chatgpt.com/","source":"https://developers.openai.com/api/docs/models"},{"id":"flux","name":"FLUX","provider":"Black Forest Labs","mark":"F","category":"image","topics":["image"],"access":["web","api","weights"],"series":"FLUX 系列","summary":"覆盖图像创作、编辑与开放模型生态的视觉模型。","uses":["制作不同风格的图像与视觉素材。","查看可用于工作流的开放版本和开发接口。"],"start":"官网连接网页 Playground、开发文档与开放权重，各版本的使用方式分别列明。","url":"https://bfl.ai/","source":"https://bfl.ai/"},{"id":"stable-diffusion","name":"Stable Diffusion","provider":"Stability AI","mark":"SD","category":"image","topics":["image"],"access":["api","weights"],"series":"Stable Diffusion / Stable Image","summary":"常用于图像生成、编辑和定制工作流的模型系列。","uses":["了解文生图、图像编辑与不同模型的使用方式。","结合 WebUI、节点工具等搭建自己的创作流程。"],"start":"Stability AI 官方页面提供图像模型、API 与相关模型资料。","url":"https://stability.ai/stable-image","source":"https://stability.ai/stable-image"},{"id":"gemini-image","name":"Gemini Image","provider":"Google DeepMind","mark":"Ni","category":"image","topics":["image"],"access":["web","api"],"series":"Nano Banana · Gemini Image","summary":"Google 的图像生成与对话式编辑模型。","uses":["利用文字和参考图生成、调整画面。","在多轮交流中逐步修改视觉方案。"],"start":"可从 Gemini 或 AI Studio 的相应图像功能体验，具体模型见官方页面。","url":"https://gemini.google.com/","source":"https://deepmind.google/models/gemini-image/"},{"id":"midjourney","name":"Midjourney","provider":"Midjourney","mark":"Mj","category":"image","topics":["image"],"access":["web"],"series":"Midjourney 图像模型","summary":"面向视觉构思、艺术图像与风格探索的生成模型。","uses":["探索构图、色彩、视觉氛围和创作方向。","通过图片迭代逐步明确想要的视觉效果。"],"start":"从 Midjourney 官方网页查看作品和创作入口。","url":"https://www.midjourney.com/","source":"https://www.midjourney.com/"},{"id":"ideogram","name":"Ideogram","provider":"Ideogram","mark":"Id","category":"image","topics":["image"],"access":["web","api"],"series":"Ideogram 图像模型","summary":"围绕图像设计、文字画面与视觉创作的模型。","uses":["探索海报、排版和包含文字的视觉方案。","在网页创作工具中迭代图像和设计。"],"start":"官网提供图像创作与模型能力说明。","url":"https://ideogram.ai/","source":"https://ideogram.ai/"},{"id":"seedream","name":"Seedream","provider":"字节跳动 Seed","mark":"Sr","category":"image","topics":["image"],"access":["web","api"],"series":"Seedream 系列","summary":"面向图像生成、编辑与内容创作的多模态模型。","uses":["根据文字和参考图片制作视觉内容。","结合创作平台对画面进行编辑和迭代。"],"start":"即梦提供中文创作入口；模型信息可查看 Seed 官方模型页。","url":"https://jimeng.jianying.com/","source":"https://seed.bytedance.com/en/models"},{"id":"qwen-image","name":"Qwen Image","provider":"阿里巴巴 Qwen 团队","mark":"Qi","category":"image","topics":["image"],"access":["weights"],"series":"Qwen-Image 系列","summary":"支持复杂文字渲染与图像编辑的开放图像模型。","uses":["了解中英文图像文字与复杂提示词生成。","结合官方代码尝试图像生成和编辑工作流。"],"start":"官方仓库提供模型资料、示例与使用说明。","url":"https://github.com/QwenLM/Qwen-Image","source":"https://github.com/QwenLM/Qwen-Image"},{"id":"veo","name":"Veo","provider":"Google DeepMind","mark":"V","category":"video","topics":["video"],"access":["web","api"],"series":"Veo 系列","summary":"Google 的视频生成模型，覆盖画面与视听创作。","uses":["从文字或图片构思动态镜头。","了解镜头控制、参考素材与视听生成方式。"],"start":"官方页面提供 Flow、Gemini 与开发入口，按所需创作方式选择。","url":"https://deepmind.google/technologies/veo/","source":"https://deepmind.google/technologies/veo/"},{"id":"kling","name":"可灵 · Kling","provider":"快手","mark":"灵","category":"video","topics":["video"],"access":["web"],"series":"Kling 视频模型","summary":"围绕文生视频、图生视频与多模态参考的生成模型。","uses":["把文字构思与参考图片变为动态片段。","探索人物动作、镜头与视觉叙事。"],"start":"从可灵官方创作平台进入，模型与功能随产品页面展示。","url":"https://app.klingai.com/cn/","source":"https://ir.kuaishou.com/zh-hans/news-releases/news-release-details/kling-ai-advances-20-era-empowering-everyone-tell-great-stories"},{"id":"runway","name":"Runway Gen","provider":"Runway","mark":"R","category":"video","topics":["video"],"access":["web","api"],"series":"Runway Gen 系列","summary":"面向视频生成、控制和视觉制作的模型系列。","uses":["根据文字与参考画面探索视频创作。","了解生成视频与影视制作工具的结合方式。"],"start":"官网汇集研究、模型和创作工具入口。","url":"https://runway.com/","source":"https://runway.com/research"},{"id":"hailuo","name":"海螺 · Hailuo","provider":"MiniMax","mark":"H","category":"video","topics":["video"],"access":["web","api"],"series":"Hailuo / MiniMax H 系列","summary":"面向动态场景、人物表现与参考生成的视频模型。","uses":["从文字或图片生成动态创意片段。","探索动作表现、参考素材与不同视觉风格。"],"start":"海螺官方网页提供创作入口和当前模型介绍。","url":"https://hailuoai.video/","source":"https://hailuoai.video/"},{"id":"wan","name":"通义万相 · Wan","provider":"阿里巴巴","mark":"万","category":"video","topics":["video"],"access":["web","weights"],"series":"Wan 系列","summary":"面向视频与视觉内容生成的模型系列。","uses":["探索文字到视频、图片到动态内容的创作。","了解开放视频模型和可组合的创作工作流。"],"start":"从万相官方网页体验，开放模型资料可在其官方项目中了解。","url":"https://wan.video/","source":"https://github.com/Wan-Video/Wan2.2"},{"id":"seedance","name":"Seedance","provider":"字节跳动 Seed","mark":"Sa","category":"video","topics":["video"],"access":["web"],"series":"Seedance 系列","summary":"结合多模态参考、镜头叙事与编辑的视频生成模型。","uses":["根据参考素材构思动态镜头和短片。","探索角色、动作、场景与镜头之间的衔接。"],"start":"即梦是中文创作入口之一，模型能力与发布信息见 Seed 官方页。","url":"https://jimeng.jianying.com/","source":"https://seed.bytedance.com/en/models"},{"id":"gpt-audio","name":"GPT Live / Audio","provider":"OpenAI","mark":"Au","category":"audio","topics":["audio"],"access":["api"],"series":"GPT Live · Realtime · Audio","summary":"面向实时语音、语音理解与音频交互的模型系列。","uses":["了解自然语音对话与实时交互。","根据任务区分对话、转写和语音生成等模型。"],"start":"官方模型目录提供不同语音和音频模型的介绍与开发入口。","url":"https://developers.openai.com/api/docs/models","source":"https://developers.openai.com/api/docs/models"},{"id":"elevenlabs","name":"ElevenLabs","provider":"ElevenLabs","mark":"El","category":"audio","topics":["audio"],"access":["web","api"],"series":"Eleven 语音模型","summary":"面向文字转语音、配音与语音交互的模型。","uses":["把文字制作成解说、旁白与有声内容。","了解多语言语音和语音智能体的应用。"],"start":"从 ElevenLabs 官方网页选择语音创作或开发功能。","url":"https://elevenlabs.io/","source":"https://elevenlabs.io/"},{"id":"suno","name":"Suno","provider":"Suno","mark":"Su","category":"audio","topics":["audio"],"access":["web"],"series":"Suno 音乐模型","summary":"根据文字构思生成歌曲与音乐内容的模型。","uses":["尝试不同曲风、情绪和音乐创意。","把一段歌词或主题逐步发展成歌曲方案。"],"start":"官网提供音乐创作与作品浏览入口。","url":"https://suno.com/","source":"https://suno.com/"},{"id":"minimax-speech","name":"MiniMax Speech","provider":"MiniMax","mark":"Ms","category":"audio","topics":["audio"],"access":["web","api"],"series":"MiniMax Speech 系列","summary":"用于多语言配音、语音生成与表达控制的模型。","uses":["制作文字解说、角色配音和多语言有声内容。","了解语气、节奏与语音应用开发。"],"start":"由 MiniMax 官方音频页面选择语音产品与接口。","url":"https://www.minimax.io/audio","source":"https://www.minimax.io/research"},{"id":"cosyvoice","name":"CosyVoice","provider":"阿里巴巴 QwenAudio 团队","mark":"Cv","category":"audio","topics":["audio"],"access":["weights"],"series":"CosyVoice 系列","summary":"提供推理、训练和部署资料的开放语音生成模型。","uses":["学习多语言语音合成和语音生成流程。","结合代码尝试本地语音实验与应用开发。"],"start":"官方代码仓库提供模型、示例与部署说明。","url":"https://github.com/QwenAudio/CosyVoice","source":"https://github.com/QwenAudio/CosyVoice"},{"id":"stable-audio","name":"Stable Audio","provider":"Stability AI","mark":"St","category":"audio","topics":["audio"],"access":["web","weights"],"series":"Stable Audio 系列","summary":"面向音乐、音效与声音素材创作的音频模型。","uses":["探索音乐片段、环境声音与创作素材。","了解网页创作与开放音频模型的不同用法。"],"start":"Stable Audio 网页提供创作入口，模型与开放资料见官方介绍。","url":"https://stableaudio.com/","source":"https://stability.ai/stable-audio"},{"id":"lyria","name":"Lyria","provider":"Google DeepMind","mark":"Ly","category":"audio","topics":["audio"],"access":["web","api"],"series":"Lyria 系列","summary":"面向音乐生成、创作控制与音乐实验的模型。","uses":["根据主题、情绪和音乐构思探索创作。","了解音乐生成工具及相应开发入口。"],"start":"官方模型页汇集 Gemini、Flow Music 和 AI Studio 等相关入口。","url":"https://deepmind.google/models/lyria/","source":"https://deepmind.google/models/lyria/"}]}</script>
+ <noscript><style>.ai-tools,.ai-filters,.ai-fields,.ai-model-read,#network-motion,.ai-more{display:none}.ai-model-open{pointer-events:none}.ai-network-core{opacity:1}</style><p class="ai-noscript">每项下方的“官方入口”可以直接打开；启用 JavaScript 后可搜索、筛选并阅读模型介绍。</p></noscript>
+</body></html>

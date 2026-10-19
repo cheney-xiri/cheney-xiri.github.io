@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2ede2">
+  <meta name="description" content="Cheney 的求学行旅编辑页，仅站主可保存内容。">
+  <title>整理行旅 · Cheney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261009-22">
+  <link rel="stylesheet" href="../assets/journey-detail.css?v=20261009-03">
+  <link rel="stylesheet" href="../assets/journey-editor.css?v=20261009-01">
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-atmosphere.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-chapters.css?v=20261019-review-02">
+<script src="../assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="../assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="../assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="../assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+<body class="stage-page stage-editor" data-ink-page="editor">
+  <a class="skip" href="#editor-main">跳到编辑内容</a>
+  <header class="stage-bar"><a class="stage-brand" href="../index.html#journey">Cheney <small>行旅</small></a><a class="stage-back" href="../index.html#journey">返回行旅总览</a></header>
+  <main id="editor-main" class="stage-main">
+    <nav class="stage-crumb" aria-label="面包屑"><a href="../index.html#journey">行旅</a><span aria-hidden="true">／</span><span>站主整理</span></nav>
+    <header class="editor-hero"><p>私卷 · 站主可改</p><h1>整理求学行旅</h1><span>学校介绍、自己的故事、重要时刻和照片，均可在这里继续补充。保存后会出现在对应页面。</span></header>
+    <nav class="editor-stage-nav" aria-label="选择求学阶段"><a href="edit.html?stage=university" data-stage-link="university">大学 · 辽宁石油化工大学</a><a href="edit.html?stage=senior" data-stage-link="senior">高中 · 唐河一高</a><a href="edit.html?stage=junior" data-stage-link="junior">初中 · 昝岗二中</a></nav>
+
+    <section id="editor-auth" class="editor-auth" aria-labelledby="editor-auth-title">
+      <p class="editor-overline">开卷之前</p><h2 id="editor-auth-title">验证站主身份</h2>
+      <p id="editor-auth-note">正在检查编辑权限……</p>
+      <form id="editor-auth-form" hidden><label class="editor-field">站主密钥<input id="editor-password" type="password" autocomplete="current-password" minlength="12" required></label><button type="submit">打开编辑页</button></form>
+      <p id="editor-auth-status" class="editor-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="editor-panel" class="editor-panel" hidden aria-labelledby="editor-heading">
+      <div class="editor-panel-head"><div><p class="editor-overline">正在整理</p><h2 id="editor-heading"></h2></div><a id="editor-preview" href="#" target="_blank" rel="noopener noreferrer">打开展示页</a></div>
+      <form id="editor-form">
+        <section class="editor-group"><div class="editor-group-head"><span>其一</span><h3>学校介绍</h3><p>这段会替换学校介绍正文；学校名称和资料链接仍保留在展示页。</p></div><label class="editor-field">介绍文字<textarea name="schoolIntro" rows="5" maxlength="1200" placeholder="写下这所学校的历史、气质与办学特色"></textarea></label></section>
+        <section class="editor-group"><div class="editor-group-head"><span>其二</span><h3>那时的我</h3><p>可分段写真实经历，换行会保留。</p></div><label class="editor-field">我的故事<textarea name="story" rows="7" maxlength="2500" placeholder="从一件真实发生过的事写起……"></textarea></label></section>
+        <section class="editor-group"><div class="editor-group-head"><span>其三</span><h3>重要时刻</h3><p>按时间记下节点，可添加多条；留空的条目不会展示。</p></div><div id="editor-moments" class="editor-moments"></div><button id="editor-add-moment" class="editor-secondary" type="button">添加一条经历</button></section>
+        <section class="editor-group"><div class="editor-group-head"><span>其四</span><h3>阶段照片</h3><p>一次可选择多张照片。上传后仍需点击下方“保存并发布”；照片会压缩处理后上传。</p></div><label class="editor-upload">选择照片<input id="editor-photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><p id="editor-upload-status" class="editor-status" role="status" aria-live="polite"></p><div id="editor-photos" class="editor-photos"></div></section>
+        <section class="editor-group"><div class="editor-group-head"><span>其五</span><h3>所学与尝试</h3><p>阅读、写作、活动或作品，都可以在这里留痕。</p></div><label class="editor-field">内容<textarea name="growth" rows="6" maxlength="2000" placeholder="写下这段时间真正投入过的事……"></textarea></label></section>
+        <section class="editor-group"><div class="editor-group-head"><span>其六</span><h3>回望与下一程</h3><p>写给过去或未来的自己。</p></div><label class="editor-field">内容<textarea name="reflection" rows="6" maxlength="2000" placeholder="这一程给我留下了什么……"></textarea></label></section>
+        <div class="editor-save"><button id="editor-save-button" type="submit">保存并发布</button><span>保存后，已打开的展示页刷新即可看到新内容。</span></div>
+        <p id="editor-save-status" class="editor-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <footer class="stage-footer"><span>只有站主能够修改内容</span><a href="../index.html#journey">回到主页</a></footer>
+  </main>
+  <script src="../assets/journey-editor.js?v=20261010-01" defer></script>
+</body>
+</html>

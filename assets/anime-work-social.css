@@ -1,0 +1,40 @@
+/* 作品手记与访客评论：卷页留白、清楚分离编辑权限。 */
+.aw-published{padding:1.35rem 1.5rem 1.55rem;border-left:3px solid var(--accent);background:#fffaf2}
+.aw-published h3{margin:0 0 .8rem;font:400 1.35rem "ZCOOL XiaoWei",serif}
+.aw-published h3:not(:first-child){margin-top:1.7rem}
+.aw-published p{margin:0;color:var(--ink);font-size:.9rem;line-height:2.05;white-space:pre-wrap}
+.aw-published-date{margin-top:1rem!important;color:var(--muted)!important;font-size:.76rem!important}
+.aw-owner-gate{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem 1.1rem;margin:1.1rem 0 0;padding:.9rem 0;border-bottom:1px solid var(--edge)}
+.aw-owner-gate>p{flex:1 1 15rem;margin:0;color:var(--muted);font-size:.74rem;line-height:1.7}
+.aw-owner-gate button,.aw-comment-actions button[type=submit]{cursor:pointer;border:1px solid var(--dark);background:var(--dark);color:#fffdf8;padding:.7rem 1rem;font-size:.75rem}
+.aw-owner-gate button:hover,.aw-comment-actions button[type=submit]:hover{background:var(--accent);border-color:var(--accent)}
+.aw-owner-gate #watch-auth{display:flex;flex:1 1 100%;align-items:center;flex-wrap:wrap;gap:.55rem;padding:.7rem 0}
+.aw-owner-gate #watch-auth[hidden],.aw-owner-gate [hidden],.aw-published [hidden],.aw-comment-actions [hidden]{display:none!important}
+.aw-owner-gate label{font-size:.76rem}
+.aw-owner-gate input{min-width:13rem;padding:.65rem;border:1px solid var(--edge);background:#fffdf8}
+.aw-owner-gate>span{flex:1 1 100%;color:var(--muted);font-size:.73rem}
+#watch-editor{padding-top:1rem}
+#watch-editor[hidden]{display:none}
+.aw-discussion{border-top:1px solid var(--edge);padding:2.4rem 0 1rem}
+.aw-discussion-head h2{margin:.5rem 0 .55rem;font:400 2rem "ZCOOL XiaoWei",serif}
+.aw-discussion-head>p:last-child{margin:0;color:var(--muted);font-size:.81rem;line-height:1.8}
+#anime-comment-list{margin:1.6rem 0}
+.aw-comment-empty{margin:0;padding:1.3rem;color:var(--muted);background:#ffffffa6;font-size:.82rem}
+.aw-comment{padding:1.25rem 0;border-bottom:1px solid var(--edge)}
+.aw-comment-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.aw-comment-head strong{font-size:.84rem;font-weight:600}
+.aw-comment-head time{color:var(--muted);font-size:.7rem}
+.aw-comment-body{margin:.65rem 0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.84rem;line-height:1.85}
+.aw-reply-button,#anime-cancel-reply{cursor:pointer;padding:.1rem 0;border:0;border-bottom:1px solid var(--accent);background:none;color:var(--accent);font-size:.73rem}
+.aw-comment-thread{margin:1rem 0 0 1.1rem;padding-left:1.15rem;border-left:2px solid var(--edge)}
+.aw-comment-reply:last-child{border-bottom:0}
+#anime-comment-form{padding:1.5rem;background:#fffaf2;border:1px solid var(--edge)}
+#anime-comment-form h3{margin:0 0 1rem;font:400 1.4rem "ZCOOL XiaoWei",serif}
+.aw-comment-fields{display:grid;gap:.9rem}
+.aw-comment-fields label{display:grid;gap:.4rem;color:var(--muted);font-size:.73rem}
+.aw-comment-fields input,.aw-comment-fields textarea{width:100%;padding:.7rem .85rem;border:1px solid var(--edge);background:#fffefb;color:var(--ink);font-size:.85rem}
+.aw-comment-fields textarea{resize:vertical;line-height:1.7}
+.aw-comment-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.9rem;margin-top:1rem}
+.aw-comment-actions span{color:var(--muted);font-size:.73rem}
+.aw-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media(max-width:560px){.aw-published{padding:1.1rem}.aw-owner-gate{align-items:flex-start}.aw-owner-gate #watch-auth{display:grid}.aw-owner-gate input{min-width:0;width:100%}#anime-comment-form{padding:1.1rem}.aw-comment-thread{margin-left:.3rem;padding-left:.75rem}}

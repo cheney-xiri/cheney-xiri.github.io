@@ -1,0 +1,97 @@
+{
+  "cities": [
+    {
+      "id": "zhengzhou", "name": "郑州", "province": "河南", "cover": "二七纪念塔",
+      "visits": [
+        { "month": "2025-01", "places": [], "photos": [], "note": "", "flavors": [] },
+        { "month": "2026-07", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "luoyang", "name": "洛阳", "province": "河南", "cover": "龙门石窟",
+      "visits": [
+        { "month": "2023-07", "places": [], "photos": [], "note": "", "flavors": [] },
+        { "month": "2025-01", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "kaifeng", "name": "开封", "province": "河南", "cover": "铁塔公园",
+      "visits": [
+        { "month": "2025-01", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "beijing", "name": "北京", "province": "北京", "cover": "天坛",
+      "visits": [
+        { "month": "2024-08", "places": [], "photos": [], "note": "", "flavors": [] },
+        { "month": "2025-05", "places": [], "photos": [], "note": "", "flavors": [] },
+        { "month": "2026-01", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "shenyang", "name": "沈阳", "province": "辽宁", "cover": "沈阳故宫",
+      "visits": [
+        { "month": "2024-11", "places": [], "photos": [], "note": "", "flavors": [] },
+        { "month": "2025-06", "places": [], "photos": [], "note": "", "flavors": [] },
+        { "month": "2026-04", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "liaoyang", "name": "辽阳", "province": "辽宁", "cover": "白塔公园",
+      "visits": [
+        { "month": "2024-09", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "dalian", "name": "大连", "province": "辽宁", "cover": "星海湾大桥",
+      "visits": [
+        { "month": "2025-04", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "chongqing", "name": "重庆", "province": "重庆", "cover": "洪崖洞",
+      "visits": [
+        { "month": "2026-01", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "jinan", "name": "济南", "province": "山东", "cover": "趵突泉",
+      "visits": [
+        { "month": "2026-10", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "zibo", "name": "淄博", "province": "山东", "cover": "周村古商城",
+      "visits": [
+        { "month": "2026-10", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "taian", "name": "泰安", "province": "山东", "cover": "泰山日出",
+      "visits": [
+        { "month": "2026-10", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "tianjin", "name": "天津", "province": "天津", "cover": "天津之眼",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tianjin_Eye.jpg?width=1200",
+      "visits": [
+        { "month": "2025-05", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "harbin", "name": "哈尔滨", "province": "黑龙江", "cover": "圣索菲亚教堂",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Sophia_Cathedral%2C_Harbin%2C_China.jpg?width=1200",
+      "visits": [
+        { "month": "2024-12", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    },
+    {
+      "id": "xiangyang", "name": "襄阳", "province": "湖北", "cover": "襄阳古城墙",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Xiangyang_City_Wall_06.jpg?width=1200",
+      "visits": [
+        { "month": "2026-01", "places": [], "photos": [], "note": "", "flavors": [] }
+      ]
+    }
+  ]
+}

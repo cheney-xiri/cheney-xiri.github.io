@@ -1,0 +1,2140 @@
+[
+  {
+    "id": "ambition",
+    "name": "少年志气",
+    "subtitle": "心有凌云意，不负少年时",
+    "items": [
+      {
+        "text": "长风破浪会有时，直挂云帆济沧海。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "行路难·其一",
+        "url": "https://www.gushiwen.cn/mingju/juv_4a21691b5041.aspx"
+      },
+      {
+        "text": "天生我材必有用，千金散尽还复来。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "将进酒",
+        "url": "https://m.gushiwen.cn/mingju/juv_654fcdfd5729.aspx"
+      },
+      {
+        "text": "大鹏一日同风起，扶摇直上九万里。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "上李邕",
+        "url": "https://m.gushiwen.cn/shiwenv_6983ce743726.aspx"
+      },
+      {
+        "text": "会当凌绝顶，一览众山小。",
+        "kind": "classic",
+        "author": "杜甫",
+        "work": "望岳",
+        "url": "https://www.gushiwen.cn/gushiwen_0d0cb27e33.aspx"
+      },
+      {
+        "text": "俱怀逸兴壮思飞，欲上青天揽明月。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "宣州谢朓楼饯别校书叔云",
+        "url": "https://www.gushiwen.cn/shiwenv_731e2a19594e.aspx"
+      },
+      {
+        "text": "少年心事当拏云，谁念幽寒坐呜呃。",
+        "kind": "classic",
+        "author": "李贺",
+        "work": "致酒行",
+        "url": "https://m.gushiwen.cn/mingju/juv_bccd9410a18e.aspx"
+      },
+      {
+        "text": "穷且益坚，不坠青云之志。",
+        "kind": "classic",
+        "author": "王勃",
+        "work": "滕王阁序",
+        "url": "https://www.gushiwen.cn/shiwenv_ce802de625e5.aspx"
+      },
+      {
+        "text": "少年与爱永不老去，即使披荆斩棘，丢失怒马鲜衣。",
+        "kind": "image",
+        "image": 2
+      },
+      {
+        "text": "老骥伏枥，志在千里；烈士暮年，壮心不已。",
+        "kind": "classic",
+        "author": "曹操",
+        "work": "龟虽寿",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%BE%9C%E9%9B%96%E5%A3%BD",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "龜雖壽"
+        }
+      },
+      {
+        "text": "丈夫志四海，万里犹比邻。",
+        "kind": "classic",
+        "author": "曹植",
+        "work": "赠白马王彪",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%B4%88%E7%99%BD%E9%A6%AC%E7%8E%8B%E5%BD%AA",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "贈白馬王彪"
+        }
+      },
+      {
+        "text": "愿君学长松，慎勿作桃李。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "赠韦侍御黄裳二首·其一",
+        "url": "https://www.gushiwen.cn/mingju/juv_f96465021cef.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "赠韦侍御黄裳二首·其一",
+          "note": "原文含受屈不改心，按志向与品格归入少年志气。"
+        }
+      },
+      {
+        "text": "仰天大笑出门去，我辈岂是蓬蒿人。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "南陵别儿童入京",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%8D%97%E9%99%B5%E5%88%A5%E5%85%92%E7%AB%A5%E5%85%A5%E4%BA%AC",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "南陵別兒童入京"
+        }
+      },
+      {
+        "text": "兴酣落笔摇五岳，诗成笑傲凌沧洲。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "江上吟",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%B1%9F%E4%B8%8A%E5%90%9F",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "江上吟"
+        }
+      },
+      {
+        "text": "宣父犹能畏后生，丈夫未可轻年少。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "上李邕",
+        "url": "https://zh.wikisource.org/zh-hans/%E4%B8%8A%E6%9D%8E%E9%82%95",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "上李邕"
+        }
+      },
+      {
+        "text": "安能摧眉折腰事权贵，使我不得开心颜！",
+        "kind": "classic",
+        "author": "李白",
+        "work": "梦游天姥吟留别",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A4%A2%E9%81%8A%E5%A4%A9%E5%A7%A5%E5%90%9F%E7%95%99%E5%88%A5",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "夢遊天姥吟留別"
+        }
+      },
+      {
+        "text": "男儿何不带吴钩，收取关山五十州。",
+        "kind": "classic",
+        "author": "李贺",
+        "work": "南园十三首·其五",
+        "url": "https://www.gushiwen.cn/mingju/juv.aspx?id=91e59c42f4bf",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "南园十三首·其五",
+          "note": "据南园十三首其五原文核对。"
+        }
+      },
+      {
+        "text": "何当金络脑，快走踏清秋。",
+        "kind": "classic",
+        "author": "李贺",
+        "work": "马诗二十三首·其五",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%A6%AC%E8%A9%A9",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "馬詩"
+        }
+      },
+      {
+        "text": "宁为百夫长，胜作一书生。",
+        "kind": "classic",
+        "author": "杨炯",
+        "work": "从军行",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%BE%9E%E8%BB%8D%E8%A1%8C%20(%E6%A5%8A%E7%82%AF)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "從軍行 (楊炯)"
+        }
+      },
+      {
+        "text": "新丰美酒斗十千，咸阳游侠多少年。",
+        "kind": "classic",
+        "author": "王维",
+        "work": "少年行四首·其一",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%85%A8%E5%94%90%E8%A9%A9%2F%E5%8D%B7024",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "全唐詩/卷024"
+        }
+      },
+      {
+        "text": "孰知不向边庭苦，纵死犹闻侠骨香。",
+        "kind": "classic",
+        "author": "王维",
+        "work": "少年行四首·其二",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%85%A8%E5%94%90%E8%A9%A9%2F%E5%8D%B7024",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "全唐詩/卷024"
+        }
+      },
+      {
+        "text": "一点浩然气，千里快哉风。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "水调歌头·黄州快哉亭赠张偓佺",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%B0%B4%E8%AA%BF%E6%AD%8C%E9%A0%AD%20(%E8%90%BD%E6%97%A5%E7%B9%A1%E7%B0%BE%E6%8D%B2)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "水調歌頭 (落日繡簾捲)"
+        }
+      },
+      {
+        "text": "九万里风鹏正举。风休住，蓬舟吹取三山去！",
+        "kind": "classic",
+        "author": "李清照",
+        "work": "渔家傲·天接云涛连晓雾",
+        "url": "https://www.gushiwen.cn/mingju/juv_802caa1e7a20.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "渔家傲·天接云涛连晓雾",
+          "note": "词题亦作渔家傲·记梦。"
+        }
+      },
+      {
+        "text": "想当年，金戈铁马，气吞万里如虎。",
+        "kind": "classic",
+        "author": "辛弃疾",
+        "work": "永遇乐·京口北固亭怀古",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%AE%8B%E8%A9%9E%E4%B8%89%E7%99%BE%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "宋詞三百首"
+        }
+      },
+      {
+        "text": "虽长不满七尺，而心雄万夫。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "与韩荆州书",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%88%87%E9%9F%93%E8%8D%8A%E5%B7%9E%E6%9B%B8",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "與韓荊州書"
+        }
+      },
+      {
+        "text": "穷则独善其身，达则兼善天下。",
+        "kind": "classic",
+        "author": "孟子",
+        "work": "孟子·尽心上",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90%2F%E4%BF%AE%E8%BA%AB%E7%AF%87",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "荀子/修身篇"
+        }
+      },
+      {
+        "text": "士不可以不弘毅，任重而道远。",
+        "kind": "classic",
+        "author": "曾子",
+        "work": "论语·泰伯",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E6%B3%B0%E4%BC%AF%E7%AC%AC%E5%85%AB",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/泰伯第八"
+        }
+      },
+      {
+        "text": "三军可夺帅也，匹夫不可夺志也。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·子罕",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E5%AD%90%E7%BD%95%E7%AC%AC%E4%B9%9D",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/子罕第九"
+        }
+      },
+      {
+        "text": "欲穷千里目，更上一层楼。",
+        "kind": "classic",
+        "author": "王之涣",
+        "work": "登鹳雀楼",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%99%BB%E9%B8%9B%E9%9B%80%E6%A8%93%20(%E7%8E%8B%E4%B9%8B%E6%B8%99)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "登鸛雀樓 (王之渙)"
+        }
+      },
+      {
+        "text": "心怀热爱，即使岁月荒芜，亦能奔山赴海，静待一树花开。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 3,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "心存希冀，追光而遇；目有繁星，沐光而行。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 7,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "愿你成为自己的太阳，无需凭借谁的光。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 11,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      }
+    ]
+  },
+  {
+    "id": "courage",
+    "name": "迎难向前",
+    "subtitle": "风雨过后，仍有前路",
+    "items": [
+      {
+        "text": "千磨万击还坚劲，任尔东西南北风。",
+        "kind": "classic",
+        "author": "郑燮",
+        "work": "竹石",
+        "url": "https://www.gushiwen.cn/mingju/juv_8d743552e647.aspx"
+      },
+      {
+        "text": "千淘万漉虽辛苦，吹尽狂沙始到金。",
+        "kind": "classic",
+        "author": "刘禹锡",
+        "work": "浪淘沙·其八",
+        "url": "https://www.gushiwen.cn/mingju/juv_a359c2b39f5d.aspx"
+      },
+      {
+        "text": "山重水复疑无路，柳暗花明又一村。",
+        "kind": "classic",
+        "author": "陆游",
+        "work": "游山西村",
+        "url": "https://m.gushiwen.cn/mingju/juv_861088287ca4.aspx"
+      },
+      {
+        "text": "沉舟侧畔千帆过，病树前头万木春。",
+        "kind": "classic",
+        "author": "刘禹锡",
+        "work": "酬乐天扬州初逢席上见赠",
+        "url": "https://www.gushiwen.cn/shiwenv_f6c40e3d4893.aspx"
+      },
+      {
+        "text": "不经一番寒彻骨，怎得梅花扑鼻香。",
+        "kind": "classic",
+        "author": "黄櫱禅师",
+        "work": "上堂开示颂",
+        "url": "https://m.gushiwen.cn/mingju/juv_67693300d14b.aspx"
+      },
+      {
+        "text": "山高自有客行路，水深自有渡船人。",
+        "kind": "image",
+        "image": 4
+      },
+      {
+        "text": "追风赶月莫停留，平芜尽处是春山。",
+        "kind": "image",
+        "image": 4
+      },
+      {
+        "text": "雨会停，路还长；把昨日留给风，把脚步交给远方。",
+        "kind": "adapted",
+        "basedOn": "雨停了，树还替天空多下了一会儿。"
+      },
+      {
+        "text": "在暗处执着生长，终有一日馥郁传香。",
+        "kind": "excerpt",
+        "url": "https://www.sohu.com/a/744193945_121124705",
+        "note": "现代话语短摘；不采信转载总标题的统一署名。"
+      },
+      {
+        "text": "路漫漫其修远兮，吾将上下而求索。",
+        "kind": "classic",
+        "author": "屈原",
+        "work": "离骚",
+        "url": "https://m.gushiwen.cn/mingjuw_1619.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "离骚",
+          "note": "采用通行本漫漫写法；维基底本文字作曼曼。"
+        }
+      },
+      {
+        "text": "亦余心之所善兮，虽九死其犹未悔。",
+        "kind": "classic",
+        "author": "屈原",
+        "work": "离骚",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%9B%A2%E9%A8%B7",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "離騷"
+        }
+      },
+      {
+        "text": "苟余心之端直兮，虽僻远其何伤。",
+        "kind": "classic",
+        "author": "屈原",
+        "work": "九章·涉江",
+        "url": "https://m.gushiwen.cn/gushiwen_b6e106cc7b.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "九章·涉江",
+          "note": "据涉江名句核对。"
+        }
+      },
+      {
+        "text": "刑天舞干戚，猛志固常在。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "读山海经·其十",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%98%A5%E6%9C%AB%E9%96%92%E8%AB%87",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "春末閒談"
+        }
+      },
+      {
+        "text": "精卫衔微木，将以填沧海。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "读山海经·其十",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AE%80%E3%80%8A%E5%B1%B1%E6%B5%B7%E7%B6%93%E3%80%8B",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "讀《山海經》"
+        }
+      },
+      {
+        "text": "时人不识凌云木，直待凌云始道高。",
+        "kind": "classic",
+        "author": "杜荀鹤",
+        "work": "小松",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%B0%8F%E6%9D%BE%20(%E6%9D%9C%E8%8D%80%E9%B6%B4)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "小松 (杜荀鶴)"
+        }
+      },
+      {
+        "text": "岁寒，然后知松柏之后凋也。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·子罕",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E5%AD%90%E7%BD%95%E7%AC%AC%E4%B9%9D",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/子罕第九"
+        }
+      },
+      {
+        "text": "时穷节乃见，一一垂丹青。",
+        "kind": "classic",
+        "author": "文天祥",
+        "work": "正气歌",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%AD%A3%E6%B0%A3%E6%AD%8C",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "正氣歌"
+        }
+      },
+      {
+        "text": "臣心一片磁针石，不指南方不肯休。",
+        "kind": "classic",
+        "author": "文天祥",
+        "work": "扬子江",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%8F%9A%E5%AD%90%E6%B1%9F",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "揚子江"
+        }
+      },
+      {
+        "text": "人生自古谁无死？留取丹心照汗青。",
+        "kind": "classic",
+        "author": "文天祥",
+        "work": "过零丁洋",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%81%8E%E9%9B%B6%E4%B8%81%E6%B4%8B",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "過零丁洋"
+        }
+      },
+      {
+        "text": "黄沙百战穿金甲，不破楼兰终不还。",
+        "kind": "classic",
+        "author": "王昌龄",
+        "work": "从军行七首·其四",
+        "url": "https://zh.wikisource.org/zh-hans/2022%E5%B9%B4%E8%82%87%E5%BA%86%E5%B8%82%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E8%82%BA%E7%82%8E%E7%96%AB%E6%83%85%E9%98%B2%E6%8E%A7%E6%8C%87%E6%8C%A5%E9%83%A8%E8%87%B4%E5%8F%82%E4%B8%8E%E6%8A%97%E7%96%AB%E4%B8%80%E7%BA%BF%E5%B7%A5%E4%BD%9C%E8%80%85%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "2022年肇庆市新型冠状病毒肺炎疫情防控指挥部致参与抗疫一线工作者的一封信"
+        }
+      },
+      {
+        "text": "不畏浮云遮望眼，自缘身在最高层。",
+        "kind": "classic",
+        "author": "王安石",
+        "work": "登飞来峰",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A0%AF%E5%B1%B1%E5%A0%82%E5%A4%96%E7%B4%80%2F%E5%8D%B7062",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "堯山堂外紀/卷062"
+        }
+      },
+      {
+        "text": "粉骨碎身浑不怕，要留清白在人间。",
+        "kind": "classic",
+        "author": "于谦",
+        "work": "石灰吟",
+        "url": "https://www.gushiwen.cn/mingju/juv_75b8ab9a2969.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "石灰吟",
+          "note": "采用所据页面粉骨碎身、浑不怕写法，其他通行本有异文。"
+        }
+      },
+      {
+        "text": "零落成泥碾作尘，只有香如故。",
+        "kind": "classic",
+        "author": "陆游",
+        "work": "卜算子·咏梅",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%AE%8B%E8%A9%9E%E4%B8%89%E7%99%BE%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "宋詞三百首"
+        }
+      },
+      {
+        "text": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "赠刘景文",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%B4%88%E5%8A%89%E6%99%AF%E6%96%87",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "贈劉景文"
+        }
+      },
+      {
+        "text": "纵被春风吹作雪，绝胜南陌碾成尘。",
+        "kind": "classic",
+        "author": "王安石",
+        "work": "北陂杏花",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%8C%97%E9%99%82%E6%9D%8F%E8%8A%B1",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "北陂杏花"
+        }
+      },
+      {
+        "text": "岁老根弥壮，阳骄叶更阴。",
+        "kind": "classic",
+        "author": "王安石",
+        "work": "孤桐",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%AD%A4%E6%A1%90",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "孤桐"
+        }
+      },
+      {
+        "text": "冲天香阵透长安，满城尽带黄金甲。",
+        "kind": "classic",
+        "author": "黄巢",
+        "work": "不第后赋菊",
+        "url": "https://zh.wikisource.org/zh-hans/%E4%B8%8D%E7%AC%AC%E5%BE%8C%E8%B3%A6%E8%8F%8A",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "不第後賦菊"
+        }
+      },
+      {
+        "text": "道虽迩，不行不至；事虽小，不为不成。",
+        "kind": "classic",
+        "author": "荀子",
+        "work": "荀子·修身",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90%2F%E4%BF%AE%E8%BA%AB%E7%AF%87",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "荀子/修身篇"
+        }
+      },
+      {
+        "text": "为之，则难者亦易矣；不为，则易者亦难矣。",
+        "kind": "classic",
+        "author": "彭端淑",
+        "work": "为学一首示子侄",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%88%B2%E5%AD%B8%E4%B8%80%E9%A6%96%E7%A4%BA%E5%AD%90%E5%A7%AA",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "爲學一首示子姪"
+        }
+      },
+      {
+        "text": "千锤万凿出深山，烈火焚烧若等闲。",
+        "kind": "classic",
+        "author": "于谦",
+        "work": "石灰吟",
+        "url": "https://www.gushiwen.cn/mingju/juv_75b8ab9a2969.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "note": "按用户要求保留把艰难看作平常的豁达与勇毅表达。"
+        }
+      },
+      {
+        "text": "万物皆有裂痕，那是光照进来的地方。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 12,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "每次归程，都是为了更好出发；每次停歇，都是为了积攒力量。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 17,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "坚持，就是在坚持不下去的时候再坚持一下。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 21,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "艰难方显勇毅，磨砺始得玉成。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 29,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "真正的强者不是不流泪的人，而是含着眼泪奔跑的人。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 58,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      }
+    ]
+  },
+  {
+    "id": "learning",
+    "name": "勤学笃行",
+    "subtitle": "书中有天地，足下有长路",
+    "items": [
+      {
+        "text": "不积跬步，无以至千里；不积小流，无以成江海。",
+        "kind": "classic",
+        "author": "荀子",
+        "work": "劝学",
+        "url": "https://www.gushiwen.cn/shiwenv_c743b1310a1c.aspx"
+      },
+      {
+        "text": "锲而不舍，金石可镂。",
+        "kind": "classic",
+        "author": "荀子",
+        "work": "劝学",
+        "url": "https://www.gushiwen.cn/shiwenv_c743b1310a1c.aspx"
+      },
+      {
+        "text": "学而不思则罔，思而不学则殆。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·为政",
+        "url": "https://www.gushiwen.cn/shiwenv_d6640103678f.aspx"
+      },
+      {
+        "text": "三人行，必有我师焉。择其善者而从之，其不善者而改之。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·述而",
+        "url": "https://www.gushiwen.cn/shiwenv_d6640103678f.aspx"
+      },
+      {
+        "text": "纸上得来终觉浅，绝知此事要躬行。",
+        "kind": "classic",
+        "author": "陆游",
+        "work": "冬夜读书示子聿",
+        "url": "https://www.gushiwen.cn/mingju/juv_bc2e9eb921c8.aspx"
+      },
+      {
+        "text": "问渠那得清如许？为有源头活水来。",
+        "kind": "classic",
+        "author": "朱熹",
+        "work": "观书有感·其一",
+        "url": "https://www.gushiwen.cn/shiwenv_4c1364cb1da5.aspx"
+      },
+      {
+        "text": "书签暂留昨夜，少年仍向明朝。",
+        "kind": "adapted",
+        "basedOn": "书签替离开的人守着那一页。"
+      },
+      {
+        "text": "灯下多读一页，心中便多一程山海。",
+        "kind": "adapted",
+        "basedOn": "灯照着书，书照见一个迟迟没有睡的人。"
+      },
+      {
+        "text": "书痴者文必工，艺痴者技必良。",
+        "kind": "classic",
+        "author": "蒲松龄",
+        "work": "聊斋志异·阿宝",
+        "url": "https://www.gushiwen.cn/mingju/juv_5b77024b7da5.aspx",
+        "discoveredAt": "https://www.sohu.com/a/744193945_121124705",
+        "note": "删除转载中接在古文之后的后加句。"
+      },
+      {
+        "text": "观今宜鉴古，无古不成今。",
+        "kind": "classic",
+        "author": "佚名",
+        "work": "增广贤文",
+        "url": "https://www.cidianwang.com/lishi/diangu/1/1511sb.htm",
+        "discoveredAt": "https://www.sohu.com/a/744193945_121124705"
+      },
+      {
+        "text": "图之于未萌，虑之于未有。",
+        "kind": "classic",
+        "author": "柳泽",
+        "work": "上睿宗奏疏（见《旧唐书·柳泽传》及《全唐文》）",
+        "url": "https://ctext.org/wiki.pl?chapter=644027&if=en&remap=gb",
+        "discoveredAt": "https://www.sohu.com/a/744193945_121124705",
+        "note": "据全唐文与旧唐书相关奏疏核对，不采用说苑的误署。"
+      },
+      {
+        "text": "读书破万卷，下笔如有神。",
+        "kind": "classic",
+        "author": "杜甫",
+        "work": "奉赠韦左丞丈二十二韵",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A5%89%E8%B4%88%E9%9F%8B%E5%B7%A6%E4%B8%9E%E4%B8%88%E4%BA%8C%E5%8D%81%E4%BA%8C%E9%9F%BB",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "奉贈韋左丞丈二十二韻"
+        }
+      },
+      {
+        "text": "三更灯火五更鸡，正是男儿读书时。",
+        "kind": "classic",
+        "author": "颜真卿",
+        "work": "劝学",
+        "url": "https://www.gushiwen.cn/shiwenv_6a23fa2dab40.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "劝学",
+          "note": "颜真卿劝学原文。"
+        }
+      },
+      {
+        "text": "少年易老学难成，一寸光阴不可轻。",
+        "kind": "classic",
+        "author": "通行署朱熹",
+        "work": "劝学诗",
+        "url": "https://www.gushiwen.cn/shiwenv_85ebee46dc2c.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "劝学诗",
+          "note": "采用此页少年易老写法；署名在内部按通行本记录。"
+        }
+      },
+      {
+        "text": "读书不觉已春深，一寸光阴一寸金。",
+        "kind": "classic",
+        "author": "王贞白",
+        "work": "白鹿洞二首·其一",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%99%BD%E9%B9%BF%E6%B4%9E%E4%BA%8C%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "白鹿洞二首"
+        }
+      },
+      {
+        "text": "古人学问无遗力，少壮工夫老始成。",
+        "kind": "classic",
+        "author": "陆游",
+        "work": "冬夜读书示子聿",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%86%AC%E5%A4%9C%E8%AE%80%E6%9B%B8%E7%A4%BA%E5%AD%90%E8%81%BF",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "冬夜讀書示子聿"
+        }
+      },
+      {
+        "text": "读书之乐乐何如？绿满窗前草不除。",
+        "kind": "classic",
+        "author": "翁森",
+        "work": "四时读书乐·春",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%9B%9B%E6%99%82%E8%AE%80%E6%9B%B8%E6%A8%82",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "四時讀書樂"
+        }
+      },
+      {
+        "text": "向来枉费推移力，此日中流自在行。",
+        "kind": "classic",
+        "author": "朱熹",
+        "work": "观书有感·其二",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%8D%83%E5%AE%B6%E8%A9%A9%2F%E5%8D%B7%E4%B8%89",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "千家詩/卷三"
+        }
+      },
+      {
+        "text": "书当快意读易尽，客有可人期不来。",
+        "kind": "classic",
+        "author": "陈师道",
+        "work": "绝句·书当快意读易尽",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%A9%A9%E6%9E%97%E5%BB%A3%E8%A8%98",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "詩林廣記"
+        }
+      },
+      {
+        "text": "俯仰终宇宙，不乐复何如。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "读山海经·其一",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AE%80%E3%80%8A%E5%B1%B1%E6%B5%B7%E7%B6%93%E3%80%8B",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "讀《山海經》"
+        }
+      },
+      {
+        "text": "读书切戒在慌忙，涵泳工夫兴味长。",
+        "kind": "classic",
+        "author": "陆九渊",
+        "work": "读书",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%87%95%E5%B1%B1%E5%A4%9C%E8%AF%9D%2F%E5%8D%B71",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "燕山夜话/卷1"
+        }
+      },
+      {
+        "text": "青春须早为，岂能长少年。",
+        "kind": "classic",
+        "author": "孟郊",
+        "work": "劝学",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%8B%B8%E5%AD%B8%20(%E5%AD%9F%E9%83%8A)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "勸學 (孟郊)"
+        }
+      },
+      {
+        "text": "少年辛苦终身事，莫向光阴惰寸功。",
+        "kind": "classic",
+        "author": "杜荀鹤",
+        "work": "题弟侄书堂",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%A1%8C%E5%BC%9F%E5%A7%AA%E6%9B%B8%E5%A0%82",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "題弟姪書堂"
+        }
+      },
+      {
+        "text": "非学无以广才，非志无以成学。",
+        "kind": "classic",
+        "author": "诸葛亮",
+        "work": "诫子书",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AA%A1%E5%AD%90%E6%9B%B8",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "誡子書"
+        }
+      },
+      {
+        "text": "博学之，审问之，慎思之，明辨之，笃行之。",
+        "kind": "classic",
+        "author": "子思传",
+        "work": "中庸",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%A6%AE%E8%A8%98%2F%E4%B8%AD%E5%BA%B8",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "禮記/中庸"
+        }
+      },
+      {
+        "text": "知之者不如好之者，好之者不如乐之者。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·雍也",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E9%9B%8D%E4%B9%9F%E7%AC%AC%E5%85%AD",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/雍也第六"
+        }
+      },
+      {
+        "text": "知之为知之，不知为不知，是知也。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·为政",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E7%88%B2%E6%94%BF%E7%AC%AC%E4%BA%8C",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/爲政第二"
+        }
+      },
+      {
+        "text": "学而时习之，不亦说乎？",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·学而",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/學而第一"
+        }
+      },
+      {
+        "text": "温故而知新，可以为师矣。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·为政",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E7%88%B2%E6%94%BF%E7%AC%AC%E4%BA%8C",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/爲政第二"
+        }
+      },
+      {
+        "text": "见贤思齐焉，见不贤而内自省也。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·里仁",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E9%87%8C%E4%BB%81%E7%AC%AC%E5%9B%9B",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/里仁第四"
+        }
+      },
+      {
+        "text": "学然后知不足，教然后知困。",
+        "kind": "classic",
+        "author": "礼记",
+        "work": "礼记·学记",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%A6%AE%E8%A8%98%2F%E5%AD%B8%E8%A8%98",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "禮記/學記"
+        }
+      },
+      {
+        "text": "业精于勤，荒于嬉；行成于思，毁于随。",
+        "kind": "classic",
+        "author": "韩愈",
+        "work": "进学解",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%80%B2%E5%AD%B8%E8%A7%A3",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "進學解"
+        }
+      },
+      {
+        "text": "博观而约取，厚积而薄发。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "稼说送张琥",
+        "url": "https://m.gushiwen.cn/shiwenv_4e4b215e58ce.aspx",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "稼说送张琥",
+          "note": "据稼说送张琥原文核对。"
+        }
+      },
+      {
+        "text": "操千曲而后晓声，观千剑而后识器。",
+        "kind": "classic",
+        "author": "刘勰",
+        "work": "文心雕龙·知音",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%96%87%E5%BF%83%E9%9B%95%E9%BE%8D%2F%E7%9F%A5%E9%9F%B3",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "文心雕龍/知音"
+        }
+      },
+      {
+        "text": "机会来之不易，努力过就很了不起。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 26,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "生活可能沉闷，但跑起来就会有风。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 32,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      }
+    ]
+  },
+  {
+    "id": "composure",
+    "name": "豁达自持",
+    "subtitle": "心有定处，风雨从容",
+    "items": [
+      {
+        "text": "莫听穿林打叶声，何妨吟啸且徐行。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "定风波·莫听穿林打叶声",
+        "url": "https://www.gushiwen.cn/shiwenv_6b30455fdd3c.aspx"
+      },
+      {
+        "text": "竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "定风波·莫听穿林打叶声",
+        "url": "https://www.gushiwen.cn/shiwenv_6b30455fdd3c.aspx"
+      },
+      {
+        "text": "莫道桑榆晚，为霞尚满天。",
+        "kind": "classic",
+        "author": "刘禹锡",
+        "work": "酬乐天咏老见示",
+        "url": "https://www.gushiwen.cn/shiwenv_e07317133df0.aspx"
+      },
+      {
+        "text": "悟已往之不谏，知来者之可追。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "归去来兮辞",
+        "url": "https://www.gushiwen.cn/shiwenv_987458864738.aspx"
+      },
+      {
+        "text": "本自具足，莫向外求。",
+        "kind": "image",
+        "image": 2
+      },
+      {
+        "text": "行己所爱，爱己所行。",
+        "kind": "image",
+        "image": 3
+      },
+      {
+        "text": "山不让尘，川不辞盈。",
+        "kind": "image",
+        "image": 2
+      },
+      {
+        "text": "不与浮云争去留，且随清风过春秋。",
+        "kind": "adapted",
+        "basedOn": "一枚叶子落下来，风终于有了形状。"
+      },
+      {
+        "text": "泰山不让土壤，故能成其大；河海不择细流，故能就其深。",
+        "kind": "classic",
+        "author": "李斯",
+        "work": "谏逐客书",
+        "url": "https://www.gushiwen.cn/mingju/juv_589c7be01b26.aspx",
+        "discoveredAt": "https://www.sohu.com/a/744193945_121124705",
+        "note": "通行写法泰山；所据原文作太山。"
+      },
+      {
+        "text": "青松寒不落，碧海阔逾澄。",
+        "kind": "classic",
+        "author": "杜甫",
+        "work": "寄刘峡州伯华使君四十韵",
+        "url": "https://www.shidianguji.com/book/SBCK133/chapter/SBCK133_858",
+        "discoveredAt": "https://www.sohu.com/a/744193945_121124705"
+      },
+      {
+        "text": "人间有味是清欢。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "浣溪沙·细雨斜风作晓寒",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%B1%E5%9D%A1%E8%A9%9E%20(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "東坡詞 (四庫全書本)"
+        }
+      },
+      {
+        "text": "此心安处是吾乡。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "定风波·南海归赠王定国侍人寓娘",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%B1%E5%9D%A1%E8%A9%9E%20(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "東坡詞 (四庫全書本)"
+        }
+      },
+      {
+        "text": "回首向来萧瑟处，归去，也无风雨也无晴。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "定风波·莫听穿林打叶声",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%AE%8B%E8%A9%9E%E4%B8%89%E7%99%BE%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "宋詞三百首"
+        }
+      },
+      {
+        "text": "几时归去，作个闲人。对一张琴，一壶酒，一溪云。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "行香子·述怀",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%B1%E5%9D%A1%E8%A9%9E%20(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "東坡詞 (四庫全書本)"
+        }
+      },
+      {
+        "text": "小舟从此逝，江海寄余生。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "临江仙·夜归临皋",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%AE%8B%E8%A9%9E%E4%B8%89%E7%99%BE%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "宋詞三百首"
+        }
+      },
+      {
+        "text": "我醉欲眠卿且去，明朝有意抱琴来。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "山中与幽人对酌",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%B1%B1%E4%B8%AD%E8%88%87%E5%B9%BD%E4%BA%BA%E5%B0%8D%E9%85%8C",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "山中與幽人對酌"
+        }
+      },
+      {
+        "text": "且放白鹿青崖间，须行即骑访名山。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "梦游天姥吟留别",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A4%A2%E9%81%8A%E5%A4%A9%E5%A7%A5%E5%90%9F%E7%95%99%E5%88%A5",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "夢遊天姥吟留別"
+        }
+      },
+      {
+        "text": "且乐生前一杯酒，何须身后千载名？",
+        "kind": "classic",
+        "author": "李白",
+        "work": "行路难·其三",
+        "url": "https://www.gutenberg.org/cache/epub/52323/pg52323-images.html",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "唐诗三百首"
+        }
+      },
+      {
+        "text": "人生达命岂暇愁，且饮美酒登高楼。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "梁园吟",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%A2%81%E5%9C%92%E5%90%9F",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "梁園吟"
+        }
+      },
+      {
+        "text": "采菊东篱下，悠然见南山。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "饮酒·其五",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%A3%B2%E9%85%92%E4%BA%8C%E5%8D%81%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "飲酒二十首"
+        }
+      },
+      {
+        "text": "问君何能尔？心远地自偏。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "饮酒·其五",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%A3%B2%E9%85%92%E4%BA%8C%E5%8D%81%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "飲酒二十首"
+        }
+      },
+      {
+        "text": "久在樊笼里，复得返自然。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "归园田居·其一",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%AD%B8%E5%9C%92%E7%94%B0%E5%B1%85",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "歸園田居"
+        }
+      },
+      {
+        "text": "衣沾不足惜，但使愿无违。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "归园田居·其三",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%AD%B8%E5%9C%92%E7%94%B0%E5%B1%85",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "歸園田居"
+        }
+      },
+      {
+        "text": "云无心以出岫，鸟倦飞而知还。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "归去来兮辞",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%B6%93%E5%8F%B2%E7%99%BE%E5%AE%B6%E9%9B%9C%E9%88%94%2F%E5%8D%B75",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "經史百家雜鈔/卷5"
+        }
+      },
+      {
+        "text": "登东皋以舒啸，临清流而赋诗。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "归去来兮辞",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%B6%93%E5%8F%B2%E7%99%BE%E5%AE%B6%E9%9B%9C%E9%88%94%2F%E5%8D%B75",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "經史百家雜鈔/卷5"
+        }
+      },
+      {
+        "text": "不义而富且贵，于我如浮云。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·述而",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E8%BF%B0%E8%80%8C%E7%AC%AC%E4%B8%83",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/述而第七"
+        }
+      },
+      {
+        "text": "君子坦荡荡，小人长戚戚。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·述而",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E8%BF%B0%E8%80%8C%E7%AC%AC%E4%B8%83",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/述而第七"
+        }
+      },
+      {
+        "text": "不以物喜，不以己悲。",
+        "kind": "classic",
+        "author": "范仲淹",
+        "work": "岳阳楼记",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%B2%B3%E9%99%BD%E6%A8%93%E8%A8%98",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "岳陽樓記"
+        }
+      },
+      {
+        "text": "非淡泊无以明志，非宁静无以致远。",
+        "kind": "classic",
+        "author": "诸葛亮",
+        "work": "诫子书",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AA%A1%E5%AD%90%E6%9B%B8",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "诫子书",
+          "note": "所据诫子书原文作澹泊，前台采用通行的淡泊写法。"
+        }
+      },
+      {
+        "text": "不戚戚于贫贱，不汲汲于富贵。",
+        "kind": "classic",
+        "author": "陶渊明",
+        "work": "五柳先生传",
+        "url": "https://zh.wikisource.org/zh-hans/%E4%BA%94%E6%9F%B3%E5%85%88%E7%94%9F%E5%82%B3",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "五柳先生傳"
+        }
+      },
+      {
+        "text": "清风徐来，水波不兴。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "赤壁赋",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B3%A6",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "前赤壁賦"
+        }
+      },
+      {
+        "text": "人生如逆旅，我亦是行人。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "临江仙·送钱穆父",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%B1%E5%9D%A1%E8%A9%9E%20(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "東坡詞 (四庫全書本)"
+        }
+      },
+      {
+        "text": "万物静观皆自得，四时佳兴与人同。",
+        "kind": "classic",
+        "author": "程颢",
+        "work": "秋日偶成",
+        "url": "https://www.gushiwen.cn/mingju/juv.aspx?id=f4a0b8ac6e11",
+        "verification": {
+          "method": "原文页面人工核对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "秋日偶成",
+          "note": "程颢秋日偶成原文。"
+        }
+      },
+      {
+        "text": "用舍由时，行藏在我，袖手何妨闲处看。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "沁园春·孤馆灯青",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%B1%E5%9D%A1%E8%A9%9E%20(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "東坡詞 (四庫全書本)"
+        }
+      },
+      {
+        "text": "有风有雨是常态，风雨无阻是心态，风雨兼程是状态。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 9,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "人生除了生死，其他都是小事。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 42,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "真正的强大，不是对抗，而是允许一切发生。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 53,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "不能行色匆匆，不必光芒四射，只需做自己。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 55,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      }
+    ]
+  },
+  {
+    "id": "renewal",
+    "name": "释怀新生",
+    "subtitle": "旧事翻篇，来日生花",
+    "items": [
+      {
+        "text": "行到水穷处，坐看云起时。",
+        "kind": "classic",
+        "author": "王维",
+        "work": "终南别业",
+        "url": "https://www.shidianguji.com/book/SBCK134/chapter/SBCK134_125"
+      },
+      {
+        "text": "我与旧事归于尽，来年依旧迎花开。",
+        "kind": "image",
+        "image": 4
+      },
+      {
+        "text": "栀子花开了，我也该释怀了。",
+        "kind": "image",
+        "image": 1
+      },
+      {
+        "text": "前方路漫漫亦灿灿，我还有很多的路要走。",
+        "kind": "image",
+        "image": 1
+      },
+      {
+        "text": "只是我不能一直为情所困，我得有前途。",
+        "kind": "image",
+        "image": 1
+      },
+      {
+        "text": "我将玫瑰藏于身后，风起花落，从此鲜花赠自己，纵马踏花向自由。",
+        "kind": "image",
+        "image": 2
+      },
+      {
+        "text": "把未寄的信收好，把未走的路走完。",
+        "kind": "adapted",
+        "basedOn": "一封信折了三折，想说的话仍露在外面。"
+      },
+      {
+        "text": "旧事翻过一页，新枝自有春风。",
+        "kind": "adapted",
+        "basedOn": "旧书里的铅笔线，留着从前停下来的地方。"
+      },
+      {
+        "text": "毕竟几人真得鹿，不知终日梦为鱼。",
+        "kind": "classic",
+        "author": "黄庭坚",
+        "work": "杂诗七首·其一",
+        "url": "https://m.gushiwen.cn/mingju/juv_efe9df1d0ec3.aspx",
+        "discoveredAt": "https://www.sohu.com/a/744193945_121124705",
+        "note": "得失与人生感怀，归入释怀，不当作保证成功的励志句。"
+      },
+      {
+        "text": "谁道人生无再少？门前流水尚能西！休将白发唱黄鸡。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "浣溪沙·游蕲水清泉寺",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%B1%E5%9D%A1%E8%A9%9E%20(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "東坡詞 (四庫全書本)"
+        }
+      },
+      {
+        "text": "休对故人思故国，且将新火试新茶。诗酒趁年华。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "望江南·超然台作",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%B1%E5%9D%A1%E8%A9%9E%20(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "東坡詞 (四庫全書本)"
+        }
+      },
+      {
+        "text": "春风得意马蹄疾，一日看尽长安花。",
+        "kind": "classic",
+        "author": "孟郊",
+        "work": "登科后",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%99%BB%E7%A7%91%E5%BE%8C",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "登科後"
+        }
+      },
+      {
+        "text": "白日放歌须纵酒，青春作伴好还乡。",
+        "kind": "classic",
+        "author": "杜甫",
+        "work": "闻官军收河南河北",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%81%9E%E5%AE%98%E8%BB%8D%E6%94%B6%E6%B2%B3%E5%8D%97%E6%B2%B3%E5%8C%97",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "聞官軍收河南河北"
+        }
+      },
+      {
+        "text": "两岸猿声啼不住，轻舟已过万重山。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "早发白帝城",
+        "url": "https://www.gutenberg.org/cache/epub/52323/pg52323-images.html",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "唐诗三百首"
+        }
+      },
+      {
+        "text": "今日听君歌一曲，暂凭杯酒长精神。",
+        "kind": "classic",
+        "author": "刘禹锡",
+        "work": "酬乐天扬州初逢席上见赠",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%85%AC%E6%A8%82%E5%A4%A9%E6%8F%9A%E5%B7%9E%E5%88%9D%E9%80%A2%E5%B8%AD%E4%B8%8A%E8%A6%8B%E8%B4%88",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "酬樂天揚州初逢席上見贈"
+        }
+      },
+      {
+        "text": "海日生残夜，江春入旧年。",
+        "kind": "classic",
+        "author": "王湾",
+        "work": "次北固山下",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%AC%A1%E5%8C%97%E5%9B%BA%E5%B1%B1%E4%B8%8B",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "次北固山下"
+        }
+      },
+      {
+        "text": "等闲识得东风面，万紫千红总是春。",
+        "kind": "classic",
+        "author": "朱熹",
+        "work": "春日",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%98%A5%E6%97%A5%20(%E6%9C%B1%E7%86%B9)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "春日 (朱熹)"
+        }
+      },
+      {
+        "text": "律回岁晚冰霜少，春到人间草木知。",
+        "kind": "classic",
+        "author": "张栻",
+        "work": "立春偶成",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%AB%8B%E6%98%A5%E5%81%B6%E6%88%90",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "立春偶成"
+        }
+      },
+      {
+        "text": "千门万户曈曈日，总把新桃换旧符。",
+        "kind": "classic",
+        "author": "王安石",
+        "work": "元日",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%85%83%E6%97%A5%20(%E7%8E%8B%E5%AE%89%E7%9F%B3)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "元日 (王安石)"
+        }
+      },
+      {
+        "text": "一夜好风吹，新花一万枝。",
+        "kind": "classic",
+        "author": "令狐楚",
+        "work": "春游曲三首·其三",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%85%A8%E5%94%90%E8%A9%A9%2F%E5%8D%B7023",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "全唐詩/卷023"
+        }
+      },
+      {
+        "text": "草树知春不久归，百般红紫斗芳菲。",
+        "kind": "classic",
+        "author": "韩愈",
+        "work": "晚春",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%99%9A%E6%98%A5%20(%E9%9F%93%E6%84%88)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "晚春 (韓愈)"
+        }
+      },
+      {
+        "text": "春色满园关不住，一枝红杏出墙来。",
+        "kind": "classic",
+        "author": "叶绍翁",
+        "work": "游园不值",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%89%B7%E7%95%B0%E7%B7%A8%E7%BA%8C%E9%9B%86%2F%E5%8D%B7%E4%BA%94",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "艷異編續集/卷五"
+        }
+      },
+      {
+        "text": "野火烧不尽，春风吹又生。",
+        "kind": "classic",
+        "author": "白居易",
+        "work": "赋得古原草送别",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%B3%A6%E5%BE%97%E5%8F%A4%E5%8E%9F%E8%8D%89%E9%80%81%E5%88%A5",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "賦得古原草送別"
+        }
+      },
+      {
+        "text": "人面不知何处去，桃花依旧笑春风。",
+        "kind": "classic",
+        "author": "崔护",
+        "work": "题都城南庄",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%A1%8C%E9%83%BD%E5%9F%8E%E5%8D%97%E8%8E%8A",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "題都城南莊"
+        }
+      },
+      {
+        "text": "无可奈何花落去，似曾相识燕归来。",
+        "kind": "classic",
+        "author": "晏殊",
+        "work": "浣溪沙·一曲新词酒一杯",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%AE%8B%E8%A9%9E%E4%B8%89%E7%99%BE%E9%A6%96",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "宋詞三百首"
+        }
+      },
+      {
+        "text": "人间四月芳菲尽，山寺桃花始盛开。",
+        "kind": "classic",
+        "author": "白居易",
+        "work": "大林寺桃花",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A4%A7%E6%9E%97%E5%AF%BA%E6%A1%83%E8%8A%B1",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "大林寺桃花"
+        }
+      },
+      {
+        "text": "一年好景君须记，最是橙黄橘绿时。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "赠刘景文",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%B4%88%E5%8A%89%E6%99%AF%E6%96%87",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "贈劉景文"
+        }
+      },
+      {
+        "text": "春有百花秋有月，夏有凉风冬有雪。",
+        "kind": "classic",
+        "author": "慧开",
+        "work": "无门关·平常是道",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%84%A1%E9%96%80%E9%97%9C",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "無門關"
+        }
+      },
+      {
+        "text": "前村深雪里，昨夜一枝开。",
+        "kind": "classic",
+        "author": "齐己",
+        "work": "早梅",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A4%A9%E5%BB%9A%E7%A6%81%E8%87%A0",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "天廚禁臠"
+        }
+      },
+      {
+        "text": "池塘生春草，园柳变鸣禽。",
+        "kind": "classic",
+        "author": "谢灵运",
+        "work": "登池上楼",
+        "url": "https://zh.wikisource.org/zh-hans/%E7%99%BB%E6%B1%A0%E4%B8%8A%E6%A8%93",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "登池上樓"
+        }
+      },
+      {
+        "text": "允许自己偶尔的脆弱，然后抱抱自己，重新出发。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 13,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "别怕低谷，你再迈出的每一步都是上坡路。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 14,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "生活会有望穿秋水的等待，也会有意想不到的惊喜。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 25,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "慢一点也好，步子小也好，是在往前走就好。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 54,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "学会翻篇，不是为了原谅别人，而是放过自己。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 56,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "允许自己慢慢来，所有的收获都不是一蹴而就的。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 60,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      }
+    ]
+  },
+  {
+    "id": "warmth",
+    "name": "人间温柔",
+    "subtitle": "心怀热望，也惜眼前",
+    "items": [
+      {
+        "text": "但愿人长久，千里共婵娟。",
+        "kind": "classic",
+        "author": "苏轼",
+        "work": "水调歌头·明月几时有",
+        "url": "https://www.gushiwen.cn/shiwenv_632c5beb84eb.aspx"
+      },
+      {
+        "text": "日出有盼，日落有思，平平安安，所遇皆甜。",
+        "kind": "image",
+        "image": 2
+      },
+      {
+        "text": "落日沉溺于橘色的海，晚风沦陷于赤诚的爱。",
+        "kind": "image",
+        "image": 2
+      },
+      {
+        "text": "山海映锦绣，星河映万家。",
+        "kind": "image",
+        "image": 4
+      },
+      {
+        "text": "山河自有归期，风雨自有相逢。",
+        "kind": "image",
+        "image": 3
+      },
+      {
+        "text": "让清风寄余年。",
+        "kind": "image",
+        "image": 2
+      },
+      {
+        "text": "愿灯火可亲，愿归途有伴，愿认真生活的日子都有回响。",
+        "kind": "adapted",
+        "basedOn": "饭菜还冒着热气，回家的话可以晚一点再说。"
+      },
+      {
+        "text": "送别留一缕晚风，重逢赠满袖春色。",
+        "kind": "adapted",
+        "basedOn": "送你到路口，剩下的路交给晚风。"
+      },
+      {
+        "text": "时间酿酒，余味成花。",
+        "kind": "excerpt",
+        "url": "https://www.sohu.com/a/744193945_121124705",
+        "note": "现代话语短摘；不采信转载总标题的统一署名。"
+      },
+      {
+        "text": "海内存知己，天涯若比邻。",
+        "kind": "classic",
+        "author": "王勃",
+        "work": "送杜少府之任蜀州",
+        "url": "https://www.gutenberg.org/cache/epub/52323/pg52323-images.html",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "唐诗三百首"
+        }
+      },
+      {
+        "text": "劝君更尽一杯酒，西出阳关无故人。",
+        "kind": "classic",
+        "author": "王维",
+        "work": "送元二使安西",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%80%81%E5%85%83%E4%BA%8C%E4%BD%BF%E5%AE%89%E8%A5%BF",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "送元二使安西"
+        }
+      },
+      {
+        "text": "桃花潭水深千尺，不及汪伦送我情。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "赠汪伦",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%B4%88%E6%B1%AA%E5%80%AB",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "贈汪倫"
+        }
+      },
+      {
+        "text": "莫愁前路无知己，天下谁人不识君。",
+        "kind": "classic",
+        "author": "高适",
+        "work": "别董大二首·其一",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%88%A5%E8%91%A3%E5%A4%A7",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "別董大"
+        }
+      },
+      {
+        "text": "洛阳亲友如相问，一片冰心在玉壶。",
+        "kind": "classic",
+        "author": "王昌龄",
+        "work": "芙蓉楼送辛渐",
+        "url": "https://www.gutenberg.org/cache/epub/52323/pg52323-images.html",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "唐诗三百首"
+        }
+      },
+      {
+        "text": "何当共剪西窗烛，却话巴山夜雨时。",
+        "kind": "classic",
+        "author": "李商隐",
+        "work": "夜雨寄北",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A4%9C%E9%9B%A8%E5%AF%84%E5%8C%97",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "夜雨寄北"
+        }
+      },
+      {
+        "text": "浮云游子意，落日故人情。",
+        "kind": "classic",
+        "author": "李白",
+        "work": "送友人",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%80%81%E5%8F%8B%E4%BA%BA%20(%E6%9D%8E%E7%99%BD)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "送友人 (李白)"
+        }
+      },
+      {
+        "text": "相知无远近，万里尚为邻。",
+        "kind": "classic",
+        "author": "张九龄",
+        "work": "送韦城李少府",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%80%81%E9%9F%8B%E5%9F%8E%E6%9D%8E%E5%B0%91%E5%BA%9C",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "送韋城李少府"
+        }
+      },
+      {
+        "text": "江南无所有，聊赠一枝春。",
+        "kind": "classic",
+        "author": "陆凯",
+        "work": "赠范晔诗",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%B4%88%E8%8C%83%E6%9B%84%E8%A9%A9",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "贈范曄詩"
+        }
+      },
+      {
+        "text": "故人入我梦，明我长相忆。",
+        "kind": "classic",
+        "author": "杜甫",
+        "work": "梦李白二首·其一",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%A9%A9%E6%9E%97%E5%BB%A3%E8%A8%98",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "詩林廣記"
+        }
+      },
+      {
+        "text": "正是江南好风景，落花时节又逢君。",
+        "kind": "classic",
+        "author": "杜甫",
+        "work": "江南逢李龟年",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%B1%9F%E5%8D%97%E9%80%A2%E6%9D%8E%E9%BE%9C%E5%B9%B4",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "江南逢李龜年"
+        }
+      },
+      {
+        "text": "绿蚁新醅酒，红泥小火炉。晚来天欲雪，能饮一杯无？",
+        "kind": "classic",
+        "author": "白居易",
+        "work": "问刘十九",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%95%8F%E5%8A%89%E5%8D%81%E4%B9%9D",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "問劉十九"
+        }
+      },
+      {
+        "text": "有朋自远方来，不亦乐乎？",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·学而",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E5%AD%B8%E8%80%8C%E7%AC%AC%E4%B8%80",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/學而第一"
+        }
+      },
+      {
+        "text": "老吾老，以及人之老；幼吾幼，以及人之幼。",
+        "kind": "classic",
+        "author": "孟子",
+        "work": "孟子·梁惠王上",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%AD%9F%E5%AD%90%2F%E6%A2%81%E6%83%A0%E7%8E%8B%E4%B8%8A",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "孟子/梁惠王上"
+        }
+      },
+      {
+        "text": "谁言寸草心，报得三春晖。",
+        "kind": "classic",
+        "author": "孟郊",
+        "work": "游子吟",
+        "url": "https://www.gutenberg.org/cache/epub/52323/pg52323-images.html",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "唐诗三百首"
+        }
+      },
+      {
+        "text": "己所不欲，勿施于人。",
+        "kind": "classic",
+        "author": "孔子语",
+        "work": "论语·卫灵公",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E%2F%E8%A1%9E%E9%9D%88%E5%85%AC%E7%AC%AC%E5%8D%81%E4%BA%94",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "論語/衞靈公第十五"
+        }
+      },
+      {
+        "text": "故人具鸡黍，邀我至田家。",
+        "kind": "classic",
+        "author": "孟浩然",
+        "work": "过故人庄",
+        "url": "https://zh.wikisource.org/zh-hans/%E9%81%8E%E6%95%85%E4%BA%BA%E8%8E%8A",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "過故人莊"
+        }
+      },
+      {
+        "text": "掬水月在手，弄花香满衣。",
+        "kind": "classic",
+        "author": "于良史",
+        "work": "春山夜月",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%98%A5%E5%B1%B1%E5%A4%9C%E6%9C%88",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "春山夜月"
+        }
+      },
+      {
+        "text": "春水碧于天，画船听雨眠。",
+        "kind": "classic",
+        "author": "韦庄",
+        "work": "菩萨蛮·人人尽说江南好",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%8F%A9%E8%96%A9%E8%A0%BB%20(%E4%BA%BA%E4%BA%BA%E7%9B%A1%E8%AA%AA%E6%B1%9F%E5%8D%97%E5%A5%BD)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "菩薩蠻 (人人盡說江南好)"
+        }
+      },
+      {
+        "text": "日长睡起无情思，闲看儿童捉柳花。",
+        "kind": "classic",
+        "author": "杨万里",
+        "work": "闲居初夏午睡起二绝句·其一",
+        "url": "https://zh.wikisource.org/zh-hans/%E5%A0%AF%E5%B1%B1%E5%A0%82%E5%A4%96%E7%B4%80%2F%E5%8D%B7060",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "堯山堂外紀/卷060"
+        }
+      },
+      {
+        "text": "儿童散学归来早，忙趁东风放纸鸢。",
+        "kind": "classic",
+        "author": "高鼎",
+        "work": "村居",
+        "url": "https://zh.wikisource.org/zh-hans/%E6%9D%91%E5%B1%85%20(%E9%AB%98%E9%BC%8E)",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "村居 (高鼎)"
+        }
+      },
+      {
+        "text": "稻花香里说丰年，听取蛙声一片。",
+        "kind": "classic",
+        "author": "辛弃疾",
+        "work": "西江月·夜行黄沙道中",
+        "url": "https://zh.wikisource.org/zh-hans/%E4%BA%94%E5%B8%B8%E5%B8%82%E6%9F%90%E6%9F%90%E5%85%B4%E7%B1%B3%E4%B8%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%A6%8F%E5%B7%9E%E5%B8%82%E6%9F%90%E6%9F%90%E7%B1%B3%E4%B8%9A%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8%E3%80%81%E7%BD%97%E6%BA%90%E5%8E%BF%E6%9D%BE%E5%B1%B1%E9%95%87%E6%9F%90%E6%9F%90%E7%B2%AE%E6%B2%B9%E5%BA%97%E4%BA%8C%E5%AE%A1%E6%B0%91%E4%BA%8B%E5%88%A4%E5%86%B3%E4%B9%A6",
+        "verification": {
+          "method": "公开古籍文本繁简归一后逐句比对",
+          "checkedAt": "2026-10-16",
+          "sourceTitle": "五常市某某兴米业有限公司与福州市某某米业集团有限责任公司、罗源县松山镇某某粮油店二审民事判决书"
+        }
+      },
+      {
+        "text": "总有一束光，会照亮你的每个春夏秋冬。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 10,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "善待他人，自会听到爱的回响。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 38,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      },
+      {
+        "text": "愿你眼中有星辰，身边有海洋，心里有阳光。",
+        "kind": "image",
+        "image": 5,
+        "imageItem": 59,
+        "note": "用户提供图片的短句摘录；不将图片标题作为原始署名。"
+      }
+    ]
+  }
+]

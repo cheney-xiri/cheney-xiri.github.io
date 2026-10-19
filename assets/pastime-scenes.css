@@ -1,0 +1,90 @@
+/* 志趣五景：同一卷册里的五种阅读方式，内容由 pastimes.json 维护。 */
+.pastime-scene-cues{ position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:.45rem; margin:1.5rem 0 0; padding:0; list-style:none; }
+.pastime-scene-cues li{ padding:.32rem .7rem; border:1px solid rgba(57,75,61,.24); color:var(--topic-accent); font-size:.75rem; letter-spacing:.06em; }
+.pastime-index-panel p{ max-width:39rem; }
+
+/* 听歌：唱片内页。唱片纹理是一枚安静的视觉注脚。 */
+.pastime-index--music{ grid-template-columns:minmax(15rem,.36fr) minmax(0,.64fr); border-color:#b99778; box-shadow:0 18px 44px -35px rgba(66,40,30,.55); }
+.pastime-index--music .pastime-index-nav{ padding:2rem 1.5rem; background:linear-gradient(145deg,#e7d3bf,#f1e7d9); }
+.pastime-index--music .pastime-index-nav button{ border-color:rgba(96,57,43,.24); }
+.pastime-index--music .pastime-index-nav button[aria-pressed="true"]{ background:#fbf5e9; }
+.pastime-index--music .pastime-index-panel{ min-height:25rem; padding:3rem clamp(2rem,5vw,4.5rem); background:radial-gradient(circle at 91% 18%,rgba(178,124,88,.13),transparent 35%),#fbf8f1; }
+.pastime-index--music .pastime-index-panel::before{ content:''; position:absolute; right:-4rem; top:1.4rem; width:22rem; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle,#dbc0a0 0 5%,#2d302b 6% 8%,#a36c55 8.5% 22%,#2a2d2b 22.5% 31%,#48504b 31.5% 32%,#252a27 32.5% 44%,#59615a 44.5% 45%,#252a27 45.5% 58%,#5a6157 58.5% 59%,#252a27 59.5%); opacity:.19; pointer-events:none; }
+.pastime-index--music .pastime-index-panel::after{ display:none; }
+.pastime-index--music .pastime-index-panel p{ max-width:32rem; }
+
+/* 游戏：探索地图，像在任务界面里翻阅不同的路径。 */
+.pastime-index--games{ grid-template-columns:minmax(14rem,.32fr) minmax(0,.68fr); border-color:#6d918e; background:#18333b; box-shadow:0 18px 42px -30px rgba(17,43,46,.55); }
+.pastime-index--games .pastime-index-nav{ background:linear-gradient(145deg,#284f51,#1b343d); }
+.pastime-index--games .pastime-index-label{ color:#d6bf88; }
+.pastime-index--games .pastime-index-nav button{ border-color:rgba(223,231,211,.2); color:#e9ede0; }
+.pastime-index--games .pastime-index-nav button small{ color:#d6bf88; }
+.pastime-index--games .pastime-index-nav button[aria-pressed="true"]{ border-left-color:#dfba78; background:rgba(234,237,216,.12); color:#ffe9bd; }
+.pastime-index--games .pastime-index-panel{ min-height:24rem; border-left:1px solid rgba(230,236,217,.17); background:linear-gradient(rgba(135,177,156,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(135,177,156,.06) 1px,transparent 1px),#173039; background-size:42px 42px; }
+.pastime-index--games .pastime-index-panel::after{ right:1rem; bottom:-2rem; color:rgba(183,211,195,.09); font-size:13rem; }
+.pastime-index--games .pastime-index-panel::before{ content:''; position:absolute; z-index:1; inset:1rem; border:1px solid rgba(214,191,136,.24); pointer-events:none; }
+.pastime-index--games .pastime-index-panel > small{ color:#d6bf88; }
+.pastime-index--games .pastime-index-panel h2{ color:#f9edcf; }
+.pastime-index--games .pastime-index-panel p{ color:#d5e1d7; }
+.pastime-index--games .pastime-scene-cues li{ border-color:rgba(214,191,136,.47); color:#e9d3a2; }
+
+/* 动画：分镜的三帧同时展开。 */
+.pastime-index--anime,.pastime-index--videos{ display:block; border:0; background:transparent; }
+.pastime-scene-heading{ margin:0 0 1rem; padding:.3rem 0 .9rem; border-bottom:1px solid rgba(57,75,61,.24); }
+.pastime-scene-heading small{ color:var(--topic-accent); font-size:.75rem; letter-spacing:.18em; }
+.pastime-scene-heading h2{ margin:.4rem 0 0; color:var(--topic-dark); font-family:var(--font-head); font-size:clamp(1.8rem,3.2vw,2.4rem); font-weight:400; }
+.pastime-scene-collection--anime{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.pastime-index--anime .pastime-scene-card{ min-width:0; padding:.6rem; border:1px solid rgba(84,54,53,.28); background:#f8f3eb; box-shadow:0 11px 24px -22px rgba(71,42,41,.5); }
+.pastime-index--anime .pastime-scene-card-art{ position:relative; height:11rem; overflow:hidden; border-top:7px solid #394846; border-bottom:7px solid #394846; background:#e6cbbd; }
+.pastime-index--anime .pastime-scene-card-art::before,.pastime-index--anime .pastime-scene-card-art::after{ content:''; position:absolute; z-index:1; left:0; right:0; height:7px; background:repeating-linear-gradient(90deg,transparent 0 1rem,#f4ead7 1rem 1.6rem,transparent 1.6rem 2.4rem); }
+.pastime-index--anime .pastime-scene-card-art::before{ top:-7px; }
+.pastime-index--anime .pastime-scene-card-art::after{ bottom:-7px; }
+.pastime-scene-card-art img{ display:block; width:100%; height:100%; object-fit:cover; }
+.pastime-index--anime .pastime-scene-card-art img{ position:absolute; inset:0 auto 0 0; width:300%; max-width:none; }
+.pastime-index--anime .pastime-scene-card:nth-child(1) img{ transform:translateX(0); }
+.pastime-index--anime .pastime-scene-card:nth-child(2) img{ transform:translateX(-33.333%); }
+.pastime-index--anime .pastime-scene-card:nth-child(3) img{ transform:translateX(-66.666%); }
+.pastime-index--anime .pastime-scene-card:nth-child(4) img{ transform:translateX(-33.333%); }
+.pastime-index--anime .pastime-scene-card-copy{ padding:1.15rem .75rem .8rem; }
+.pastime-scene-card-copy small{ color:var(--topic-accent); font-size:.71rem; letter-spacing:.12em; }
+.pastime-scene-card-copy h3{ margin:.4rem 0 .7rem; color:var(--topic-dark); font-family:var(--font-head); font-size:1.45rem; font-weight:400; }
+.pastime-scene-card-copy p{ margin:0; color:#59645b; font-size:.88rem; line-height:1.85; }
+.pastime-index--anime .pastime-scene-cues{ margin-top:1rem; }
+.pastime-index--anime .pastime-scene-cues li{ padding:.2rem .45rem; font-size:.68rem; }
+
+/* 剪视频：轨道在上，当前剪辑笔记在下。 */
+.pastime-index--editing{ display:block; border-color:#52727a; background:#20343c; box-shadow:0 18px 42px -30px rgba(24,48,55,.54); }
+.pastime-index--editing .pastime-index-nav{ display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.5rem; padding:1.35rem; background:#263f47; }
+.pastime-index--editing .pastime-index-label{ grid-column:1/-1; margin:0 0 .4rem; color:#dccaaa; }
+.pastime-index--editing .pastime-index-nav button{ display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:.5rem; min-height:5.8rem; padding:.8rem; border:1px solid rgba(228,237,227,.2); background:linear-gradient(90deg,rgba(106,143,143,.17) 40%,transparent 40% 43%,rgba(188,125,99,.14) 43% 72%,transparent 72%); color:#e8efe7; font-size:1.08rem; }
+.pastime-index--editing .pastime-index-nav button small{ color:#d7ad90; }
+.pastime-index--editing .pastime-index-nav button[aria-pressed="true"]{ padding-left:.8rem; border:1px solid #d69a77; box-shadow:inset 0 -3px #d69a77; background:linear-gradient(90deg,rgba(123,175,164,.29) 35%,transparent 35% 39%,rgba(207,134,100,.28) 39% 74%,transparent 74%); color:#fff4df; }
+.pastime-index--editing .pastime-index-panel{ min-height:17rem; margin:0 1.35rem 1.35rem; border:1px solid rgba(228,237,227,.18); background:repeating-linear-gradient(0deg,transparent 0 3.5rem,rgba(222,234,223,.055) 3.5rem 3.6rem),#192e35; }
+.pastime-index--editing .pastime-index-panel::before{ content:''; position:absolute; left:1rem; top:0; bottom:0; width:2px; background:#ca7e65; box-shadow:0 0 0 3px rgba(202,126,101,.13); }
+.pastime-index--editing .pastime-index-panel::after{ color:rgba(227,238,232,.07); }
+.pastime-index--editing .pastime-index-panel > small{ color:#d7ad90; }
+.pastime-index--editing .pastime-index-panel h2{ color:#f3e9d6; }
+.pastime-index--editing .pastime-index-panel p{ color:#d8e1dc; }
+.pastime-index--editing .pastime-scene-cues li{ border-color:rgba(216,169,138,.43); color:#e8c9a8; }
+
+/* 刷视频：纵向短片流，错落的画面与随记形成阅读节奏。 */
+.pastime-index--videos .pastime-scene-heading{ border-color:rgba(130,88,65,.25); }
+.pastime-scene-collection--videos{ display:grid; gap:.75rem; }
+.pastime-index--videos .pastime-scene-card{ display:grid; grid-template-columns:minmax(12rem,.34fr) minmax(0,.66fr); min-height:12rem; overflow:hidden; border:1px solid rgba(126,87,68,.22); background:#fbf7ef; }
+.pastime-index--videos .pastime-scene-card:nth-child(even){ grid-template-columns:minmax(0,.66fr) minmax(12rem,.34fr); background:#f0e8dc; }
+.pastime-index--videos .pastime-scene-card:nth-child(even) .pastime-scene-card-art{ grid-column:2; grid-row:1; }
+.pastime-index--videos .pastime-scene-card:nth-child(even) .pastime-scene-card-copy{ grid-column:1; grid-row:1; }
+.pastime-index--videos .pastime-scene-card-art{ position:relative; min-height:12rem; overflow:hidden; background:#dbb7a1; }
+.pastime-index--videos .pastime-scene-card-art img{ position:absolute; inset:0 auto 0 0; width:300%; max-width:none; }
+.pastime-index--videos .pastime-scene-card:nth-child(1) img{ transform:translateX(0); }
+.pastime-index--videos .pastime-scene-card:nth-child(2) img{ transform:translateX(-33.333%); }
+.pastime-index--videos .pastime-scene-card:nth-child(3) img{ transform:translateX(-66.666%); }
+.pastime-index--videos .pastime-scene-card:nth-child(4) img{ transform:translateX(-33.333%); }
+.pastime-index--videos .pastime-scene-card:nth-child(5) img{ transform:translateX(-66.666%); }
+.pastime-index--videos .pastime-scene-card-copy{ display:flex; flex-direction:column; justify-content:center; padding:1.4rem clamp(1.2rem,3vw,2.5rem); }
+.pastime-index--videos .pastime-scene-card-copy h3{ margin:.25rem 0 .5rem; font-family:'Noto Serif SC',serif; font-size:1.6rem; font-weight:500; letter-spacing:.04em; }
+.pastime-index--videos .pastime-scene-cues{ margin-top:.8rem; }
+
+@media(max-width:800px){ .pastime-scene-collection--anime{ gap:.55rem; } .pastime-index--anime .pastime-scene-card-art{ height:8rem; } .pastime-index--anime .pastime-scene-card-copy{ padding:.8rem .5rem; } .pastime-scene-card-copy h3{ font-size:1.25rem; } .pastime-scene-card-copy p{ font-size:.82rem; } .pastime-index--editing .pastime-index-nav{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:680px){ .pastime-index--music,.pastime-index--games{ grid-template-columns:1fr; } .pastime-index--music .pastime-index-panel,.pastime-index--games .pastime-index-panel{ min-height:19rem; } .pastime-index--music .pastime-index-panel::before{ right:-8rem; top:1rem; } .pastime-index--games .pastime-index-panel{ border:0; border-top:1px solid rgba(230,236,217,.17); } .pastime-scene-collection--anime{ grid-template-columns:1fr; gap:.75rem; } .pastime-index--anime .pastime-scene-card{ display:grid; grid-template-columns:38% minmax(0,1fr); gap:.5rem; min-height:11rem; } .pastime-index--anime .pastime-scene-card-art{ height:100%; min-height:11rem; border-top:0; border-bottom:0; border-left:7px solid #394846; border-right:7px solid #394846; } .pastime-index--anime .pastime-scene-card-art::before,.pastime-index--anime .pastime-scene-card-art::after{ display:none; } .pastime-index--anime .pastime-scene-card-copy{ padding:.75rem .5rem .75rem .2rem; } .pastime-index--editing .pastime-index-nav{ gap:.3rem; padding:.75rem; grid-template-columns:repeat(2,minmax(0,1fr)); } .pastime-index--editing .pastime-index-nav button{ min-height:5rem; padding:.4rem; font-size:.9rem; } .pastime-index--editing .pastime-index-panel{ margin:0 .75rem .75rem; padding:2rem 1.5rem; } .pastime-index--videos .pastime-scene-card,.pastime-index--videos .pastime-scene-card:nth-child(even){ grid-template-columns:34% minmax(0,66%); min-height:14rem; } .pastime-index--videos .pastime-scene-card:nth-child(even) .pastime-scene-card-art{ grid-column:1; } .pastime-index--videos .pastime-scene-card:nth-child(even) .pastime-scene-card-copy{ grid-column:2; } .pastime-index--videos .pastime-scene-card-art{ min-height:14rem; } .pastime-index--videos .pastime-scene-card-copy{ padding:1rem; } .pastime-index--videos .pastime-scene-card-copy h3{ font-size:1.3rem; } }
+@media(max-width:420px){ .pastime-scene-cues{ gap:.25rem; } .pastime-scene-cues li{ padding:.22rem .45rem; font-size:.67rem; } .pastime-index--anime .pastime-scene-card{ grid-template-columns:32% minmax(0,1fr); } .pastime-index--anime .pastime-scene-card-copy p,.pastime-index--videos .pastime-scene-card-copy p{ font-size:.82rem; line-height:1.75; } .pastime-index--anime .pastime-scene-cues,.pastime-index--videos .pastime-scene-cues{ margin-top:.6rem; } .pastime-index--videos .pastime-scene-card,.pastime-index--videos .pastime-scene-card:nth-child(even){ grid-template-columns:29% minmax(0,71%); } }

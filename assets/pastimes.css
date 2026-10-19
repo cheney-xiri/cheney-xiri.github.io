@@ -1,0 +1,129 @@
+/* 志趣：七页小卷，颜色取自纸、墨、青玉与赭石。 */
+#pastimes{ padding-block:3.5rem; background:radial-gradient(circle at 14% 20%,rgba(130,148,113,.11),transparent 32%),radial-gradient(circle at 88% 80%,rgba(161,107,72,.08),transparent 34%),#efede5; }
+#pastimes .juan-head{ margin-bottom:1.15rem; }
+.interest-preface{ display:flex; align-items:baseline; gap:1.2rem; max-width:72rem; margin:0 auto 1.1rem; padding-bottom:.6rem; border-bottom:1px solid rgba(69,87,69,.22); }
+.interest-preface span{ flex:none; color:#9a5040; font-family:var(--font-head); font-size:.9rem; letter-spacing:.17em; }
+.interest-preface p{ margin:0; color:#656b5e; font-size:.8rem; line-height:1.7; }
+.interest-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; max-width:72rem; margin:0 auto; padding:0; list-style:none; }
+.interest-card{ --art:#d8e0d5; --line:#4f766c; min-width:0; background:#f8f6ef; border:1px solid rgba(77,93,76,.24); box-shadow:0 8px 22px -19px rgba(42,56,44,.46); transition:transform .28s,box-shadow .28s,border-color .28s; }
+.interest-card:hover,.interest-card:focus-within{ transform:translateY(-3px); border-color:var(--line); box-shadow:0 16px 28px -20px rgba(42,56,44,.55); }
+.interest-card a{ display:flex; min-width:0; height:10.15rem; color:inherit; text-decoration:none; }
+.interest-card-art{ position:relative; display:grid; flex:0 0 35%; place-items:center; overflow:hidden; border-right:1px solid rgba(67,82,67,.14); background:radial-gradient(circle at 70% 22%,rgba(255,255,255,.64),transparent 37%),var(--art); }
+.interest-card-art::before{ content:''; position:absolute; width:8rem; height:8rem; border:1px solid rgba(48,72,59,.22); border-radius:50%; transform:translate(-1rem,2rem); }
+.interest-card-art::after{ content:''; position:absolute; inset:.5rem; border:1px solid rgba(255,255,255,.52); }
+.interest-card-art span{ position:relative; z-index:1; margin-top:-.1em; color:var(--line); font-family:var(--font-brush); font-size:clamp(3.8rem,6vw,5.8rem); line-height:1; transform:rotate(-6deg); transition:transform .35s; }
+.interest-card:hover .interest-card-art span,.interest-card:focus-within .interest-card-art span{ transform:rotate(0) scale(1.06); }
+.interest-card-copy{ display:flex; flex:1; flex-direction:column; align-items:flex-start; min-width:0; padding:.7rem .85rem .65rem; }
+.interest-card-copy small{ color:var(--line); font-size:.67rem; letter-spacing:.12em; }
+.interest-card-copy strong{ margin:.2rem 0 .05rem; color:#293d34; font-family:var(--font-head); font-size:clamp(1.5rem,2.2vw,1.9rem); font-weight:400; letter-spacing:.08em; line-height:1.2; }
+.interest-card-copy > span{ color:#6b7064; font-size:.75rem; line-height:1.65; }
+.interest-card-copy em{ margin-top:auto; border-bottom:1px solid #ab705e; color:#8d493a; font-size:.72rem; font-style:normal; line-height:1.45; }
+.interest-card--games{ --art:#e0ddcf; --line:#786847; }
+.interest-card--anime{ --art:#e4dcd9; --line:#8a5d67; }
+.interest-card--editing{ --art:#d7dfe0; --line:#4d6974; }
+.interest-card--videos{ --art:#e3dfd5; --line:#7a695c; }
+.interest-card--reading{ --art:#dfe3d5; --line:#5c7252; }
+.interest-card--travel{ --art:#d4dfd8; --line:#3f6f65; grid-column:1/-1; }
+.interest-card--travel a{ height:7rem; }
+.interest-card--travel .interest-card-art{ flex-basis:23%; background:linear-gradient(158deg,transparent 60%,rgba(44,77,66,.15) 61%,transparent 83%),radial-gradient(circle at 24% 27%,rgba(255,255,255,.7),transparent 27%),var(--art); }
+.interest-card--travel .interest-card-copy{ display:grid; grid-template-columns:1fr auto; align-content:center; column-gap:1rem; padding:1rem 1.4rem; }
+.interest-card--travel .interest-card-copy small,.interest-card--travel .interest-card-copy strong,.interest-card--travel .interest-card-copy > span{ grid-column:1; }
+.interest-card--travel .interest-card-copy em{ grid-column:2; grid-row:1/4; align-self:center; }
+
+/* 志趣独立页：共用一套阅读布局，具体内容来自 pastimes.json。 */
+.pastime-page{ min-height:100vh; background:radial-gradient(circle at 15% 0%,rgba(134,156,124,.12),transparent 29%),#f3f0e7; }
+.pastime-page [hidden]{ display:none!important; }
+.pastime-bar{ display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:4rem; padding:.65rem clamp(1rem,5vw,4rem); border-bottom:1px solid rgba(73,91,72,.2); background:rgba(250,248,241,.94); }
+.pastime-brand{ color:#315246; font-family:var(--font-head); font-size:1.15rem; letter-spacing:.13em; text-decoration:none; }
+.pastime-brand small{ margin-left:.45rem; color:#867c6d; font-family:var(--font-body); font-size:.7rem; }
+.pastime-back{ color:#526e60; font-size:.78rem; text-decoration:none; }
+.pastime-back:hover,.pastime-back:focus-visible{ text-decoration:underline; text-underline-offset:.25em; }
+.pastime-main{ width:min(72rem,calc(100% - 2.6rem)); margin:auto; padding:1.3rem 0 3rem; }
+.pastime-crumb{ display:flex; gap:.55rem; margin-bottom:1rem; color:#887e70; font-size:.74rem; }
+.pastime-crumb a{ color:#536e62; text-decoration:none; }
+.pastime-hero{ --hero:#264d46; position:relative; display:flex; align-items:center; justify-content:space-between; min-height:19rem; overflow:hidden; padding:clamp(1.6rem,4vw,3.1rem); background:radial-gradient(circle at 85% 25%,rgba(229,215,176,.12),transparent 36%),var(--hero); color:#f4edde; }
+.pastime-hero::before{ content:''; position:absolute; inset:.75rem; border:1px solid rgba(236,222,190,.27); pointer-events:none; }
+.pastime-hero-copy{ position:relative; z-index:1; max-width:35rem; }
+.pastime-overline{ margin:0 0 .75rem; color:#dbcaad; font-size:.72rem; letter-spacing:.2em; }
+.pastime-hero h1{ margin:0; font-family:var(--font-head); font-size:clamp(3.4rem,7vw,6rem); font-weight:400; letter-spacing:.14em; line-height:1.2; }
+.pastime-hero-lead{ margin:1.1rem 0 0; color:#ede4d4; font-size:clamp(.92rem,1.4vw,1.1rem); line-height:1.9; }
+.pastime-hero-sign{ position:relative; z-index:1; display:grid; place-items:center; flex:0 0 11rem; width:11rem; height:11rem; border:1px solid rgba(236,222,190,.36); border-radius:50%; color:rgba(243,232,206,.75); font-family:var(--font-brush); font-size:7rem; line-height:1; transform:rotate(-7deg); }
+.pastime-intro{ display:grid; grid-template-columns:11rem minmax(0,1fr); gap:2rem; margin:1.2rem 0; padding:1.5rem 1.7rem; border:1px solid rgba(76,94,74,.21); background:rgba(251,249,243,.8); }
+.pastime-intro h2{ margin:0; color:#9b5140; font-family:var(--font-head); font-size:1.4rem; font-weight:400; }
+.pastime-intro p{ max-width:48rem; margin:0; color:#46574b; font-size:.9rem; line-height:2; }
+.pastime-sections{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.85rem; }
+.pastime-section{ min-width:0; padding:1.35rem 1.4rem; border:1px solid rgba(76,94,74,.21); background:#faf8f1; }
+.pastime-section small{ color:#a16b52; font-size:.7rem; letter-spacing:.15em; }
+.pastime-section h2{ margin:.45rem 0 .6rem; color:#29443b; font-family:var(--font-head); font-size:1.5rem; font-weight:400; }
+.pastime-section p{ margin:0; color:#5d6a5e; font-size:.82rem; line-height:1.9; }
+.pastime-section-note{ margin-top:1.1rem!important; padding-top:.8rem; border-top:1px solid rgba(76,94,74,.17); color:#8b8173!important; font-size:.74rem!important; }
+.pastime-related{ display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:1rem; padding:1rem 1.4rem; border:1px solid rgba(76,94,74,.22); background:#e8ece3; }
+.pastime-related p{ margin:0; color:#486358; font-size:.83rem; }
+.pastime-related a{ flex:none; color:#884739; font-size:.78rem; text-decoration:underline; text-underline-offset:.22em; }
+.pastime-siblings{ display:flex; justify-content:space-between; gap:1rem; margin-top:1.1rem; }
+.pastime-siblings a{ display:flex; flex-direction:column; min-width:8rem; padding:.55rem 0; color:#315b4c; font-family:var(--font-head); font-size:1.07rem; text-decoration:none; }
+.pastime-siblings a:last-child{ text-align:right; }
+.pastime-siblings small{ color:#9b6e58; font-family:var(--font-body); font-size:.68rem; }
+.pastime-siblings a:hover,.pastime-siblings a:focus-visible{ text-decoration:underline; text-underline-offset:.25em; }
+.pastime-city-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.6rem; margin:1rem 0 0; padding:0; list-style:none; }
+.pastime-city-grid a{ display:flex; align-items:center; justify-content:space-between; gap:.5rem; min-height:3.4rem; padding:.65rem .8rem; border:1px solid rgba(76,94,74,.22); background:#faf8f1; color:#365448; font-family:var(--font-head); text-decoration:none; }
+.pastime-city-grid small{ color:#8a8174; font-family:var(--font-body); font-size:.68rem; }
+.pastime-city-grid a:hover,.pastime-city-grid a:focus-visible{ border-color:#658776; background:#eaf0e7; }
+.pastime-city-section{ margin-top:1rem; padding:1.2rem 1.4rem 1.4rem; border:1px solid rgba(76,94,74,.22); background:rgba(249,247,240,.86); }
+.pastime-city-section h2{ margin:0; color:#29443b; font-family:var(--font-head); font-size:1.5rem; font-weight:400; }
+.pastime-entry-list{ margin:1rem 0 0; padding:0 0 0 1.25rem; color:#3c5549; font-size:.83rem; line-height:1.9; }
+
+@media(max-width:900px){ .pastime-sections{ grid-template-columns:1fr 1fr; } .pastime-city-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:680px){ #pastimes{ padding-block:3.2rem; } .interest-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .interest-card--travel{ grid-column:1/-1; } .pastime-intro{ grid-template-columns:1fr; gap:.35rem; } .pastime-sections{ grid-template-columns:1fr; } .pastime-city-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .pastime-hero-sign{ flex-basis:6rem; width:6rem; height:6rem; font-size:4rem; } }
+@media(max-width:480px){ #pastimes{ padding-block:3rem 2.8rem; } #pastimes .juan-head{ margin-bottom:.7rem; } .interest-preface{ display:block; margin-bottom:.65rem; padding-bottom:.45rem; } .interest-preface span{ font-size:.72rem; } .interest-preface p{ margin-top:.1rem; font-size:.7rem; line-height:1.55; } .interest-grid{ gap:.48rem; } .interest-card a{ flex-direction:column; height:9.05rem; } .interest-card-art{ flex:0 0 3.25rem; border-right:0; border-bottom:1px solid rgba(67,82,67,.14); } .interest-card-art span{ font-size:2.75rem; } .interest-card-art::before{ width:5rem; height:5rem; transform:translate(-1rem,1.5rem); } .interest-card-art::after{ inset:.3rem; } .interest-card-copy{ padding:.35rem .55rem .4rem; } .interest-card-copy small{ font-size:.58rem; } .interest-card-copy strong{ margin:.05rem 0; font-size:1.25rem; } .interest-card-copy > span{ display:-webkit-box; overflow:hidden; -webkit-box-orient:vertical; -webkit-line-clamp:1; font-size:.64rem; line-height:1.45; } .interest-card-copy em{ font-size:.62rem; } .interest-card--travel a{ flex-direction:row; height:6.1rem; } .interest-card--travel .interest-card-art{ flex:0 0 29%; border-right:1px solid rgba(67,82,67,.14); border-bottom:0; } .interest-card--travel .interest-card-copy{ padding:.55rem .7rem; } .interest-card--travel .interest-card-copy strong{ font-size:1.4rem; } .interest-card--travel .interest-card-copy > span{ -webkit-line-clamp:2; } .pastime-main{ width:calc(100% - 1.4rem); } .pastime-hero{ min-height:16rem; padding:1.5rem 1.1rem; } .pastime-hero h1{ font-size:3.6rem; } .pastime-hero-sign{ flex-basis:4.5rem; width:4.5rem; height:4.5rem; font-size:3rem; } .pastime-intro,.pastime-section{ padding:1rem; } .pastime-related{ align-items:flex-start; flex-direction:column; } }
+@media(prefers-reduced-motion:reduce){ .interest-card,.interest-card-art span{ transition:none; } }
+
+/* 首页最终版：每张图片只承担一个清楚的主题，文字在统一的墨色版面阅读。 */
+#pastimes{ background:radial-gradient(circle at 12% 16%,rgba(106,141,117,.12),transparent 36%),radial-gradient(circle at 87% 82%,rgba(175,141,92,.08),transparent 37%),#e8ede7; }
+#pastimes::after{ color:#9b5140; }
+#pastimes .juan-title{ color:#263e36; }
+#pastimes .juan-poem{ color:#5e6e60; }
+#pastimes .juan-head{ margin-bottom:1.2rem; }
+.interest-grid{ gap:.82rem; }
+.interest-card{ background:#f9f7f0; border-color:rgba(76,96,78,.23); box-shadow:0 8px 22px -19px #35493b; }
+.interest-card:hover,.interest-card:focus-within{ border-color:#74947c; box-shadow:0 16px 28px -20px #274736; }
+.interest-card a{ display:flex; flex-direction:column; height:11.8rem; }
+.interest-card-art{ display:block; flex:0 0 6.2rem; width:100%; overflow:hidden; border:0; border-bottom:1px solid rgba(76,96,78,.15); background:#c9d5ca; }
+.interest-card-art::before,.interest-card-art::after{ display:none; }
+.interest-card-art img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center; filter:saturate(.92); transition:transform .45s,filter .45s; }
+.interest-card:hover img,.interest-card:focus-within img{ transform:scale(1.045); filter:saturate(1.04); }
+.interest-card-copy{ display:grid; grid-template-columns:1fr auto; grid-template-rows:auto auto; align-content:center; align-items:baseline; gap:0 .65rem; min-height:0; padding:.6rem .85rem .65rem; }
+.interest-card-copy small{ grid-column:2; grid-row:1; color:#945641; font-size:.67rem; letter-spacing:.08em; white-space:nowrap; }
+.interest-card-copy strong{ grid-column:1; grid-row:1; margin:0; color:#2c473c; font-size:1.55rem; letter-spacing:.08em; }
+.interest-card-copy > span{ grid-column:1/-1; grid-row:2; margin-top:.2rem; color:#637165; font-size:.73rem; line-height:1.5; }
+.interest-card--travel a{ flex-direction:row; height:7.2rem; }
+.interest-card--travel .interest-card-art{ flex:0 0 34%; height:100%; border:0; border-right:1px solid rgba(76,96,78,.15); background:#c9d5ca; }
+.interest-card--travel .interest-card-copy{ display:grid; flex:1; grid-template-columns:1fr auto; grid-template-rows:auto auto; align-content:center; padding:1rem 1.4rem; }
+.interest-card--travel .interest-card-copy small{ grid-column:2; grid-row:1; }
+.interest-card--travel .interest-card-copy strong{ grid-column:1; grid-row:1; font-size:1.9rem; }
+.interest-card--travel .interest-card-copy > span{ grid-column:1/-1; grid-row:2; }
+@media(max-width:680px){ .interest-card a{ height:9.45rem; } .interest-card-art{ flex-basis:4.7rem; } .interest-card--travel a{ height:6.8rem; flex-direction:row; } .interest-card--travel .interest-card-art{ flex-basis:35%; } }
+@media(max-width:480px){ #pastimes{ padding-block:3.2rem 3rem; } #pastimes .juan-head{ margin-bottom:.8rem; } .interest-grid{ gap:.5rem; } .interest-card a{ height:9.05rem; flex-direction:column; } .interest-card-art{ flex:0 0 4.1rem; width:100%; border:0; border-bottom:1px solid rgba(76,96,78,.15); } .interest-card-copy{ display:flex; flex-direction:column; align-items:flex-start; padding:.3rem .5rem .42rem; } .interest-card-copy small{ order:0; font-size:.57rem; } .interest-card-copy strong{ order:1; font-size:1.2rem; line-height:1.13; } .interest-card-copy > span{ order:2; display:-webkit-box; margin-top:.08rem; overflow:hidden; -webkit-box-orient:vertical; -webkit-line-clamp:1; font-size:.62rem; } .interest-card--travel a{ height:6.55rem; flex-direction:row; } .interest-card--travel .interest-card-art{ flex:0 0 37%; height:100%; border:0; border-right:1px solid rgba(76,96,78,.15); } .interest-card--travel .interest-card-copy{ display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:.5rem .75rem; } .interest-card--travel .interest-card-copy strong{ font-size:1.4rem; } .interest-card--travel .interest-card-copy > span{ -webkit-line-clamp:2; } }
+@media(prefers-reduced-motion:reduce){ .interest-card-art img{ transition:none; } }
+
+/* 志趣内页采用图文杂志结构，与技艺页的分栏作品陈列形成区分。 */
+.pastime-page{ background:radial-gradient(circle at 90% 7%,rgba(127,153,132,.11),transparent 28%),#f4f1e8; }
+.pastime-hero{ display:flex; align-items:flex-end; min-height:21rem; padding:clamp(1.5rem,4vw,3rem); background:#233b37; }
+.pastime-hero::before{ display:none; }
+.pastime-hero::after{ content:''; position:absolute; z-index:1; inset:0; background:linear-gradient(90deg,rgba(15,35,32,.88),rgba(15,35,32,.32) 68%,rgba(15,35,32,.08)); pointer-events:none; }
+.pastime-hero-image{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+.pastime-hero-copy{ z-index:2; max-width:42rem; }
+.pastime-overline{ color:#f4dec0; }
+.pastime-hero h1{ color:#fff8e8; text-shadow:0 2px 18px rgba(0,0,0,.22); }
+.pastime-hero-lead{ color:#f4eddf; text-shadow:0 1px 10px rgba(0,0,0,.3); }
+.pastime-intro{ grid-template-columns:7rem minmax(0,1fr); gap:1.7rem; margin:1.3rem 0 .4rem; padding:1.5rem .3rem 1.8rem; border:0; border-bottom:1px solid rgba(76,94,74,.25); background:transparent; }
+.pastime-intro h2{ color:#9b5140; }
+.pastime-intro p{ max-width:55rem; }
+.pastime-sections{ display:block; margin-top:.2rem; }
+.pastime-section{ display:grid; grid-template-columns:5rem minmax(10rem,.28fr) minmax(0,1fr); align-items:baseline; gap:1rem 1.5rem; min-height:9rem; padding:1.65rem .3rem; border:0; border-bottom:1px solid rgba(76,94,74,.23); background:transparent; }
+.pastime-section small{ font-family:var(--font-head); font-size:.78rem; }
+.pastime-section h2{ margin:0; font-size:1.65rem; }
+.pastime-section p{ max-width:40rem; margin:0; font-size:.87rem; }
+.pastime-entry-list{ grid-column:3; margin:0; }
+.pastime-related{ margin-top:1.4rem; background:#e3e9df; }
+@media(max-width:680px){ .pastime-hero{ min-height:18rem; } .pastime-hero::after{ background:linear-gradient(0deg,rgba(15,35,32,.88),rgba(15,35,32,.24) 68%); } .pastime-intro{ grid-template-columns:1fr; gap:.35rem; } .pastime-section{ grid-template-columns:3.3rem minmax(0,1fr); gap:.35rem .6rem; min-height:0; padding:1.3rem .2rem; } .pastime-section h2{ font-size:1.45rem; } .pastime-section p,.pastime-entry-list{ grid-column:2; } }

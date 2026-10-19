@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>定式棋谱目录 · 围棋 · Cheney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/joseki.css?v=20261015-01">
+  <script src="../assets/joseki-board.js?v=20261015-01" defer></script>
+  <script src="../assets/joseki-pachi.js?v=20261013-06" defer></script>
+  <script src="../assets/joseki-josekle.js?v=20261014-01" defer></script>
+  <script src="../assets/joseki-variations.js?v=20261014-01" defer></script>
+  <script src="../assets/joseki-books.js?v=20261015-01" defer></script>
+  <script src="../assets/joseki.js?v=20261015-01" defer></script>
+  <script src="../assets/joseki-catalog.js?v=20261015-01" defer></script>
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-atmosphere.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-chapters.css?v=20261019-review-02">
+<script src="../assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="../assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="../assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="../assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+<body class="joseki-catalog-page" data-ink-page="joseki-index">
+  <a class="skip" href="#joseki-main">跳到定式目录</a>
+  <header class="topbar"><a class="brand" href="go.html">Cheney <small>围棋</small></a><a href="go.html">返回围棋页 ↗</a></header>
+  <main id="joseki-main">
+    <section class="catalog-hero"><div><span>棋室 · 电子定式谱</span><h1>循谱入局</h1><p>定式不只是一串落点。先在目录看完整棋形，再进入独立的文字讲解页，按手数逐步复盘。</p><div class="catalog-meta"><span>真实棋谱</span><span>逐手回看</span><span>出处可查</span></div></div><div class="catalog-hero-art" aria-hidden="true"><i class="black"></i><i class="white"></i><i class="black"></i><i class="white"></i><strong>定式</strong></div></section>
+    <section class="catalog-section" aria-labelledby="catalog-title"><div class="catalog-heading"><div><small>由易到难 · 按手数与基础标记编排</small><h2 id="catalog-title">先看棋形，再读其中道理</h2></div><p id="catalog-count"></p></div><div class="catalog-stages" role="group" aria-label="选择学习阶段"><button type="button" data-stage="入门" aria-pressed="true"><span>01</span><strong>入门</strong><small>短谱与基础型</small><b id="stage-count-basic"></b></button><button type="button" data-stage="进阶" aria-pressed="false"><span>02</span><strong>进阶</strong><small>逐步展开的角部变化</small><b id="stage-count-mid"></b></button><button type="button" data-stage="复杂变化" aria-pressed="false"><span>03</span><strong>复杂变化</strong><small>较长手顺与战斗分支</small><b id="stage-count-hard"></b></button></div><div id="complex-focus" class="complex-focus" hidden><div class="complex-focus-heading"><div><small>专题 · 复杂定式</small><h3>从经典复杂型，读到长变化</h3></div><p>专题按已核实的起手或原站标签归类；其余长谱只作为变化谱。</p></div><div class="complex-focus-grid"><button type="button" data-complex="avalanche" aria-pressed="false"><span>壹 · 经典定式</span><strong>小雪崩</strong><small id="complex-count-avalanche"></small></button><button type="button" data-complex="fighting" aria-pressed="false"><span>贰 · 局部战斗</span><strong>夹击与战斗型</strong><small id="complex-count-fighting"></small></button><button type="button" data-complex="long" aria-pressed="false"><span>叁 · 长手顺</span><strong>二十手以上</strong><small id="complex-count-long"></small></button></div></div><div class="book-selection"><button id="catalog-books" type="button" aria-pressed="false">书籍选读</button><span>现代点三三 · 经典定式 · 复杂变化 · 多部书籍选读</span></div><div class="catalog-tools"><label class="catalog-search"><span>查找棋谱</span><input id="joseki-search" type="search" placeholder="名称、落点或来源编号" autocomplete="off"></label><div class="catalog-filter-stack"><div class="catalog-filters" role="group" aria-label="按起手棋形浏览"><button type="button" data-filter="Q16" aria-pressed="false">星位</button><button type="button" data-filter="R16" aria-pressed="false">小目</button><button type="button" data-filter="R17" aria-pressed="false">三三</button><button type="button" data-filter="R15" aria-pressed="false">目外</button><button type="button" data-filter="Q15" aria-pressed="false">高目</button></div><div id="catalog-subfilters" class="catalog-subfilters" role="group" aria-label="按后续变化浏览" hidden></div><button id="catalog-reset" class="catalog-reset" type="button" hidden>清除筛选</button></div></div><div id="joseki-grid" class="joseki-grid"></div><button id="joseki-more" class="catalog-more" type="button" hidden>继续显示棋谱</button><p id="joseki-empty" class="joseki-empty" hidden>没有找到匹配的棋谱。</p></section>
+    <section class="source-disclosure" aria-label="收录说明"><strong>资料说明</strong><p>三个阶段按手数、原站基础标记及已知复杂棋形安排学习顺序，并非原站官方难度评级。目录含已核对的定式、Josekle 保存的 OGS 完成谱、Josekle 的角部变化分支、书中逐点转录的棋图及 Pachi 公开 SGF 分支。归档变化树没有附带专业文字注解，树的末端也不一定是完成定式；每条讲解页会分别注明来源和状态，不以推测填补棋理。棋盘按十九路真实坐标裁切。资料来源见 <a href="https://github.com/okonomichiyaki/josekle" target="_blank" rel="noopener noreferrer">Josekle 项目</a> 与 <a href="https://github.com/pasky/pachi" target="_blank" rel="noopener noreferrer">Pachi 项目</a>。</p></section>
+  </main>
+  <footer><a href="go.html">返回围棋页 ↑</a><span>循谱而行 · 取舍在全局</span></footer>
+</body>
+</html>

@@ -1,0 +1,310 @@
+{
+  "updated": "2026-10-16",
+  "scope": "前台只展示正文。本次依据用户最新指示，取消社会观察，仅保留结合具体生活情境的处世与人生思考。",
+  "selectionRules": [
+    "完整替换原32篇学习、检索、计划、任务管理技巧文章，不只更换标题。原32个地址继续可用。",
+    "围绕人生取舍、处世分寸、自处与成长、关系与相处、得失与遗憾选题；不收入社会观察、劳动平台、公共规则等选题。",
+    "每篇至少包含具体情境、分歧或代价的辨析、适用范围；不使用固定练习步骤和任务清单。",
+    "正文为本站重新撰写的议题整理与情境分析，不宣称是指定书籍原文或章节摘要。情境为一般性示例，不冒充真实人物经历。",
+    "不编造统计、研究效果或个人经历；不承诺努力、善良或忍耐必然获得回报。",
+    "无法读取的资料不列为已采用来源；前台不显示作者、书名、来源链接或内部选材说明。"
+  ],
+  "sources": {
+    "editorial": {
+      "scope": "围绕用户确认的处世与人生思考主题重新整理。所有生活情境为说明观点的假设或一般性场景，属于编辑分析，非研究结论、书摘或用户个人经历。"
+    }
+  },
+  "retiredBatch": {
+    "scope": "原学习技巧与任务管理32篇已由本次正文完整替换。历史备份位于 tmp/writing-before-subject-replacement-20261016。"
+  },
+  "excludedResearch": {
+    "scope": "曾查阅稀缺、平台劳动、照料与可访问性资料准备社会观察稿；用户取消该方向，最终32篇未采用这些研究结论或社会观察稿。"
+  },
+  "unavailable": [
+    {
+      "url": "https://zhuanlan.zhihu.com/p/1900976683013603803",
+      "status": "403，未读到正文；未据搜索结果中的第三方生成文章编写内容。"
+    },
+    {
+      "url": "https://www.toutiao.com/article/7499050419990151706/",
+      "status": "未取得可读正文；响应为脚本页面，未提取到标题或文章内容。"
+    }
+  ],
+  "linesSelection": {
+    "url": "https://www.sohu.com/a/744193945_121124705",
+    "accepted": "少量表达完整的短句与能够回到古典篇目核对的诗文；按主题归入现有句笺。",
+    "excluded": [
+      {
+        "items": [
+          5,
+          65
+        ],
+        "reason": "同句重复，且不符合本次新增的不重复要求。"
+      },
+      {
+        "items": [
+          23,
+          36
+        ],
+        "reason": "把低谷中的每一步都说成上坡路，绝对化，且两项重复。"
+      },
+      {
+        "items": [
+          31,
+          68,
+          71
+        ],
+        "reason": "以承受崩溃为要求、归咎困境或保证付出必有回报，未采用。"
+      },
+      {
+        "items": [
+          26,
+          28
+        ],
+        "reason": "存在断句错误或古文与后加句拼接；只按能够核对的独立原句整理。"
+      },
+      {
+        "items": [
+          12,
+          47,
+          87
+        ],
+        "reason": "文字或出处未能充分核对，暂不采用。"
+      }
+    ],
+    "attribution": "不将转载文章的总标题当作全部条目的真实原始出处。"
+  },
+  "articles": [
+    {
+      "slug": "write-to-think",
+      "title": "怎样看待努力与结果之间的落差",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "spaced-review",
+      "title": "如何面对人生进度的不同",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "compare-similar-concepts",
+      "title": "怎样辨别自己的愿望与旁人的期待",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "choose-learning-material",
+      "title": "如何看待稳定与冒险的取舍",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "search-a-narrow-question",
+      "title": "怎样决定一件事还值不值得坚持",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "make-an-example",
+      "title": "如何理解普通生活的价值",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "make-a-small-thing",
+      "title": "怎样对待与自己意见不同的人",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "science-and-creation",
+      "title": "如何面对关系中的人情与亏欠",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "trace-original-information",
+      "title": "怎样判断善意有没有越过边界",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "compare-before-choosing",
+      "title": "如何看待一个人的缺点与长处",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "test-an-explanation",
+      "title": "怎样在利益面前守住分寸",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "try-before-committing",
+      "title": "如何理解体谅与责任的关系",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "edit-next-day",
+      "title": "如何面对不被理解的选择",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "find-the-sentence",
+      "title": "怎样看待过去做错的决定",
+      "category": "得失与遗憾",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "leave-room-in-a-plan",
+      "title": "如何面对得不到认可的付出",
+      "category": "自处与成长",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "define-finished",
+      "title": "怎样接受关系渐行渐远",
+      "category": "关系与相处",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "shrink-the-next-step",
+      "title": "如何看待独处与合群",
+      "category": "自处与成长",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "ask-with-context",
+      "title": "怎样面对善意比较带来的压力",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "short-by-thinking",
+      "title": "如何理解自信与承认不足",
+      "category": "自处与成长",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "ask-for-specific-feedback",
+      "title": "怎样面对暂时无法改变的现实",
+      "category": "自处与成长",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "say-no-with-a-boundary",
+      "title": "如何在责任与自我之间作取舍",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "confirm-an-agreement",
+      "title": "怎样理解接受帮助与保持独立",
+      "category": "关系与相处",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "listen-before-advising",
+      "title": "如何对待承诺落空后的失望",
+      "category": "关系与相处",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "slow-is-forward",
+      "title": "怎样看待错过与遗憾",
+      "category": "得失与遗憾",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "ask-the-right-question",
+      "title": "如何面对熟悉生活的变化",
+      "category": "自处与成长",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "separate-what-you-control",
+      "title": "怎样理解知足与不甘心",
+      "category": "人生取舍",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "pause-before-replying",
+      "title": "如何面对得失中的不确定",
+      "category": "得失与遗憾",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "compare-your-own-progress",
+      "title": "怎样看待被拒绝这件事",
+      "category": "得失与遗憾",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "read-with-time",
+      "title": "如何理解亲近关系中的差异",
+      "category": "关系与相处",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "confidence-by-doing",
+      "title": "怎样看待旧经验与新的生活",
+      "category": "自处与成长",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "give-information-an-output",
+      "title": "如何面对暂时没有答案的问题",
+      "category": "自处与成长",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    },
+    {
+      "slug": "stop-one-thing-first",
+      "title": "怎样理解有分寸的善良",
+      "category": "处世分寸",
+      "basis": "editorial",
+      "selection": "具体生活情境与处世判断；全文重新撰写。"
+    }
+  ],
+  "linesExpansion": {
+    "updated": "2026-10-16",
+    "total": 210,
+    "added": 154,
+    "record": "data/lines-expansion-20261016.json",
+    "scope": "扩充全部六个句笺主题。保留原条目，按主题增加古典诗文与用户提供图片的现代短句。"
+  }
+}

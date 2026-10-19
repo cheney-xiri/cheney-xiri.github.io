@@ -1,0 +1,170 @@
+/* 足迹首页：以城市为目录，不按时间排列。 */
+#travels{ padding-block:3.6rem; }
+#travels .juan-head{ margin-bottom:clamp(1.1rem,2.5vh,2rem); }
+.travel-atlas{ max-width:72rem; margin:auto; }
+.travel-atlas-intro{ display:flex; align-items:end; justify-content:space-between; gap:1.5rem; margin-bottom:1.15rem; padding-bottom:.9rem; border-bottom:1px solid rgba(48,78,71,.26); }
+.travel-atlas-intro p{ margin:0; color:var(--ink-2); font-size:.86rem; line-height:1.8; }
+.travel-atlas-intro .travel-atlas-count{ flex:none; color:#36645b; font-family:var(--font-head); font-size:.89rem; letter-spacing:.1em; }
+.travel-atlas-rule{ margin:-.55rem 0 1rem; color:#777a6d; font-size:.72rem; letter-spacing:.1em; line-height:1.7; }
+.travel-photo-note{ margin-left:.65rem; color:#7d8176; font-size:.72rem; white-space:nowrap; }
+.travel-photo-note a{ color:#8a3f34; text-decoration:underline; text-underline-offset:.2em; }
+.travel-photo-note a:focus-visible{ outline:2px solid currentColor; outline-offset:2px; }
+.travel-city-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.75rem; margin:0; padding:0; list-style:none; }
+.travel-city{ position:relative; min-width:0; overflow:hidden; border:1px solid rgba(65,98,83,.28); background:#f7f5ec; box-shadow:0 3px 10px -9px #284a3b; transition:transform .25s,border-color .25s,box-shadow .25s; }
+.travel-city:hover,.travel-city:focus-within{ transform:translateY(-3px); border-color:#6b8b77; box-shadow:0 15px 24px -19px #173c35; }
+.travel-city-visual{ position:relative; height:5.35rem; overflow:hidden; background:linear-gradient(125deg,#8d9c8d,#b5ab92); }
+.travel-city-visual::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(20,40,33,.43),transparent 48%,rgba(42,47,35,.16)); pointer-events:none; }
+.travel-city-image{ display:block; width:100%; height:100%; object-fit:cover; filter:saturate(.73) sepia(.1); transition:transform .5s,filter .5s; }
+.travel-city:hover .travel-city-image,.travel-city:focus-within .travel-city-image{ transform:scale(1.06); filter:saturate(.93) sepia(.04); }
+.travel-city-number,.travel-city-province{ position:absolute; z-index:1; top:.55rem; color:#fffaf0; text-shadow:0 1px 5px rgba(0,0,0,.55); }
+.travel-city-number{ left:.7rem; font-family:var(--font-head); font-size:.72rem; letter-spacing:.08em; }
+.travel-city-province{ right:.7rem; font-size:.67rem; letter-spacing:.13em; }
+.travel-city-info{ display:grid; grid-template-columns:1fr auto; align-items:baseline; padding:.45rem .8rem .5rem; }
+.travel-city-name{ margin:0; color:#243b34; font-family:var(--font-head); font-size:clamp(1.45rem,2vw,1.85rem); font-weight:400; letter-spacing:.12em; line-height:1.2; }
+.travel-city-landmark{ max-width:5.5rem; overflow:hidden; color:#7c806f; font-size:.66rem; text-align:right; text-overflow:ellipsis; white-space:nowrap; }
+.travel-city-foot{ grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; gap:.4rem; margin-top:.3rem; border-top:1px solid rgba(65,98,83,.15); padding-top:.3rem; }
+.travel-city-visits{ color:#797b6e; font-size:.7rem; white-space:nowrap; }
+.travel-city-open{ color:#8a3f34; font-size:.73rem; text-decoration:none; white-space:nowrap; border-bottom:1px solid #bda596; padding-bottom:.1rem; }
+.travel-city-open:hover,.travel-city-open:focus-visible{ color:#5d2923; border-color:currentColor; }
+.travel-city-open:focus-visible{ outline:2px solid #8a3f34; outline-offset:3px; }
+.travel-more-link{ display:flex; align-items:center; justify-content:center; gap:.75rem; width:max-content; max-width:100%; margin:1.2rem auto 0; padding:.62rem 1.2rem; border:1px solid rgba(65,98,83,.3); background:rgba(251,249,242,.55); color:#34564b; text-decoration:none; transition:transform .2s,background .2s,border-color .2s; }
+.travel-more-link:hover,.travel-more-link:focus-visible{ transform:translateY(-2px); border-color:#638574; background:#eef1e9; }
+.travel-more-link:focus-visible{ outline:2px solid #547666; outline-offset:3px; }
+.travel-more-link>span:first-child{ font-family:var(--font-head); font-size:1rem; letter-spacing:.08em; }
+.travel-more-count{ color:#8a8577; font-size:.72rem; }
+.travel-more-mark{ color:#9b5241; font-size:1.1rem; line-height:1; }
+
+/* 城市独立页：已知时间明列，未提供的个人经历留白。 */
+.travel-page{ min-height:100vh; background:radial-gradient(circle at 9% 5%,rgba(106,140,120,.12),transparent 25%),#f2eee4; color:var(--ink); }
+.travel-page [hidden]{ display:none!important; }
+.travel-bar{ display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:4.2rem; padding:.7rem clamp(1.1rem,5vw,4rem); border-bottom:1px solid rgba(60,74,58,.17); background:rgba(248,246,239,.94); }
+.travel-brand{ color:#284e45; font-family:var(--font-head); font-size:1.2rem; letter-spacing:.12em; text-decoration:none; }
+.travel-brand small{ margin-left:.45rem; color:#7b786c; font-family:var(--font-body); font-size:.72rem; }
+.travel-back,.travel-crumb a{ color:#49665c; text-decoration:none; }
+.travel-back{ font-size:.79rem; }
+.travel-back:hover,.travel-back:focus-visible,.travel-crumb a:hover,.travel-crumb a:focus-visible{ text-decoration:underline; text-underline-offset:.28em; }
+.travel-main{ width:min(70rem,calc(100% - 2.6rem)); margin:auto; padding:1.35rem 0 2.5rem; }
+.travel-crumb{ display:flex; align-items:center; gap:.55rem; margin-bottom:1.2rem; color:#85796a; font-size:.74rem; }
+.travel-hero{ position:relative; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; min-height:19rem; padding:clamp(1.6rem,4.3vw,3.3rem); overflow:hidden; background:radial-gradient(circle at 73% 38%,rgba(212,187,132,.12),transparent 31%),linear-gradient(130deg,#173e3b,#254a43 70%,#37564a); color:#f5ecd8; }
+.travel-hero::before{ content:''; position:absolute; inset:.75rem; border:1px solid rgba(229,209,169,.24); pointer-events:none; }
+.travel-hero::after{ content:''; position:absolute; right:-5rem; bottom:-11rem; width:28rem; height:22rem; border:1px solid rgba(229,209,169,.18); border-radius:50%; transform:rotate(-24deg); pointer-events:none; }
+.travel-hero-copy,.travel-hero-summary{ position:relative; z-index:1; }
+.travel-overline{ margin:0 0 1rem; color:#dfc698; font-size:.72rem; letter-spacing:.23em; }
+.travel-region{ margin:1.2rem 0 .2rem; color:#d9c8a8; font-size:.79rem; letter-spacing:.18em; }
+.travel-hero h1{ margin:0; font-family:'Ma Shan Zheng',var(--font-head); font-size:clamp(4.3rem,8vw,7.5rem); font-weight:400; line-height:1.15; letter-spacing:.13em; }
+.travel-lead{ margin:1.1rem 0 0; color:#e5ddce; font-size:.9rem; line-height:1.8; }
+.travel-hero-summary{ display:flex; align-items:baseline; gap:.3rem; padding:1.1rem 1.3rem; border-left:1px solid rgba(228,209,172,.35); color:#e2d1ad; font-size:.75rem; white-space:nowrap; }
+.travel-hero-summary strong{ color:#f7eddb; font-family:var(--font-head); font-size:clamp(3rem,6vw,4.6rem); font-weight:400; line-height:1; }
+.travel-section-nav{ position:sticky; top:0; z-index:5; display:flex; flex-wrap:wrap; gap:.2rem 1rem; margin:0 0 1rem; padding:.65rem 0; border-bottom:1px solid rgba(65,95,79,.25); background:rgba(242,238,228,.96); backdrop-filter:blur(10px); }
+.travel-section-nav a{ display:inline-flex; align-items:center; min-height:2rem; padding:.2rem .45rem; color:#5e6559; font-size:.76rem; text-decoration:none; }
+.travel-section-nav a:hover,.travel-section-nav a:focus-visible{ color:#8e4335; background:rgba(255,255,255,.7); }
+.travel-block{ scroll-margin-top:4.5rem; display:grid; grid-template-columns:minmax(10rem,.29fr) minmax(0,.71fr); gap:clamp(1rem,3vw,3rem); margin-top:.8rem; padding:clamp(1.35rem,2.8vw,2rem); border:1px solid rgba(70,94,75,.2); background:rgba(250,248,242,.79); }
+.travel-block-head p{ margin:0 0:.6rem; color:#9b5241; font-size:.71rem; letter-spacing:.18em; }
+.travel-block-head h2{ margin:0; color:#263d35; font-family:var(--font-head); font-size:clamp(1.55rem,2.5vw,2.15rem); font-weight:400; letter-spacing:.1em; }
+.travel-block-body{ min-width:0; }
+.travel-visits{ display:grid; gap:0; margin:0; padding:0; border-top:1px solid rgba(65,95,79,.17); list-style:none; }
+.travel-visit{ display:grid; grid-template-columns:2.7rem minmax(0,1fr) auto; align-items:center; gap:.75rem; min-height:3.4rem; border-bottom:1px solid rgba(65,95,79,.17); }
+.travel-visit-index{ color:#b18367; font-family:var(--font-head); font-size:.81rem; }
+.travel-visit-date{ color:#2d4b42; font-family:var(--font-head); font-size:1.08rem; }
+.travel-visit-label{ color:#8b806e; font-size:.72rem; letter-spacing:.12em; }
+.travel-empty{ display:flex; align-items:center; min-height:5rem; margin:0; padding:1rem 1.2rem; border-left:2px solid #b7c2aa; background:rgba(230,235,222,.42); color:#77786c; font-size:.83rem; line-height:1.8; }
+.travel-photos-block .travel-empty{ justify-content:center; min-height:10rem; border:1px dashed rgba(65,95,79,.37); background:radial-gradient(circle at 50% 45%,rgba(198,209,187,.19),transparent 45%),rgba(232,236,224,.38); text-align:center; }
+.travel-place-items,.travel-flavor-items{ margin:0; padding:0; list-style:none; }
+.travel-place-item{ display:grid; grid-template-columns:8rem minmax(0,1fr); gap:.25rem 1rem; padding:.75rem 0; border-bottom:1px solid rgba(65,95,79,.16); }
+.travel-place-item:first-child{ padding-top:0; }
+.travel-place-item strong{ color:#2d443b; font-family:var(--font-head); font-size:1.08rem; font-weight:400; }
+.travel-place-item p{ grid-column:2; margin:0; color:#6c7166; font-size:.82rem; line-height:1.75; }
+.travel-item-month{ color:#965c49; font-size:.73rem; white-space:nowrap; }
+.travel-photo-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
+.travel-photo{ min-width:0; margin:0; border:1px solid rgba(65,95,79,.19); background:#f7f3e9; }
+.travel-photo-link{ display:block; overflow:hidden; }
+.travel-photo img{ display:block; width:100%; aspect-ratio:4/3; object-fit:cover; transition:transform .3s; }
+.travel-photo-link:hover img,.travel-photo-link:focus-visible img{ transform:scale(1.04); }
+.travel-photo figcaption{ padding:.6rem .7rem; color:#72776b; font-size:.7rem; line-height:1.5; }
+.travel-small-blocks{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; }
+.travel-small-blocks .travel-block{ display:flex; flex-direction:column; gap:1rem; }
+.travel-small-blocks .travel-empty{ min-height:4.6rem; }
+.travel-note{ padding:.65rem 0; border-bottom:1px solid rgba(65,95,79,.16); }
+.travel-note:first-child{ padding-top:0; }
+.travel-note p{ margin:.35rem 0 0; color:#536157; font-size:.88rem; line-height:1.9; white-space:pre-wrap; }
+.travel-flavor-items li{ display:flex; align-items:baseline; gap:.8rem; padding:.65rem 0; border-bottom:1px solid rgba(65,95,79,.16); color:#536157; font-size:.85rem; line-height:1.7; }
+.travel-neighbors{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; margin-top:1rem; }
+.travel-neighbors a{ display:flex; flex-direction:column; justify-content:center; gap:.25rem; min-height:4.7rem; padding:.8rem 1.1rem; border:1px solid rgba(65,95,79,.23); color:#2d4b42; font-family:var(--font-head); font-size:1.05rem; text-decoration:none; }
+.travel-neighbors a:hover,.travel-neighbors a:focus-visible{ border-color:#547666; background:#e6eade; }
+.travel-neighbors small{ color:#9a6250; font-family:var(--font-body); font-size:.7rem; }
+.travel-footer{ display:flex; justify-content:space-between; gap:1rem; margin-top:1.4rem; padding-top:1rem; border-top:1px solid rgba(65,95,79,.23); color:#817d70; font-size:.76rem; }
+.travel-footer a{ color:#49665c; text-decoration:none; }
+.travel-footer a:hover,.travel-footer a:focus-visible{ text-decoration:underline; }
+
+.travel-credits{ padding-top:2.5rem; }
+.travel-credits .travel-overline{ color:#8a503c; }
+.travel-credits h1{ margin:0; color:#274238; font-family:var(--font-head); font-size:clamp(2.4rem,5vw,4rem); font-weight:400; }
+.travel-credits-lead{ max-width:44rem; margin:.8rem 0 2rem; color:#5d665c; font-size:.88rem; line-height:1.9; }
+.travel-credit-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.travel-credit-grid article{ min-width:0; padding:.55rem .55rem 1rem; border:1px solid rgba(65,98,83,.24); background:#f8f5ec; }
+.travel-credit-grid img{ display:block; width:100%; height:9rem; object-fit:cover; filter:saturate(.78) sepia(.08); }
+.travel-credit-grid h2{ margin:.85rem .45rem .35rem; color:#2f493d; font-family:var(--font-head); font-size:1.3rem; font-weight:400; }
+.travel-credit-grid p{ margin:.2rem .45rem; color:#727668; font-size:.76rem; line-height:1.7; }
+.travel-credit-grid a{ color:#8a493a; text-decoration:underline; text-underline-offset:.2em; }
+.travel-credit-grid a:focus-visible{ outline:2px solid currentColor; outline-offset:2px; }
+
+@media(max-width:900px){ .travel-city-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:680px){ .travel-atlas-intro{ align-items:start; flex-direction:column; gap:.3rem; } .travel-photo-note{ display:block; margin:.15rem 0 0; } .travel-block{ grid-template-columns:1fr; gap:1rem; } .travel-small-blocks{ grid-template-columns:1fr; } .travel-hero{ min-height:17rem; } .travel-credit-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:480px){ #travels{ padding-block:3.2rem 3.5rem; } }
+@media(max-width:480px){ #travels .juan-head{ margin-bottom:.9rem; } .travel-atlas-intro{ margin-bottom:.65rem; padding-bottom:.5rem; } .travel-atlas-intro p{ font-size:.76rem; } .travel-city-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:.45rem; } .travel-city-visual{ height:3.1rem; } .travel-city-number,.travel-city-province{ top:.35rem; font-size:.59rem; } .travel-city-number{ left:.45rem; } .travel-city-province{ right:.45rem; } .travel-city-info{ padding:.42rem .45rem .45rem; } .travel-city-name{ font-size:1.26rem; letter-spacing:.05em; } .travel-city-landmark{ max-width:3.5rem; font-size:.52rem; } .travel-city-foot{ margin-top:.32rem; padding-top:.2rem; } .travel-city-visits{ display:none; } .travel-city-open{ display:inline-flex; align-items:center; min-height:1.3rem; font-size:.67rem; } .travel-main{ width:calc(100% - 1.6rem); } .travel-hero{ min-height:15.5rem; padding:1.7rem 1.3rem; } .travel-hero h1{ font-size:4rem; } .travel-hero-summary{ align-self:flex-end; padding:.6rem .2rem .6rem .7rem; } .travel-hero-summary strong{ font-size:2.5rem; } .travel-section-nav{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.1rem; } .travel-section-nav a{ justify-content:center; font-size:.69rem; } .travel-block{ padding:1rem; } .travel-photos-block .travel-photo-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } .travel-place-item{ grid-template-columns:1fr; } .travel-place-item p{ grid-column:1; } }
+@media(max-width:350px){ .travel-city-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:400px){ .travel-credit-grid{ grid-template-columns:1fr; } }
+@media(prefers-reduced-motion:reduce){ .travel-city,.travel-city-image,.travel-photo img{ transition:none; } }
+
+/* 城市全录：连续双列、地域筛选与城市检索。 */
+.travel-directory-page .travel-main{ padding-top:2.1rem; }
+.travel-directory-page .travel-hero{ min-height:14rem; }
+.travel-directory-heading{ display:flex; align-items:end; justify-content:space-between; gap:1.5rem; margin:2rem 0 1rem; padding-bottom:.8rem; border-bottom:1px solid rgba(48,78,71,.23); }
+.travel-directory-heading .travel-overline{ margin-bottom:.35rem; color:#9b5241; }
+.travel-directory-heading h2{ margin:0; color:#263d35; font-family:var(--font-head); font-size:clamp(1.8rem,3vw,2.5rem); font-weight:400; letter-spacing:.12em; }
+.travel-directory-heading>p{ margin:0 0 .2rem; color:#777a6d; font-size:.78rem; letter-spacing:.1em; }
+.travel-directory-page .travel-hero-summary{ display:grid; justify-items:center; gap:.25rem; min-width:8.5rem; }
+.travel-directory-metric{ display:flex; align-items:baseline; gap:.25rem; }
+.travel-directory-metric strong{ font-size:3.3rem; }
+.travel-directory-page .travel-hero-summary small{ color:#e2d1ad; font-size:.72rem; letter-spacing:.08em; }
+.travel-directory-tools{ display:flex; align-items:end; justify-content:space-between; gap:1.5rem; margin:1.1rem 0 .8rem; }
+.travel-region-controls{ min-width:0; }
+.travel-region-controls>p{ margin:0 0 .5rem; color:#7b786c; font-size:.72rem; letter-spacing:.12em; }
+.travel-region-filters{ display:flex; flex-wrap:wrap; gap:.35rem; }
+.travel-region-filter{ display:inline-flex; align-items:center; gap:.28rem; min-height:2.4rem; padding:.36rem .65rem; border:1px solid rgba(65,98,83,.25); background:rgba(250,248,242,.7); color:#426055; font-family:var(--font-head); font-size:.86rem; cursor:pointer; transition:background .2s,border-color .2s; }
+.travel-region-filter small{ color:#9a8f7c; font-family:var(--font-body); font-size:.62rem; }
+.travel-region-filter:hover,.travel-region-filter:focus-visible{ border-color:#496f5f; background:#e9eee5; }
+.travel-region-filter:focus-visible{ outline:2px solid #547666; outline-offset:2px; }
+.travel-region-filter[aria-pressed="true"]{ border-color:#315a4c; background:#315a4c; color:#f8f4e8; }
+.travel-region-filter[aria-pressed="true"] small{ color:#d5c29c; }
+.travel-search-wrap{ display:flex; flex:none; align-items:stretch; flex-direction:column; gap:.45rem; width:min(16rem,28%); }
+.travel-search-label{ color:#777a6d; font-size:.73rem; white-space:nowrap; }
+.travel-city-search{ box-sizing:border-box; width:100%; min-height:2.4rem; padding:.4rem .7rem; border:1px solid rgba(65,98,83,.28); border-radius:0; background:#fbf9f3; color:#2e493e; font:inherit; font-size:.8rem; }
+.travel-city-search:focus{ outline:2px solid #6b8b77; outline-offset:2px; }
+.travel-directory-result{ margin:0 0 .75rem; padding-top:.8rem; border-top:1px solid rgba(65,98,83,.16); color:#967158; font-size:.76rem; letter-spacing:.1em; }
+.travel-directory-page .travel-city-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:.85rem; }
+.travel-directory-page .travel-city{ display:grid; grid-template-columns:39% minmax(0,1fr); min-height:11rem; }
+.travel-directory-page .travel-city-visual{ height:100%; min-height:11rem; }
+.travel-directory-page .travel-city-info{ display:flex; align-items:flex-start; flex-direction:column; padding:.9rem 1rem; }
+.travel-directory-page .travel-city-name{ font-size:clamp(1.6rem,2.6vw,2rem); }
+.travel-directory-page .travel-city-landmark{ max-width:100%; margin-top:.35rem; font-size:.72rem; text-align:left; }
+.travel-directory-page .travel-city-foot{ width:100%; margin-top:auto; padding-top:.55rem; }
+.travel-directory-page .travel-city-visits{ display:inline; font-size:.73rem; }
+.travel-directory-page .travel-city-open{ font-size:.76rem; }
+.travel-directory-page .travel-search-empty{ padding:2rem 0; }
+@media(max-width:900px){ .travel-directory-tools{ align-items:stretch; flex-direction:column; gap:.8rem; } .travel-search-wrap{ width:min(24rem,100%); } }
+@media(max-width:680px){ .travel-directory-heading{ align-items:start; flex-direction:column; gap:.35rem; margin-top:1.5rem; } .travel-directory-heading>p{ line-height:1.7; } .travel-directory-page .travel-city-grid{ grid-template-columns:1fr; } .travel-directory-page .travel-city{ min-height:9rem; } .travel-directory-page .travel-city-visual{ min-height:9rem; } }
+@media(max-width:480px){ .travel-directory-page .travel-hero{ display:block; min-height:0; padding:1.7rem 1.3rem 1.3rem; } .travel-directory-page .travel-hero h1{ font-size:3.4rem; letter-spacing:.06em; white-space:nowrap; } .travel-directory-page .travel-hero-summary{ display:flex; justify-content:flex-start; gap:.7rem; min-width:auto; margin-top:1.25rem; padding:.7rem 0 0; border-top:1px solid rgba(228,209,172,.35); border-left:0; } .travel-directory-metric strong{ font-size:2.5rem; } .travel-directory-page .travel-city-info{ padding:.65rem .7rem; } .travel-directory-page .travel-city-name{ font-size:1.45rem; } .travel-directory-page .travel-city-landmark{ font-size:.64rem; } .travel-directory-page .travel-city-foot{ padding-top:.4rem; } .travel-directory-page .travel-city-visits{ font-size:.65rem; } .travel-directory-page .travel-city-open{ font-size:.69rem; } }
+/* 城市标题图：沿用每座城市的真实风景素材，遮罩只为文字提供清晰底色。 */
+.travel-hero-image{position:absolute;inset:0 0 0 auto;z-index:0;display:block;width:65%;height:100%;object-fit:cover;object-position:50% 35%}
+.travel-hero.has-city-image{min-height:24rem;background:#173e3b;padding-bottom:3.3rem}
+.travel-hero.has-city-image::before{z-index:1}
+.travel-hero.has-city-image::after{inset:0;width:auto;height:auto;border:0;border-radius:0;transform:none;background:linear-gradient(90deg,rgba(9,29,28,.88),rgba(9,29,28,.66) 36%,rgba(9,29,28,.15) 76%),linear-gradient(0deg,rgba(9,29,28,.42),transparent 45%);z-index:0}
+.travel-hero.has-city-image .travel-hero-copy,.travel-hero.has-city-image .travel-hero-summary{z-index:2}
+.travel-hero.has-city-image h1{text-shadow:0 2px 18px rgba(0,0,0,.3)}
+.travel-hero.has-city-image .travel-hero-summary{border-left-color:rgba(255,245,222,.55);color:#f6ecd7;text-shadow:0 1px 8px #0b201e}
+.travel-hero-caption{position:absolute;z-index:2;right:1.5rem;bottom:1.3rem;color:#fff4dc;font-size:.67rem;letter-spacing:.06em;text-decoration:none;padding:.35rem .55rem;background:rgba(12,32,30,.65)}
+.travel-hero-caption:hover{text-decoration:underline;text-underline-offset:.25em}
+.travel-hero-caption:focus-visible{outline:2px solid #fff4dc;outline-offset:3px}
+@media(max-width:680px){.travel-hero-image{inset:0;width:100%}.travel-hero.has-city-image{min-height:21rem}.travel-hero.has-city-image::after{background:linear-gradient(90deg,rgba(9,29,28,.82),rgba(9,29,28,.3)),linear-gradient(0deg,rgba(9,29,28,.45),transparent 65%)}.travel-hero-caption{right:1.2rem;bottom:1rem}}
+@media(max-width:480px){.travel-hero.has-city-image{min-height:20rem;padding-bottom:3.7rem}.travel-hero-caption{left:1.3rem;right:auto;max-width:calc(100% - 2.6rem);font-size:.61rem}.travel-hero.has-city-image .travel-hero-summary{padding-bottom:.3rem}.travel-hero.has-city-image .travel-lead{max-width:15em;font-size:.82rem}}

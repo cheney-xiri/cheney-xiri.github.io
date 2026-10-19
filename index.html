@@ -1,0 +1,1256 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheney · 个人主页</title>
+<!-- 入场与揭示的隐藏态一律挂在 .js 之下：脚本若未执行，整页内容默认可见 -->
+<script>document.documentElement.classList.add('js');</script>
+<meta name="description" content="Cheney 的个人主页。关于我、行旅、技艺、作品、足迹、仰止、志趣、文存、读书与互动，皆录于此卷。">
+<meta name="theme-color" content="#f5f0e6">
+<!-- 分享卡片：发到微信/群里时不再是裸链接。
+     部署之后补一条 og:image（必须是绝对网址），例如
+     <meta property="og:image" content="https://你的域名/assets/portrait.jpg"> -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Cheney · 个人主页">
+<meta property="og:description" content="关于我、行旅、技艺、作品、足迹、仰止、志趣、文存、读书与互动，皆录于此卷。">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23c23a2b' stroke-width='2.5'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23c23a2b' font-family='Georgia,serif'%3EC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Long+Cang&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/style.css?v=20261019-about-links-01">
+<link rel="stylesheet" href="assets/travels.css?v=20261012-02">
+<link rel="stylesheet" href="assets/pastimes.css?v=20261010-05">
+<link rel="stylesheet" href="assets/admire.css?v=20261016-06&fit=20261016-01">
+<link rel="stylesheet" href="assets/writing.css?v=20261016-12">
+<link rel="stylesheet" href="assets/works.css?v=20261016-14&fit=20261016-01">
+<link rel="stylesheet" href="assets/digital-works.css?v=20261016-14&fit=20261016-01">
+<link rel="stylesheet" href="assets/profile.css?v=20261017-07">
+<link rel="stylesheet" href="assets/physics.css?v=20261017-15">
+
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="assets/ink-atmosphere.css?v=20261019-journey-scroll-02">
+<link rel="stylesheet" href="assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="assets/ink-chapters.css?v=20261019-review-02">
+<script src="assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+
+<body data-ink-page="home" id="ink-home">
+<a class="skip" href="#about">跳到正文</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div id="nav-sentinel" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:1px;"></div>
+
+<!-- ===================== 导航 ===================== -->
+<nav class="nav" id="nav" aria-label="主导航">
+  <div class="nav-inner">
+    <!-- 名号已确认：Cheney -->
+    <a class="brand" href="#top">
+      <span class="brand-name">Cheney</span>
+      <span class="brand-sub">个人主页</span>
+    </a>
+
+    <ul class="nav-list" id="nav-list">
+      <li><a href="#about">关于我</a></li>
+      <li><a href="#journey">行旅</a></li>
+      <li><a href="#craft">技艺</a></li>
+      <li><a href="#pastimes">志趣</a></li>
+      <li><a href="#works">作品</a></li>
+      <li><a href="#travels">足迹</a></li>
+      <li><a href="#admire">仰止</a></li>
+      <li><a href="#writing">文存</a></li>
+      <li><a href="#reading">读书</a></li>
+      <li><a href="#links">互动</a></li>
+      <li><a href="#contact">联络</a></li>
+    </ul>
+
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer" aria-label="打开目录">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="drawer" id="drawer" data-open="false" role="dialog" aria-modal="true" aria-label="目录">
+  <ul>
+    <li><a href="#about">关于我 <small>相识于微时</small></a></li>
+    <li><a href="#journey">行旅 <small>读万卷书，行万里路</small></a></li>
+    <li><a href="#craft">技艺 <small>工欲善其事</small></a></li>
+    <li><a href="#pastimes">志趣 <small>悠然见南山</small></a></li>
+    <li><a href="#works">作品 <small>绝知此事要躬行</small></a></li>
+    <li><a href="#travels">足迹 <small>一生好入名山游</small></a></li>
+    <li><a href="#admire">仰止 <small>景行行止</small></a></li>
+    <li><a href="#writing">文存 <small>文章千古事</small></a></li>
+    <li><a href="#reading">读书 <small>旧书不厌百回读</small></a></li>
+    <li><a href="#links">互动 <small>有朋自远方来</small></a></li>
+    <li><a href="#contact">联络 <small>海内存知己</small></a></li>
+  </ul>
+</div>
+
+<!-- ===================== 开篇 ===================== -->
+<header class="hero" id="top">
+<div class="ink-landscape" aria-hidden="true"><div class="ink-mountains ink-mountains-far"></div><div class="ink-mountains ink-mountains-near"></div><div class="ink-mist"></div><svg class="ink-sword" viewBox="0 0 1000 250"><path d="M20 221C330 209 684 138 970 25"/><path d="M52 224C360 217 709 135 978 23"/></svg><span class="ink-landscape-note">山水之间 · 所思所见</span></div>
+  <!-- 远山三重。原先三条路径用等距 Q 曲线画成一模一样的圆包，节奏机械；
+       三层又只靠透明度区分（.075/.12/.19），深浅差太小糊成一团。
+       现在改成高低宽窄不等的非对称轮廓 + 明确递进的墨色，
+       并在远、中之间夹一道云海雾带，远近才立得住。 -->
+  <div class="hero-ridge" aria-hidden="true">
+    <svg viewBox="0 0 1440 340" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="hero-mist" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0"   stop-color="#1b2726" stop-opacity="0"/>
+          <stop offset="52%" stop-color="#1b2726" stop-opacity=".74"/>
+          <stop offset="100%" stop-color="#1b2726" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+
+      <path class="r1" d="M0,340 L0,196
+        C70,190 118,152 190,144 C252,137 286,168 348,176
+        C410,184 448,110 528,102 C596,96 634,140 700,154
+        C762,167 800,118 872,106 C934,96 972,74 1046,88
+        C1108,100 1140,148 1208,158 C1272,167 1310,136 1372,128
+        C1408,123 1428,132 1440,136 L1440,340 Z"/>
+
+      <rect x="0" y="140" width="1440" height="120" fill="url(#hero-mist)"/>
+
+      <path class="r2" d="M0,340 L0,252
+        C90,246 140,214 220,208 C292,203 330,232 400,240
+        C470,248 508,186 588,178 C656,171 694,206 762,218
+        C826,229 866,190 938,182 C1000,175 1038,158 1108,168
+        C1170,177 1204,214 1272,224 C1332,233 1390,214 1440,208
+        L1440,340 Z"/>
+
+      <path class="r3" d="M0,340 L0,302
+        C96,298 138,262 210,252 C276,243 314,276 380,290
+        C440,302 486,304 544,298 C606,292 632,246 692,236
+        C748,228 776,268 836,282 C890,295 928,298 986,292
+        C1046,286 1074,256 1134,248 C1188,241 1218,274 1278,288
+        C1332,300 1394,304 1440,300 L1440,340 Z"/>
+    </svg>
+  </div>
+  <!-- 诗句流：留空，由 JS 从诗句库随机抽取后填入 -->
+  <nav class="hero-drift" id="hero-drift" aria-label="诗句选读，点开在新标签查看全诗"></nav>
+  <!-- 纸晕：护住中央的名号与印章 -->
+  <div class="hero-veil" aria-hidden="true"></div>
+
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <!-- 印：取 Cheney 首字，篆意方印 -->
+    <div class="seal" aria-hidden="true">C</div>
+    <!-- 志向：此处由我代拟，请换成你自己的那一句 -->
+    <p class="hero-aspiration">志在千里</p>
+    <h1 class="hero-name">Cheney</h1>
+    <p class="hero-tagline">自信人生二百年，会当击水三千里</p>
+    <p class="hero-quote"><em>路漫漫其修远兮，吾将上下而求索</em></p>
+    <button class="poem-draw" id="poem-draw" type="button">抽一诗笺</button>
+  </div>
+
+  <div class="hero-hint" aria-hidden="true">
+    <svg viewBox="0 0 20 26" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M10 1v19"/><path d="M4 14l6 6 6-6"/>
+    </svg>
+  </div>
+</header>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 关于我 ===================== -->
+<section class="juan" id="about" data-ink-label="壹 · 小像">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">关于我</h2>
+      <p class="juan-poem">相识于微时，相知于雪中</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-scroll reveal">
+        <div class="avatar-ring">
+          <div class="portrait">
+            <img src="assets/portrait.jpg" alt="Cheney 的画像" width="900" height="900">
+          </div>
+        </div>
+        <!-- 竖排引首，两列，中夹一道界行。四句四字，各对应本站一节：技艺/足迹/读书/往来。
+             列自右向左，DOM 里先写的落在右列（先读）。改文字时注意两列的分法。 -->
+        <p class="about-vertical">
+          <span class="av-col">以技立身，以游广见，</span>
+          <span class="av-rule" aria-hidden="true"></span>
+          <span class="av-col">以书养气，以友辅仁</span>
+        </p>
+      </div>
+
+      <div class="about-body reveal" style="--i:1">
+        <h3 class="about-greet">你好，我是 Cheney</h3>
+        <p class="about-lead">一名处在科学、技术与创作交汇点的探索者。</p>
+        <p>我喜欢理解复杂事物的规律，也喜欢将想法付诸实践。<br>通过代码与 AI 探索新的可能，在科学与创作之间寻找连接。</p>
+        <p class="about-motto"><strong>保持好奇，持续探索，认真创造。</strong></p>
+        <p>相信技术拓展未来，也相信智慧连接过去与现在。</p>
+        <!-- 四项条目。习←技艺/作品，好←足迹/读书，期←首屏题词；
+             籍贯由你提供。 -->
+        <dl class="about-facts">
+          <div><dt>籍</dt><dd><a class="about-origin-link" href="henan.html" target="_blank" rel="noopener" aria-label="在新标签打开河南十八城导览">河南</a></dd></div>
+          <div><dt>习</dt><dd><a class="about-fact-link" href="#works" aria-label="写作，前往作品">写作</a>和 <a class="about-fact-link" href="about/ai.html?v=20261019-ai-01" target="_blank" rel="noopener noreferrer" aria-label="AI 探索，在新标签页打开">AI 探索</a></dd></div>
+          <div><dt>好</dt><dd><a class="about-fact-link" href="#travels" aria-label="远游，前往足迹">远游</a>，<a class="about-fact-link" href="#reading" aria-label="旧书，前往读书">旧书</a></dd></div>
+          <div><dt>期</dt><dd>不负此行</dd></div>
+        </dl>
+        <a class="about-intro-entry" href="about/index.html?v=20261017-07" target="_blank" rel="noopener noreferrer" aria-label="在新标签打开自我介绍"><span><strong>自我介绍</strong></span><span class="about-intro-open">进一步认识我 <span aria-hidden="true">↗</span></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 行旅 ===================== -->
+<section class="juan" id="journey" data-ink-label="贰 · 求学">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">行旅</h2>
+      <p class="juan-poem">读万卷书，行万里路</p>
+    </div>
+
+    <p class="journey-preface reveal">从此刻回望来路，按时间由近及远，翻阅三段求学岁月。</p>
+    <ol class="journey-list reveal" aria-label="求学经历">
+      <li class="journey-entry journey-entry-university">
+        <div class="journey-era"><span>壹 · 大学</span><time datetime="2024">2024 — 至今</time></div>
+        <div class="journey-school"><h3><a href="journey/university.html" target="_blank" rel="noopener noreferrer">辽宁石油化工大学</a></h3><p>辽宁 · 抚顺</p></div>
+        <a class="journey-enter" href="journey/university.html" target="_blank" rel="noopener noreferrer">翻阅这一程</a>
+      </li>
+      <li class="journey-entry journey-entry-senior">
+        <div class="journey-era"><span>贰 · 高中</span><time datetime="2021">2021 — 2024</time></div>
+        <div class="journey-school"><h3><a href="journey/senior.html" target="_blank" rel="noopener noreferrer">唐河一高</a></h3><p>河南 · 唐河</p></div>
+        <a class="journey-enter" href="journey/senior.html" target="_blank" rel="noopener noreferrer">翻阅这一程</a>
+      </li>
+      <li class="journey-entry journey-entry-junior">
+        <div class="journey-era"><span>叁 · 初中</span><time datetime="2018">2018 — 2021</time></div>
+        <div class="journey-school"><h3><a href="journey/junior.html" target="_blank" rel="noopener noreferrer">昝岗二中</a></h3><p>河南 · 唐河</p></div>
+        <a class="journey-enter" href="journey/junior.html" target="_blank" rel="noopener noreferrer">翻阅这一程</a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== 技艺 ===================== -->
+<section class="juan" id="craft" data-ink-label="叁 · 技艺">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">技艺</h2>
+      <p class="juan-poem">工欲善其事，必先利其器</p>
+    </div>
+
+    <div class="craft-groups reveal">
+      <section class="craft-family" aria-labelledby="craft-family-writing">
+        <header class="craft-family-head"><span>壹 · 文心</span><h3 id="craft-family-writing">以字传意，以诗寄怀</h3></header>
+        <div class="craft-family-grid">
+          <a class="craft-card" href="craft/writing.html" target="_blank" rel="noopener" aria-label="走进写作，在新标签页打开">
+            <img src="assets/craft-writing.webp" alt="笔墨纸砚与正在书写的手" loading="lazy" decoding="async">
+            <div class="craft-card-body"><p class="craft-card-level">文心 · 书写</p><h4>写作</h4><p>让观察与思考，慢慢长成一篇文字。</p><span class="craft-card-entry">走进写作</span></div>
+          </a>
+          <a class="craft-card" href="craft/poetry.html" target="_blank" rel="noopener" aria-label="走进作诗，在新标签页打开">
+            <img src="assets/craft-poetry.webp" alt="诗笺与梅枝投下的清雅影子" loading="lazy" decoding="async">
+            <div class="craft-card-body"><p class="craft-card-level">文心 · 诗作</p><h4>作诗</h4><p>撷取眼前景与心中意，推敲成诗。</p><span class="craft-card-entry">走进作诗</span></div>
+          </a>
+        </div>
+      </section>
+      <section class="craft-family" aria-labelledby="craft-family-observe">
+        <header class="craft-family-head"><span>贰 · 观物</span><h3 id="craft-family-observe">镜头取景，棋枰观势</h3></header>
+        <div class="craft-family-grid">
+          <a class="craft-card" href="craft/photography.html" target="_blank" rel="noopener" aria-label="走进摄影，在新标签页打开">
+            <img src="assets/craft-photography.webp" alt="相机对着晨雾中的山河" loading="lazy" decoding="async">
+            <div class="craft-card-body"><p class="craft-card-level">观物 · 影像</p><h4>摄影</h4><p>循光取景，留下山川与日常的一瞬。</p><span class="craft-card-entry">走进摄影</span></div>
+          </a>
+          <a class="craft-card" href="craft/go.html" target="_blank" rel="noopener" aria-label="走进围棋，在新标签页打开">
+            <img src="assets/craft-go.webp" alt="木质棋盘上的黑白围棋与落子之手" loading="lazy" decoding="async">
+            <div class="craft-card-body"><p class="craft-card-level">观物 · 对弈</p><h4>围棋</h4><p>黑白落子，于方寸间思量全局。</p><span class="craft-card-entry">走进围棋</span></div>
+          </a>
+        </div>
+      </section>
+      <section class="craft-family" aria-labelledby="craft-family-music">
+        <header class="craft-family-head"><span>叁 · 清音</span><h3 id="craft-family-music">一管一弦，声从心起</h3></header>
+        <div class="craft-family-grid">
+          <a class="craft-card" href="craft/dizi.html" target="_blank" rel="noopener" aria-label="走进笛子，在新标签页打开">
+            <img src="assets/craft-dizi.webp" alt="窗边竹笛与远山竹影" loading="lazy" decoding="async">
+            <div class="craft-card-body"><p class="craft-card-level">清音 · 管乐</p><h4>笛子</h4><p>以气息为笔，吹出高低远近的音色。</p><span class="craft-card-entry">走进笛子</span></div>
+          </a>
+          <a class="craft-card" href="craft/guitar.html" target="_blank" rel="noopener" aria-label="走进吉他，在新标签页打开">
+            <img src="assets/craft-guitar.webp" alt="木吉他与窗边暖光" loading="lazy" decoding="async">
+            <div class="craft-card-body"><p class="craft-card-level">清音 · 弦乐</p><h4>吉他</h4><p>让和弦与节奏相遇，让旋律自然流淌。</p><span class="craft-card-entry">走进吉他</span></div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 志趣 ===================== -->
+<section class="juan" id="pastimes" data-layout="eight" data-ink-label="肆 · 志趣">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">志趣</h2>
+      <p class="juan-poem">采菊东篱下，悠然见南山</p>
+    </div>
+
+    <ul class="interest-grid reveal" aria-label="我的八项志趣">
+<li class="interest-card"><a href="pastimes/detail.html?topic=music" target="_blank" rel="noopener noreferrer" aria-label="打开听歌专页"><span class="interest-card-art"><img src="assets/pastime-images/music.webp?v=2" alt="" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>01 / 听见</small><strong>听歌</strong><span>收藏旋律，也收藏当时的心情。</span></span></a></li>
+<li class="interest-card interest-card--physics"><a href="pastimes/physics.html" target="_blank" rel="noopener noreferrer" aria-label="打开物理与宇宙专页"><span class="interest-card-art"><img src="assets/physics/cliffs-small.webp" alt="NASA 官方发布的宇宙悬崖影像" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>02 / 观宇</small><strong>物理与宇宙</strong><span>从星光与引力，读到宇宙的深处。</span></span></a></li>
+<li class="interest-card"><a href="pastimes/games.html" target="_blank" rel="noopener noreferrer" aria-label="打开游戏图鉴"><span class="interest-card-art"><img src="assets/pastime-images/games.webp?v=2" alt="" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>03 / 入境</small><strong>游戏</strong><span>手游与端游，各有一方天地。</span></span></a></li>
+<li class="interest-card"><a href="pastimes/anime.html" target="_blank" rel="noopener noreferrer" aria-label="打开动漫图鉴"><span class="interest-card-art"><img src="assets/pastime-images/anime.webp?v=2" alt="" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>04 / 观想</small><strong>看动漫</strong><span>翻阅电影、连载与国创，也走进童年动画。</span></span></a></li>
+<li class="interest-card"><a href="pastimes/detail.html?topic=editing" target="_blank" rel="noopener noreferrer" aria-label="打开剪视频专页"><span class="interest-card-art"><img src="assets/pastime-images/editing.webp?v=2" alt="" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>05 / 成片</small><strong>剪视频</strong><span>用镜头与节奏重组片刻。</span></span></a></li>
+<li class="interest-card"><a href="pastimes/detail.html?topic=videos" target="_blank" rel="noopener noreferrer" aria-label="打开刷视频专页"><span class="interest-card-art"><img src="assets/pastime-images/videos.webp?v=2" alt="" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>06 / 偶得</small><strong>刷视频</strong><span>在短片里发现值得留存的灵感。</span></span></a></li>
+<li class="interest-card interest-card--reading"><a href="books.html" target="_blank" rel="noopener noreferrer" aria-label="打开书卷全目"><span class="interest-card-art"><img src="assets/pastime-images/reading.webp?v=2" alt="" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>07 / 读卷</small><strong>阅读</strong><span>循书页，与远方的思想相遇。</span></span></a></li>
+<li class="interest-card interest-card--travel"><a href="index.html#travels" target="_blank" rel="noopener noreferrer" aria-label="打开足迹章节"><span class="interest-card-art"><img src="assets/pastime-images/travel.webp?v=2" alt="" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>08 / 远游</small><strong>旅游</strong><span>沿着自己的足迹，走入一座座城。</span></span></a></li>
+</ul>
+  </div>
+</section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 作品 ===================== -->
+<section class="juan" id="works" data-layout="compact" aria-labelledby="works-title" data-ink-label="伍 · 作品"><div class="wrap"><div class="juan-head reveal"><h2 class="juan-title" id="works-title">作品</h2><p class="juan-poem">让故事有文字，让想象有画面</p></div><div class="works-grid"><article class="works-entry works-entry-book"><a class="works-thumb" href="works/unsent-summer/index.html?v=20261016-14" aria-label="查看未寄出的夏天，只有风知道"><img src="assets/works/unsent-summer-cover-v2.webp" alt="《未寄出的夏天，只有风知道》封面：夏日窗光、被风吹起的薄帘与现代书桌上的信。" width="1024" height="1536" loading="lazy"></a><div class="works-entry-meta"><span>青春小说</span><span class="novel-status">创作中</span></div><h3><a href="works/unsent-summer/index.html?v=20261016-14">未寄出的夏天，<br>只有风知道</a></h3><p class="works-entry-summary">写给青春与暗恋的故事，仍在书写中。</p><a class="works-entry-link" href="works/unsent-summer/index.html?v=20261016-14">查看详情 <span aria-hidden="true">↗</span></a></article><article class="works-entry works-entry-book"><a class="works-thumb" href="works/future-letter/index.html?v=20261016-14" aria-label="查看最后一封来自未来的信"><img src="assets/works/future-letter-cover.webp" alt="《最后一封来自未来的信》封面：蓝帘窗光、夜空与一封信" width="1024" height="1536" loading="lazy"></a><div class="works-entry-meta"><span>长篇科幻</span></div><h3><a href="works/future-letter/index.html?v=20261016-14">最后一封<br>来自未来的信</a></h3><p class="works-entry-summary">关于数字生命、记忆与身份的长篇科幻故事。</p><a class="works-entry-link" href="works/future-letter/index.html?v=20261016-14">查看详情 <span aria-hidden="true">↗</span></a></article><article class="works-entry works-entry-digital"><a class="works-thumb" href="works/sd-webui/index.html?v=20261016-14" aria-label="查看SD-WebUI"><img src="assets/works/sd-webui-art-v2.webp" alt="封面意象插画：墨色与纸页化作青绿山峦，云雾在山间流动。" width="1536" height="1024" loading="lazy"></a><div class="works-entry-meta"><span>SD-WebUI</span></div><h3><a href="works/sd-webui/index.html?v=20261016-14">文字成像</a></h3><p class="works-entry-summary">从文字描述出发，在模型与参数之间调整，寻找想象中的画面。</p><a class="works-entry-link" href="works/sd-webui/index.html?v=20261016-14">查看详情 <span aria-hidden="true">↗</span></a></article><article class="works-entry works-entry-digital"><a class="works-thumb" href="works/z-image/index.html?v=20261016-14" aria-label="查看Z-Image"><img src="assets/works/z-image-art-v2.webp" alt="封面意象插画：月光下的蓝色水庭，丝带穿过亭廊与浮岛。" width="1536" height="1024" loading="lazy"></a><div class="works-entry-meta"><span>Z-Image</span></div><h3><a href="works/z-image/index.html?v=20261016-14">节点绘图</a></h3><p class="works-entry-summary">将模型、文字与采样连接起来，让画面沿着清晰的节点逐步成形。</p><a class="works-entry-link" href="works/z-image/index.html?v=20261016-14">查看详情 <span aria-hidden="true">↗</span></a></article></div></div></section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 足迹 ===================== -->
+<section class="juan" id="travels" data-ink-label="陆 · 足迹">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">足迹</h2>
+      <p class="juan-poem">五岳寻仙不辞远，一生好入名山游</p>
+    </div>
+
+    <div class="travel-atlas reveal">
+      <div class="travel-atlas-intro">
+        <p>一城一卷，重访合记。</p>
+        <p class="travel-atlas-count" id="travel-atlas-count" aria-live="polite"></p>
+      </div>
+      <p class="travel-atlas-rule">同城连游满三日，方录入足迹。</p>
+      <ul class="travel-city-grid" id="travel-cities" data-home-limit="8" aria-label="近期到访城市"></ul>
+      <a class="travel-more-link" href="travels/index.html" target="_blank" rel="noopener noreferrer">
+        <span>展开全部足迹</span><span class="travel-more-count" id="travel-more-count">翻阅城市全录</span><span class="travel-more-mark" aria-hidden="true">⌁</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 仰止 ===================== -->
+<section class="juan admire-chapter" id="admire" aria-labelledby="admire-title" data-ink-label="柒 · 仰止">
+<div class="wrap">
+<header class="admire-masthead"><div><p class="admire-overline">人物与所爱</p><h2 class="juan-title" id="admire-title">仰止</h2></div><div class="admire-masthead-copy"><p>高山仰止，景行行止</p><span>读他们的故事，也读留下来的作品。</span></div></header>
+<ol class="admire-books" aria-label="人物三章"><li><a class="admire-book admire-book--mao" href="figures/mao.html?v=20261016-06"><span class="admire-book-top"><span>人物 01</span><span>1893 — 1976</span></span><div class="admire-book-body"><div><h3>毛泽东</h3><p>精神 · 诗词 · 文章 · 书法</p></div><img src="assets/figure-mao.jpg" alt="" loading="lazy"></div><p class="admire-book-note">从山河落笔，向历史深处读去。</p><span class="admire-book-bottom"><span>展开 · 诗词与文章</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li>
+<li><a class="admire-book admire-book--qu" href="figures/qu.html?v=20261016-06"><span class="admire-book-top"><span>人物 02</span><span>约前 340 — 前 278</span></span><div class="admire-book-body"><div><h3>屈原</h3><p>楚辞 · 求索 · 香草美人</p></div><img src="assets/figure-qu.jpg" alt="" loading="lazy"></div><p class="admire-book-note">把求索写进长诗，把理想留在字里。</p><span class="admire-book-bottom"><span>展开 · 楚辞选读</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li>
+<li><a class="admire-book admire-book--li" href="figures/li.html?v=20261016-06"><span class="admire-book-top"><span>人物 03</span><span>701 — 762</span></span><div class="admire-book-body"><div><h3>李白</h3><p>行旅 · 诗歌 · 自由</p></div><img src="assets/figure-li.jpg" alt="" loading="lazy"></div><p class="admire-book-note">一生行吟，山河都成为诗的来处。</p><span class="admire-book-bottom"><span>展开 · 行旅与诗歌</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li></ol>
+<div class="admire-follow-index"><div class="admire-follow-intro"><h3>追星</h3><p>棋盘之上，旋律之间。</p></div><ol aria-label="追星人物"><li><a class="admire-fan-entry" href="figures/ke.html?v=20261016-06"><img src="assets/figure-ke-portrait.jpg" alt="" loading="lazy"><div><h4>柯洁</h4><p>真实对局 · 观棋与复盘</p></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li>
+<li><a class="admire-fan-entry" href="figures/jay.html?v=20261016-06"><img src="assets/figure-jay.jpg" alt="" loading="lazy"><div><h4>周杰伦</h4><p>音乐创作 · 专辑目录</p></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li>
+<li><a class="admire-fan-entry" href="figures/tfboys.html?v=20261016-06"><img src="assets/figure-tfboys.jpg" alt="" loading="lazy"><div><h4>TFBOYS</h4><p>三位成员 · 组合音乐</p></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></li></ol></div>
+<p class="admire-colophon"><span>一人一页 · 慢慢翻阅</span><span>文字 / 棋局 / 旋律</span></p>
+</div>
+</section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 文存 ===================== -->
+<section class="juan" id="writing" data-layout="curated" aria-labelledby="writing-title" data-ink-label="捌 · 文存"><div class="wrap"><div class="juan-head reveal"><h2 class="juan-title" id="writing-title">文存</h2><p class="juan-poem">把日子里的体会，留在字里行间</p></div><div class="wen-curated"><div class="wen-curated-essays"><header class="wen-curated-heading"><h3>摘要与整理</h3><a href="writing/index.html?v=20261016-12">全部篇目 <span aria-hidden="true">↗</span></a></header><ol class="wen-curated-list"><li><a href="writing/spaced-review.html?v=20261016-12"><span class="wen-curated-number">01</span><div><span class="wen-meta">人生取舍</span><h4>如何面对人生进度的不同</h4><p>同龄人的结果可以看见，起点、负担和愿望却未必相同。</p></div><span aria-hidden="true">↗</span></a></li><li><a href="writing/ask-for-specific-feedback.html?v=20261016-12"><span class="wen-curated-number">02</span><div><span class="wen-meta">自处与成长</span><h4>怎样面对暂时无法改变的现实</h4><p>承认眼前的限制，不必把它解释为永久的结局。</p></div><span aria-hidden="true">↗</span></a></li><li><a href="writing/make-an-example.html?v=20261016-12"><span class="wen-curated-number">03</span><div><span class="wen-meta">人生取舍</span><h4>如何理解普通生活的价值</h4><p>没有醒目的成就，仍然可以拥有值得认真对待的生活。</p></div><span aria-hidden="true">↗</span></a></li></ol></div><aside class="wen-curated-lines" aria-labelledby="home-lines-title"><header><span class="wen-curated-seal" aria-hidden="true">笺</span><div><span class="wen-meta">诗词与话语</span><h3 id="home-lines-title">句笺</h3></div></header><div class="wen-curated-quotes"><blockquote><span class="wen-verse-clause">千磨万击还坚劲，</span><span class="wen-verse-clause">任尔东西南北风。</span></blockquote><blockquote><span class="wen-verse-clause">山重水复疑无路，</span><span class="wen-verse-clause">柳暗花明又一村。</span></blockquote></div><a class="wen-curated-lines-link" href="writing/lines.html?v=20261016-12"><span>读一笺诗词</span><span aria-hidden="true">↗</span></a></aside></div></div></section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 读书 ===================== -->
+<section class="juan" id="reading" data-ink-label="玖 · 书卷">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">读书</h2>
+      <p class="juan-poem">卷中藏万象，灯下见古今</p>
+      <p class="book-intro">此间所录，或诗辞经史，或天地人伦；一册在手，便与千载人物、万里山河相逢。</p>
+    </div>
+
+    <ul class="shelf reveal" id="book-shelf" aria-label="书架"></ul>
+    <div class="book-more-wrap">
+      <p class="book-total" id="book-total">共录 39 册 · 首页先览六种书影</p>
+      <a class="book-more" id="book-more" href="books.html" target="_blank" rel="noopener">展开全卷目录</a>
+    </div>
+    <noscript><p class="book-intro">请开启浏览器脚本，以展开完整书目并访问各书的阅读页面。</p></noscript>
+  </div>
+</section>
+
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 互动 ===================== -->
+<section class="juan" id="links" data-ink-label="拾 · 往来">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">互动</h2>
+      <p class="juan-poem">有朋自远方来，不亦乐乎</p>
+    </div>
+    <p class="interaction-intro reveal">四处小庭，各有话可说。选一处进入，直接在站内留下你的文字。</p>
+    <div class="interaction-doors reveal">
+      <article class="interaction-door">
+        <span class="interaction-door-no">壹 · 众声</span><h3>题壁</h3>
+        <p>在墙上留一句话，与来访的人共享。</p>
+        <a href="interaction/wall.html" target="_blank" rel="noopener">进入题壁</a>
+      </article>
+      <article class="interaction-door">
+        <span class="interaction-door-no">贰 · 私语</span><h3>尺素</h3>
+        <p>写一封信给我，可选仅我可见或公开。</p>
+        <a href="interaction/letter.html" target="_blank" rel="noopener">写下尺素</a>
+      </article>
+      <article class="interaction-door">
+        <span class="interaction-door-no">叁 · 同行</span><h3>结盟</h3>
+        <p>介绍你的网站，也可以只留一句结伴的话。</p>
+        <a href="interaction/ally.html" target="_blank" rel="noopener">进入结盟</a>
+      </article>
+      <article class="interaction-door">
+        <span class="interaction-door-no">肆 · 读后</span><h3>题跋</h3>
+        <p>读过文章或看过作品，欢迎留下感想。</p>
+        <a href="interaction/featured.html" target="_blank" rel="noopener">进入题跋</a>
+      </article>
+    </div>
+    <p class="interaction-rule">无需登录即可留言。请勿发布微信号、电话号码等私人联系方式。</p>
+  </div>
+</section>
+<div class="rift" aria-hidden="true"><span></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M8 1.6 14.4 8 8 14.4 1.6 8Z"/><path d="M8 5.6 10.4 8 8 10.4 5.6 8Z"/></svg><span></span></div>
+
+<!-- ===================== 联络 ===================== -->
+<section class="juan" id="contact" data-ink-label="终 · 联络">
+  <div class="wrap">
+    <div class="juan-head reveal">
+      <h2 class="juan-title">联络</h2>
+      <p class="juan-poem">海内存知己，天涯若比邻</p>
+    </div>
+
+    <div class="contact-block reveal">
+      <!-- SLOT: contact.lede — 一句话说明你愿意接受什么 -->
+      <p class="contact-lede">读到这里，若有想分享的话，欢迎留下一封来信。</p>
+
+      <!-- SLOT: contact.1 … contact.4 — 名目 + 值（值里填真实地址）
+           图标取自 Tabler Icons（MIT），直接内联，不在运行时拉 CDN：
+           免去国内访问 jsDelivr / unpkg 时通时不通的问题。统一 inherit 朱砂色。 -->
+            <!-- 邮件与 QQ 直接给出；微信与电话锁住，走「申请—同意」。
+           刻意不做页面内的口令：静态页里的密码看源码就能读出来，是假锁。
+           真正的关卡是「先发信、我回信告知」——这件事只有真人才办得到。 -->
+      <ul class="contact-cards">
+        <li><button class="ccard" type="button" data-kind="邮件" data-value="3171751429@qq.com">
+          <span class="ccard-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg></span>
+          <span class="ccard-kind">邮件</span>
+          <span class="ccard-val">3171751429@qq.com</span>
+        </button></li>
+        <li><button class="ccard" type="button" data-kind="微信" data-locked="1">
+          <span class="ccard-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 10c3.038 0 5.5 2.015 5.5 4.5c0 1.397 -.778 2.645 -2 3.47l0 2.03l-1.964 -1.178a6.649 6.649 0 0 1 -1.536 .178c-3.038 0 -5.5 -2.015 -5.5 -4.5s2.462 -4.5 5.5 -4.5z"/><path d="M11.197 15.698c-.69 .196 -1.43 .302 -2.197 .302a8.008 8.008 0 0 1 -2.612 -.432l-2.388 1.432v-2.801c-1.237 -1.082 -2 -2.564 -2 -4.199c0 -3.314 3.134 -6 7 -6c3.782 0 6.863 2.57 7 5.785l0 .233"/><path d="M10 8h.01"/><path d="M7 8h.01"/><path d="M15 14h.01"/><path d="M18 14h.01"/></svg></span>
+          <span class="ccard-kind">微信</span>
+          <span class="ccard-val">申请查看</span>
+        </button></li>
+        <li><button class="ccard" type="button" data-kind="电话" data-locked="1">
+          <span class="ccard-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg></span>
+          <span class="ccard-kind">电话</span>
+          <span class="ccard-val">申请查看</span>
+        </button></li>
+        <li><button class="ccard" type="button" data-kind="QQ" data-value="3171751429">
+          <span class="ccard-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9.748a14.716 14.716 0 0 0 11.995 -.052c.275 -9.236 -11.104 -11.256 -11.995 .052z"/><path d="M18 10c.984 2.762 1.949 4.765 2 7.153c.014 .688 -.664 1.346 -1.184 .303c-.346 -.696 -.952 -1.181 -1.816 -1.456"/><path d="M17 16c.031 1.831 .147 3.102 -1 4"/><path d="M8 20c-1.099 -.87 -.914 -2.24 -1 -4"/><path d="M6 10c-.783 2.338 -1.742 4.12 -1.968 6.43c-.217 2.227 .716 1.644 1.16 .917c.296 -.487 .898 -.934 1.808 -1.347"/><path d="M15.898 13l-.476 -2"/><path d="M8 20l-1.5 1c-.5 .5 -.5 1 .5 1h10c1 0 1 -.5 .5 -1l-1.5 -1"/><path d="M13.75 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M10.25 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></span>
+          <span class="ccard-kind">QQ</span>
+          <span class="ccard-val">3171751429</span>
+        </button></li>
+      </ul>
+    </div>
+
+    <!-- 落款：本就是「联络」这一页的收束。
+         原先它排在所有 section 之后，于是要再翻一页才看得到，
+         像是一件单独的东西滑上来，而不是自然的结尾。 -->
+    <footer class="colophon">
+      <p class="colophon-poem">山不在高，有仙则名；水不在深，有龙则灵</p>
+      <div class="colophon-seal" aria-hidden="true">C</div>
+      <p class="colophon-meta">© 2026 Cheney</p>
+    </footer>
+  </div>
+</section>
+
+<div class="chapter-dock" id="chapter-dock" aria-label="章节导航">
+  <button type="button" id="chapter-prev" aria-label="上一页">↑</button>
+  <span class="chapter-label" id="chapter-label" aria-live="polite">序 · 开篇</span>
+  <button type="button" id="chapter-next" aria-label="下一页">↓</button>
+</div>
+
+<dialog class="poem-dialog" id="poem-dialog" aria-labelledby="poem-dialog-title">
+  <button class="cc-dialog-close" type="button" data-close-dialog aria-label="关闭诗笺">×</button>
+  <span class="poem-dialog-eyebrow">诗笺 · 随机一章</span>
+  <h2 id="poem-dialog-title">今日所得</h2>
+  <blockquote id="poem-dialog-line"></blockquote>
+  <p id="poem-dialog-meta"></p>
+  <div class="poem-dialog-actions"><button type="button" id="poem-again">再抽一笺</button><a id="poem-full" target="_blank" rel="noopener noreferrer">读完整诗词</a></div>
+</dialog>
+
+<dialog class="cc-dialog" id="cc-dialog" aria-labelledby="cc-dialog-kind">
+  <button class="cc-dialog-close" type="button" id="cc-dialog-close" aria-label="关闭">×</button>
+  <span class="cc-dialog-mark" id="cc-dialog-mark" aria-hidden="true"></span>
+  <h2 class="cc-dialog-kind" id="cc-dialog-kind"></h2>
+  <div class="cc-dialog-body" id="cc-dialog-body"></div>
+</dialog>
+
+<script>
+/* ===================== 诗句库 =====================
+   90 条，取自古诗文网（gushiwen.cn），每条 url 都是该站的全诗页，
+   抓取时逐条请求核验过：返回 200，且页面确实含该句。
+   朝代分布 唐20 宋19 汉10 魏晋8 南北朝8 元8 先秦5 清5 明4 金3；
+   风格偏山水田园与哲思咏怀，励志类只占个位数，避免通篇豪言。
+   首屏每次随机抽一批，同一批内不重复；一条走完就换成没用过的下一条。
+   想增删，直接改这个数组即可（line 是飘出来的句子，title/author 悬停时显示）。 */
+var POEMS = [
+  { line: '风萧萧兮易水寒，壮士一去兮不复还', title: '渡易水歌', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_60ff036cbc0e.aspx' },
+  { line: '愿为西南风，长逝入君怀', title: '七哀诗', author: '曹植', url: 'https://www.gushiwen.cn/shiwenv_5ea23fc91c66.aspx' },
+  { line: '南风知我意，吹梦到西洲', title: '西洲曲', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_32d2e7ebc423.aspx' },
+  { line: '盈盈一水间，脉脉不得语', title: '迢迢牵牛星', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_7f09a756c9c0.aspx' },
+  { line: '知我者，谓我心忧；不知我者，谓我何求', title: '黍离', author: '诗经·国风·王风', url: 'https://www.gushiwen.cn/shiwenv_2f3e1e0a34bb.aspx' },
+  { line: '人生天地间，忽如远行客', title: '青青陵上柏', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_2a844a2e6460.aspx' },
+  { line: '明月皎皎照我床，星汉西流夜未央', title: '燕歌行二首·其一', author: '曹丕', url: 'https://www.gushiwen.cn/shiwenv_dc47feaddcd7.aspx' },
+  { line: '昔去雪如花，今来花似雪', title: '别诗二首·其一', author: '范云', url: 'https://www.gushiwen.cn/shiwenv_b727c277a4cb.aspx' },
+  { line: '悲莫悲兮生别离，乐莫乐兮新相知', title: '九歌·少司命', author: '屈原', url: 'https://www.gushiwen.cn/shiwenv_394a0eaa533f.aspx' },
+  { line: '行行重行行，与君生别离', title: '行行重行行', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_cfa983aabd96.aspx' },
+  { line: '有人问我事如何，人海阔，无日不风波', title: '阳春曲·笔头风月时时过', author: '姚燧', url: 'https://www.gushiwen.cn/shiwenv_100bb2ac3db8.aspx' },
+  { line: '趁芦花晚潮，泊垂杨画桥，自一种江湖乐', title: '渔家六首', author: '陈铎', url: 'https://www.gushiwen.cn/shiwenv_57a1da3ff920.aspx' },
+  { line: '人生若只如初见，何事秋风悲画扇', title: '木兰花·拟古决绝词柬友', author: '纳兰性德', url: 'https://www.gushiwen.cn/shiwenv_85e93138ed65.aspx' },
+  { line: '月有盈亏花有开谢，想人生最苦离别', title: '普天乐·咏世', author: '张鸣善', url: 'https://www.gushiwen.cn/shiwenv_ddf21b565344.aspx' },
+  { line: '眼前直下三千字，胸次全无一点尘', title: '观书', author: '于谦', url: 'https://www.gushiwen.cn/shiwenv_28ff51f6c406.aspx' },
+  { line: '苟利国家生死以，岂因祸福避趋之', title: '赴戍登程口占示家人二首', author: '林则徐', url: 'https://www.gushiwen.cn/shiwenv_205bdb29d21f.aspx' },
+  { line: '若待明朝风雨过，人在天涯！春在天涯', title: '南乡一剪梅·招熊少府', author: '虞集', url: 'https://www.gushiwen.cn/shiwenv_915cd306cd41.aspx' },
+  { line: '多少天涯未归客，尽借篱落看秋风', title: '菊花', author: '唐寅', url: 'https://www.gushiwen.cn/shiwenv_193b0dfc0815.aspx' },
+  { line: '不恨天涯行役苦，只恨西风，吹梦成今古', title: '蝶恋花·又到绿杨曾折处', author: '纳兰性德', url: 'https://www.gushiwen.cn/shiwenv_e5002a4118eb.aspx' },
+  { line: '荷花十里，清风鉴水，明月天衣', title: '人月圆·会稽怀古', author: '张可久', url: 'https://www.gushiwen.cn/shiwenv_c5eb078b2923.aspx' },
+  { line: '青山如黛远村东，嫩绿长溪柳絮风', title: '春日杂咏', author: '高珩', url: 'https://www.gushiwen.cn/shiwenv_ad5d17717c57.aspx' },
+  { line: '朔风吹散三更雪，倩魂犹恋桃花月', title: '菩萨蛮·朔风吹散三更雪', author: '纳兰性德', url: 'https://www.gushiwen.cn/shiwenv_ba7a01063233.aspx' },
+  { line: '醉后不知天在水，满船清梦压星河', title: '题龙阳县青草湖', author: '唐珙', url: 'https://www.gushiwen.cn/shiwenv_38871dbf575d.aspx' },
+  { line: '闲来写就青山卖，不使人间造孽钱', title: '言志', author: '唐寅', url: 'https://www.gushiwen.cn/shiwenv_49e33b2a997d.aspx' },
+  { line: '恰便似遮不住的青山隐隐，流不断的绿水悠悠', title: '红豆曲', author: '曹雪芹', url: 'https://www.gushiwen.cn/shiwenv_a3d99418b625.aspx' },
+  { line: '平生不会相思，才会相思，便害相思', title: '蟾宫曲·春情', author: '徐再思', url: 'https://www.gushiwen.cn/shiwenv_c439b578d976.aspx' },
+  { line: '晓看天色暮看云，行也思君，坐也思君', title: '一剪梅·雨打梨花深闭门', author: '唐寅', url: 'https://www.gushiwen.cn/shiwenv_826758a2d666.aspx' },
+  { line: '自是相思抽不尽，却教风雨怨秋声', title: '咏芭蕉', author: '郑板桥', url: 'https://www.gushiwen.cn/shiwenv_e06ffcaa0fc4.aspx' },
+  { line: '当年紫禁烟花，相逢恨不知音早', title: '水龙吟·送焦和之赴西夏行省', author: '王恽', url: 'https://www.gushiwen.cn/shiwenv_62610dff4099.aspx' },
+  { line: '滚滚长江东逝水，浪花淘尽英雄', title: '临江仙·滚滚长江东逝水', author: '杨慎', url: 'https://www.gushiwen.cn/shiwenv_284e20a25958.aspx' },
+  { line: '莫唱当年长恨歌，人间亦自有银河', title: '马嵬', author: '袁枚', url: 'https://www.gushiwen.cn/shiwenv_bc1e52481a58.aspx' },
+  { line: '晚云都变露，新月初学扇。塞鸿一字来如线', title: '塞鸿秋·浔阳即景', author: '周德清', url: 'https://www.gushiwen.cn/shiwenv_0e6f604b8f8b.aspx' },
+  { line: '一年三百六十日，多是横戈马上行', title: '马上作', author: '戚继光', url: 'https://www.gushiwen.cn/shiwenv_b801aa227372.aspx' },
+  { line: '只解沙场为国死，何须马革裹尸还', title: '出塞', author: '徐锡麟', url: 'https://www.gushiwen.cn/shiwenv_2f5f6a8014d6.aspx' },
+  { line: '偶应非熊兆，尊为帝者师', title: '题太公钓渭图', author: '刘基', url: 'https://www.gushiwen.cn/shiwenv_68de399540a8.aspx' },
+  { line: '上帝照临忠义胆，老师付授文章脉', title: '满江红·畴昔胪传', author: '刘克庄', url: 'https://www.gushiwen.cn/shiwenv_56b4487c9149.aspx' },
+  { line: '东宫白庶子，南寺远禅师', title: '远师', author: '白居易', url: 'https://www.gushiwen.cn/shiwenv_dc3f3a47ec60.aspx' },
+  { line: '暗中时滴思亲泪，只恐思儿泪更多', title: '忆母', author: '倪瑞璿', url: 'https://www.gushiwen.cn/shiwenv_414ca965ba1a.aspx' },
+  { line: '父兮母兮，进阻且长，呜呼哀哉', title: '怨词', author: '王昭君', url: 'https://www.gushiwen.cn/shiwenv_f51ff3317343.aspx' },
+  { line: '元老侑坐须眉古，虎臣立侍冠剑长', title: '赠写御容妙善师', author: '苏轼', url: 'https://www.gushiwen.cn/shiwenv_0d7d74e3c1d5.aspx' },
+  { line: '师住稽亭高处寺，斜廊曲阁倚云开', title: '送稽亭山寺僧', author: '张籍', url: 'https://www.gushiwen.cn/shiwenv_23b7e9761817.aspx' },
+  { line: '重缝不忍轻移拆，上有慈亲旧线痕', title: '晒旧衣', author: '周寿昌', url: 'https://www.gushiwen.cn/shiwenv_717d9b73194f.aspx' },
+  { line: '生我鞠我长育我，出入腹我何艰辛', title: '劝孝', author: '赵与泌', url: 'https://www.gushiwen.cn/shiwenv_e825c59caa49.aspx' },
+  { line: '弟子事先生，于兹有年矣', title: '进学解', author: '韩愈', url: 'https://www.gushiwen.cn/shiwenv_94a69d56db65.aspx' },
+  { line: '月明闻杜宇，南北总关心', title: '将母', author: '王安石', url: 'https://www.gushiwen.cn/shiwenv_5556f21738f6.aspx' },
+  { line: '人家见生男女好，不知男女催人老', title: '短歌行', author: '王建', url: 'https://www.gushiwen.cn/shiwenv_f4630ed9e5da.aspx' },
+  { line: '其人虽已没，千载有馀情', title: '咏荆轲', author: '陶渊明', url: 'https://www.gushiwen.cn/shiwenv_cb6db9f85f94.aspx' },
+  { line: '妖姬脸似花含露，玉树流光照后庭', title: '玉树后庭花', author: '陈叔宝', url: 'https://www.gushiwen.cn/shiwenv_92cf29d380b8.aspx' },
+  { line: '春风得意马蹄疾，一日看尽长安花', title: '登科后', author: '孟郊', url: 'https://www.gushiwen.cn/shiwenv_6650a905deea.aspx' },
+  { line: '凭阑半日独无言，依旧竹声新月似当年', title: '虞美人·春怨', author: '李煜', url: 'https://www.gushiwen.cn/shiwenv_b8f51e7d0076.aspx' },
+  { line: '休对故人思故国，且将新火试新茶。诗酒趁年华', title: '望江南·超然台作', author: '苏轼', url: 'https://www.gushiwen.cn/shiwenv_b8148e70fea6.aspx' },
+  { line: '朱弦一拂遗音在，却是当年寂寞心', title: '论诗三十首·二十', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_e4df5cbe5a86.aspx' },
+  { line: '伤心千古，秦淮一片明月', title: '念奴娇·登石头城次东坡韵', author: '萨都剌', url: 'https://www.gushiwen.cn/shiwenv_4600b302be1d.aspx' },
+  { line: '我也不登天子船，我也不上长安眠', title: '把酒对月歌', author: '唐寅', url: 'https://www.gushiwen.cn/shiwenv_4c366b2111aa.aspx' },
+  { line: '陋室空堂，当年笏满床；衰草枯杨，曾为歌舞场', title: '好了歌注', author: '曹雪芹', url: 'https://www.gushiwen.cn/shiwenv_d5abf3a3ef38.aspx' },
+  { line: '江南佳丽地，金陵帝王州', title: '入朝曲', author: '谢朓', url: 'https://www.gushiwen.cn/shiwenv_11a51248c283.aspx' },
+  { line: '时来天地皆同力，运去英雄不自由', title: '筹笔驿', author: '罗隐', url: 'https://www.gushiwen.cn/shiwenv_2461021b9920.aspx' },
+  { line: '山川风景好，自古金陵道，少年看却老', title: '醉花间·晴雪小园春未到', author: '冯延巳', url: 'https://www.gushiwen.cn/shiwenv_ea706cf4a853.aspx' },
+  { line: '玉楼金阙慵归去，且插梅花醉洛阳', title: '鹧鸪天·西都作', author: '朱敦儒', url: 'https://www.gushiwen.cn/shiwenv_bf60e3183d5b.aspx' },
+  { line: '江山如画里，人物更风流', title: '临江仙·荷叶荷花何处好', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_50ec4e9c1f2a.aspx' },
+  { line: '敕勒川，阴山下。天似穹庐，笼盖四野', title: '敕勒歌', author: '乐府诗集', url: 'https://www.gushiwen.cn/shiwenv_f996111bff75.aspx' },
+  { line: '关山别荡子，风月守空闺', title: '昔昔盐', author: '薛道衡', url: 'https://www.gushiwen.cn/shiwenv_d1a688ff5cf7.aspx' },
+  { line: '男儿何不带吴钩，收取关山五十州', title: '南园十三首·其五', author: '李贺', url: 'https://www.gushiwen.cn/shiwenv_16e9c75bf6d1.aspx' },
+  { line: '夜阑卧听风吹雨，铁马冰河入梦来', title: '十一月四日风雨大作二首', author: '陆游', url: 'https://www.gushiwen.cn/shiwenv_38c4a0c84fe9.aspx' },
+  { line: '中州万古英雄气，也到阴山敕勒川', title: '论诗三十首·其七', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_00053a341f60.aspx' },
+  { line: '咸阳百二山河，两字功名，几阵干戈', title: '蟾宫曲·叹世二首', author: '马致远', url: 'https://www.gushiwen.cn/shiwenv_282d571c0e98.aspx' },
+  { line: '长江巨浪征人泪，一夜西风共白头', title: '江上阻风', author: '宋琬', url: 'https://www.gushiwen.cn/shiwenv_a6d9309de395.aspx' },
+  { line: '万里赴戎机，关山度若飞', title: '木兰诗', author: '乐府诗集', url: 'https://www.gushiwen.cn/shiwenv_2d6b0c83a500.aspx' },
+  { line: '华阴山头百丈井，下有流水彻骨冷', title: '捉搦歌·其三', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_7b7facc33c28.aspx' },
+  { line: '大漠孤烟直，长河落日圆', title: '使至塞上', author: '王维', url: 'https://www.gushiwen.cn/shiwenv_eae647c5c110.aspx' },
+  { line: '黄沙百战穿金甲，不破楼兰终不还', title: '从军行七首·其四', author: '王昌龄', url: 'https://www.gushiwen.cn/shiwenv_d1129db241ec.aspx' },
+  { line: '蝉噪林逾静，鸟鸣山更幽', title: '入若耶溪', author: '王籍', url: 'https://www.gushiwen.cn/shiwenv_3f7503246290.aspx' },
+  { line: '灼灼荷花瑞，亭亭出水中', title: '咏同心芙蓉', author: '杜公瞻', url: 'https://www.gushiwen.cn/shiwenv_f365de8fa7dc.aspx' },
+  { line: '人面不知何处去，桃花依旧笑春风', title: '题都城南庄', author: '崔护', url: 'https://www.gushiwen.cn/shiwenv_2449fc7a9986.aspx' },
+  { line: '满眼游丝兼落絮，红杏开时，一霎清明雨', title: '鹊踏枝·六曲阑干偎碧树', author: '冯延巳/晏殊', url: 'https://www.gushiwen.cn/shiwenv_b8763c985944.aspx' },
+  { line: '梨花院落溶溶月，柳絮池塘淡淡风', title: '无题', author: '晏殊', url: 'https://www.gushiwen.cn/shiwenv_5f9038905eb7.aspx' },
+  { line: '离恨远萦杨柳，梦魂长绕梨花', title: '乌夜啼·离恨远萦杨柳', author: '刘迎', url: 'https://www.gushiwen.cn/shiwenv_7ce84f355eb8.aspx' },
+  { line: '人老去西风白发，蝶愁来明日黄花', title: '蟾宫曲·九日', author: '张可久', url: 'https://www.gushiwen.cn/shiwenv_1fa99e2a3390.aspx' },
+  { line: '况有短墙银杏雨，更兼高阁玉兰风', title: '浣溪沙·寄严荪友', author: '纳兰性德', url: 'https://www.gushiwen.cn/shiwenv_d4a3217c5773.aspx' },
+  { line: '未若柳絮因风起', title: '咏雪', author: '刘义庆', url: 'https://www.gushiwen.cn/shiwenv_a24c4f626d63.aspx' },
+  { line: '露浓山气冷，风急蝉声哀', title: '悲秋诗', author: '杨广', url: 'https://www.gushiwen.cn/shiwenv_c3b6fa68e13d.aspx' },
+  { line: '不经一番寒彻骨，怎得梅花扑鼻香', title: '上堂开示颂', author: '黄櫱禅师', url: 'https://www.gushiwen.cn/shiwenv_d99474e71e35.aspx' },
+  { line: '桃花洞，瑶台梦，一片春愁谁与共', title: '天仙子·柳色披衫金缕凤', author: '和凝', url: 'https://www.gushiwen.cn/shiwenv_228864c50cb0.aspx' },
+  { line: '沾衣欲湿杏花雨，吹面不寒杨柳风', title: '绝句', author: '志南', url: 'https://www.gushiwen.cn/shiwenv_f20c6e290a03.aspx' },
+  { line: '莺莺燕燕分飞后，粉淡梨花瘦', title: '虞美人·槐阴别院宜清昼', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_3dc421ec237e.aspx' },
+  { line: '一帘红雨桃花谢，十里清阴柳影斜', title: '阳春曲·春景', author: '胡祗遹', url: 'https://www.gushiwen.cn/shiwenv_2ef980bb3245.aspx' },
+  { line: '深处种菱浅种稻，不深不浅种荷花', title: '吴兴杂诗', author: '阮元', url: 'https://www.gushiwen.cn/shiwenv_7d3679fd0ea4.aspx' },
+  { line: '举世皆浊我独清，众人皆醉我独醒，是以见放', title: '渔父', author: '屈原(存疑)', url: 'https://www.gushiwen.cn/shiwenv_7d4f2ada5537.aspx' },
+  { line: '白骨露于野，千里无鸡鸣', title: '蒿里行', author: '曹操', url: 'https://www.gushiwen.cn/shiwenv_0c29e174924a.aspx' },
+  { line: '人生居天壤间，忽如飞鸟栖枯枝。我今隐约欲何为', title: '大墙上蒿行', author: '曹丕', url: 'https://www.gushiwen.cn/shiwenv_9ea68b29d042.aspx' },
+  { line: '野旷沙岸净，天高秋月明', title: '初去郡', author: '谢灵运', url: 'https://www.gushiwen.cn/shiwenv_8c121fad5e82.aspx' },
+  { line: '满堂花醉三千客，一剑霜寒十四州', title: '献钱尚父', author: '贯休', url: 'https://www.gushiwen.cn/shiwenv_52940038c6ee.aspx' },
+  { line: '春酒香熟鲈鱼美，谁同醉？缆却扁舟篷底睡', title: '南乡子·云带雨', author: '李珣', url: 'https://www.gushiwen.cn/shiwenv_f6c0844ce644.aspx' },
+  { line: '羡青山有思，白鹤忘机', title: '八声甘州·摘青梅荐酒', author: '汤恢', url: 'https://www.gushiwen.cn/shiwenv_b2759ff60729.aspx' },
+  { line: '老夫惟有，醒来明月，醉后清风', title: '人月圆·卜居外家东园', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_ffc5956b3eba.aspx' },
+  { line: '醉月悠悠，漱石休休，水可陶情，花可融愁', title: '蟾宫曲·山间书事', author: '吴西逸', url: 'https://www.gushiwen.cn/shiwenv_f84afc4b7ecb.aspx' },
+  { line: '半醒半醉日复日，花落花开年复年', title: '桃花庵歌', author: '唐寅', url: 'https://www.gushiwen.cn/shiwenv_79810bb31a81.aspx' },
+  { line: '草长莺飞二月天，拂堤杨柳醉春烟', title: '村居', author: '高鼎', url: 'https://www.gushiwen.cn/shiwenv_425fb837c387.aspx' },
+  { line: '战城南，死郭北，野死不葬乌可食', title: '战城南', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_ad0519f8aa03.aspx' },
+  { line: '长剑横九野，高冠拂玄穹', title: '壮士篇', author: '张华', url: 'https://www.gushiwen.cn/shiwenv_4d047376ca5f.aspx' },
+  { line: '春晚绿野秀，岩高白云屯', title: '入彭蠡湖口', author: '谢灵运', url: 'https://www.gushiwen.cn/shiwenv_d96117b501f4.aspx' },
+  { line: '应是天仙狂醉，乱把白云揉碎', title: '清平乐·画堂晨起', author: '李白/袁绹', url: 'https://www.gushiwen.cn/shiwenv_dd1ce6896a44.aspx' },
+  { line: '渡口双双飞白鸟，烟袅，芦花深处隐渔歌', title: '定风波·江水沉沉帆影过', author: '阎选', url: 'https://www.gushiwen.cn/shiwenv_568e35f7d336.aspx' },
+  { line: '江山风月，本无常主，闲者便是主人', title: '临皋闲题', author: '苏轼', url: 'https://www.gushiwen.cn/shiwenv_e3adc24f7df4.aspx' },
+  { line: '劝君莫惜花前醉，今年花谢，明年花谢，白了人头', title: '青杏儿·风雨替花愁', author: '赵秉文', url: 'https://www.gushiwen.cn/shiwenv_eb50abedb13d.aspx' },
+  { line: '无半点闲愁去处，问三生醉梦何如', title: '折桂令·七夕赠歌者', author: '乔吉', url: 'https://www.gushiwen.cn/shiwenv_6675c761bbfc.aspx' },
+  { line: '山有木兮木有枝，心悦君兮君不知', title: '越人歌', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_4a96c8287eb5.aspx' },
+  { line: '愿得一心人，白头不相离', title: '白头吟', author: '卓文君(存疑)', url: 'https://www.gushiwen.cn/shiwenv_a416ac373919.aspx' },
+  { line: '思君如流水，何有穷已时', title: '室思', author: '徐干', url: 'https://www.gushiwen.cn/shiwenv_88ccf5cf1d59.aspx' },
+  { line: '梦中不识路，何以慰相思', title: '别范安成', author: '沈约', url: 'https://www.gushiwen.cn/shiwenv_8cc472305317.aspx' },
+  { line: '长白山前知世郎，纯着红罗锦背裆', title: '隋大业长白山谣', author: '王薄(存疑)', url: 'https://www.gushiwen.cn/shiwenv_24f52564a33f.aspx' },
+  { line: '入我相思门，知我相思苦', title: '三五七言', author: '李白', url: 'https://www.gushiwen.cn/shiwenv_169ff9fbafcb.aspx' },
+  { line: '一重山，两重山。山远天高烟水寒，相思枫叶丹', title: '长相思·一重山', author: '李煜', url: 'https://www.gushiwen.cn/shiwenv_2693da9ced02.aspx' },
+  { line: '只愿君心似我心，定不负相思意', title: '卜算子·我住长江头', author: '李之仪', url: 'https://www.gushiwen.cn/shiwenv_d096804a25ff.aspx' },
+  { line: '相思树，流年度，无端又被西风误', title: '摸鱼儿·问莲根有丝多少', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_f9bd9707a944.aspx' },
+  { line: '妾身独自眠，月圆人未圆', title: '凭栏人·闺怨', author: '王元鼎', url: 'https://www.gushiwen.cn/shiwenv_ff8c70161ae4.aspx' },
+  { line: '情不知所起，一往而深', title: '牡丹亭记题词', author: '汤显祖', url: 'https://www.gushiwen.cn/shiwenv_9b56a4747f6b.aspx' },
+  { line: '草木也知愁，韶华竟白头', title: '唐多令·柳絮', author: '曹雪芹', url: 'https://www.gushiwen.cn/shiwenv_0ada71494eb7.aspx' },
+  { line: '生当复来归，死当长相思', title: '留别妻', author: '苏武(存疑)', url: 'https://www.gushiwen.cn/shiwenv_2dd3daf34fd9.aspx' },
+  { line: '车遥遥兮马洋洋，追思君兮不可忘', title: '车遥遥篇', author: '傅玄', url: 'https://www.gushiwen.cn/shiwenv_47e0726667ee.aspx' },
+  { line: '扪萝正意我，折桂方思君', title: '送沈记室夜别', author: '范云', url: 'https://www.gushiwen.cn/shiwenv_092f9dad9634.aspx' },
+  { line: '玲珑骰子安红豆，入骨相思知不知', title: '新添声杨柳枝词二首', author: '温庭筠', url: 'https://www.gushiwen.cn/shiwenv_a2b349dd32e8.aspx' },
+  { line: '一寸相思千万绪。人间没个安排处', title: '蝶恋花·春暮', author: '李冠/李煜', url: 'https://www.gushiwen.cn/shiwenv_1d9a6258d613.aspx' },
+  { line: '若教眼底无离恨，不信人间有白头', title: '鹧鸪天·代人赋', author: '辛弃疾', url: 'https://www.gushiwen.cn/shiwenv_1da16040c5e0.aspx' },
+  { line: '袨服华妆着处逢，六街灯火闹儿童', title: '京都元夕', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_94091b1ccc6e.aspx' },
+  { line: '鹿鸣思长草，愁人思故乡', title: '琅琊王歌辞·其四', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_d12b05f7380d.aspx' },
+  { line: '海上生明月，天涯共此时', title: '望月怀远', author: '张九龄', url: 'https://www.gushiwen.cn/shiwenv_7cc200edc65e.aspx' },
+  { line: '千里江山寒色暮，芦花深处泊孤舟，笛在月明楼', title: '望江南·闲梦远', author: '李煜', url: 'https://www.gushiwen.cn/shiwenv_a1482ccb71be.aspx' },
+  { line: '昨夜西风凋碧树，独上高楼，望尽天涯路', title: '蝶恋花·槛菊愁烟兰泣露', author: '晏殊', url: 'https://www.gushiwen.cn/shiwenv_902b7c60788a.aspx' },
+  { line: '寄语天涯客，轻寒底用愁', title: '除夜太原寒甚', author: '于谦', url: 'https://www.gushiwen.cn/shiwenv_0789dc67427a.aspx' },
+  { line: '落叶他乡树，寒灯独夜人', title: '灞上秋居', author: '马戴', url: 'https://www.gushiwen.cn/shiwenv_5d0d8b3c1111.aspx' },
+  { line: '人言落日是天涯，望极天涯不见家', title: '乡思', author: '李觏', url: 'https://www.gushiwen.cn/shiwenv_69c7960d910a.aspx' },
+  { line: '万里沧江生白发，几人灯火坐黄昏', title: '因雨和杜韵', author: '王守仁', url: 'https://www.gushiwen.cn/shiwenv_5f757a06a1dc.aspx' },
+  { line: '露从今夜白，月是故乡明', title: '月夜忆舍弟', author: '杜甫', url: 'https://www.gushiwen.cn/shiwenv_ad6f7cfa10c2.aspx' },
+  { line: '枝上柳绵吹又少。天涯何处无芳草', title: '蝶恋花·春景', author: '苏轼', url: 'https://www.gushiwen.cn/shiwenv_69a11cbab0b4.aspx' },
+  { line: '近乡情更怯，不敢问来人', title: '渡汉江', author: '宋之问', url: 'https://www.gushiwen.cn/shiwenv_4f7e2f94ec4a.aspx' },
+  { line: '梧桐叶上三更雨，叶叶声声是别离', title: '鹧鸪天·一点残红欲尽时', author: '周紫芝', url: 'https://www.gushiwen.cn/shiwenv_27f49a0c8c29.aspx' },
+  { line: '同是天涯沦落人，相逢何必曾相识', title: '琵琶行', author: '白居易', url: 'https://www.gushiwen.cn/shiwenv_0581b0ba8bb4.aspx' },
+  { line: '放眼暮江千顷，中有离愁万斛，无处落征鸿', title: '水调歌头·把酒对斜日', author: '杨炎正', url: 'https://www.gushiwen.cn/shiwenv_d2ec597c5652.aspx' },
+  { line: '共看明月应垂泪，一夜乡心五处同', title: '望月有感', author: '白居易', url: 'https://www.gushiwen.cn/shiwenv_5dfc1bd59fed.aspx' },
+  { line: '天涯岂是无归意，争奈归期未可期', title: '鹧鸪天·十里楼台倚翠微', author: '晏几道', url: 'https://www.gushiwen.cn/shiwenv_b9769217a28c.aspx' },
+  { line: '定定住天涯，依依向物华', title: '忆梅', author: '李商隐', url: 'https://www.gushiwen.cn/shiwenv_93b77dea34c5.aspx' },
+  { line: '柳条折尽花飞尽，借问行人归不归', title: '送别诗', author: '佚名', url: 'https://www.gushiwen.cn/shiwenv_8ff56ec5e32f.aspx' },
+  { line: '今人不见古时月，今月曾经照古人', title: '把酒问月·故人贾淳令予问之', author: '李白', url: 'https://www.gushiwen.cn/shiwenv_837510c0a7c4.aspx' },
+  { line: '换我心，为你心，始知相忆深', title: '诉衷情·永夜抛人何处去', author: '顾夐', url: 'https://www.gushiwen.cn/shiwenv_cda0e25b4442.aspx' },
+  { line: '人生如逆旅，我亦是行人', title: '临江仙·送钱穆父', author: '苏轼', url: 'https://www.gushiwen.cn/shiwenv_330cfc1476ad.aspx' },
+  { line: '问世间，情是何物，直教生死相许', title: '摸鱼儿·雁丘词', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_8a860f142c0a.aspx' },
+  { line: '须信百年俱是梦，天地阔，且徜徉', title: '江城子·疏云过雨漏斜阳', author: '邵亨贞', url: 'https://www.gushiwen.cn/shiwenv_783db51f9564.aspx' },
+  { line: '难将心事和人说，说与青天明月知', title: '美人对月', author: '唐寅', url: 'https://www.gushiwen.cn/shiwenv_6e12b8487ca0.aspx' },
+  { line: '若似月轮终皎洁，不辞冰雪为卿热', title: '蝶恋花·辛苦最怜天上月', author: '纳兰性德', url: 'https://www.gushiwen.cn/shiwenv_26b87875bd77.aspx' },
+  { line: '桃之夭夭，灼灼其华', title: '桃夭', author: '诗经·国风·周南', url: 'https://www.gushiwen.cn/shiwenv_6ba04da3fdc1.aspx' },
+  { line: '一日不见兮，思之如狂', title: '凤求凰', author: '司马相如(存疑)', url: 'https://www.gushiwen.cn/shiwenv_13f153478a2a.aspx' },
+  { line: '人生无根蒂，飘如陌上尘', title: '杂诗十二首·其一', author: '陶渊明', url: 'https://www.gushiwen.cn/shiwenv_404930bd804c.aspx' },
+  { line: '人生亦有命，安能行叹复坐愁', title: '拟行路难·其四', author: '鲍照', url: 'https://www.gushiwen.cn/shiwenv_5261df279f62.aspx' },
+  { line: '人归落雁后，思发在花前', title: '人日思归', author: '薛道衡', url: 'https://www.gushiwen.cn/shiwenv_29252ac44d0f.aspx' },
+  { line: '莫道桑榆晚，为霞尚满天', title: '酬乐天咏老见示', author: '刘禹锡', url: 'https://www.gushiwen.cn/shiwenv_e07317133df0.aspx' },
+  { line: '花满渚，酒满瓯，万顷波中得自由', title: '渔父·一棹春风一叶舟', author: '李煜', url: 'https://www.gushiwen.cn/shiwenv_5e3b80583489.aspx' },
+  { line: '愿我如星君如月，夜夜流光相皎洁', title: '车遥遥篇', author: '范成大', url: 'https://www.gushiwen.cn/shiwenv_c5ce0ac560ea.aspx' },
+  { line: '多情却被无情恼，今夜还如昨夜长', title: '鹧鸪天·候馆灯昏雨送凉', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_9fcf27cd99a3.aspx' },
+  { line: '傲杀人间万户侯，不识字烟波钓叟', title: '沉醉东风·渔夫', author: '白朴', url: 'https://www.gushiwen.cn/shiwenv_d1e07474d2e2.aspx' },
+  { line: '往事思量一晌空，飞絮无情，依旧烟笼', title: '一剪梅·咏柳', author: '夏完淳', url: 'https://www.gushiwen.cn/shiwenv_92f7fa53b00d.aspx' },
+  { line: '一箫一剑平生意，负尽狂名十五年', title: '漫感', author: '龚自珍', url: 'https://www.gushiwen.cn/shiwenv_82fa006e52ad.aspx' },
+  { line: '执子之手，与子偕老', title: '击鼓', author: '诗经·国风·邶风', url: 'https://www.gushiwen.cn/shiwenv_73b3c6badf1b.aspx' },
+  { line: '非学无以广才，非志无以成学', title: '诫子书', author: '诸葛亮', url: 'https://www.gushiwen.cn/shiwenv_c0509bfa84a1.aspx' },
+  { line: '悟已往之不谏，知来者之可追', title: '归去来兮辞', author: '陶渊明', url: 'https://www.gushiwen.cn/shiwenv_987458864738.aspx' },
+  { line: '日下壁而沉彩，月上轩而飞光', title: '别赋', author: '江淹', url: 'https://www.gushiwen.cn/shiwenv_d9a80a0ddc8f.aspx' },
+  { line: '灯树千光照，花焰七枝开', title: '正月十五日于通衢建灯夜升南楼诗', author: '杨广', url: 'https://www.gushiwen.cn/shiwenv_8819c20e5f18.aspx' },
+  { line: '寒鸦飞数点，流水绕孤村', title: '野望', author: '杨广', url: 'https://www.gushiwen.cn/shiwenv_53075671c008.aspx' },
+  { line: '曾经沧海难为水，除却巫山不是云', title: '离思五首·其四', author: '元稹', url: 'https://www.gushiwen.cn/shiwenv_bd4224133394.aspx' },
+  { line: '林花谢了春红，太匆匆。无奈朝来寒雨晚来风', title: '相见欢·林花谢了春红', author: '李煜', url: 'https://www.gushiwen.cn/shiwenv_2dcf6f7cfbbc.aspx' },
+  { line: '我见青山多妩媚，料青山见我应如是', title: '贺新郎·甚矣吾衰矣', author: '辛弃疾', url: 'https://www.gushiwen.cn/shiwenv_098e88b62d38.aspx' },
+  { line: '人生长恨水长东', title: '临江仙·自洛阳往孟津道中作', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_32e21765bdbd.aspx' },
+  { line: '青山相待，白云相爱，梦不到紫罗袍共黄金带', title: '山坡羊·道情', author: '宋方壶', url: 'https://www.gushiwen.cn/shiwenv_f2b584c08107.aspx' },
+  { line: '无限山河泪，谁言天地宽', title: '别云间', author: '夏完淳', url: 'https://www.gushiwen.cn/shiwenv_d01bc3fbb10b.aspx' },
+  { line: '似此星辰非昨夜，为谁风露立中宵', title: '绮怀十六首·其十五', author: '黄景仁', url: 'https://www.gushiwen.cn/shiwenv_3b1108c2df7b.aspx' },
+  { line: '我心匪石，不可转也', title: '柏舟', author: '诗经·国风·邶风', url: 'https://www.gushiwen.cn/shiwenv_5b2100b91c1c.aspx' },
+  { line: '少无适俗韵，性本爱丘山', title: '归园田居·其一', author: '陶渊明', url: 'https://www.gushiwen.cn/shiwenv_a537ff195683.aspx' },
+  { line: '江南无所有，聊赠一枝春', title: '赠范晔诗', author: '陆凯', url: 'https://www.gushiwen.cn/shiwenv_cf482f8bf41e.aspx' },
+  { line: '秋鬓含霜白，衰颜倚酒红', title: '别宋常侍', author: '尹式', url: 'https://www.gushiwen.cn/shiwenv_f9a4a3fa6796.aspx' },
+  { line: '时人不识凌云木，直待凌云始道高', title: '小松', author: '杜荀鹤', url: 'https://www.gushiwen.cn/shiwenv_bb8a03a5d0c5.aspx' },
+  { line: '世事漫随流水，算来一梦浮生', title: '乌夜啼·昨夜风兼雨', author: '李煜', url: 'https://www.gushiwen.cn/shiwenv_5ac613721d19.aspx' },
+  { line: '可惜一溪风月，莫教踏碎琼瑶', title: '西江月·顷在黄州', author: '苏轼', url: 'https://www.gushiwen.cn/shiwenv_22459da51344.aspx' },
+  { line: '出门一笑大江横', title: '论诗三十首·其五', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_4be5955843f3.aspx' },
+  { line: '疏星淡月秋千院，愁云恨雨芙蓉面', title: '塞鸿秋·春情', author: '张可久', url: 'https://www.gushiwen.cn/shiwenv_e44c347eeea5.aspx' },
+  { line: '但愿苍生俱饱暖，不辞辛苦出山林', title: '咏煤炭', author: '于谦', url: 'https://www.gushiwen.cn/shiwenv_ac213da310d5.aspx' },
+  { line: '一往情深深几许？深山夕照深秋雨', title: '蝶恋花·出塞', author: '纳兰性德', url: 'https://www.gushiwen.cn/shiwenv_5f118f979884.aspx' },
+  { line: '既见君子，云胡不喜', title: '风雨', author: '诗经·国风·郑风', url: 'https://www.gushiwen.cn/shiwenv_ef5d59cd84c7.aspx' },
+  { line: '冀以尘雾之微，补益山海；荧烛末光，增辉日月', title: '求自试表', author: '曹植', url: 'https://www.gushiwen.cn/shiwenv_f062bba23d92.aspx' },
+  { line: '使我高霞孤映，明月独举，青松落阴，白云谁侣', title: '北山移文', author: '孔稚珪', url: 'https://www.gushiwen.cn/shiwenv_84b55ca77e82.aspx' },
+  { line: '肃肃秋风起，悠悠行万里', title: '饮马长城窟行', author: '杨广', url: 'https://www.gushiwen.cn/shiwenv_3ed6b877606a.aspx' },
+  { line: '画栋朝飞南浦云，珠帘暮卷西山雨', title: '滕王阁', author: '王勃', url: 'https://www.gushiwen.cn/shiwenv_433b9ec674cf.aspx' },
+  { line: '落花人独立，微雨燕双飞', title: '春残', author: '翁宏', url: 'https://www.gushiwen.cn/shiwenv_ad6df2bf88a9.aspx' },
+  { line: '桃李春风一杯酒，江湖夜雨十年灯', title: '寄黄几复', author: '黄庭坚', url: 'https://www.gushiwen.cn/shiwenv_cbbb4bd0d351.aspx' },
+  { line: '寒波澹澹起，白鸟悠悠下', title: '颍亭留别', author: '元好问', url: 'https://www.gushiwen.cn/shiwenv_3f750ca8cdf0.aspx' },
+  { line: '杨柳风柔，海棠月淡，独自倚阑时', title: '小阑干·去年人在凤凰池', author: '萨都剌', url: 'https://www.gushiwen.cn/shiwenv_30b7b3416427.aspx' },
+  { line: '寂历秋江渔火稀，起看残月映林微', title: '江宿', author: '汤显祖', url: 'https://www.gushiwen.cn/shiwenv_c14f7d0c37b5.aspx' },
+  { line: '风也萧萧，雨也萧萧，瘦尽灯花又一宵', title: '采桑子·谁翻乐府凄凉曲', author: '纳兰性德', url: 'https://www.gushiwen.cn/shiwenv_56191649bea1.aspx' },
+  { line: '山有扶苏，隰有荷华', title: '山有扶苏', author: '诗经·国风·郑风', url: 'https://www.gushiwen.cn/shiwenv_2289572acfe0.aspx' },
+  { line: '微雨从东来，好风与之俱', title: '读山海经·其一', author: '陶渊明', url: 'https://www.gushiwen.cn/shiwenv_e80463a9d45e.aspx' },
+  { line: '明月照积雪，朔风劲且哀', title: '岁暮', author: '谢灵运', url: 'https://www.gushiwen.cn/shiwenv_dd9d562de905.aspx' }
+];
+
+(function () {
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var $  = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---------- 开篇诗笺：抽取诗句并通往全诗 ---------- */
+  var poemDialog = $('#poem-dialog');
+  var lastDraw = -1;
+  var drawPoem = function () {
+    if (!poemDialog || !POEMS.length) return;
+    var next = Math.floor(Math.random() * POEMS.length);
+    if (next === lastDraw) next = (next + 1) % POEMS.length;
+    lastDraw = next;
+    var poem = POEMS[next];
+    $('#poem-dialog-line').textContent = poem.line;
+    $('#poem-dialog-meta').textContent = '《' + poem.title + '》 · ' + poem.author;
+    $('#poem-full').href = poem.url;
+  };
+  if (poemDialog && poemDialog.showModal) {
+    $('#poem-draw').addEventListener('click', function () { drawPoem(); poemDialog.showModal(); });
+    $('#poem-again').addEventListener('click', drawPoem);
+    poemDialog.addEventListener('click', function (e) {
+      if (e.target === poemDialog || e.target.closest('[data-close-dialog]')) poemDialog.close();
+    });
+  }
+
+  /* ---------- 卷展入场：一次统一的揭示，按 --i 递次 ---------- */
+  var revealing = $$('.reveal');
+  if (!('IntersectionObserver' in window) || reduce.matches) {
+    revealing.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    var revealIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          revealIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealing.forEach(function (el) { revealIO.observe(el); });
+  }
+
+  /* ---------- 导航投影：观察顶部哨兵，不使用 scroll 监听 ---------- */
+  var nav = $('#nav');
+  var sentinel = $('#nav-sentinel');
+  if (nav && sentinel && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      nav.classList.toggle('is-scrolled', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(sentinel);
+  }
+
+  /* ---------- 导航当前段落高亮 ---------- */
+  var navLinks = $$('#nav-list a');
+  var targets = navLinks
+    .map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); })
+    .filter(Boolean);
+
+  // 当前章节由下方统一的翻页状态更新；sticky 页面同时相交时不使用观察器抢写导航状态。
+
+  /* ---------- 目录抽屉 ---------- */
+  var btn = $('#menu-btn');
+  var drawer = $('#drawer');
+  if (btn && drawer) {
+    var drawerLinks = $$('a[href]', drawer);
+    var setDrawer = function (open) {
+      drawer.setAttribute('data-open', open ? 'true' : 'false');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? '关闭目录' : '打开目录');
+      document.body.style.overflow = open ? 'hidden' : '';
+      if (open && drawerLinks.length) drawerLinks[0].focus();
+    };
+    btn.addEventListener('click', function () {
+      setDrawer(drawer.getAttribute('data-open') !== 'true');
+    });
+    drawerLinks.forEach(function (a) {
+      a.addEventListener('click', function () { setDrawer(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (drawer.getAttribute('data-open') !== 'true') return;
+      if (e.key === 'Escape') { setDrawer(false); btn.focus(); return; }
+      // 抽屉是模态：Tab 必须在抽屉与开关之间循环，
+      // 否则键盘会跑到被面板遮住的正文里去。
+      if (e.key === 'Tab') {
+        var ring = [btn].concat(drawerLinks);
+        var first = ring[0];
+        var last = ring[ring.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        else if (ring.indexOf(document.activeElement) === -1) { e.preventDefault(); first.focus(); }
+      }
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1120 && drawer.getAttribute('data-open') === 'true') setDrawer(false);
+    });
+  }
+
+  /* ---------- 落花：氛围层，随卷浮动 ---------- */
+  var bed = $('#petals');
+  if (bed && !reduce.matches) {
+    var heroVisible = true;
+    if ('IntersectionObserver' in window && $('.hero')) {
+      new IntersectionObserver(function (es) { heroVisible = es[0].isIntersecting; }, { threshold: 0 })
+        .observe($('.hero'));
+    }
+    var spawn = function () {
+      // 首屏滚出视野后不再生成，也不必在后台标签页里空转
+      if (!heroVisible || document.hidden || bed.childElementCount > 22) return;
+      var p = document.createElement('span');
+      p.className = 'petal';
+      var size = 5 + Math.random() * 6;
+      p.style.left = (Math.random() * 100) + '%';
+      p.style.width = size + 'px';
+      p.style.height = (size * 1.25) + 'px';
+      p.style.setProperty('--drift', (Math.random() * 130 - 45) + 'px');
+      p.style.animationDuration = (11 + Math.random() * 9) + 's';
+      p.style.animationDelay = (Math.random() * 3) + 's';
+      bed.appendChild(p);
+      p.addEventListener('animationend', function () { p.remove(); });
+    };
+    for (var i = 0; i < 6; i++) setTimeout(spawn, i * 900);
+    setInterval(spawn, 2600);
+  }
+
+  /* ---------- 开篇·诗句流 ---------- */
+  var drift = $('#hero-drift');
+  if (drift && typeof POEMS !== 'undefined' && POEMS.length) {
+    var calm = reduce.matches;
+    var narrow = window.matchMedia('(max-width: 768px)').matches;
+
+    /* 洗牌：同一批内不重复，且每次打开抽到的是另一组 */
+    var pool = POEMS.slice();
+    for (var q = pool.length - 1; q > 0; q--) {
+      var s = Math.floor(Math.random() * (q + 1));
+      var sw = pool[q]; pool[q] = pool[s]; pool[s] = sw;
+    }
+
+    /* 每条轨道固定一个速度，轨内各句均匀错开。
+       若各句各用随机速度，慢的会被快的追上，同一轨道的字会叠成一团——
+       手机上实测过，确实糊了。等距之后间距恒为 (视口 + 句宽) / 轨内句数，
+       只要它大于最长那句，就永不重叠。速度只在不同轨道之间变化，保住参差感。 */
+    var laneY = narrow ? ['20%', '40%'] : ['13%', '30%', '47%', '62%'];
+    var laneDur = narrow ? [64, 82] : [58, 74, 66, 88];
+    var perLane = narrow ? 2 : 4;
+    var laneCount = laneY.length;
+    /* 轨道都在远山之上（远山占底部约 34vh，顶端约在 66% 处），
+       否则淡墨诗句压在较深的墨色山峦上就读不出来。 */
+    var want = calm ? 12 : laneCount * perLane;
+    var count = Math.min(want, pool.length);
+    var frag = document.createDocumentFragment();
+
+    /* 已展示到池中的第几条。第一轮用 pool[0..count-1]，之后依次取没出现过的。 */
+    var cursor = count;
+
+    var fill = function (el, p) {
+      el.querySelector('.drift-text').textContent = p.line;
+      el.querySelector('.drift-meta').textContent = p.title + ' · ' + p.author;
+      el.href = p.url;
+    };
+
+    /* 取池中下一条；若正好与这句当前所显相同（诗库小时池会绕回来），再取一条。 */
+    var pick = function (el) {
+      var prev = el.querySelector('.drift-text').textContent;
+      var p = pool[cursor++ % pool.length];
+      if (p.line === prev && pool.length > 1) { p = pool[cursor++ % pool.length]; }
+      return p;
+    };
+
+    for (var i2 = 0; i2 < count; i2++) {
+      var poem = pool[i2];
+      var link = document.createElement('a');
+      link.className = 'drift-line';
+      link.href = poem.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+
+      var txt = document.createElement('span');
+      txt.className = 'drift-text';
+      txt.textContent = poem.line;
+      var meta = document.createElement('span');
+      meta.className = 'drift-meta';
+      meta.textContent = poem.title + ' · ' + poem.author;
+      link.appendChild(txt);
+      link.appendChild(meta);
+
+      if (!calm) {
+        var lane = i2 % laneCount;
+        var slot = Math.floor(i2 / laneCount);
+        var durLane = laneDur[lane];
+        link.style.setProperty('--y', laneY[lane]);
+        link.style.setProperty('--dur', durLane + 's');
+        // 负延迟：一开场就在途中，不会全体从右边同时涌入
+        link.style.setProperty('--delay', (-(slot / perLane) * durLane).toFixed(2) + 's');
+
+        /* 走完一趟就换上一条没出现过的，整个会话不重样。
+           用 animationiteration（循环到点时触发），动画本身从不停下：
+           若改用 animationend + 手动重启，那段「移除动画→强制回流→重挂」
+           的延迟会让每趟都晚一点点，上百趟后相位累计偏移、同轨两句叠住。
+           换句子发生在画面外（那一瞬正在左端之外），看不见。 */
+        link.addEventListener('animationiteration', function () {
+          fill(this, pick(this));
+        });
+      }
+      frag.appendChild(link);
+    }
+    drift.appendChild(frag);
+
+    /* 触及诗句即整层暂停，移动的目标点不准。
+       事件由句子冒泡上来，所以容器即使设了 pointer-events:none 也收得到。 */
+    var mark = function (on) {
+      // ink-touch-poem-guard: touch hover must not freeze the poem stream.
+      if (on && window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+      if (on) { drift.setAttribute('data-paused', ''); }
+      else { drift.removeAttribute('data-paused'); }
+    };
+    drift.addEventListener('mouseover', function (e) {
+      if (e.target.closest && e.target.closest('.drift-line')) mark(true);
+    });
+    drift.addEventListener('mouseout', function (e) {
+      var to = e.relatedTarget;
+      if (!to || !to.closest || !to.closest('.drift-line')) mark(false);
+    });
+    drift.addEventListener('focusin', function () { mark(true); });
+    drift.addEventListener('focusout', function () { mark(false); });
+  }
+
+  /* ---------- 整节层叠的自适应闸门 ----------
+     内容高于视口的节不做 sticky：钉住会把下半截永久压掉、再也滚不出来。
+     按实测高度挂 .no-stack，高度一变就重判 —— 你以后往里填真内容，
+     它自己会退让，宁可少一次叠压，也不丢内容。 */
+  var layoutCache = null;   // 版式位置缓存，见 layoutOf
+
+  var stackGuard = function () {
+    var vh = window.innerHeight;
+    var fits = 0;
+    $$('.juan').forEach(function (sec) {
+      var tooTall = sec.scrollHeight > vh + 1;
+      sec.classList.toggle('no-stack', tooTall);
+      if (!tooTall) fits++;
+    });
+    layoutCache = null;     // 高度变了，版式位置作废
+    /* 只要还有能整页停下的节，就开启整页翻页。
+       超一屏的节不参与翻页 —— 滚到它里面时由 insideTall 放行原生滚动即可，
+       但不能因为它的存在把整站翻页一起关掉。
+       曾经的条件是「必须每节都装得下一屏」，往来加了四个互动模块变高之后，
+       正是它把整页翻页整个关掉了（滚轮退回原生滚动，一页一页的翻页消失）。 */
+    document.documentElement.classList.toggle('snap-on', fits >= 1);
+    if (typeof jumpToChapter === 'function' && !initialChapterTouched && location.hash) {
+      requestAnimationFrame(function () {
+        if (!initialChapterTouched && location.hash) jumpToChapter(location.hash);
+      });
+    }
+  };
+  stackGuard();
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(stackGuard); }
+  window.addEventListener('load', stackGuard);
+  var guardTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(guardTimer);
+    guardTimer = setTimeout(stackGuard, 150);
+  });
+  if ('ResizeObserver' in window) {
+    var contentGuardTimer;
+    var contentGuard = new ResizeObserver(function () {
+      clearTimeout(contentGuardTimer);
+      contentGuardTimer = setTimeout(stackGuard, 80);
+    });
+    $$('.juan > .wrap').forEach(function (wrap) { contentGuard.observe(wrap); });
+  }
+
+  /* ---------- 整页弹入的触发 ----------
+     滚动停稳（scrollend）后判定当前页，给它挂 .is-current 播放一次性弹入。
+     用 scrollend 而非滚动监听：前者每次滚动只触发一次，不是每帧。
+     向上滚时目标页同样会成为当前页并弹出，而刚离开那页摘掉类即恢复常态样貌 ——
+     所以上下两个方向都稳（若用滚动位置驱动动画，向上滚会倒放、页面当场消失）。 */
+  var pages = $$('.juan');
+  pages.forEach(function (page, index) { page.setAttribute('data-chapter', '第 ' + String(index + 1).padStart(2, '0') + ' 卷'); });
+  var lastPage = null, settleTimer = null;
+  var chapterLabel = $('#chapter-label');
+  var chapterPrev = $('#chapter-prev');
+  var chapterNext = $('#chapter-next');
+
+  /* 所有分隔条均不占文档高度，章节紧邻排列。
+     直接累加每节实际高度，避免为了测量而临时摘除 sticky，导致页面闪动。 */
+  var layoutOf = function () {
+    if (layoutCache) return layoutCache;
+    var els = $$('.hero, .juan');
+    var top = 0;
+    var list = els.map(function (el) {
+      var item = {
+        el: el,
+        top: top,
+        h: el.getBoundingClientRect().height,
+        hero: el.classList.contains('hero'),
+        tall: el.classList.contains('no-stack')
+      };
+      top += item.h;
+      return item;
+    });
+    layoutCache = list;
+    return list;
+  };
+
+  /* sticky 章节进入视口后，其 DOM 位置始终贴在顶部。原生锚点会误判
+     目标已在顶部，只更新地址栏却不滚动；导航须按章节的实际停靠点跳转。 */
+  var jumpToChapter = function (hash) {
+    layoutCache = null;
+    var id = hash.slice(1);
+    var entry = layoutOf().find(function (item) { return item.el.id === id; });
+    if (!entry) return false;
+    window.scrollTo({ top: entry.top, behavior: 'auto' });
+    return true;
+  };
+  $$('.nav a[href^="#"], .drawer a[href^="#"], .about-facts a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      var hash = link.getAttribute('href');
+      if (!jumpToChapter(hash)) return;
+      event.preventDefault();
+      if (location.hash !== hash) history.pushState(null, '', hash);
+      requestAnimationFrame(applyCurrent);
+    });
+  });
+  var initialChapterTouched = false;
+  ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(function (type) {
+    window.addEventListener(type, function () { initialChapterTouched = true; }, { once: true, passive: true });
+  });
+  window.addEventListener('load', function () {
+    if (!initialChapterTouched && location.hash) jumpToChapter(location.hash);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () {
+      if (initialChapterTouched || !location.hash) return;
+      stackGuard();
+      jumpToChapter(location.hash);
+      requestAnimationFrame(applyCurrent);
+    });
+  });
+  window.addEventListener('popstate', function () {
+    jumpToChapter(location.hash || '#top');
+    requestAnimationFrame(applyCurrent);
+  });
+
+  var applyCurrent = function () {
+    var y = window.scrollY + 12;
+    var best = null, chapterIndex = 0;
+    layoutOf().forEach(function (x) {
+      if (x.top <= y) { best = x.el; chapterIndex++; }
+    });
+    var title = best && !best.classList.contains('hero') ? best.querySelector('.juan-title').textContent : '开篇';
+    var chapterText = (chapterIndex === 1 ? '序' : String(chapterIndex - 1).padStart(2, '0')) + ' · ' + title;
+    if (chapterLabel && chapterLabel.textContent !== chapterText) chapterLabel.textContent = chapterText;
+    if (chapterPrev) chapterPrev.disabled = chapterIndex <= 1;
+    if (chapterNext) chapterNext.disabled = chapterIndex >= layoutOf().length;
+    navLinks.forEach(function (a) {
+      var on = best && a.getAttribute('href') === '#' + best.id;
+      a.classList.toggle('is-active', !!on);
+      if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+    });
+    if (best !== lastPage) {
+      pages.forEach(function (p) { p.classList.toggle('is-current', p === best); });
+      lastPage = best;
+    }
+  };
+
+  /* 停稳之后才判定。触控板是连续的惯性流，scrollend 会在每一次短暂停顿上触发，
+     若每次都判一次，弹入就被反复重播，看起来就是页面在抖。
+     故 scrollend 之后再等 90ms，确认滚动位置没变，才认这一次翻页。 */
+  var onSettle = function () {
+    var y = window.scrollY;
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(function () {
+      if (Math.abs(window.scrollY - y) < 1) applyCurrent();
+    }, 90);
+  };
+  if ('onscrollend' in window) { document.addEventListener('scrollend', onSettle); }
+  window.addEventListener('load', applyCurrent);
+  var scrollFrame = false;
+  window.addEventListener('scroll', function () {
+    if (scrollFrame) return;
+    scrollFrame = true;
+    requestAnimationFrame(function () { scrollFrame = false; applyCurrent(); });
+  }, { passive: true });
+
+  /* ---------- 整页翻页 ----------
+     为什么不用 CSS scroll-snap：mandatory + scroll-snap-stop:always 会无视连续小幅滚动
+     （实测触控板分 20 次共推 600px，页面一动不动，每步都被拉回原处）。
+     这里自己接管滚轮：累计到阈值就整页翻一次，连续输入与离散滚轮都响应，
+     所有章节使用同一套翻页手势；超一屏的节增加阅读停靠点，确保内容完整。 */
+  if (document.documentElement.classList.contains('snap-on')) {
+    var lock = false, acc = 0, lastWheelAt = 0, lastWheelDir = 0, armed = true;
+    var stops = function (readingStops) {
+      var out = [];
+      /* 每一节都算停靠点，包括超一屏的那些。
+         曾经把超一屏的节排除在外，结果翻页从它上一节直接跳到它下一节 ——
+         往来（含四个互动模块）整节被跳过、根本进不去；
+         现在落它的顶部，再逐屏阅读，最后才进入下一章。 */
+      layoutOf().forEach(function (x) {
+        out.push(x.top);
+        // Keep intermediate views for long chapters as well as the final view.
+        if (readingStops && x.tall && x.h > window.innerHeight + 4) {
+          var end = x.top + x.h - window.innerHeight;
+          var step = Math.max(1, window.innerHeight - 80);
+          for (var p = x.top + step; p < end - 4; p += step) out.push(p);
+          out.push(end);
+        }
+      });
+      /* 末尾补一个「文档底部」：否则最后一节之后的页脚永远滚不到
+         （滚轮已被接管，而 turn() 在最后一个停靠点上不再前进）。 */
+      var bottom = document.documentElement.scrollHeight - window.innerHeight;
+      if (bottom > out[out.length - 1] + 4) out.push(bottom);
+      return out;
+    };
+    var jump = function (top) {
+      lock = true;
+      window.scrollTo({ top: top, behavior: reduce.matches ? 'auto' : 'smooth' });
+      setTimeout(function () { lock = false; }, reduce.matches ? 60 : 620);
+    };
+    /* 按方向找下一个停靠点，不是找最近的。
+       用「就近」时，若当前位置离下一个停靠点比离上一个更远，会直接跳过它。 */
+    var turn = function (dir, chapterOnly) {
+      if (lock) return;
+      var ys = stops(!chapterOnly), y = window.scrollY, t = null;
+      if (dir > 0) { ys.forEach(function (p) { if (t === null && p > y + 4) t = p; }); }
+      else { ys.forEach(function (p) { if (p < y - 4) t = p; }); }
+      if (t === null) return;
+      jump(t);
+    };
+    window.addEventListener('wheel', function (e) {
+      if (e.ctrlKey || e.metaKey) return;        // 手势缩放，不拦
+      if ($('#cc-dialog').open || $('#poem-dialog').open || (drawer && drawer.getAttribute('data-open') === 'true')) return;
+      if (!e.deltaY || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      var now = Date.now();
+      /* 一次滑动会连着送来几十个 wheel 事件（触控板的惯性余波）。
+         只放一个固定时长的锁不够：惯性还没走完锁就到期，剩下的余波会再翻一页 ——
+         表现为「一次滑动翻两页」，中间那一页被整个翻过去（往来就是这么被跳过的）。
+         所以：手势静默超过 300ms 才算新的一次滑动，同一次滑动只翻一页。 */
+      var delta = e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? window.innerHeight : 1);
+      var dir = delta > 0 ? 1 : -1;
+      if (now - lastWheelAt > 300 || dir !== lastWheelDir) { acc = 0; armed = true; }
+      lastWheelAt = now;
+      lastWheelDir = dir;
+      e.preventDefault();
+      if (lock || !armed) return;
+      acc += delta;
+      if (Math.abs(acc) > 36) { armed = false; turn(acc > 0 ? 1 : -1); acc = 0; }
+    }, { passive: false });
+    if (chapterPrev) chapterPrev.addEventListener('click', function () { turn(-1, true); });
+    if (chapterNext) chapterNext.addEventListener('click', function () { turn(1, true); });
+    document.addEventListener('keydown', function (e) {
+      var t = e.target;
+      if ($('#cc-dialog').open || $('#poem-dialog').open || (drawer && drawer.getAttribute('data-open') === 'true')) return;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+      var ys;
+      if (e.key === 'PageDown') { e.preventDefault(); turn(1); }
+      else if (e.key === 'PageUp') { e.preventDefault(); turn(-1); }
+      else if (e.key === 'Home') { e.preventDefault(); jump(0); }
+      else if (e.key === 'End') { e.preventDefault(); ys = stops(); jump(ys[ys.length - 1]); }
+    });
+  }
+
+  /* ---------- 联络：点卡片弹出小窗 ----------
+     邮件与 QQ 直接给出；微信与电话要「申请—同意」。
+     刻意不在页面里放口令：静态页里的密码看源码就能读出来，是假锁。
+     真正的关卡是「你先发信、我回信告知」——这一步只有真人才办得到。 */
+  var ccDialog = $('#cc-dialog');
+  if (ccDialog && ccDialog.showModal) {
+    var ccMark = $('#cc-dialog-mark'), ccKind = $('#cc-dialog-kind'), ccBody = $('#cc-dialog-body');
+    var CC_OWNER = '3171751429@qq.com';
+    var openCard = function (btn) {
+      var kind = btn.getAttribute('data-kind') || '';
+      var mk = btn.querySelector('.ccard-mark');
+      ccMark.innerHTML = mk ? mk.innerHTML : '';
+      ccKind.textContent = kind;
+      if (btn.hasAttribute('data-locked')) {
+        /* 不用 mailto：那会去唤起本地邮件客户端。改用各家邮箱的网页版写信页。
+           地址同时做成可复制 —— 有的邮箱不支持预填收件人，复制了粘贴也能用。 */
+        var su = encodeURIComponent('申请查看' + kind);
+        var bd = encodeURIComponent('你好，我想申请查看你的' + kind + '。');
+        ccBody.innerHTML = '<p class="cc-locked">此项需申请，我同意之后才告知。</p>'
+          + '<p class="cc-owner"><span class="cc-value">' + CC_OWNER + '</span>'
+          + '<button class="cc-copy" type="button" data-copy="' + CC_OWNER + '">复制</button></p>'
+          + '<p class="cc-hint">用下面任一邮箱写信给我，说明来意即可；我回信，就算同意了。</p>'
+          + '<ul class="cc-mails">'
+          + '<li><a target="_blank" rel="noopener noreferrer" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=' + CC_OWNER + '">QQ 邮箱</a></li>'
+          + '<li><a target="_blank" rel="noopener noreferrer" href="https://mail.163.com/">163 邮箱</a></li>'
+          + '<li><a target="_blank" rel="noopener noreferrer" href="https://outlook.live.com/mail/0/deeplink/compose?to=' + CC_OWNER + '&subject=' + su + '&body=' + bd + '">Outlook</a></li>'
+          + '<li><a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=' + CC_OWNER + '&su=' + su + '&body=' + bd + '">Gmail</a></li>'
+          + '</ul>';
+      } else {
+        var val = btn.getAttribute('data-value') || '';
+        ccBody.innerHTML = '<p class="cc-value">' + val + '</p>'
+          + '<button class="cc-copy" type="button">复制</button>';
+      }
+      ccDialog.showModal();
+    };
+    $$('.ccard').forEach(function (b) {
+      b.addEventListener('click', function () { openCard(b); });
+    });
+    ccDialog.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t.closest && t.closest('.cc-copy')) {
+        var txt = t.getAttribute('data-copy') || (ccBody.querySelector('.cc-value') || {}).textContent || '';
+        var done = function () {
+          t.textContent = '已复制';
+          setTimeout(function () { t.textContent = '复制'; }, 1500);
+        };
+        var fail = function () {
+          t.textContent = '复制失败，请手动选择';
+          setTimeout(function () { t.textContent = '复制'; }, 2000);
+        };
+        var fallbackCopy = function () {
+          var ta = document.createElement('textarea');
+          ta.value = txt; document.body.appendChild(ta); ta.select();
+          var copied = false;
+          try { copied = document.execCommand('copy'); } catch (err) {}
+          ta.remove();
+          if (copied) done(); else fail();
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(txt).then(done, fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+        return;
+      }
+      if (t === ccDialog || (t.closest && t.closest('#cc-dialog-close'))) { ccDialog.close(); }
+    });
+  }
+
+  /* ---------- 兜底：入场动画若没能跑完（后台标签页被节流、动画被打断），
+     把首屏各元素直接落到终态。宁可少一次淡入，也不能让首屏停在空白。 ---------- */
+  setTimeout(function () {
+    $$('.hero-inner > *').forEach(function (el) {
+      el.style.animation = 'none';
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }, 2500);
+})();
+</script>
+  <script src="assets/books.js?v=20261009-04"></script>
+  <script src="assets/travels.js?v=20261012-02" defer></script>
+</body>
+</html>

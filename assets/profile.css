@@ -1,0 +1,94 @@
+/* 关于我入口与独立自我介绍页。 */
+.about-intro-entry{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.2rem;padding:1rem 0 .45rem;border-top:1px solid var(--rule);color:var(--ink);text-decoration:none}
+.about-intro-entry>span:first-child{display:grid;gap:.25rem}
+.about-intro-entry strong{font:400 1.08rem/1.6 var(--font-head);letter-spacing:.1em}
+.about-intro-entry small{font-size:.66rem;color:var(--ink-3);letter-spacing:.05em}
+.about-intro-open{display:flex;align-items:center;gap:1rem;color:var(--zhu-deep);font-size:.75rem;white-space:nowrap}
+.about-intro-entry:hover strong{color:var(--zhu-deep)}
+.about-intro-entry:focus-visible,.profile-page a:focus-visible{outline:2px solid var(--zhu-deep);outline-offset:5px}
+.profile-page{--profile-green:#36554a;background:#f5f0e6;color:var(--ink)}
+.profile-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:78rem;margin:auto;padding:1.1rem clamp(1.25rem,4vw,3rem);border-bottom:1px solid var(--rule)}
+.profile-bar a{text-decoration:none;color:var(--ink-2);font-size:.76rem}
+.profile-bar .profile-brand{font-size:1.35rem;letter-spacing:.17em;color:var(--ink)}
+.profile-brand small{font-size:.7rem;color:var(--ink-3);margin-left:.6rem;letter-spacing:.08em}
+.profile-bar>a:last-child{display:flex;align-items:center;gap:1rem;min-height:2rem}
+.profile-main{max-width:70rem;margin:auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.profile-hero{display:grid;grid-template-columns:minmax(0,1fr) 14rem;gap:4rem;align-items:center;padding:4rem 0 3rem}
+.profile-kicker{font-size:.7rem;letter-spacing:.13em;color:var(--zhu-deep);line-height:1.8;margin:0 0 .8rem}
+.profile-hero h1{font:400 clamp(3.4rem,6vw,5.2rem)/1.3 var(--font-head);letter-spacing:.08em;margin:.35rem 0 1rem}
+.profile-tagline{font:400 clamp(1.2rem,2vw,1.5rem)/1.8 var(--font-head);letter-spacing:.08em;color:var(--profile-green);margin:0 0 1rem}
+.profile-hero-note{font-size:.87rem;line-height:2.1;color:var(--ink-3);margin:0}
+.profile-portrait{position:relative;margin:0;padding:.5rem;border:1px solid #b7c4b6;background:#f9f7ef}
+.profile-portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.profile-nav{position:sticky;top:0;z-index:5;display:flex;gap:2.2rem;padding:.65rem 0;background:rgba(245,240,230,.98);border-block:1px solid var(--rule)}
+.profile-nav a{display:flex;align-items:center;min-height:2.2rem;font-size:.78rem;color:var(--ink-2);text-decoration:none}
+.profile-nav a:hover{color:var(--zhu-deep)}
+.personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;padding:2rem 0 2.5rem;scroll-margin-top:4.5rem}
+.personality-card{position:relative;min-width:0;min-height:11rem;padding:1.6rem 1.8rem;border:1px solid var(--rule);background:rgba(255,255,255,.22)}
+.personality-card:after{content:'';position:absolute;top:-1px;left:1.8rem;width:2.5rem;height:2px;background:var(--profile-green)}
+.personality-card header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.personality-index{font-family:Georgia,serif;font-size:.63rem;letter-spacing:.14em;color:var(--ink-3)}
+.personality-card h2{font:400 1.35rem/1.6 var(--font-head);letter-spacing:.08em;margin:0}
+.personality-value{font:400 clamp(1.8rem,3vw,2.4rem)/1.5 var(--font-head);color:var(--profile-green);margin:1.2rem 0 .1rem;overflow-wrap:anywhere}
+.is-unfilled .personality-value{font-size:1.2rem;color:var(--ink-3);letter-spacing:.12em}
+.personality-note{font-size:.85rem;color:var(--ink-2);line-height:2;margin:.8rem 0 0;white-space:pre-line}
+.personality-details{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:3rem;border-top:1px solid var(--rule);padding:2.5rem 0;scroll-margin-top:4.5rem}
+.personality-details h2{font:400 1.6rem/1.6 var(--font-head);letter-spacing:.08em;margin:0}
+.personality-preferences{display:grid;grid-template-columns:1fr 1fr;column-gap:2.5rem;margin:0}
+.personality-preferences>div{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:.8rem;align-items:baseline;padding:.75rem 0;border-bottom:1px solid var(--rule-soft)}
+.personality-preferences dt{font-size:.78rem;color:var(--ink-3)}
+.personality-preferences dd{font-size:.85rem;color:var(--ink-2);margin:0;overflow-wrap:anywhere}
+.personality-blank{color:var(--ink-3)}
+.personality-narrative{padding:.2rem 0;min-height:8rem}
+.personality-narrative p{font-size:.9rem;line-height:2.15;color:var(--ink-2);margin:0 0 1rem;white-space:pre-line}
+.personality-narrative .narrative-empty{font:400 1.2rem/1.9 var(--font-head);color:var(--profile-green);margin-bottom:.6rem}
+.personality-narrative .narrative-hint{font-size:.77rem;color:var(--ink-3)}
+.profile-footer{max-width:70rem;margin:0 auto;padding:1.25rem clamp(1.25rem,4vw,3rem) 2rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem;font-size:.69rem;color:var(--ink-3)}
+.profile-footer a{color:inherit;text-decoration:none}
+.profile-hero{padding-top:3rem;padding-bottom:2.5rem}
+.profile-portrait{padding:.55rem;box-shadow:0 14px 28px -24px rgba(44,24,16,.45)}
+.personality-card{min-height:12rem;overflow:hidden;background:#eee7d9;border-color:#d7cbb6;padding:1.8rem 2rem}
+.personality-card header,.personality-card .personality-value,.personality-card .personality-note{position:relative;z-index:1}
+.personality-card:first-child:before{content:'';position:absolute;width:9rem;height:9rem;right:-2.5rem;bottom:-4rem;border:1px solid rgba(122,101,69,.2);border-radius:50%;box-shadow:0 0 0 1.5rem rgba(122,101,69,.035),0 0 0 3rem rgba(122,101,69,.025)}
+.personality-card:last-child{background:#304d43;color:#f5f0e6;border-color:#304d43}
+.personality-card:last-child:after{background:#c4cbb4}
+.personality-card:last-child .personality-index,.personality-card:last-child .personality-value,.personality-card:last-child .personality-note{color:#e0e5d6}
+.personality-card:last-child:before{content:'MBTI';position:absolute;right:1rem;bottom:-1.7rem;font:400 5.8rem/1.2 Georgia,serif;letter-spacing:-.05em;color:rgba(244,240,229,.055);pointer-events:none}
+.personality-card h2{font-size:1.5rem}
+.is-unfilled .personality-value{margin-top:1.5rem}
+.personality-field-groups{min-width:0}
+.personality-field-group+.personality-field-group{margin-top:1.6rem}
+.personality-field-group h3{font:400 .95rem/1.8 var(--font-head);letter-spacing:.06em;color:var(--profile-green);margin:0 0 .4rem}
+.personality-preferences>div{padding:.65rem 0}
+.personality-preferences dt{font-size:.75rem}
+.profile-connections{padding:2.7rem 0 3rem;border-top:1px solid var(--rule);scroll-margin-top:4.5rem}
+.profile-section-heading{display:flex;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:1.6rem}
+.profile-section-heading h2{font:400 1.7rem/1.6 var(--font-head);letter-spacing:.08em;margin:0}
+.profile-section-heading>p{font-size:.75rem;color:var(--ink-3);margin:0 0 .3rem}
+.profile-link-group+.profile-link-group{margin-top:2.3rem}
+.profile-link-group>h3{display:flex;align-items:center;gap:.9rem;font:400 1.05rem/1.8 var(--font-head);letter-spacing:.06em;margin:0 0 .7rem}
+.profile-link-group>h3>span{font:400 .65rem/1.5 Georgia,serif;color:var(--zhu-deep);letter-spacing:.1em}
+.profile-link-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 1.8rem}
+.profile-link-grid>li{min-width:0;border-top:1px solid var(--rule);position:relative;padding:.7rem 0}
+.profile-destination{display:flex;gap:.9rem;align-items:center;min-height:5rem;text-decoration:none;padding:.35rem;transition:background .18s ease}
+.profile-destination:hover{background:rgba(255,255,255,.5)}
+.profile-destination>span:last-child{flex:none;color:var(--profile-green);font-size:.85rem;margin-left:auto}
+.profile-destination-image,.profile-destination-letter{width:3.6rem;height:3.6rem;flex:none;overflow:hidden;background:#e8e1d2;display:grid;place-items:center}
+.profile-destination-image img{width:100%;height:100%;object-fit:cover}
+.profile-destination-image.is-book{background:transparent}
+.profile-destination-image.is-book img{object-fit:contain}
+.profile-destination-letter{font:400 1.8rem/1 var(--font-head);color:var(--profile-green)}
+.profile-destination-copy{min-width:0;display:grid;gap:.3rem}
+.profile-destination strong{font:400 1rem/1.6 var(--font-head);letter-spacing:.03em;color:var(--ink)}
+.profile-destination small{font-size:.67rem;line-height:1.8;color:var(--ink-3)}
+.profile-destination:hover strong{color:var(--zhu-deep)}
+.profile-secondary-link{display:flex;align-items:center;gap:.6rem;width:fit-content;margin-left:4.85rem;min-height:1.8rem;font-size:.65rem;color:var(--profile-green);text-decoration:none;border-bottom:1px solid #c7ccbc}
+.profile-secondary-link:hover{color:var(--zhu-deep)}
+.personality-narrative{border-left:2px solid #b9c2af;padding:1rem 0 1rem 1.6rem;min-height:10rem;background:linear-gradient(90deg,rgba(255,255,255,.24),transparent)}
+@media(max-width:1050px){.profile-link-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1.5rem}}
+@media(max-width:680px){.profile-nav{gap:.5rem}.profile-nav a{font-size:.69rem;white-space:nowrap}.personality-card{padding:1.25rem;min-height:11rem}.personality-card h2{font-size:1.2rem}.personality-card:last-child:before{font-size:4rem;bottom:-1rem;right:.2rem}.personality-field-group+.personality-field-group{margin-top:1.5rem}.personality-field-group h3{font-size:.9rem}.profile-section-heading{display:block;margin-bottom:1.4rem}.profile-section-heading h2{font-size:1.45rem}.profile-section-heading>p{margin-top:.6rem;font-size:.72rem}.profile-connections{padding:2rem 0}.profile-link-grid{column-gap:1rem}.profile-destination{gap:.6rem;align-items:start;min-height:6rem;padding:.4rem 0}.profile-destination-image,.profile-destination-letter{width:2.7rem;height:2.7rem}.profile-destination strong{font-size:.9rem}.profile-destination small{font-size:.65rem}.profile-destination>span:last-child{display:none}.profile-secondary-link{margin-left:3.3rem;font-size:.62rem}.profile-link-group>h3{font-size:1rem}.personality-narrative{padding:.8rem 0 .8rem 1rem;min-height:9rem}}
+@media(max-width:420px){.profile-link-grid{grid-template-columns:1fr}.profile-destination{align-items:center;min-height:5.5rem;gap:.9rem}.profile-destination-image,.profile-destination-letter{width:3.5rem;height:3.5rem}.profile-destination>span:last-child{display:block}.profile-destination strong{font-size:1rem}.profile-destination small{font-size:.71rem}.profile-secondary-link{margin-left:4.4rem;font-size:.68rem}.profile-link-group+.profile-link-group{margin-top:1.6rem}}
+@media(prefers-reduced-motion:reduce){.profile-destination{transition:none}}
+@media(max-width:900px){.profile-hero{gap:2rem;grid-template-columns:1fr 12rem}.personality-details{grid-template-columns:9rem 1fr;gap:2rem}.personality-preferences{column-gap:1.5rem}.personality-preferences>div{grid-template-columns:1fr;gap:.2rem}}
+@media(max-width:680px){.profile-hero{padding:2.5rem 0 2rem;grid-template-columns:minmax(0,1fr) 7rem;gap:1rem}.profile-hero h1{font-size:2.8rem;letter-spacing:.03em}.profile-tagline{font-size:1.15rem;letter-spacing:.03em}.profile-hero-note{font-size:.76rem}.profile-portrait{padding:.3rem}.profile-kicker{font-size:.63rem}.profile-nav{justify-content:space-between;gap:.6rem}.profile-nav a{font-size:.72rem}.personality-grid{gap:1rem;padding:1.5rem 0 2rem}.personality-card{min-height:10rem;padding:1.2rem}.personality-card:after{left:1.2rem}.personality-card header{align-items:start;flex-direction:column;gap:.7rem}.personality-index{font-size:.58rem}.personality-card h2{font-size:1.2rem}.is-unfilled .personality-value{font-size:1rem;margin-top:1rem}.personality-details{grid-template-columns:1fr;gap:1.2rem;padding:2rem 0}.personality-details>header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}.personality-details .profile-kicker{order:2;margin:0;font-size:.6rem}.personality-details h2{font-size:1.45rem}.personality-preferences{column-gap:1.5rem}.personality-preferences>div{grid-template-columns:1fr;gap:.2rem;padding:.65rem 0}.personality-preferences dt{font-size:.74rem}.personality-preferences dd{font-size:.8rem}.personality-narrative{min-height:6rem}.profile-footer{font-size:.62rem}}
+@media(max-width:380px){.about-intro-open{font-size:.66rem;gap:.5rem}.about-intro-entry small{font-size:.6rem}.profile-hero{grid-template-columns:1fr 5.5rem}.profile-hero h1{font-size:2.4rem}.profile-bar .profile-brand{font-size:1.15rem}.profile-brand small{display:none}.profile-bar>a:last-child{font-size:.68rem}.personality-card{padding:1rem}.personality-card:after{left:1rem}}

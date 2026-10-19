@@ -1,0 +1,66 @@
+/* 游戏图鉴：真实作品图像作为主视觉，纸墨负责排版，不与封面争色。 */
+.hero-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:center;align-items:stretch;justify-items:stretch;gap:1rem;padding:2.1rem clamp(1.5rem,4vw,3.6rem);background:linear-gradient(135deg,#ffffff08,#ffffff00),repeating-linear-gradient(90deg,transparent 0 49px,#ffffff08 50px)}
+.hero-cover{position:relative;width:100%;min-width:0;height:11rem;margin:0;overflow:hidden;border:1px solid #d7c49b70;background:#284448;box-shadow:0 12px 23px #0b242971}
+.hero-cover:nth-child(1){transform:translateY(1.1rem) rotate(-3deg)}
+.hero-cover:nth-child(2){transform:translateY(-.5rem) rotate(2deg)}
+.hero-cover:nth-child(3){transform:translateY(.35rem) rotate(2deg)}
+.hero-cover:nth-child(4){transform:translateY(-1rem) rotate(-2deg)}
+.hero-cover-art{display:block;width:100%;height:100%}
+.hero-cover-art img{width:100%;height:100%;object-fit:cover}
+.hero-cover-art.art-kind-icon img{object-fit:contain;padding:1.25rem;background:#1e3538}
+.hero-cover figcaption{position:absolute;right:0;bottom:0;left:0;padding:.75rem .7rem .38rem;background:linear-gradient(transparent,#102b2fdc);font-size:.7rem;color:#fff4df;text-align:right}
+.art-fallback{display:grid;place-items:center;width:100%;height:100%;font-family:'ZCOOL XiaoWei',serif;font-size:2.6rem;color:#55766b;background:radial-gradient(circle at 30% 25%,#eaf0e8,#d9e2d8)}
+.hero-cover .art-fallback,.detail-cover .art-fallback{color:#e6c996;background:radial-gradient(circle,#385c59,#1b3638)}
+.hero-cover-art,.game-card-art,.detail-cover{position:relative}
+.art-loaded .art-fallback{visibility:hidden}
+.hero-cover-art img,.game-card-art img,.detail-cover img{display:block;position:absolute;inset:0;opacity:0}
+.art-loaded img{opacity:1}
+.platform-tabs{gap:.7rem;margin-top:1.35rem}
+.platform-tabs button{min-height:6.7rem;background:#f8f7f0;border-color:#c6cabe}
+.platform-tabs button[aria-selected=true]{background:linear-gradient(110deg,#21433f,#315c52)}
+.platform-tabs strong{font-size:1.8rem}
+.tools{margin-top:1rem}
+.game-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.72rem}
+.game-card{min-height:10.8rem;align-items:stretch;border-color:#ced5cb;background:#fbfaf6;box-shadow:0 8px 19px -20px #23483a}
+.game-card:before{width:3px}
+.game-card-number{top:.65rem;right:.75rem;z-index:1}
+.game-card-art{display:block;flex:0 0 7.2rem;align-self:stretch;min-height:10.8rem;margin:0;overflow:hidden;border-right:1px solid #d4d9d0;background:#e5eae2}
+.game-card-art img{width:100%;height:100%;object-fit:cover}
+.game-card-art.art-kind-icon{display:grid;place-items:center;padding:.9rem;background:linear-gradient(155deg,#e9eee7,#d8e4da)}
+.game-card-art.art-kind-icon img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:18%;box-shadow:0 8px 16px #142c2932}
+.game-card-art.art-kind-icon img{top:50%;left:.9rem;width:calc(100% - 1.8rem);transform:translateY(-50%)}
+.game-card-art.art-kind-logo{display:grid;place-items:center;padding:.65rem;background:#253e41}
+.game-card-art.art-kind-logo img{width:100%;height:100%;object-fit:contain}
+.game-card-art.art-kind-type .art-fallback{background:linear-gradient(145deg,#e6d9c5,#efe7dc);color:#876a4b}
+.game-card-body{padding:1.25rem 1.05rem .8rem}
+.game-card strong{margin:.35rem 0 .42rem;font-size:1.27rem;color:#213e35}
+.game-card-meta{color:#8a6753}
+.game-card-summary{font-size:.71rem;line-height:1.65}
+.game-card-open{padding-top:.55rem;color:#8a5743}
+.game-card-open:after{content:'  ›';font-size:1rem;vertical-align:-.06em}
+.detail-emblem{padding:1.2rem;background:radial-gradient(circle at 50% 45%,#416761,#1d393b)}
+.detail-emblem .detail-cover{display:block;width:min(100%,12rem);height:17rem;aspect-ratio:auto;overflow:hidden;border:1px solid #dbccab7d;border-radius:0;box-shadow:0 15px 32px #10262691;transform:none}
+.detail-cover img{width:100%;height:100%;object-fit:cover}
+.detail-emblem .detail-cover.art-kind-icon{display:grid;place-items:center;width:11rem;height:11rem;padding:1rem;border-radius:1.3rem;background:#1e3538}
+.detail-cover.art-kind-icon img{width:100%;height:100%;object-fit:cover;border-radius:17%}
+.detail-cover.art-kind-icon img{top:1rem;left:1rem;width:calc(100% - 2rem);height:calc(100% - 2rem)}
+.detail-emblem .detail-cover.art-kind-logo{display:grid;place-items:center;height:11rem;padding:1rem;background:#253e41}
+.detail-cover.art-kind-logo img{object-fit:contain}
+.detail-emblem .detail-cover .art-fallback{display:grid;place-items:center;width:100%;height:100%;border:0;border-radius:0;box-shadow:none;font-size:5rem;transform:none}
+@media(max-width:1050px){.game-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-cover{height:9rem}}
+@media(max-width:700px){.hero-collage{grid-template-columns:repeat(4,minmax(0,1fr));gap:.48rem;min-height:8.8rem;padding:1rem}.hero-cover,.hero-cover:nth-child(n){height:6.5rem;transform:none}.hero-cover-art.art-kind-icon img{padding:.45rem}.hero-cover figcaption{font-size:.55rem;padding:.8rem .2rem .2rem}.detail-cover{height:12rem}.detail-cover.art-kind-icon{width:5.5rem;height:5.5rem;padding:.4rem;border-radius:.8rem}}
+@media(max-width:500px){.game-grid{grid-template-columns:1fr}.game-card{min-height:9.6rem}.game-card-art{flex-basis:6.2rem;min-height:9.6rem}.game-card-body{padding:1.05rem .85rem .6rem}.game-card strong{font-size:1.22rem}.game-card-summary{-webkit-line-clamp:2}.hero-cover{height:6rem}.detail-emblem{display:none}}
+@media(max-width:360px){.game-card-art{flex-basis:5.6rem}.hero-cover figcaption{display:none}}
+@media(max-width:500px){.catalog-hero h1{font-size:clamp(2.5rem,12vw,2.9rem);letter-spacing:.03em}.detail-cover.art-kind-icon img{top:.4rem;left:.4rem;width:calc(100% - .8rem);height:calc(100% - .8rem)}}
+@media(prefers-reduced-motion:reduce){.hero-cover,.hero-cover:nth-child(n){transform:none}}
+/* 方形应用图标与横向标识各用适合自己的画幅，避免缩在高大的空框里。 */
+.hero-cover-art.art-kind-icon img{object-fit:cover;padding:0}
+.game-card-art.art-kind-icon{align-self:center;flex:0 0 6rem;width:6rem;height:6rem;min-height:0;padding:0;margin-left:1rem;border:0;border-radius:18%;background:none}
+.game-card-art.art-kind-icon img{inset:0;width:100%;height:100%;aspect-ratio:1;object-fit:cover;transform:none;border-radius:inherit;box-shadow:none}
+.game-card-art.art-kind-logo{align-self:center;flex:0 0 7.2rem;width:7.2rem;height:4.5rem;min-height:0;margin-left:.8rem;padding:.35rem;border:0}
+.game-card-art.art-kind-logo img{inset:.35rem;width:calc(100% - .7rem);height:calc(100% - .7rem);object-fit:contain}
+.detail-emblem .detail-cover.art-kind-icon{padding:0;overflow:hidden}
+.detail-cover.art-kind-icon img{inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.detail-emblem .detail-cover.art-kind-logo{height:auto;aspect-ratio:16/10;padding:.6rem}
+.detail-cover.art-kind-logo img{inset:.6rem;width:calc(100% - 1.2rem);height:calc(100% - 1.2rem);object-fit:contain}
+@media(max-width:500px){.game-card-art.art-kind-icon{flex-basis:5.5rem;width:5.5rem;height:5.5rem;margin-left:.8rem}.game-card-art.art-kind-logo{flex-basis:6rem;width:6rem;height:4rem;margin-left:.65rem}}

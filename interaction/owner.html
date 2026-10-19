@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e6"><title>站主信箱 · Cheney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261009-22"><link rel="stylesheet" href="../assets/interaction.css?v=20261009-02"><link rel="stylesheet" href="../assets/owner-page.css?v=20261009-01">
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-atmosphere.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-chapters.css?v=20261019-review-02">
+<script src="../assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="../assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="../assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="../assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+<body class="interaction-page owner-page" data-ink-page="owner">
+  <a class="skip" href="#owner-main">跳到信箱</a>
+  <header class="interaction-bar owner-bar"><a href="../index.html#links" class="interaction-brand">Cheney <small>站主信箱</small></a><a href="../index.html#links" class="interaction-back">返回网站</a></header>
+  <main id="owner-main" class="interaction-main">
+    <aside class="owner-cover" aria-label="尺素信箱卷首">
+      <div class="owner-cover-top"><span>往来 · 私卷</span><span>CHENEY / LETTERS</span></div>
+      <div class="owner-cover-center"><p class="owner-cover-eyebrow">留一方纸，等一封信</p><div class="owner-cover-title" aria-hidden="true">尺素</div><p class="owner-cover-line">文字往来，见字如面。<br>写给我的话，都在这里妥善收好。</p></div>
+      <div class="owner-cover-bottom"><span>私密来信 · 公开留言</span><span class="owner-seal" aria-hidden="true">信</span></div>
+    </aside>
+    <div class="owner-workspace">
+      <nav class="interaction-crumb" aria-label="面包屑"><a href="../index.html#links">互动</a><span aria-hidden="true">／</span><span>站主信箱</span></nav>
+      <header class="owner-heading"><p class="interaction-index">站主专用 · LETTERS</p><h1>尺素信箱</h1><p>私密来信仅你可阅，公开留言也可在此集中查看。</p></header>
+      <section class="owner-panel" aria-labelledby="owner-heading-title">
+        <div class="owner-panel-label"><span>壹</span><span>开卷验信</span></div>
+        <h2 id="owner-heading-title">验证站主身份</h2>
+        <p id="owner-mode" class="interaction-feed-note">正在检查信箱状态……</p>
+        <form id="owner-form" hidden>
+          <label class="owner-field"><span>站主密钥</span><input name="password" type="password" autocomplete="current-password" minlength="12" required placeholder="请输入你的站主密钥"></label>
+          <div class="owner-actions"><button type="submit" id="owner-submit">打开信箱</button></div>
+        </form>
+        <p id="owner-status" class="interaction-status" role="status" aria-live="polite"></p>
+      </section>
+      <section id="owner-inbox" hidden aria-labelledby="owner-inbox-heading">
+        <div class="owner-inbox-head"><div><p class="interaction-index">阅信 · 收存往来</p><h2 id="owner-inbox-heading">来信与留言</h2></div><span>可按栏目翻阅</span></div>
+        <nav class="interaction-switch" aria-label="信箱分类">
+          <button type="button" data-filter="private">私密尺素</button><button type="button" data-filter="wall">题壁</button><button type="button" data-filter="letter">公开尺素</button><button type="button" data-filter="ally">结盟</button><button type="button" data-filter="featured">题跋</button><button type="button" data-filter="anime">观影讨论</button>
+        </nav>
+        <div id="owner-list" class="owner-list"></div>
+      </section>
+      <div class="owner-next"><span>在本机，也可继续整理你的求学行旅。</span><a href="../journey/edit.html" target="_blank" rel="noopener noreferrer">前往行旅编辑</a></div>
+      <footer class="interaction-footer"><span>私密尺素只在此处呈现</span><a href="../index.html#links">回到互动总览</a></footer>
+    </div>
+  </main>
+  <script src="../assets/anime-catalog-data.js?v=3" defer></script><script src="../assets/owner-inbox.js?v=20261010-02" defer></script>
+</body>
+</html>

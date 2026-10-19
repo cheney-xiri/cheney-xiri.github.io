@@ -1,0 +1,118 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-10-18",
+  "images": [
+    {
+      "key": "writing",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. A contemporary writer’s desk beside an open window: a modern fountain pen laid diagonally across an open unmarked notebook, one loose sheet, bamboo shadows. Writing and revision, not ancient calligraphy. Cropped close composition, objects on right two thirds.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-25804a7d-eab7-47a4-9cc3-cc65388dc085.png",
+      "file": "assets/ink/subsections/writing-v1.png",
+      "web": "assets/ink/subsections/writing-v1.webp"
+    },
+    {
+      "key": "poetry",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. A small solitary sailboat beneath a pale moon on a sweeping ink river, distant blue-green cliffs, a plum branch enters the upper left, expressive brush strokes and expansive space. Poetry and poetic imagination.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-90922e71-1fa9-48a7-9358-4654354a6341.png",
+      "file": "assets/ink/subsections/poetry-v1.png",
+      "web": "assets/ink/subsections/poetry-v1.webp"
+    },
+    {
+      "key": "go",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. Close still life of two open wooden Go stone bowls, black stones in one and white stones in the other, a few loose stones on linen, branching pine shadows. No board or grid whatsoever: atmospheric editorial artwork only, never a teaching diagram.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-3cb5cffa-999b-4ebc-9023-8ccc7c847d12.png",
+      "file": "assets/ink/subsections/go-v1.png",
+      "web": "assets/ink/subsections/go-v1.webp"
+    },
+    {
+      "key": "dizi",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. A single Chinese transverse bamboo dizi flute with red binding and tassel, resting diagonally across a dark rock beside fresh bamboo leaves and softly flowing water. No people, realistic instrument proportions, six finger holes in a row, poetic ink still life.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-5cbc8f4d-90f9-4987-83ff-cd2304e630fa.png",
+      "file": "assets/ink/subsections/dizi-v1.png",
+      "web": "assets/ink/subsections/dizi-v1.webp"
+    },
+    {
+      "key": "guitar",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. One recognizable six-string acoustic guitar leaning beside a contemporary window, warm honey wood resonating against quiet teal shadows, fine strings and restrained flowing ink lines suggesting sound. No western vintage decor, no notes or text.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-e33f8b92-54c8-4c28-a7d5-938fb3a18116.png",
+      "file": "assets/ink/subsections/guitar-v1.png",
+      "web": "assets/ink/subsections/guitar-v1.webp"
+    },
+    {
+      "key": "music",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. Over-ear modern headphones resting beside one dark vinyl record on a simple surface, subtle concentric sound ripples dissolve into flowing teal ink, one small vermilion accent, light muted grey-green background. Subject right, calm space left.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-f9913b8e-61fc-4e99-bb85-92589d319433.png",
+      "file": "assets/ink/subsections/music-v1.png",
+      "web": "assets/ink/subsections/music-v1.webp"
+    },
+    {
+      "key": "games",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. An elegant contemporary game controller in foreground and a tiny winding path through an imaginary blue-green game world, distant angular floating terrain rendered in Chinese ink, sense of exploration rather than neon gamer advertising. No text, no brands.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-62cb8379-8c66-4e98-8384-0acb10c21389.png",
+      "file": "assets/ink/subsections/games-v1.png",
+      "web": "assets/ink/subsections/games-v1.webp"
+    },
+    {
+      "key": "animation",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. An original ink-animation scene: a small anonymous travelling swordsman seen from behind on a stone bridge across mist, expressive wind line, blue-green cliffs and one cinnabar ribbon, cinematic sense of story. No known character, no logos.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-4a544a64-1081-456f-b24f-e19e06f0312e.png",
+      "file": "assets/ink/subsections/animation-v1.png",
+      "web": "assets/ink/subsections/animation-v1.webp"
+    },
+    {
+      "key": "videos",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. A quiet modern desktop display showing an abstract ink landscape without UI or text, soft projector beam becoming layered frames of light, watching visual stories, muted blue-green and warm grey. No camera, no film editing interface.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-640a3f0f-e47f-4f97-9572-9974f76870f6.png",
+      "file": "assets/ink/subsections/videos-v1.png",
+      "web": "assets/ink/subsections/videos-v1.webp"
+    },
+    {
+      "key": "reading",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. Three unlabelled thread-bound books stacked beside an open book with blank textured pages and a tiny ceramic tea cup, bamboo window shadow and fern, close asymmetric composition, tactile dark ink and celadon.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-6f8a021c-d22d-4077-9d34-1b3e4a9cb209.png",
+      "file": "assets/ink/subsections/reading-v1.png",
+      "web": "assets/ink/subsections/reading-v1.webp"
+    },
+    {
+      "key": "essays",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. Two paths gently separating around a low rock and rejoining by a quiet river, a single leaf carried by current, restrained ink drawing about choices, reflection and everyday life, no people, no city, no dramatic mountains.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-9679c4bd-e900-4e2c-803a-fb7c379d69fc.png",
+      "file": "assets/ink/subsections/essays-v1.png",
+      "web": "assets/ink/subsections/essays-v1.webp"
+    },
+    {
+      "key": "quotes",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. A young pine rooted in a crevice of a wind-weathered rock, fresh green tips leaning toward open luminous sky, powerful but restrained brushwork, symbol of perseverance and hope, no text, no birds.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-1d8477cd-b658-4317-835b-7028996124cd.png",
+      "file": "assets/ink/subsections/quotes-v1.png",
+      "web": "assets/ink/subsections/quotes-v1.webp"
+    },
+    {
+      "key": "wall",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. A weathered low plaster wall under a plum tree, a small unmarked paper slip and ink brush on its stone ledge, poetic courtyard, teal-grey plaster and vermilion blossom, human connection and leaving a message.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-5a606c27-dc26-4896-b085-f1845b1b3b2d.png",
+      "file": "assets/ink/subsections/wall-v1.png",
+      "web": "assets/ink/subsections/wall-v1.webp"
+    },
+    {
+      "key": "letter",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. An opened ivory envelope with a blank folded letter and a narrow red thread on a modern simple wooden desk beside a window, soft green tree shadow, intimate quiet correspondence, no handwriting.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-a45797b6-e595-46b8-94c5-a37e2a009c8d.png",
+      "file": "assets/ink/subsections/letter-v1.png",
+      "web": "assets/ink/subsections/letter-v1.webp"
+    },
+    {
+      "key": "ally",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. Two elegant small lanterns glowing softly on opposite ends of a low stone bridge over blue-green water, paths meeting, friendship and connection, restrained ink and mineral pigment, no people.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-9cd86211-4dca-45d2-a1cd-0804f30a1f63.png",
+      "file": "assets/ink/subsections/ally-v1.png",
+      "web": "assets/ink/subsections/ally-v1.webp"
+    },
+    {
+      "key": "featured",
+      "prompt": "Use case: stylized-concept. Create ONE original wide 16:9 editorial illustration for a Chinese personal website subsection. Eastern literati ink painting with mineral malachite green, muted teal, parchment grey, restrained cinnabar, fluid brush texture, elegant animated-film background artistry, real depth and deliberately composed negative space. This is an illustration, not a UI, no frames, no words, no letters, no logos, no watermark. Clear recognizable subject; quiet, refined, not a cluttered collage. An open accordion-fold album with blank pale pages and a small red seal stone beside it, refined ink textures and blue-green silk edge, theme of collected comments and afterwords, no text.",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-f9a923f1-35d3-42b3-8909-bd9b6be6b86d.png",
+      "file": "assets/ink/subsections/featured-v1.png",
+      "web": "assets/ink/subsections/featured-v1.webp"
+    }
+  ]
+}

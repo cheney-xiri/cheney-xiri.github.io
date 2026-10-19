@@ -1,0 +1,30 @@
+/* 人物小记沿书页并列排开，背景与现有封面保持连续。 */
+.summer-page .summer-characters{max-width:68rem;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem) clamp(3rem,6vw,5rem);scroll-margin-top:2rem}
+.summer-page .summer-characters-head{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;border-top:1px solid var(--chapter-rule,var(--rule));padding-top:1.8rem;margin-bottom:2.2rem}
+.summer-page .summer-characters-head h2{font:400 clamp(1.5rem,2.3vw,2rem)/1.65 var(--font-head);letter-spacing:.09em;margin:.35rem 0 0;color:var(--ink)}
+.summer-page .summer-characters-head>p{font-size:.76rem;line-height:1.9;color:var(--ink-3);margin:0 0 .25rem}
+.summer-page .summer-character-spread{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,6vw,5rem)}
+.summer-page .summer-character{min-width:0;padding:.2rem 0 .4rem}
+.summer-page .summer-character+.summer-character{border-left:1px solid var(--chapter-rule,var(--rule));padding-left:clamp(2rem,5vw,4rem)}
+.summer-page .summer-character-role{display:flex;align-items:center;gap:.8rem;font-size:.7rem;letter-spacing:.16em;color:var(--zhu-deep);margin:0}
+.summer-page .summer-character-role>span{font-family:Georgia,serif;font-size:.82rem;letter-spacing:.04em;color:var(--ink-3)}
+.summer-page .summer-character-heading h3{font:400 clamp(1.8rem,3vw,2.6rem)/1.6 var(--font-head);letter-spacing:.18em;color:var(--ink);margin:.45rem 0 .55rem}
+.summer-page .summer-character-line{font-size:.91rem;line-height:1.9;color:var(--ink-2);margin:0 0 1.3rem}
+.summer-page .summer-character-description{font-size:.86rem;line-height:2.1;color:var(--ink-2);margin:0 0 1.4rem}
+.summer-page .summer-character-facts{margin:0;padding:0;border-top:1px solid var(--chapter-soft,var(--rule-soft))}
+.summer-page .summer-character-facts>div{display:grid;grid-template-columns:4.5rem minmax(0,1fr);gap:.6rem;padding:.9rem 0;border-bottom:1px solid var(--chapter-soft,var(--rule-soft))}
+.summer-page .summer-character-facts dt{font-size:.72rem;line-height:2.1;letter-spacing:.06em;color:var(--ink-3)}
+.summer-page .summer-character-facts dd{font-size:.8rem;line-height:2;color:var(--ink-2);margin:0}
+.summer-page .summer-character-traits{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;padding:0;margin:1.1rem 0 0;color:var(--ink-3);font-size:.7rem;line-height:1.9;letter-spacing:.08em}
+.summer-page .summer-character-traits li{display:flex;align-items:center;gap:.5rem}
+.summer-page .summer-character-traits li::before{content:'';width:.22rem;height:.22rem;background:currentColor;transform:rotate(45deg);opacity:.65}
+@media(max-width:700px){
+ .summer-page .summer-characters-head{display:block;margin-bottom:1.7rem;padding-top:1.5rem}
+ .summer-page .summer-characters-head>p{margin:.6rem 0 0;font-size:.73rem}
+ .summer-page .summer-character-spread{grid-template-columns:minmax(0,1fr);gap:1.8rem}
+ .summer-page .summer-character+.summer-character{padding:1.8rem 0 0;border-left:0;border-top:1px solid var(--chapter-rule,var(--rule))}
+ .summer-page .summer-character-heading h3{font-size:2rem}
+ .summer-page .summer-character-line{font-size:.86rem;margin-bottom:1.1rem}
+ .summer-page .summer-character-description{font-size:.85rem;margin-bottom:1.2rem}
+ .summer-page .summer-character-facts>div{grid-template-columns:4.2rem minmax(0,1fr);gap:.5rem}
+}

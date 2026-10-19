@@ -1,0 +1,57 @@
+{
+  "generated": "2026-10-18",
+  "mode": "built-in image_gen",
+  "reference": "User supplied Jian Lai ink landscape: style reference only",
+  "assets": [
+    {
+      "key": "hero",
+      "path": "assets/ink/scroll-mountains-v1.png",
+      "source": "exec-be27ac00-7462-4c0c-9550-fb8410bf8edb.png",
+      "prompt": "Create an ORIGINAL painted website background, landscape 16:9. The attached image is a STYLE REFERENCE ONLY, not an edit target: borrow the expressive Chinese ink, mineral turquoise and indigo, rough fibrous brushwork, mist across jagged mountains, the layered depth of an unfurled scholarly landscape scroll. A high-end Eastern literati ink painting, theatrical but restrained, distinctly hand-painted and NOT a photograph or realistic landscape render. Strong dry-brush charcoal rock silhouettes, pale blue-gray cloud ribbons, deep cyan water, tiny muted antique gold strokes. Keep a broad quiet CENTRAL area of mist with low-detail pale gray-blue medium brightness, for dark website typography. The lower quarter and outer margins carry saturated teal and ink-black. Preserve nuanced ink texture and atmospheric depth; do not wash the whole image white or make a flat black scene. NO text, calligraphy, seals, brands, logos, watermarks, people, dragons, weapons, UI or physical scroll rollers. Do not reproduce the reference composition exactly. Use case: stylized-concept. Asset: finished background painting. Scene: an expansive river reflecting bold angular ink mountains, asymmetrical mountain masses at the left and right margins, luminous quiet mist in the center, strong turquoise river at the bottom. Slightly austere and poetic, conveying courage, open horizons, scholarly spirit.",
+      "webPath": "assets/ink/scroll-mountains-v1.webp"
+    },
+    {
+      "key": "river",
+      "path": "assets/ink/scroll-river-v1.png",
+      "source": "exec-43a47655-e2ff-4936-ade7-41593f6c7bfb.png",
+      "prompt": "Create an ORIGINAL painted website background, landscape 16:9. The attached image is a STYLE REFERENCE ONLY, not an edit target: borrow the expressive Chinese ink, mineral turquoise and indigo, rough fibrous brushwork, mist across jagged mountains, the layered depth of an unfurled scholarly landscape scroll. A high-end Eastern literati ink painting, theatrical but restrained, distinctly hand-painted and NOT a photograph or realistic landscape render. Strong dry-brush charcoal rock silhouettes, pale blue-gray cloud ribbons, deep cyan water, tiny muted antique gold strokes. Keep a broad quiet CENTRAL area of mist with low-detail pale gray-blue medium brightness, for dark website typography. The lower quarter and outer margins carry saturated teal and ink-black. Preserve nuanced ink texture and atmospheric depth; do not wash the whole image white or make a flat black scene. NO text, calligraphy, seals, brands, logos, watermarks, people, dragons, weapons, UI or physical scroll rollers. Do not reproduce the reference composition exactly. Use case: stylized-concept. Asset: finished background painting. Scene: distant low mountain ranges with a river winding through a quiet valley, sparse dark pines at the left edge, energetic flowing brushstrokes suggesting water in the lower margin. Broad pale blue-gray empty mist through the middle. Mood: journeys and creative reflection.",
+      "webPath": "assets/ink/scroll-river-v1.webp"
+    },
+    {
+      "key": "bamboo",
+      "path": "assets/ink/scroll-bamboo-v1.png",
+      "source": "exec-8ee6b87d-2a72-4f6c-9363-34c5504755fb.png",
+      "prompt": "Create an ORIGINAL painted website background, landscape 16:9. The attached image is a STYLE REFERENCE ONLY, not an edit target: borrow the expressive Chinese ink, mineral turquoise and indigo, rough fibrous brushwork, mist across jagged mountains, the layered depth of an unfurled scholarly landscape scroll. A high-end Eastern literati ink painting, theatrical but restrained, distinctly hand-painted and NOT a photograph or realistic landscape render. Strong dry-brush charcoal rock silhouettes, pale blue-gray cloud ribbons, deep cyan water, tiny muted antique gold strokes. Keep a broad quiet CENTRAL area of mist with low-detail pale gray-blue medium brightness, for dark website typography. The lower quarter and outer margins carry saturated teal and ink-black. Preserve nuanced ink texture and atmospheric depth; do not wash the whole image white or make a flat black scene. NO text, calligraphy, seals, brands, logos, watermarks, people, dragons, weapons, UI or physical scroll rollers. Do not reproduce the reference composition exactly. Use case: stylized-concept. Asset: finished background painting. Scene: a sparse scholarly bamboo grove ONLY at the right and left outer edges, ink rocks at the bottom, a very distant ink mountain silhouette behind broad central soft mist. Muted moss green, charcoal and dusty celadon, subtle antique fiber texture. Mood: reading and poetry, understated bookish warmth.",
+      "webPath": "assets/ink/scroll-bamboo-v1.webp"
+    },
+    {
+      "key": "journey",
+      "path": "assets/ink/scroll-journey-v1.png",
+      "source": "exec-9afb9885-5cbf-4d7f-a492-a8ead72751ec.png",
+      "prompt": "Original Chinese literati ink painting for an education/journey website chapter, wide landscape 16:9. A winding STONE MOUNTAIN PATH ascends from the LOWER LEFT toward a distant isolated peak in the UPPER RIGHT, small ancient pine trees, layered airy mist. No river, no lake, no bamboo, no desk. Composition is strongly DIAGONAL with quiet pale gray-green paper across central and upper left. Dry brush charcoal rocks, malachite green and a touch of dusty ochre, rough brush fibers, subtle rice-paper texture. Dimensional contemporary Chinese animated ink aesthetic, elegant scholarly resolve. Medium luminance, dark accents only on the margins, not a white flat scene, not photorealistic. No people, no text, no calligraphy, no logos, no seals. Background will sit behind text, center must be quiet.",
+      "webPath": "assets/ink/scroll-journey-v1.webp"
+    },
+    {
+      "key": "craft",
+      "path": "assets/ink/scroll-craft-v1.png",
+      "source": "exec-e6f81e58-3584-46b4-87e0-0a8c91782692.png",
+      "prompt": "An ORIGINAL refined Chinese ink and mineral-pigment painting of a SCHOLAR'S WORK TABLE, wide 16:9 website background. Entire image is a tactile charcoal-gray/celadon XUAN PAPER texture, with a well-used inkstone and two calligraphy brushes elegantly placed ONLY on the far lower right margin, tiny scattered jet black and ivory Go stones near the bottom corner, a slender bamboo flute tip visible at the far left edge. Dramatic macro flatlay, close textures and wet ink bleeding, NOT a landscape: NO mountains, river, trees or architecture. Plenty of quiet empty desaturated warm blue-gray paper in central 75%. Expressive dry brush, dusty mineral green, pale aged silver, restrained vermilion and antique gold detail; contemporary scholarly Eastern ink aesthetic, medium brightness. No characters, no writing, no glyphs, no words, no logo, no grid or diagram, no UI.",
+      "webPath": "assets/ink/scroll-craft-v1.webp"
+    },
+    {
+      "key": "works",
+      "path": "assets/ink/scroll-letters-v1.png",
+      "source": "exec-84517d97-01bb-4178-9b73-c2a6c9dd5eec.png",
+      "prompt": "An ORIGINAL poetic Chinese hand-painted ink illustration for a creative works website background, landscape 16:9. Close-up of a few thin UNMARKED ENVELOPES, folded letter paper, the corner of two cloth-bound blank books, and a fine ink brush shadow, arranged exclusively at the far LOWER LEFT edge and bottom border. Diagonal soft afternoon window light, a tiny muted vermilion thread, desaturated warm ochre and moss-gray paper, dark ink edges dissolving into fibers. Rest of the image is quiet slate-gray/celadon with subtle paper fibers and nuanced warm shadow. Literary, intimate, refined, visual metaphor for novels and creative correspondence. Genuine watercolor/dry ink painting, not a photo. No mountains, no rivers, no bamboo plants. No readable writing, no text, no typography, no seals, no logos, no people. Central 70% must remain empty for website content.",
+      "webPath": "assets/ink/scroll-letters-v1.webp"
+    },
+    {
+      "key": "admire",
+      "path": "assets/ink/scroll-admire-v1.png",
+      "source": "exec-6dce5085-8c6f-497b-9311-7c6eafc77649.png",
+      "prompt": "An ORIGINAL monumental Chinese painted ink composition for a literary admiration/figures chapter, wide 16:9. A single powerful dark angular CRAG rises only on the far RIGHT third, sparse lone pine silhouette bending from its top, pale golden dawn behind far left, thin mist moving horizontally at bottom. Asymmetrical commanding empty space across the LEFT TWO THIRDS, slate-blue and muted bronze, charcoal dry brush, tiny warm vermilion accents in stone, mineral pigment and fibrous xuan paper, contemporary Eastern scholarly courage. NOT an all-over mountain panorama, no river or water, no people, no statues, no portraits, no text, no logos, no calligraphy. Actual illustrated brushwork, not photography. Medium gray-blue field with dark ink only in right margin. Usable elegant web background.",
+      "webPath": "assets/ink/scroll-admire-v1.webp"
+    }
+  ],
+  "webExport": "WebP quality 88; original resolution, composition and colors retained"
+}

@@ -1,0 +1,5873 @@
+[
+  {
+    "id": "book-revolution-ch1-1",
+    "name": "星位夹击后 · 托与安定",
+    "original": "Joseki Revolution / Theme 1. A fourth move emerges! / Dia. 1",
+    "source": "芝野虎丸 九段《Joseki Revolution》 · Theme 1. A fourth move emerges! · Dia. 1",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0169_ki_k90_sample.epub",
+    "bookRef": {
+      "title": "Joseki Revolution",
+      "author": "芝野虎丸 九段",
+      "chapter": "Theme 1. A fourth move emerges!",
+      "figure": "Dia. 1"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q4",
+        "F3",
+        "M3"
+      ],
+      "white": [
+        "D16",
+        "C6",
+        "D4",
+        "O3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "O4,P4,P5,P3,N4,Q3,R4,R3,S3,S2,S4,N2,Q8",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:revolution:e65863575b91",
+    "topicTitleOverride": "星位夹击后 · 托与安定",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "托的变化至白12，书中评为两分。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-revolution-ch1-3",
+    "name": "星位夹击后 · 飞守角",
+    "original": "Joseki Revolution / Theme 1. A fourth move emerges! / Dia. 3",
+    "source": "芝野虎丸 九段《Joseki Revolution》 · Theme 1. A fourth move emerges! · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0169_ki_k90_sample.epub",
+    "bookRef": {
+      "title": "Joseki Revolution",
+      "author": "芝野虎丸 九段",
+      "chapter": "Theme 1. A fourth move emerges!",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q4",
+        "F3",
+        "M3"
+      ],
+      "white": [
+        "D16",
+        "C6",
+        "D4",
+        "O3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R6,Q3,R3,R2,P3,Q2,P4,R4,S3,S4,S2,S1,P2,T3",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:revolution:e65863575b91",
+    "topicTitleOverride": "星位夹击后 · 飞守角",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "飞守可行，白棋仍有取利的余地。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-revolution-ch1-4",
+    "name": "三三守角后 · 跳出与窥",
+    "original": "Joseki Revolution / Theme 1. A fourth move emerges! / Dia. 4",
+    "source": "芝野虎丸 九段《Joseki Revolution》 · Theme 1. A fourth move emerges! · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0169_ki_k90_sample.epub",
+    "bookRef": {
+      "title": "Joseki Revolution",
+      "author": "芝野虎丸 九段",
+      "chapter": "Theme 1. A fourth move emerges!",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q4",
+        "F3",
+        "M3",
+        "R3"
+      ],
+      "white": [
+        "D16",
+        "C6",
+        "D4",
+        "O3"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "O5,N4,O4,Q7,M5,K3,O7,Q9",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:revolution:eac146d7f5ae",
+    "topicTitleOverride": "三三守角后 · 跳出与窥",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白跳后黑窥，转而取得右边实利。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-revolution-ch1-5",
+    "name": "三三守角后 · 压与取地",
+    "original": "Joseki Revolution / Theme 1. A fourth move emerges! / Dia. 5",
+    "source": "芝野虎丸 九段《Joseki Revolution》 · Theme 1. A fourth move emerges! · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0169_ki_k90_sample.epub",
+    "bookRef": {
+      "title": "Joseki Revolution",
+      "author": "芝野虎丸 九段",
+      "chapter": "Theme 1. A fourth move emerges!",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q4",
+        "F3",
+        "M3",
+        "R3"
+      ],
+      "white": [
+        "D16",
+        "C6",
+        "D4",
+        "O3"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "P5,Q6,O7,Q8",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:revolution:eac146d7f5ae",
+    "topicTitleOverride": "三三守角后 · 压与取地",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "对白棋的压，黑以2、4取得右边实地。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "pachi-34-061",
+    "name": "小目高挂 · 托退实接",
+    "original": "Get Strong at Joseki 1 / Joseki 1: Attaching on the Inside / Dia. 2",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 1: Attaching on the Inside · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 1: Attaching on the Inside",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "R16"
+      ],
+      "white": [
+        "O17",
+        "P16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 4,
+    "moves": "O16,R14,K17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:508cd3245b89",
+    "topicTitleOverride": "小目高挂 · 托退实接",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白实接后，双方拆边。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,O17,Q17,O16,R14,K17",
+      "source": "Pachi joseki SGF · joseki_34.sgf"
+    }
+  },
+  {
+    "id": "josekle-variation-27594",
+    "name": "小目高挂 · 四线展开",
+    "original": "Get Strong at Joseki 1 / Joseki 1: Attaching on the Inside / Dia. 3",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 1: Attaching on the Inside · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 1: Attaching on the Inside",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "R16"
+      ],
+      "white": [
+        "O17",
+        "P16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 4,
+    "moves": "O16,Q15,K16",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:508cd3245b89",
+    "topicTitleOverride": "小目高挂 · 四线展开",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑白改向四线发展。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,O17,Q17,O16,Q15,K16",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #27594"
+    }
+  },
+  {
+    "id": "josekle-27480",
+    "name": "小目高挂 · 虎口连接",
+    "original": "Get Strong at Joseki 1 / Joseki 1: Attaching on the Inside / Dia. 4",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 1: Attaching on the Inside · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 1: Attaching on the Inside",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "R16"
+      ],
+      "white": [
+        "O17",
+        "P16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 4,
+    "moves": "N16,R14,J17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:508cd3245b89",
+    "topicTitleOverride": "小目高挂 · 虎口连接",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白虎后可拆得更远。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,O17,Q17,N16,R14,J17",
+      "source": "OGS 定式词典 · 原站资料来源：Cho Hunhyun⁠—Lectures on Go Techniques"
+    }
+  },
+  {
+    "id": "josekle-variation-27468",
+    "name": "小目高挂 · 窥后发展",
+    "original": "Get Strong at Joseki 1 / Joseki 1: Attaching on the Inside / Dia. 5",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 1: Attaching on the Inside · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 1: Attaching on the Inside",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "R16"
+      ],
+      "white": [
+        "O17",
+        "P16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 4,
+    "moves": "N16,O15,O16,Q15,J17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:508cd3245b89",
+    "topicTitleOverride": "小目高挂 · 窥后发展",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑窥后向边上发展。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,O17,Q17,N16,O15,O16,Q15,J17",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #27468"
+    }
+  },
+  {
+    "id": "josekle-27263",
+    "name": "雪崩 · 简明取角",
+    "original": "Get Strong at Joseki 1 / Joseki 2: The Avalanche / Dia. 2",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 2: The Avalanche · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 2: The Avalanche",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "R16"
+      ],
+      "white": [
+        "P16",
+        "Q16",
+        "R15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R17,O16,N17,Q14",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:0602da9510b8",
+    "topicTitleOverride": "雪崩 · 简明取角",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑取角，白取外势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,Q16,Q17,R15,R17,O16,N17,Q14",
+      "source": "Josekle 归档 · OGS 定式词典节点 #27263"
+    }
+  },
+  {
+    "id": "josekle-27116",
+    "name": "雪崩 · 二段扳后续",
+    "original": "Get Strong at Joseki 1 / Joseki 2: The Avalanche / Dia. 4",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 2: The Avalanche · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 2: The Avalanche",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "R17",
+        "O16",
+        "R16",
+        "S15",
+        "P14"
+      ],
+      "white": [
+        "P16",
+        "Q16",
+        "S16",
+        "R15",
+        "Q14",
+        "S14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 8,
+    "moves": "P13,O13,P12,O15,O12",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:59080329c7ef",
+    "topicTitleOverride": "雪崩 · 二段扳后续",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白取右边，黑取上边。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,Q16,Q17,R15,S15,S16,R17,S14,O16,Q14,P14,P13,O13,P12,O15,O12",
+      "source": "Josekle 归档 · OGS 定式词典节点 #27116"
+    }
+  },
+  {
+    "id": "josekle-variation-27104",
+    "name": "小雪崩 · 双方提花",
+    "original": "Get Strong at Joseki 1 / Joseki 2: The Avalanche / Dia. 6",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 2: The Avalanche · Dia. 6",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 2: The Avalanche",
+      "figure": "Dia. 6"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "O16",
+        "R16",
+        "S16",
+        "Q15",
+        "S15",
+        "R14"
+      ],
+      "white": [
+        "R18",
+        "O17",
+        "R17",
+        "P16",
+        "Q16",
+        "Q14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 10,
+    "moves": "P15,P14,O15,Q13,N16",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:2c43bf5ec4ef",
+    "topicTitleOverride": "小雪崩 · 双方提花",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "双方各提一子，结果两分。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,Q16,Q17,R15,O16,R17,S16,R18,S15,Q14,R14,O17,Q15,P15,P14,O15,Q13,N16",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #27104"
+    }
+  },
+  {
+    "id": "josekle-27887",
+    "name": "小目高挂 · 外托基本型",
+    "original": "Get Strong at Joseki 1 / Joseki 3: Attaching on the Outside / Dia. 1",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 3: Attaching on the Outside · Dia. 1",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 3: Attaching on the Outside",
+      "figure": "Dia. 1"
+    },
+    "setup": {
+      "black": [
+        "R16"
+      ],
+      "white": []
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "P16,P15,O15,Q15,N16",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:ac98b87e449d",
+    "topicTitleOverride": "小目高挂 · 外托基本型",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑棋以右边外势为目标。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P15,O15,Q15,N16",
+      "source": "Josekle 归档 · OGS 定式词典节点 #27887"
+    }
+  },
+  {
+    "id": "pachi-34-126",
+    "name": "小目外托 · 回角取地",
+    "original": "Get Strong at Joseki 1 / Joseki 3: Attaching on the Outside / Dia. 2",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 3: Attaching on the Outside · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 3: Attaching on the Outside",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "R16",
+        "P15",
+        "Q15"
+      ],
+      "white": [
+        "N16",
+        "P16",
+        "O15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "P17,O17,P18",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:1d5342dfc5b0",
+    "topicTitleOverride": "小目外托 · 回角取地",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑回角取地也是定式。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P15,O15,Q15,N16,P17,O17,P18",
+      "source": "Pachi joseki SGF · joseki_34.sgf"
+    }
+  },
+  {
+    "id": "josekle-27904",
+    "name": "小目外托 · 扳出取势",
+    "original": "Get Strong at Joseki 1 / Joseki 3: Attaching on the Outside / Dia. 3",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 3: Attaching on the Outside · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 3: Attaching on the Outside",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "R16",
+        "P15",
+        "Q15"
+      ],
+      "white": [
+        "N16",
+        "P16",
+        "O15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "O14,N14,O13,N13,O12",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:1d5342dfc5b0",
+    "topicTitleOverride": "小目外托 · 扳出取势",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑扳出以发展右边。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P15,O15,Q15,N16,O14,N14,O13,N13,O12",
+      "source": "Josekle 归档 · OGS 定式词典节点 #27904"
+    }
+  },
+  {
+    "id": "josekle-27901",
+    "name": "小目外托 · 二段扳",
+    "original": "Get Strong at Joseki 1 / Joseki 3: Attaching on the Outside / Dia. 4",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 3: Attaching on the Outside · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 3: Attaching on the Outside",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "R16",
+        "P15",
+        "Q15"
+      ],
+      "white": [
+        "N16",
+        "P16",
+        "O15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "O14,N14,N13,O13,P14,M14,M13,L14,O12",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:1d5342dfc5b0",
+    "topicTitleOverride": "小目外托 · 二段扳",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑取厚势，白弃子仍有余味。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P15,O15,Q15,N16,O14,N14,N13,O13,P14,M14,M13,L14,O12",
+      "source": "OGS 定式词典 · 原站资料来源：Bozulich - Get Strong at Joseki 1"
+    }
+  },
+  {
+    "id": "josekle-variation-27886",
+    "name": "小目外托 · 白长黑断",
+    "original": "Get Strong at Joseki 1 / Joseki 3: Attaching on the Outside / Dia. 5",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 3: Attaching on the Outside · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 3: Attaching on the Outside",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "R16",
+        "P15",
+        "Q15"
+      ],
+      "white": [
+        "P16",
+        "O15"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "O14,O16,N16,O17,N17,P18,O18,P17,M14",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:c47a8151fad2",
+    "topicTitleOverride": "小目外托 · 白长黑断",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑取角，白以后须整形。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P15,O15,Q15,O14,O16,N16,O17,N17,P18,O18,P17,M14",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #27886"
+    }
+  },
+  {
+    "id": "josekle-27818",
+    "name": "小目外托 · 简明应贴",
+    "original": "Get Strong at Joseki 1 / Joseki 3: Attaching on the Outside / Dia. 6",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 3: Attaching on the Outside · Dia. 6",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 3: Attaching on the Outside",
+      "figure": "Dia. 6"
+    },
+    "setup": {
+      "black": [
+        "R16"
+      ],
+      "white": [
+        "P16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "P15,R17,Q15,O16,O15,N16,S17,Q17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:0bfd08a52ade",
+    "topicTitleOverride": "小目外托 · 简明应贴",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑保持简明的取势方针。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P15,R17,Q15,O16,O15,N16,S17,Q17",
+      "source": "Josekle 归档 · OGS 定式词典节点 #27818"
+    }
+  },
+  {
+    "id": "josekle-variation-27953",
+    "name": "小目高挂 · 小飞后托",
+    "original": "Get Strong at Joseki 1 / Joseki 4: The Knight’s Move / Dia. 2",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 4: The Knight’s Move · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 4: The Knight’s Move",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "R16"
+      ],
+      "white": [
+        "P16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q14,R17,S17,Q17,S15,L17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:0bfd08a52ade",
+    "topicTitleOverride": "小目高挂 · 小飞后托",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白托后双方定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,Q14,R17,S17,Q17,S15,L17",
+      "source": "Josekle 归档 · easy.js · OGS 节点 #27953"
+    }
+  },
+  {
+    "id": "josekle-variation-27949",
+    "name": "小目小飞 · 长出取地",
+    "original": "Get Strong at Joseki 1 / Joseki 4: The Knight’s Move / Dia. 3",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 4: The Knight’s Move · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 4: The Knight’s Move",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "R16"
+      ],
+      "white": [
+        "P16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q14,R17,S17,Q17,S18,L17,R10",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:0bfd08a52ade",
+    "topicTitleOverride": "小目小飞 · 长出取地",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑向右边拆，取得实地。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,Q14,R17,S17,Q17,S18,L17,R10",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #27949"
+    }
+  },
+  {
+    "id": "josekle-variation-28001",
+    "name": "小目小飞 · 紧凑应法",
+    "original": "Get Strong at Joseki 1 / Joseki 4: The Knight’s Move / Dia. 4",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 4: The Knight’s Move · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 4: The Knight’s Move",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "R16"
+      ],
+      "white": [
+        "P16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R14,R17,S17,Q17,S18,L17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:0bfd08a52ade",
+    "topicTitleOverride": "小目小飞 · 紧凑应法",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑紧应后拆边。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,R14,R17,S17,Q17,S18,L17",
+      "source": "Josekle 归档 · easy.js · OGS 节点 #28001"
+    }
+  },
+  {
+    "id": "pachi-34-073",
+    "name": "小目高挂 · 夹后托角",
+    "original": "Get Strong at Joseki 1 / Joseki 5: The One-Space Low Pincer / Dia. 2",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 5: The One-Space Low Pincer · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 5: The One-Space Low Pincer",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "R16"
+      ],
+      "white": [
+        "P16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "N17,R17,Q17,Q16,P17,O17,O16,O18,R18,S17,P18,R15,N18,O15,N16",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:0bfd08a52ade",
+    "topicTitleOverride": "小目高挂 · 夹后托角",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "夹后托角是常见续法。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,N17,R17,Q17,Q16,P17,O17,O16,O18,R18,S17,P18,R15,N18,O15,N16",
+      "source": "Pachi joseki SGF · joseki_34.sgf"
+    }
+  },
+  {
+    "id": "josekle-variation-28164",
+    "name": "小目夹攻 · 白尖取势",
+    "original": "Get Strong at Joseki 1 / Joseki 5: The One-Space Low Pincer / Dia. 3",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 5: The One-Space Low Pincer · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 5: The One-Space Low Pincer",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "R16"
+      ],
+      "white": [
+        "P16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "N17,O15,N15,N14,N16,M14,P17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:0bfd08a52ade",
+    "topicTitleOverride": "小目夹攻 · 白尖取势",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白取势，黑取上边实利。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,N17,O15,N15,N14,N16,M14,P17",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #28164"
+    }
+  },
+  {
+    "id": "josekle-variation-28105",
+    "name": "小目夹攻 · 向边跳出",
+    "original": "Get Strong at Joseki 1 / Joseki 5: The One-Space Low Pincer / Dia. 4",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Joseki 5: The One-Space Low Pincer · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Joseki 5: The One-Space Low Pincer",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "N17",
+        "R16"
+      ],
+      "white": [
+        "P16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "P18,Q14,O15,R10,L17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:4a732f5ae84d",
+    "topicTitleOverride": "小目夹攻 · 向边跳出",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白向边跳也是定式。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,N17,P18,Q14,O15,R10,L17",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #28105"
+    }
+  },
+  {
+    "id": "josekle-variation-27591",
+    "name": "小目夹攻 · 贴后安定",
+    "original": "Get Strong at Joseki 1 / Answer 1 / Correct Answer",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Answer 1 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Answer 1",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "L16",
+        "R16"
+      ],
+      "white": [
+        "O17",
+        "O16",
+        "P16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "R15,S15,Q16,S17,R14,S14,R12",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:667cb1c02c0b",
+    "topicTitleOverride": "小目夹攻 · 贴后安定",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白贴后迫黑守，结果两分。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,O17,Q17,O16,L16,R15,S15,Q16,S17,R14,S14,R12",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #27591"
+    }
+  },
+  {
+    "id": "josekle-variation-27461",
+    "name": "小目托退 · 扳出整形",
+    "original": "Get Strong at Joseki 1 / Answer 2 / Correct Answer",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Answer 2 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Answer 2",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "O18",
+        "P17",
+        "Q17",
+        "R16",
+        "O15"
+      ],
+      "white": [
+        "O17",
+        "N16",
+        "P16",
+        "P15"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "O14,N18,R15,S15,R13",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:072f365144f2",
+    "topicTitleOverride": "小目托退 · 扳出整形",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白向上扳，再整形。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R16,P16,P17,O17,Q17,N16,O15,P15,O18,O14,N18,R15,S15,R13",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #27461"
+    }
+  },
+  {
+    "id": "book-strong1-prob3-1",
+    "name": "小目托退 · 打出连接",
+    "original": "Get Strong at Joseki 1 / Answer 3 / Correct Answer",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Answer 3 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Answer 3",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "O16",
+        "R16"
+      ],
+      "white": [
+        "O17",
+        "P16",
+        "O13"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "N16,O15,N15,P15,N17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:2729fb11a448",
+    "topicTitleOverride": "小目托退 · 打出连接",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白打后长，连接取厚势。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong1-prob4-1",
+    "name": "小目出头 · 愚形妙手",
+    "original": "Get Strong at Joseki 1 / Answer 4 / Correct Answer",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Answer 4 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Answer 4",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "S18",
+        "T18",
+        "D17",
+        "P17",
+        "Q17",
+        "K16",
+        "Q16",
+        "R16",
+        "S16",
+        "D15",
+        "K15",
+        "P15",
+        "N14",
+        "P14"
+      ],
+      "white": [
+        "S19",
+        "R18",
+        "O17",
+        "N16",
+        "O16",
+        "P16",
+        "L15",
+        "Q15",
+        "R15",
+        "S15",
+        "R12"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "M14,M13,L14",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:30a679105fe9",
+    "topicTitleOverride": "小目出头 · 愚形妙手",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白1、3用于向中央出头。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong1-prob5-1",
+    "name": "小目应压 · 挡住侵入",
+    "original": "Get Strong at Joseki 1 / Answer 5 / Correct Answer",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Answer 5 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Answer 5",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "O18",
+        "P17",
+        "Q17",
+        "R16",
+        "O15"
+      ],
+      "white": [
+        "O17",
+        "N16",
+        "P16",
+        "N15"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "N18,O16,N17,O14",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:7ec0f6956423",
+    "topicTitleOverride": "小目应压 · 挡住侵入",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白顾左边，黑发展右边。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong1-prob6-1",
+    "name": "小目断点 · 征子应对",
+    "original": "Get Strong at Joseki 1 / Answer 6 / Correct Answer",
+    "source": "Richard Bozulich《Get Strong at Joseki 1》 · Answer 6 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0138_ki_k52_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 1",
+      "author": "Richard Bozulich",
+      "chapter": "Answer 6",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "P17",
+        "Q17",
+        "N16",
+        "O16",
+        "R16"
+      ],
+      "white": [
+        "N17",
+        "O17",
+        "P16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "M16,M17,M18,L17,L16",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:strong1:6518ee0d2cd5",
+    "topicTitleOverride": "小目断点 · 征子应对",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "须以征子对白有利为前提。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong2-intro-3",
+    "name": "高目 · 内托基本型",
+    "original": "Get Strong at Joseki 2 / Joseki 1: Attaching on the Inside / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 1: Attaching on the Inside · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 1: Attaching on the Inside",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "R17",
+        "P16"
+      ],
+      "white": [
+        "R16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "S17,Q17,S15,L17",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:d44001e7b18b",
+    "topicTitleOverride": "高目 · 内托基本型",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白安定，黑拆边。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-31171",
+    "name": "高目内托 · 上边发展",
+    "original": "Get Strong at Joseki 2 / Joseki 1: Attaching on the Inside / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 1: Attaching on the Inside · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 1: Attaching on the Inside",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "P16"
+      ],
+      "white": [
+        "R16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 2,
+    "moves": "R17,K17,Q16,R15,Q18,R12",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:6521d64e275f",
+    "topicTitleOverride": "高目内托 · 上边发展",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白转向上边定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q15,Q17,R17,R10,Q16,P17,S16,M17",
+      "source": "Josekle 归档 · OGS 定式词典节点 #31171"
+    }
+  },
+  {
+    "id": "josekle-31066",
+    "name": "高目 · 外托断出",
+    "original": "Get Strong at Joseki 2 / Joseki 2: Attaching on the Outside / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 2: Attaching on the Outside · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 2: Attaching on the Outside",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "P16",
+        "R15"
+      ],
+      "white": [
+        "R16",
+        "S15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 3,
+    "moves": "Q15,R14,S14,S13,S16,T14,R17",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:2ae7cb9b0981",
+    "topicTitleOverride": "高目 · 外托断出",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑退后切断。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q15,Q17,P17,P18,P16,O17,O18,N18,Q18,O19,R17",
+      "source": "Josekle 归档 · OGS 定式词典节点 #31066"
+    }
+  },
+  {
+    "id": "josekle-variation-31016",
+    "name": "高目外托 · 退让取势",
+    "original": "Get Strong at Joseki 2 / Joseki 2: Attaching on the Outside / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 2: Attaching on the Outside · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 2: Attaching on the Outside",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "P16",
+        "R15"
+      ],
+      "white": [
+        "R16",
+        "S15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R14,S14,R13,Q16,P15,P18,O18,Q18,N17,S13,R11",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:2ae7cb9b0981",
+    "topicTitleOverride": "高目外托 · 退让取势",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白取地，黑取外势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q15,Q17,P17,P18,O17,O18,N17,Q16,P15,S15,S14,S16,R13,N18,L17",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #31016"
+    }
+  },
+  {
+    "id": "josekle-30994",
+    "name": "高目小飞 · 托角变化",
+    "original": "Get Strong at Joseki 2 / Joseki 3: The Knight’s Move / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 3: The Knight’s Move · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Knight’s Move",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "P16",
+        "Q14"
+      ],
+      "white": [
+        "R16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "R14,Q13,R13,Q12,P17,O17,Q17,N16",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:6191903b5895",
+    "topicTitleOverride": "高目小飞 · 托角变化",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "此型须白方征子有利。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q15,Q17,O16,O17,N16,N17,M16,R15,R14,R16,Q13",
+      "source": "Josekle 归档 · OGS 定式词典节点 #30994"
+    }
+  },
+  {
+    "id": "book-strong2-intro-11",
+    "name": "高目小飞 · 左侧托",
+    "original": "Get Strong at Joseki 2 / Joseki 3: The Knight’s Move / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 3: The Knight’s Move · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Knight’s Move",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "P16",
+        "Q14"
+      ],
+      "white": [
+        "R16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "P17,O17,Q17,O16",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:6191903b5895",
+    "topicTitleOverride": "高目小飞 · 左侧托",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白托后有多种应法。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-30892",
+    "name": "高目小飞 · 重视右边",
+    "original": "Get Strong at Joseki 2 / Joseki 3: The Knight’s Move / Dia. 4",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 3: The Knight’s Move · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Knight’s Move",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "P16",
+        "Q14"
+      ],
+      "white": [
+        "R16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "P17,Q16,Q17,R15,S16,R17,S17,O17,Q18,N15",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:6191903b5895",
+    "topicTitleOverride": "高目小飞 · 重视右边",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑重视右边与中央。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q15,Q17,O16,R15,Q16,R16,P17,Q18,R17,R18,R14,S16,P13",
+      "source": "Josekle 归档 · OGS 定式词典节点 #30892"
+    }
+  },
+  {
+    "id": "josekle-32104",
+    "name": "目外 · 压长基本型",
+    "original": "Get Strong at Joseki 2 / Joseki 4: The Pressing Move / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 4: The Pressing Move · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 4: The Pressing Move",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "P17"
+      ],
+      "white": []
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "R16,Q15,R15,Q14,R13",
+    "familyCode": "R15",
+    "topicKeyOverride": "book:strong2:8fddffaf3f53",
+    "topicTitleOverride": "目外 · 压长基本型",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白取三线实地，黑取势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R15,Q17,P16,P17,O16,N17",
+      "source": "OGS 定式词典 · 原站资料来源：Traditional"
+    }
+  },
+  {
+    "id": "book-strong2-intro-16",
+    "name": "目外压长 · 一间跳",
+    "original": "Get Strong at Joseki 2 / Joseki 4: The Pressing Move / Dia. 4",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Joseki 4: The Pressing Move · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 4: The Pressing Move",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "P17"
+      ],
+      "white": [
+        "R16"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 2,
+    "moves": "Q15,R15,Q13,Q14,P14,R14,P13,Q17,P18,R12",
+    "familyCode": "R15",
+    "topicKeyOverride": "book:strong2:74abbfda0be5",
+    "topicTitleOverride": "目外压长 · 一间跳",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑跳后仍可向边展开。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong2-prob1-1",
+    "name": "高目内托 · 眼形要点",
+    "original": "Get Strong at Joseki 2 / Answer 1 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Answer 1 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 1",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "L17",
+        "Q17",
+        "R17",
+        "P16",
+        "Q13"
+      ],
+      "white": [
+        "S17",
+        "R16",
+        "S15"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "R14,Q14",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:c1454d46a456",
+    "topicTitleOverride": "高目内托 · 眼形要点",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白占眼形要点后可脱先。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong2-prob2-1",
+    "name": "高目内托 · 下立制根",
+    "original": "Get Strong at Joseki 2 / Answer 2 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Answer 2 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 2",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "R17",
+        "P16",
+        "Q16"
+      ],
+      "white": [
+        "R16",
+        "R15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "S17,Q11,K17",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:cd14d558713a",
+    "topicTitleOverride": "高目内托 · 下立制根",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑下立破根，白轻灵处理。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong2-prob3-1",
+    "name": "高目内托 · 消除借用",
+    "original": "Get Strong at Joseki 2 / Answer 3 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Answer 3 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 3",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "R17",
+        "P16",
+        "S16",
+        "S15"
+      ],
+      "white": [
+        "Q17",
+        "R16",
+        "R15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R18,R14,P17,Q10",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:cdf43443c153",
+    "topicTitleOverride": "高目内托 · 消除借用",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑3避免留下白棋的先手。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong2-prob5-1",
+    "name": "高目小飞 · 先手交换",
+    "original": "Get Strong at Joseki 2 / Answer 5 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Answer 5 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 5",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "O17",
+        "P16",
+        "Q14",
+        "Q13",
+        "Q12"
+      ],
+      "white": [
+        "P17",
+        "Q17",
+        "R16",
+        "R14",
+        "R13"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q15,R15",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:899a4c4485ab",
+    "topicTitleOverride": "高目小飞 · 先手交换",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "取先手会牺牲部分厚度。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong2-prob6-1",
+    "name": "高目内托 · 战斗续法",
+    "original": "Get Strong at Joseki 2 / Answer 6 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 2》 · Answer 6 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0139_ki_k53_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 2",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 6",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "L17",
+        "Q17",
+        "R17",
+        "P16",
+        "Q15",
+        "Q13"
+      ],
+      "white": [
+        "S17",
+        "Q16",
+        "R16",
+        "P15",
+        "S15"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "P17,O15,R15,S16,R13,R18,Q18,R19,N17",
+    "familyCode": "Q15",
+    "topicKeyOverride": "book:strong2:89c015df648d",
+    "topicTitleOverride": "高目内托 · 战斗续法",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑先接，再作先手交换。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "pachi-44-110",
+    "name": "星位小飞应挂 · 托角定型",
+    "original": "Get Strong at Joseki 3 / Joseki 1: Sliding into the Corner / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 1: Sliding into the Corner · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 1: Sliding into the Corner",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": []
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "R14,O16,S16,R17,R11",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:0cda6436742b",
+    "topicTitleOverride": "星位小飞应挂 · 托角定型",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白托角后局部定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,O16,S16,R17,R11",
+      "source": "Pachi joseki SGF · joseki_44.sgf"
+    }
+  },
+  {
+    "id": "josekle-variation-17626",
+    "name": "星位小飞应挂 · 夹后入角",
+    "original": "Get Strong at Joseki 3 / Joseki 1: Sliding into the Corner / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 1: Sliding into the Corner · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 1: Sliding into the Corner",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 2,
+    "moves": "O16,S16,R12,R17,R15,S15,Q14,S14,Q13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:2ed420505729",
+    "topicTitleOverride": "星位小飞应挂 · 夹后入角",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑封锁，白取角。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,O16,S16,R12,R17,R15,S15,Q14,S14,Q13",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #17626"
+    }
+  },
+  {
+    "id": "josekle-17630",
+    "name": "星位应挂 · 四线展开",
+    "original": "Get Strong at Joseki 3 / Joseki 1: Sliding into the Corner / Dia. 5",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 1: Sliding into the Corner · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 1: Sliding into the Corner",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "O16",
+        "Q16"
+      ],
+      "white": [
+        "S16",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 4,
+    "moves": "R17,Q12",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:81a32e642c02",
+    "topicTitleOverride": "星位应挂 · 四线展开",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白向四线发展。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,O16,S16,R17,Q12",
+      "source": "Josekle 归档 · OGS 定式词典节点 #17630"
+    }
+  },
+  {
+    "id": "josekle-16310",
+    "name": "星位应挂 · 轻灵整形",
+    "original": "Get Strong at Joseki 3 / Joseki 1: Sliding into the Corner / Dia. 8",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 1: Sliding into the Corner · Dia. 8",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 1: Sliding into the Corner",
+      "figure": "Dia. 8"
+    },
+    "setup": {
+      "black": [
+        "O17",
+        "Q16"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "R16,R17,S17,Q17,S15",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:2bd94421490b",
+    "topicTitleOverride": "星位应挂 · 轻灵整形",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白轻灵处理至7定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,O17,R16,R17,S17,Q17,S15",
+      "source": "Josekle 归档 · OGS 定式词典节点 #16310"
+    }
+  },
+  {
+    "id": "book-strong3-intro-12",
+    "name": "星位应挂 · 加压续法",
+    "original": "Get Strong at Joseki 3 / Joseki 1: Sliding into the Corner / Dia. 9",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 1: Sliding into the Corner · Dia. 9",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 1: Sliding into the Corner",
+      "figure": "Dia. 9"
+    },
+    "setup": {
+      "black": [
+        "O17",
+        "Q16"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "R16,R17,S17,R15,S16,Q15,S15,R18,Q14",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:2bd94421490b",
+    "topicTitleOverride": "星位应挂 · 加压续法",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白11紧黑棋的气。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-19109",
+    "name": "星位托挂 · 右边安定",
+    "original": "Get Strong at Joseki 3 / Joseki 2: The Attachment / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 2: The Attachment · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 2: The Attachment",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q14"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "Q13,P14,R15,R16,R12,O16",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:ee4248807981",
+    "topicTitleOverride": "星位托挂 · 右边安定",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白安定，黑得上边厚势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q14,Q13,P14,R15,R16,R12,O16",
+      "source": "OGS 定式词典 · 原站资料来源：Bozulich - Get Strong at Joseki 3"
+    }
+  },
+  {
+    "id": "josekle-variation-18881",
+    "name": "星位托挂 · 挡住角地",
+    "original": "Get Strong at Joseki 3 / Joseki 2: The Attachment / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 2: The Attachment · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 2: The Attachment",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q14"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "Q13,R15,P14,Q15,R13,O16,R9",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:ee4248807981",
+    "topicTitleOverride": "星位托挂 · 挡住角地",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑挡以重视角地。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q14,Q13,R15,P14,Q15,R13,O16,R9",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #18881"
+    }
+  },
+  {
+    "id": "josekle-variation-18871",
+    "name": "星位托挂 · 外接变化",
+    "original": "Get Strong at Joseki 3 / Joseki 2: The Attachment / Dia. 4",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 2: The Attachment · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 2: The Attachment",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R15",
+        "Q14"
+      ],
+      "white": [
+        "R14",
+        "Q13"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 5,
+    "moves": "P14,Q15,P13,R13,R12,S14,S13,O16",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:527488a23610",
+    "topicTitleOverride": "星位托挂 · 外接变化",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑提子后跳出。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q14,Q13,R15,P14,Q15,P13,R13,R12,S14,S13,O16",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #18871"
+    }
+  },
+  {
+    "id": "josekle-variation-18831",
+    "name": "星位托挂 · 弃子取势",
+    "original": "Get Strong at Joseki 3 / Joseki 2: The Attachment / Dia. 5",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 2: The Attachment · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 2: The Attachment",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q14"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "Q13,R13,Q15,P14,R15,P15,R12,S13,S12,P13,Q12,R16,S14,S15,T13,O17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:ee4248807981",
+    "topicTitleOverride": "星位托挂 · 弃子取势",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑弃二子，双方取势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q14,Q13,R13,Q15,P14,R15,P15,R12,S13,S12,P13,Q12,R16,S14,S15,T13,O17",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #18831"
+    }
+  },
+  {
+    "id": "josekle-variation-19160",
+    "name": "星位托挂 · 征子分支",
+    "original": "Get Strong at Joseki 3 / Joseki 2: The Attachment / Dia. 6",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 2: The Attachment · Dia. 6",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 2: The Attachment",
+      "figure": "Dia. 6"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q14"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "Q15,P15,R15,P16,R16,R17,S17,S18,R18,Q17,T18,R13,S19,S14,S15,T15,S16,Q13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:ee4248807981",
+    "topicTitleOverride": "星位托挂 · 征子分支",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "须白征有利，白角黑势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q14,Q15,P15,R15,P16,R16,R17,S17,S18,R18,Q17,T18,R13,S19,S14,S15,T15,S16,Q13",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #19160"
+    }
+  },
+  {
+    "id": "book-strong3-intro-20",
+    "name": "星位三间高夹 · 入角",
+    "original": "Get Strong at Joseki 3 / Joseki 3: The Three-Space High Pincer / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 3: The Three-Space High Pincer · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Three-Space High Pincer",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": []
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "R14,Q10,R17,R16,Q17,P16,S16,S15,S17,R15,O17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:0cda6436742b",
+    "topicTitleOverride": "星位三间高夹 · 入角",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑封挡，向夹子取势。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-19522",
+    "name": "星位三间高夹 · 双飞",
+    "original": "Get Strong at Joseki 3 / Joseki 3: The Three-Space High Pincer / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 3: The Three-Space High Pincer · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Three-Space High Pincer",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q10"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "O17,O16,N16,O15,R17,P17,R16,N17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:fadba07abda8",
+    "topicTitleOverride": "星位三间高夹 · 双飞",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "双飞后双方平稳定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O17,O16,N16,O15,R17,P17,R16,N17",
+      "source": "Josekle 归档 · OGS 定式词典节点 #19522"
+    }
+  },
+  {
+    "id": "josekle-variation-19508",
+    "name": "星位三间高夹 · 战斗分支",
+    "original": "Get Strong at Joseki 3 / Joseki 3: The Three-Space High Pincer / Dia. 4",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 3: The Three-Space High Pincer · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Three-Space High Pincer",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "O16",
+        "Q16",
+        "O15",
+        "Q10"
+      ],
+      "white": [
+        "O17",
+        "N16",
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 7,
+    "moves": "P17,Q17,Q13,R15,S15,Q14,S14,S16,O13,N14,L17,P18",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:5d8c9763f87a",
+    "topicTitleOverride": "星位三间高夹 · 战斗分支",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑18保全角部。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O17,O16,N16,O15,P17,Q17,Q13,R15,S15,Q14,S14,S16,O13,N14,L17,P18",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #19508"
+    }
+  },
+  {
+    "id": "josekle-variation-19449",
+    "name": "星位三间高夹 · 重视实地",
+    "original": "Get Strong at Joseki 3 / Joseki 3: The Three-Space High Pincer / Dia. 5",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 3: The Three-Space High Pincer · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Three-Space High Pincer",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "O16",
+        "Q16",
+        "Q10"
+      ],
+      "white": [
+        "O17",
+        "N16",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 6,
+    "moves": "P17,O15,P16,O18,Q14,Q13,P14,S15,S16,R16,R17,R15,S17,R12",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:31341e59e1a2",
+    "topicTitleOverride": "星位三间高夹 · 重视实地",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑防白轻易点三三。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O17,O16,N16,P17,O15,P16,O18,Q14,Q13,P14,S15,S16,R16,R17,R15,S17,R12",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #19449"
+    }
+  },
+  {
+    "id": "book-strong3-intro-24",
+    "name": "星位三间高夹 · 简明取势",
+    "original": "Get Strong at Joseki 3 / Joseki 3: The Three-Space High Pincer / Dia. 6",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 3: The Three-Space High Pincer · Dia. 6",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Three-Space High Pincer",
+      "figure": "Dia. 6"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q10"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "O17,P15,R17,R16,Q17,N15",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:fadba07abda8",
+    "topicTitleOverride": "星位三间高夹 · 简明取势",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑用简明手段取厚势。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-19431",
+    "name": "星位三间高夹 · 飞攻续法",
+    "original": "Get Strong at Joseki 3 / Joseki 3: The Three-Space High Pincer / Dia. 7",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 3: The Three-Space High Pincer · Dia. 7",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 3: The Three-Space High Pincer",
+      "figure": "Dia. 7"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R16",
+        "P15",
+        "Q10"
+      ],
+      "white": [
+        "O17",
+        "Q17",
+        "R17",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 8,
+    "moves": "N16,N17,M16",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:5dc04176c9a9",
+    "topicTitleOverride": "星位三间高夹 · 飞攻续法",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑飞后白爬，黑长定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O17,P15,R17,R16,Q17,N16,N17,M16",
+      "source": "OGS 定式词典 · 原站资料来源：Bozulich - Get Strong at Joseki 3"
+    }
+  },
+  {
+    "id": "josekle-variation-19378",
+    "name": "星位高双飞 · 连片取厚",
+    "original": "Get Strong at Joseki 3 / Joseki 4: The High One-Space Double-Approach Move / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 4: The High One-Space Double-Approach Move · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 4: The High One-Space Double-Approach Move",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q10"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "O16,Q14,Q13,P14,R15,P16,S17,P13,Q12,P12",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:fadba07abda8",
+    "topicTitleOverride": "星位高双飞 · 连片取厚",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "有夹子时黑推连取厚。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O16,Q14,Q13,P14,R15,P16,S17,P13,Q12,P12",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #19378"
+    }
+  },
+  {
+    "id": "josekle-19368",
+    "name": "星位高双飞 · 托后入角",
+    "original": "Get Strong at Joseki 3 / Joseki 4: The High One-Space Double-Approach Move / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 4: The High One-Space Double-Approach Move · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 4: The High One-Space Double-Approach Move",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q10"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "O16,O15,N15,P15,R17,N16,R16,M16",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:fadba07abda8",
+    "topicTitleOverride": "星位高双飞 · 托后入角",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白入角，双方定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O16,O15,N15,P15,R17,N16,R16,M16",
+      "source": "OGS 定式词典 · 原站资料来源：Bozulich - Get Strong at Joseki 3"
+    }
+  },
+  {
+    "id": "josekle-variation-19276",
+    "name": "星位高双飞 · 提子与劫味",
+    "original": "Get Strong at Joseki 3 / Joseki 4: The High One-Space Double-Approach Move / Dia. 4",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 4: The High One-Space Double-Approach Move · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 4: The High One-Space Double-Approach Move",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q10"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "O16,R15,Q14,P15,Q15,P16,R16,R17,S15,S16",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:fadba07abda8",
+    "topicTitleOverride": "星位高双飞 · 提子与劫味",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "后续可能发生劫争。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O16,R15,Q14,P15,Q15,P16,R16,R17,S15,S16",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #19276"
+    }
+  },
+  {
+    "id": "josekle-variation-19267",
+    "name": "星位高双飞 · 弃角取势",
+    "original": "Get Strong at Joseki 3 / Joseki 4: The High One-Space Double-Approach Move / Dia. 5",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 4: The High One-Space Double-Approach Move · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 4: The High One-Space Double-Approach Move",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R15",
+        "Q10"
+      ],
+      "white": [
+        "O16",
+        "Q14",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 6,
+    "moves": "P15,R17,Q17,S15,R16,S16,S17,O14,R18,P14",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:726dd254f6cd",
+    "topicTitleOverride": "星位高双飞 · 弃角取势",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白弃入角子取外势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O16,R15,Q14,P15,R17,Q17,S15,R16,S16,S17,O14,R18,P14",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #19267"
+    }
+  },
+  {
+    "id": "josekle-19896",
+    "name": "星位二间高夹 · 点三三",
+    "original": "Get Strong at Joseki 3 / Joseki 5: The Two-Space High Pincer / Dia. 2",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 5: The Two-Space High Pincer · Dia. 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 5: The Two-Space High Pincer",
+      "figure": "Dia. 2"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q11"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "R17,R16,Q17,P16,S16,S15,S17,R15,O17,Q14",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:bf368194efc4",
+    "topicTitleOverride": "星位二间高夹 · 点三三",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑12收束此型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q11,R17,R16,Q17,P16,S16,S15,S17,R15,O17,Q14",
+      "source": "Josekle 归档 · OGS 定式词典节点 #19896"
+    }
+  },
+  {
+    "id": "josekle-19830",
+    "name": "星位二间高夹 · 双飞应托",
+    "original": "Get Strong at Joseki 3 / Joseki 5: The Two-Space High Pincer / Dia. 3",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 5: The Two-Space High Pincer · Dia. 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 5: The Two-Space High Pincer",
+      "figure": "Dia. 3"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q11"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "O17,Q14,Q13,P14,R17,R15,Q17,S14",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:bf368194efc4",
+    "topicTitleOverride": "星位二间高夹 · 双飞应托",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑托后至10定型。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q11,O17,Q14,Q13,P14,R17,R15,Q17,S14",
+      "source": "Josekle 归档 · OGS 定式词典节点 #19830"
+    }
+  },
+  {
+    "id": "book-strong3-intro-34",
+    "name": "星位夹攻 · 配合远方星位",
+    "original": "Get Strong at Joseki 3 / Joseki 5: The Two-Space High Pincer / Dia. 4",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 5: The Two-Space High Pincer · Dia. 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 5: The Two-Space High Pincer",
+      "figure": "Dia. 4"
+    },
+    "setup": {
+      "black": [
+        "K16",
+        "Q16",
+        "Q11"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "R17,Q17,R16,Q15,R15,Q14,Q13,P13,P12,Q12,R13,O13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:144e52feb227",
+    "topicTitleOverride": "星位夹攻 · 配合远方星位",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑配合远方子成模样。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong3-intro-35",
+    "name": "星位夹攻 · 限制模样",
+    "original": "Get Strong at Joseki 3 / Joseki 5: The Two-Space High Pincer / Dia. 5",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Joseki 5: The Two-Space High Pincer · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Joseki 5: The Two-Space High Pincer",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "K16",
+        "Q16",
+        "Q11"
+      ],
+      "white": [
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "P14,O16,S16,R17,S11",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:144e52feb227",
+    "topicTitleOverride": "星位夹攻 · 限制模样",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白限制模样但位置偏低。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-16019",
+    "name": "星位入角 · 接住减势",
+    "original": "Get Strong at Joseki 3 / Answer 1 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Answer 1 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 1",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "O17",
+        "Q16",
+        "R15",
+        "Q14",
+        "R12"
+      ],
+      "white": [
+        "R17",
+        "S16",
+        "S15",
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "S14,Q13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:f7533c47a11d",
+    "topicTitleOverride": "星位入角 · 接住减势",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白接可减轻黑棋厚势。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,O17,S16,R12,R17,R15,S15,Q14,S14,Q13",
+      "source": "Josekle 归档 · OGS 定式词典节点 #16019"
+    }
+  },
+  {
+    "id": "pachi-44-123",
+    "name": "星位入角 · 先手做活",
+    "original": "Get Strong at Joseki 3 / Answer 2 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Answer 2 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 2",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "O17",
+        "R17",
+        "Q16",
+        "Q15",
+        "R15",
+        "S15"
+      ],
+      "white": [
+        "Q17",
+        "S17",
+        "R16",
+        "S16",
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "P17,O16",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:7657dd55fb58",
+    "topicTitleOverride": "星位入角 · 先手做活",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白先手活，黑仍有取厚手段。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,O16,R16,R17,S17,R15,S16,S15,Q17,Q15,P17,O17",
+      "source": "Pachi joseki SGF · joseki_44.sgf"
+    }
+  },
+  {
+    "id": "book-strong3-prob3-1",
+    "name": "星位夹攻 · 对无理断的攻杀",
+    "original": "Get Strong at Joseki 3 / Answer 3 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Answer 3 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 3",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "K17",
+        "Q16",
+        "R16",
+        "P15",
+        "P14",
+        "Q14"
+      ],
+      "white": [
+        "P16",
+        "Q15",
+        "R15",
+        "R14",
+        "Q13",
+        "R10"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "S16,S15,R13,S13,R12,S12,O16,P17,O17,Q18,O18,S18",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:6c293567a473",
+    "topicTitleOverride": "星位夹攻 · 对无理断的攻杀",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑先交换，再对杀。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-strong3-prob4-1",
+    "name": "星位夹攻 · 轻弃二子",
+    "original": "Get Strong at Joseki 3 / Answer 4 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Answer 4 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 4",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "Q17",
+        "O16",
+        "Q16",
+        "O15",
+        "Q10"
+      ],
+      "white": [
+        "O17",
+        "P17",
+        "N16",
+        "P16",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q15,P15,Q14,P14,Q13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:15322f4c8fbb",
+    "topicTitleOverride": "星位夹攻 · 轻弃二子",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑轻弃二子取右边。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-19428",
+    "name": "星位夹攻 · 顾中央模样",
+    "original": "Get Strong at Joseki 3 / Answer 5 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Answer 5 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 5",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "N16",
+        "Q16",
+        "R16",
+        "P15",
+        "Q15",
+        "S15",
+        "Q10"
+      ],
+      "white": [
+        "O17",
+        "Q17",
+        "R17",
+        "S17",
+        "P16",
+        "S16",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:998cd78ecf10",
+    "topicTitleOverride": "星位夹攻 · 顾中央模样",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑跳以保护中央。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R14,Q10,O17,P15,R17,R16,Q17,N16,P16,Q15,S16,S15,S17,Q13",
+      "source": "Josekle 归档 · OGS 定式词典节点 #19428"
+    }
+  },
+  {
+    "id": "book-strong3-prob6-1",
+    "name": "星位入角 · 先手封边",
+    "original": "Get Strong at Joseki 3 / Answer 6 / Correct Answer",
+    "source": "Richard Bozulich、Furuyama Kazunari《Get Strong at Joseki 3》 · Answer 6 · Correct Answer",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0140_ki_k54_sample.epub",
+    "bookRef": {
+      "title": "Get Strong at Joseki 3",
+      "author": "Richard Bozulich、Furuyama Kazunari",
+      "chapter": "Answer 6",
+      "figure": "Correct Answer"
+    },
+    "setup": {
+      "black": [
+        "O16",
+        "Q16",
+        "R15",
+        "Q14",
+        "Q13",
+        "R12"
+      ],
+      "white": [
+        "R17",
+        "S16",
+        "S15",
+        "R14",
+        "S14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q18,R18",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:strong3:69eaf9321ab5",
+    "topicTitleOverride": "星位入角 · 先手封边",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑封边，白必须应。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch1-3",
+    "name": "小目 · 下立应法",
+    "original": "Correct Joseki / Game 1: Correcting Joseki Mistakes / Variation 2",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 1: Correcting Joseki Mistakes · Variation 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 1: Correcting Joseki Mistakes",
+      "figure": "Variation 2"
+    },
+    "setup": {
+      "black": [
+        "D17",
+        "F16",
+        "C13",
+        "C4",
+        "E3"
+      ],
+      "white": [
+        "D15",
+        "E14",
+        "D12"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "C16,C12,D13,E13,B14,F11",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:correct:79eb08fcb31d",
+    "topicTitleOverride": "小目 · 下立应法",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白下立后的定式续法。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch1-4",
+    "name": "小目 · 另一侧下立",
+    "original": "Correct Joseki / Game 1: Correcting Joseki Mistakes / Variation 3",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 1: Correcting Joseki Mistakes · Variation 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 1: Correcting Joseki Mistakes",
+      "figure": "Variation 3"
+    },
+    "setup": {
+      "black": [
+        "D17",
+        "F16",
+        "C13",
+        "C4",
+        "E3"
+      ],
+      "white": [
+        "D15",
+        "E14",
+        "D12"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "C16,C15,D10,C12,H16",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:correct:79eb08fcb31d",
+    "topicTitleOverride": "小目 · 另一侧下立",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白换方向下立，黑对应处理。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch1-13",
+    "name": "小目 · 稳健收束",
+    "original": "Correct Joseki / Game 1: Correcting Joseki Mistakes / Variation 11",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 1: Correcting Joseki Mistakes · Variation 11",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 1: Correcting Joseki Mistakes",
+      "figure": "Variation 11"
+    },
+    "setup": {
+      "black": [
+        "D17",
+        "F16",
+        "C13",
+        "C11",
+        "C4",
+        "E3"
+      ],
+      "white": [
+        "D15",
+        "E14",
+        "D12"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "C17,C18,C16,E18,C12,B12,D13,D9,B13",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:correct:fc95b7136964",
+    "topicTitleOverride": "小目 · 稳健收束",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白7安全，是正常定式。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch17-5",
+    "name": "星位夹攻 · 配合全局",
+    "original": "Correct Joseki / Game 17: Choosing the Right Joseki / Variation 3",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 17: Choosing the Right Joseki · Variation 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 17: Choosing the Right Joseki",
+      "figure": "Variation 3"
+    },
+    "setup": {
+      "black": [
+        "F17",
+        "N17",
+        "F16",
+        "Q16",
+        "F15",
+        "F14",
+        "Q3"
+      ],
+      "white": [
+        "E17",
+        "C16",
+        "E16",
+        "E15",
+        "D13",
+        "Q5",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R7,R3,R4,Q4,R5,R6,Q6,S6,S3,R2,S5,P3,S7,P6,Q7",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:correct:d9d0b549f747",
+    "topicTitleOverride": "星位夹攻 · 配合全局",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑子配合上边模样。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch17-6",
+    "name": "星位夹攻 · 先手取势",
+    "original": "Correct Joseki / Game 17: Choosing the Right Joseki / Variation 4",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 17: Choosing the Right Joseki · Variation 4",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 17: Choosing the Right Joseki",
+      "figure": "Variation 4"
+    },
+    "setup": {
+      "black": [
+        "F17",
+        "N17",
+        "F16",
+        "Q16",
+        "F15",
+        "F14",
+        "Q3"
+      ],
+      "white": [
+        "E17",
+        "C16",
+        "E16",
+        "E15",
+        "D13",
+        "Q5",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R7,R3,R4,Q4,R5,R6,S6,P3,Q6,Q2",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:correct:d9d0b549f747",
+    "topicTitleOverride": "星位夹攻 · 先手取势",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑配合上边并取先手。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch17-10",
+    "name": "星位夹攻 · 扩大模样",
+    "original": "Correct Joseki / Game 17: Choosing the Right Joseki / Variation 8",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 17: Choosing the Right Joseki · Variation 8",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 17: Choosing the Right Joseki",
+      "figure": "Variation 8"
+    },
+    "setup": {
+      "black": [
+        "F17",
+        "N17",
+        "F16",
+        "Q16",
+        "F15",
+        "F14",
+        "Q3"
+      ],
+      "white": [
+        "E17",
+        "C16",
+        "E16",
+        "E15",
+        "D13",
+        "Q5",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R7,P6,P7,O7,P8,R6,S7,O3,O6,O5,N6,N5,M6,L4,K6",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:correct:d9d0b549f747",
+    "topicTitleOverride": "星位夹攻 · 扩大模样",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑5改善全局配合。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch17-11",
+    "name": "星位宽夹 · 攻击方向",
+    "original": "Correct Joseki / Game 17: Choosing the Right Joseki / Variation 9",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 17: Choosing the Right Joseki · Variation 9",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 17: Choosing the Right Joseki",
+      "figure": "Variation 9"
+    },
+    "setup": {
+      "black": [
+        "F17",
+        "N17",
+        "F16",
+        "Q16",
+        "F15",
+        "F14",
+        "Q3"
+      ],
+      "white": [
+        "E17",
+        "C16",
+        "E16",
+        "E15",
+        "D13",
+        "Q5",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q8,O5,N3",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:correct:d9d0b549f747",
+    "topicTitleOverride": "星位宽夹 · 攻击方向",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "夹攻方向配合黑模样。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-correct-ch17-12",
+    "name": "星位宽夹 · 另一应法",
+    "original": "Correct Joseki / Game 17: Choosing the Right Joseki / Variation 10",
+    "source": "江鸣久 七段、郭鹃 五段《Correct Joseki》 · Game 17: Choosing the Right Joseki · Variation 10",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0036_ss_deal_sample.epub",
+    "bookRef": {
+      "title": "Correct Joseki",
+      "author": "江鸣久 七段、郭鹃 五段",
+      "chapter": "Game 17: Choosing the Right Joseki",
+      "figure": "Variation 10"
+    },
+    "setup": {
+      "black": [
+        "F17",
+        "N17",
+        "F16",
+        "Q16",
+        "F15",
+        "F14",
+        "Q3"
+      ],
+      "white": [
+        "E17",
+        "C16",
+        "E16",
+        "E15",
+        "D13",
+        "Q5",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q8,N4,P5,P6,O5,Q4,O3,R3,P3,O6,N5,S4,J3",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:correct:d9d0b549f747",
+    "topicTitleOverride": "星位宽夹 · 另一应法",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "双方可下，黑与模样配合。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-alphago33-contents-1",
+    "name": "早期点三三 · 高位展开",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Move 10",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Move 10",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Move 10"
+    },
+    "setup": {
+      "black": [
+        "N17",
+        "O17",
+        "P17",
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "O18",
+        "P18",
+        "Q17",
+        "R17"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 10,
+    "moves": "Q10",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:661fbce56ff7",
+    "topicTitleOverride": "早期点三三 · 高位展开",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白省去扳粘，改向高位展开。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-alphago33-contents-2",
+    "name": "早期点三三 · 窥后联络",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / AlphaGo’s Innovation",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · AlphaGo’s Innovation",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "AlphaGo’s Innovation"
+    },
+    "setup": {
+      "black": [
+        "N17",
+        "O17",
+        "P17",
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "O18",
+        "P18",
+        "Q17",
+        "R17",
+        "Q10"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "P15,P16,Q13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:8b4b456f2f81",
+    "topicTitleOverride": "早期点三三 · 窥后联络",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "高位子配合白窥与联络。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-alphago33-contents-4",
+    "name": "点三三二段扳 · 提花取势",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 8–13",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 8–13",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 8–13"
+    },
+    "setup": {
+      "black": [
+        "O18",
+        "P17",
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "P18",
+        "Q17",
+        "R17"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 8,
+    "moves": "O17,P16,N18,Q18,O19,R18",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:0daa9d171349",
+    "topicTitleOverride": "点三三二段扳 · 提花取势",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白提花取先手，黑取得角地。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-variation-22684",
+    "name": "点三三二段扳 · 换向提花",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 12–15",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 12–15",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 12–15"
+    },
+    "setup": {
+      "black": [
+        "O18",
+        "P17",
+        "P16",
+        "Q16",
+        "R16",
+        "S15"
+      ],
+      "white": [
+        "P18",
+        "Q17",
+        "R17",
+        "S16",
+        "R15"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 12,
+    "moves": "S14,S17,T15,S18",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:879f9700178e",
+    "topicTitleOverride": "点三三二段扳 · 换向提花",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白可选择提花的方向。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R17,R16,Q17,P17,P18,O18,S16,S15,R15,P16,S14,S17,T15,S18",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #22684"
+    }
+  },
+  {
+    "id": "book-alphago33-contents-8",
+    "name": "早期点三三 · 长后定型",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 5–9",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 5–9",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 5–9"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "Q17",
+        "R17"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 5,
+    "moves": "O17,P17,P16,O18,N17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:23769602f5b1",
+    "topicTitleOverride": "早期点三三 · 长后定型",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑长后取得较扎实的外势。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-alphago33-contents-12",
+    "name": "早期点三三 · 连长变化",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 1–12",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 1–12",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 1–12"
+    },
+    "setup": {
+      "black": [],
+      "white": []
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q16,R17,R16,Q17,P16,P17,O17,O18,N17,N18,M17,Q10",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:0823a28c44c7",
+    "topicTitleOverride": "早期点三三 · 连长变化",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑连续长出，限制白外侧配合。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-alphago33-contents-13",
+    "name": "早期点三三 · 窥后的薄味",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 14–16",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 14–16",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 14–16"
+    },
+    "setup": {
+      "black": [
+        "M17",
+        "N17",
+        "O17",
+        "P16",
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "N18",
+        "O18",
+        "P17",
+        "Q17",
+        "R17",
+        "Q10"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 14,
+    "moves": "O15,O16,Q13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:ae433f006ec8",
+    "topicTitleOverride": "早期点三三 · 窥后的薄味",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白外侧棋子仍有象眼薄味。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-alphago33-contents-17",
+    "name": "早期点三三 · 白保留角地",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 9–10",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 9–10",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 9–10"
+    },
+    "setup": {
+      "black": [
+        "O17",
+        "P16",
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "O18",
+        "P17",
+        "Q17",
+        "R17"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 9,
+    "moves": "S17,S18",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:a6f0a000bc65",
+    "topicTitleOverride": "早期点三三 · 白保留角地",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白10选择保住角地。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-alphago33-contents-18",
+    "name": "早期点三三 · 交换后二段扳",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 9–11",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 9–11",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 9–11"
+    },
+    "setup": {
+      "black": [
+        "O17",
+        "P16",
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "O18",
+        "P17",
+        "Q17",
+        "R17"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 9,
+    "moves": "S17,S18,N18",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:a6f0a000bc65",
+    "topicTitleOverride": "早期点三三 · 交换后二段扳",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "黑先作9、10交换再二段扳。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-22082",
+    "name": "早期点三三 · 提子活角",
+    "original": "Playing AlphaGo’s Early 3–3 Invasion / Analysis of the Early 3–3 Invasion / Moves 14–16",
+    "source": "Yuan Zhou《Playing AlphaGo’s Early 3–3 Invasion》 · Analysis of the Early 3–3 Invasion · Moves 14–16",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0131_ss_pagi_sample.epub",
+    "bookRef": {
+      "title": "Playing AlphaGo’s Early 3–3 Invasion",
+      "author": "Yuan Zhou",
+      "chapter": "Analysis of the Early 3–3 Invasion",
+      "figure": "Moves 14–16"
+    },
+    "setup": {
+      "black": [
+        "N18",
+        "N17",
+        "O17",
+        "S17",
+        "P16",
+        "Q16",
+        "R16"
+      ],
+      "white": [
+        "O18",
+        "S18",
+        "P17",
+        "Q17",
+        "R17",
+        "O16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 14,
+    "moves": "S16,S15,T17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:alphago33:368b78163282",
+    "topicTitleOverride": "早期点三三 · 提子活角",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "白14、16提子，安定角部。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "Q16,R17,R16,Q17,O17,P17,P16,O18,S17,S18,N18,S16,S15,O16,N17,T17",
+      "source": "Josekle 归档 · OGS 定式词典节点 #22082"
+    }
+  },
+  {
+    "id": "book-newmoves-ch1-2",
+    "name": "小目新手 · 扳后退让",
+    "original": "New Moves / Move #1 Wang Yang’s New Attachment / Diagram 2",
+    "source": "Alexander Dinerchtein 三段、安永吉 八段《New Moves》 · Move #1 Wang Yang’s New Attachment · Diagram 2",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0092_ss_nwmv_sample.epub",
+    "bookRef": {
+      "title": "New Moves",
+      "author": "Alexander Dinerchtein 三段、安永吉 八段",
+      "chapter": "Move #1 Wang Yang’s New Attachment",
+      "figure": "Diagram 2"
+    },
+    "setup": {
+      "black": [
+        "C6",
+        "E4",
+        "P4"
+      ],
+      "white": [
+        "C8",
+        "D4",
+        "R4",
+        "P3"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "E3,C4,D5,C3,D3,O3,Q3,B6,O4,E7",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:newmoves:8b50ba8a510c",
+    "topicTitleOverride": "小目新手 · 扳后退让",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "书中两位作者对优劣有分歧，作为研究变化阅读。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-newmoves-ch1-3",
+    "name": "小目新手 · 黑改换续法",
+    "original": "New Moves / Move #1 Wang Yang’s New Attachment / Diagram 3",
+    "source": "Alexander Dinerchtein 三段、安永吉 八段《New Moves》 · Move #1 Wang Yang’s New Attachment · Diagram 3",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0092_ss_nwmv_sample.epub",
+    "bookRef": {
+      "title": "New Moves",
+      "author": "Alexander Dinerchtein 三段、安永吉 八段",
+      "chapter": "Move #1 Wang Yang’s New Attachment",
+      "figure": "Diagram 3"
+    },
+    "setup": {
+      "black": [
+        "C6",
+        "C4",
+        "E4",
+        "P4",
+        "C3",
+        "O3"
+      ],
+      "white": [
+        "C8",
+        "D5",
+        "D4",
+        "R4",
+        "D3",
+        "E3",
+        "P3",
+        "Q3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 8,
+    "moves": "O4,R6,K3,C5,B5,B6,B7,B4,A6,B3,C9",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:newmoves:c74812782ced",
+    "topicTitleOverride": "小目新手 · 黑改换续法",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "书中认为黑可下，白略好。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-newmoves-ch1-5",
+    "name": "小目新手 · 下立应贴",
+    "original": "New Moves / Move #1 Wang Yang’s New Attachment / Diagram 5",
+    "source": "Alexander Dinerchtein 三段、安永吉 八段《New Moves》 · Move #1 Wang Yang’s New Attachment · Diagram 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0092_ss_nwmv_sample.epub",
+    "bookRef": {
+      "title": "New Moves",
+      "author": "Alexander Dinerchtein 三段、安永吉 八段",
+      "chapter": "Move #1 Wang Yang’s New Attachment",
+      "figure": "Diagram 5"
+    },
+    "setup": {
+      "black": [
+        "C6",
+        "E4",
+        "P4"
+      ],
+      "white": [
+        "C8",
+        "D4",
+        "R4",
+        "P3"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "D3,E5,F2,E7,C11",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:newmoves:8b50ba8a510c",
+    "topicTitleOverride": "小目新手 · 下立应贴",
+    "stageOverride": "进阶",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "进阶"
+    ],
+    "overview": [
+      "双方可下；白下立避免给黑先手整形。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-basic38-jose1-0",
+    "name": "三三 · 肩冲基本定式",
+    "original": "38 Basic Josekis / Joseki 1 / Basic Joseki 1",
+    "source": "小杉清 八段、James Davies《38 Basic Josekis》 · Joseki 1 · Basic Joseki 1",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0053_ki_k11_sample.epub",
+    "bookRef": {
+      "title": "38 Basic Josekis",
+      "author": "小杉清 八段、James Davies",
+      "chapter": "Joseki 1",
+      "figure": "Basic Joseki 1"
+    },
+    "setup": {
+      "black": [],
+      "white": [
+        "C3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "D4,D3,E4,B5,D7",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:basic38:3e386a0db163",
+    "topicTitleOverride": "三三 · 肩冲基本定式",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白取角，黑取得面向中央的棋形。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-basic38-jose1-5",
+    "name": "三三肩冲 · 白补边",
+    "original": "38 Basic Josekis / Joseki 1 / Dia. 5",
+    "source": "小杉清 八段、James Davies《38 Basic Josekis》 · Joseki 1 · Dia. 5",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0053_ki_k11_sample.epub",
+    "bookRef": {
+      "title": "38 Basic Josekis",
+      "author": "小杉清 八段、James Davies",
+      "chapter": "Joseki 1",
+      "figure": "Dia. 5"
+    },
+    "setup": {
+      "black": [
+        "D4",
+        "E4"
+      ],
+      "white": [
+        "B5",
+        "C3",
+        "D3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 5,
+    "moves": "D7,F2",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:basic38:ab0bd629ff0f",
+    "topicTitleOverride": "三三肩冲 · 白补边",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白补边地，黑取得先手。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-basic38-jose1-6",
+    "name": "三三肩冲 · 黑方变化",
+    "original": "38 Basic Josekis / Joseki 1 / Dia. 6",
+    "source": "小杉清 八段、James Davies《38 Basic Josekis》 · Joseki 1 · Dia. 6",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0053_ki_k11_sample.epub",
+    "bookRef": {
+      "title": "38 Basic Josekis",
+      "author": "小杉清 八段、James Davies",
+      "chapter": "Joseki 1",
+      "figure": "Dia. 6"
+    },
+    "setup": {
+      "black": [
+        "D4",
+        "E4"
+      ],
+      "white": [
+        "C3",
+        "D3"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 4,
+    "moves": "C4,D6,C5,F7",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:basic38:d74c5d2b7202",
+    "topicTitleOverride": "三三肩冲 · 黑方变化",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑准备封锁，白须顾及展开。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-basic38-jose1-7",
+    "name": "三三肩冲 · 双翼中的应法",
+    "original": "38 Basic Josekis / Joseki 1 / Dia. 7",
+    "source": "小杉清 八段、James Davies《38 Basic Josekis》 · Joseki 1 · Dia. 7",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0053_ki_k11_sample.epub",
+    "bookRef": {
+      "title": "38 Basic Josekis",
+      "author": "小杉清 八段、James Davies",
+      "chapter": "Joseki 1",
+      "figure": "Dia. 7"
+    },
+    "setup": {
+      "black": [],
+      "white": [
+        "D9",
+        "C3",
+        "J3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "D4,C4,D5,E2,G4",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:basic38:03f1d29c767e",
+    "topicTitleOverride": "三三肩冲 · 双翼中的应法",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "外围配置决定肩冲的价值。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-basic38-jose1-8",
+    "name": "三三肩冲 · 取地与出头",
+    "original": "38 Basic Josekis / Joseki 1 / Dia. 8",
+    "source": "小杉清 八段、James Davies《38 Basic Josekis》 · Joseki 1 · Dia. 8",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0053_ki_k11_sample.epub",
+    "bookRef": {
+      "title": "38 Basic Josekis",
+      "author": "小杉清 八段、James Davies",
+      "chapter": "Joseki 1",
+      "figure": "Dia. 8"
+    },
+    "setup": {
+      "black": [],
+      "white": [
+        "D9",
+        "C3",
+        "J3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "D4,C4,D5,C5,D6,C6,D7,C7,D8,C8,E9,D10,G3",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:basic38:03f1d29c767e",
+    "topicTitleOverride": "三三肩冲 · 取地与出头",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白转取边地，黑13争眼形。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "book-mistakes-ch1-1",
+    "name": "三三 · 基本长出",
+    "original": "Punishing and Correcting Joseki Mistakes / Game 1 / Joseki 1",
+    "source": "江鸣久 七段、Adam Miller《Punishing and Correcting Joseki Mistakes》 · Game 1 · Joseki 1",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0032_ss_mist_sample.epub",
+    "bookRef": {
+      "title": "Punishing and Correcting Joseki Mistakes",
+      "author": "江鸣久 七段、Adam Miller",
+      "chapter": "Game 1",
+      "figure": "Joseki 1"
+    },
+    "setup": {
+      "black": [],
+      "white": []
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "C3,D4,D3,E4,B5,D7,F2,H4",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:mistakes:0823a28c44c7",
+    "topicTitleOverride": "三三 · 基本长出",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白重实地，黑重外势。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。"
+  },
+  {
+    "id": "josekle-variation-31289",
+    "name": "三三 · 黑角白势",
+    "original": "Punishing and Correcting Joseki Mistakes / Game 2 / Joseki 1: Normal Joseki",
+    "source": "江鸣久 七段、Adam Miller《Punishing and Correcting Joseki Mistakes》 · Game 2 · Joseki 1: Normal Joseki",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0032_ss_mist_sample.epub",
+    "bookRef": {
+      "title": "Punishing and Correcting Joseki Mistakes",
+      "author": "江鸣久 七段、Adam Miller",
+      "chapter": "Game 2",
+      "figure": "Joseki 1: Normal Joseki"
+    },
+    "setup": {
+      "black": [],
+      "white": []
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R3,Q4,Q3,P4,S5,Q7,O2,M4",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:mistakes:0823a28c44c7",
+    "topicTitleOverride": "三三 · 黑角白势",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑跳出，避免从后推白。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R17,Q16,R16,Q15,P18,N16,S14,Q12",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #31289"
+    }
+  },
+  {
+    "id": "josekle-31292",
+    "name": "三三 · 白封住边上",
+    "original": "Punishing and Correcting Joseki Mistakes / Game 2 / Joseki 2: White Takes the Bottom",
+    "source": "江鸣久 七段、Adam Miller《Punishing and Correcting Joseki Mistakes》 · Game 2 · Joseki 2: White Takes the Bottom",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0032_ss_mist_sample.epub",
+    "bookRef": {
+      "title": "Punishing and Correcting Joseki Mistakes",
+      "author": "江鸣久 七段、Adam Miller",
+      "chapter": "Game 2",
+      "figure": "Joseki 2: White Takes the Bottom"
+    },
+    "setup": {
+      "black": [],
+      "white": []
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R3,Q4,Q3,P4,S5,P3,Q6,L4",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:mistakes:0823a28c44c7",
+    "topicTitleOverride": "三三 · 白封住边上",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "白封边，黑获得较活跃的外侧棋形。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R17,Q16,R16,Q15,P18,R15,O16,Q11",
+      "source": "Josekle 归档 · OGS 定式词典节点 #31292"
+    }
+  },
+  {
+    "id": "josekle-31240",
+    "name": "三三 · 黑跳向边上",
+    "original": "Punishing and Correcting Joseki Mistakes / Game 2 / Joseki 3: Black Takes the Bottom",
+    "source": "江鸣久 七段、Adam Miller《Punishing and Correcting Joseki Mistakes》 · Game 2 · Joseki 3: Black Takes the Bottom",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0032_ss_mist_sample.epub",
+    "bookRef": {
+      "title": "Punishing and Correcting Joseki Mistakes",
+      "author": "江鸣久 七段、Adam Miller",
+      "chapter": "Game 2",
+      "figure": "Joseki 3: Black Takes the Bottom"
+    },
+    "setup": {
+      "black": [],
+      "white": []
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R3,Q4,Q3,P4,O3,R4,P3,R8",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:mistakes:0823a28c44c7",
+    "topicTitleOverride": "三三 · 黑跳向边上",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑先跳，避免被白封住。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R17,Q16,R16,Q15,R14,Q17,R15,M17",
+      "source": "Josekle 归档 · OGS 定式词典节点 #31240"
+    }
+  },
+  {
+    "id": "josekle-variation-31301",
+    "name": "三三 · 挖后跳出",
+    "original": "Punishing and Correcting Joseki Mistakes / Game 3 / Joseki 1",
+    "source": "江鸣久 七段、Adam Miller《Punishing and Correcting Joseki Mistakes》 · Game 3 · Joseki 1",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0032_ss_mist_sample.epub",
+    "bookRef": {
+      "title": "Punishing and Correcting Joseki Mistakes",
+      "author": "江鸣久 七段、Adam Miller",
+      "chapter": "Game 3",
+      "figure": "Joseki 1"
+    },
+    "setup": {
+      "black": [],
+      "white": []
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R3,Q4,Q3,O4,P4,P5,P3,O5,N3,R6",
+    "familyCode": "R17",
+    "topicKeyOverride": "book:mistakes:0823a28c44c7",
+    "topicTitleOverride": "三三 · 挖后跳出",
+    "stageOverride": "入门",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "入门"
+    ],
+    "overview": [
+      "黑挖后跳，争取向外出头。",
+      "完整起手谱保留此前收录的全部着法；书图续谱保留书中编号与前置棋形。两者终局棋形相同，摆放方向可能不同。书中手数请在「书图续谱」中对照。"
+    ],
+    "note": "据官方电子试读图录入落点；文字为对应专业讲解的简要归纳，并非全章转录。传统定式的评价保留书中语境，不作当前 AI 最优结论。",
+    "openingLine": {
+      "moves": "R17,Q16,R16,Q14,Q15,P15,R15,P14,R13,O17",
+      "source": "Josekle 归档 · dictionary.sgf · OGS 节点 #31301"
+    }
+  },
+  {
+    "id": "book-relentless-ch2-10",
+    "name": "大斜 · 跳出与夹攻",
+    "original": "Relentless: Lee Sedol vs Gu Li / The Immediate Approach / Variation 3 for ➃",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · The Immediate Approach · Variation 3 for ➃",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "The Immediate Approach",
+      "figure": "Variation 3 for ➃",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R4"
+      ],
+      "white": [
+        "D16",
+        "D3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 2,
+    "moves": "C5,C9,F4,E4,E5,F3,G4,G3,H4,H3,J4,K3,C11,E9,C14,E11",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:a55190c9e99e",
+    "topicTitleOverride": "大斜 · 跳出与夹攻",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "本型从大斜的提案展开。白先紧气再跳出，黑借发展力量准备夹攻；白中央一块还有手筋，不能仅凭外观判断薄弱。书中指出，这种全局配置下黑方未必愿意选大斜。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch2-17",
+    "name": "高挂夹攻 · 园田新型",
+    "original": "Relentless: Lee Sedol vs Gu Li / The Immediate Approach / Variation 10 for ➃",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · The Immediate Approach · Variation 10 for ➃",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "The Immediate Approach",
+      "figure": "Variation 10 for ➃",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R4"
+      ],
+      "white": [
+        "D16",
+        "D3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 2,
+    "moves": "D5,C7,C3,G3,D4,D2,F4,H3,C6,D8,C2,L3",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:a55190c9e99e",
+    "topicTitleOverride": "高挂夹攻 · 园田新型",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白的应法着眼于快速发展。黑自然地顶住可能遭到反扳，所以书中推荐较扎实的应对。此图保留周围棋子，选择这一路时须同时考虑夹攻子的配合。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch3-19",
+    "name": "星位拆边 · 打入分断",
+    "original": "Relentless: Lee Sedol vs Gu Li / There Are Many Paths to Success / Variation 12 for ➇",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · There Are Many Paths to Success · Variation 12 for ➇",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "There Are Many Paths to Success",
+      "figure": "Variation 12 for ➇",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q14",
+        "R9"
+      ],
+      "white": [
+        "O17",
+        "D16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "R17,Q17,Q18,P18,R18,P17,S15,S14,R15,R14",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:b125382aafe4",
+    "topicTitleOverride": "星位拆边 · 打入分断",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白打入后，黑分断是自然的方向。若让白轻易连接，黑原有棋子会显得重复；图中至10手是常见定式的一段。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch3-20",
+    "name": "星位打入 · 快速展开新型",
+    "original": "Relentless: Lee Sedol vs Gu Li / There Are Many Paths to Success / Variation 13 for ➇",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · There Are Many Paths to Success · Variation 13 for ➇",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "There Are Many Paths to Success",
+      "figure": "Variation 13 for ➇",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "P18",
+        "P17",
+        "Q17",
+        "Q16",
+        "Q14",
+        "R14",
+        "S14",
+        "R9"
+      ],
+      "white": [
+        "Q18",
+        "R18",
+        "O17",
+        "R17",
+        "D16",
+        "R15",
+        "S15"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 11,
+    "moves": "O18,O19,K17,Q15",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:0cca5259af3a",
+    "topicTitleOverride": "星位打入 · 快速展开新型",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "这一路保留角部尚未完全补活的状态，白以11、13快速向外展开。书中认为至14后白可脱先，双方可下；这是书中当时研究的新型，不能直接当作今天的 AI 结论。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch3-31",
+    "name": "星位夹攻 · 角与外势的取舍",
+    "original": "Relentless: Lee Sedol vs Gu Li / A Tactical Approach / Variation 23 for ➉",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · A Tactical Approach · Variation 23 for ➉",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "A Tactical Approach",
+      "figure": "Variation 23 for ➉",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "C14",
+        "Q14",
+        "R9",
+        "Q3"
+      ],
+      "white": [
+        "O17",
+        "D16",
+        "K16",
+        "D4"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "C12,C17,D17,C16,D15,B14,E13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:bb0389efc6d4",
+    "topicTitleOverride": "星位夹攻 · 角与外势的取舍",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "这是双方都可接受的定式。与另一续法相比，黑角部实地较少且偏薄，白外势也较薄。角部若遇到压力，黑还留有扩大眼形的手段。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch3-32",
+    "name": "星位夹攻 · 推长保留打入",
+    "original": "Relentless: Lee Sedol vs Gu Li / A Tactical Approach / Variation 24 for ➉",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · A Tactical Approach · Variation 24 for ➉",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "A Tactical Approach",
+      "figure": "Variation 24 for ➉",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "C14",
+        "Q14",
+        "R9"
+      ],
+      "white": [
+        "O17",
+        "D16",
+        "K16"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "C12,C17,D17,C16,D15,D14,C15,B15,B16,B17,B14,A16,E14,B13,D13,A14,F13",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:07ce480a7654",
+    "topicTitleOverride": "星位夹攻 · 推长保留打入",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑选择向外推长，书中认为比前一变化更适合此处配置。至17手形成定式，黑保留向上边打入的选择，并可取得先手发展其他方向。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-11",
+    "name": "小目高挂 · 抵抗后守角",
+    "original": "Relentless: Lee Sedol vs Gu Li / Control the Options / Variation 6 for ➅",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Control the Options · Variation 6 for ➅",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Control the Options",
+      "figure": "Variation 6 for ➅",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "D15",
+        "R4",
+        "P3"
+      ],
+      "white": [
+        "D17",
+        "R10",
+        "D4"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 3,
+    "moves": "C15,D16,C16,E17,C14,R12,R5,R7,Q4,Q3,Q7,Q8,R6,P7,Q6,S4,R8",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:afc3b7745488",
+    "topicTitleOverride": "小目高挂 · 抵抗后守角",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑先抵抗，再作先手交换，随后补角。书中把至19手的局部结果评为两分；这组变化说明定式会随研究而演变。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-19",
+    "name": "星位二间低夹 · 试应手分支",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 13 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 13 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 13 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R4",
+        "P3"
+      ],
+      "white": [
+        "D17",
+        "R14",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R11,O16,Q14,R17,Q17,Q13,R15,P14,Q15,S13,P13,Q12,O14,S15,S16,Q11,P15,S4,R3,R9",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:128728f19c48",
+    "topicTitleOverride": "星位二间低夹 · 试应手分支",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白以灵活的接触手段破坏黑形，16手推出是要点。18手试应后再决定发展方向；书中指出这一路曾在2008—2009年流行，后续研究认为对白更有利。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-20",
+    "name": "星位二间低夹 · 试应后的出头",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 14 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 14 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 14 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R4",
+        "P3"
+      ],
+      "white": [
+        "D17",
+        "R14",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R11,O16,Q14,R17,Q17,Q13,R15,P14,Q15,S13,P13,Q12,O14,S15,S16,Q11,P15,S4,R5,K16,R10,P9,R8,N11",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:128728f19c48",
+    "topicTitleOverride": "星位二间低夹 · 试应后的出头",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白先试应，再选择转向上边。双方出头后白仍保留回角做活的余地；开局不必急于在小角里多花一手。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-22",
+    "name": "星位二间低夹 · 长出与切断",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 16 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 16 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 16 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R4",
+        "P3"
+      ],
+      "white": [
+        "D17",
+        "R14",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R11,O16,Q14,R17,Q17,Q13,P14,R16,R13,R15,Q15,S13,R12,K16",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:128728f19c48",
+    "topicTitleOverride": "星位二间低夹 · 长出与切断",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑长出也是可行选择。白试图连接两子，黑切断是正确方向；书中将至14手的结果评为两分。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-24",
+    "name": "星位一间低夹 · 取角后的消减",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 18 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 18 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 18 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "R4",
+        "P3"
+      ],
+      "white": [
+        "D17",
+        "R14",
+        "D4"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R12,R17,R16,Q17,P16,S16,S15,S17,R15,O17,F3,C6,K4,Q11,R11,Q10,Q12,O11,P12,N9",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:128728f19c48",
+    "topicTitleOverride": "星位一间低夹 · 取角后的消减",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白先用入角交换取得实地，再视黑模样的发展消减右边。消减时只需保持一块可生存的棋，不必救出所有棋子。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-26",
+    "name": "星位紧夹 · 反夹后靠下",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 20 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 20 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 20 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": [
+        "D17",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R12,O17,Q14",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:2097a6e15303",
+    "topicTitleOverride": "星位紧夹 · 反夹后靠下",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "紧夹后遇到反夹，黑靠向挂角子以求外围连接。此处局部战术比一般口诀更关键，重点是围住对方同时保持自身联系。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-29",
+    "name": "星位宽夹 · 虎口安定",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 23 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 23 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 23 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": [
+        "D17",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R10,O17,O16,N16,O15,R17,P17,R16,N17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:2097a6e15303",
+    "topicTitleOverride": "星位宽夹 · 虎口安定",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑用虎口保持两处选择，白连接后黑能够安定。由于夹子在全局中的位置不够理想，书中评此局面白略好。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-30",
+    "name": "星位宽夹 · 强硬连接分支",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 24 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 24 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 24 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": [
+        "D17",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R10,O17,O16,N16,O15,R17,P17,N17,R16,S16,S15,S17,R15,P18,N15",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:2097a6e15303",
+    "topicTitleOverride": "星位宽夹 · 强硬连接分支",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白的强硬连接以两处联络为选择。黑封挡时，白可通过交换取得较大的角地与先手；此处的全局结果书中略看好白。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-32",
+    "name": "星位宽夹 · 占住整形要点",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 26 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 26 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 26 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": [
+        "D17",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R10,O17,O16,N16,O15,R17,P17,N17,R16,S16,O18,S18,N18,L16,M17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:2097a6e15303",
+    "topicTitleOverride": "星位宽夹 · 占住整形要点",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白应直接占住整形要点。黑扳意在使白变重，白不必事事跟应，可利用先手转向大场；书中仍略看好白。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-33",
+    "name": "星位宽夹 · 窥后连接",
+    "original": "Relentless: Lee Sedol vs Gu Li / Star Points Like to Pincer Firmly / Variation 27 for ➐",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Star Points Like to Pincer Firmly · Variation 27 for ➐",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Star Points Like to Pincer Firmly",
+      "figure": "Variation 27 for ➐",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16"
+      ],
+      "white": [
+        "D17",
+        "R14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "R10,O17,O16,N16,O15,R17,P17,N17,R16,S16,S18,S17,R18,N15,O14,R12",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:2097a6e15303",
+    "topicTitleOverride": "星位宽夹 · 窥后连接",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑利用窥的手筋连接安定，使夹子继续发挥作用。至16手双方都较稳定，书中评为两分；没有夹子时，同样的下法评价会改变。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-40",
+    "name": "星位反夹 · 分断后的战斗",
+    "original": "Relentless: Lee Sedol vs Gu Li / Attach to the Weaker Stone? / Variation 33 for ➇",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Attach to the Weaker Stone? · Variation 33 for ➇",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Attach to the Weaker Stone?",
+      "figure": "Variation 33 for ➇",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q11"
+      ],
+      "white": [
+        "D17",
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "O17,Q14,Q13,P14,R16,R17,R15,Q17,P13,N16,R12",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:87d004d1073e",
+    "topicTitleOverride": "星位反夹 · 分断后的战斗",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白坚持分断时，黑可借势压出。这一路双方可下，但后续战斗复杂；希望棋形稳定的一方可选择挖入的另一分支。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch6-41",
+    "name": "星位反夹 · 挖入连接",
+    "original": "Relentless: Lee Sedol vs Gu Li / Attach to the Weaker Stone? / Variation 34 for ➇",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Attach to the Weaker Stone? · Variation 34 for ➇",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Attach to the Weaker Stone?",
+      "figure": "Variation 34 for ➇",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "Q11"
+      ],
+      "white": [
+        "D17",
+        "R14"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "O17,Q14,Q13,P14,R16,R15,S15,Q15,S13,R17,S16,P13,K16,Q12,Q17,R13,P17,S14,S17",
+    "familyCode": "Q16",
+    "topicKeyOverride": "book:relentless:87d004d1073e",
+    "topicTitleOverride": "星位反夹 · 挖入连接",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "这是较早的挖入定式。双方在外侧紧气与联络之间取舍，书中认为局部白略好，但黑取得先手后全局仍然均衡。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch7-15",
+    "name": "小目夹攻 · 大飞压后托角",
+    "original": "Relentless: Lee Sedol vs Gu Li / Develop Towards the Wider Side / Variation 8 for ➉",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Develop Towards the Wider Side · Variation 8 for ➉",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Develop Towards the Wider Side",
+      "figure": "Variation 8 for ➉",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "Q16",
+        "D15"
+      ],
+      "white": [
+        "D17"
+      ]
+    },
+    "firstColor": "white",
+    "startNumber": 1,
+    "moves": "D12,G16,E15,E14,F15,C17,F17,D18,D14,C15,E18,D16,E17,D13,E12,L17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:0d182b16631d",
+    "topicTitleOverride": "小目夹攻 · 大飞压后托角",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑以弹性的大飞压应对夹攻，随后托角争先手安定。书中认为结果两分，而黑的棋形较灵活。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch7-18",
+    "name": "星位夹攻 · 入角后的全局配合",
+    "original": "Relentless: Lee Sedol vs Gu Li / Develop Towards the Wider Side / Variation 11 for ⓯",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Develop Towards the Wider Side · Variation 11 for ⓯",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Develop Towards the Wider Side",
+      "figure": "Variation 11 for ⓯",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "E17",
+        "D16",
+        "Q16",
+        "D15",
+        "P4",
+        "R4",
+        "F3"
+      ],
+      "white": [
+        "D17",
+        "C16",
+        "C15",
+        "C14",
+        "C6",
+        "D4",
+        "K3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "Q10,O17,M17,R17,R16,Q17,P16,O16,P17,P18,Q18,R18,O18,Q19,O15,N18,N16,O19,N14,N3",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:9209cd0b4af1",
+    "topicTitleOverride": "星位夹攻 · 入角后的全局配合",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白入角取地，并保留对黑模样的打入。边上的伸展很重要，它限制黑棋将右边连成整体；不能只看角地大小。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch7-20",
+    "name": "星位定式后续 · 弃子安定",
+    "original": "Relentless: Lee Sedol vs Gu Li / Develop Towards the Wider Side / Variation 13 for ⓯",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Develop Towards the Wider Side · Variation 13 for ⓯",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Develop Towards the Wider Side",
+      "figure": "Variation 13 for ⓯",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "E17",
+        "M17",
+        "P17",
+        "D16",
+        "N16",
+        "P16",
+        "Q16",
+        "R16",
+        "D15",
+        "O15",
+        "N14",
+        "Q10",
+        "P4",
+        "R4",
+        "F3"
+      ],
+      "white": [
+        "O19",
+        "Q19",
+        "N18",
+        "P18",
+        "R18",
+        "D17",
+        "O17",
+        "Q17",
+        "R17",
+        "C16",
+        "O16",
+        "C15",
+        "C14",
+        "C6",
+        "D4",
+        "K3",
+        "N3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 21,
+    "moves": "D2,R13,S15,R10,R11,R9,Q11,R6",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:47b78f30b120",
+    "topicTitleOverride": "星位定式后续 · 弃子安定",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑阻止渡过时，白可弃子，在右边安定。伸展使两处选择互为见合，白棋因此保持灵活。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch7-21",
+    "name": "星位定式后续 · 扭断出头",
+    "original": "Relentless: Lee Sedol vs Gu Li / Develop Towards the Wider Side / Variation 14 for ⓯",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Develop Towards the Wider Side · Variation 14 for ⓯",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Develop Towards the Wider Side",
+      "figure": "Variation 14 for ⓯",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "E17",
+        "M17",
+        "P17",
+        "D16",
+        "N16",
+        "P16",
+        "Q16",
+        "R16",
+        "D15",
+        "O15",
+        "N14",
+        "Q10",
+        "P4",
+        "R4",
+        "F3"
+      ],
+      "white": [
+        "O19",
+        "Q19",
+        "N18",
+        "P18",
+        "R18",
+        "D17",
+        "O17",
+        "Q17",
+        "R17",
+        "C16",
+        "O16",
+        "C15",
+        "C14",
+        "C6",
+        "D4",
+        "K3",
+        "N3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 21,
+    "moves": "D2,R13,S15,R10,R11,Q11,S11,P11,Q9,P14,P15,N11",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:47b78f30b120",
+    "topicTitleOverride": "星位定式后续 · 扭断出头",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑右下较厚时，白可用扭断与弃子转向中央。黑右边模样被削弱，弃子还留有余味；这是定式之后的应用变化。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch7-24",
+    "name": "大雪崩 · 长变化与周边配置",
+    "original": "Relentless: Lee Sedol vs Gu Li / Develop Towards the Wider Side / Variation 17 for ⓯",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Develop Towards the Wider Side · Variation 17 for ⓯",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Develop Towards the Wider Side",
+      "figure": "Variation 17 for ⓯",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "E17",
+        "D16",
+        "Q16",
+        "D15",
+        "P4",
+        "R4",
+        "F3"
+      ],
+      "white": [
+        "D17",
+        "C16",
+        "C15",
+        "C14",
+        "C6",
+        "D4",
+        "K3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "D14,D13,C17,D18,B17,C18,C13,C12,B18,E18,B13,B14,B12,B16,F17,F18,C11,D12,D11,F12,F15,E11,D9,G17,G16,H17",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:9209cd0b4af1",
+    "topicTitleOverride": "大雪崩 · 长变化与周边配置",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "这一路大雪崩在局部能展开，但白在左边已有支援，因此结果对白略有利。黑在战术展开中转向了较窄的一侧，说明复杂定式必须结合周围棋子判断。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch7-25",
+    "name": "大雪崩 · 另一长分支",
+    "original": "Relentless: Lee Sedol vs Gu Li / Develop Towards the Wider Side / Variation 18 for ⓯",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Develop Towards the Wider Side · Variation 18 for ⓯",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Develop Towards the Wider Side",
+      "figure": "Variation 18 for ⓯",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "E17",
+        "D16",
+        "Q16",
+        "D15",
+        "P4",
+        "R4",
+        "F3"
+      ],
+      "white": [
+        "D17",
+        "C16",
+        "C15",
+        "C14",
+        "C6",
+        "D4",
+        "K3"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "D14,D13,C17,D18,B17,C18,C13,C12,B18,E18,B13,B14,B12,B16,C11,E13,F15,F17,F14,F13,H15,C9,E11,H13",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:9209cd0b4af1",
+    "topicTitleOverride": "大雪崩 · 另一长分支",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "白借已有棋子作交换，使黑出现两块尚不安定的棋。书中介绍这是旧时流行的大规模定式；在该全局配置下，白略有利。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  },
+  {
+    "id": "book-relentless-ch7-26",
+    "name": "小目雪崩后 · 简明整形",
+    "original": "Relentless: Lee Sedol vs Gu Li / Develop Towards the Wider Side / Variation 19 for ⓯",
+    "source": "安永吉 八段、Josh Hoak、David Ormerod《Relentless: Lee Sedol vs Gu Li》 · Develop Towards the Wider Side · Variation 19 for ⓯",
+    "sourceType": "书籍选读",
+    "url": "https://gobooks.com/books/epubs/sg0188_gg_less_sample.epub",
+    "bookRef": {
+      "title": "Relentless: Lee Sedol vs Gu Li",
+      "author": "安永吉 八段、Josh Hoak、David Ormerod",
+      "chapter": "Develop Towards the Wider Side",
+      "figure": "Variation 19 for ⓯",
+      "license": "CC BY-NC-SA 4.0",
+      "creditUrl": "https://gogameguru.com/relentless/"
+    },
+    "setup": {
+      "black": [
+        "E17",
+        "D16",
+        "Q16",
+        "D15"
+      ],
+      "white": [
+        "D17",
+        "C16",
+        "C15",
+        "C14"
+      ]
+    },
+    "firstColor": "black",
+    "startNumber": 1,
+    "moves": "D18,C17,F16,O17,L17,R17,Q17,R16,Q15,Q18,P18,R18,P17,R14",
+    "familyCode": "R16",
+    "topicKeyOverride": "book:relentless:06f935117ecc",
+    "topicTitleOverride": "小目雪崩后 · 简明整形",
+    "stageOverride": "复杂变化",
+    "kind": "定式续谱",
+    "outcome": [
+      "书籍选读",
+      "复杂变化"
+    ],
+    "overview": [
+      "黑先用简明着法整理左上，再根据白的挂角选择夹攻或交换。图中至14手形成另一种局面，重点是兼顾其他角部的发展。",
+      "无数字棋子为书中给定的前置棋形；数字保留本图手顺，可从初始棋形逐手播放。"
+    ],
+    "note": "基于 Go Game Guru 2016 年开放许可版作中文归纳并转换为电子棋谱。仅所涉书籍衍生内容按 CC BY-NC-SA 4.0 提供；保留原作者署名，非商业使用，相同方式共享。"
+  }
+]

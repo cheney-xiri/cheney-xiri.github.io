@@ -1,0 +1,74 @@
+/* Independent portrait paintings for phone screens. Desktop art and type remain
+   owned by their existing stylesheets. Protected interiors are excluded. */
+@media (max-width:800px) {
+ .ink-site #ink-home .ink-mountains-far {
+  background-image:url('ink/mobile/opening-v1.webp');
+  background-size:cover;background-position:center center;
+  inset:0;width:100%;height:100%;opacity:1;mask-image:none;filter:none;
+ }
+ .ink-site #ink-home .hero-veil {
+  background:radial-gradient(ellipse 83% 45% at 50% 46%,rgba(190,215,206,.22),rgba(190,215,206,.08) 70%,transparent);
+ }
+ .ink-site #ink-home #about{--mobile-ink-scene:url('ink/mobile/about-v1.webp');--mobile-ink-pigment:184,203,181}
+ .ink-site #ink-home #journey{--mobile-ink-scene:url('ink/mobile/journey-v1.webp');--mobile-ink-pigment:185,204,181}
+ .ink-site #ink-home #craft{--mobile-ink-scene:url('ink/mobile/craft-v1.webp');--mobile-ink-pigment:181,198,180}
+ .ink-site #ink-home #pastimes{--mobile-ink-scene:url('ink/mobile/pastimes-v1.webp');--mobile-ink-pigment:177,201,202}
+ .ink-site #ink-home #works{--mobile-ink-scene:url('ink/mobile/works-v1.webp');--mobile-ink-pigment:196,202,181}
+ .ink-site #ink-home #travels{--mobile-ink-scene:url('ink/mobile/travels-v1.webp');--mobile-ink-pigment:178,201,197}
+ .ink-site #ink-home #admire{--mobile-ink-scene:url('ink/mobile/admire-v1.webp');--mobile-ink-pigment:181,198,187}
+ .ink-site #ink-home #writing{--mobile-ink-scene:url('ink/mobile/writing-v1.webp');--mobile-ink-pigment:197,203,181}
+ .ink-site #ink-home #reading{--mobile-ink-scene:url('ink/mobile/reading-v1.webp');--mobile-ink-pigment:188,203,177}
+ .ink-site #ink-home #links{--mobile-ink-scene:url('ink/mobile/interaction-v1.webp');--mobile-ink-pigment:183,203,181}
+ .ink-site #ink-home #contact{--mobile-ink-scene:url('ink/mobile/contact-v1.webp');--mobile-ink-pigment:180,202,195}
+ .ink-site #ink-home :is(#about,#journey,#craft,#pastimes,#works,#travels,#admire,#writing,#reading,#links,#contact) {
+  isolation:isolate;background-color:rgb(var(--mobile-ink-pigment));
+  background-image:none;background-attachment:scroll;
+ }
+ .mobile-ink-scene{position:absolute;inset:0;z-index:-1;pointer-events:none}
+ .mobile-ink-art {
+  position:sticky;top:0;width:100%;height:100vh;height:100svh;
+  background-color:rgb(var(--mobile-ink-pigment));
+  background-repeat:no-repeat;background-position:center center;background-size:cover;
+ }
+ .mobile-ink-art[data-ready=true] {
+  background-image:linear-gradient(90deg,rgba(var(--mobile-ink-pigment),.32),rgba(var(--mobile-ink-pigment),.68) 13%,rgba(var(--mobile-ink-pigment),.68) 87%,rgba(var(--mobile-ink-pigment),.32)),var(--mobile-ink-scene);
+ }
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop]:not(#ink-home) {
+  --mobile-ink-scene:url('ink/mobile/reading-v1.webp');
+  isolation:isolate;background-color:rgb(var(--sub-pigment));background-image:none;
+ }
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="writing"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-writing-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="poetry"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-poetry-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="go"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-go-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="dizi"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-dizi-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="guitar"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-guitar-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="music"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-music-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="games"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-games-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="animation"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-animation-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="videos"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-videos-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="reading"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/reading-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="essays"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-essays-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="quotes"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-quotes-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="wall"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-wall-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="letter"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-letter-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="ally"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-ally-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="featured"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-featured-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="portrait"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/about-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="study-spring"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/journey-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="study-evening"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-study-evening-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="study"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/journey-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="summer"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-summer-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="future"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-future-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="digital"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/works-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="digital-light"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-digital-light-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="river"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/travels-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="resolve"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/admire-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop="youth"]:not(#ink-home){--mobile-ink-scene:url('ink/mobile/sub-youth-v1.webp')}
+ html.ink-site:not([data-ink-preserve]) .mobile-page-scene {
+  position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-color:rgb(var(--sub-pigment));
+  background-image:linear-gradient(90deg,rgba(var(--sub-pigment),.62),rgba(var(--sub-pigment),.72) 15%,rgba(var(--sub-pigment),.72) 85%,rgba(var(--sub-pigment),.62)),var(--mobile-ink-scene);
+  background-size:cover;background-position:center center;background-repeat:no-repeat;
+ }
+}
+@media print{[data-mobile-ink-layer]{display:none!important}}

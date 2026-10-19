@@ -1,0 +1,77 @@
+{
+  "name": "Cheney",
+  "portrait": "assets/portrait.jpg",
+  "portraitAlt": "Cheney 的网站画像",
+  "zodiac": {"name": null, "note": null},
+  "mbti": {"type": null, "note": null},
+  "personalityKeywords": [],
+  "gettingAlong": null,
+  "hometown": "河南南阳",
+  "birthday": null,
+  "dailyRhythm": null,
+  "favoriteSeason": null,
+  "favoriteColor": null,
+  "relaxation": null,
+  "smallJoys": null,
+  "socialStyle": null,
+  "expressionStyle": null,
+  "workStyle": null,
+  "aloneTime": null,
+  "motto": null,
+  "favoriteWeather": null,
+  "favoriteTime": null,
+  "favoriteFlavor": null,
+  "favoriteScent": null,
+  "favoritePlace": null,
+  "currentGoal": null,
+  "wantToLearn": null,
+  "selfNarrative": [],
+  "scienceInterest": {"title": "物理与宇宙", "text": "我喜欢物理，尤其是宇宙物理。", "href": "pastimes/physics.html", "image": "assets/physics/cliffs.webp", "credit": "NASA, ESA, CSA, STScI"},
+  "linkedGroups": [
+    {
+      "title": "日常所爱",
+      "items": [
+        {"title": "听歌", "note": "常听的歌曲，以及周杰伦与 TFBOYS 的歌单", "href": "pastimes/detail.html?topic=music"},
+        {"title": "阅读", "note": "我的书架与书卷目录", "href": "books.html"},
+        {"title": "围棋", "note": "读棋形、看定式，也落子成局", "href": "craft/go.html"},
+        {"title": "游戏", "note": "手游与端游的收藏图鉴", "href": "pastimes/games.html"},
+        {"title": "动漫", "note": "电影、连载与童年动画", "href": "pastimes/anime.html"},
+        {"title": "旅行", "note": "走过的城市与留下的足迹", "href": "travels/index.html"},
+        {"title": "摄影", "note": "镜头里的光影与取景", "href": "craft/photography.html"},
+        {"title": "诗词与句笺", "note": "留存的诗句与鼓励自己的话", "href": "writing/lines.html"},
+        {"title": "笛子与吉他", "note": "从气息到和弦的练习", "href": "craft/dizi.html", "secondary": {"title": "吉他", "href": "craft/guitar.html"}}
+      ]
+    },
+    {
+      "title": "写下与创造",
+      "items": [
+        {"title": "写作与作诗", "note": "从观察、构思到落笔", "href": "craft/writing.html", "secondary": {"title": "作诗", "href": "craft/poetry.html"}},
+        {"title": "未寄出的夏天，只有风知道", "note": "青春小说 · 创作中", "href": "works/unsent-summer/index.html"},
+        {"title": "最后一封来自未来的信", "note": "长篇科幻 · 作品介绍", "href": "works/future-letter/index.html"},
+        {"title": "文字成像", "note": "SD-WebUI · 图片创作流程", "href": "works/sd-webui/index.html"},
+        {"title": "节点绘图", "note": "Z-Image · 节点创作流程", "href": "works/z-image/index.html"},
+        {"title": "剪视频", "note": "镜头、节奏与片段的编排", "href": "pastimes/detail.html?topic=editing"}
+      ]
+    },
+    {
+      "title": "仰慕的人",
+      "items": [
+        {"title": "毛泽东", "note": "精神、诗词、文章与书法", "href": "figures/mao.html"},
+        {"title": "屈原", "note": "楚辞、求索与香草美人", "href": "figures/qu.html"},
+        {"title": "李白", "note": "行旅、诗歌与自由", "href": "figures/li.html"}
+      ]
+    },
+    {
+      "title": "追星",
+      "items": [
+        {"title": "柯洁", "note": "棋盘之上的真实对局与复盘", "href": "figures/ke.html"},
+        {"title": "周杰伦", "note": "音乐创作与专辑目录", "href": "figures/jay.html"},
+        {"title": "TFBOYS", "note": "组合音乐与三位成员", "href": "figures/tfboys.html"}
+      ]
+    }
+  ],
+  "internal": {
+    "basis": "自我介绍用于星座、MBTI、性格等个性资料，不重复主页关于我、求学经历或作品。",
+    "pending": "等待用户提供星座、MBTI及性格关键词，不根据兴趣或经历推断；后续更换用户提供的形象图片。"
+  }
+}

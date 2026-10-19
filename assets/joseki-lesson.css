@@ -1,0 +1,123 @@
+/* Detail page: a compact reading desk with the score beside its commentary. */
+.joseki-lesson-page main { max-width: 1480px; }
+.lesson-heading { display:flex; align-items:end; justify-content:space-between; gap:2rem; padding:1.7rem 0 1.2rem; }
+.lesson-heading span { color:#857055; font-size:.7rem; letter-spacing:.18em; }
+.lesson-heading h1 { margin:.35rem 0 0; font-family:"ZCOOL XiaoWei","Noto Serif SC",serif; font-weight:400; font-size:2.6rem; letter-spacing:.12em; }
+.lesson-heading p { margin:0 0 .25rem; color:#7d705e; font-size:.8rem; }
+.joseki-lesson-page .study-layout { display:grid!important; grid-template-columns:218px minmax(0,1fr)!important; gap:1.4rem; align-items:start; border-top:1px solid #d3c5ae; padding-top:1.3rem; }
+.joseki-lesson-page .study-index { position:sticky!important; top:1rem; padding:1rem .85rem .75rem!important; border:1px solid #d9cdb9; border-radius:2px; background:#f4eee2; min-width:0; }
+.joseki-lesson-page .study-layout>.study-index { display:flex; flex-direction:column; height:clamp(20rem,calc(100dvh - 230px),48rem); border:1px solid #d9cdb9; border-radius:2px; background:#f4eee2; }
+.joseki-lesson-page .index-body { display:flex; flex-direction:column; flex:1; min-height:0; }
+.joseki-lesson-page .index-body>:not(.joseki-list) { flex-shrink:0; }
+.joseki-lesson-page .index-title { margin-bottom:1rem; }
+.joseki-lesson-page .index-title small { color:#948068; font-size:.65rem; }
+.joseki-lesson-page .index-title h2 { margin:.25rem 0 0; font-size:1.05rem; }
+.joseki-lesson-page .index-search { margin:0 0 .7rem; }
+.joseki-lesson-page .index-search input { padding:.65rem .55rem; font-size:.72rem; border-radius:2px; }
+.joseki-lesson-page .index-stages { margin:0; gap:0; border-bottom:1px solid #d7c8af; }
+.joseki-lesson-page .index-stages button { padding:.6rem .1rem; background:transparent; border:0; border-bottom:2px solid transparent; border-radius:0; font-size:.7rem; color:#7b6950; }
+.joseki-lesson-page .index-stages button[aria-pressed="true"] { border-bottom-color:#425d49; color:#354f3c; font-weight:600; }
+.index-position { display:flex; align-items:center; justify-content:space-between; gap:.5rem; margin:.8rem .15rem .5rem; font-size:.65rem; color:#8a7a62; }
+.index-position button { padding:.2rem 0; border:0; background:transparent; font-size:inherit; color:#53694f; cursor:pointer; }
+.joseki-lesson-page .joseki-list { display:grid!important; grid-template-columns:1fr; align-content:start; flex:1; gap:.15rem; max-height:none; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#b9ac95 transparent; padding:.15rem .25rem .15rem 0; }
+.joseki-lesson-page .joseki-item { gap:.3rem; padding:.65rem .6rem; border-left:2px solid transparent; background:transparent; }
+.joseki-lesson-page .joseki-item strong { font-size:.77rem; line-height:1.55; overflow-wrap:anywhere; }
+.joseki-lesson-page .joseki-item span { font-size:.63rem; color:#8f7c61; }
+.joseki-lesson-page .joseki-item.is-active { background:#e2e7da; border-left-color:#425d49; color:#2f4937; }
+.joseki-lesson-page .joseki-item:hover { background:#eae3d5; }
+.joseki-lesson-page #index-toggle { display:none; }
+.joseki-lesson-page .joseki-detail { padding:1.8rem 2rem!important; min-height:0; border-radius:2px; border-color:#d6c9b5; background:#fcf9f2!important; box-shadow:0 7px 30px #483e2c06; }
+.joseki-lesson-page .detail-top { align-items:center; padding-bottom:1.3rem; }
+.joseki-lesson-page .detail-top small { font-size:.72rem; letter-spacing:.08em; }
+.detail-top small span { padding:0 .6rem; color:#c1b299; }
+.joseki-lesson-page .detail-top h2 { font-size:clamp(1.5rem,2.5vw,2rem); margin:.5rem 0 0; line-height:1.5; }
+.joseki-lesson-page .detail-top .lesson-seal { border:1px solid #a9654f; color:#a05e49; border-radius:2px; padding:.5rem .35rem; font-size:.8rem; letter-spacing:.18em; writing-mode:vertical-rl; }
+.lesson-body { display:grid; grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr); align-items:start; gap:2.4rem; padding-top:1.6rem; }
+.lesson-board { position:sticky; top:1.5rem; padding:1.25rem; background:#f0e9db; border:1px solid #e2d6c2; border-radius:2px; min-width:0; }
+.lesson-board .record-title { margin:0 0 1.1rem; align-items:center; }
+.lesson-board .record-title h3 { font-size:.85rem; margin:0; font-weight:500; letter-spacing:.06em; }
+.lesson-board .record-title>span { font-size:.7rem; font-family:system-ui,sans-serif; font-variant-numeric:tabular-nums; }
+.lesson-board .diagram-wrap { padding:.8rem 0 .5rem; justify-self:auto; container-type:inline-size; }
+.lesson-board .joseki-diagram { --point:min(36px, calc(288px / var(--board-size)), calc((100cqi - 18px) / var(--board-size)))!important; box-shadow:0 5px 12px #5a3f2312; }
+.lesson-board .diagram-point::before { inset:0; background:linear-gradient(#776040,#776040) center var(--line-y,center)/1px var(--line-height,100%) no-repeat,linear-gradient(#776040,#776040) var(--line-x,center) center/var(--line-width,100%) 1px no-repeat; }
+.lesson-board .diagram-point.edge-top { --line-height:50%; --line-y:bottom; }
+.lesson-board .diagram-point.edge-right { --line-width:50%; --line-x:left; }
+.lesson-board .diagram-point.edge-left { --line-width:50%; --line-x:right; }
+.lesson-board .diagram-point.edge-bottom { --line-height:50%; --line-y:top; }
+.lesson-board .diagram-wrap p { font-size:.65rem; line-height:1.7; max-width:18rem; margin:.9rem auto 0; }
+.move-scrubber { display:block; margin:.8rem 0; }
+.move-scrubber input { display:block; width:100%; accent-color:#3f5845; cursor:pointer; }
+.lesson-board .record-controls { display:grid; grid-template-columns:.75fr 1fr 1fr .75fr; margin:0; gap:.35rem; }
+.lesson-board .record-controls button { padding:.6rem .15rem; font-size:.72rem; border-color:#cdbda3; background:#faf6ed; border-radius:2px; }
+.lesson-board .record-controls button:hover:enabled { background:#3f5845; color:white; }
+.lesson-board .record-controls button:disabled { opacity:.4; cursor:default; }
+.lesson-moves { margin-top:1.2rem; border-top:1px solid #d9ccb8; }
+.lesson-moves summary { display:flex; justify-content:space-between; padding:.85rem 0; font-size:.75rem; cursor:pointer; }
+.lesson-moves summary span { font-size:.68rem; color:#8b795f; }
+.lesson-moves .move-record { grid-template-columns:repeat(3,minmax(0,1fr)); gap:.35rem; padding:2px; }
+.lesson-moves .move-chip { padding:.5rem .3rem; gap:.25rem; justify-content:center; }
+.lesson-moves .move-chip strong { font-family:system-ui,sans-serif; font-size:.72rem; }
+.lesson-moves .move-chip em { font-size:.65rem; font-style:normal; }
+.move-list-guide,.setup-points p { font-size:.72rem; line-height:1.8; color:#786752; overflow-wrap:anywhere; }
+.setup-points { margin-top:1rem; border-top:1px solid #d9ccb8; padding-top:.75rem; }
+.setup-points summary { font-size:.75rem; cursor:pointer; }
+.record-modes { display:flex; gap:.4rem; margin-bottom:1rem; }
+.record-modes button { flex:1; font:inherit; font-size:.7rem; padding:.65rem .3rem; background:transparent; color:#66533c; border:1px solid #c9b99d; cursor:pointer; }
+.record-modes button[aria-pressed="true"] { background:#4f5748; color:#fff; border-color:#4f5748; }
+.lesson-board:has(.lesson-moves[open]) { position:static; }
+.lesson-download { display:flex; width:100%; justify-content:space-between; margin-top:.15rem; padding:.6rem 0 0; border:0; background:transparent; color:#6f624e; font-size:.72rem; cursor:pointer; }
+.lesson-commentary { min-width:0; }
+.lesson-commentary .detail-source { padding:0; border:0; }
+.lesson-commentary .source-heading small { margin:0; font-size:.65rem; letter-spacing:.12em; }
+.lesson-commentary .source-heading h3 { margin:.4rem 0 .8rem; font-size:1.15rem; }
+.lesson-commentary .study-paragraph { font-size:.88rem; line-height:1.95!important; }
+.lesson-commentary .study-paragraphs { gap:.6rem; }
+.lesson-commentary .joseki-outcomes { gap:.4rem .65rem; margin:1rem 0 1.3rem; }
+.lesson-commentary .joseki-outcomes span { border:0; border-left:2px solid #b8c1ae; border-radius:0; background:#eff0e8; color:#4e604c; font-size:.68rem; padding:.3rem .6rem; }
+.lesson-commentary .formation-explain { margin-top:1.4rem; padding-top:1.2rem; }
+.lesson-commentary .formation-steps { grid-template-columns:1fr; margin:.5rem 0 0; gap:0; }
+.lesson-commentary .formation-steps li { grid-template-columns:1.5rem 1fr; min-height:0; padding:.7rem 0; border-bottom:1px solid #eee5d6; }
+.lesson-commentary .formation-steps li:last-child { border-bottom:0; }
+.lesson-commentary .formation-steps p { font-size:.78rem; line-height:1.8; }
+.lesson-commentary .variation-section { margin-top:1.3rem; padding-top:1.2rem; }
+.lesson-commentary .variation-list { grid-template-columns:1fr; }
+.lesson-commentary .variation-heading h3 { font-size:1.05rem; }
+.lesson-commentary .variation-item { min-height:2.9rem; }
+.joseki-lesson-page .source-foot { margin-top:1.5rem; padding-top:.8rem; color:#8b7c65; }
+.lesson-reading-note { max-width:48rem; margin:1.25rem 0 2rem; color:#8a7b64; font-size:.72rem; line-height:1.8; }
+.joseki-lesson-page :is(button,input,summary,a):focus-visible { outline:2px solid #506d4d; outline-offset:3px; }
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+@media(max-width:800px) {
+  .joseki-lesson-page main { padding:0 1.1rem; }
+  .joseki-lesson-page .joseki-detail { padding:1.4rem!important; }
+  .lesson-body { grid-template-columns:minmax(260px,1fr) minmax(0,1fr); gap:1.4rem; }
+  .lesson-board { padding:.85rem; }
+}
+@media(min-width:761px) and (max-width:1120px) {
+  .joseki-lesson-page .study-layout { grid-template-columns:190px minmax(0,1fr)!important; gap:1rem; }
+  .joseki-lesson-page .joseki-detail { padding:1.3rem!important; }
+  .lesson-body { grid-template-columns:1fr; gap:1.7rem; }
+  .lesson-board { position:static; width:100%; max-width:26rem; justify-self:center; }
+}
+@media(max-width:760px) {
+  .joseki-lesson-page .study-layout { grid-template-columns:1fr!important; padding-top:.9rem; gap:1rem; }
+  .joseki-lesson-page .study-index { position:static!important; padding:.85rem 1rem!important; }
+  .joseki-lesson-page .study-layout>.study-index { height:auto; }
+  .joseki-lesson-page .index-title { margin:0; }
+  .joseki-lesson-page .index-title small { display:none; }
+  .joseki-lesson-page .index-title h2 { margin:0; }
+  .joseki-lesson-page #index-toggle { display:inline-block; }
+  .joseki-lesson-page .index-body { margin-top:1rem; }
+  .joseki-lesson-page .study-index:not(.is-open) .index-body { display:none; }
+  .joseki-lesson-page .joseki-list { flex:auto; max-height:18rem; }
+}
+@media(max-width:650px) {
+  .lesson-heading { padding:1.4rem 0 1rem; gap:1rem; }
+  .lesson-heading h1 { font-size:2.1rem; }
+  .lesson-heading p { max-width:9rem; font-size:.7rem; line-height:1.8; }
+  .joseki-lesson-page .joseki-detail { padding:1rem!important; }
+  .lesson-body { grid-template-columns:1fr; gap:1.8rem; padding-top:1.1rem; }
+  .lesson-board { position:static; width:100%; max-width:25rem; justify-self:center; padding:1rem; }
+  .lesson-commentary .formation-steps { grid-template-columns:1fr; }
+  .lesson-reading-note { font-size:.68rem; }
+}

@@ -1,0 +1,223 @@
+[
+  {
+    "id": "sd-webui",
+    "title": "SD-WebUI",
+    "subtitle": "从文字设想，到画面调整",
+    "kind": "本地部署 · 参数式创作",
+    "summary": "围绕 Stable Diffusion WebUI 整理的本地图片创作环境，把提示词、模型与采样参数放进同一条创作流程。",
+    "intro": "用文字描述画面，选定模型，再通过采样步数、引导系数与种子调整结果。当前保存了 Counterfeit V3.0 的一组生成参数，并准备了多套模型，便于围绕不同画面方向继续尝试。",
+    "tags": [
+      "文字生图",
+      "模型切换",
+      "参数调整"
+    ],
+    "flow": [
+      {
+        "title": "描述画面",
+        "text": "输入希望表现的主体、风格与细节。"
+      },
+      {
+        "title": "选择模型",
+        "text": "当前选用 Counterfeit V3.0；模型目录另有其他配置。"
+      },
+      {
+        "title": "调整参数",
+        "text": "设置步数、采样器、引导系数和种子。"
+      },
+      {
+        "title": "生成与保存",
+        "text": "查看画面，并将结果保存到本地输出目录。"
+      }
+    ],
+    "settingsTitle": "最近保存的一组参数",
+    "settingsNote": "来自本地保存的生成记录，用来说明实际配置；不是所有模型通用的推荐值。",
+    "settings": [
+      [
+        "模型",
+        "Counterfeit-V3.0_fp16"
+      ],
+      [
+        "画面尺寸",
+        "512 × 512"
+      ],
+      [
+        "采样步数",
+        "45"
+      ],
+      [
+        "采样器",
+        "DPM++ 3M SDE"
+      ],
+      [
+        "CFG",
+        "7"
+      ],
+      [
+        "种子",
+        "1856409964"
+      ]
+    ],
+    "models": [
+      "Counterfeit V3.0",
+      "Deliberate v3",
+      "DreamShaper 8",
+      "MajicMix Realistic v7",
+      "MeinaMix v11",
+      "Photon v1",
+      "Realistic Vision V6.0",
+      "Stable Diffusion v1.5"
+    ],
+    "credit": "基于 Stable Diffusion WebUI；这里展示我的本地部署、模型配置与使用流程。",
+    "downloads": [
+      {
+        "label": "保存参数记录",
+        "file": "sd-webui-settings.json",
+        "note": "JSON · 参数记录，非 WebUI 预设包"
+      }
+    ],
+    "displayTitle": "文字成像",
+    "imageWorkflows": [
+      {
+        "title": "文生图 · 参数调整",
+        "description": "从文字描述出发，选择模型并调整采样参数，保存生成画面。",
+        "label": "查看生成参数",
+        "anchor": "settings"
+      }
+    ],
+    "videoWorkflows": [],
+    "cover": "assets/works/sd-webui-art-v2.webp",
+    "coverAlt": "封面意象插画：墨色与纸页化作青绿山峦，云雾在山间流动。",
+    "artTitle": "山色入画",
+    "shortSummary": "从文字描述出发，在模型与参数之间调整，寻找想象中的画面。",
+    "coverAttribution": "内置 imagegen 生成的封面意象；不作为本地工作流生成结果展示。"
+  },
+  {
+    "id": "z-image",
+    "title": "Z-Image",
+    "subtitle": "把生成过程，连接成一张图",
+    "kind": "ComfyUI · 节点式创作",
+    "summary": "在 ComfyUI 中连接模型、文字编码、采样与解码，整理了 Turbo GGUF 和 INT8 两套文字生图流程。",
+    "intro": "把一次生成拆成可以看见的节点：文字经过编码，与模型及潜空间一起进入采样器，再经过 VAE 解码得到图像。两套工作流保留了各自的模型与采样设置，便于切换和继续调整。",
+    "tags": [
+      "节点工作流",
+      "Turbo GGUF",
+      "INT8 配置"
+    ],
+    "flow": [
+      {
+        "title": "载入模型",
+        "text": "读取扩散模型、Qwen3 文字编码器与 VAE。"
+      },
+      {
+        "title": "编码文字",
+        "text": "分别处理正向和负向提示词。"
+      },
+      {
+        "title": "采样生成",
+        "text": "将文字条件与初始潜空间连接到 KSampler。"
+      },
+      {
+        "title": "解码保存",
+        "text": "通过 VAE Decode 还原图像，再交给 Save Image。"
+      }
+    ],
+    "settingsTitle": "两套实际工作流",
+    "settingsNote": "两套工作流保留各自的模型与采样参数，可按创作需要切换和调整。",
+    "variants": [
+      {
+        "title": "Turbo GGUF · 8 步采样",
+        "lead": "Z-Image Turbo / GGUF",
+        "settings": [
+          [
+            "扩散模型",
+            "z-image-turbo-Q4_0.gguf"
+          ],
+          [
+            "文字编码器",
+            "Qwen3-4B-Q4_K_M.gguf"
+          ],
+          [
+            "VAE",
+            "ae.safetensors"
+          ],
+          [
+            "画面尺寸",
+            "768 × 768"
+          ],
+          [
+            "采样步数 / CFG",
+            "8 / 1.0"
+          ],
+          [
+            "采样器 / 调度",
+            "Euler / Simple"
+          ]
+        ]
+      },
+      {
+        "title": "INT8 · 量化生成",
+        "lead": "Z-Image / INT8 ConvRot",
+        "settings": [
+          [
+            "扩散模型",
+            "z_image_int8_convrot.safetensors"
+          ],
+          [
+            "文字编码器",
+            "Qwen3-4B-Q4_K_M.gguf"
+          ],
+          [
+            "VAE",
+            "ae.safetensors"
+          ],
+          [
+            "画面尺寸",
+            "768 × 768"
+          ],
+          [
+            "采样步数 / CFG",
+            "25 / 4.0"
+          ],
+          [
+            "采样器 / 调度",
+            "Euler / Simple"
+          ]
+        ]
+      }
+    ],
+    "credit": "基于 ComfyUI 与 Z-Image 模型；这里展示我的本地部署与工作流整理。",
+    "downloads": [
+      {
+        "label": "Turbo GGUF 工作流",
+        "file": "z_image_turbo_gguf.json",
+        "note": "JSON · 原始工作流"
+      },
+      {
+        "label": "INT8 工作流",
+        "file": "z_image_t2i_int8.json",
+        "note": "JSON · 原始工作流"
+      }
+    ],
+    "displayTitle": "节点绘图",
+    "imageWorkflows": [
+      {
+        "title": "Turbo GGUF · 8 步采样",
+        "description": "使用 Q4_0 扩散模型与 Q4 文字编码器，保留 768 × 768、8 步、CFG 1.0 的配置。",
+        "label": "查看工作流配置",
+        "anchor": "settings"
+      },
+      {
+        "title": "INT8 · 量化生成",
+        "description": "使用 INT8 ConvRot 扩散模型，保留 768 × 768、25 步、CFG 4.0 的配置。",
+        "label": "查看工作流配置",
+        "anchor": "settings"
+      }
+    ],
+    "videoWorkflows": [],
+    "cover": "assets/works/z-image-art-v2.webp",
+    "coverAlt": "封面意象插画：月光下的蓝色水庭，丝带穿过亭廊与浮岛。",
+    "artTitle": "月下成境",
+    "shortSummary": "将模型、文字与采样连接起来，让画面沿着清晰的节点逐步成形。",
+    "coverAttribution": "内置 imagegen 生成的封面意象；不作为本地工作流生成结果展示。"
+  }
+]

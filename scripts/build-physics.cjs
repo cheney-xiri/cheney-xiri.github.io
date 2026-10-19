@@ -1,0 +1,62 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..');
+const data=JSON.parse(fs.readFileSync(path.join(root,'data/physics.json'),'utf8'));
+const version='20261017-15';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const arrow='<span aria-hidden="true">↗</span>';
+const hero=data.images.find(x=>x.id===data.hero);
+const imageLink=(img,loading='lazy')=>`<a class="space-image-link" href="../${esc(img.local)}" data-space-image="${img.id}" aria-label="放大查看${esc(img.title)}"><img src="../${esc(img.local)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" ${loading==='eager'?'fetchpriority="high"':'loading="lazy"'} decoding="async"><span class="space-zoom">查看全图 ${arrow}</span></a>`;
+const categories=data.categories||[...new Set(data.images.map(img=>img.category))];
+const reading=JSON.parse(fs.readFileSync(path.join(root,'data/physics-reading.json'),'utf8'));
+const dated=img=>esc(img.dateLabel||img.year||'日期未注明');
+const photo=(img,scope)=>`<figure class="space-album-item" data-category="${esc(img.category)}">${imageLink(img).replace(`src="../${esc(img.local)}"`,`src="../${esc(img.thumbnail)}"`).replace('data-space-image=',`data-image-scope="${esc(scope)}" data-space-image=`)}<figcaption><strong>${esc(img.title)}</strong><time${img.date?` datetime="${esc(img.date)}"`:''}>${dated(img)}</time>${img.id==='blackhole'?'<small>科学可视化</small>':''}</figcaption></figure>`;
+const history=JSON.parse(fs.readFileSync(path.join(root,'data/space-timeline.json'),'utf8'));
+const milestones=history.events.map(event=>{const img=data.images.find(x=>x.id===event.image)||hero;return {...img,eventTitle:event.title,eventDate:event.date,eventWho:event.who,eventKind:event.kind,eventSource:event.source,timelineYear:event.year,significance:event.text,eventId:event.id,eventHasImage:['cmb','apollo','hubble','huygens','philae','eht-m87','eht-sgra','webb'].includes(event.id)};});
+const timeline=require('./space-chronicle-template.cjs')({milestones,esc,imageLink,dated,globalTitle:history.title,globalIntro:history.intro});
+const categoryNotes={'星云与恒星':'尘埃、气体，与星光的形状','星团与恒星诞生':'成群的星，和诞生的现场','星系与深空':'螺旋、碰撞，与遥远的岛屿','黑洞与高能宇宙':'致密天体、喷流与恒星遗迹','太阳系行星':'行星与矮行星的不同面貌','行星的卫星':'冰壳、火山与环行的世界','彗星与小行星':'太阳系早期留下的碎片','太阳与空间天气':'日冕、耀斑与磁场的活动','地球与月球':'回望家园，走近月球','星系团与宇宙学':'深场、透镜与宇宙的尺度'};
+const album=`<section id="space-gallery" class="space-gallery" aria-labelledby="gallery-title"><header class="space-section-heading"><div><p class="space-eyebrow">选一个方向，慢慢看</p><h2 id="gallery-title">宇宙图集</h2></div><p id="space-gallery-count" role="status">${categories.length} 个主题 · ${data.images.length} 幅影像</p></header><div class="space-gallery-tools"><label for="space-search">寻找星光<input id="space-search" type="search" placeholder="名称、天体编号或年份" autocomplete="off"></label><button type="button" id="space-collapse">收起所有图集 <span aria-hidden="true">↑</span></button></div><p class="space-gallery-empty" id="space-gallery-empty" hidden>没有找到相关影像，试试另一个名称或年份。</p><div class="space-collections">${categories.map((category,i)=>{const imgs=data.images.filter(x=>x.category===category),cover=imgs[0];return `<details class="space-collection" id="collection-${i}" data-collection="${esc(category)}"><summary><span class="collection-cover"><img src="../${esc(cover.thumbnail)}" alt="" loading="lazy" width="320" height="180"></span><span class="collection-title"><small>${String(i+1).padStart(2,'0')} / ${imgs.length} 幅</small><strong>${esc(category)}</strong><span>${esc(categoryNotes[category]||'更多宇宙影像')}</span></span><span class="collection-toggle" aria-hidden="true"></span></summary><div class="collection-body"><div class="collection-status"><span data-collection-status>${imgs.length} 幅影像</span><button type="button" data-close-collection>收起 ↑</button></div><div class="space-album" data-collection-grid></div><button class="space-load-more" type="button" data-more-collection>继续看下一组 <span aria-hidden="true">↓</span></button></div></details>`;}).join('')}</div></section>`;
+const knowledge=`<section class="space-knowledge" id="space-knowledge" aria-labelledby="knowledge-title"><header class="space-section-heading"><div><p class="space-eyebrow">图像之外 · 读懂宇宙</p><h2 id="knowledge-title">把好奇，再往前放一点</h2></div><p>六个主题，按兴趣展开</p></header><div class="space-knowledge-grid">${reading.chapters.map((chapter,i)=>`<details class="knowledge-chapter"><summary><small>${String(i+1).padStart(2,'0')} / ${esc(chapter.tag)}</small><strong>${esc(chapter.title)}</strong><span>${esc(chapter.intro)}</span><i aria-hidden="true">＋</i></summary><div class="knowledge-body">${chapter.sections.map(section=>`<section><h3>${esc(section.title)}</h3>${section.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}</section>`).join('')}<button class="knowledge-look" type="button" data-open-category="${esc(chapter.category)}">到图集中看看 <span aria-hidden="true">↗</span></button></div></details>`).join('')}</div><details class="space-observatories"><summary><span>看宇宙的不同方式</span><small>六座天文台 · 六种观测视角</small><i aria-hidden="true">＋</i></summary><div class="space-observatory-list">${reading.observatories.map(o=>`<article><h3>${esc(o.name)}</h3><small>${esc(o.band)}</small><p>${esc(o.use)}</p></article>`).join('')}</div></details><details class="space-reading-notes"><summary>阅读小笺与资料</summary><p>以上为 NASA 科普资料的简要中文整理。图像颜色可能由多波段映射而来；观测图、数据合成与科学可视化的类型，在大图中分别标注。</p><p>日期优先采用可核实的观测或拍摄时间；否则注明发布年份或 NASA 条目日期。条目日期表示官方资料库的记录时间，不等同于拍摄时间。</p><div>${reading.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a>`).join('')}</div></details></section>`;
+const html=`<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#152722"><meta name="description" content="Cheney 的物理与宇宙兴趣：通过 NASA 官方影像了解恒星、星系、引力与黑洞。"><title>物理与宇宙 · 志趣 · Cheney</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='5' y='26' font-size='28' fill='%239b2c20'%3EC%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css?v=20261016-01"><link rel="stylesheet" href="../assets/physics.css?v=${version}"><script src="../assets/physics.js?v=${version}" defer></script><link rel="stylesheet" href="../assets/space-chronicle.css?v=${version}"><script src="../assets/space-chronicle.js?v=${version}" defer></script></head>
+<body class="space-page"><a class="skip" href="#space-main">跳到物理与宇宙</a><header class="space-bar"><a class="space-brand" href="../index.html#pastimes">Cheney <small>志趣</small></a><a href="../index.html#pastimes">返回志趣 ${arrow}</a></header>
+<main id="space-main" class="space-main"><nav class="space-crumb" aria-label="当前位置"><a href="../index.html#pastimes">志趣</a><span aria-hidden="true">/</span><span>物理与宇宙</span></nav>
+<section class="space-hero" aria-labelledby="space-title"><div class="space-hero-copy"><p class="space-eyebrow">02 / 求知与探索</p><h1 id="space-title">物理与宇宙</h1><p class="space-personal">${esc(data.interest)}</p><p class="space-intro">${esc(data.intro)}</p><a class="space-start" href="#space-gallery">从一幅图像开始 <span aria-hidden="true">↓</span></a></div><figure class="space-hero-figure">${imageLink(hero,'eager')}<figcaption><strong>${esc(hero.title)}</strong><span>NGC 3324 · ${dated(hero)}</span></figcaption></figure></section>
+
+<nav class="space-local-nav" aria-label="专题内容"><a href="#space-gallery">分类图集</a><a href="#space-timeline">探索时间线</a><a href="#space-knowledge">宇宙札记</a></nav>
+${album}
+${timeline}
+${knowledge}
+<footer class="space-footer"><span>保持好奇，向宇宙发问。</span><div><a href="../about/index.html#interests">回到自我介绍 ${arrow}</a><a href="../index.html#pastimes">返回志趣 ${arrow}</a></div></footer></main>
+<dialog id="space-viewer" class="space-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-description"><button id="viewer-close" class="viewer-close" type="button" aria-label="关闭大图">关闭 ×</button><div class="viewer-image-wrap"><img id="viewer-image" alt=""></div><div class="viewer-details"><div><p id="viewer-position"></p><h2 id="viewer-title"></h2><p id="viewer-date"></p><p id="viewer-type"></p><p id="viewer-english" lang="en"></p><p id="viewer-description"></p></div><div class="viewer-actions"><button id="viewer-prev" type="button" aria-label="上一张图片">←</button><button id="viewer-next" type="button" aria-label="下一张图片">→</button></div></div></dialog>
+<a class="space-origin" id="space-origin" href="${esc(hero.sourcePage)}" target="_blank" rel="noopener noreferrer" aria-label="NASA 官方图源：${esc(hero.title)}" title="${esc(hero.title)} · ${esc(hero.credit)}">NASA ${arrow}</a>
+<script type="application/json" id="space-image-data">${JSON.stringify(data.images.map(({id,title,category,date,dateLabel,year,timelineYear,type,local,thumbnail,width,height,alt,description,significance,credit,sourcePage,landmark,officialTitle})=>({id,title,category,date,dateLabel,year,timelineYear,type,local,thumbnail,width,height,alt,description:significance||description,credit,sourcePage,landmark,officialTitle}))).replace(/</g,'\\u003c')}</script></body></html>`;
+fs.writeFileSync(path.join(root,'pastimes/physics.html'),html);
+const file=path.join(root,'index.html');let home=fs.readFileSync(file,'utf8');
+home=home.replace(/<p class="about-physics">[\s\S]*?<\/p>/,'<p>相信技术拓展未来，也相信智慧连接过去与现在。</p>');
+let section=home.match(/<section class="juan" id="pastimes"[^>]*>[\s\S]*?<\/section>/)?.[0];
+if(!section)throw Error('Pastimes section not found');
+const oldSection=section;
+section=section.replace('我的七项志趣','我的八项志趣');
+section=section.replace(/<section class="juan" id="pastimes"[^>]*>/,'<section class="juan" id="pastimes" data-layout="eight">');
+if(!section.includes('interest-card--physics'))section=section.replace('</ul>',`  <li class="interest-card interest-card--physics"><a href="pastimes/physics.html" target="_blank" rel="noopener noreferrer" aria-label="打开物理与宇宙专页"><span class="interest-card-art"><img src="assets/physics/cliffs-small.webp" alt="NASA 官方发布的宇宙悬崖影像" loading="lazy" decoding="async"></span><span class="interest-card-copy"><small>08 / 观宇</small><strong>物理与宇宙</strong><span>从星光与引力，读到宇宙的深处。</span></span></a></li>\n    </ul>`);
+const cards=[...section.matchAll(/<li class="interest-card(?: |")\s*[\s\S]*?<\/li>/g)].map(m=>m[0]);
+const physicsCard=cards.find(card=>card.includes('interest-card--physics'));
+const otherCards=cards.filter(card=>!card.includes('interest-card--physics'));
+if(cards.length!==8||!physicsCard)throw Error('Expected eight interest cards');
+otherCards.splice(1,0,physicsCard);
+const reordered=otherCards.map((card,i)=>{
+  let result=card.replace(/<small>\d{2} \//,`<small>${String(i+1).padStart(2,'0')} /`);
+  if(result.includes('href="books.html"')&&!result.includes('interest-card--reading'))result=result.replace('class="interest-card"','class="interest-card interest-card--reading"');
+  return result;
+});
+section=section.replace(/(<ul class="interest-grid[^\"]*"[^>]*>)[\s\S]*?<\/ul>/,(_match,open)=>`${open}\n${reordered.join('\n')}\n</ul>`);
+home=home.replace(oldSection,section);
+if(home.includes('href="assets/physics.css'))home=home.replace(/assets\/physics\.css\?v=[^"]+/,`assets/physics.css?v=${version}`);else home=home.replace('</head>',`<link rel="stylesheet" href="assets/physics.css?v=${version}">\n</head>`);
+fs.writeFileSync(file,home);
+const manifest=data.images.map(img=>{const ext=img.id==='blackhole'?'jpg':'png';const source=path.join(root,'tmp/nasa-originals',img.id+'.'+ext);return {id:img.id,sourcePage:img.sourcePage,sourceImage:img.sourceImage,credit:img.credit,type:img.type,local:img.local,sourceSha256:crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex'),localSha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,img.local))).digest('hex'),processing:data.internal.imageProcessing};});
+fs.writeFileSync(path.join(root,'data/physics-image-sources.json'),JSON.stringify(manifest,null,2));
+console.log('Built physics page, NASA image records and homepage entry.');
+
+// Keep the shared ink design when regenerating this page.
+require('./apply-ink-site.cjs').applyInkSite({backup:false});

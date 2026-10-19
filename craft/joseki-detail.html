@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>定式讲解 · 围棋 · Cheney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/joseki.css?v=20261015-01">
+  <link rel="stylesheet" href="../assets/joseki-lesson.css?v=20261015-01">
+  <script src="../assets/joseki-board.js?v=20261015-01" defer></script>
+  <script src="../assets/joseki-pachi.js?v=20261013-06" defer></script>
+  <script src="../assets/joseki-josekle.js?v=20261014-01" defer></script>
+  <script src="../assets/joseki-variations.js?v=20261014-01" defer></script>
+  <script src="../assets/joseki-books.js?v=20261015-01" defer></script>
+  <script src="../assets/joseki.js?v=20261015-01" defer></script>
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-atmosphere.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-chapters.css?v=20261019-review-02">
+<script src="../assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="../assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="../assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="../assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+<body class="joseki-lesson-page" data-ink-page="joseki-detail">
+  <a class="skip" href="#joseki-main">跳到定式棋谱</a>
+  <header class="topbar"><a class="brand" href="joseki.html">Cheney <small>定式</small></a><a href="joseki.html">返回定式目录 ↗</a></header>
+  <main id="joseki-main">
+    <header class="lesson-heading"><div><span>围棋 · 定式研习</span><h1>一式一解</h1></div><p>循着手顺，看懂一型的来龙去脉。</p></header>
+    <div class="study-layout">
+      <aside class="study-index" aria-label="棋谱导航">
+        <div class="index-title"><div><small>目录</small><h2>棋谱导航</h2></div><button id="index-toggle" type="button" aria-controls="index-body" aria-expanded="false">展开目录</button></div>
+        <div class="index-body" id="index-body">
+          <label class="index-search"><span class="sr-only">搜索棋谱名称或落点</span><input id="index-search" type="search" placeholder="搜索名称或落点…" autocomplete="off"></label>
+          <div class="index-stages" role="group" aria-label="选择学习阶段"><button type="button" data-index-stage="入门" aria-pressed="false">入门</button><button type="button" data-index-stage="进阶" aria-pressed="false">进阶</button><button type="button" data-index-stage="复杂变化" aria-pressed="false">复杂变化</button></div>
+          <div class="index-position"><span id="index-count" role="status"></span><button id="index-current" type="button">定位当前</button></div>
+          <nav id="joseki-list" class="joseki-list" aria-label="定式棋形目录"></nav>
+        </div>
+      </aside>
+      <article id="joseki-detail" class="joseki-detail" aria-live="polite"></article>
+    </div>
+    <p class="lesson-reading-note">读谱提示：棋子上的数字表示落子次序；局部图保留实际边线与星位，提子随手顺更新。局部取舍还需结合全盘配置判断。</p>
+  </main>
+  <footer><a href="joseki.html">返回定式目录 ↑</a><span>循谱而行 · 取舍在全局</span></footer>
+</body>
+</html>

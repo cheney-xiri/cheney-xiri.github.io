@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163b38">
+  <meta name="description" content="Cheney 的城市足迹：到访年月、去过的地方、沿途影像与旅途手记。">
+  <title>城市足迹 · Cheney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261009-23">
+  <link rel="stylesheet" href="../assets/travels.css?v=20261016-03">
+  <script src="../assets/travels.js?v=20261016-03" defer></script>
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-atmosphere.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-chapters.css?v=20261019-review-02">
+<script src="../assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="../assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="../assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="../assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+<body class="travel-page" data-ink-page="travel">
+  <a class="skip" href="#travel-main">跳到城市足迹</a>
+  <header class="travel-bar">
+    <a class="travel-brand" href="../index.html#travels">Cheney <small>足迹</small></a>
+    <a class="travel-back" href="../index.html#travels">返回城市索引</a>
+  </header>
+  <main id="travel-main" class="travel-main">
+    <nav class="travel-crumb" aria-label="当前位置"><a href="../index.html#travels">足迹</a><span aria-hidden="true">／</span><span id="travel-crumb-name">城市</span></nav>
+    <header class="travel-hero">
+      <img class="travel-hero-image" id="travel-hero-image" alt="" width="1600" height="900" fetchpriority="high" hidden>
+      <div class="travel-hero-copy">
+        <p class="travel-overline">山河行记 · 一城一卷</p>
+        <p class="travel-region" id="travel-region"></p>
+        <h1 id="travel-name">城市足迹</h1>
+        <p class="travel-lead">每次抵达，都为同一座城添上一笔。</p>
+      </div>
+      <div class="travel-hero-summary" aria-label="到访概览">
+        <span>到访</span><strong id="travel-total">—</strong><span>次</span>
+      </div>
+      <a class="travel-hero-caption" id="travel-hero-caption" href="credits.html" hidden></a>
+    </header>
+    <nav class="travel-section-nav" aria-label="本页目录">
+      <a href="#travel-visits">到访时间</a><a href="#travel-places">所到之处</a><a href="#travel-photos">途中影像</a><a href="#travel-notes">行中手记</a><a href="#travel-flavors">风物滋味</a>
+    </nav>
+    <section class="travel-block travel-visits-block" id="travel-visits" aria-labelledby="travel-visits-title">
+      <div class="travel-block-head"><p>其一 · 时序</p><h2 id="travel-visits-title">何时来过</h2></div>
+      <div class="travel-block-body"><ol class="travel-visits" id="travel-visit-list"></ol></div>
+    </section>
+    <section class="travel-block" id="travel-places" aria-labelledby="travel-places-title">
+      <div class="travel-block-head"><p>其二 · 去处</p><h2 id="travel-places-title">所到之处</h2></div>
+      <div class="travel-block-body" id="travel-place-list"></div>
+    </section>
+    <section class="travel-block travel-photos-block" id="travel-photos" aria-labelledby="travel-photos-title">
+      <div class="travel-block-head"><p>其三 · 影像</p><h2 id="travel-photos-title">途中影像</h2></div>
+      <div class="travel-block-body" id="travel-photo-list"></div>
+    </section>
+    <div class="travel-small-blocks">
+      <section class="travel-block" id="travel-notes" aria-labelledby="travel-notes-title">
+        <div class="travel-block-head"><p>其四 · 札记</p><h2 id="travel-notes-title">行中手记</h2></div>
+        <div class="travel-block-body" id="travel-note-list"></div>
+      </section>
+      <section class="travel-block" id="travel-flavors" aria-labelledby="travel-flavors-title">
+        <div class="travel-block-head"><p>其五 · 风物</p><h2 id="travel-flavors-title">风物滋味</h2></div>
+        <div class="travel-block-body" id="travel-flavor-list"></div>
+      </section>
+    </div>
+    <nav class="travel-neighbors" id="travel-neighbors" aria-label="继续翻阅城市"></nav>
+    <footer class="travel-footer"><span>足迹 · 城市档案</span><a href="../index.html#travels">回到足迹</a></footer>
+  </main>
+</body>
+</html>

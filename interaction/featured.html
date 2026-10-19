@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e6">
+  <title>题跋 · 互动 · Cheney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=20261009-21">
+  <link rel="stylesheet" href="../assets/interaction.css?v=20261009-02">
+<!-- ink-site:start -->
+<script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
+<link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-atmosphere.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-subsections.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-backgrounds.css?v=20261019-review-02">
+<link rel="stylesheet" href="../assets/ink-chapters.css?v=20261019-review-02">
+<script src="../assets/ink-site.js?v=20261019-review-02" defer></script>
+<script src="../assets/ink-subsections.js?v=20261019-review-02" defer></script>
+<!-- ink-site:end -->
+<!-- mobile-ink:start -->
+<link rel="stylesheet" href="../assets/ink-mobile.css?v=20261019-mobile-02" media="(max-width:800px)">
+<script src="../assets/ink-mobile.js?v=20261019-mobile-02" defer></script>
+<!-- mobile-ink:end -->
+</head>
+<body class="interaction-page" data-interaction-kind="featured" data-ink-page="interaction">
+  <a class="skip" href="#interaction-main">跳到留言区</a>
+  <header class="interaction-bar"><a href="../index.html#links" class="interaction-brand">Cheney <small>互动</small></a><a href="../index.html#links" class="interaction-back">返回互动总览</a></header>
+  <main id="interaction-main" class="interaction-main">
+    <nav class="interaction-crumb" aria-label="面包屑"><a href="../index.html#links">互动</a><span aria-hidden="true">／</span><span>题跋</span></nav>
+    <header class="interaction-hero"><p class="interaction-index">肆 · 往来</p><h1>题跋</h1><p>读过文章或看过作品，欢迎写下感想，也可以回应前人的读后话。</p></header>
+    <nav class="interaction-switch" aria-label="其他互动方式">
+      <a href="wall.html" target="_blank" rel="noopener" data-kind="wall">题壁</a><a href="letter.html" target="_blank" rel="noopener" data-kind="letter">尺素</a><a href="ally.html" target="_blank" rel="noopener" data-kind="ally">结盟</a><a href="featured.html" target="_blank" rel="noopener" data-kind="featured">题跋</a>
+    </nav>
+    <div class="interaction-layout">
+      <section class="interaction-compose" aria-labelledby="compose-heading">
+        <div class="interaction-section-head"><span>落笔</span><h2 id="compose-heading">写下你的话</h2></div>
+        <form id="interaction-form" novalidate>
+          <input type="hidden" name="parentId" value="">
+          <div class="interaction-field-row">
+            <label class="interaction-field"><span>称呼 <small>可匿名</small></span><input name="name" autocomplete="nickname" maxlength="32" placeholder="如何称呼你"></label>
+            <label class="interaction-field" data-only="ally" hidden><span>站名 <small>选填</small></span><input name="siteName" maxlength="60" placeholder="你的网站叫什么"></label>
+          </div>
+          <label class="interaction-field" data-only="ally" hidden><span>网站地址 <small>选填</small></span><input name="siteUrl" type="url" inputmode="url" maxlength="240" placeholder="https://example.com"></label>
+          <label class="interaction-field" data-only="featured" hidden><span>读过的文章或作品 <small>选填</small></span><input name="article" maxlength="80" placeholder="写下标题，方便大家对照阅读"></label>
+          <label class="interaction-field"><span>留言内容</span><textarea name="text" rows="7" maxlength="1500" required placeholder="从这里开始写……"></textarea></label>
+          <fieldset class="interaction-visibility" data-only="letter" hidden><legend>谁能看见这封信</legend><label><input type="radio" name="visibility" value="private" checked><span>仅 Cheney 可见<small>不会出现在公开留言中</small></span></label><label><input type="radio" name="visibility" value="public"><span>公开可见<small>所有来访者都能阅读</small></span></label></fieldset>
+          <div class="interaction-honeypot" aria-hidden="true"><label>请留空<input name="confirm" tabindex="-1" autocomplete="off"></label></div>
+          <p class="interaction-help">无需登录。请勿留下微信号、电话号码等私人联系方式。</p>
+          <div class="interaction-actions"><button type="submit">发布留言</button><button type="button" id="cancel-reply" hidden>取消回复</button></div>
+          <p id="interaction-status" class="interaction-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <section class="interaction-feed" aria-labelledby="feed-heading">
+        <div class="interaction-section-head"><span>留痕</span><h2 id="feed-heading">题跋簿</h2></div>
+        <p class="interaction-feed-note">读后所感写在这里，彼此的想法可以继续交谈。</p>
+        <div id="interaction-list" class="interaction-list"><p class="interaction-loading">正在翻阅留言……</p></div>
+      </section>
+    </div>
+    <footer class="interaction-footer"><span>有话慢慢说，字句皆可留</span><a href="../index.html#links">回到互动总览 ↑</a></footer>
+  </main>
+  <script src="../assets/interaction.js?v=20261009-02" defer></script>
+</body>
+</html>

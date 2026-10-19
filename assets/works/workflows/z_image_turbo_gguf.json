@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "name": "Z-Image Turbo GGUF - 8GB VRAM Optimized",
+  "description": "Z-Image Turbo Q4_K_M GGUF workflow for RTX 4060 8GB. Uses GGUF diffusion model + GGUF Q4 text encoder.",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UnetLoaderGGUF",
+      "title": "Load Z-Image Turbo GGUF",
+      "pos": [50, 100],
+      "widgets_values": ["z-image-turbo-Q4_0.gguf"],
+      "inputs": [],
+      "outputs": [{"name": "MODEL", "type": "MODEL", "links": [1]}],
+      "properties": {"Node name for S&R": "UnetLoaderGGUF"}
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoaderGGUF",
+      "title": "Load Qwen3 Text Encoder GGUF",
+      "pos": [50, 300],
+      "widgets_values": ["Qwen3-4B-Q4_K_M.gguf", "lumina2"],
+      "inputs": [],
+      "outputs": [{"name": "CLIP", "type": "CLIP", "links": [2, 3]}],
+      "properties": {"Node name for S&R": "CLIPLoaderGGUF"}
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "title": "Load Flux VAE",
+      "pos": [50, 500],
+      "widgets_values": ["ae.safetensors"],
+      "inputs": [],
+      "outputs": [{"name": "VAE", "type": "VAE", "links": [4]}],
+      "properties": {"Node name for S&R": "VAELoader"}
+    },
+    {
+      "id": 4,
+      "type": "CLIPTextEncode",
+      "title": "Positive Prompt",
+      "pos": [400, 200],
+      "widgets_values": ["masterpiece, best quality, a beautiful landscape with mountains and a lake at sunset, golden light, photorealistic, 8k, highly detailed"],
+      "inputs": [{"name": "clip", "type": "CLIP", "link": 2}],
+      "outputs": [{"name": "CONDITIONING", "type": "CONDITIONING", "links": [5]}],
+      "properties": {"Node name for S&R": "CLIPTextEncode"}
+    },
+    {
+      "id": 5,
+      "type": "CLIPTextEncode",
+      "title": "Negative Prompt",
+      "pos": [400, 370],
+      "widgets_values": ["bad quality, blurry, low resolution, distorted, ugly, deformed, watermark, text, signature"],
+      "inputs": [{"name": "clip", "type": "CLIP", "link": 3}],
+      "outputs": [{"name": "CONDITIONING", "type": "CONDITIONING", "links": [6]}],
+      "properties": {"Node name for S&R": "CLIPTextEncode"}
+    },
+    {
+      "id": 6,
+      "type": "EmptyLatentImage",
+      "title": "Resolution 768x768",
+      "pos": [400, 80],
+      "widgets_values": [768, 768, 1],
+      "inputs": [],
+      "outputs": [{"name": "LATENT", "type": "LATENT", "links": [7]}],
+      "properties": {"Node name for S&R": "EmptyLatentImage"}
+    },
+    {
+      "id": 7,
+      "type": "KSampler",
+      "title": "KSampler (Turbo: 8 steps, CFG 1.0)",
+      "pos": [750, 100],
+      "widgets_values": [123456, "fixed", 8, 1.0, "euler", "simple", 1.0],
+      "inputs": [
+        {"name": "model", "type": "MODEL", "link": 1},
+        {"name": "positive", "type": "CONDITIONING", "link": 5},
+        {"name": "negative", "type": "CONDITIONING", "link": 6},
+        {"name": "latent_image", "type": "LATENT", "link": 7}
+      ],
+      "outputs": [{"name": "LATENT", "type": "LATENT", "links": [8]}],
+      "properties": {"Node name for S&R": "KSampler"}
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "title": "VAE Decode",
+      "pos": [1050, 200],
+      "inputs": [
+        {"name": "samples", "type": "LATENT", "link": 8},
+        {"name": "vae", "type": "VAE", "link": 4}
+      ],
+      "outputs": [{"name": "IMAGE", "type": "IMAGE", "links": [9]}],
+      "properties": {"Node name for S&R": "VAEDecode"}
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "title": "Save Image",
+      "pos": [1050, 400],
+      "widgets_values": ["Z-Image-Turbo"],
+      "inputs": [{"name": "images", "type": "IMAGE", "link": 9}],
+      "outputs": [],
+      "properties": {"Node name for S&R": "SaveImage"}
+    }
+  ],
+  "links": [
+    {"id": 1, "origin_id": 1, "origin_slot": 0, "target_id": 7, "target_slot": 0, "type": "MODEL"},
+    {"id": 2, "origin_id": 2, "origin_slot": 0, "target_id": 4, "target_slot": 0, "type": "CLIP"},
+    {"id": 3, "origin_id": 2, "origin_slot": 0, "target_id": 5, "target_slot": 0, "type": "CLIP"},
+    {"id": 4, "origin_id": 3, "origin_slot": 0, "target_id": 8, "target_slot": 1, "type": "VAE"},
+    {"id": 5, "origin_id": 4, "origin_slot": 0, "target_id": 7, "target_slot": 1, "type": "CONDITIONING"},
+    {"id": 6, "origin_id": 5, "origin_slot": 0, "target_id": 7, "target_slot": 2, "type": "CONDITIONING"},
+    {"id": 7, "origin_id": 6, "origin_slot": 0, "target_id": 7, "target_slot": 3, "type": "LATENT"},
+    {"id": 8, "origin_id": 7, "origin_slot": 0, "target_id": 8, "target_slot": 0, "type": "LATENT"},
+    {"id": 9, "origin_id": 8, "origin_slot": 0, "target_id": 9, "target_slot": 0, "type": "IMAGE"}
+  ]
+}

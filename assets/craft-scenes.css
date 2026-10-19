@@ -1,0 +1,121 @@
+.craft-detail-page{--scene-ink:#26342d;--scene-muted:#6d756d;--scene-paper:#f5f0e6;--scene-accent:#a45d43}
+.craft-detail-page .craft-scene{margin:2.2rem 0 2.5rem;font-family:var(--font-body);line-height:1.8;letter-spacing:.02em}
+.craft-scene h2,.craft-scene h3,.craft-scene strong{font-family:var(--font-head);font-weight:400}
+.craft-scene h2{font-size:clamp(2rem,4.4vw,3.8rem);line-height:1.35;letter-spacing:.09em}
+.craft-scene p{font-size:clamp(.94rem,1.3vw,1rem);line-height:1.85}
+.craft-scene img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* 文稿：留有旁注的横排稿纸。 */
+.scene-writing{display:grid;grid-template-columns:minmax(13rem,.32fr) minmax(0,.68fr);border:1px solid #c9b9a7;background:#e4d9c8;box-shadow:12px 12px 0 #d4c5af}
+.scene-writing-index{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(1.5rem,3.4vw,3rem);color:#f3eadb;background:#523c34}
+.scene-writing-index>span,.scene-writing-paper header{font-size:.76rem;letter-spacing:.16em}
+.scene-writing-index strong{font-size:clamp(1.8rem,3vw,3rem);line-height:1.5;letter-spacing:.15em}
+.scene-writing-index p{margin:0;color:#d8c8b4;font-size:.84rem}
+.scene-writing-paper{padding:clamp(1.5rem,4vw,3.7rem);background:repeating-linear-gradient(to bottom,#fbf8ef 0,#fbf8ef 3.2rem,#e6dcd0 calc(3.2rem + 1px));border-left:1px solid #b09f8a}
+.scene-writing-paper header{display:flex;justify-content:space-between;color:#9b6d56}
+.scene-writing-paper h2{margin:2.5rem 0 1.3rem;color:#3d302b}
+.scene-writing-intro{max-width:43rem;color:#5e5650}
+.scene-writing-lines{margin:2.2rem 0 0;padding:0;list-style:none;border-top:1px solid #cbbbac}
+.scene-writing-lines li{display:grid;grid-template-columns:3rem 6rem 1fr;gap:1rem;align-items:center;min-height:4.4rem;border-bottom:1px solid #cbbbac;color:#4c443d}
+.scene-writing-lines b{color:#a4694a;font-size:.8rem;font-weight:400}.scene-writing-lines strong{font-size:1.2rem}.scene-writing-lines span{font-size:.92rem}
+.craft-detail-page[data-craft-skill="writing"] .craft-detail-hero{height:clamp(30rem,60vh,39rem)}
+.craft-detail-page[data-craft-skill="writing"] .craft-detail-copy{background:#523c34}
+
+/* 诗笺：竖向卷轴与留白，不重复文章排版。 */
+.scene-poetry{position:relative;overflow:hidden;padding:clamp(2rem,5vw,4rem);background:#e9dfcf;border-block:1px solid #c9b49d}
+.scene-poetry::before,.scene-poetry::after{content:'';position:absolute;top:0;bottom:0;width:12px;background:linear-gradient(90deg,#aa8c70,#ddc6a7,#aa8c70)}.scene-poetry::before{left:0}.scene-poetry::after{right:0}
+.scene-poetry-heading{text-align:center;color:#49372f}.scene-poetry-heading>span{color:#a05446;font-size:.78rem;letter-spacing:.3em}.scene-poetry-heading h2{margin:.7rem 0}.scene-poetry-heading p{margin:0;color:#726559}
+.scene-poetry-scroll{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,3vw,2.5rem);max-width:55rem;min-height:27rem;margin:3rem auto 0;padding:2.5rem 3rem;background:#f8f3e8;box-shadow:0 16px 30px #6b4c3220}
+.scene-poetry-scroll::before{content:'';position:absolute;inset:1rem;border:1px solid #ddcbbb;pointer-events:none}
+.scene-poetry-column{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-right:1px solid #d8c6b6;color:#49372f}.scene-poetry-column:last-child{border:0}
+.scene-poetry-column small{color:#b06b55;letter-spacing:.2em}.scene-poetry-column h3{margin:.7rem 0;font-size:2.6rem;letter-spacing:.25em;writing-mode:vertical-rl}.scene-poetry-column p{max-width:13rem;margin:.5rem auto 0;padding:0 1rem;font-size:.9rem;color:#6b5d51}
+.scene-poetry-seal{position:absolute;right:2rem;bottom:1.7rem;display:grid;place-items:center;width:2.2rem;height:2.2rem;background:#a75b4a;color:#fff4e8;font-family:var(--font-head)}
+.craft-detail-page[data-craft-skill="poetry"] .craft-detail-hero{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);height:clamp(29rem,58vh,38rem)}
+.craft-detail-page[data-craft-skill="poetry"] .craft-detail-copy{background:#754e47}
+.craft-detail-page[data-craft-skill="poetry"] .craft-detail-image img{object-position:center 35%}
+
+/* 摄影：不等宽接触印样。 */
+.scene-photo{padding:clamp(1.3rem,3vw,2.3rem);background:#242b29;color:#f5f0e6}
+.scene-photo-heading{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:1.6rem}.scene-photo-heading span{font-size:.76rem;color:#c6ad84;letter-spacing:.18em}.scene-photo-heading h2{margin:.5rem 0 0;color:#f8f2e6}.scene-photo-heading p{max-width:23rem;margin:0;color:#cecfc4;font-size:.86rem}
+.scene-photo-board{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:.7rem;min-height:24rem}.scene-photo-board figure{position:relative;margin:0;overflow:hidden;background:#49504c}.scene-photo-board figure img{aspect-ratio:3/4;filter:saturate(.77);transition:transform .35s,filter .35s}.scene-photo-board .scene-photo-large img{aspect-ratio:5/4}.scene-photo-board figure:hover img{transform:scale(1.035);filter:saturate(1)}.scene-photo-board figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem 1rem .7rem;background:linear-gradient(transparent,#111c19bd);color:#fff;font-size:.75rem;letter-spacing:.1em}
+.craft-detail-page[data-craft-skill="photography"] .craft-detail-hero{grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr);height:clamp(35rem,70vh,45rem)}
+.craft-detail-page[data-craft-skill="photography"] .craft-detail-copy{background:#252d2d}
+
+/* 棋室：可试落子的九路棋盘。 */
+.scene-go{display:grid;grid-template-columns:minmax(0,.9fr) minmax(18rem,1.1fr);gap:clamp(2rem,5vw,5rem);align-items:center;padding:clamp(1.6rem,4vw,3rem);background:#243932;color:#efe8d9}
+.scene-go-copy>span{font-size:.78rem;letter-spacing:.18em;color:#c7ab7d}.scene-go-copy h2{margin:1.5rem 0;color:#f9f1df}.scene-go-copy>p{max-width:29rem;color:#d4d6c9}
+.scene-go-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:2rem;padding-top:1.3rem;border-top:1px solid #789083}.scene-go-notes div{display:flex;flex-direction:column}.scene-go-notes b{font-family:var(--font-head);font-size:1.3rem;font-weight:400}.scene-go-notes span{color:#bbcab9;font-size:.78rem}
+.scene-go-play{max-width:34rem;margin:auto;width:100%}.scene-go-board{display:grid;grid-template-columns:repeat(9,1fr);aspect-ratio:1;padding:5%;background:repeating-linear-gradient(0deg,#c9a874,#c9a874 8px,#d9b985 8px,#d9b985 16px);box-shadow:0 14px 25px #0b19166b}
+.scene-go-point{position:relative;min-width:0;min-height:0;padding:0;border:0;background:linear-gradient(to right,transparent calc(50% - .5px),#70512f calc(50% - .5px),#70512f calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(to bottom,transparent calc(50% - .5px),#70512f calc(50% - .5px),#70512f calc(50% + .5px),transparent calc(50% + .5px));cursor:pointer}.scene-go-point::after{content:'';position:absolute;inset:15%;border-radius:50%;opacity:0;transition:opacity .12s,transform .12s;transform:scale(.6)}.scene-go-point:hover::after,.scene-go-point:focus-visible::after{opacity:.45;background:#29352e;transform:scale(1)}.scene-go-point[data-stone]::after{opacity:1;transform:scale(1);box-shadow:1px 2px 3px #4437297a}.scene-go-point[data-stone="black"]::after{background:radial-gradient(circle at 35% 30%,#5c625a,#151b18)}.scene-go-point[data-stone="white"]::after{background:radial-gradient(circle at 35% 30%,#fff,#dfd8c9)}.scene-go-point:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+.scene-go-controls{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:1rem;font-size:.82rem}.scene-go-controls button{min-height:2.75rem;padding:.4rem .8rem;border:1px solid #d8c8a7;background:transparent;color:#f0e6d2;cursor:pointer}.scene-go-controls button:hover,.scene-go-controls button:focus-visible{background:#d8c8a7;color:#243932}
+.craft-detail-page[data-craft-skill="go"] .craft-detail-copy{background:#243932}
+.craft-detail-page[data-craft-skill="go"] .craft-detail-image img{object-position:center 65%}
+
+/* 笛：横向气息谱，避免重复卡片。 */
+.scene-dizi{padding:clamp(1.6rem,4vw,3.5rem);background:linear-gradient(115deg,#e6ebdf,#f7f3e9);border:1px solid #b8c8b2}
+.scene-dizi-head{max-width:47rem}.scene-dizi-head>span{font-size:.78rem;letter-spacing:.2em;color:#527562}.scene-dizi-head h2{margin:1rem 0;color:#284b3d}.scene-dizi-head p{color:#596d5f}
+.scene-dizi-phrase{display:flex;align-items:center;gap:0;margin:3rem 0 2.5rem;min-height:7rem;padding:1rem 0;border-block:1px solid #b4c5b4;color:#446e58}.scene-dizi-phrase span{flex:none;font-family:var(--font-head);font-size:1.1rem}.scene-dizi-phrase i{flex:1;height:2px;background:#5b8b6b;position:relative}.scene-dizi-phrase i::after{content:'';position:absolute;right:25%;top:50%;width:1.1rem;height:1.1rem;border-radius:50%;background:#5b8b6b;transform:translateY(-50%)}.scene-dizi-phrase em{flex:none;margin:0 .7rem;padding:.5rem;border:1px solid #8eaa93;border-radius:50%;font-size:.72rem;font-style:normal}
+.scene-dizi-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.scene-dizi-panels article{padding:1.3rem 0;border-top:3px solid #6f9477}.scene-dizi-panels small{color:#668471}.scene-dizi-panels h3{margin:.55rem 0;font-size:1.35rem;color:#284b3d}.scene-dizi-panels p{margin:0;color:#5b6b5e;font-size:.9rem}
+.craft-detail-page[data-craft-skill="dizi"] .craft-detail-copy{background:#2b5544}
+
+/* 吉他：和弦与节奏并置的深色练习台。 */
+.scene-guitar{padding:clamp(1.5rem,4vw,3rem);background:#382c2a;color:#f3eadb}
+.scene-guitar-head{display:flex;justify-content:space-between;align-items:end;gap:2rem}.scene-guitar-head span{font-size:.78rem;color:#e0b885;letter-spacing:.18em}.scene-guitar-head h2{margin:.7rem 0 0;color:#fff3df}.scene-guitar-head p{max-width:23rem;margin:0;color:#dbcebd;font-size:.9rem}
+.scene-guitar-stage{display:grid;grid-template-columns:minmax(0,1fr) 15rem;gap:1rem;margin-top:2rem}.scene-guitar-chords{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem}.scene-guitar-chord{display:flex;flex-direction:column;min-height:16rem;padding:1rem;background:#eee4d2;color:#40332e}.scene-guitar-chord b{font-family:var(--font-head);font-size:2.4rem;font-weight:400;line-height:1.1}.scene-guitar-chord span{font-size:.76rem;color:#796a60}.scene-guitar-chord i{display:block;align-self:center;margin:auto 0 0;padding:1rem 1.5rem;border:1px solid #c8b9a3;color:#734c3e;font-family:monospace;font-size:1.25rem;font-style:normal;line-height:1.55;letter-spacing:.25em;white-space:pre}
+.scene-guitar-rhythm{display:flex;flex-direction:column;justify-content:center;padding:1.4rem;border:1px solid #927a68}.scene-guitar-rhythm span{color:#e0b885;font-size:.76rem;letter-spacing:.14em}.scene-guitar-rhythm strong{margin:1.3rem 0;font-size:1.6rem;line-height:1.8}.scene-guitar-rhythm p{margin:0;color:#d4c9bd;font-size:.85rem}
+.craft-detail-page[data-craft-skill="guitar"] .craft-detail-copy{background:#4b3531}
+
+.craft-detail-page .craft-detail-portfolio{margin-top:0}.craft-detail-page .craft-detail-hero{margin-bottom:0}
+@media(max-width:900px){.scene-guitar-stage{grid-template-columns:1fr}.scene-guitar-rhythm{min-height:9rem}.scene-photo-board{min-height:18rem}}
+@media(max-width:760px){.craft-detail-page[data-craft-skill] .craft-detail-hero{grid-template-columns:1fr;height:auto}.scene-writing,.scene-go{grid-template-columns:1fr}.scene-writing-index{min-height:12rem}.scene-poetry-scroll{padding:2rem 1.5rem;min-height:23rem}.scene-photo-heading,.scene-guitar-head{align-items:start;flex-direction:column;gap:.6rem}}
+@media(max-width:600px){.scene-writing-paper h2{margin-top:1.4rem}.scene-writing-lines li{grid-template-columns:2.5rem 4rem 1fr;gap:.4rem}.scene-writing-lines span{font-size:.82rem}.scene-poetry-scroll{gap:.4rem;margin-top:2rem;padding:1.8rem .8rem}.scene-poetry-column h3{font-size:1.8rem}.scene-poetry-column p{padding:0 .25rem;font-size:.77rem}.scene-poetry-seal{right:.9rem;bottom:.7rem}.scene-photo-board{grid-template-columns:1fr 1fr;min-height:0}.scene-photo-large{grid-column:1/-1}.scene-photo-board .scene-photo-large img{aspect-ratio:1.5}.scene-photo-board figure:not(.scene-photo-large) img{aspect-ratio:1}.scene-go{gap:1rem}.scene-go-notes{margin-top:1rem}.scene-dizi-phrase{margin:1.5rem 0}.scene-dizi-panels{grid-template-columns:1fr;gap:.3rem}.scene-dizi-panels article{padding:.8rem 0}.scene-guitar-chords{grid-template-columns:repeat(2,1fr)}.scene-guitar-chord{min-height:13rem}.scene-guitar-chord i{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){.scene-photo-board figure img,.scene-go-point::after{transition:none}}
+
+/* 内页阅读尺寸：减少首屏占高，让内容在两三屏内可读完。 */
+.craft-detail-main{width:min(66rem,calc(100% - 2.5rem));padding-top:1.1rem}
+.craft-detail-page[data-craft-skill] .craft-detail-hero{height:25rem;padding:1rem 0 0}
+.craft-detail-page .craft-detail-copy{padding:1.5rem clamp(1.5rem,3vw,2.7rem)}
+.craft-detail-number{margin-bottom:1rem}
+.craft-detail-copy h1{font-size:clamp(3.2rem,5vw,4.7rem)}
+.craft-detail-tagline{margin-top:.65rem;font-size:1.08rem}
+.craft-detail-lead{margin-top:.7rem;font-size:.88rem;line-height:1.7}
+.craft-detail-jump{margin-top:.75rem}
+.craft-detail-page .craft-scene{margin:1rem 0 1.2rem}
+.scene-writing-index,.scene-writing-paper{padding:1.5rem 2rem}.scene-writing-paper h2{margin:1.25rem 0 .55rem}.scene-writing-lines{margin-top:1rem}.scene-writing-lines li{min-height:3.3rem}
+.scene-poetry{padding:1.6rem 2rem}.scene-poetry-scroll{min-height:16rem;margin-top:1.3rem;padding:1rem 2rem}.scene-poetry-column h3{font-size:2rem;margin:.3rem 0}.scene-poetry-column p{line-height:1.6}
+.scene-photo-board{min-height:0;height:19rem}.scene-photo-board img,.scene-photo-board .scene-photo-large img{height:100%;aspect-ratio:auto}
+.scene-go{padding:1.6rem 2rem;gap:2rem}.scene-go-copy h2{margin:.6rem 0}.scene-go-notes{margin-top:1.1rem}.scene-go-play{max-width:22rem}
+.scene-dizi{padding:1.7rem 2rem}.scene-dizi-head h2{margin:.5rem 0}.scene-dizi-phrase{min-height:4rem;margin:1.1rem 0}.scene-dizi-panels article{padding:.7rem 0}
+.scene-guitar{padding:1.7rem 2rem}.scene-guitar-stage{margin-top:1rem}.scene-guitar-chord{min-height:10rem}.scene-guitar-chord i{padding:.3rem .8rem;font-size:1rem}.scene-guitar-rhythm strong{margin:.6rem 0}
+
+.craft-depth{display:grid;gap:2rem;margin:0 0 1.2rem;padding:1.35rem 1.6rem;border:1px solid #d9cfc0;background:#f8f5ec;color:#405048}
+.craft-depth>div:first-child>span{font-size:.73rem;letter-spacing:.18em;color:#9e624d}
+.craft-depth h2{margin:.25rem 0 .5rem;font-family:var(--font-head);font-size:1.55rem;font-weight:400;letter-spacing:.08em;line-height:1.5}
+.craft-depth h3{margin:0 0 .6rem;font-family:var(--font-head);font-size:1.13rem;font-weight:400}
+.craft-depth p{margin:0;font-size:.88rem;line-height:1.75}
+.craft-depth ol{margin:0;padding-left:1.3rem;font-size:.88rem;line-height:1.85}
+.depth-writing{grid-template-columns:1.2fr .8fr;border-left:4px solid #a9775e}.depth-writing-check{padding-left:1.5rem;border-left:1px solid #d8c8b7}
+.depth-poetry{grid-template-columns:.6fr 1.1fr .35fr;align-items:center;background:#eee5d7}.depth-poetry-words{display:grid;grid-template-columns:repeat(2,1fr);gap:.35rem;color:#9f6355;font-family:var(--font-head);font-size:1.5rem;text-align:center}
+.depth-photo{grid-template-columns:15rem 1fr;background:#e7e9e4;border-color:#bcc6c0}.depth-photo ol{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;list-style:none;padding:0}.depth-photo li{display:flex;flex-direction:column;padding-left:.8rem;border-left:1px solid #aab8ad}.depth-photo li b{font-family:var(--font-head);font-size:1.1rem;font-weight:400}.depth-photo li span{font-size:.8rem;line-height:1.6}
+.depth-go{grid-template-columns:1fr 1fr;background:#e5e6dc;border-color:#aab8a8}.depth-go ol{align-self:center;list-style:decimal-leading-zero}
+.depth-dizi{grid-template-columns:1.2fr 1fr;align-items:center;background:#edf2e8;border-color:#b7c9b9}.depth-dizi-flow{display:flex;align-items:center;gap:.5rem;color:#477157;font-family:var(--font-head);white-space:nowrap}.depth-dizi-flow i{flex:1;height:1px;background:#8dad8f}
+.depth-guitar{grid-template-columns:1.2fr 1fr;align-items:center;background:#eee6dc;border-color:#c9b8a7}.depth-guitar-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem}.depth-guitar-steps b{padding:.45rem;border:1px solid #b9a28f;color:#75513e;font-family:var(--font-head);font-size:.95rem;font-weight:400;text-align:center}
+
+@media(max-width:760px){.craft-detail-main{width:calc(100% - 1.5rem)}.craft-detail-page[data-craft-skill] .craft-detail-hero{height:auto}.craft-detail-page .craft-detail-copy{min-height:0;padding:1.5rem}.craft-detail-image{aspect-ratio:1.8}.craft-depth{grid-template-columns:1fr;gap:1rem}.depth-writing-check{padding-left:0;border-left:0}.depth-photo ol{grid-template-columns:repeat(2,1fr)}.scene-go-play{max-width:24rem}.scene-photo-board{height:16rem}}
+@media(max-width:600px){.scene-writing-index,.scene-writing-paper,.scene-dizi,.scene-guitar,.scene-go{padding:1.3rem}.scene-poetry{padding:1.2rem}.scene-poetry-scroll{padding:1rem .6rem}.scene-photo-board{height:auto}.scene-photo-board img,.scene-photo-board .scene-photo-large img{height:auto;aspect-ratio:1.4}.craft-depth{padding:1rem}.depth-photo ol{gap:.55rem}.depth-dizi-flow{font-size:.88rem}}
+
+/* 第三层内容保留各技艺自己的阅读节奏，并与实际站内内容相连。 */
+.craft-more{margin:0 0 1.2rem;padding:1.4rem 1.6rem;background:#f4f0e8;border:1px solid #d5c9b8;color:#3c473e}
+.craft-more-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.craft-more-head>div{min-width:0}.craft-more-head span{display:block;color:#9f654c;font-size:.73rem;letter-spacing:.17em}.craft-more-head h2{margin:.2rem 0 0;font-family:var(--font-head);font-size:1.6rem;font-weight:400;letter-spacing:.08em}
+.craft-more-head>a{flex:none;min-height:2.5rem;display:inline-flex;align-items:center;color:#a15a44;font-size:.83rem;text-decoration:none;border-bottom:1px solid currentColor}.craft-more-head>a:hover,.craft-more-head>a:focus-visible{color:#6d392e;outline-offset:3px}
+.craft-more p{font-size:.86rem;line-height:1.75}
+.more-writing{background:#f9f4e9;border-color:#d4c2af}.more-writing-list{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}.more-writing-list a{display:flex;flex-direction:column;gap:.25rem;min-height:8.7rem;padding:.8rem 1rem;border-left:2px solid #ae765b;background:#fffaf0;color:#45392f;text-decoration:none}.more-writing-list a:hover,.more-writing-list a:focus-visible{background:#efe2d0;outline:2px solid #ae765b;outline-offset:0}.more-writing-list small{color:#a45f48}.more-writing-list strong{font-family:var(--font-head);font-size:1.15rem;font-weight:400}.more-writing-list span{font-size:.8rem;color:#716153;line-height:1.55}
+.more-poetry{background:#eee7dc}.more-poetry-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.more-poetry-list article{padding:.7rem 1rem;border-top:2px solid #b4816d;background:#faf6ec}.more-poetry-list b{font-family:var(--font-head);font-size:1.2rem;font-weight:400;color:#8c574a}.more-poetry-list p{margin:.4rem 0 0}.more-poetry-note{margin:.7rem 0 0;color:#856e61;font-size:.78rem!important}
+.more-photo{background:#e8ebe6;border-color:#bac6bd}.more-photo-cities{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}.more-photo-cities a{position:relative;display:grid;grid-template-columns:5.5rem 1fr;grid-template-rows:1fr 1fr;min-height:6rem;background:#f8faf6;color:#32463c;text-decoration:none;overflow:hidden}.more-photo-cities a:hover,.more-photo-cities a:focus-visible{outline:2px solid #4e745e}.more-photo-cities img{grid-row:1/3;height:100%;aspect-ratio:1;object-fit:cover}.more-photo-cities strong{align-self:end;padding:.2rem .7rem 0;font-family:var(--font-head);font-size:1.1rem;font-weight:400}.more-photo-cities span{padding:0 .7rem .2rem;color:#68786d;font-size:.75rem;line-height:1.4}.more-photo-note{margin:.65rem 0 0;color:#607267;font-size:.76rem!important}
+.more-go{background:#e8e8de;border-color:#afbfaa}.more-go-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.more-go-grid article{padding:.85rem 1rem;background:#f7f7f0;border-top:3px solid #65806b}.more-go-grid b{font-family:var(--font-head);font-size:1.17rem;font-weight:400}.more-go-grid p{margin:.3rem 0 0}
+.more-dizi{background:#eef2e7;border-color:#b6c9b5}.more-dizi-table{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}.more-dizi-table div{padding:.7rem .8rem;border-left:2px solid #74a181;background:#f8fbf5}.more-dizi-table b{font-family:var(--font-head);font-size:1.1rem;font-weight:400;color:#3c7051}.more-dizi-table p{margin:.3rem 0 0}
+.more-guitar{background:#efe7df;border-color:#c9b5a6}.more-guitar-bars{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}.more-guitar-bars article{display:flex;flex-direction:column;min-height:8.4rem;padding:.8rem 1rem;background:#faf7f2;border-bottom:3px solid #9f785f}.more-guitar-bars small{color:#9b7056;letter-spacing:.08em}.more-guitar-bars strong{font-family:var(--font-head);font-size:1.16rem;font-weight:400}.more-guitar-bars p{margin:.2rem 0 0}.more-guitar-note{margin:.6rem 0 0;color:#876f60;font-size:.76rem!important}
+
+@media(max-width:760px){.craft-more{padding:1rem}.more-writing-list,.more-poetry-list,.more-go-grid,.more-guitar-bars{grid-template-columns:1fr 1fr}.more-dizi-table{grid-template-columns:1fr 1fr}.more-photo-cities{grid-template-columns:1fr}.more-photo-cities a{min-height:5rem}.more-photo-cities img{width:5.5rem}}
+@media(max-width:520px){.craft-more-head{align-items:start;flex-direction:column}.more-writing-list,.more-poetry-list,.more-go-grid,.more-guitar-bars{grid-template-columns:1fr}.more-writing-list a,.more-guitar-bars article{min-height:0}.more-dizi-table{grid-template-columns:1fr}.more-photo-cities a{grid-template-columns:4.6rem 1fr}.more-photo-cities img{width:4.6rem}}

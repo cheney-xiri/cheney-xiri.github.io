@@ -1,0 +1,64 @@
+/* Subsection backdrops. Scene, mineral pigment and composition follow the subject.
+   This layer owns backgrounds only; reading layout and original media stay intact. */
+html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop]:not(#ink-home){
+ --sub-scene:url('ink/subsections/reading-v1.webp');--sub-pigment:192,204,184;
+ --sub-position:center center;--sub-size:cover;--sub-accent:#486550;
+ --is-rule:rgba(36,60,48,.25);--is-ink:#1c302b;--is-secondary:#2d443b;--is-muted:#42564b;
+ background-color:rgb(var(--sub-pigment));
+ background-image:linear-gradient(90deg,rgba(var(--sub-pigment),.25),rgba(var(--sub-pigment),.89) 13%,rgba(var(--sub-pigment),.87) 83%,rgba(var(--sub-pigment),.28)),linear-gradient(180deg,rgba(var(--sub-pigment),.04),rgba(var(--sub-pigment),.18)),var(--sub-scene);
+ background-size:cover,cover,var(--sub-size);background-position:center,center,var(--sub-position);
+ background-repeat:no-repeat;background-attachment:fixed;
+}
+html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop]:not(#ink-home)::before{opacity:.06}
+/* 文心：笔下的纸纹、江上的留白。 */
+body[data-ink-backdrop=writing]{--topic-scene:url('ink/subsections/writing-v1.webp');--topic-pigment:199,203,178;--topic-position:62% center;--topic-accent:#855644}
+body[data-ink-backdrop=poetry]{--topic-scene:url('ink/subsections/poetry-v1.webp');--topic-pigment:179,201,199;--topic-position:center 45%;--topic-accent:#365f68}
+/* 观物、清音：黑白棋石、竹影与暖木分别呈现。 */
+body[data-ink-backdrop=go]{--topic-scene:url('ink/subsections/go-v1.webp');--topic-pigment:183,198,175;--topic-position:65% center;--topic-accent:#355840}
+body[data-ink-backdrop=dizi]{--topic-scene:url('ink/subsections/dizi-v1.webp');--topic-pigment:180,202,171;--topic-position:center 35%;--topic-accent:#3b6846}
+body[data-ink-backdrop=guitar]{--topic-scene:url('ink/subsections/guitar-v1.webp');--topic-pigment:207,199,171;--topic-position:68% center;--topic-accent:#865d3c}
+body[data-ink-backdrop=music]{--topic-scene:url('ink/subsections/music-v1.webp');--topic-pigment:171,199,193;--topic-position:center center;--topic-accent:#2f6866}
+body[data-ink-backdrop=games]{--topic-scene:url('ink/subsections/games-v1.webp');--topic-pigment:169,194,182;--topic-position:center center;--topic-accent:#3b6252}
+body[data-ink-backdrop=animation]{--topic-scene:url('ink/subsections/animation-v1.webp');--topic-pigment:181,201,194;--topic-position:55% center;--topic-accent:#42656a}
+body[data-ink-backdrop=videos]{--topic-scene:url('ink/subsections/videos-v1.webp');--topic-pigment:181,193,179;--topic-position:70% center;--topic-accent:#4e6259}
+body[data-ink-backdrop=reading]{--topic-scene:url('ink/subsections/reading-v1.webp');--topic-pigment:199,205,177;--topic-position:40% center;--topic-accent:#5a6544}
+/* 文存：选路、松石、往来，不使用统一大山图覆盖所有文章。 */
+body[data-ink-backdrop=essays]{--topic-scene:url('ink/subsections/essays-v1.webp');--topic-pigment:196,205,183;--topic-position:center 65%;--topic-accent:#5e6b4e}
+body[data-ink-backdrop=quotes]{--topic-scene:url('ink/subsections/quotes-v1.webp');--topic-pigment:194,207,181;--topic-position:35% center;--topic-accent:#506b43}
+body[data-ink-backdrop=wall]{--topic-scene:url('ink/subsections/wall-v1.webp');--topic-pigment:193,203,184;--topic-position:40% center;--topic-accent:#885749}
+body[data-ink-backdrop=letter]{--topic-scene:url('ink/subsections/letter-v1.webp');--topic-pigment:209,204,179;--topic-position:65% center;--topic-accent:#805443}
+body[data-ink-backdrop=ally]{--topic-scene:url('ink/subsections/ally-v1.webp');--topic-pigment:177,201,186;--topic-position:center 60%;--topic-accent:#3f6a5c}
+body[data-ink-backdrop=featured]{--topic-scene:url('ink/subsections/featured-v1.webp');--topic-pigment:195,203,182;--topic-position:60% center;--topic-accent:#657045}
+/* 原有小像、求学、小说和创作流程各有材料与色相。 */
+body[data-ink-backdrop=portrait]{--topic-scene:url('ink/scroll-bamboo-v1.webp');--topic-pigment:184,203,181;--topic-position:30% center;--topic-accent:#4c6a4d}
+body[data-ink-backdrop=study-spring]{--topic-scene:url('ink/scroll-journey-v1.webp');--topic-pigment:185,206,178;--topic-position:20% center;--topic-accent:#45653e}
+body[data-ink-backdrop=study-evening]{--topic-scene:url('ink/subsections/reading-v1.webp');--topic-pigment:208,198,169;--topic-position:65% center;--topic-accent:#805a42}
+body[data-ink-backdrop=study]{--topic-scene:url('ink/scroll-journey-v1.webp');--topic-pigment:175,196,192;--topic-position:80% center;--topic-accent:#3e666c}
+body[data-ink-backdrop=summer]{--topic-scene:url('ink/subsections/letter-v1.webp');--topic-pigment:207,213,177;--topic-position:40% center;--topic-accent:#657141}
+body[data-ink-backdrop=future]{--topic-scene:url('ink/scroll-letters-v1.webp');--topic-pigment:172,192,202;--topic-position:65% center;--topic-accent:#3d5d76}
+body[data-ink-backdrop=digital]{--topic-scene:url('ink/chapter-works-v1.webp');--topic-pigment:176,194,181;--topic-position:30% center;--topic-accent:#4a6252}
+body[data-ink-backdrop=digital-light]{--topic-scene:url('ink/chapter-pastimes-v1.webp');--topic-pigment:173,198,201;--topic-position:70% center;--topic-accent:#356973}
+body[data-ink-backdrop=river]{--topic-scene:url('ink/scroll-river-v1.webp');--topic-pigment:178,201,197;--topic-position:center 55%;--topic-accent:#3b6667}
+body[data-ink-backdrop=resolve]{--topic-scene:url('ink/scroll-admire-v1.webp');--topic-pigment:192,198,178;--topic-position:35% center;--topic-accent:#854d43}
+body[data-ink-backdrop=youth]{--topic-scene:url('ink/subsections/guitar-v1.webp');--topic-pigment:194,207,179;--topic-position:30% center;--topic-accent:#506c48}
+/* Bind the per-topic variables after the default rule, regardless of selector weight. */
+html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop]:not(#ink-home){
+ --sub-scene:var(--topic-scene,url('ink/subsections/reading-v1.webp'));
+ --sub-pigment:var(--topic-pigment,192,204,184);
+ --sub-position:var(--topic-position,center center);--sub-accent:var(--topic-accent,#486550);
+}
+/* Quiet ink under body copy; illustrations keep their original color. */
+html.ink-site:not([data-ink-preserve]) [data-ink-backdrop] :is(.craft-depth,.craft-more,.interaction-compose,.fp-reader-panel,.wen-reading){
+ background-color:rgba(var(--sub-pigment),.83);background-image:none;border-color:rgba(43,65,52,.23)
+}
+html.ink-site:not([data-ink-preserve]) [data-ink-backdrop] :is(.craft-detail-crumb,.pastime-crumb,.interaction-crumb,.wen-breadcrumb){color:#354b40}
+html.ink-site:not([data-ink-preserve]) [data-ink-backdrop] :is(.profile-bar,.stage-bar,.craft-detail-bar,.fp-bar,.novel-bar,.wen-bar,.travel-bar,.pastime-bar,.interaction-bar,.site-bar,.ac-bar,.topbar,.catalog-topbar){
+ background:rgba(var(--sub-pigment),.95);border-color:rgba(43,65,52,.25)
+}
+@media(max-width:700px){
+ html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop]:not(#ink-home){
+  background-image:linear-gradient(90deg,rgba(var(--sub-pigment),.85),rgba(var(--sub-pigment),.88) 65%,rgba(var(--sub-pigment),.72)),var(--sub-scene);
+  background-size:100% 100%,auto 56rem;background-position:center,right top;background-attachment:scroll;background-repeat:no-repeat;
+ }
+}
+@media(prefers-reduced-motion:reduce){html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop]:not(#ink-home){background-attachment:scroll}}

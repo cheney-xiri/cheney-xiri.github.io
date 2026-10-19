@@ -1,0 +1,11 @@
+{
+  "name": "cheney-personal-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cheney 的个人网站：技艺、志趣、作品、文存与行旅。",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node server.js",
+    "build": "node scripts/prepare-github-pages.cjs"
+  }
+}

@@ -1,0 +1,120 @@
+/* 技艺：深墨折屏。志趣：浅色图鉴。两种入口保持同一书卷气。 */
+:root{ --refresh-ink:#17312d; --refresh-paper:#f5f1e7; --refresh-cinnabar:#d58b6e; --refresh-rule:rgba(232,223,201,.25); }
+
+#craft{ background:radial-gradient(circle at 8% 88%,rgba(142,89,66,.24),transparent 34%),radial-gradient(circle at 84% 8%,rgba(91,130,104,.2),transparent 35%),#172c28; color:var(--refresh-paper); }
+#craft .juan-title{ color:#f7efe0; }
+#craft .juan-poem{ color:#d5c8b0; }
+#craft .craft-groups{ gap:1.1rem; }
+#craft .craft-family{ padding:.7rem; border:1px solid var(--refresh-rule); background:rgba(245,240,224,.045); }
+#craft .craft-family::before{ left:.7rem; width:4rem; background:#cc846a; }
+#craft .craft-family-head{ display:flex; align-items:center; justify-content:space-between; gap:.7rem; min-height:4rem; margin:0; padding:.35rem .35rem .6rem; border-color:var(--refresh-rule); }
+#craft .craft-family-head > span{ color:#d89a7c; white-space:nowrap; }
+#craft .craft-family-head h3{ margin:0; color:#f1e8d8; font-size:1rem; text-align:right; }
+#craft .craft-family-grid{ gap:.55rem; padding-top:.55rem; }
+#craft .craft-card{ position:relative; display:block; min-height:clamp(10.2rem,22vh,12.6rem); border:0; background:#243e36; box-shadow:none; isolation:isolate; }
+#craft .craft-card::after{ content:''; position:absolute; z-index:0; inset:0; background:linear-gradient(90deg,rgba(12,28,25,.92),rgba(12,28,25,.34) 62%,rgba(12,28,25,.05)); pointer-events:none; }
+#craft .craft-card > img{ position:absolute; inset:0; width:100%; height:100%; min-height:0; border:0; object-position:center; filter:saturate(.8); transition:transform .4s ease,filter .4s ease; }
+#craft .craft-card:hover,#craft .craft-card:focus-within{ transform:translateY(-2px); box-shadow:0 15px 30px rgba(0,0,0,.2); }
+#craft .craft-card:hover > img,#craft .craft-card:focus-within > img{ transform:scale(1.05); filter:saturate(1); }
+#craft .craft-card-body{ position:relative; z-index:1; justify-content:flex-end; width:100%; min-height:inherit; padding:1.05rem 1.1rem; }
+#craft .craft-card-level{ color:#ecc4ab; font-size:.68rem; }
+#craft .craft-card h4{ color:#fff5e5; font-size:clamp(1.65rem,2.3vw,2rem); }
+#craft .craft-card-body > p:not(.craft-card-level){ max-width:17rem; margin:.16rem 0 .35rem; color:#e1dfcf; font-size:.76rem; line-height:1.55; }
+#craft .craft-card-body > a{ min-height:2.2rem; margin:0; color:#f2c1a6; font-size:.74rem; }
+#craft .craft-card-body > a::before{ content:''; position:absolute; inset:0; }
+#craft .craft-card-body > a::after{ background:currentColor; }
+#craft .craft-card-body > a:focus-visible{ outline:2px solid #ffdcc0; outline-offset:-5px; }
+
+#pastimes{ background:radial-gradient(circle at 10% 20%,rgba(132,161,139,.14),transparent 34%),radial-gradient(circle at 90% 88%,rgba(209,147,105,.13),transparent 32%),#eeeee6; }
+#pastimes .interest-grid{ grid-template-columns:repeat(12,minmax(0,1fr)); gap:.78rem; }
+#pastimes .interest-card{ grid-column:span 3; overflow:hidden; border:1px solid rgba(49,77,64,.18); background:#f9f7ef; box-shadow:0 10px 23px -21px #263e32; }
+#pastimes .interest-card:nth-child(1){ grid-column:span 3; }
+#pastimes .interest-card:nth-child(2){ grid-column:span 4; }
+#pastimes .interest-card:nth-child(3){ grid-column:span 5; }
+#pastimes .interest-card:nth-child(4){ grid-column:span 3; }
+#pastimes .interest-card:nth-child(5){ grid-column:span 3; }
+#pastimes .interest-card:nth-child(6){ grid-column:span 3; }
+#pastimes .interest-card:nth-child(7){ grid-column:span 3; }
+#pastimes .interest-card a,#pastimes .interest-card--travel a{ display:flex; flex-direction:column; height:12.4rem; }
+#pastimes .interest-card-art,#pastimes .interest-card--travel .interest-card-art{ flex:0 0 7.5rem; width:100%; height:auto; border:0; overflow:hidden; }
+#pastimes .interest-card-copy,#pastimes .interest-card--travel .interest-card-copy{ display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:0; width:100%; padding:.45rem .8rem .55rem; }
+#pastimes .interest-card-copy small,#pastimes .interest-card--travel .interest-card-copy small{ order:0; font-size:.6rem; }
+#pastimes .interest-card-copy strong,#pastimes .interest-card--travel .interest-card-copy strong{ order:1; margin:.04rem 0; font-size:1.34rem; line-height:1.15; }
+#pastimes .interest-card-copy > span,#pastimes .interest-card--travel .interest-card-copy > span{ order:2; display:-webkit-box; overflow:hidden; -webkit-box-orient:vertical; -webkit-line-clamp:1; max-width:100%; margin:0; font-size:.69rem; }
+#pastimes .interest-card:nth-child(2) .interest-card-art img{ object-position:center 57%; }
+#pastimes .interest-card:nth-child(3) .interest-card-art img{ object-position:center 43%; }
+
+/* 技艺内页：卷轴工坊。导航切换同一处的两类内容，避免重复卡片阵列。 */
+.craft-detail-page{ --craft-dark:#20342e; --craft-accent:#d48c6e; background:radial-gradient(circle at 95% 4%,rgba(155,102,73,.1),transparent 30%),#f2eee5; }
+.craft-detail-page[data-craft-skill="writing"],.craft-detail-page[data-craft-skill="poetry"]{ --craft-dark:#3b2d2a; --craft-accent:#ce826b; }
+.craft-detail-page[data-craft-skill="photography"],.craft-detail-page[data-craft-skill="go"]{ --craft-dark:#233c43; --craft-accent:#91aeb2; }
+.craft-detail-page[data-craft-skill="dizi"],.craft-detail-page[data-craft-skill="guitar"]{ --craft-dark:#294136; --craft-accent:#adc294; }
+.craft-detail-page [hidden]{ display:none!important; }
+.craft-detail-main{ width:min(77rem,calc(100% - 3rem)); }
+.craft-detail-hero{ grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:0; height:clamp(34rem,68vh,42rem); padding:1.8rem 0 0; align-items:stretch; }
+.craft-detail-copy{ display:flex; flex-direction:column; justify-content:center; max-width:none; padding:2.3rem clamp(1.4rem,4vw,4rem); background:var(--craft-dark); color:#f3ecde; }
+.craft-detail-number{ margin-bottom:clamp(2.2rem,6vw,5rem); color:#dfad8c; }
+.craft-detail-level{ color:#d0c7b6; }
+.craft-detail-copy h1{ color:#fff3e2; font-size:clamp(4.1rem,7vw,7rem); }
+.craft-detail-tagline{ border-color:var(--craft-accent); color:#f6e8d3; }
+.craft-detail-lead{ max-width:29rem; color:#e3dacb; font-size:.94rem; }
+.craft-detail-jump{ align-self:flex-start; color:#efb998; border-color:#efb998; }
+.craft-detail-image{ height:100%; min-height:0; margin:0; aspect-ratio:auto; border:0; box-shadow:none; }
+.craft-detail-image img{ position:absolute; inset:0; }
+.craft-detail-image::after{ inset:1rem; border-color:rgba(255,245,222,.48); }
+.craft-detail-image figcaption{ right:1rem; bottom:1rem; }
+.craft-detail-switcher{ display:flex; align-items:center; gap:0; margin:2.2rem 0 0; border-top:1px solid rgba(73,78,63,.22); border-bottom:1px solid rgba(73,78,63,.22); }
+.craft-detail-switcher button{ position:relative; flex:1; min-height:4.1rem; padding:.75rem 1rem; border:0; background:transparent; color:#817568; font-family:var(--font-head); font-size:1.08rem; text-align:left; cursor:pointer; }
+.craft-detail-switcher button + button{ border-left:1px solid rgba(73,78,63,.22); }
+.craft-detail-switcher button[aria-pressed="true"]{ color:#314a3c; background:rgba(213,222,205,.46); }
+.craft-detail-switcher button[aria-pressed="true"]::after{ content:''; position:absolute; right:0; bottom:-1px; left:0; height:2px; background:var(--craft-accent); }
+.craft-detail-switcher button:hover,.craft-detail-switcher button:focus-visible{ color:#9c4d38; outline-offset:-3px; }
+.craft-detail-path,.craft-detail-focus{ margin:0; padding:2rem 0 2.4rem; border:0; background:transparent; }
+.craft-detail-path header,.craft-detail-focus header{ margin-bottom:1.6rem; }
+.craft-detail-path ol,.craft-focus-grid{ display:block; border-top:1px solid rgba(73,78,63,.21); }
+.craft-detail-path li,.craft-focus-card{ display:grid; grid-template-columns:5rem minmax(10rem,.34fr) minmax(0,1fr); align-items:baseline; gap:1.2rem; min-height:0; padding:1.45rem .2rem; border:0; border-bottom:1px solid rgba(73,78,63,.21); background:transparent; }
+.craft-detail-path li h3,.craft-focus-card h3{ margin:0; font-size:1.3rem; }
+.craft-detail-path li p,.craft-focus-card p{ margin:0; font-size:.92rem; line-height:1.8; }
+.craft-detail-portfolio{ margin-top:0; background:var(--craft-dark); }
+.craft-work-empty{ min-height:7.5rem; flex-direction:row; text-align:left; }
+
+/* 志趣内页：以插画作为封面，按主题切换各自的内容。 */
+.pastime-page{ --topic-accent:#587769; --topic-dark:#203d35; --topic-soft:#e6ece3; background:var(--refresh-paper); }
+.pastime-page[data-topic="music"]{ --topic-accent:#af674b; --topic-dark:#422f2b; --topic-soft:#f0e4d8; }
+.pastime-page[data-topic="games"]{ --topic-accent:#4b7481; --topic-dark:#213d46; --topic-soft:#e2ebeb; }
+.pastime-page[data-topic="anime"]{ --topic-accent:#a45456; --topic-dark:#563635; --topic-soft:#f1e4e3; }
+.pastime-page[data-topic="editing"]{ --topic-accent:#416879; --topic-dark:#2b4149; --topic-soft:#e2e9eb; }
+.pastime-page[data-topic="videos"]{ --topic-accent:#9a6550; --topic-dark:#4a3d35; --topic-soft:#eee5dc; }
+.pastime-page[data-topic="reading"]{ --topic-accent:#647752; --topic-dark:#344534; --topic-soft:#e9ecdf; }
+.pastime-page[data-topic="travel"]{ --topic-accent:#457d6d; --topic-dark:#22443c; --topic-soft:#e2ece5; }
+.pastime-main{ width:min(76rem,calc(100% - 3rem)); }
+.pastime-hero{ min-height:25rem; background:var(--topic-dark); }
+.pastime-hero::after{ background:linear-gradient(90deg,rgba(19,38,34,.86),rgba(19,38,34,.32) 67%,rgba(19,38,34,.04)); }
+.pastime-hero h1{ font-size:clamp(4.1rem,8vw,7rem); }
+.pastime-intro{ margin:0; padding:1.6rem .3rem; border-bottom:1px solid rgba(45,64,51,.22); }
+.pastime-index{ display:grid; grid-template-columns:minmax(13rem,.33fr) minmax(0,.67fr); margin:1.7rem 0 2rem; border:1px solid rgba(47,67,54,.22); background:#faf8f1; }
+.pastime-index-nav{ display:flex; flex-direction:column; padding:1.5rem 1.25rem; background:var(--topic-soft); }
+.pastime-index-label{ margin:0 0 1rem; color:var(--topic-accent); font-size:.72rem; letter-spacing:.18em; }
+.pastime-index-nav button{ display:flex; align-items:center; gap:.8rem; width:100%; min-height:4.2rem; padding:.8rem .3rem; border:0; border-top:1px solid rgba(47,67,54,.19); background:transparent; color:var(--topic-dark); font-family:var(--font-head); font-size:1.18rem; text-align:left; cursor:pointer; }
+.pastime-index-nav button:last-child{ border-bottom:1px solid rgba(47,67,54,.19); }
+.pastime-index-nav button small{ flex:none; color:var(--topic-accent); font-family:var(--font-body); font-size:.68rem; }
+.pastime-index-nav button[aria-pressed="true"]{ color:var(--topic-accent); padding-left:.9rem; border-left:2px solid var(--topic-accent); background:rgba(255,255,255,.55); }
+.pastime-index-nav button:hover,.pastime-index-nav button:focus-visible{ color:var(--topic-accent); outline-offset:-3px; }
+.pastime-index-panel{ position:relative; display:flex; flex-direction:column; justify-content:center; min-height:19rem; padding:clamp(2rem,5vw,4rem); overflow:hidden; }
+.pastime-index-panel::after{ content:attr(data-number); position:absolute; right:1.1rem; bottom:-4rem; color:var(--topic-soft); font-family:var(--font-head); font-size:15rem; line-height:1; pointer-events:none; }
+.pastime-index-panel > *{ position:relative; z-index:1; }
+.pastime-index-panel > small{ color:var(--topic-accent); font-size:.76rem; letter-spacing:.16em; }
+.pastime-index-panel h2{ margin:.7rem 0 1.1rem; color:var(--topic-dark); font-family:var(--font-head); font-size:clamp(2.1rem,4vw,3.1rem); font-weight:400; }
+.pastime-index-panel p{ max-width:33rem; margin:0; color:#576459; font-size:1rem; line-height:2; }
+.pastime-index-panel .pastime-entry-list{ max-width:31rem; margin-top:1rem; }
+.pastime-related{ border-color:var(--topic-accent); background:var(--topic-soft); }
+.pastime-related a{ color:var(--topic-dark); }
+.pastime-siblings a{ color:var(--topic-dark); }
+.pastime-siblings small{ color:var(--topic-accent); }
+
+@media(max-width:980px){ #craft .craft-groups{ grid-template-columns:repeat(3,minmax(0,1fr)); } #craft .craft-family:last-child{ grid-column:auto; } #craft .craft-family:last-child .craft-family-grid{ grid-template-columns:1fr; } }
+@media(max-width:760px){ .craft-detail-main,.pastime-main{ width:calc(100% - 1.5rem); } .craft-detail-hero{ grid-template-columns:1fr; height:auto; } .craft-detail-copy{ min-height:23rem; } .craft-detail-image{ height:auto; aspect-ratio:1.7; } .craft-detail-path header > span,.craft-detail-focus header > span{ display:block; width:100%; } .craft-detail-path li,.craft-focus-card{ grid-template-columns:3.4rem minmax(0,1fr); gap:.35rem .8rem; } .craft-detail-path li p,.craft-focus-card p{ grid-column:2; } .pastime-index{ grid-template-columns:1fr; } .pastime-index-nav{ padding:1rem; } .pastime-index-nav button{ min-height:3.3rem; } .pastime-index-panel{ min-height:15rem; } }
+@media(max-width:680px){ #craft .craft-groups{ grid-template-columns:1fr; gap:.5rem; } #craft .craft-family{ display:grid; grid-template-columns:5.7rem minmax(0,1fr); gap:.4rem; padding:.45rem; } #craft .craft-family-head{ display:block; min-height:0; margin:0; padding:.35rem .2rem; border:0; } #craft .craft-family-head h3{ margin:.35rem 0 0; font-size:.82rem; line-height:1.45; text-align:left; } #craft .craft-family-grid,#craft .craft-family:last-child .craft-family-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.4rem; padding:0; } #craft .craft-card{ min-height:11rem; } #craft .craft-card-body{ padding:.5rem; } #craft .craft-card h4{ font-size:1.3rem; } #craft .craft-card-body > p:not(.craft-card-level){ display:none; } #craft .craft-card-body > a{ min-height:1.9rem; font-size:.72rem; } #pastimes .interest-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; } #pastimes .interest-card,#pastimes .interest-card:nth-child(n){ grid-column:span 1; } #pastimes .interest-card:nth-child(7){ grid-column:span 2; } #pastimes .interest-card a,#pastimes .interest-card--travel a{ height:10.1rem; } #pastimes .interest-card-art,#pastimes .interest-card--travel .interest-card-art{ flex-basis:5.1rem; } #pastimes .interest-card-copy > span{ font-size:.77rem; line-height:1.4; } #pastimes .interest-card:nth-child(7) a{ flex-direction:row; height:6.4rem; } #pastimes .interest-card:nth-child(7) .interest-card-art{ flex:0 0 38%; height:100%; } .pastime-hero{ min-height:19rem; } }
+@media(max-width:480px){ #craft .juan-head{ margin-bottom:.8rem; } #craft .craft-family{ grid-template-columns:5rem minmax(0,1fr); } #craft .craft-card{ min-height:10.3rem; } #craft .craft-family-head h3{ font-size:.78rem; } #craft .craft-card-level{ font-size:.59rem; } #craft .craft-card h4{ font-size:1.14rem; } .craft-detail-copy{ min-height:22rem; padding:1.5rem; } .craft-detail-copy h1{ font-size:4rem; } .craft-detail-image{ aspect-ratio:1.35; } .craft-detail-switcher button{ font-size:.95rem; } .pastime-main{ width:calc(100% - 1.2rem); } .pastime-hero{ min-height:17rem; } .pastime-hero h1{ font-size:3.8rem; } .pastime-index{ margin-top:1rem; } .pastime-index-panel{ padding:1.55rem; } }
+@media(max-width:360px){ #craft .craft-family{ grid-template-columns:4.5rem minmax(0,1fr); } #craft .craft-card{ min-height:7.25rem; } #craft .craft-card-level{ display:none; } #craft .craft-card h4{ font-size:1.05rem; } #craft .craft-card-body > a{ min-height:1.5rem; font-size:0; } #craft .craft-card-body > a::after{ content:'进入'; width:auto; height:auto; background:none; font-size:.65rem; } #craft .craft-family-head h3{ font-size:.72rem; } #pastimes .interest-card a{ height:7.2rem; } #pastimes .interest-card-art{ flex-basis:4rem; } #pastimes .interest-card-copy{ padding:.2rem .45rem; } #pastimes .interest-card-copy strong{ font-size:1.05rem; } #pastimes .interest-card-copy > span{ display:none; } #pastimes .interest-card:nth-child(7) a{ height:5.4rem; } #pastimes .interest-card:nth-child(7) .interest-card-copy > span{ display:block; font-size:.7rem; } }
+@media(prefers-reduced-motion:reduce){ #craft .craft-card > img{ transition:none; } }

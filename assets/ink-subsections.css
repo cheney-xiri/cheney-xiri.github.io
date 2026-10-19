@@ -1,0 +1,158 @@
+/* Interior pages: intrinsic sizing, readable folios, subject-specific illustrations.
+   Scope deliberately excludes the accepted homepage and three preserved interiors. */
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home){
+  --is-secondary:#314842;--is-muted:#465950;--ink-surface:rgba(218,224,211,.92);
+  background:linear-gradient(rgba(195,209,197,.91),rgba(201,213,201,.95)),var(--ink-scene) center top/100% auto fixed;
+}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) .ink-page-opening{
+  overflow:visible;max-height:none;height:auto;animation:none;transform:none;opacity:1;
+}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) :is(.stage-hero,.travel-hero)::after{display:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=henan] .henan-hero-art{right:0;max-width:85%;overflow:clip}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) :is(.profile-main,.stage-main,.craft-detail-main,.fp-main,.digital-main,.travel-main,.interaction-main,.pastime-main){
+  box-sizing:border-box;width:min(76rem,calc(100% - 3rem));max-width:76rem;margin-inline:auto;
+  padding-inline:clamp(1.25rem,3.2vw,3rem);border:0;background:transparent;
+}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) :is(h1,h2,h3,p,li,figure,section,article,aside){min-width:0}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) .ink-calligraphy{letter-spacing:.06em;line-height:1.4}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) :is(.craft-detail-hero,.fp-hero,.profile-hero,.stage-hero,.digital-hero){
+  padding-block:2.5rem;gap:clamp(2rem,4vw,4rem);min-height:0;align-items:center;
+}
+/* Illustration frames follow the image's own proportions: no cut edges or fade mask. */
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-hero{
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);height:auto;min-height:0;padding-block:2.3rem;
+}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-copy{padding:0;min-height:0}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-copy h1{font-size:clamp(3rem,5vw,4.5rem);line-height:1.3}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-lead{font-size:.96rem;line-height:1.95}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-image{
+  height:auto;max-height:none;min-height:0;aspect-ratio:auto;mask-image:none;overflow:visible;background:transparent;align-self:center;
+}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-image img{
+  position:static;display:block;inset:auto;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;
+}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-image figcaption{
+  position:static;margin-top:.6rem;padding:0;background:transparent;text-align:right;color:#465950;font-size:.76rem;
+}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] :is(.craft-scene,.craft-depth,.craft-more,.craft-detail-portfolio){margin-block:1.5rem 2rem}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-scene h2{font-size:clamp(1.65rem,2.7vw,2.5rem);line-height:1.65;letter-spacing:.04em}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing{grid-template-columns:minmax(11rem,.25fr) minmax(0,.75fr);background:rgba(225,228,214,.62);border:0;border-block:1px solid var(--is-rule)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-index{justify-content:flex-start;gap:1.8rem;padding:2rem 1.5rem;background:#36564d}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-index strong{font-size:1.8rem;line-height:1.8;letter-spacing:.05em}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-paper{padding:2rem clamp(1.2rem,3vw,2.5rem);background:transparent;border:0}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-paper h2{margin:.8rem 0}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-lines li{grid-template-columns:2rem 4rem minmax(0,1fr);padding:.7rem 0;gap:1rem;min-height:0}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] :is(.craft-depth,.craft-more){background:rgba(224,229,216,.6);padding:1.5rem;border:0;border-top:1px solid var(--is-rule)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-portfolio{background:rgba(163,185,165,.42);padding:1.5rem;border-block:1px solid var(--is-rule)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-portfolio :is(h2,p,span,strong,button){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-works-toggle{border-color:var(--is-green);background:rgba(224,229,216,.7)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-guitar-head h2{color:var(--is-ink)}
+/* Archive opener: title and introduction share a column, image on its own. */
+html.ink-site:not([data-ink-preserve]) :is([data-ink-page=writing-index],[data-ink-page=lines]) .wen-shell{
+  width:min(76rem,calc(100% - 3rem));padding-inline:clamp(1.25rem,3.2vw,3rem);border:0;background:transparent;
+}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero{
+  grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:1rem 3rem;align-items:center;padding-block:2.5rem;
+}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero>.wen-kicker{grid-column:1;grid-row:1;margin:0}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero h1{grid-column:1;grid-row:2;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:.02em;line-height:1.65;max-width:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero-side{grid-column:1;grid-row:3}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero-side p{margin:0;font-size:.94rem}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .subsection-art{grid-column:2;grid-row:1/4;align-self:center}
+html.ink-site:not([data-ink-preserve]) .wen-filters button[aria-pressed=true]{color:#f1f2e6;background:#294b43}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=lines] .wen-lines-hero{gap:2.5rem;padding-block:2.5rem}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=lines] .wen-lines-hero h1{font-size:clamp(2.4rem,3.5vw,3.3rem);line-height:1.5}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=lines] .subsection-art{margin-top:1.25rem;max-width:21rem}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-article] .wen-reading{width:min(72rem,calc(100% - 3rem));padding:2rem clamp(1.25rem,4vw,3rem);border:0;background:rgba(224,229,216,.74)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-article] .wen-reading-layout{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:2rem;align-items:start}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-article] .wen-reading-aside{position:sticky;top:2rem;left:auto;width:auto;padding-left:0;border:0;display:block}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-article] .wen-prose{width:100%;max-width:40rem;margin-inline:auto}
+/* Interest openers become an uncropped image and a readable title beside it. */
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-hero{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);align-items:center;min-height:0;height:auto;padding:2rem 0;gap:2.5rem;overflow:visible}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-hero::after{display:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-hero-copy{padding:0;background:none;max-width:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-hero-copy :is(h1,p){color:var(--is-ink);text-shadow:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-hero h1{font-size:clamp(3rem,5vw,4.5rem)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-hero-image{position:static;inset:auto;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;mask-image:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .music-room-heading{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;align-items:end}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .music-room-heading>span{grid-column:1/-1}
+/* Correspondence: each kind has its own artwork beside, never behind, its explanation. */
+html.ink-site:not([data-ink-preserve]) [data-ink-page=interaction] .interaction-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:2.5rem;max-width:none;padding-block:2rem;align-items:center}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=interaction] .interaction-hero h1{font-size:clamp(3rem,5vw,4.5rem)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=interaction] .interaction-hero p{line-height:1.95}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=interaction] .interaction-compose{background:rgba(227,230,217,.78);padding:1.5rem}
+.subsection-art{display:block;margin:0;min-width:0}
+.subsection-art img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .subsection-media-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:1.5rem 3rem;padding:2rem;align-items:center;min-height:0}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero>div:first-child{grid-column:1;grid-row:1;padding:0}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero h1{font-size:clamp(2.3rem,3.5vw,3.3rem);line-height:1.5;letter-spacing:.04em}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero>.subsection-art{grid-column:2;grid-row:1;width:100%;margin:0}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero>:is(.ac-hero-posters,.hero-collage){grid-column:1/-1;grid-row:2;display:flex;justify-content:flex-end;gap:1rem;min-height:0;height:8rem;padding:0;transform:none;overflow:visible}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero .ac-hero-posters{background:transparent;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero .ac-hero-posters::before,
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero .ac-hero-posters::after{display:none}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero :is(.ac-hero-poster,.hero-cover){position:relative;inset:auto;flex:0 0 6rem;width:6rem;height:8rem;margin:0;transform:none;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) .subsection-media-hero :is(.ac-hero-poster-art,.hero-cover-art){height:100%;width:100%;aspect-ratio:auto}
+html.ink-site:not([data-ink-preserve]) .subsection-small-art{width:min(100%,20rem);margin-top:1.5rem}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=books] .catalog-heading{display:grid;grid-template-columns:1fr minmax(12rem,.65fr);gap:1rem 2rem;align-items:center}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=books] .catalog-heading>.subsection-art{grid-column:2;grid-row:1/5}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) .subsection-art-strip{max-width:70rem;margin:1rem auto 2rem;overflow:visible}
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) .subsection-art-strip img{max-height:16rem;object-fit:contain;object-position:center}
+/* Existing portraits, covers and real city imagery remain the visual anchors. */
+html.ink-site:not([data-ink-preserve]) [data-ink-page=figure] .fp-hero{grid-template-columns:minmax(0,1fr) 15rem}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=figure] .fp-hero h1{font-size:clamp(3rem,5vw,4.5rem)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=figure] .fp-portrait{box-shadow:none;overflow:visible;transform:none;margin:0}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=figure] .fp-portrait img{height:auto;max-height:22rem;object-fit:contain}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-hero{padding-inline:0;grid-template-columns:minmax(0,1fr) 10rem}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-hero h1{font-size:clamp(2rem,3.7vw,3.5rem);letter-spacing:.04em;line-height:1.6}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-kind{color:#345246;border-color:#7c9785;background:transparent}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-hero-mark{height:auto;min-height:12rem;overflow:visible;display:grid;place-content:center}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-hero-mark strong{color:#5a7565;font-size:5rem;position:static;line-height:1.5}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=profile] .profile-portrait{transform:none;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) :is([data-ink-page=summer],[data-ink-page=future]) .novel-hero{padding:3rem 2rem;gap:3rem;background:transparent;min-height:0}
+html.ink-site:not([data-ink-preserve]) :is([data-ink-page=summer],[data-ink-page=future]) .novel-hero-copy h1{font-size:clamp(2rem,3.2vw,3rem);line-height:1.65}
+html.ink-site:not([data-ink-preserve]) :is([data-ink-page=summer],[data-ink-page=future]) .novel-hero-art{box-shadow:none;overflow:visible}
+html.ink-site:not([data-ink-preserve]) :is([data-ink-page=summer],[data-ink-page=future]) .novel-hero-art img{height:auto;object-fit:contain}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=summer] .summer-intro{padding:1.3rem;background:rgba(225,229,215,.65)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=digital] .digital-hero-art{height:auto;max-height:none;overflow:visible;background:transparent}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=digital] .digital-hero-art img{height:auto;max-height:30rem;object-fit:contain}
+@media(max-width:900px){
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-article] .wen-reading-layout{grid-template-columns:minmax(0,1fr);gap:1rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-article] .wen-reading-aside{position:static;display:flex;flex-wrap:wrap}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing{grid-template-columns:minmax(0,1fr)}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-index{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1rem;padding:1.3rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-index strong{grid-column:1/-1;grid-row:2;font-size:1.5rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-index strong br{display:none}
+}
+@media(max-width:700px){
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .subsection-media-hero{grid-template-columns:minmax(0,1fr);padding:1.25rem;gap:1.5rem}
+ html.ink-site:not([data-ink-preserve]) .subsection-media-hero>.subsection-art{grid-column:1;grid-row:2}
+ html.ink-site:not([data-ink-preserve]) .subsection-media-hero>:is(.ac-hero-posters,.hero-collage){grid-column:1;grid-row:3;justify-content:space-between;gap:.6rem;height:6.5rem}
+ html.ink-site:not([data-ink-preserve]) .subsection-media-hero :is(.ac-hero-poster,.hero-cover){flex:1 1 0;width:0;min-width:0;height:6.5rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=books] .catalog-heading{grid-template-columns:minmax(0,1fr)}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=books] .catalog-heading>.subsection-art{grid-column:1;grid-row:auto}
+ html.ink-site:not([data-ink-preserve]) body:not(#ink-home) :is(.profile-main,.stage-main,.craft-detail-main,.fp-main,.digital-main,.travel-main,.interaction-main,.pastime-main,.wen-shell,.wen-reading){width:100%;padding-inline:1.25rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .craft-detail-hero,
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-hero,
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero,
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=interaction] .interaction-hero{grid-template-columns:minmax(0,1fr);gap:1.3rem;padding-block:1.7rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero>*{grid-column:1;grid-row:auto}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=writing-index] .wen-hero h1{font-size:clamp(1.65rem,6vw,2.2rem);line-height:1.7}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=lines] .wen-lines-hero{grid-template-columns:1fr;gap:1.5rem;padding-block:1.7rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=lines] .subsection-art{max-width:none}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-lines li{grid-template-columns:1.5rem 3rem minmax(0,1fr);gap:.6rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-lines strong{font-size:1rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-writing-paper{padding:1.25rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=craft] .scene-poetry{padding:1.25rem .9rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=figure] .fp-hero{grid-template-columns:minmax(0,1fr);gap:1.5rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=figure] .fp-portrait{width:12rem;max-width:70%;justify-self:start}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-hero{grid-template-columns:minmax(0,1fr);gap:1rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-hero-mark{display:none}
+ html.ink-site:not([data-ink-preserve]) :is([data-ink-page=summer],[data-ink-page=future]) .novel-hero{grid-template-columns:minmax(0,1fr);padding:2rem 1.25rem;gap:1.5rem}
+ html.ink-site:not([data-ink-preserve]) :is([data-ink-page=summer],[data-ink-page=future]) .novel-hero-art{width:min(65%,17rem);margin:auto}
+ html.ink-site:not([data-ink-preserve]) :is([data-ink-page=summer],[data-ink-page=future]) .novel-hero-copy h1{font-size:1.9rem}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .music-room-heading{grid-template-columns:minmax(0,1fr)}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=interaction] .interaction-layout{grid-template-columns:minmax(0,1fr)}
+ html.ink-site:not([data-ink-preserve]) [data-ink-page=interaction] .interaction-compose{padding:1.2rem}
+ html.ink-site:not([data-ink-preserve]) body:not(#ink-home) .subsection-art-strip{margin-inline:1.25rem}
+}

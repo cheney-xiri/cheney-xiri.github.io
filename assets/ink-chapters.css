@@ -1,0 +1,147 @@
+/* Interior composition by chapter. Reading areas use ink, rules and open space.
+   The homepage and the three explicitly preserved interiors are excluded. */
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home){
+ --chapter-rule:rgba(38,62,49,.26);--chapter-soft:rgba(38,62,49,.13);
+ --chapter-paper:rgba(var(--sub-pigment,199,205,183),.35);
+}
+/* 技艺：正文沿一条连续的手艺脉络展开，图谱本身保留实体感。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-copy{background:transparent;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-image{border:0;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-image::after{display:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-image img{
+ mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(0deg,transparent,#000 6%,#000 94%,transparent);mask-composite:intersect;
+}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-main :is(.craft-scene,.craft-depth,.craft-more,.craft-detail-portfolio){
+ background:transparent;border:0;box-shadow:none;border-radius:0;padding:2rem 0;margin:0;border-top:1px solid var(--chapter-rule);
+}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-main .scene-writing{grid-template-columns:minmax(10rem,.25fr) minmax(0,.75fr);gap:2rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-index{
+ padding:1rem 1.5rem 1rem 0;background:none;border-right:1px solid var(--chapter-rule);color:var(--is-ink);justify-content:flex-start;gap:1.4rem;
+}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-index :is(span,strong,p){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-index>span{color:var(--sub-accent);font-size:.76rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-index strong{font-size:1.65rem;letter-spacing:.08em}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-paper{background:none;border:0;padding:1rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-lines{border-color:var(--chapter-soft)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-lines li{border-color:var(--chapter-soft)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .depth-writing-check{padding:0 0 0 1.5rem;border:0;border-left:2px solid var(--chapter-soft);background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .more-writing-list a{background:none;border:0;border-bottom:1px solid var(--chapter-soft);padding:1rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry::before,
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry::after,
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-scroll::before{display:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-heading{text-align:left}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-scroll{background:none;box-shadow:none;padding:1.5rem 0 2rem;min-height:0;margin-top:1.5rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-column{padding:0 1.2rem;border-color:var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-column p{line-height:2}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-seal{right:.3rem;bottom:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] :is(.scene-dizi-panels article,.more-dizi-list article){background:none;border:0;padding:1rem 1.3rem 0 0;border-top:1px solid var(--chapter-soft)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-dizi-phrase{border-color:var(--chapter-soft);background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-stage{gap:2rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-chord{background:none;border:0;border-right:1px solid var(--chapter-soft);padding:1rem .65rem;min-height:9rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-chord:last-child{border-right:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-chord i{padding:.5rem .2rem;background:none;border:0;border-top:1px solid var(--chapter-soft)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-rhythm{background:none;border:0;padding:1rem 0 1rem 1.4rem;border-left:2px solid var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-rhythm small{color:var(--is-secondary);font-size:.75rem;line-height:1.8}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] :is(.go-study-preview,.go-play-launch){background:transparent;box-shadow:none;border:0;border-top:1px solid var(--chapter-rule);padding:1.7rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .go-primary-grid{gap:3rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .go-primary-grid .go-match-room{background:none;border:0;border-top:1px solid var(--chapter-rule);padding:1.7rem 0;border-radius:0;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .go-study-preview-sheet{background:none;border:0;border-top:1px solid var(--chapter-soft);padding:.8rem 0;color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .go-study-preview-copy :is(h2,p){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .more-go-grid article{background:none;border:0;border-top:1px solid var(--chapter-soft);padding:1rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .more-guitar-practice article{background:none;border:0;border-top:1px solid var(--chapter-soft);padding:1rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .more-guitar-bars article{background:none;border:0;border-top:1px solid var(--chapter-soft);padding:1rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-portfolio .craft-work-empty{min-height:6rem;background:none;border:0;border-top:1px dashed var(--chapter-rule);align-items:flex-start;text-align:left;padding:1.3rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-siblings a{border:0;border-top:1px solid var(--chapter-rule);background:none;padding-inline:0}
+/* 文存：目录是篇目，正文是书页；句笺保留一行一意的节奏。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=writing-index] :is(.wen-entry,.wen-crosslink){background:none;box-shadow:none;border:0;border-top:1px solid var(--chapter-rule);border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=writing-index] .wen-crosslink{padding:2rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=writing-article] .wen-reading{background:linear-gradient(90deg,transparent,rgba(var(--sub-pigment),.55) 15%,rgba(var(--sub-pigment),.55) 85%,transparent);border:0;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=writing-article] .wen-article-head{border-bottom:1px solid var(--chapter-rule);padding-bottom:1.6rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=writing-article] .wen-prose p{font-size:1rem;line-height:2.15}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=lines] .wen-picked{background:none;border:0;border-left:2px solid var(--sub-accent);box-shadow:none;padding:1rem 0 1rem 1.5rem;color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=lines] .wen-picked :is(blockquote,p,span,small){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=lines] .wen-line-group:nth-child(even){background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=lines] .wen-line-group{padding-block:1.5rem;border-color:var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=lines] .wen-line-index{border:0;border-top:1px solid var(--chapter-rule);background:none;padding:1rem 0}
+/* 作品：封面和角色肖像是展品，介绍沿书脊展开。 */
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=summer],[data-ink-page=future]) :is(.novel-hero,.summer-intro,.novel-story-prose,.novel-thread-list li,.novel-motif-list li){background:none;border:0;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=summer] .summer-intro{padding:1.5rem 0 0;border-top:1px solid var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=future] .novel-story-prose{padding:0;max-width:46rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=future] .novel-section{border:0;border-top:1px solid var(--chapter-rule);padding-block:2.5rem;background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=future] .novel-thread-list li{border-bottom:1px solid var(--chapter-soft);padding:1rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=future] .novel-motif-list li{border-left:1px solid var(--chapter-rule);padding:0 1.5rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=future] .novel-character-panel{background:none;border:0;border-top:1px solid var(--chapter-rule);padding:1.5rem 0;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=summer],[data-ink-page=future]) .novel-section-nav{background:none;border-block:1px solid var(--chapter-rule);backdrop-filter:blur(16px)}
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=summer],[data-ink-page=future]) .novel-section-nav a{color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=digital] :is(.digital-section,.digital-workflow,.digital-file){background:none;border:0;border-top:1px solid var(--chapter-rule);box-shadow:none;border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=digital] .digital-workflow{padding:1.5rem 0}
+/* 小像和求学：资料栏与沿线叙事，不把每一项包装成面板。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-grid{gap:2.5rem;border-block:1px solid var(--chapter-rule);padding-block:.6rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-card{background:none;color:var(--is-ink);box-shadow:none;border:0;border-radius:0;min-height:0;padding:1.3rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-card+ .personality-card{border-left:1px solid var(--chapter-rule);padding-left:2rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-card :is(.personality-index,.personality-value,.personality-note){color:var(--is-secondary)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-card::before,
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-card::after{display:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] :is(.profile-connection,.profile-link-card){background:none;border:0;border-top:1px solid var(--chapter-soft);box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=journey] .stage-nav{background:none;border-block:1px solid var(--chapter-rule);padding:.35rem 0;gap:1rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=journey] .stage-chapters>section{background:none;border:0;border-top:1px solid var(--chapter-rule);padding:2.5rem 0;box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=journey] .stage-chapters #photos{background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=journey] .stage-chapters #school{background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=journey] :is(.stage-empty,.stage-fact,.stage-moment){background:none;box-shadow:none;border:0;border-bottom:1px solid var(--chapter-soft)}
+/* 仰止：侧目录与内容共用一张长卷，标题和段落承担层次。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=figure] :is(.fp-reader,.fp-reader-panel,.fp-section,.fp-card,.fp-note){background:none;box-shadow:none;border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=figure] .fp-reader-panel{border:0;padding-inline:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=figure] .fp-reader-panel>section{border:0;border-top:1px solid var(--chapter-soft);padding-block:1.5rem}
+/* 志趣：保留真实封面和唱片，不再为说明文字套第二层容器。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] :is(.pastime-index,.pastime-index-panel){background:none;border:0;box-shadow:none;border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] .pastime-index{border-block:1px solid var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] .pastime-index-nav{background:none;border:0;border-right:1px solid var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] .pastime-siblings a{background:none;border:0;border-top:1px solid var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] #music-room .music-room-layout{border:0;background:none;gap:2rem;overflow:visible}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] #music-room .music-library{background:none;padding-right:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] #music-room .music-track-list{background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=anime-game] :is(.ac-card,.game-card){background:none;border:0;border-radius:0;border-bottom:1px solid var(--chapter-rule);box-shadow:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=anime-game] .subsection-media-hero{background:none;padding-inline:0}
+/* 往来：信件有信纸，留言用行线；输入边界仍清楚可见。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction] .interaction-layout{gap:3rem}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction] .interaction-compose{background:none;border:0;border-top:1px solid var(--chapter-rule);box-shadow:none;padding:1.5rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction] :is(.interaction-message,.interaction-empty,.interaction-loading,.interaction-error){background:none;box-shadow:none;border:0;border-bottom:1px solid var(--chapter-soft);padding:1.3rem 0;text-align:left}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction] :is(.interaction-field input,.interaction-field textarea){background:rgba(var(--sub-pigment),.45);border:0;border-bottom:1px solid var(--sub-accent);color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction][data-interaction-kind=letter] .interaction-field textarea{background:repeating-linear-gradient(transparent 0,transparent calc(1.75em - 1px),var(--chapter-soft) calc(1.75em - 1px),var(--chapter-soft) 1.75em);line-height:1.75;min-height:12rem;padding-top:1.75em}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction] .interaction-visibility label{border:0;border-bottom:1px solid var(--chapter-rule);padding-left:0;background:none}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction] .interaction-visibility label:has(input:checked){background:rgba(var(--sub-pigment),.4);border-color:var(--sub-accent)}
+/* 足迹与书卷：照片、书封有边界，介绍和目录融入页面。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=travel] :is(.travel-hero,.travel-block,.travel-city-card){background:none;box-shadow:none;border:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=travel] .travel-block{border-top:1px solid var(--chapter-rule);padding:2rem 0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=travel] .travel-city-card{border-bottom:1px solid var(--chapter-rule)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=books] :is(.catalog-section,.book-row,.book-entry){background:none;box-shadow:none;border:0;border-bottom:1px solid var(--chapter-soft)}
+/* 定式：棋谱是纸上的图，讲解与侧目录留在同一条阅读线上。 */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=joseki-index] :is(.catalog-stages,.complex-focus,.book-selection){background:none;border:0;border-block:1px solid var(--chapter-rule);box-shadow:none;border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=joseki-index] .joseki-grid>article{background:none;border:0;border-bottom:1px solid var(--chapter-rule);box-shadow:none;border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=joseki-detail] .study-layout>.study-index{background:none;border:0;border-right:1px solid var(--chapter-rule);border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=joseki-detail] #joseki-detail{background:transparent!important;border:0;border-radius:0;box-shadow:none;padding-top:.4rem!important}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=joseki-detail] .lesson-board{background:none;border:0;border-top:1px solid var(--chapter-rule);padding:1rem 0;border-radius:0}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=joseki-detail] :is(.lesson-variations,.variation-section,.lesson-related){background:none;border:0;border-top:1px solid var(--chapter-rule);box-shadow:none}
+/* Small type has one readable ink color; decorative marks can remain quiet. */
+html.ink-site:not([data-ink-preserve]) body:not(#ink-home) :is(.craft-detail-number,.craft-detail-level,.craft-detail-caption,.wen-status,.wen-search,.interaction-help,.profile-connection-note){font-size:max(.76rem,12px);color:var(--is-secondary)}
+@media(max-width:900px){
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-main .scene-writing{grid-template-columns:minmax(0,1fr);gap:1rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-index{border-right:0;border-bottom:1px solid var(--chapter-soft);padding:0 0 1.2rem;min-height:0}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-index strong{font-size:1.45rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-stage{gap:1rem}
+}
+@media(max-width:700px){
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .craft-detail-main :is(.craft-scene,.craft-depth,.craft-more,.craft-detail-portfolio){padding-block:1.6rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-writing-paper{padding:0}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .depth-writing-check{padding-left:1rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-column{padding:0 .45rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-poetry-column p{padding:0;font-size:.84rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft] .scene-guitar-rhythm{padding-left:1rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-grid{gap:1.2rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=profile] .personality-card+ .personality-card{padding-left:1rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction] .interaction-layout{gap:1.5rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] .pastime-index-nav{border-right:0;border-bottom:1px solid var(--chapter-rule)}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] #music-room .music-room-layout{gap:1.2rem}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime] #music-room .music-library{padding:0}
+ html.ink-site:not([data-ink-preserve]) body[data-ink-page=figure] .fp-reader-panel{padding-inline:0}
+}

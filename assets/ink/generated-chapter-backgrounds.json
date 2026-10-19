@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-18",
+  "mode": "built-in image_gen",
+  "webExport": "WebP quality 88, same resolution and composition",
+  "assets": [
+    {
+      "key": "craft",
+      "chapter": "技艺",
+      "path": "assets/ink/chapter-craft-v1.png",
+      "webPath": "assets/ink/chapter-craft-v1.webp",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-7499a0cd-6f1b-4b76-8467-893357f67fa1.png",
+      "prompt": "Create a new ORIGINAL wide 16:9 background painting for a Chinese personal website chapter. Use case: stylized-concept. Style: refined contemporary Eastern ink-wash, scholarly handscroll, mineral pigment with tactile paper fibers, cinematic depth but clearly hand-painted, precise high-end art direction. Must match the larger world of dramatic Jian Lai ink painting without repeating a landscape panorama. Different composition and character for THIS chapter. Central readable space; detailed decorative ink concentrated at margins and bottom. Medium luminance (neither washed-out white nor a dark black night page). NO text, glyphs, fake handwriting, seals, logos, watermarks, UI elements, frames, literal scroll rollers or people. Do not render a webpage mockup. A tactile, disciplined composition: six broad dry charcoal brush passes at the extreme lower and side margins, alternating thin precise malachite lines and soft pigment blooms, subtle layered engraved/cut paper fibers, suggesting practice, skill and refinement. Off-center asymmetrical negative space. No brushes, tools, instruments, chess stones or specific hobby objects. Cool celadon-gray and charcoal with very restrained aged gold. Background field medium pale gray-green, not white."
+    },
+    {
+      "key": "pastimes",
+      "chapter": "志趣",
+      "path": "assets/ink/chapter-pastimes-v1.png",
+      "webPath": "assets/ink/chapter-pastimes-v1.webp",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-6c336300-c385-4c3d-bc65-346a2c550fd2.png",
+      "prompt": "Create a new ORIGINAL wide 16:9 background painting for a Chinese personal website chapter. Use case: stylized-concept. Style: refined contemporary Eastern ink-wash, scholarly handscroll, mineral pigment with tactile paper fibers, cinematic depth but clearly hand-painted, precise high-end art direction. Must match the larger world of dramatic Jian Lai ink painting without repeating a landscape panorama. Different composition and character for THIS chapter. Central readable space; detailed decorative ink concentrated at margins and bottom. Medium luminance (neither washed-out white nor a dark black night page). NO text, glyphs, fake handwriting, seals, logos, watermarks, UI elements, frames, literal scroll rollers or people. Do not render a webpage mockup. An expansive rhythmic composition of fluid interleaving ink currents, airy curling ribbons of mist and a few sparse vermilion dots, suggesting curiosity, play, movement and an open field of interests. Mineral turquoise blue, smoky indigo and dusty jade. Motion flows from lower left to upper right, but the central 80 percent remains quiet for eight overlaid web thumbnails and text. No planets, headphones, gamepads or symbols of one particular pastime. Medium gray-cyan field, not white."
+    },
+    {
+      "key": "works",
+      "chapter": "作品",
+      "path": "assets/ink/chapter-works-v1.png",
+      "webPath": "assets/ink/chapter-works-v1.webp",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-1acd790d-b268-451d-873a-94455cf9ef72.png",
+      "prompt": "Create a new ORIGINAL wide 16:9 background painting for a Chinese personal website chapter. Use case: stylized-concept. Style: refined contemporary Eastern ink-wash, scholarly handscroll, mineral pigment with tactile paper fibers, cinematic depth but clearly hand-painted, precise high-end art direction. Must match the larger world of dramatic Jian Lai ink painting without repeating a landscape panorama. Different composition and character for THIS chapter. Central readable space; detailed decorative ink concentrated at margins and bottom. Medium luminance (neither washed-out white nor a dark black night page). NO text, glyphs, fake handwriting, seals, logos, watermarks, UI elements, frames, literal scroll rollers or people. Do not render a webpage mockup. An elegant editorial composition of translucent overlapping rectangular paper planes, fine vermilion seam lines and a few bold charcoal corner marks at the outside margins, suggesting making, authorship and an exhibition of completed and developing work. No actual book covers, envelopes, computers or single specific creative medium. Warm muted sage, slate and weathered ivory, slight muted bronze. Paper planes dissolve into ink so they do NOT resemble UI cards. All central space quiet medium gray-green."
+    },
+    {
+      "key": "writing",
+      "chapter": "文存",
+      "path": "assets/ink/chapter-writing-v1.png",
+      "webPath": "assets/ink/chapter-writing-v1.webp",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-e842b50e-e16b-44ca-aee3-9c3f156a2918.png",
+      "prompt": "Create a new ORIGINAL wide 16:9 background painting for a Chinese personal website chapter. Use case: stylized-concept. Style: refined contemporary Eastern ink-wash, scholarly handscroll, mineral pigment with tactile paper fibers, cinematic depth but clearly hand-painted, precise high-end art direction. Must match the larger world of dramatic Jian Lai ink painting without repeating a landscape panorama. Different composition and character for THIS chapter. Central readable space; detailed decorative ink concentrated at margins and bottom. Medium luminance (neither washed-out white nor a dark black night page). NO text, glyphs, fake handwriting, seals, logos, watermarks, UI elements, frames, literal scroll rollers or people. Do not render a webpage mockup. A literary manuscript atmosphere: subtle vertical ink absorption rhythms like faint page ruling, irregular torn-edge ink borders ONLY at far sides, flowing fine dry-brush marks fading to silence. Contemplative, composed and scholarly, distinctly suited to reading and collected writing. No fake calligraphy, no letters, no legible symbols, no desks or literal pens. Dusty olive-gray, restrained ochre gray, fine vermilion traces. Medium gray-parchment tone, NOT white or yellow aged fake parchment."
+    },
+    {
+      "key": "interaction",
+      "chapter": "互动",
+      "path": "assets/ink/chapter-interaction-v1.png",
+      "webPath": "assets/ink/chapter-interaction-v1.webp",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-4edcc6d8-8a5d-4893-a821-7360e601b22d.png",
+      "prompt": "Create a new ORIGINAL wide 16:9 background painting for a Chinese personal website chapter. Use case: stylized-concept. Style: refined contemporary Eastern ink-wash, scholarly handscroll, mineral pigment with tactile paper fibers, cinematic depth but clearly hand-painted, precise high-end art direction. Must match the larger world of dramatic Jian Lai ink painting without repeating a landscape panorama. Different composition and character for THIS chapter. Central readable space; detailed decorative ink concentrated at margins and bottom. Medium luminance (neither washed-out white nor a dark black night page). NO text, glyphs, fake handwriting, seals, logos, watermarks, UI elements, frames, literal scroll rollers or people. Do not render a webpage mockup. A warm open composition of two separate loose ink arcs entering from opposite outer margins and gently converging toward the lower middle, forming soft overlapping ripple lines and a few tiny vermilion pigment touches. Suggests encounters, dialogue and connection in an Eastern literary way. Not a calligraphy character, not typography. Mist green, desaturated teal, subtle warm light. Open generous medium celadon center. No people, hands, speech bubbles, letters or app icons."
+    },
+    {
+      "key": "contact",
+      "chapter": "联络",
+      "path": "assets/ink/chapter-contact-v1.png",
+      "webPath": "assets/ink/chapter-contact-v1.webp",
+      "source": "C:\\Users\\Cheney\\.codex\\generated_images\\01a12f79-919a-75d2-b143-92503c6705ec\\exec-fa5a4d80-92e5-44cf-a36e-4ba94a8a3c27.png",
+      "prompt": "Create a new ORIGINAL wide 16:9 background painting for a Chinese personal website chapter. Use case: stylized-concept. Style: refined contemporary Eastern ink-wash, scholarly handscroll, mineral pigment with tactile paper fibers, cinematic depth but clearly hand-painted, precise high-end art direction. Must match the larger world of dramatic Jian Lai ink painting without repeating a landscape panorama. Different composition and character for THIS chapter. Central readable space; detailed decorative ink concentrated at margins and bottom. Medium luminance (neither washed-out white nor a dark black night page). NO text, glyphs, fake handwriting, seals, logos, watermarks, UI elements, frames, literal scroll rollers or people. Do not render a webpage mockup. A tranquil closing-scroll atmosphere: an extremely long slender ink horizon across the bottom fifth, a small subtle ring ripple in a turquoise wash at the far lower right, a wide diffuse cloud of graphite pigment along the far left edge, quiet open space across upper and central regions. Suggests a gentle ending and ongoing connection. Restrained blue-gray, celadon green and one tiny vermilion accent, medium gray background. No envelopes, phones, QR codes, text or literal contact icons."
+    }
+  ]
+}

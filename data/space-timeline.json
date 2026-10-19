@@ -1,0 +1,259 @@
+{
+  "title": "全球宇宙探索 · 突破的轨迹",
+  "intro": "从认识宇宙，到走向深空。世界各地的发现，在这里相遇。",
+  "events": [
+    {
+      "id": "expansion",
+      "year": "1929",
+      "date": "1929",
+      "title": "宇宙膨胀，进入观测视野",
+      "who": "美国威尔逊山天文台 · 欧洲理论研究",
+      "kind": "宇宙学",
+      "text": "哈勃发表星系距离与退行速度之间的关系。与斯里弗的光谱观测、勒梅特等人的理论工作相结合，宇宙膨胀逐渐成为可检验的物理图景。",
+      "image": "hubble-ultra-deep",
+      "source": "https://science.nasa.gov/missions/hubble/nasa-celebrates-edwin-hubbles-discovery-of-a-new-universe/"
+    },
+    {
+      "id": "sputnik",
+      "year": "1957",
+      "date": "1957-10-04",
+      "title": "第一颗人造地球卫星",
+      "who": "苏联 · Sputnik 1",
+      "kind": "航天起点",
+      "text": "斯普特尼克 1 号进入地球轨道。来自太空的无线电信号，让人造卫星从设想成为现实，也开启了航天时代。",
+      "image": "blue-marble",
+      "source": "https://www.esa.int/About_Us/50_years_of_ESA/Sputnik_60_years_of_the_space_age"
+    },
+    {
+      "id": "gagarin",
+      "year": "1961",
+      "date": "1961-04-12",
+      "title": "人类第一次进入太空",
+      "who": "苏联 · 尤里·加加林 / 东方一号",
+      "kind": "载人探索",
+      "text": "加加林乘东方一号完成绕地飞行，成为第一位进入太空的人。人类开始亲自离开地面，体验轨道飞行。",
+      "image": "earthrise",
+      "source": "https://www.esa.int/Science_Exploration/Space_Science/12_April"
+    },
+    {
+      "id": "cmb",
+      "year": "1965",
+      "date": "1964–1965",
+      "title": "听见早期宇宙的余晖",
+      "who": "贝尔实验室 · 普林斯顿研究团队",
+      "kind": "宇宙学",
+      "text": "彭齐亚斯与威尔逊观测到来自全天的微波背景信号，相关发现与宇宙学解释于 1965 年发表。宇宙微波背景成为研究早期宇宙的关键证据。",
+      "image": "wmap-cmb",
+      "source": "https://science.nasa.gov/mission/cobe/science/"
+    },
+    {
+      "id": "apollo",
+      "year": "1969",
+      "date": "1969-07-20",
+      "title": "人类首次载人登月",
+      "who": "美国 · 阿波罗 11 号",
+      "kind": "载人探索",
+      "text": "阿波罗 11 号实现首次载人登月。月面活动、实验与带回的样本，让对另一颗天体的研究进入新的阶段。",
+      "image": "apollo-bootprint",
+      "source": "https://www.nasa.gov/mission/apollo-11/"
+    },
+    {
+      "id": "venera",
+      "year": "1970",
+      "date": "1970-12-15",
+      "title": "从金星地表传回数据",
+      "who": "苏联 · 金星 7 号",
+      "kind": "行星探测",
+      "text": "金星 7 号在金星实现软着陆，并从地表传回数据。这是人类探测器在另一颗行星表面取得的突破。",
+      "image": "nasa-pia00248",
+      "source": "https://science.nasa.gov/deep-space-exploration/"
+    },
+    {
+      "id": "hubble",
+      "year": "1990",
+      "date": "1990-04-24",
+      "title": "哈勃升空，打开新的观测窗口",
+      "who": "NASA · ESA",
+      "kind": "空间天文",
+      "text": "哈勃空间望远镜发射升空。这项美国与欧洲合作的任务，后来在恒星、星系、宇宙膨胀与深场观测中留下了大量成果。",
+      "image": "hubble-deep-1995",
+      "source": "https://science.nasa.gov/mission/hubble/"
+    },
+    {
+      "id": "pulsar-planets",
+      "year": "1992",
+      "date": "1992",
+      "title": "首批确认的系外行星",
+      "who": "阿雷西博观测 · Wolszczan 与 Frail",
+      "kind": "系外世界",
+      "text": "脉冲星 PSR B1257+12 周围的行星得到确认。它们围绕恒星遗迹运行，与后来发现的类太阳恒星周围行星，需要分别看待。",
+      "image": "crab",
+      "source": "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up/"
+    },
+    {
+      "id": "pegasi",
+      "year": "1995",
+      "date": "1995-10-06",
+      "title": "在另一颗太阳旁，找到行星",
+      "who": "瑞士团队 · 法国上普罗旺斯天文台",
+      "kind": "系外世界",
+      "text": "迈耶与奎洛兹宣布发现飞马座 51 b。这颗绕类太阳恒星运行的行星，成为系外行星研究的标志性突破。",
+      "image": "nasa-pia21376",
+      "source": "https://science.nasa.gov/universe/exoplanets/nobel-winners-changed-our-understanding-with-exoplanet-discovery/"
+    },
+    {
+      "id": "acceleration",
+      "year": "1998",
+      "date": "1998",
+      "title": "宇宙膨胀，竟在加速",
+      "who": "超新星宇宙学计划 · 高红移超新星搜索团队",
+      "kind": "宇宙学",
+      "text": "两个国际研究团队通过遥远超新星的观测，提出宇宙正在加速膨胀的证据。这一发现改变了对宇宙演化的认识，也推动了暗能量研究。",
+      "image": "deepfield",
+      "source": "https://science.nasa.gov/dark-energy/"
+    },
+    {
+      "id": "huygens",
+      "year": "2005",
+      "date": "2005-01-14",
+      "title": "惠更斯，抵达泰坦表面",
+      "who": "ESA · NASA · 意大利航天局",
+      "kind": "行星探测",
+      "text": "惠更斯探测器穿过泰坦浓厚的大气，在表面着陆并传回数据。卡西尼—惠更斯任务将国际合作带到了外太阳系的卫星世界。",
+      "image": "nasa-pia01533",
+      "source": "https://www.esa.int/Science_Exploration/Space_Science/Cassini-Huygens/Europe_reaches_new_frontier_Huygens_lands_on_Titan"
+    },
+    {
+      "id": "hayabusa",
+      "year": "2010",
+      "date": "2010-06-13",
+      "title": "把小行星的物质带回地球",
+      "who": "日本 · JAXA / 隼鸟号",
+      "kind": "样本返回",
+      "text": "隼鸟号返回舱回到地球，带回丝川小行星的微粒。小行星研究由远距离影像，进一步走向对返回样本的实验室分析。",
+      "image": "nasa-pia00333",
+      "source": "https://global.jaxa.jp/activity/pr/jaxas/pdf/jaxatoday002.pdf"
+    },
+    {
+      "id": "philae",
+      "year": "2014",
+      "date": "2014-11-12",
+      "title": "第一次，在彗星上着陆",
+      "who": "欧洲 · ESA / DLR / CNES 等",
+      "kind": "小天体探测",
+      "text": "罗塞塔任务的菲莱着陆器首次接触并着陆彗星表面。着陆过程中发生反弹，但仍传回现场科学数据，开拓了对彗星的近距离研究。",
+      "image": "nasa-pia19040",
+      "source": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Touchdown%21_Rosetta_s_Philae_probe_lands_on_comet"
+    },
+    {
+      "id": "gw150914",
+      "year": "2015",
+      "date": "2015-09-14",
+      "title": "第一次，直接探测到引力波",
+      "who": "LIGO · 国际科学合作",
+      "kind": "引力与时空",
+      "text": "LIGO 两座探测器记录到双黑洞并合产生的 GW150914 信号，成果于 2016 年 2 月公布。天文学由观测电磁波，拓展到直接聆听时空的波动。",
+      "image": "blackhole",
+      "source": "https://www.ligo.caltech.edu/WA/news/ligo20160211"
+    },
+    {
+      "id": "gw170817",
+      "year": "2017",
+      "date": "2017-08-17",
+      "title": "引力波与光，同时讲述一次并合",
+      "who": "LIGO–Virgo · 世界多座天文台",
+      "kind": "多信使天文",
+      "text": "GW170817 的引力波信号与随后观测到的电磁辐射相互对应。全球多台望远镜追踪同一事件，多信使天文学迎来关键进展。",
+      "image": "nasa-pia11435",
+      "source": "https://www.eso.org/public/news/eso1733/"
+    },
+    {
+      "id": "change4",
+      "year": "2019",
+      "date": "2019-01-03",
+      "title": "首次软着陆月球背面",
+      "who": "中国 · 嫦娥四号 / 鹊桥中继星",
+      "kind": "探月突破",
+      "text": "嫦娥四号在月球背面成功软着陆，并通过鹊桥中继星传回影像。地月中继通信让月球背面的就位探测得以实现。",
+      "image": "nasa-pia15515",
+      "source": "https://www.cnsa.gov.cn/n6759533/c6805034/content.html"
+    },
+    {
+      "id": "eht-m87",
+      "year": "2019",
+      "date": "2019-04-10",
+      "title": "全球望远镜，拼出黑洞阴影",
+      "who": "事件视界望远镜 EHT · 国际合作",
+      "kind": "黑洞成像",
+      "text": "EHT 协作组发布 M87* 的黑洞阴影影像。来自世界多地的射电望远镜共同组成虚拟的地球尺度望远镜，影像由观测数据重建。",
+      "image": "m87-eht",
+      "source": "https://www.eso.org/public/news/eso1907/"
+    },
+    {
+      "id": "hayabusa2",
+      "year": "2020",
+      "date": "2020-12-06",
+      "title": "龙宫样本，回到地球",
+      "who": "日本 · JAXA / 隼鸟 2 号",
+      "kind": "样本返回",
+      "text": "隼鸟 2 号返回舱携带龙宫小行星样本抵达地球。返回样本为研究小天体的物质组成及太阳系早期历史提供了直接材料。",
+      "image": "nasa-pia02477",
+      "source": "https://www.hayabusa2.jaxa.jp/en/topics/20201206_fireball/"
+    },
+    {
+      "id": "tianwen",
+      "year": "2021",
+      "date": "2021-05-15",
+      "title": "天问一号，成功着陆火星",
+      "who": "中国 · 天问一号 / 祝融号",
+      "kind": "行星探测",
+      "text": "天问一号着陆巡视器成功软着陆火星，祝融号随后开展巡视探测。中国首次火星探测任务由环绕观测进一步走向地表研究。",
+      "image": "nasa-pia00992",
+      "source": "https://www.cnsa.gov.cn/n6758824/n6759009/n6760412/n6760413/c6840440/content.html"
+    },
+    {
+      "id": "eht-sgra",
+      "year": "2022",
+      "date": "2022-05-12",
+      "title": "看见银河系中心黑洞的阴影",
+      "who": "事件视界望远镜 EHT · 国际合作",
+      "kind": "黑洞成像",
+      "text": "EHT 发布人马座 A* 的首张影像。对银河系中心恒星轨道的研究，与事件视界尺度的射电观测，开始在同一对象上相互补充。",
+      "image": "sgra-eht",
+      "source": "https://www.eso.org/public/news/eso2208-eht-mw/"
+    },
+    {
+      "id": "webb",
+      "year": "2022",
+      "date": "2022-07-12",
+      "title": "韦伯，展开红外宇宙的细节",
+      "who": "NASA · ESA · 加拿大航天局",
+      "kind": "空间天文",
+      "text": "韦伯首批完整彩色科学影像与光谱公开展示，涵盖深场、恒星形成区等对象。这个国际合作任务把红外观测带向新的深度与精度。",
+      "image": "cliffs",
+      "source": "https://science.nasa.gov/missions/webb/nasas-webb-reveals-cosmic-cliffs-glittering-landscape-of-star-birth/"
+    },
+    {
+      "id": "chandrayaan",
+      "year": "2023",
+      "date": "2023-08-23",
+      "title": "月船三号，着陆月球南极附近",
+      "who": "印度 · ISRO / 月船三号",
+      "kind": "探月突破",
+      "text": "月船三号着陆器在月球南部高纬地区成功软着陆，巡视器随后驶出开展探测。这里是南极附近区域，并非月球南极点。",
+      "image": "nasa-pia13523",
+      "source": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html"
+    },
+    {
+      "id": "change6",
+      "year": "2024",
+      "date": "2024-06-25",
+      "title": "首次，带回月球背面的样本",
+      "who": "中国 · 嫦娥六号 / 国际搭载合作",
+      "kind": "样本返回",
+      "text": "嫦娥六号返回器携带月球背面样本回到地球，实现世界首次月背采样返回。对月球的研究，获得了来自背面的直接样本。",
+      "image": "nasa-pia00001",
+      "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n10518102/n10518147/c10565180/content.html"
+    }
+  ]
+}

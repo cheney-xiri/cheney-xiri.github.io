@@ -1,0 +1,344 @@
+/* Final art direction: shared ink and mineral pigments; a different composition
+   and visual rhythm for every chapter. Protected interiors are excluded. */
+html.ink-site:not([data-ink-preserve]){
+  --is-paper:#bdc9c6;--is-sheet:#d1d7cb;--is-wash:#aebeb3;
+  --is-wash-blue:#a8bdc0;--is-ink:#192f32;--is-secondary:#2f484a;
+  --is-muted:#465e5b;--is-green:#456957;--is-blue:#24576a;
+  --is-red:#963d32;--is-red-deep:#85372d;--is-gold:#887044;
+  --is-rule:rgba(29,55,57,.25);--is-rule-soft:rgba(29,55,57,.12);
+  --is-paper-rgb:189,201,198;--is-ink-rgb:25,47,50;
+  --ink-scene:url('ink/scroll-bamboo-v1.webp');
+  --ink-surface:rgba(209,218,207,.92);
+}
+html.ink-site:not([data-ink-preserve]) body{
+  --paper-3:#9dad9e;--wen-rule:#a0afa4;--admire-rule:#a1afa6;
+  --muted:var(--is-muted);--accent:var(--is-red);--edge:var(--is-rule);--dark:#294b48;
+  --admire-gold:var(--is-gold);color:var(--is-ink);
+  background:linear-gradient(rgba(183,199,195,.38),rgba(183,199,195,.38)),var(--ink-scene) center/cover fixed;
+}
+html.ink-site:not([data-ink-preserve]) body::before{opacity:.14;pointer-events:none}
+html.ink-site:not([data-ink-preserve]) :is(.profile-bar,.stage-bar,.craft-detail-bar,.fp-bar,.novel-bar,.wen-bar,.travel-bar,.pastime-bar,.interaction-bar,.site-bar,.ac-bar,.henan-topbar,.topbar,.catalog-topbar){
+  background:rgba(188,203,198,.95);border-color:var(--is-rule);backdrop-filter:blur(10px)
+}
+html.ink-site:not([data-ink-preserve]) .ink-page-opening{overflow:clip;background-color:transparent}
+html.ink-site:not([data-ink-preserve]) .ink-page-opening::before{display:none}
+html.ink-site:not([data-ink-preserve]) :is(.profile-nav,.stage-nav,.novel-section-nav,.travel-section-nav){background:rgba(198,210,200,.97);color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) :is(.go-primary-link,.scene-writing-index){background:#294d50;color:var(--is-light)}
+html.ink-site:not([data-ink-preserve]) .go-primary-link:is(a,button){color:var(--is-light)}
+html.ink-site:not([data-ink-preserve]) .scene-writing-index :is(p,h2,h3,a,span){color:var(--is-light)}
+
+/* Opening: the only panoramic mountain-and-water frontispiece. */
+.ink-site #ink-home{background:#a9c1c3;--is-light:#e7e8da;--is-light-muted:#cbd9d4}
+.ink-site #ink-home .hero{background:#a9c1c3;padding-top:6rem;padding-bottom:5rem}
+.ink-site #ink-home .ink-mountains-far{
+  inset:0;width:100%;height:100%;opacity:1;filter:none;mask-image:none;
+  background:url('ink/scroll-mountains-v1.webp') center/cover no-repeat;
+}
+.ink-site #ink-home .ink-landscape::after{background:linear-gradient(180deg,rgba(53,91,103,.08),transparent 30%,transparent 77%,rgba(12,47,59,.13))}
+.ink-site #ink-home .ink-mountains-near,.ink-site #ink-home .ink-landscape-note{display:none}
+.ink-site #ink-home .ink-mist{height:22%;bottom:26%;opacity:.28;background:radial-gradient(ellipse,rgba(214,230,225,.5),transparent 70%)}
+.ink-site #ink-home .ink-sword{height:15%;width:48%;bottom:11%;opacity:.25}
+.ink-site #ink-home .hero-veil{background:radial-gradient(ellipse 40% 42% at 50% 43%,rgba(205,220,219,.54),rgba(205,220,219,.24) 52%,transparent 95%)}
+.ink-site #ink-home .hero-inner{padding-bottom:2.5rem}
+.ink-site #ink-home .hero-name{color:#16353e;font-size:clamp(5rem,8.4vw,8rem);text-shadow:0 2px 18px rgba(218,234,232,.35);margin-bottom:1.15rem}
+.ink-site #ink-home :is(.hero-aspiration,.hero-tagline,.hero-quote,.hero-quote em){color:#24484d}
+.ink-site #ink-home .hero-aspiration{font-size:1.5rem;letter-spacing:.35em}
+.ink-site #ink-home .hero-inner>.seal{color:#963d32;border-color:#963d32;background:rgba(214,221,208,.28);margin-bottom:1rem}
+.ink-site #ink-home .poem-draw{background:rgba(202,215,205,.62);color:#78372e;border-color:rgba(129,63,48,.65)}
+.ink-site #ink-home .poem-draw:hover{background:#853f35;color:#eee9d9}
+.ink-site #ink-home .hero-hint{color:#d0e0da;left:50%;transform:translateX(-50%);white-space:nowrap}
+.ink-site #ink-home .drift-line{color:#24454e;opacity:.48;text-shadow:0 1px 8px rgba(220,233,230,.45)}
+.ink-site #ink-home .hero-drift .drift-line:is(:hover,:focus-visible){color:#173a46}
+.ink-site #ink-home .nav:is([data-ink-nav=light],[data-ink-nav=dark],.is-scrolled,:not(.is-scrolled)){
+  background:rgba(177,199,199,.92);border-color:rgba(32,70,77,.25);backdrop-filter:blur(14px)
+}
+.ink-site #ink-home .nav:is([data-ink-nav=light],[data-ink-nav=dark],:not(.is-scrolled)) :is(.brand-name,.brand-sub,.nav-list a){color:#27474b}
+.ink-site #ink-home .nav:is([data-ink-nav=light],[data-ink-nav=dark],:not(.is-scrolled)) .menu-btn span{background:#27474b}
+.ink-site #ink-home .nav .nav-list a:is(:hover,.is-active){color:var(--is-red-deep)}
+.ink-site #ink-home .chapter-dock{background:rgba(198,212,202,.95);color:var(--is-ink);border-color:var(--is-rule)}
+.ink-site #ink-home .chapter-dock button{color:var(--is-ink)}
+
+/* Chapter materials. No large chapter is represented by one particular hobby. */
+.ink-site #ink-home .juan{border-top:1px solid rgba(32,65,70,.27)}
+.ink-site #ink-home .juan::after{display:none}
+.ink-site #ink-home .juan>.wrap{padding-block:1.8rem;max-width:76rem}
+/* The page covering motion already provides the chapter transition. Replaying
+   page-pop when the active chapter changes flashes visible content back to zero. */
+.ink-site #ink-home .juan.is-current>.wrap{animation:none}
+.ink-site #ink-home .juan-head{margin-bottom:2rem;border-bottom-color:var(--is-rule)}
+.ink-site #ink-home :is(#about,#journey,#craft,#pastimes,#works,#travels,#admire,#writing,#reading,#links,#contact) .juan-title{color:var(--is-ink)}
+.ink-site #ink-home :is(#about,#journey,#craft,#pastimes,#works,#travels,#admire,#writing,#reading,#links,#contact) .juan-poem{color:var(--is-muted)}
+.ink-site #ink-home :is(#journey,#pastimes,#admire) .juan-head .juan-poem{color:var(--is-muted)}
+.ink-site #ink-home .juan::before{color:var(--is-secondary);opacity:.82}
+
+/* A personal folio: an intimate, asymmetrical portrait and manuscript margin. */
+.ink-site #ink-home #about{
+  background:linear-gradient(90deg,rgba(163,188,180,.15),rgba(192,209,195,.72) 40%,rgba(202,214,199,.91) 72%),url('ink/scroll-bamboo-v1.webp') 35% 43%/cover;
+}
+.ink-site #ink-home #about>.wrap{background:none}
+.ink-site #ink-home #about .about-body{padding:1rem 0 1rem 2rem;border-left:1px solid var(--is-rule)}
+.ink-site #ink-home #about .avatar-ring{background:#c4cfbe;box-shadow:.7rem .7rem 0 rgba(63,96,85,.18)}
+
+/* Study: an ascending diagonal and three clearly spaced stages. */
+.ink-site #ink-home #journey{
+  background:radial-gradient(ellipse 85% 95% at 47% 45%,rgba(191,207,187,.95),rgba(191,207,187,.82) 55%,rgba(176,196,179,.3)),url('ink/scroll-journey-v1.webp') center/cover;
+}
+.ink-site #ink-home #journey>.wrap{background:none}
+.ink-site #ink-home #journey :is(.journey-preface,.journey-era span,.journey-era time,.journey-school p){color:var(--is-secondary)}
+.ink-site #ink-home #journey .journey-school h3 a{color:var(--is-ink)}
+.ink-site #ink-home #journey .journey-entry{border-top-color:var(--is-green)}
+.ink-site #ink-home #journey .journey-entry-university{border-top-color:var(--is-red)}
+.ink-site #ink-home #journey .journey-enter{color:var(--is-red-deep);border-color:var(--is-rule)}
+
+/* Journey cards: linked pages in a quiet timeline. Typography stays inherited. */
+.ink-site #ink-home #journey .journey-list{gap:1.5rem;padding-top:1.25rem;max-width:none;isolation:isolate}
+.ink-site #ink-home #journey .journey-list::before{content:'';position:absolute;left:1.5rem;right:1.5rem;top:0;height:1px;background:var(--is-rule);pointer-events:none}
+.ink-site #ink-home #journey .journey-entry{
+ --journey-card-accent:var(--is-green);--journey-card-edge:rgba(52,82,66,.28);
+ padding:1.45rem 1.5rem 1rem;gap:1.3rem;min-height:20rem;
+ border:1px solid var(--journey-card-edge);border-radius:2px;
+ background:linear-gradient(135deg,rgba(214,226,208,.45),rgba(184,205,184,.18));
+ overflow:visible;box-shadow:0 9px 22px -22px rgba(28,53,40,.45);
+}
+.ink-site #ink-home #journey .journey-entry-university{--journey-card-accent:var(--is-red-deep);--journey-card-edge:rgba(126,76,57,.3);background:linear-gradient(135deg,rgba(222,227,209,.48),rgba(190,207,186,.2))}
+.ink-site #ink-home #journey .journey-entry::before{inset:auto;top:-1.5rem;left:1.2rem;width:.6rem;height:.6rem;border:1px solid var(--journey-card-accent);border-radius:50%;background:var(--journey-card-accent);opacity:1;pointer-events:none}
+.ink-site #ink-home #journey .journey-entry::after{content:'';position:absolute;top:.55rem;right:.55rem;width:1rem;height:1rem;border-top:1px solid var(--journey-card-edge);border-right:1px solid var(--journey-card-edge);pointer-events:none;opacity:.6}
+.ink-site #ink-home #journey .journey-entry:is(:hover,:focus-within){transform:none;border-color:var(--journey-card-accent);box-shadow:0 13px 28px -24px rgba(28,53,40,.5);background-color:rgba(212,226,208,.28)}
+.ink-site #ink-home #journey .journey-era{display:grid;gap:.65rem;width:100%;padding:0 0 1.15rem;border:0;border-bottom:1px solid var(--journey-card-edge)}
+.ink-site #ink-home #journey .journey-school{min-width:0;width:100%}
+.ink-site #ink-home #journey .journey-school h3 a::after{content:'';position:absolute;inset:0;z-index:1}
+.ink-site #ink-home #journey .journey-school h3 a:is(:hover,:focus-visible){color:var(--is-ink);border-color:transparent}
+.ink-site #ink-home #journey .journey-enter{position:relative;z-index:2;width:100%;display:flex;justify-content:space-between;min-height:44px;padding:.55rem 0 0;margin-top:auto;border:0;border-top:1px solid var(--journey-card-edge)}
+.ink-site #ink-home #journey .journey-enter::after{width:1.3rem;height:.65rem;background:currentColor;clip-path:polygon(0 43%,83% 43%,60% 10%,67% 0,100% 50%,67% 100%,60% 90%,83% 57%,0 57%);transform-origin:center}
+.ink-site #ink-home #journey .journey-entry:focus-within{outline:2px solid var(--journey-card-accent);outline-offset:4px}
+@media(max-width:800px){
+ .ink-site #ink-home #journey{padding-top:5rem;padding-bottom:2rem}
+ .ink-site #ink-home #journey>.wrap{padding-block:0}
+ .ink-site #ink-home #journey .juan-head{margin-bottom:1.5rem}
+ .ink-site #ink-home #journey .journey-preface{margin-bottom:1.35rem}
+ .ink-site #ink-home #journey .journey-list{grid-template-columns:1fr;gap:1rem;padding:0 0 0 1rem}
+ .ink-site #ink-home #journey .journey-list::before{left:0;right:auto;top:1.5rem;bottom:1.5rem;width:1px;height:auto}
+ .ink-site #ink-home #journey .journey-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.55rem .7rem;min-height:0;padding:.85rem 1rem .75rem}
+ .ink-site #ink-home #journey .journey-entry::before{top:1.3rem;left:-1.3rem;width:.5rem;height:.5rem}
+ .ink-site #ink-home #journey .journey-era{grid-row:auto;grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;padding:0 0 .6rem}
+ .ink-site #ink-home #journey .journey-school{display:contents}
+ .ink-site #ink-home #journey .journey-school h3{grid-column:1/-1;min-width:0}
+ .ink-site #ink-home #journey .journey-school p{grid-column:1;grid-row:3;margin:0;align-self:center}
+ .ink-site #ink-home #journey .journey-enter{grid-column:2;grid-row:3;justify-self:end;align-self:center;gap:.7rem;width:auto;padding:0;min-height:44px;margin:0;border:0}
+}
+
+/* Craft: measured columns, tactile ink and precise rules; no single tool dominates. */
+.ink-site #ink-home #craft{
+  background:radial-gradient(ellipse at 0 100%,rgba(31,68,66,.2),transparent 40%),linear-gradient(115deg,rgba(178,198,182,.72),rgba(195,207,188,.7)),url('ink/scroll-craft-v1.webp') center 38%/180% auto;
+}
+.ink-site #ink-home #craft>.wrap{background:none}
+.ink-site #ink-home #craft .craft-family{padding:0 1.1rem!important;border-left:1px solid var(--is-rule)!important}
+.ink-site #ink-home #craft .craft-family:first-child{border-left:0!important;padding-left:0!important}
+.ink-site #ink-home #craft .craft-family:last-child{padding-right:0!important}
+.ink-site #ink-home #craft .craft-family-head{border-bottom:2px solid var(--is-rule)}
+.ink-site #ink-home #craft .craft-family-head>span{color:var(--is-red-deep);font-family:var(--is-brush);font-size:1rem}
+.ink-site #ink-home #craft .craft-card>img{border:1px solid rgba(47,74,62,.2)}
+.ink-site #ink-home #craft a.craft-card{color:inherit;text-decoration:none;cursor:pointer}
+.ink-site #ink-home #craft a.craft-card:focus-visible{outline:2px solid var(--is-red-deep);outline-offset:5px}
+.ink-site #ink-home #craft .craft-card-entry{display:inline-flex;align-items:center;gap:.55rem;min-height:40px;margin:0;color:var(--is-red-deep);font-size:.72rem;letter-spacing:.06em}
+.ink-site #ink-home #craft .craft-card-entry::after{content:'';width:1.2rem;height:1px;background:currentColor;transition:transform .2s;transform-origin:left}
+.ink-site #ink-home #craft a.craft-card:is(:hover,:focus-visible) .craft-card-entry::after{transform:scaleX(1.4)}
+
+/* Fit the six desktop entries on one page so craft uses the common chapter turn. */
+@media(min-width:981px){
+ .ink-site #ink-home #craft{padding-top:clamp(72px,9vh,96px);padding-bottom:clamp(24px,4vh,44px)}
+ .ink-site #ink-home #craft>.wrap{padding-block:0}
+ .ink-site #ink-home #craft .juan-head{padding-bottom:.8rem;margin-bottom:1.25rem}
+ .ink-site #ink-home #craft .craft-family-head{display:flex;align-items:baseline;gap:.7rem;min-height:0;padding-bottom:.65rem;margin-bottom:.75rem}
+ .ink-site #ink-home #craft .craft-family-head>span{flex:none}
+ .ink-site #ink-home #craft .craft-family-head h3{font-size:.86rem;margin:0;line-height:1.7;letter-spacing:.02em}
+ .ink-site #ink-home #craft .craft-family-grid{gap:.8rem}
+ .ink-site #ink-home #craft .craft-card{gap:.6rem;padding-bottom:.6rem}
+ .ink-site #ink-home #craft .craft-card>img{height:clamp(5rem,calc((100svh - 570px)/2),10rem)}
+}
+
+/* Interests: an expansive blue-grey field with overlapping, restrained rhythms. */
+.ink-site #ink-home #pastimes{background:radial-gradient(ellipse at 86% 26%,rgba(63,113,131,.32),transparent 41%),radial-gradient(ellipse at 15% 95%,rgba(37,99,109,.28),transparent 48%),linear-gradient(135deg,#b1c8ca,#9db9bb)}
+.ink-site #ink-home #pastimes::after{display:block;content:'';z-index:0;inset:9% -18% auto auto;width:55vw;height:55vw;max-height:none;background:none;mask-image:none;filter:none;opacity:.23;border:1px solid #366979;border-radius:50%;box-shadow:0 0 0 3rem rgba(49,104,120,.09),0 0 0 6rem rgba(49,104,120,.07);pointer-events:none}
+.ink-site #ink-home #pastimes>.wrap{background:none}
+.ink-site #ink-home #pastimes .interest-card-copy strong{color:#1c4148}
+.ink-site #ink-home #pastimes :is(.interest-card-copy small,.interest-card-copy>span){color:#36565c}
+.ink-site #ink-home #pastimes .interest-card-copy{border-bottom:1px solid rgba(39,85,96,.24)}
+
+/* Works: an editorial spread for both books and digital creation. */
+.ink-site #ink-home #works{background:linear-gradient(90deg,rgba(72,88,76,.1) 1px,transparent 1px) center/22rem 100%,linear-gradient(115deg,rgba(178,191,174,.7),rgba(201,206,184,.74)),url('ink/scroll-letters-v1.webp') center 25%/180% auto}
+.ink-site #ink-home #works>.wrap{background:none}
+.ink-site #ink-home #works .works-grid{gap:1rem 2.6rem}
+.ink-site #ink-home #works .works-entry-digital{padding:1rem 0;border-top:1px solid var(--is-rule)}
+.ink-site #ink-home #works .works-entry-digital .works-thumb{height:8rem;align-self:start}
+.ink-site #ink-home #works .works-entry-book .works-thumb{filter:drop-shadow(.3rem .5rem .4rem rgba(37,53,43,.16))}
+
+/* Travels: a broad winding river, atlas-like captions and photographic places. */
+.ink-site #ink-home #travels{background:radial-gradient(ellipse 85% 90% at 50% 42%,rgba(182,207,202,.95),rgba(182,207,202,.88) 55%,rgba(149,190,192,.3)),url('ink/scroll-river-v1.webp') center/cover}
+.ink-site #ink-home #travels>.wrap{background:none}
+.ink-site #ink-home #travels .travel-atlas-intro{border-left:2px solid var(--is-blue);padding-left:1.2rem}
+.ink-site #ink-home #travels .travel-city-card{background:#cad8cc}
+
+/* Admiration: upright, spacious silhouettes rather than a particular person's symbols. */
+.ink-site #ink-home #admire{background:linear-gradient(90deg,rgba(177,198,192,.95),rgba(177,198,192,.87) 70%,rgba(152,176,176,.25)),url('ink/scroll-admire-v1.webp') center/cover;color:var(--is-ink)}
+.ink-site #ink-home #admire>.wrap{background:none}
+.ink-site #ink-home #admire :is(.admire-book,.admire-masthead,.admire-follow-index,.admire-fan-entry){border-color:var(--is-rule);color:var(--is-ink)}
+.ink-site #ink-home #admire .admire-book-note{color:var(--is-secondary)}
+.ink-site #ink-home #admire .admire-book h3{color:var(--is-ink)}
+.ink-site #ink-home #admire .admire-book{background:none}
+
+/* Writing: manuscript columns and a narrow vermilion binding. */
+.ink-site #ink-home #writing{background:linear-gradient(90deg,rgba(75,90,66,.15) 1px,transparent 1px) center/8.5rem 100%,linear-gradient(130deg,#bac3af,#d0d3bc 55%,#aab7a5)}
+.ink-site #ink-home #writing>.wrap{background:none}
+.ink-site #ink-home #writing .wen-curated-lines{border-left:1px solid rgba(131,61,49,.4)}
+.ink-site #ink-home #writing .wen-curated-lines blockquote{color:#344c40}
+.ink-site #ink-home #writing::after{display:block;inset:auto -4rem 0 auto;width:32rem;height:22rem;background:url('ink/brush.svg') center/contain no-repeat;opacity:.14;filter:none;mask-image:none;pointer-events:none}
+
+/* Reading: a quiet bamboo reading room and an actual, low book shelf. */
+.ink-site #ink-home #reading{background:radial-gradient(ellipse 75% 90% at 50% 45%,rgba(181,204,175,.95),rgba(181,204,175,.8) 58%,rgba(154,184,165,.26)),url('ink/scroll-bamboo-v1.webp') center 52%/cover}
+.ink-site #ink-home #reading>.wrap{background:none}
+.ink-site #ink-home #reading .shelf{border-bottom:3px double rgba(34,66,44,.5)}
+
+/* Encounters and the colophon finish the scroll with open, horizontal space. */
+.ink-site #ink-home #links{background:radial-gradient(ellipse at 8% 100%,#7daba6,transparent 58%),radial-gradient(ellipse at 100% 0,#adc6b7,transparent 58%),#b4c8b9}
+.ink-site #ink-home #links .interaction-door{background:rgba(203,218,201,.7);border:0;border-top:2px solid #548177;border-bottom:1px solid var(--is-rule)}
+.ink-site #ink-home #links .interaction-door:nth-child(2){background:rgba(179,206,188,.72)}
+.ink-site #ink-home #links::after{display:block;inset:auto -2rem -4rem auto;width:60%;height:50%;background:url('ink/water.svg') center/contain no-repeat;opacity:.14;filter:none;mask-image:none;pointer-events:none}
+.ink-site #ink-home #contact{background:linear-gradient(180deg,#b4c9c1,#8db0ad 78%,#568786);border-bottom:5px solid #285659}
+.ink-site #ink-home #contact>.wrap{background:none}
+.ink-site #ink-home #contact .ccard{background:rgba(199,216,201,.55);border:1px solid rgba(41,81,77,.24)}
+
+/* Interior chapters inherit the language but retain their own subject and layout. */
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=journey]{--ink-scene:url('ink/scroll-journey-v1.webp')}
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=travel],[data-ink-page=interaction]){--ink-scene:url('ink/scroll-river-v1.webp')}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=figure]{--ink-scene:url('ink/scroll-admire-v1.webp')}
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=summer],[data-ink-page=future]){--ink-scene:url('ink/scroll-letters-v1.webp')}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft]{--ink-scene:url('ink/scroll-craft-v1.webp')}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft][data-craft-skill=dizi]{--ink-scene:url('ink/scroll-bamboo-v1.webp');--is-wash:#b2c4a6;--is-blue:#3c7159}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft][data-craft-skill=poetry]{--ink-scene:url('ink/scroll-river-v1.webp');--is-sheet:#c8d6ce}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft][data-craft-skill=guitar]{--is-paper:#bdc1ae;--is-sheet:#d3d1bb;--is-wash:#b5bba2;--is-red:#975538;--is-red-deep:#7c472d;background:radial-gradient(ellipse at 100% 0,rgba(102,112,83,.2),transparent 55%),linear-gradient(120deg,#b6bba5,#c8c9b3)}
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=joseki-index],[data-ink-page=joseki-detail]),html.ink-site:not([data-ink-preserve]) body[data-ink-page=craft][data-craft-skill=go]{--is-paper:#b6c4bb;--is-sheet:#d1d6c5;--is-wash:#afbeae;background:radial-gradient(ellipse at 100% 100%,rgba(30,55,44,.22),transparent 36%),linear-gradient(130deg,#aebfb5,#c2cdbb)}
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=writing-index],[data-ink-page=writing-article],[data-ink-page=lines]){background:linear-gradient(rgba(164,180,158,.18),rgba(164,180,158,.18)),url('ink/scroll-craft-v1.webp') center/cover fixed;--is-sheet:#d5d8c4;--is-wash:#c0cbb3}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=digital]{background:radial-gradient(ellipse at 0 0,#8eafaf,transparent 60%),linear-gradient(125deg,#a7beb6,#bdc9ba)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=anime-game]{background:linear-gradient(120deg,#a5b6b4,#bac8bd 55%,#92adaa)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] :is(.catalog-hero,.detail-hero){background:transparent;border-bottom:1px solid var(--is-rule);box-shadow:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] :is(.catalog-hero,.detail-hero) :is(h1,h2,p,a,span,small){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .hero-copy{background:transparent}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .hero-collage{background:none}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .hero-cover figcaption{color:#eeeade}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .platform-tabs button{background:var(--is-sheet);border-color:var(--is-rule)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] :is(.ac-tab[aria-pressed=true],.platform-tabs button[aria-selected=true]){background:#2a514b;color:#edf0df}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .platform-tabs button[aria-selected=true] :is(span,strong,small){color:#d3dfcc}
+html.ink-site:not([data-ink-preserve]) :is(.interaction-compose,.owner-panel,.editor-panel) button[type=submit]{color:var(--is-light)}
+html.ink-site:not([data-ink-preserve]) :is(.profile-main,.stage-main,.craft-detail-main,.fp-main,.novel-main,.digital-main,.travel-main,.wen-shell,.interaction-main){background:var(--ink-surface);border-inline:1px solid rgba(49,76,63,.18)}
+html.ink-site:not([data-ink-preserve]) .wen-shell{padding:0 clamp(1rem,3vw,2.8rem);width:min(74rem,calc(100% - 4rem))}
+html.ink-site:not([data-ink-preserve]) .wen-prose{color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) .wen-reading{background:rgba(208,217,201,.94);border-inline:1px solid var(--is-rule-soft);padding:clamp(1.2rem,3vw,2.8rem);max-width:74rem;margin-inline:auto}
+html.ink-site:not([data-ink-preserve]) .wen-picked{background:#b1c2b0;border-color:var(--is-rule)}
+html.ink-site:not([data-ink-preserve]) .wen-picked :is(p,span,small,blockquote){color:#2e493d}
+html.ink-site:not([data-ink-preserve]) .wen-line-group>header{border-left:3px solid var(--is-red-deep);padding-left:1.2rem}
+html.ink-site:not([data-ink-preserve]) .wen-line-group:nth-child(even){background:rgba(172,190,161,.21)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=journey] .stage-chapters #photos{background:var(--is-sheet)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=future] .novel-hero{background:rgba(190,205,195,.72)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=future] .novel-hero-copy :is(h1,p,a){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) .go-study-preview-sheet{background:#b4c5b8;color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) .scene-guitar-chord{color:#40332e;min-width:0}
+html.ink-site:not([data-ink-preserve]) .scene-guitar-chord :is(span,b){color:#574b3d}
+html.ink-site:not([data-ink-preserve]) .scene-guitar-head :is(p,span){color:var(--is-secondary)}
+html.ink-site:not([data-ink-preserve]) .scene-guitar-rhythm :is(p,span,strong){color:var(--is-secondary)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .music-room-layout{border-top:3px double #417c84;background:rgba(188,211,206,.93)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .music-room-nav{background:#abc6c4}
+html.ink-site:not([data-ink-preserve]) .music-library{background:var(--is-sheet)}
+html.ink-site:not([data-ink-preserve]) .music-library-tabs button[aria-pressed=true]{color:var(--is-light);background:#2b5153}
+html.ink-site:not([data-ink-preserve]) .craft-detail-portfolio{background:var(--is-wash);color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=henan] .henan-hero :is(h1,p,a,span){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=henan] .henan-hero-seal{color:#e3cca1}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=henan] :is(.henan-footer p,.henan-footer a,.henan-to-top){color:#e5e5d2}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=henan]{background:radial-gradient(ellipse at 100% 60%,rgba(145,169,140,.25),transparent 55%),linear-gradient(125deg,#b4c1a8,#c3c8ac)}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=pastime][data-ink-topic=music]{background:radial-gradient(ellipse at 0 100%,rgba(52,91,89,.3),transparent 48%),linear-gradient(120deg,#adbfba,#c7ccba 50%,#9cb6b0)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=pastime] .pastime-main{background:rgba(192,207,192,.6)}
+html.ink-site:not([data-ink-preserve]) :is(.music-collection,.pastime-hero-copy,.aw-hero,.henan-hero) :is(h1,h2,h3,h4,p,small,span,a){color:var(--is-light)}
+html.ink-site:not([data-ink-preserve]) .music-collection :is(p,small){color:#c6d4c6}
+html.ink-site:not([data-ink-preserve]) .music-collection button{color:#e4eadc}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .aw-hero :is(h1,h2,p,a,span,small){color:var(--is-ink)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] :is(.aw-note-actions button,.aw-comment-form button,.aw-comment-actions button,.aw-owner-gate button,.memo-actions button,.note-actions button,.detail-notes button){color:var(--is-light)}
+html.ink-site:not([data-ink-preserve]) [data-ink-page=anime-game] .ac-hero-poster{color:var(--is-light)}
+html.ink-site:not([data-ink-preserve]) .pastime-hero-copy{background:linear-gradient(90deg,rgba(22,44,40,.88),rgba(22,44,40,.22))}
+html.ink-site:not([data-ink-preserve]) body.figure-page--qu{--ink-scene:url('ink/scroll-river-v1.webp');--is-sheet:#c7d6cf;--is-blue:#2b6b73}
+html.ink-site:not([data-ink-preserve]) body.figure-page--li{--ink-scene:url('ink/scroll-mountains-v1.webp');--is-sheet:#ccd4c8;--is-gold:#887140}
+html.ink-site:not([data-ink-preserve]) body.figure-page--ke{background:radial-gradient(circle at 90% 90%,rgba(40,63,52,.2),transparent 48%),linear-gradient(135deg,#b4c3b3,#c7d0bc);--is-sheet:#d0d7c4}
+html.ink-site:not([data-ink-preserve]) body.figure-page--jay{background:linear-gradient(125deg,#a6bdc0,#c2cdc3 60%,#99b4b8);--is-blue:#3c6677}
+html.ink-site:not([data-ink-preserve]) body.figure-page--tfboys{background:linear-gradient(135deg,#b4c1a7,#d0d0b3 60%,#b5bfa1);--is-red:#a35b3c}
+html.ink-site:not([data-ink-preserve]) body.stage-junior{--is-sheet:#cad6be;--is-wash:#b2c4a7}
+html.ink-site:not([data-ink-preserve]) body.stage-senior{--is-sheet:#d0d1ba;--is-wash:#bdc4ac;--is-red:#9e4636}
+html.ink-site:not([data-ink-preserve]) body.stage-university{--is-sheet:#c5d5cc;--is-wash:#a7c0b8;--is-blue:#356c7c}
+
+/* Six commissioned chapter paintings, without a rectangular surface behind titles. */
+.ink-site #ink-home #craft{background:linear-gradient(90deg,rgba(175,197,180,.8),rgba(190,207,187,.38) 30%,rgba(190,207,187,.4) 78%,rgba(175,197,180,.72)),url('ink/chapter-craft-v1.webp') center/cover}
+.ink-site #ink-home #pastimes{background:linear-gradient(0deg,rgba(181,205,201,.64),transparent 48%),linear-gradient(90deg,rgba(172,199,200,.7),rgba(181,207,207,.34) 35%,rgba(181,207,207,.34) 75%,rgba(172,199,200,.68)),url('ink/chapter-pastimes-v1.webp') center/cover}
+.ink-site #ink-home #works{background:linear-gradient(90deg,rgba(187,199,177,.72),rgba(197,205,181,.3) 35%,rgba(197,205,181,.4) 78%,rgba(187,199,177,.72)),url('ink/chapter-works-v1.webp') center/cover}
+.ink-site #ink-home #writing{background:linear-gradient(90deg,rgba(190,199,175,.76),rgba(203,208,185,.24) 35%,rgba(203,208,185,.3) 75%,rgba(190,199,175,.75)),url('ink/chapter-writing-v1.webp') center/cover}
+.ink-site #ink-home #links{background:linear-gradient(90deg,rgba(173,199,178,.74),rgba(189,209,185,.26) 35%,rgba(189,209,185,.38) 75%,rgba(173,199,178,.72)),url('ink/chapter-interaction-v1.webp') center/cover}
+.ink-site #ink-home #contact{background:linear-gradient(90deg,rgba(174,199,195,.68),rgba(191,210,201,.25) 35%,rgba(191,210,201,.25) 75%,rgba(174,199,195,.68)),url('ink/chapter-contact-v1.webp') center/cover}
+.ink-site #ink-home :is(#pastimes,#writing,#links)::after{display:none}
+.ink-site #ink-home .juan-title{text-shadow:0 1px 7px rgba(211,224,208,.4)}
+.ink-site #ink-home :is(.craft-card-body,.interest-card-copy,.works-entry-meta,.works-entry-summary,.ccard-title,.ccard-desc,.ccard-value,.interaction-door p){text-shadow:0 1px 3px rgba(222,233,215,.55)}
+html.ink-site:not([data-ink-preserve]) body:is([data-ink-page=writing-index],[data-ink-page=writing-article],[data-ink-page=lines]){--ink-scene:url('ink/chapter-writing-v1.webp');background:linear-gradient(rgba(176,193,171,.27),rgba(176,193,171,.27)),var(--ink-scene) center/cover fixed}
+html.ink-site:not([data-ink-preserve]) body[data-ink-page=interaction]{--ink-scene:url('ink/chapter-interaction-v1.webp')}
+
+/* The interests index is a compact eight-entry spread, in reading order. */
+.ink-site #ink-home #pastimes{padding-top:clamp(5rem,10vh,6.2rem);padding-bottom:clamp(2.8rem,5vh,4rem)}
+.ink-site #ink-home #pastimes>.wrap{padding-block:0}
+.ink-site #ink-home #pastimes .juan-head{margin-bottom:1.4rem;padding-bottom:1rem}
+.ink-site #ink-home #pastimes .juan-title{font-size:clamp(2.7rem,4vw,3.4rem)}
+.ink-site #ink-home #pastimes[data-layout=eight] .interest-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:1.1rem 1.5rem}
+.ink-site #ink-home #pastimes[data-layout=eight] .interest-card:nth-child(n){grid-column:span 1}
+.ink-site #ink-home #pastimes[data-layout=eight] .interest-card:nth-child(n) .interest-card-art{aspect-ratio:2.25;max-height:clamp(5.2rem,14vh,8rem);border-color:rgba(35,73,78,.25);mask-image:none}
+.ink-site #ink-home #pastimes[data-layout=eight] .interest-card-copy{padding:.4rem 0 .45rem;border-bottom-color:rgba(37,76,80,.28)}
+.ink-site #ink-home #pastimes[data-layout=eight] .interest-card-copy strong{font-size:1.15rem;font-weight:500;line-height:1.6}
+.ink-site #ink-home #pastimes[data-layout=eight] .interest-card-copy>span{font-size:.82rem;color:#233f43;line-height:1.7;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.ink-site #ink-home #pastimes[data-layout=eight] .interest-card-copy small{font-size:.64rem;color:#3d5b5e;line-height:1.4}
+.ink-site #ink-home #craft .craft-card-body>p:not(.craft-card-level),.ink-site #ink-home #works .works-entry-summary{font-size:.82rem;color:#3b534a}
+.ink-site #ink-home #links .interaction-door,.ink-site #ink-home #links .interaction-door:nth-child(2){background:rgba(209,223,207,.22)}
+.ink-site #ink-home #contact .ccard{background:rgba(211,225,211,.19)}
+.ink-site #ink-home #travels .travel-city-card{background:rgba(205,221,210,.34)}
+.ink-site #ink-home .drift-line{opacity:.86;color:var(--ink-poem-color,#24454e);font-weight:500;text-shadow:0 1px 6px rgba(205,225,221,.35)}
+.ink-site #ink-home .hero-drift[data-paused] .drift-line{opacity:.86}
+.ink-site #ink-home .hero-drift .drift-line:is(:hover,:focus-visible){opacity:1;color:var(--ink-poem-color,#173a46)}
+@media(min-width:769px){.ink-site #ink-home .hero-drift{mask-image:radial-gradient(ellipse 29% 38% at 50% 44%,transparent 0,transparent 72%,black 100%)}}
+
+@media(max-width:800px){
+  .ink-site #ink-home .juan>.wrap{max-width:calc(100% - 2rem);padding-inline:1.3rem}
+  .ink-site #ink-home .juan::before{left:.3rem;font-size:.6rem;letter-spacing:.15em}
+  .ink-site #ink-home #about .about-body{border-left:0;padding-left:0}
+  .ink-site #ink-home #craft .craft-family{padding:1.2rem 0!important;border-left:0!important;border-top:1px solid var(--is-rule)!important}
+  .ink-site #ink-home #craft .craft-family:first-child{border-top:0!important}
+  .ink-site #ink-home #pastimes[data-layout=eight] .interest-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem 1rem}
+  .ink-site #ink-home #pastimes[data-layout=eight] .interest-card:nth-child(n) .interest-card-art{height:clamp(3.4rem,8svh,4.8rem);max-height:none;aspect-ratio:auto}
+  .ink-site #ink-home #pastimes[data-layout=eight] .interest-card-copy{padding:.25rem 0 .35rem}
+  .ink-site #ink-home #pastimes[data-layout=eight] .interest-card-copy strong{font-size:1rem;line-height:1.55}
+  .ink-site #ink-home #pastimes[data-layout=eight] .interest-card-copy>span{font-size:.78rem;line-height:1.6;-webkit-line-clamp:1}
+  .ink-site #ink-home #pastimes .juan-head{margin-bottom:1rem;padding-bottom:.7rem}
+}
+@media(max-width:600px){
+  html.ink-site:not([data-ink-preserve]) body{background-attachment:scroll}
+  .ink-site #ink-home .hero{padding:6rem 1.4rem 4.5rem}
+  .ink-site #ink-home .hero-inner{padding-bottom:0}
+  .ink-site #ink-home .hero-name{font-size:5rem;line-height:1.15;margin-bottom:1.2rem}
+  .ink-site #ink-home .hero-aspiration{font-size:1.3rem}
+  .ink-site #ink-home .hero-tagline{max-width:9em;line-height:1.8}
+  .ink-site #ink-home .hero-quote{font-size:.75rem;line-height:2.1;margin-bottom:1.5rem}
+  .ink-site #ink-home .hero-veil{background:radial-gradient(ellipse 80% 40% at 50% 44%,rgba(202,219,218,.48),rgba(202,219,218,.15) 70%,transparent)}
+  .ink-site #ink-home .ink-mountains-far{background-size:auto 100%;background-position:47% center;width:100%;right:0;height:100%;opacity:1}
+  .ink-site #ink-home .hero-inner>.seal{margin-bottom:1rem}
+  .ink-site #ink-home .hero-drift .drift-line,.ink-site #ink-home .hero-drift[data-paused] .drift-line{color:#274d56;opacity:.9;font-weight:500}
+  .ink-site #ink-home #pastimes[data-layout=eight] .interest-card:nth-child(n) .interest-card-art{height:clamp(2.8rem,6.4svh,3.7rem)}
+  .ink-site #ink-home .juan-head{align-items:flex-start;gap:1rem}
+  .ink-site #ink-home #works .works-grid{gap:1.3rem 1.2rem}
+  .ink-site #ink-home #writing>.wrap{border-left-width:2px}
+  html.ink-site:not([data-ink-preserve]) .wen-shell{width:calc(100% - 1.5rem);padding-inline:1rem}
+  html.ink-site:not([data-ink-preserve]) .scene-guitar-chords{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;min-width:0}
+  html.ink-site:not([data-ink-preserve]) .scene-guitar-chord{padding:.8rem .5rem}
+  html.ink-site:not([data-ink-preserve]) .scene-guitar-chord i{padding:.3rem .5rem;letter-spacing:.12em}
+}
+@media(prefers-reduced-motion:reduce){.ink-site #ink-home .ink-mountains-far{transform:none}}
