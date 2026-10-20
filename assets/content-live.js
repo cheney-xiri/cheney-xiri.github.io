@@ -42,6 +42,8 @@
    const response=await fetch('/api/content-state?path='+encodeURIComponent(p)+(new URLSearchParams(location.search).get('preview')==='1'?'&preview=1':''),{cache:'no-store'});if(!response.ok)return;state=(await response.json()).state||{};
   }
   if(window.CHENEY_LATEST_SNAPSHOT){
+   // Render the deployed copy immediately while checking for a newer publication.
+   window.CHENEY_CONTENT_STATE=state;if(state.articles)articles(state.articles);if(state.quotes)quotes(state.quotes);if(state.works)works(state.works);if(state.profile)profile(state.profile);
    const snapshot=await window.CHENEY_LATEST_SNAPSHOT;
    if(snapshot){const p=location.pathname;const groups=p==='/'||p==='/index.html'||p==='/cheney/'?['works','articles','books','profile']:p.startsWith('/writing/')?['articles','quotes']:p.startsWith('/works/')?['works']:p==='/about/index.html'?['profile']:p==='/books.html'?['books']:p==='/pastimes/detail.html'&&new URLSearchParams(location.search).get('topic')==='music'?['music']:[];
     const changes=snapshot.entries.filter(x=>groups.includes(x.collection));

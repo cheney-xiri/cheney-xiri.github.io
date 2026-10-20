@@ -51,7 +51,7 @@ function createAdmin(ctx){
   const preview=new URL(req.url,'http://localhost').searchParams.get('preview')==='1'&&allowed(req);
   const state=store.publicState(relative,preview);
   const json=JSON.stringify({state,relative,preview}).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
-  const injection='<script id="cheney-content-state" type="application/json">'+json+'</script><script src="/assets/content-live.js?v=20261020-06" defer></script><link rel="stylesheet" href="/assets/site-content.css?v=20261020-05"><script src="/assets/site-content.js?v=20261020-05" defer></script>';
+  const injection='<script id="cheney-content-state" type="application/json">'+json+'</script><script src="/assets/content-live.js?v=20261020-07" defer></script><link rel="stylesheet" href="/assets/site-content.css?v=20261020-05"><script src="/assets/site-content.js?v=20261020-05" defer></script>';
   return html.replace(/<head(?:\s[^>]*)?>/i,m=>m+injection);
  }
  return{handle,decorate,allowed,store};

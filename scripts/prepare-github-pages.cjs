@@ -42,7 +42,7 @@ try {
         const state = store.publicState(file, false);
         const hydrate = '<script id="cheney-content-state" type="application/json">' + JSON.stringify({ state }).replace(/</g, '\\u003c') + '</script>';
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/github-preview.js?v=20261020-06"></script>' + hydrate);
-        if (!content.includes('src="/assets/content-live.js')) content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/content-live.js?v=20261020-06" defer></script>');
+        if (!content.includes('src="/assets/content-live.js')) content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/content-live.js?v=20261020-07" defer></script>');
         content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261020-06"><script src="/assets/site-content.js?v=20261020-06" defer></script>');
       }
       bytes = Buffer.from(content);
