@@ -51,6 +51,8 @@ test('GitHub manager keeps credentials in memory, drafts local, and rejects stal
   const tampered = JSON.parse(exported); tampered.ciphertext = 'A'.repeat(tampered.ciphertext.length);
   vault.import(JSON.stringify(tampered)); await assert.rejects(() => vault.unlock(password), /密码不正确/);
   await assert.rejects(() => call('/api/admin/setup', { body: { connectionToken: token, password, confirm: password } }), /已经连接/);
+  await call('/api/admin/setup', { body: { connectionToken: token, password, confirm: password, reconnect: 'true' } });
+  assert.equal(await vault.unlock(password), token);
 });
 
 test('public snapshot updates existing routes, adds entries, and preserves unpublished content', () => {

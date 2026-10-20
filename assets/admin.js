@@ -107,9 +107,11 @@
     $('#login-submit').textContent=setup?'连接并设置密码':'解锁我的书斋';
     $('.login-foot').textContent='密码不会上传；管理凭据只在本机加密保存。请妥善保存加密登录备份，以便手机或新设备使用。';
     if(setup){const wrap=node('label','一次性连接凭据','github-connection'),connection=node('input');connection.type='password';connection.name='connectionToken';connection.autocomplete='off';connection.required=true;connection.maxLength=255;wrap.append(connection);form.insertBefore(wrap,input.parentNode);}
+    if(s.reconnect){const flag=node('input',undefined,'github-connection');flag.type='hidden';flag.name='reconnect';flag.value='true';form.append(flag);}
     const help=node('details',undefined,'login-help');help.append(node('summary',setup?'首次连接 / 导入另一台设备':'在其他设备上使用'));
     if(setup){const ol=node('ol');for(const text of['在 GitHub 创建 Fine-grained personal access token。','Resource owner 选择 xire175-crypto，只授权 xire175-crypto.github.io，Contents 选择 Read and write。','将新凭据直接填入上方；再设置只属于你的解锁密码。它们都不要发送到聊天里。'])ol.append(node('li',text));const a=node('a','打开 GitHub 连接设置 ↗');a.href='https://github.com/settings/personal-access-tokens/new?name=Cheney+site+editor&target_name=xire175-crypto&expires_in=90&contents=write';a.target='_blank';a.rel='noopener noreferrer';help.append(ol,a);}
     help.append(node('p','已经在另一台设备连接？可以导入在那里下载的加密登录备份，之后输入原密码。'));
+    if(!setup)help.append(button('凭据过期或忘记密码：重新连接',()=>configureGithubLogin({canSetup:true,configured:false,reconnect:true})));
     const label=node('label','导入加密登录备份'),file=node('input');file.type='file';file.accept='.json,application/json';label.append(file);help.append(label);card.append(help);
     file.onchange=async()=>{if(!file.files[0])return;try{if(file.files[0].size>8192)throw new Error('备份文件过大');if(s.configured&&!confirm('确认替换本机的加密登录记录？请先保留原备份。'))return;window.CHENEY_ADMIN_VAULT.import(await file.files[0].text());form.reset();configureGithubLogin(await api('/api/admin/session'));$('#login-status').textContent='已导入。请输入备份对应的解锁密码。';}catch(error){$('#login-status').textContent=error.message;}};
   }

@@ -86,7 +86,7 @@
     if (p === '/api/admin/session') { const configured = window.CHENEY_ADMIN_VAULT.configured(); return { authenticated: !!token, configured, canSetup: !configured, mode: 'github' }; }
     if (p === '/api/admin/login' || p === '/api/admin/setup') {
       const first = p.endsWith('/setup');
-      if (first && window.CHENEY_ADMIN_VAULT.configured()) throw new Error('这台设备已经连接，请使用解锁密码登录');
+      if (first && window.CHENEY_ADMIN_VAULT.configured() && body.reconnect !== 'true') throw new Error('这台设备已经连接，请使用解锁密码登录');
       if (first && body.password !== body.confirm) throw new Error('两次解锁密码不一致');
       token = first ? String(body.connectionToken || '').trim() : await window.CHENEY_ADMIN_VAULT.unlock(String(body.password || ''));
       try {
