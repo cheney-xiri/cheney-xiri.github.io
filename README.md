@@ -4,17 +4,17 @@
 
 ## 在线预览
 
-**https://xire175-crypto.github.io/cheney/**
+**https://cheney-xiri.github.io/**
 
 GitHub Pages 免费托管页面，GitHub API 负责内容权限与保存。留言提交、私信仍暂未开放，不会把输入伪装成已成功提交。
 
 ## 在线内容管理
 
-入口：**https://xire175-crypto.github.io/cheney/admin/**。原 `/admin/` 地址仍可使用。
+入口：**https://cheney-xiri.github.io/admin/**。
 
 可管理文存、句笺、作品、书架、歌单、个性小档、行旅和观影手记，支持封面上传、历史版本和备份。手机和电脑均可使用。
 
-首次连接，在 GitHub 创建 Fine-grained personal access token，Resource owner 选择 `xire175-crypto`，只选择 `xire175-crypto.github.io` 仓库，Repository permissions → Contents 设为 **Read and write**。直接在后台填写一次性连接凭据，并由站主本人设置至少 12 个字符的解锁密码。不要发到聊天、写进代码或提交到仓库。
+首次连接，在 GitHub 创建 Fine-grained personal access token，Resource owner 选择 `cheney-xiri`，只选择 `cheney-xiri.github.io` 仓库，Repository permissions → Contents 设为 **Read and write**。直接在后台填写一次性连接凭据，并由站主本人设置至少 12 个字符的解锁密码。不要发到聊天、写进代码或提交到仓库。
 
 以后在这台设备上只输入解锁密码。密码在本机通过 Web Crypto PBKDF2（SHA-256，600,000 次）派生密钥，再以 AES-GCM 加密连接凭据。密码、密钥和明文凭据不保存到浏览器存储、不上传到仓库；本机只保存加密记录。解锁后的凭据仅在页面内存中使用，通过 GitHub 官方 API 校验站主身份与发布权限。
 

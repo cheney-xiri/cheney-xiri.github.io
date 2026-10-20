@@ -1,7 +1,7 @@
 /* GitHub verifies publication rights; its credential is encrypted locally by admin-vault.js. */
 (() => {
   'use strict';
-  const REPO = 'xire175-crypto/xire175-crypto.github.io';
+  const REPO = 'cheney-xiri/cheney-xiri.github.io';
   const FILE = 'data/online-content.json';
   const API = 'https://api.github.com';
   const DRAFT_KEY = 'cheney-local-drafts-v1:' + REPO;

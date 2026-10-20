@@ -13,8 +13,8 @@ test('GitHub manager keeps credentials in memory, drafts local, and rejects stal
     assert.equal(new URL(url).origin, 'https://api.github.com');
     assert.equal(options.headers.Authorization, 'Bearer ' + token);
     assert.ok(!JSON.stringify(options).includes(password));
-    if (url.endsWith('/user')) return Response.json({ login: 'xire175-crypto' });
-    if (url.endsWith('/repos/xire175-crypto/xire175-crypto.github.io')) return Response.json({ permissions: { push: true } });
+    if (url.endsWith('/user')) return Response.json({ login: 'cheney-xiri' });
+    if (url.endsWith('/repos/cheney-xiri/cheney-xiri.github.io')) return Response.json({ permissions: { push: true } });
     if (options.method === 'PUT') {
       const body = JSON.parse(options.body); assert.equal(body.sha, sha);
       doc = JSON.parse(Buffer.from(body.content, 'base64').toString()); sha += 'x'; puts.push(body);

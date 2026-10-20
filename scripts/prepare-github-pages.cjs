@@ -31,12 +31,12 @@ try {
     if (/\.(html|css|js|json)$/.test(file)) {
       let content = bytes.toString('utf8').replace(/https?:\/\/(?:localhost|127\.0\.0\.1):(?:3000|3001)\b/g, '');
       if (file === 'admin/index.html') {
-        content = content.replace(/href="\/"/g, 'href="/cheney/"');
+        content = content.replace(/href="\/cheney\/"/g, 'href="/"');
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261020-02" defer></script><script src="/assets/github-admin.js?v=20261020-02" defer></script>');
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com; img-src \'self\' https: data: blob:; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
-        if (file === 'index.html') content = content.replace('href="/admin/"', 'href="/cheney/admin/"');
+        if (file === 'index.html') content = content.replace('href="/cheney/admin/"', 'href="/admin/"');
         const state = store.publicState(file, false);
         const hydrate = '<script id="cheney-content-state" type="application/json">' + JSON.stringify({ state }).replace(/</g, '\\u003c') + '</script>';
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/github-preview.js"></script>' + hydrate);

@@ -1,7 +1,7 @@
 /* Device-local encrypted connection. Passwords never leave this module. */
 (() => {
   'use strict';
-  const REPO = 'xire175-crypto/xire175-crypto.github.io';
+  const REPO = 'cheney-xiri/cheney-xiri.github.io';
   const STORAGE = 'cheney-owner-vault-v1:' + REPO;
   const encoder = new TextEncoder(), ITERATIONS = 600000;
   const aad = encoder.encode('cheney-management:' + REPO + ':1');
