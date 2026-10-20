@@ -5,6 +5,7 @@
   const FILE = 'data/online-content.json';
   const API = 'https://api.github.com';
   const DRAFT_KEY = 'cheney-local-drafts-v1:' + REPO;
+  const PAGE_DRAFT_KEY = 'cheney-page-drafts-v1:' + REPO;
   let token = '', catalog, documentState, fileSha = '', queue = Promise.resolve();
   const noteReads = new Map();
   const empty = () => ({ version: 1, entries: [], journey: {}, animeNotes: {} });
@@ -12,6 +13,12 @@
   const decode = text => new TextDecoder().decode(Uint8Array.from(atob(text.replace(/\s/g, '')), x => x.charCodeAt(0)));
   function drafts() { try { return JSON.parse(localStorage.getItem(DRAFT_KEY) || '{}'); } catch { return {}; } }
   function keepDraft(id, value) { const all = drafts(); if (value) all[id] = value; else delete all[id]; localStorage.setItem(DRAFT_KEY, JSON.stringify(all)); }
+  function pageDrafts() { try { return JSON.parse(localStorage.getItem(PAGE_DRAFT_KEY) || '{}'); } catch { return {}; } }
+  function keepPageDraft(key,value) { const all=pageDrafts();if(value)all[key]=value;else delete all[key];localStorage.setItem(PAGE_DRAFT_KEY,JSON.stringify(all)); }
+  async function readSource(path) {
+    const data=await github('/repos/'+REPO+'/contents/'+path+'?ref=main');
+    return {sha:data.sha,data:data.content?JSON.parse(decode(data.content)):await github('/repos/'+REPO+'/contents/'+path+'?ref=main',{headers:{Accept:'application/vnd.github.raw+json'}})};
+  }
   async function github(path, options = {}) {
     if (!token) throw new Error('请先输入此仓库的 GitHub 管理凭据');
     const response = await fetch(API + path, { ...options, headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token, ...options.headers }, cache: 'no-store', referrerPolicy: 'no-referrer' });
@@ -104,7 +111,39 @@
     if (p === '/api/admin/logout') { token = ''; catalog = null; documentState = null; fileSha = ''; noteReads.clear(); return { ok: true }; }
     if (!token) throw new Error('请先登录后台');
     if (p === '/api/admin/password') { await window.CHENEY_ADMIN_VAULT.change(body.currentPassword, body.password); return { ok: true, csrfToken: '' }; }
-    if (p === '/api/admin/meta') return { collections: catalog.collections, profileFields: catalog.profileFields, storage: 'github', extraViews: ['journey', 'anime'] };
+    if (p === '/api/admin/meta') return { collections: catalog.collections, profileFields: catalog.profileFields, storage: 'github', extraViews: ['pages','media','sources','journey','anime'] };
+    if (p === '/api/admin/site-catalog') return catalog.site || {groups:{},pages:[],media:[],sources:[],chapters:[]};
+    if (p === '/api/admin/page') {
+      const key=u.searchParams.get('path')||body.path;
+      if(typeof key!=='string'||key.includes('..')||!catalog.site?.pages.some(x=>x.path===key.split('?')[0]))throw new Error('请在目录中选择可编辑页面');
+      if(options.method==='POST'){
+        if(!Array.isArray(body.patches)||body.patches.length>500)throw new Error('单页最多保留 500 个编辑项');
+        const record={revision:body.revision,patches:structuredClone(body.patches)};
+        if(!body.publish){keepPageDraft(key,record);return {ok:true,record};}
+        await writeDocument(next=>{next.pages||={};if((next.pages[key]?.revision||0)!==body.revision)throw new Error('页面已在其他设备更新，请重新打开后发布');next.pages[key]={...record,revision:body.revision+1};},'Publish page content: '+key);
+        keepPageDraft(key,null);return {ok:true,record:documentState.pages[key]};
+      }
+      await readDocument();const published=documentState.pages?.[key]||{revision:0,patches:[]},draft=pageDrafts()[key];
+      return {record:draft&&draft.revision===published.revision?draft:published,published,localDraft:!!draft,staleDraft:!!draft&&draft.revision!==published.revision};
+    }
+    if (p === '/api/admin/source') {
+      const path=u.searchParams.get('path')||body.path;
+      if(!catalog.site?.sources.some(x=>x.path===path))throw new Error('资料文件不在可编辑范围内');
+      if(options.method==='POST'){
+        const previous=await readSource(path);if(previous.sha!==body.sha)throw new Error('资料已在其他设备更新，请重新读取');
+        if(!body.data||typeof body.data!=='object'||Array.isArray(previous.data)!==Array.isArray(body.data))throw new Error('请保留资料原有结构');
+        const json=JSON.stringify(body.data,null,2);if(json.length>12*1024*1024)throw new Error('资料过大，请减少本次修改量');
+        const result=await github('/repos/'+REPO+'/contents/'+path,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'Update site data: '+path,branch:'main',sha:body.sha,content:encode(json+'\n')})});
+        return {ok:true,sha:result.content.sha};
+      }
+      return readSource(path);
+    }
+    if (p === '/api/admin/media' && options.method!=='POST') {
+      const tree=await github('/repos/'+REPO+'/git/trees/main?recursive=1');
+      const media=new Map((catalog.site?.media||[]).map(x=>[x.path,x]));
+      for(const item of tree.tree||[])if(item.type==='blob'&&item.path.startsWith('assets/cms-uploads/')&&/\.(webp|png|jpe?g|gif|mp4|webm|mp3|ogg|wav)$/i.test(item.path))media.set(item.path,{path:item.path,name:item.path.split('/').pop(),type:/\.(mp4|webm)$/i.test(item.path)?'video':/\.(mp3|ogg|wav)$/i.test(item.path)?'audio':'image',bytes:item.size,url:'https://raw.githubusercontent.com/'+REPO+'/main/'+item.path});
+      return {items:[...media.values()]};
+    }
     if (p === '/api/admin/entries') { await readDocument(); return { items: merged(u.searchParams.get('collection')) }; }
     if (p === '/api/admin/save') return save(body);
     if (p === '/api/admin/unpublish') {
@@ -133,13 +172,14 @@
       if (!old?.data) throw new Error('这个历史版本没有此条内容');
       return save({ id: body.id, collection: old.collection, revision: body.revision, draft: old.data, publish: false });
     }
-    if (p === '/api/admin/upload' || p === '/api/journey/photo') {
+    if (p === '/api/admin/upload' || p === '/api/journey/photo' || p==='/api/admin/media') {
       const blob = options.body;
-      if (!(blob instanceof Blob) || !['image/webp','image/png','image/jpeg'].includes(blob.type) || blob.size > 700 * 1024) throw new Error('请上传压缩后的 JPG、PNG 或 WebP 图片');
-      const ext = { 'image/webp': 'webp', 'image/png': 'png', 'image/jpeg': 'jpg' }[blob.type];
+      const formats={'image/webp':'webp','image/png':'png','image/jpeg':'jpg','image/gif':'gif','video/mp4':'mp4','video/webm':'webm','audio/mpeg':'mp3','audio/ogg':'ogg','audio/wav':'wav'};
+      if (!(blob instanceof Blob) || !formats[blob.type] || blob.size > (p==='/api/admin/media'?20*1024*1024:700*1024)) throw new Error('图片、MP4/WebM 视频或音频文件需在 20 MB 以内');
+      const ext = formats[blob.type];
       const id = crypto.randomUUID() + '.' + ext, file = 'assets/cms-uploads/' + id;
-      let binary = ''; for (const byte of new Uint8Array(await blob.arrayBuffer())) binary += String.fromCharCode(byte);
-      await github('/repos/' + REPO + '/contents/' + file, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: 'Upload content image', branch: 'main', content: btoa(binary) }) });
+      let binary = '';const bytes=new Uint8Array(await blob.arrayBuffer());for(let i=0;i<bytes.length;i+=32768)binary+=String.fromCharCode(...bytes.subarray(i,i+32768));
+      await github('/repos/' + REPO + '/contents/' + file, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: 'Upload site media', branch: 'main', content: btoa(binary) }) });
       return { ok: true, id, url: 'https://raw.githubusercontent.com/' + REPO + '/main/' + file, photo: { id, url: 'https://raw.githubusercontent.com/' + REPO + '/main/' + file } };
     }
     if (p === '/api/journey' || p === '/api/anime-note') {
@@ -153,7 +193,7 @@
       }
       await readDocument(); noteReads.set(readKey, JSON.stringify(documentState[group]?.[key] || null)); return { content: documentState[group]?.[key] || catalog[group]?.[key] || null };
     }
-    if (p === '/api/admin/backup') return { format: 'cheney-public-content-v1', exportedAt: new Date().toISOString(), ...documentState, localDrafts: drafts() };
+    if (p === '/api/admin/backup') return { format: 'cheney-public-content-v1', exportedAt: new Date().toISOString(), ...documentState, localDrafts: drafts(), pageDrafts:pageDrafts() };
     throw new Error('此管理功能不适用于 GitHub 内容服务');
   }
   window.CHENEY_GITHUB_CMS = { request, repo: REPO };

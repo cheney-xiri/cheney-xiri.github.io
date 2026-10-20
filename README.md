@@ -12,15 +12,21 @@ GitHub Pages 免费托管页面，GitHub API 负责内容权限与保存。留�
 
 入口：**https://cheney-xiri.github.io/admin/**。
 
-可管理文存、句笺、作品、书架、歌单、个性小档、行旅和观影手记，支持封面上传、历史版本和备份。手机和电脑均可使用。
+后台包含三类入口，手机和电脑均可使用：
 
-首次连接，在 GitHub 创建 Fine-grained personal access token，Resource owner 选择 `cheney-xiri`，只选择 `cheney-xiri.github.io` 仓库，Repository permissions → Contents 设为 **Read and write**。直接在后台填写一次性连接凭据，并由站主本人设置至少 12 个字符的解锁密码。不要发到聊天、写进代码或提交到仓库。
+- **全站页面**：载入真实前台，按章节与页面查找，点选文字、图片、音视频和链接；可替换背景，或在选定位置补充段落、图片、视频、音频及链接。支持电脑／手机预览、草稿、撤销和逐项恢复。
+- **图片与音视频**：检索已有素材，预览并复用，上传 JPG / PNG / WebP / GIF、MP4 / WebM、MP3 / OGG / WAV，单文件上限 20 MB；较大文件可使用公开媒体直链。不会自动播放媒体。
+- **专题资料与内容栏目**：专题资料管理足迹、志趣、完整歌单和围棋数据；原有文存、句笺、作品、书架、歌单、个性小档、行旅与观影手记继续支持独立编辑。
+
+页面编辑保留原有排版与脚本，动态页面可切到“浏览页面”展开内容，再切回点选编辑。页面改动只作用于对应地址；带查询参数的定式和专题页面单独保存。原文或图片发生变化时，无法匹配的旧改动会跳过，不会强行替换其他内容。
+
+首次连接，在 GitHub 创建 Fine-grained personal access token，Resource owner 选择 `cheney-xiri`，只选择 `cheney-xiri.github.io` 仓库，Repository permissions → Contents 设为 **Read and write**。Expiration 可选择 No expiration（无到期日期）。直接在后台填写网站管理连接凭据，并由站主本人设置至少 12 个字符的解锁密码。不要发到聊天、写进代码或提交到仓库。
 
 以后在这台设备上只输入解锁密码。密码在本机通过 Web Crypto PBKDF2（SHA-256，600,000 次）派生密钥，再以 AES-GCM 加密连接凭据。密码、密钥和明文凭据不保存到浏览器存储、不上传到仓库；本机只保存加密记录。解锁后的凭据仅在页面内存中使用，通过 GitHub 官方 API 校验站主身份与发布权限。
 
 在“密码与设备”下载加密登录备份，再在手机或新设备导入并输入原密码即可使用。清除浏览器数据会删除本机连接；修改密码只改变本机记录，不会自动更改其他设备或旧备份。遗失密码时需要用 GitHub 重新连接，网站不提供密码找回。
 
-草稿仅存当前设备；点击“发布到网站”才把内容写入 `data/online-content.json`，随后 GitHub Actions 自动构建网站。发布记录公开，不能上传私信、密码或未公开小说正文。GitHub Pages 不运行本地 Node.js/SQLite 服务。
+GitHub 模式的文字与页面草稿仅存当前设备；点击发布才把内容写入 `data/online-content.json`，专题资料则更新对应白名单 JSON 文件，素材上传至 `assets/cms-uploads/`。随后 GitHub Actions 自动构建网站。多设备发布检查版本，遇到冲突需重新读取，不覆盖别人的新版本。发布记录公开，不能上传私信、密码或未公开小说正文。GitHub Pages 不运行本地 Node.js/SQLite 服务。
 
 ## 项目目录
 

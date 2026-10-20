@@ -11,6 +11,7 @@
     const json = (data, status = 200) => Promise.resolve(new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } }));
     if (method !== 'GET') return json({ error: '预览站暂未开放提交功能，你的输入没有发送或保存。' }, 503);
     if (address.pathname === '/api/content-state') return json({ state: {} });
+    if (address.pathname === '/api/site-edits') return originalFetch('/assets/site-edits.json', { cache: 'no-store' });
     if (address.pathname === '/api/messages') return json({ messages: [], preview: true });
     if (address.pathname === '/api/journey' || address.pathname === '/api/anime-note') {
       notes ||= originalFetch('/assets/online-notes.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));

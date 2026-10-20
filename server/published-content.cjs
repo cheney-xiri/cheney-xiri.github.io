@@ -2,12 +2,13 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { sanitize } = require('./content-store.cjs');
+const { sanitizePages } = require('./site-editor.cjs');
 
 // Only public, deliberately published content belongs in this repository file.
 // Passwords, drafts, sessions and visitor messages never enter this snapshot.
 function applyPublishedContent(store, root) {
   const file = path.join(root, 'data', 'online-content.json');
-  if (!fs.existsSync(file)) return { journey: {}, animeNotes: {} };
+  if (!fs.existsSync(file)) return { journey: {}, animeNotes: {}, pages: {} };
   const snapshot = JSON.parse(fs.readFileSync(file, 'utf8'));
   if (snapshot.version !== 1 || !Array.isArray(snapshot.entries)) throw new Error('在线内容文件格式不正确');
   const update = store.db.prepare('INSERT INTO entries(id,collection,base_path,draft,published,revision,touched,created_at,updated_at) VALUES(?,?,?,?,?,?,1,?,?) ON CONFLICT(id) DO UPDATE SET draft=excluded.draft,published=excluded.published,revision=excluded.revision,touched=1,updated_at=excluded.updated_at');
@@ -27,6 +28,6 @@ function applyPublishedContent(store, root) {
     }
     store.db.exec('COMMIT');
   } catch (error) { store.db.exec('ROLLBACK'); throw error; }
-  return { journey: snapshot.journey || {}, animeNotes: snapshot.animeNotes || {} };
+  return { journey: snapshot.journey || {}, animeNotes: snapshot.animeNotes || {}, pages: sanitizePages(snapshot.pages || {}) };
 }
 module.exports = { applyPublishedContent };

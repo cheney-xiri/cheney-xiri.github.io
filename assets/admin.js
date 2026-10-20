@@ -2,7 +2,7 @@
   'use strict';
   const $ = (q, root=document) => root.querySelector(q);
   const node = (tag, text, cls) => { const el=document.createElement(tag); if(text!==undefined)el.textContent=text; if(cls)el.className=cls; return el; };
-  let csrf='', meta=null, view='articles', entries=[], current=null, dirty=false, setup=false;
+  let csrf='', meta=null, view='pages', entries=[], current=null, dirty=false, setup=false;
   const status=(message, bad=false)=>{ const el=$('#app-status'); el.textContent=message;el.dataset.error=String(bad); };
   async function api(url, options={}) {
     if(window.CHENEY_GITHUB_CMS)return window.CHENEY_GITHUB_CMS.request(url,options);
@@ -19,18 +19,20 @@
   async function enter(){
     meta=await api('/api/admin/meta');$('#login-screen').hidden=true;$('#admin-app').hidden=false;$('#logout').hidden=false;
     const nav=$('#admin-nav');nav.replaceChildren();
-    const extras={journey:'行旅',anime:'观影手记',messages:'留言与来信'};
-    for(const[key,label]of Object.entries({...meta.collections,...Object.fromEntries(Object.entries(extras).filter(([key])=>!meta.extraViews||meta.extraViews.includes(key)))})){ const b=node('button',label);b.type='button';b.dataset.view=key;nav.append(b); }
+    const extras={pages:'全站页面',media:'图片与音视频',sources:'专题资料',journey:'行旅',anime:'观影手记',messages:'留言与来信'};
+    const allowedExtras=Object.fromEntries(Object.entries(extras).filter(([key])=>!meta.extraViews||meta.extraViews.includes(key)));
+    for(const [heading,items]of [['页面与素材',Object.fromEntries(['pages','media','sources'].filter(k=>allowedExtras[k]).map(k=>[k,allowedExtras[k]]))],['文字与作品',meta.collections],['经历与手记',Object.fromEntries(['journey','anime','messages'].filter(k=>allowedExtras[k]).map(k=>[k,allowedExtras[k]]))]]){if(!Object.keys(items).length)continue;nav.append(node('small',heading,'admin-nav-group'));for(const[key,label]of Object.entries(items)){const b=node('button',label);b.type='button';b.dataset.view=key;nav.append(b);}}
     if(meta.storage==='edge-kv'){$('#cloud-note').hidden=false;$('#cloud-note').textContent='发布后通常一分钟内同步。请避免在两个设备上同时修改同一篇内容。';}
     if(meta.storage==='github'){$('#cloud-note').hidden=false;$('#cloud-note').replaceChildren(document.createTextNode('草稿只保存在当前设备，发布后的内容通过 GitHub 保存并自动更新网站。发布记录公开，请只发布想公开的文字和图片。'),document.createTextNode(' '));const a=node('a','查看发布进度 ↗');a.href='https://github.com/'+window.CHENEY_GITHUB_CMS.repo+'/actions';a.target='_blank';a.rel='noopener noreferrer';$('#cloud-note').append(a);$('button[data-view="security"]').textContent='密码与设备';}
+    if(view==='pages'&&!meta.extraViews?.includes('pages')&&!window.CHENEY_SITE_ADMIN)view='articles';
     await navigate(view);
   }
   async function navigate(next){
     if(!canLeave())return;view=next;current=null;dirty=false;status('');
     document.querySelectorAll('[data-view]').forEach(b=>{b.classList.toggle('is-active',b.dataset.view===view);if(b.dataset.view===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
-    $('#view-title').textContent=({...meta.collections,journey:'行旅',anime:'观影手记',messages:'留言与来信',security:'登录设置'})[view];$('#view-note').textContent=notes[view]||'';
+    $('#view-title').textContent=({...meta.collections,pages:'全站页面',media:'图片与音视频',sources:'专题资料',journey:'行旅',anime:'观影手记',messages:'留言与来信',security:'登录设置'})[view];$('#view-note').textContent=({pages:'直接浏览前台，点选文字、图片与背景；在对应位置增添内容。',media:'复用网站已有素材，也可上传新的图片、视频与音频。',sources:'管理足迹、志趣、歌单与围棋资料。'})[view]||notes[view]||'';
     $('#new-entry').hidden=!meta.collections[view]||view==='profile';$('#workspace').replaceChildren();
-    try {if(meta.collections[view])await loadCollection();else if(view==='journey')await journey();else if(view==='anime')await anime();else if(view==='messages')await messages();else security();}catch(e){status(e.message,true);}
+    try {if(['pages','media','sources'].includes(view))await window.CHENEY_SITE_ADMIN.mount(view,{api,status,canLeave,setDirty:value=>dirty=value});else if(meta.collections[view])await loadCollection();else if(view==='journey')await journey();else if(view==='anime')await anime();else if(view==='messages')await messages();else security();}catch(e){status(e.message,true);}
   }
   document.addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b)navigate(b.dataset.view);});
   function field(form,label,key,value='',type='text',wide=false){
@@ -61,7 +63,7 @@
     if(view==='profile')for(const[key,label]of Object.entries(meta.profileFields))field(grid,label,'profile:'+key,d.fields?.[key]);
     if(view!=='quotes'){
       const cover=field(grid,view==='profile'?'头像链接':'封面链接','cover',d.cover,'text',true),tools=node('div',undefined,'image-tools');const image=node('img');image.alt='封面预览';const refresh=()=>{image.hidden=!cover.value;image.src=safeImage(cover.value)||'';};refresh();cover.addEventListener('change',refresh);
-      const file=node('input');file.type='file';file.accept='image/png,image/jpeg,image/webp';file.setAttribute('aria-label','上传封面');file.addEventListener('change',async()=>{if(!file.files[0])return;file.disabled=true;try{cover.value=(await upload(file.files[0])).url;dirty=true;refresh();status('图片已上传，保存内容后应用。');}catch(e){status(e.message,true);}finally{file.disabled=false;}});tools.append(image,file);grid.append(tools);
+      const file=node('input');file.type='file';file.accept='image/png,image/jpeg,image/webp';file.setAttribute('aria-label','上传封面');file.addEventListener('change',async()=>{if(!file.files[0])return;file.disabled=true;try{cover.value=(await upload(file.files[0])).url;dirty=true;refresh();status('图片已上传，保存内容后应用。');}catch(e){status(e.message,true);}finally{file.disabled=false;}});tools.append(image,file);if(window.CHENEY_SITE_ADMIN)tools.append(button('从素材库选择',()=>window.CHENEY_SITE_ADMIN.pickMedia({api,status},url=>{cover.value=url;dirty=true;refresh();})));grid.append(tools);
     }
     const actions=node('div',undefined,'editor-actions');form.append(actions);const save=button('保存草稿',()=>busy(save,()=>persist(false))),publish=button('发布到网站',()=>busy(publish,()=>persist(true)),'primary');actions.append(save,publish);
     if(item.id){actions.append(button('预览',()=>{if(dirty){status('请先保存草稿，再预览。');return;}if(meta.storage==='github'){previewDraft(item);return;}window.open(previewUrl(item)+'preview=1','_blank','noopener');}),button('历史版本',()=>history(item)));if(item.published)actions.append(button('撤下',async()=>{if(!confirm('确认从公开页面撤下这份内容？后台仍会保留。'))return;try{const r=await api('/api/admin/unpublish',{method:'POST',body:{id:item.id,revision:item.revision}});dirty=false;await loadCollection(r.item.id);status(meta.storage==='github'?'撤下操作已提交，网站更新完成后生效。':'已撤下。');}catch(e){status(e.message,true);}},'danger'));}
@@ -106,12 +108,12 @@
     $('#login-note').textContent=setup?'这台设备尚未连接。首次连接后，日常只需输入你设置的密码。':'输入你自己设置的密码，解锁这台设备上的管理权限。';
     $('#login-submit').textContent=setup?'连接并设置密码':'解锁我的书斋';
     $('.login-foot').textContent='密码不会上传；管理凭据只在本机加密保存。请妥善保存加密登录备份，以便手机或新设备使用。';
-    if(setup){const wrap=node('label','一次性连接凭据','github-connection'),connection=node('input');connection.type='password';connection.name='connectionToken';connection.autocomplete='off';connection.required=true;connection.maxLength=255;wrap.append(connection);form.insertBefore(wrap,input.parentNode);}
+    if(setup){const wrap=node('label','网站管理连接凭据','github-connection'),connection=node('input');connection.type='password';connection.name='connectionToken';connection.autocomplete='off';connection.required=true;connection.maxLength=255;wrap.append(connection);form.insertBefore(wrap,input.parentNode);}
     if(s.reconnect){const flag=node('input',undefined,'github-connection');flag.type='hidden';flag.name='reconnect';flag.value='true';form.append(flag);}
     const help=node('details',undefined,'login-help');help.append(node('summary',setup?'首次连接 / 导入另一台设备':'在其他设备上使用'));
-    if(setup){const ol=node('ol');for(const text of['在 GitHub 创建 Fine-grained personal access token。','Resource owner 选择 cheney-xiri，只授权 cheney-xiri.github.io，Contents 选择 Read and write。','将新凭据直接填入上方；再设置只属于你的解锁密码。它们都不要发送到聊天里。'])ol.append(node('li',text));const a=node('a','打开 GitHub 连接设置 ↗');a.href='https://github.com/settings/personal-access-tokens/new?name=Cheney+site+editor&target_name=cheney-xiri&expires_in=90&contents=write';a.target='_blank';a.rel='noopener noreferrer';help.append(ol,a);}
+    if(setup){const ol=node('ol');for(const text of['在 GitHub 创建 Fine-grained personal access token。','Resource owner 选择 cheney-xiri，只授权 cheney-xiri.github.io，Contents 选择 Read and write。','将新凭据直接填入上方；再设置只属于你的解锁密码。它们都不要发送到聊天里。'])ol.append(node('li',text));const a=node('a','打开 GitHub 连接设置 ↗');a.href='https://github.com/settings/personal-access-tokens/new?name=Cheney+site+editor&target_name=cheney-xiri&expires_in=none&contents=write';a.target='_blank';a.rel='noopener noreferrer';help.append(ol,a);}
     help.append(node('p','已经在另一台设备连接？可以导入在那里下载的加密登录备份，之后输入原密码。'));
-    if(!setup)help.append(button('凭据过期或忘记密码：重新连接',()=>configureGithubLogin({canSetup:true,configured:false,reconnect:true})));
+    if(!setup)help.append(button('更换凭据或忘记密码：重新连接',()=>configureGithubLogin({canSetup:true,configured:false,reconnect:true})));
     const label=node('label','导入加密登录备份'),file=node('input');file.type='file';file.accept='.json,application/json';label.append(file);help.append(label);card.append(help);
     file.onchange=async()=>{if(!file.files[0])return;try{if(file.files[0].size>8192)throw new Error('备份文件过大');if(s.configured&&!confirm('确认替换本机的加密登录记录？请先保留原备份。'))return;window.CHENEY_ADMIN_VAULT.import(await file.files[0].text());form.reset();configureGithubLogin(await api('/api/admin/session'));$('#login-status').textContent='已导入。请输入备份对应的解锁密码。';}catch(error){$('#login-status').textContent=error.message;}};
   }
