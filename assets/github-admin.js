@@ -1,4 +1,4 @@
-/* GitHub is the authenticated content service. No management token is persisted. */
+/* GitHub verifies publication rights; its credential is encrypted locally by admin-vault.js. */
 (() => {
   'use strict';
   const REPO = 'xire175-crypto/xire175-crypto.github.io';
@@ -83,20 +83,27 @@
   }
   async function request(path, options = {}) {
     const u = new URL(path, location.origin), p = u.pathname, body = options.body || {};
-    if (p === '/api/admin/session') return { authenticated: !!token, configured: true, canSetup: false, mode: 'github' };
-    if (p === '/api/admin/login') {
-      token = String(body.password || '').trim();
+    if (p === '/api/admin/session') { const configured = window.CHENEY_ADMIN_VAULT.configured(); return { authenticated: !!token, configured, canSetup: !configured, mode: 'github' }; }
+    if (p === '/api/admin/login' || p === '/api/admin/setup') {
+      const first = p.endsWith('/setup');
+      if (first && window.CHENEY_ADMIN_VAULT.configured()) throw new Error('这台设备已经连接，请使用解锁密码登录');
+      if (first && body.password !== body.confirm) throw new Error('两次解锁密码不一致');
+      token = first ? String(body.connectionToken || '').trim() : await window.CHENEY_ADMIN_VAULT.unlock(String(body.password || ''));
       try {
+        const user = await github('/user');
+        if (String(user.login || '').toLowerCase() !== REPO.split('/')[0]) throw new Error('仅站主的 GitHub 账号可以连接和发布');
         const repo = await github('/repos/' + REPO);
         if (!repo.permissions?.push) throw new Error('此凭据没有该仓库的编辑权限');
         const response = await fetch('/admin/catalog.json', { cache: 'no-store' });
         if (!response.ok) throw new Error('管理目录加载失败，请刷新重试');
         catalog = await response.json(); await readDocument();
+        if (first) await window.CHENEY_ADMIN_VAULT.create(token, body.password);
       } catch (error) { token = ''; throw error; }
       return { ok: true, csrfToken: '' };
     }
     if (p === '/api/admin/logout') { token = ''; catalog = null; documentState = null; fileSha = ''; noteReads.clear(); return { ok: true }; }
     if (!token) throw new Error('请先登录后台');
+    if (p === '/api/admin/password') { await window.CHENEY_ADMIN_VAULT.change(body.currentPassword, body.password); return { ok: true, csrfToken: '' }; }
     if (p === '/api/admin/meta') return { collections: catalog.collections, profileFields: catalog.profileFields, storage: 'github', extraViews: ['journey', 'anime'] };
     if (p === '/api/admin/entries') { await readDocument(); return { items: merged(u.searchParams.get('collection')) }; }
     if (p === '/api/admin/save') return save(body);

@@ -5,13 +5,15 @@ const { createStore } = require('../server/content-store.cjs');
 const { applyPublishedContent } = require('../server/published-content.cjs');
 
 test('GitHub manager keeps credentials in memory, drafts local, and rejects stale publication', async () => {
-  const storage = new Map(), puts = [], token = 'only-a-test-value-not-a-real-credential';
+  const storage = new Map(), puts = [], token = 'only-a-test-value-not-a-real-credential', password = 'only-a-test-unlock-password';
   let doc = { version: 1, entries: [], journey: {}, animeNotes: {} }, sha = 'one';
   const base = { id: 'articles:example', collection: 'articles', basePath: 'writing/example.html', revision: 1, draft: { title: '原题', body: '原文', order: 0 }, published: { title: '原题', body: '原文', order: 0 } };
   const context = { window: {}, location: { origin: 'https://example.test' }, URL, TextEncoder, TextDecoder, Blob, structuredClone, crypto: require('node:crypto').webcrypto, btoa, atob, localStorage: { getItem: k => storage.get(k) || null, setItem: (k,v) => storage.set(k,v) }, fetch: async (url, options = {}) => {
     if (url === '/admin/catalog.json') return Response.json({ collections: { articles: '文存' }, profileFields: {}, entries: [base] });
     assert.equal(new URL(url).origin, 'https://api.github.com');
     assert.equal(options.headers.Authorization, 'Bearer ' + token);
+    assert.ok(!JSON.stringify(options).includes(password));
+    if (url.endsWith('/user')) return Response.json({ login: 'xire175-crypto' });
     if (url.endsWith('/repos/xire175-crypto/xire175-crypto.github.io')) return Response.json({ permissions: { push: true } });
     if (options.method === 'PUT') {
       const body = JSON.parse(options.body); assert.equal(body.sha, sha);
@@ -20,10 +22,13 @@ test('GitHub manager keeps credentials in memory, drafts local, and rejects stal
     }
     return Response.json({ sha, content: Buffer.from(JSON.stringify(doc)).toString('base64') });
   } };
-  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../assets/github-admin.js'), 'utf8'), context);
+  vm.createContext(context);
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/admin-vault.js'), 'utf8'), context);
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/github-admin.js'), 'utf8'), context);
   const call = context.window.CHENEY_GITHUB_CMS.request;
   await assert.rejects(() => call('/api/admin/entries?collection=articles'), /请先登录/);
-  await call('/api/admin/login', { body: { password: token } });
+  await call('/api/admin/setup', { body: { connectionToken: token, password, confirm: password } });
+  assert.ok(!JSON.stringify([...storage]).includes(password));
   let r = await call('/api/admin/save', { method: 'POST', body: { id: base.id, collection: 'articles', revision: 1, draft: { title: '新题', body: '未公开正文', order: 0 }, publish: false } });
   assert.equal(puts.length, 0); assert.equal(r.item.published.title, '原题');
   assert.ok(!JSON.stringify([...storage]).includes(token));
@@ -35,6 +40,17 @@ test('GitHub manager keeps credentials in memory, drafts local, and rejects stal
   assert.equal(puts.length, 1);
   await call('/api/admin/logout');
   await assert.rejects(() => call('/api/admin/entries?collection=articles'), /请先登录/);
+  await assert.rejects(() => call('/api/admin/login', { body: { password: 'wrong-password' } }), /密码不正确/);
+  await call('/api/admin/login', { body: { password } });
+  const vault = context.window.CHENEY_ADMIN_VAULT, exported = JSON.stringify(vault.export());
+  assert.ok(!exported.includes(password)); assert.ok(!exported.includes(token));
+  await vault.change(password, 'new-test-only-password');
+  await assert.rejects(() => vault.unlock(password), /密码不正确/);
+  assert.equal(await vault.unlock('new-test-only-password'), token);
+  vault.import(exported); assert.equal(await vault.unlock(password), token);
+  const tampered = JSON.parse(exported); tampered.ciphertext = 'A'.repeat(tampered.ciphertext.length);
+  vault.import(JSON.stringify(tampered)); await assert.rejects(() => vault.unlock(password), /密码不正确/);
+  await assert.rejects(() => call('/api/admin/setup', { body: { connectionToken: token, password, confirm: password } }), /已经连接/);
 });
 
 test('public snapshot updates existing routes, adds entries, and preserves unpublished content', () => {
