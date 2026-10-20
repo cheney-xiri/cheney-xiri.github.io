@@ -1,6 +1,48 @@
 {
   "version": 1,
-  "entries": [],
+  "entries": [
+    {
+      "id": "profile:main",
+      "collection": "profile",
+      "data": {
+        "title": "Cheney",
+        "category": "",
+        "summary": "",
+        "body": "",
+        "cover": "/assets/portrait.jpg",
+        "url": "",
+        "author": "",
+        "status": "",
+        "order": 0,
+        "fields": {
+          "hometown": "河南南阳",
+          "birthday": "2006.08",
+          "zodiac": "处女座",
+          "mbti": "INTJ",
+          "personalityKeywords": "",
+          "gettingAlong": "细水长流",
+          "dailyRhythm": "慢节奏，周期型规律",
+          "favoriteSeason": "春",
+          "favoriteColor": "薰衣草紫",
+          "relaxation": "睡觉",
+          "smallJoys": "睡到自然醒",
+          "socialStyle": "半隐身",
+          "expressionStyle": "表达方式",
+          "workStyle": "边做边想",
+          "aloneTime": "整理房间、看小说",
+          "motto": "过去属于死神，未来属于你自己",
+          "favoriteWeather": "雨天",
+          "favoriteTime": "黄昏",
+          "favoriteFlavor": "奶香",
+          "favoriteScent": "茶香",
+          "favoritePlace": "星空下的公园",
+          "currentGoal": "继续完成我的小说",
+          "wantToLearn": "围棋"
+        }
+      },
+      "revision": 2
+    }
+  ],
   "journey": {},
   "animeNotes": {}
 }
