@@ -185,7 +185,7 @@
     photoInput.disabled = true;
     try {
       for (var file of files) {
-        if (photos.length >= 9) throw new Error('每段行旅最多保留 9 张照片');
+        if (photos.length >= 60) throw new Error('每段行旅最多保留 60 项影像');
         status(uploadStatus, '正在上传 ' + file.name + ' ……');
         var blob = await imageBlob(file);
         var result = await request('/api/journey/photo?stage=' + stage, { method:'POST', headers:{ Authorization:'Bearer ' + secret, 'Content-Type':'image/jpeg' }, body:blob });

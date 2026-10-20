@@ -218,17 +218,18 @@ function validJourneyText(value, max) {
 
 function sanitizeJourney(body) {
   if (!body || typeof body !== 'object' || Array.isArray(body)) throw Object.assign(new Error('内容格式不正确'), { status:400 });
-  if (!Array.isArray(body.moments) || body.moments.length > 12 || !Array.isArray(body.photos) || body.photos.length > 9) throw Object.assign(new Error('条目数量超出限制'), { status:400 });
+  if (!Array.isArray(body.moments) || body.moments.length > 12 || !Array.isArray(body.photos) || !Array.isArray(body.videos ?? []) || body.photos.length + (body.videos||[]).length > 60) throw Object.assign(new Error('每个阶段最多保留 60 项照片与视频'), { status:400 });
   const entry = {
     schoolIntro:validJourneyText(body.schoolIntro, 1200),
     story:validJourneyText(body.story, 2500),
     moments:body.moments.map(item => ({ date:validJourneyText(item?.date, 28), title:validJourneyText(item?.title, 80), text:validJourneyText(item?.text, 800) })).filter(item => item.date || item.title || item.text),
-    photos:body.photos.map(item => ({ id:String(item?.id || ''), caption:validJourneyText(item?.caption, 100), date:validJourneyText(item?.date, 28) })),
+    photos:body.photos.map(item => ({ id:String(item?.id || ''), caption:validJourneyText(item?.caption, 100), date:validJourneyText(item?.date, 28),...(Number.isInteger(item?.order)?{order:item.order}:{}),...(item?.url?{url:String(item.url)}:{}) })),
     growth:validJourneyText(body.growth, 2000),
     reflection:validJourneyText(body.reflection, 2000)
   };
-  if (entry.photos.some(photo => !MEDIA_ID.test(photo.id) || !fs.existsSync(path.join(JOURNEY_MEDIA_DIR, photo.id)))) throw Object.assign(new Error('照片文件无效，请重新上传'), { status:400 });
-  const words = [entry.schoolIntro,entry.story,entry.growth,entry.reflection,...entry.moments.flatMap(item => Object.values(item)),...entry.photos.flatMap(item => [item.caption,item.date])];
+  for(const photo of entry.photos){if(!MEDIA_ID.test(photo.id))throw Object.assign(new Error('照片文件无效，请重新上传'),{status:400});const own='/api/journey/media/'+photo.id,shared='/api/uploads/'+photo.id;if(photo.url&&photo.url!==own&&photo.url!==shared)throw Object.assign(new Error('照片地址不正确'),{status:400});if(!fs.existsSync(path.join(photo.url===shared?path.join(DATA_DIR,'uploads'):JOURNEY_MEDIA_DIR,photo.id)))throw Object.assign(new Error('照片文件无效，请重新上传'),{status:400});}
+  if(body.videos!==undefined){entry.videos=body.videos.map(item=>{const id=String(item?.id||'');if(!/^[0-9a-f-]{36}\.(mp4|webm)$/.test(id)||!fs.existsSync(path.join(DATA_DIR,'uploads',id))||item.url&&item.url!=='/api/uploads/'+id)throw Object.assign(new Error('视频文件无效，请重新上传'),{status:400});let poster='';if(item.poster)try{poster=require('./server/site-editor.cjs').safeUrl(item.poster);}catch{throw Object.assign(new Error('视频封面地址不正确'),{status:400});}return {id,url:'/api/uploads/'+id,caption:validJourneyText(item.caption,100),date:validJourneyText(item.date,28),poster,order:Math.max(0,Number(item.order)||0)};});}
+  const words = [entry.schoolIntro,entry.story,entry.growth,entry.reflection,...entry.moments.flatMap(item => Object.values(item)),...[...entry.photos,...(entry.videos||[])].flatMap(item => [item.caption,item.date])];
   if (containsPrivateContact(words)) throw Object.assign(new Error('请勿在公开内容中填写微信号或电话号码'), { status:400 });
   return entry;
 }
@@ -333,8 +334,9 @@ async function handle(req, res) {
     if (!ownerAllowed(req, res)) return;
     const stage = url.searchParams.get('stage');
     if (!JOURNEY_STAGES.has(stage)) return respond(res, 400, { error:'求学阶段不正确' });
-    const content = sanitizeJourney(await readBody(req, 65536));
     const all = loadJourney();
+    const body=await readBody(req, 128*1024);if(body.videos===undefined&&all[stage]?.videos)body.videos=all[stage].videos;
+    const content = sanitizeJourney(body);
     all[stage] = content;
     saveJourney(all);
     return respond(res, 200, { ok:true, stage, content });

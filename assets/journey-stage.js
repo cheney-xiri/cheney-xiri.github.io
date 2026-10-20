@@ -35,18 +35,20 @@
     panel.replaceChildren(list);
   }
 
-  function showPhotos(photos) {
-    if (!Array.isArray(photos) || !photos.length) return;
+  function showPhotos(photos,videos) {
+    var items=[...(Array.isArray(photos)?photos:[]).map((p,i)=>({...p,type:'image',order:p.order??i})),...(Array.isArray(videos)?videos:[]).map((p,i)=>({...p,type:'video',order:p.order??(photos||[]).length+i}))].sort((a,b)=>a.order-b.order);
+    if (!items.length) return;
     var grid = document.querySelector('#photos .stage-photo-grid');
     if (!grid) return;
     grid.replaceChildren();
-    photos.forEach(function (photo) {
-      if (!/^[0-9a-f-]{36}\.(webp|jpg|png)$/.test(photo.id || '')) return;
+    items.forEach(function (photo) {
+      if (!/^[0-9a-f-]{36}\.(webp|jpg|png|mp4|webm)$/.test(photo.id || '')) return;
       var figure = element('figure', 'stage-photo');
-      var img = element('img', '', null);
-      img.src = window.CHENEY_STATIC_PREVIEW ? '/assets/cms-uploads/' + encodeURIComponent(photo.id) : apiBase + '/api/journey/media/' + encodeURIComponent(photo.id);
-      img.alt = photo.caption || '求学阶段照片';
-      img.loading = 'lazy';
+      var video=photo.type==='video',img = element(video?'video':'img', '', null);
+      var fallback=window.CHENEY_STATIC_PREVIEW?'/assets/cms-uploads/'+encodeURIComponent(photo.id):apiBase+(video?'/api/uploads/':'/api/journey/media/')+encodeURIComponent(photo.id);
+      var valid=function(value){try{var u=new URL(value,location.href);return ['http:','https:'].includes(u.protocol)?u.href:'';}catch{return '';}};
+      img.src = photo.url?valid(photo.url)||fallback:fallback;
+      if(video){img.controls=true;img.preload='none';img.playsInline=true;img.setAttribute('aria-label',photo.caption||'行旅视频');if(photo.poster)img.poster=valid(photo.poster);}else{img.alt=photo.caption||'求学阶段照片';img.loading='lazy';}
       figure.appendChild(img);
       if (photo.caption || photo.date) figure.appendChild(element('figcaption', '', [photo.date, photo.caption].filter(Boolean).join(' · ')));
       grid.appendChild(figure);
@@ -63,7 +65,7 @@
       if (schoolIntro && content.schoolIntro) schoolIntro.textContent = content.schoolIntro;
       showText('memory', content.story);
       showMoments(content.moments);
-      showPhotos(content.photos);
+      showPhotos(content.photos,content.videos);
       showText('growth', content.growth);
       showText('reflection', content.reflection);
     })

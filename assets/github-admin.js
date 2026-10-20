@@ -187,6 +187,7 @@
       const readKey = group + ':' + key;
       if (isJourney ? !['junior','senior','university'].includes(key) : !/^\d{1,9}$/.test(key)) throw new Error('内容编号不正确');
       if (options.method === 'POST') {
+        if(isJourney){const photos=body.photos||[],videos=body.videos||[];if(!Array.isArray(photos)||!Array.isArray(videos)||photos.length+videos.length>60)throw new Error('每个阶段最多保留 60 项照片与视频');for(const [items,pattern]of [[photos,/^[0-9a-f-]{36}\.(png|jpg|webp)$/],[videos,/^[0-9a-f-]{36}\.(mp4|webm)$/]])for(const item of items){if(!pattern.test(item.id||''))throw new Error('影像编号不正确，请重新上传');for(const value of [item.url,item.poster].filter(Boolean)){let url;try{url=new URL(value,location.origin);}catch{throw new Error('影像地址不正确');}if(!['https:','http:'].includes(url.protocol))throw new Error('影像地址不正确');}}}
         await writeDocument(next => { next[group] ||= {}; if (!noteReads.has(readKey) || JSON.stringify(next[group][key] || null) !== noteReads.get(readKey)) throw new Error('内容已在其他设备更新，请重新打开后发布'); next[group][key] = body; }, 'Publish ' + group + ' content from website manager');
         noteReads.set(readKey, JSON.stringify(body));
         return { ok: true, content: body };

@@ -33,7 +33,7 @@ try {
       let content = bytes.toString('utf8').replace(/https?:\/\/(?:localhost|127\.0\.0\.1):(?:3000|3001)\b/g, '');
       if (file === 'admin/index.html') {
         content = content.replace(/href="\/cheney\/"/g, 'href="/"');
-        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261020-03" defer></script><script src="/assets/github-admin.js?v=20261020-03" defer></script>');
+        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261020-04" defer></script><script src="/assets/github-admin.js?v=20261020-04" defer></script>');
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {

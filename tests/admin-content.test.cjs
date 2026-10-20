@@ -22,6 +22,11 @@ test('admin authentication, drafts, publication, history and private messages',a
   const video=Buffer.from([0,0,0,16,102,116,121,112,105,115,111,109,0,0,0,0]);
   const uploaded=await fetch(base+'/api/admin/media',{method:'POST',headers:{Cookie:cookie,'X-CSRF-Token':csrf,'Content-Type':'video/mp4'},body:video});assert.equal(uploaded.status,200);const videoUrl=(await uploaded.json()).url;
   const media=await fetch(base+videoUrl);assert.equal(media.headers.get('content-type'),'video/mp4');assert.equal((await media.arrayBuffer()).byteLength,video.length);
+  const journeyBefore=(await call('/api/journey?stage=junior')).data.content;
+  const publishedJourney=await call('/api/journey?stage=junior','POST',{...journeyBefore,videos:[{id:videoUrl.split('/').pop(),url:videoUrl,caption:'本地视频测试',date:'2026',order:0}]});assert.equal(publishedJourney.status,200);assert.equal(publishedJourney.data.content.videos.length,1);
+  const journeyAfter=(await call('/api/journey?stage=junior')).data.content;assert.equal(journeyAfter.videos[0].url,videoUrl);
+  const legacy={...journeyAfter};delete legacy.videos;assert.equal((await call('/api/journey?stage=junior','POST',legacy)).data.content.videos.length,1);
+  assert.equal((await call('/api/journey?stage=junior','POST',{...journeyAfter,photos:Array(61).fill({id:'not-a-file'})})).status,400);
   const badUpload=await fetch(base+'/api/admin/media',{method:'POST',headers:{Cookie:cookie,'X-CSRF-Token':csrf,'Content-Type':'video/mp4'},body:'not-a-video'});assert.equal(badUpload.status,400);
   const before=await call('/api/content?collection=articles');
   let r=await call('/api/admin/save','POST',{collection:'articles',draft:{title:'测试草稿 <img src=x onerror=alert(1)>',body:'## 第一节\n\n尚未公开的正文。',summary:'简介',category:'测试',order:-1}});assert.equal(r.status,200);let item=r.data.item;assert.equal(item.published,null);

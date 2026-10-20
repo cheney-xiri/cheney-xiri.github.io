@@ -99,3 +99,5 @@
 @media(max-width:760px){ .stage-university .stage-hero-mark{ top:auto; right:1rem; bottom:.8rem; width:auto; border:0; } }
 @media(max-width:520px){ .stage-university .stage-hero h1{ font-size:clamp(1.95rem,8.5vw,2.55rem); letter-spacing:.005em; } }
 @media(max-width:520px){ .stage-chapters .stage-section{ gap:.9rem; padding:1.15rem; } .stage-chapters .stage-section-head{ display:flex; align-items:baseline; gap:.75rem; } .stage-chapters .stage-section-head p{ flex:none; margin:0; } .stage-chapters .stage-section-head h2{ font-size:1.45rem; } .stage-chapters .stage-prompt{ border-left-width:1px; } .stage-chapters .stage-photo-grid:has(.stage-photo){ grid-template-columns:repeat(2,minmax(0,1fr)); } .stage-chapters .stage-photo-slot{ min-height:6.8rem; padding:.55rem; } .stage-chapters .stage-photo-slot span,.stage-chapters .stage-photo-slot figcaption{ font-size:.63rem; } }
+
+.stage-photo video{display:block;width:100%;max-height:440px;aspect-ratio:16/9;object-fit:contain;background:#162b2a}

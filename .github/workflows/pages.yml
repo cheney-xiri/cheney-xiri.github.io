@@ -3,6 +3,8 @@ name: Publish personal website
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'assets/cms-uploads/**'
   release:
     types: [published]
   workflow_dispatch:
