@@ -6,7 +6,17 @@
 
 **https://xire175-crypto.github.io/**
 
-GitHub Pages 预览版免费托管，保留页面、图片、棋谱和歌单链接。预览版暂不开放留言提交、私信和在线管理；不会把输入伪装成已成功提交。
+GitHub Pages 免费托管页面，GitHub API 负责内容权限与保存。留言提交、私信仍暂未开放，不会把输入伪装成已成功提交。
+
+## 在线内容管理
+
+入口：**https://xire175-crypto.github.io/admin/**
+
+可管理文存、句笺、作品、书架、歌单、个性小档、行旅和观影手记，支持封面上传、历史版本和备份。手机和电脑均可使用。
+
+首次使用，在 GitHub 创建 Fine-grained personal access token，Resource owner 选择 `xire175-crypto`，只选择 `xire175-crypto.github.io` 仓库，Repository permissions → Contents 设为 **Read and write**。直接把凭据填入后台，不要发到聊天、写进代码或提交到仓库。
+
+管理凭据只留在当前页面内存，退出或刷新后需重新输入。草稿仅存当前设备；点击“发布到网站”才把内容写入 `data/online-content.json`，随后 GitHub Actions 自动构建网站。发布记录公开，不能上传私信、密码或未公开小说正文。GitHub Pages 不运行本地 Node.js/SQLite 服务。
 
 ## 项目目录
 

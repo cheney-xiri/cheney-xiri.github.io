@@ -3,6 +3,7 @@
   'use strict';
   window.CHENEY_STATIC_PREVIEW = true;
   const originalFetch = window.fetch.bind(window);
+  let notes;
   window.fetch = (input, options = {}) => {
     const address = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href);
     if (address.origin !== location.origin || !address.pathname.startsWith('/api/')) return originalFetch(input, options);
@@ -11,7 +12,10 @@
     if (method !== 'GET') return json({ error: '预览站暂未开放提交功能，你的输入没有发送或保存。' }, 503);
     if (address.pathname === '/api/content-state') return json({ state: {} });
     if (address.pathname === '/api/messages') return json({ messages: [], preview: true });
-    if (address.pathname === '/api/journey' || address.pathname === '/api/anime-note') return json({ content: null });
+    if (address.pathname === '/api/journey' || address.pathname === '/api/anime-note') {
+      notes ||= originalFetch('/assets/online-notes.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+      return notes.then(data => json({ content: address.pathname === '/api/journey' ? data.journey?.[address.searchParams.get('stage')] || null : data.animeNotes?.[address.searchParams.get('id')] || null }));
+    }
     if (address.pathname === '/api/admin/session') return json({ authenticated: false, configured: false, canSetup: false });
     return json({ error: '此功能暂未在预览站开放。' }, 503);
   };

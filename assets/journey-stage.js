@@ -44,7 +44,7 @@
       if (!/^[0-9a-f-]{36}\.(webp|jpg|png)$/.test(photo.id || '')) return;
       var figure = element('figure', 'stage-photo');
       var img = element('img', '', null);
-      img.src = apiBase + '/api/journey/media/' + encodeURIComponent(photo.id);
+      img.src = window.CHENEY_STATIC_PREVIEW ? '/assets/cms-uploads/' + encodeURIComponent(photo.id) : apiBase + '/api/journey/media/' + encodeURIComponent(photo.id);
       img.alt = photo.caption || '求学阶段照片';
       img.loading = 'lazy';
       figure.appendChild(img);
