@@ -1571,3 +1571,6 @@ a{ color:inherit; }
   line-height:1.55;
   text-shadow:0 2px 18px rgba(0,0,0,.14);
 }
+
+/* Chapter titles and interaction cards are usable entry points. */
+.chapter-entry-title{color:inherit;font:inherit;letter-spacing:inherit;text-decoration:none}.chapter-entry-title:hover,.chapter-entry-title:focus-visible{color:var(--zhu-deep);text-decoration:underline;text-underline-offset:.22em}.interaction-door>a::before{content:"";position:absolute;inset:0;z-index:1}.interaction-door:focus-within{outline:2px solid var(--zhu-deep);outline-offset:3px}

@@ -2,6 +2,23 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const {sanitizePages}=require('../server/site-editor.cjs');
 
+test('admin chapters follow homepage sections and reference existing art',()=>{
+ const root=path.resolve(__dirname,'..'),context={window:{}};vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'assets/admin-chapters.js'),'utf8'),context);
+ const chapters=context.window.CHENEY_ADMIN_CHAPTERS.chapters;
+ assert.deepEqual(Array.from(chapters,c=>c.title),['开篇','关于我','行旅','技艺','志趣','作品','足迹','仰止','文存','读书','互动','联络']);
+ const home=fs.readFileSync(path.join(root,'index.html'),'utf8');for(const c of chapters){assert.ok(home.includes('id="'+c.section+'"'),c.title+' has no homepage target');assert.ok(fs.existsSync(path.join(root,'assets/ink/'+c.art+'.webp')),c.title+' artwork missing');assert.ok(c.tools.length);}
+});
+
+test('writing and interaction entry links resolve to real public pages',()=>{
+ const root=path.resolve(__dirname,'..');
+ for(const name of ['index.html',...fs.readdirSync(path.join(root,'writing')).filter(x=>x.endsWith('.html')).map(x=>'writing/'+x),...fs.readdirSync(path.join(root,'interaction')).filter(x=>x.endsWith('.html')).map(x=>'interaction/'+x)]){
+  const html=fs.readFileSync(path.join(root,name),'utf8');for(const match of html.matchAll(/href=["']([^"']+\.html(?:\?[^"']*)?(?:#[^"']*)?)["']/g)){
+   const url=new URL(match[1].replaceAll('&amp;','&'),'https://site.local/'+name);if(url.origin==='https://site.local')assert.ok(fs.existsSync(path.join(root,url.pathname.slice(1))),name+' links to missing '+url.pathname);
+  }
+ }
+ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.match(html,/class="chapter-entry-title" href="writing\/index.html"/);assert.match(html,/class="chapter-entry-title" href="interaction\/index.html"/);
+});
+
 test('page publication sanitizes targets, media addresses and inserted blocks',()=>{
  const patch={id:'one',type:'block',selector:'#works',format:'video',title:'创作过程',value:'/assets/clip.mp4',poster:'/assets/cover.webp',position:'beforeend'};
  const pages=sanitizePages({'index.html':{revision:2,patches:[patch]}});

@@ -2,7 +2,7 @@
   'use strict';
   const $ = (q, root=document) => root.querySelector(q);
   const node = (tag, text, cls) => { const el=document.createElement(tag); if(text!==undefined)el.textContent=text; if(cls)el.className=cls; return el; };
-  let csrf='', meta=null, view='pages', entries=[], current=null, dirty=false, setup=false;
+  let csrf='', meta=null, view='overview', entries=[], current=null, dirty=false, setup=false, activeChapter=null, navVersion=0;
   const status=(message, bad=false)=>{ const el=$('#app-status'); el.textContent=message;el.dataset.error=String(bad); };
   async function api(url, options={}) {
     if(window.CHENEY_GITHUB_CMS)return window.CHENEY_GITHUB_CMS.request(url,options);
@@ -15,24 +15,31 @@
   }
   function showLogin(){ $('#login-screen').hidden=false;$('#admin-app').hidden=true;$('#logout').hidden=true;csrf='';if(window.CHENEY_GITHUB_CMS)api('/api/admin/session').then(configureGithubLogin).catch(e=>$('#login-status').textContent=e.message); }
   function canLeave(){ if(window.CHENEY_BATCH_UPLOAD?.busy){status('正在批量上传，请等待完成后再切换页面。',true);return false;}return !dirty || confirm('当前修改还未保存，确认离开？'); }
-  const notes={articles:'整理篇目、保存草稿，再发布到文存。',quotes:'按主题收好诗词与话语，保留准确的文字。',works:'补充封面、简介和创作近况，不放小说全文。',books:'整理书架与阅读入口。',music:'整理歌曲名称、歌手和播放页面，沿用现有歌单。',profile:'只填写想公开的个人信息，未确定的项目可以留空。',journey:'在原有三个阶段里补充文字、照片与时间节点。',anime:'按作品整理观影手记。',messages:'查看公开留言与私信，私信仅在后台显示。',security:'设置至少 12 个字符的站主密码。'};
+  const notes={articles:'整理篇目、保存草稿，再发布到文存。',quotes:'按主题收好诗词与话语，保留准确的文字。',works:'补充封面、简介和创作近况，不放小说全文。',books:'整理书架与阅读入口。',music:'整理歌曲名称、歌手和播放页面，沿用现有歌单。',profile:'只填写想公开的个人信息，未确定的项目可以留空。',journey:'在原有三个阶段里补充文字、图片、视频与时间节点。',anime:'按作品整理观影手记。',messages:'查看公开留言与私信，私信仅在后台显示。',security:'设置至少 12 个字符的站主密码。'};
   async function enter(){
     meta=await api('/api/admin/meta');$('#login-screen').hidden=true;$('#admin-app').hidden=false;$('#logout').hidden=false;
     const nav=$('#admin-nav');nav.replaceChildren();
-    const extras={pages:'全站页面',media:'图片与音视频',sources:'专题资料',journey:'行旅',anime:'观影手记',messages:'留言与来信'};
-    const allowedExtras=Object.fromEntries(Object.entries(extras).filter(([key])=>!meta.extraViews||meta.extraViews.includes(key)));
-    for(const [heading,items]of [['页面与素材',Object.fromEntries(['pages','media','sources'].filter(k=>allowedExtras[k]).map(k=>[k,allowedExtras[k]]))],['文字与作品',meta.collections],['经历与手记',Object.fromEntries(['journey','anime','messages'].filter(k=>allowedExtras[k]).map(k=>[k,allowedExtras[k]]))]]){if(!Object.keys(items).length)continue;nav.append(node('small',heading,'admin-nav-group'));for(const[key,label]of Object.entries(items)){const b=node('button',label);b.type='button';b.dataset.view=key;nav.append(b);}}
+    const navButton=(key,label)=>{const b=node('button',label);b.type='button';b.dataset.view=key;nav.append(b);};
+    navButton('overview','网站总览');nav.append(node('small','按个人主页管理','admin-nav-group'));for(const c of window.CHENEY_ADMIN_CHAPTERS.chapters)navButton('chapter:'+c.key,c.title);nav.append(node('small','常用工具','admin-nav-group'));for(const [key,label]of Object.entries({media:'素材库',pages:'全站页面',sources:'全部专题资料'}))navButton(key,label);
     if(meta.storage==='edge-kv'){$('#cloud-note').hidden=false;$('#cloud-note').textContent='发布后通常一分钟内同步。请避免在两个设备上同时修改同一篇内容。';}
     if(meta.storage==='github'){$('#cloud-note').hidden=false;$('#cloud-note').replaceChildren(document.createTextNode('草稿只保存在当前设备，发布后的内容通过 GitHub 保存并自动更新网站。发布记录公开，请只发布想公开的文字和图片。'),document.createTextNode(' '));const a=node('a','查看发布进度 ↗');a.href='https://github.com/'+window.CHENEY_GITHUB_CMS.repo+'/actions';a.target='_blank';a.rel='noopener noreferrer';$('#cloud-note').append(a);$('button[data-view="security"]').textContent='密码与设备';}
     if(view==='pages'&&!meta.extraViews?.includes('pages')&&!window.CHENEY_SITE_ADMIN)view='articles';
     await navigate(view);
   }
-  async function navigate(next){
-    if(!canLeave())return;view=next;current=null;dirty=false;status('');
-    document.querySelectorAll('[data-view]').forEach(b=>{b.classList.toggle('is-active',b.dataset.view===view);if(b.dataset.view===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
-    $('#view-title').textContent=({...meta.collections,pages:'全站页面',media:'图片与音视频',sources:'专题资料',journey:'行旅',anime:'观影手记',messages:'留言与来信',security:'登录设置'})[view];$('#view-note').textContent=({pages:'直接浏览前台，点选文字、图片与背景；在对应位置增添内容。',media:'复用网站已有素材，也可上传新的图片、视频与音频。',sources:'管理足迹、志趣、歌单与围棋资料。'})[view]||notes[view]||'';
+  async function navigate(next,options={}){
+    if(!canLeave())return;const version=++navVersion;current=null;dirty=false;status('');window.scrollTo({top:0,behavior:'instant'});
+    activeChapter=next.startsWith('chapter:')?window.CHENEY_ADMIN_CHAPTERS.chapters.find(c=>c.key===next.slice(8)):null;
+    if(next.startsWith('chapter:')&&!activeChapter){status('没有找到这个章节。',true);return;}
+    view=activeChapter?(options.tool||activeChapter.tools[0][0]):next;
+    const scope=options.scope||(activeChapter?{chapter:activeChapter.key,section:activeChapter.section,group:activeChapter.group,sources:activeChapter.sources}:undefined);
+    document.querySelectorAll('[data-view]').forEach(b=>{const yes=b.dataset.view===(activeChapter?'chapter:'+activeChapter.key:view);b.classList.toggle('is-active',yes);if(yes)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
+    $('#view-title').textContent=activeChapter?.title||({...meta.collections,overview:'网站总览',pages:'全站页面',media:'素材库',sources:'专题资料',journey:'行旅',anime:'观影手记',messages:'留言与来信',security:'登录设置'})[view]||'内容管理';
+    $('#view-note').textContent=activeChapter?.note||({overview:'与个人主页同样的章节，内容和素材在这里集中管理。',pages:'选择章节或页面，集中编辑文字、图片和视频。',media:'批量上传、搜索与复用图片和音视频。',sources:'集中管理各章节的专题资料。'})[view]||notes[view]||'';
     $('#new-entry').hidden=!meta.collections[view]||view==='profile';$('#workspace').replaceChildren();
-    try {if(['pages','media','sources'].includes(view))await window.CHENEY_SITE_ADMIN.mount(view,{api,status,canLeave,setDirty:value=>dirty=value});else if(meta.collections[view])await loadCollection();else if(view==='journey')await journey();else if(view==='anime')await anime();else if(view==='messages')await messages();else security();}catch(e){status(e.message,true);}
+    let bar=$('#chapter-tools');if(!bar){bar=node('div',undefined,'admin-chapter-tools');bar.id='chapter-tools';$('#workspace').before(bar);}bar.replaceChildren();bar.hidden=!activeChapter;
+    if(activeChapter){for(const [tool,label]of [...activeChapter.tools,['media','本章素材']]){const b=button(label,()=>navigate('chapter:'+activeChapter.key,{tool}));b.setAttribute('aria-pressed',String(view===tool));bar.append(b);}const front=node('a','查看前台 ↗');front.href='/#'+activeChapter.section;front.target='_blank';front.rel='noopener';bar.append(front);if(activeChapter.key==='interaction'&&meta.storage==='github')bar.append(node('p','可编辑互动页面与介绍。访客留言和私信的在线收发尚未启用。','field-help'));}
+    const ctx={api,status,canLeave,meta,scope,navigate,uploadImage:upload,setDirty:value=>dirty=value,isCurrent:()=>navVersion===version};
+    try{if(view==='overview')await window.CHENEY_ADMIN_CHAPTERS.overview($('#workspace'),ctx);else if(['pages','media','sources'].includes(view))await window.CHENEY_SITE_ADMIN.mount(view,ctx);else if(meta.collections[view])await loadCollection();else if(view==='journey')await journey();else if(view==='anime')await anime();else if(view==='messages')await messages();else security();}catch(e){if(version===navVersion)status(e.message,true);}
   }
   document.addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b)navigate(b.dataset.view);});
   function field(form,label,key,value='',type='text',wide=false){
@@ -42,7 +49,7 @@
   function button(label,action,cls=''){const b=node('button',label,cls);b.type='button';b.addEventListener('click',action);return b;}
   async function busy(b,fn){b.disabled=true;try{await fn();}catch(e){status(e.message,true);}finally{b.disabled=false;}}
   async function loadCollection(selectId){
-    entries=(await api('/api/admin/entries?collection='+view)).items;
+    const version=navVersion,collection=view;const response=await api('/api/admin/entries?collection='+collection);if(version!==navVersion)return;entries=response.items;
     const workspace=$('#workspace');workspace.className='workspace';workspace.replaceChildren();
     const panel=node('section',undefined,'entry-panel'),search=node('input');search.type='search';search.placeholder='搜索标题或分类';search.setAttribute('aria-label','搜索内容');const list=node('div',undefined,'entry-list');panel.append(search,list);workspace.append(panel,node('section',undefined,'editor-panel'));
     const paint=()=>{list.replaceChildren();const q=search.value.trim().toLowerCase();for(const item of entries.filter(x=>(x.draft.title+' '+x.draft.category).toLowerCase().includes(q))){const b=button('',()=>{if(canLeave())edit(item);},'entry-item');b.dataset.id=item.id;b.append(node('strong',item.draft.title),node('span',(item.published?'已发布':'草稿')+' · '+(item.draft.category||meta.collections[view])));b.classList.toggle('is-active',current?.id===item.id);list.append(b);}if(!list.children.length)list.append(node('p','还没有内容，可以新增一篇。','empty'));};search.addEventListener('input',paint);paint();
@@ -63,7 +70,8 @@
     if(view==='profile')for(const[key,label]of Object.entries(meta.profileFields))field(grid,label,'profile:'+key,d.fields?.[key]);
     if(view!=='quotes'){
       const cover=field(grid,view==='profile'?'头像链接':'封面链接','cover',d.cover,'text',true),tools=node('div',undefined,'image-tools');const image=node('img');image.alt='封面预览';const refresh=()=>{image.hidden=!cover.value;image.src=safeImage(cover.value)||'';};refresh();cover.addEventListener('change',refresh);
-      const file=node('input');file.type='file';file.accept='image/png,image/jpeg,image/webp';file.setAttribute('aria-label','上传封面');file.addEventListener('change',async()=>{if(!file.files[0])return;file.disabled=true;try{cover.value=(await upload(file.files[0])).url;dirty=true;refresh();status('图片已上传，保存内容后应用。');}catch(e){status(e.message,true);}finally{file.disabled=false;}});tools.append(image,file);if(window.CHENEY_SITE_ADMIN)tools.append(button('从素材库选择',()=>window.CHENEY_SITE_ADMIN.pickMedia({api,status},url=>{cover.value=url;dirty=true;refresh();})));grid.append(tools);
+      const file=node('input');file.type='file';file.accept='image/png,image/jpeg,image/webp';file.setAttribute('aria-label','上传单张封面');file.addEventListener('change',async()=>{if(!file.files[0])return;file.disabled=true;try{cover.value=(await upload(file.files[0])).url;dirty=true;refresh();status('封面已上传，保存内容后应用。');}catch(e){status(e.message,true);}finally{file.disabled=false;}});tools.append(image,file);if(window.CHENEY_SITE_ADMIN)tools.append(button('从素材库选择',()=>window.CHENEY_SITE_ADMIN.pickMedia({api,status},url=>{cover.value=url;dirty=true;refresh();})));
+      if(['articles','works','profile'].includes(view)){tools.append(node('p','封面或头像使用单张图片；正文中的多张图片、视频可以批量添加。','field-help'),button('补充图片与视频',()=>{if(!item.id||!item.published){status('请先发布基础内容，再添加正文中的图片与视频。',true);return;}const path=(previewUrl(item).replace(/^[\/]/,'').replace(/[?&]$/,''));const chapter=activeChapter;const scope={...(chapter?{chapter:chapter.key,section:chapter.section,group:chapter.group}:{}),path};navigate(chapter?'chapter:'+chapter.key:'pages',{tool:'pages',scope});}));}grid.append(tools);
     }
     const actions=node('div',undefined,'editor-actions');form.append(actions);const save=button('保存草稿',()=>busy(save,()=>persist(false))),publish=button('发布到网站',()=>busy(publish,()=>persist(true)),'primary');actions.append(save,publish);
     if(item.id){actions.append(button('预览',()=>{if(dirty){status('请先保存草稿，再预览。');return;}if(meta.storage==='github'){previewDraft(item);return;}window.open(previewUrl(item)+'preview=1','_blank','noopener');}),button('历史版本',()=>history(item)));if(item.published)actions.append(button('撤下',async()=>{if(!confirm('确认从公开页面撤下这份内容？后台仍会保留。'))return;try{const r=await api('/api/admin/unpublish',{method:'POST',body:{id:item.id,revision:item.revision}});dirty=false;await loadCollection(r.item.id);status(meta.storage==='github'?'撤下操作已提交，网站更新完成后生效。':'已撤下。');}catch(e){status(e.message,true);}},'danger'));}

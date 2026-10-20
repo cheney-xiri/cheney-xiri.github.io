@@ -79,3 +79,5 @@
 @media(max-width:850px){ .interaction-layout{ grid-template-columns:1fr; } .interaction-compose{ max-width:42rem; } }
 @media(max-width:520px){ .interaction-main{ width:min(100% - 2rem,40rem); } .interaction-bar{ min-height:3.8rem; } .interaction-brand small{ display:none; } .interaction-hero{ padding:1.6rem 0 1.4rem; } .interaction-field-row,.interaction-visibility{ grid-template-columns:1fr; } .interaction-compose{ padding:1rem; } .interaction-footer{ flex-direction:column; } }
 @media(prefers-reduced-motion:reduce){ .interaction-switch a{ transition:none; } }
+
+.interaction-hub .interaction-doors{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.interaction-hub .interaction-door h2{font:400 2rem/1.5 var(--font-head);margin:.8rem 0}.interaction-hub .interaction-door{min-height:14rem;background:rgba(245,244,231,.65)}@media(max-width:600px){.interaction-hub .interaction-doors{grid-template-columns:1fr}.interaction-hub .interaction-door{min-height:11rem}}
