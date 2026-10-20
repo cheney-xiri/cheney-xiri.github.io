@@ -7,7 +7,7 @@
   {key:'craft',title:'技艺',section:'craft',group:'craft',art:'chapter-craft-v1',note:'写作、围棋、摄影与清音',sources:['joseki-'],tools:[['pages','本章图文'],['sources','围棋资料']]},
   {key:'pastimes',title:'志趣',section:'pastimes',group:'pastimes',art:'chapter-pastimes-v1',note:'听歌、物理与宇宙、剪视频等',sources:['pastimes.json','music-selection.json'],tools:[['pages','本章图文'],['music','歌单'],['anime','观影手记'],['sources','志趣资料']]},
   {key:'works',title:'作品',section:'works',group:'works',art:'chapter-works-v1',note:'作品介绍、人物与创作近况',tools:[['works','作品目录'],['pages','本章图文']]},
-  {key:'travels',title:'足迹',section:'travels',group:'travels',art:'scroll-river-v1',note:'城市、到访记录与沿途影像',sources:['travels.json'],tools:[['sources','城市资料'],['pages','本章图文']]},
+  {key:'travels',title:'足迹',section:'travels',group:'travels',art:'scroll-river-v1',note:'城市、到访记录与沿途影像',sources:['travels.json'],tools:[['travels','城市与影像'],['sources','城市资料'],['pages','本章图文']]},
   {key:'admire',title:'仰止',section:'admire',group:'figures',art:'scroll-admire-v1',note:'仰慕的人、诗篇与追星',tools:[['pages','人物与诗篇']]},
   {key:'writing',title:'文存',section:'writing',group:'writing',art:'chapter-writing-v1',note:'摘要与整理、诗词与话语',tools:[['articles','摘要与整理'],['quotes','句笺'],['pages','本章图文']]},
   {key:'reading',title:'读书',section:'reading',group:'books',art:'subsections/reading-v1',note:'书架、阅读记录与摘记',tools:[['books','书架'],['pages','本章图文']]},

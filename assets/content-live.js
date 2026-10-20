@@ -28,11 +28,27 @@
   const archive=$('[data-works-archive]'),grid=$('.works-grid');if(archive||grid){const host=archive||grid,old=[...host.querySelectorAll('.works-entry')];host.replaceChildren();const all=sorted(items),visible=archive?all:all.slice(0,4);for(const item of visible){const d=item.data,existing=old.find(x=>{const a=$('a',x);return a&&new URL(a.href).pathname==='/'+item.basePath;});if(existing&&!item.touched){host.append(existing);continue;}const art=make('article',undefined,'works-entry works-entry-book'),a=link('',route(item),'works-thumb');if(d.cover){const img=make('img');img.src=url(d.cover);img.alt=d.title;img.loading='lazy';a.append(img);}const meta=make('div',undefined,'works-entry-meta');meta.append(make('span',d.category),make('span',d.status,'novel-status'));const h=make('h3');h.append(link(d.title,route(item)));art.append(a,meta,h,make('p',d.summary,'works-entry-summary'),link('查看详情 ↗',route(item),'works-entry-link'));host.append(art);}if(grid&&!$('[data-all-works]')){const a=link('全部作品 ↗','/works/archive.html','works-entry-link');a.dataset.allWorks='';grid.after(a);}}
   if(!archive&&!grid)detail(items,'works');
  }
- function profile(items){const item=items.find(x=>x.data);if(!item)return;const d=item.data;const labels={hometown:'家乡',birthday:'生日',personalityKeywords:'性格关键词',gettingAlong:'相处方式',dailyRhythm:'日常节奏',favoriteSeason:'喜欢的季节',favoriteColor:'喜欢的颜色',relaxation:'放松方式',smallJoys:'日常小确幸',socialStyle:'社交状态',expressionStyle:'表达方式',workStyle:'做事习惯',aloneTime:'独处时刻',motto:'一句座右铭',favoriteWeather:'喜欢的天气',favoriteTime:'喜欢的时段',favoriteFlavor:'喜欢的味道',favoriteScent:'喜欢的气味',favoritePlace:'喜欢的地方',currentGoal:'最近的目标',wantToLearn:'想学习的事'};for(const dt of document.querySelectorAll('.personality-preferences dt')){const key=Object.keys(labels).find(k=>labels[k]===dt.textContent);if(key)dt.nextElementSibling.textContent=d.fields?.[key]||'—';}document.querySelectorAll('.personality-card').forEach((card,i)=>{const value=d.fields?.[i?'mbti':'zodiac'];const p=$('.personality-value',card);if(p)p.textContent=value||'尚未填写';card.classList.toggle('is-unfilled',!value);});const narrative=$('.personality-narrative');if(narrative&&d.body)prose(narrative,d.body);const portrait=$('.profile-portrait img');if(portrait&&d.cover)portrait.src=url(d.cover);}
+ function profile(items){
+  const item=items.find(x=>x.data);if(!item)return;const d=item.data,fields=d.fields||{};
+  document.querySelectorAll('[data-profile-field]').forEach(target=>{const key=target.dataset.profileField;target.textContent=fields[key]||'—';});
+  document.querySelectorAll('[data-profile-identity]').forEach(card=>{const value=fields[card.dataset.profileIdentity];const p=$('.personality-value',card);if(p)p.textContent=value||'尚未填写';card.classList.toggle('is-unfilled',!value);});
+  document.querySelectorAll('[data-profile-name]').forEach(target=>target.textContent=d.title||'Cheney');
+  document.querySelectorAll('[data-profile-greeting]').forEach(target=>target.textContent='你好，我是 '+(d.title||'Cheney'));
+  const narrative=$('.personality-narrative');if(narrative){if(d.body)prose(narrative,d.body);else narrative.replaceChildren(make('p','这一页，留给自己的话。','narrative-empty'),make('p','性格、近况、想法，或是想成为的样子。','narrative-hint'));}
+  document.querySelectorAll('[data-profile-portrait]').forEach(image=>{image.src=url(d.cover||'/assets/portrait.jpg');image.alt=(d.title||'Cheney')+' 的画像';});
+ }
  async function init(){let state={};const embedded=$('#cheney-content-state');if(embedded){state=JSON.parse(embedded.textContent).state||{};}else{
    const p=location.pathname;if(!(/^\/(writing\/|works\/|about\/index\.html|books\.html$|index\.html$|$)/.test(p)||p==='/pastimes/detail.html'&&new URLSearchParams(location.search).get('topic')==='music'))return;
    const response=await fetch('/api/content-state?path='+encodeURIComponent(p)+(new URLSearchParams(location.search).get('preview')==='1'?'&preview=1':''),{cache:'no-store'});if(!response.ok)return;state=(await response.json()).state||{};
-  }window.CHENEY_CONTENT_STATE=state;if(state.articles)articles(state.articles);if(state.quotes)quotes(state.quotes);if(state.works)works(state.works);if(state.profile)profile(state.profile);
+  }
+  if(window.CHENEY_LATEST_SNAPSHOT){
+   const snapshot=await window.CHENEY_LATEST_SNAPSHOT;
+   if(snapshot){const p=location.pathname;const groups=p==='/'||p==='/index.html'||p==='/cheney/'?['works','articles','books','profile']:p.startsWith('/writing/')?['articles','quotes']:p.startsWith('/works/')?['works']:p==='/about/index.html'?['profile']:p==='/books.html'?['books']:p==='/pastimes/detail.html'&&new URLSearchParams(location.search).get('topic')==='music'?['music']:[];
+    const changes=snapshot.entries.filter(x=>groups.includes(x.collection));
+    if(changes.length){const baseline=await window.CHENEY_PUBLIC_BASELINE();for(const group of groups.filter(g=>changes.some(x=>x.collection===g))){const merged=new Map(baseline.filter(x=>x.collection===group).map(x=>[x.id,x]));for(const item of changes.filter(x=>x.collection===group)){const before=merged.get(item.id);merged.set(item.id,{...before,...item,basePath:before?.basePath||'',touched:true});}state[group]=[...merged.values()];}}
+   }
+  }
+  window.CHENEY_CONTENT_STATE=state;if(state.articles)articles(state.articles);if(state.quotes)quotes(state.quotes);if(state.works)works(state.works);if(state.profile)profile(state.profile);
  }
  window.CHENEY_CONTENT_READY=init().catch(()=>{if(/\/entry\.html$/.test(location.pathname))unavailable();});
 })();

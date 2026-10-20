@@ -1,6 +1,7 @@
 'use strict';
 const fs = require('node:fs');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
 const { createStore } = require('../server/content-store.cjs');
 const { applyPublishedContent } = require('../server/published-content.cjs');
 const { catalog: siteCatalog } = require('../server/site-editor.cjs');
@@ -33,16 +34,16 @@ try {
       let content = bytes.toString('utf8').replace(/https?:\/\/(?:localhost|127\.0\.0\.1):(?:3000|3001)\b/g, '');
       if (file === 'admin/index.html') {
         content = content.replace(/href="\/cheney\/"/g, 'href="/"');
-        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261020-05" defer></script><script src="/assets/github-admin.js?v=20261020-05" defer></script>');
+        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261020-06" defer></script><script src="/assets/github-admin.js?v=20261020-06" defer></script>');
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
-        content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
+        content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
         if (file === 'index.html') content = content.replace('href="/cheney/admin/"', 'href="/admin/"');
         const state = store.publicState(file, false);
         const hydrate = '<script id="cheney-content-state" type="application/json">' + JSON.stringify({ state }).replace(/</g, '\\u003c') + '</script>';
-        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/github-preview.js"></script>' + hydrate);
-        if (!content.includes('src="/assets/content-live.js')) content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/content-live.js" defer></script>');
-        content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261020-05"><script src="/assets/site-content.js?v=20261020-05" defer></script>');
+        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/github-preview.js?v=20261020-06"></script>' + hydrate);
+        if (!content.includes('src="/assets/content-live.js')) content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/content-live.js?v=20261020-06" defer></script>');
+        content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261020-06"><script src="/assets/site-content.js?v=20261020-06" defer></script>');
       }
       bytes = Buffer.from(content);
     }
@@ -53,7 +54,12 @@ try {
   }
 } finally { store.db.close(); }
 fs.mkdirSync(path.join(output, 'admin'), { recursive: true });
-fs.writeFileSync(path.join(output, 'admin', 'catalog.json'), JSON.stringify({...catalog, site:siteCatalog(root,written.map(x=>x.path))}));
+const site = siteCatalog(root,written.map(x=>x.path));
+fs.writeFileSync(path.join(output, 'admin', 'catalog.json'), JSON.stringify({...catalog, site}));
+const hashJSON = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const snapshotPath = path.join(root,'data/online-content.json');
+fs.writeFileSync(path.join(output,'assets/publication.json'),JSON.stringify({builtAt:new Date().toISOString(),snapshotHash:hashJSON(fs.existsSync(snapshotPath)?JSON.parse(fs.readFileSync(snapshotPath,'utf8')):{}),sourceHashes:Object.fromEntries(site.sources.map(source=>[source.path,hashJSON(JSON.parse(fs.readFileSync(path.join(root,source.path),'utf8')))]))}));
+fs.writeFileSync(path.join(output,'assets/content-baseline.json'),JSON.stringify(catalog.entries.filter(x=>x.published).map(x=>({id:x.id,collection:x.collection,basePath:x.basePath,data:x.published,touched:false}))));
 fs.writeFileSync(path.join(output, 'assets', 'online-notes.json'), JSON.stringify(notes));
 fs.writeFileSync(path.join(output, 'assets', 'site-edits.json'), JSON.stringify({pages:notes.pages}));
 // Named entry points share the same site and the same device-local login record.
@@ -66,6 +72,6 @@ for (const [source, destination] of [['index.html', 'cheney/index.html'], ['admi
 const notice = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>站点预览 · Cheney</title><style>body{margin:0;background:#e7e3d5;color:#243e37;font:18px/1.9 Georgia,"Noto Serif SC",serif}main{max-width:38rem;margin:18vh auto;padding:2rem}a{color:inherit}h1{font-size:2rem}</style><main><h1>站点预览</h1><p>当前预览站用于浏览页面，在线管理暂未开放。</p><a href="/">返回个人主页 ↗</a></main></html>';
 fs.writeFileSync(path.join(output, '.nojekyll'), '');
 fs.writeFileSync(path.join(output, '404.html'), notice.replace('站点预览</h1>', '这一页尚未找到</h1>').replace('当前预览站用于浏览页面，在线管理暂未开放。', '可以返回主页，继续浏览。'));
-const report = { files: written.length + 7, bytes: written.reduce((n, x) => n + x.bytes, 0), largest: Math.max(...written.map(x => x.bytes)), mode: 'static website with device-encrypted GitHub content management', serverIncluded: false };
+const report = { files: written.length + 9, bytes: written.reduce((n, x) => n + x.bytes, 0), largest: Math.max(...written.map(x => x.bytes)), mode: 'static website with device-encrypted GitHub content management', serverIncluded: false };
 fs.writeFileSync(path.join(output, 'preview-build.json'), JSON.stringify(report));
 console.log(JSON.stringify(report));

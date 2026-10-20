@@ -19,3 +19,7 @@ tmp/
 *.zip
 *.pdf
 .DS_Store
+
+*连接凭据*.txt
+*管理凭据*.txt
+cheney-encrypted-login*.json

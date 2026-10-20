@@ -78,7 +78,8 @@
 .travel-photo-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
 .travel-photo{ min-width:0; margin:0; border:1px solid rgba(65,95,79,.19); background:#f7f3e9; }
 .travel-photo-link{ display:block; overflow:hidden; }
-.travel-photo img{ display:block; width:100%; aspect-ratio:4/3; object-fit:cover; transition:transform .3s; }
+.travel-photo img{ display:block; width:100%; aspect-ratio:4/3; object-fit:contain; background:#e0e7db; transition:transform .3s; }
+.travel-photo video{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#152923}
 .travel-photo-link:hover img,.travel-photo-link:focus-visible img{ transform:scale(1.04); }
 .travel-photo figcaption{ padding:.6rem .7rem; color:#72776b; font-size:.7rem; line-height:1.5; }
 .travel-small-blocks{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; }

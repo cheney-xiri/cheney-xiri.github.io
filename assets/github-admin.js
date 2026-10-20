@@ -6,7 +6,9 @@
   const API = 'https://api.github.com';
   const DRAFT_KEY = 'cheney-local-drafts-v1:' + REPO;
   const PAGE_DRAFT_KEY = 'cheney-page-drafts-v1:' + REPO;
-  let token = '', catalog, documentState, fileSha = '', queue = Promise.resolve();
+  let token = '', catalog, documentState, fileSha = '', queue = Promise.resolve(), publicationTarget=null;
+  const digest=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(value))))).map(x=>x.toString(16).padStart(2,'0')).join('');
+  async function announcePublication(target){publicationTarget=target;if(window.dispatchEvent&&typeof CustomEvent!=='undefined')window.dispatchEvent(new CustomEvent('cheney-publication',{detail:target}));}
   const noteReads = new Map();
   const empty = () => ({ version: 1, entries: [], journey: {}, animeNotes: {} });
   const encode = text => { let s = ''; for (const byte of new TextEncoder().encode(text)) s += String.fromCharCode(byte); return btoa(s); };
@@ -62,6 +64,7 @@
       const body = { message, branch: 'main', content: encode(JSON.stringify(next, null, 2) + '\n'), ...(fileSha ? { sha: fileSha } : {}) };
       const result = await github('/repos/' + REPO + '/contents/' + FILE, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
       documentState = next; fileSha = result.content.sha;
+      await announcePublication({kind:'snapshot',hash:await digest(next)});
       return result;
     };
     const task = queue.then(run, run); queue = task.catch(() => {}); return task;
@@ -108,8 +111,9 @@
       } catch (error) { token = ''; throw error; }
       return { ok: true, csrfToken: '' };
     }
-    if (p === '/api/admin/logout') { token = ''; catalog = null; documentState = null; fileSha = ''; noteReads.clear(); return { ok: true }; }
+    if (p === '/api/admin/logout') { token = ''; catalog = null; documentState = null; fileSha = ''; publicationTarget=null; noteReads.clear(); return { ok: true }; }
     if (!token) throw new Error('请先登录后台');
+    if(p==='/api/admin/publication')return {target:publicationTarget||{kind:'snapshot',hash:await digest(documentState)}};
     if (p === '/api/admin/password') { await window.CHENEY_ADMIN_VAULT.change(body.currentPassword, body.password); return { ok: true, csrfToken: '' }; }
     if (p === '/api/admin/meta') return { collections: catalog.collections, profileFields: catalog.profileFields, storage: 'github', extraViews: ['pages','media','sources','journey','anime'] };
     if (p === '/api/admin/site-catalog') return catalog.site || {groups:{},pages:[],media:[],sources:[],chapters:[]};
@@ -134,6 +138,7 @@
         if(!body.data||typeof body.data!=='object'||Array.isArray(previous.data)!==Array.isArray(body.data))throw new Error('请保留资料原有结构');
         const json=JSON.stringify(body.data,null,2);if(json.length>12*1024*1024)throw new Error('资料过大，请减少本次修改量');
         const result=await github('/repos/'+REPO+'/contents/'+path,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'Update site data: '+path,branch:'main',sha:body.sha,content:encode(json+'\n')})});
+        await announcePublication({kind:'source',path,hash:await digest(body.data)});
         return {ok:true,sha:result.content.sha};
       }
       return readSource(path);

@@ -13,6 +13,7 @@
     if (value !== undefined) node.textContent = value;
     return node;
   };
+  const mediaURL = value => {if(typeof value!=='string'||!value.trim())return '';try {const u=new URL(value,location.origin+'/');return ['https:','http:'].includes(u.protocol)&&!u.username&&!u.password?u.href:'';}catch{return '';}};
   const monthText = value => {
     const match = /^(\d{4})-(0[1-9]|1[0-2])$/.exec(value || '');
     return match ? `${match[1]} 年 ${Number(match[2])} 月` : String(value || '');
@@ -55,7 +56,7 @@
       item.dataset.region = regionByCity.get(city.id) || '其他';
       const visual = make('div', 'travel-city-visual');
       const image = make('img', 'travel-city-image');
-      image.src = city.image || `${directoryPage ? '../' : ''}assets/travel-covers/${city.id}.jpg`;
+      image.src = mediaURL(city.image) || `${directoryPage ? '../' : ''}assets/travel-covers/${city.id}.jpg`;
       image.alt = `${city.name}·${city.cover || '城市风景'}，城市印象照片`;
       image.loading = index < 4 ? 'eager' : 'lazy';
       image.decoding = 'async';
@@ -169,7 +170,7 @@
         hero.classList.remove('has-city-image');
         if (heroCaption) heroCaption.hidden = true;
       }, { once: true });
-      heroImage.src = city.image || `../assets/travel-covers/${city.id}.jpg`;
+      heroImage.src = mediaURL(city.image) || `../assets/travel-covers/${city.id}.jpg`;
     }
 
     const visitList = document.getElementById('travel-visit-list');
@@ -192,7 +193,7 @@
       visitList.append(row);
 
       (visit.places || []).forEach(place => { if (place && place.name) placeItems.push({ month: visit.month, ...place }); });
-      (visit.photos || []).forEach(photo => { if (photo && photo.src) photoItems.push({ month: visit.month, ...photo }); });
+      [...(visit.photos||[]).map((x,i)=>({...x,type:'image',order:x.order??i})),...(visit.videos||[]).map((x,i)=>({...x,type:'video',order:x.order??(visit.photos||[]).length+i}))].sort((a,b)=>a.order-b.order).forEach(item=>{if(item&&(item.src||item.url))photoItems.push({month:visit.month,...item});});
       if (visit.note && visit.note.trim()) noteItems.push({ month: visit.month, text: visit.note.trim() });
       (visit.flavors || []).forEach(flavor => { if (typeof flavor === 'string' && flavor.trim()) flavorItems.push({ month: visit.month, text: flavor.trim() }); });
     });
@@ -212,19 +213,14 @@
     if (photoItems.length) {
       const grid = make('div', 'travel-photo-grid');
       photoItems.forEach(photo => {
-        if (!/^assets\/travel-photos\/[^/?#]+\.(jpe?g|png|webp)$/i.test(photo.src)) return;
+        const source=mediaURL(photo.src||photo.url);if(!source)return;
         const figure = make('figure', 'travel-photo');
-        const link = make('a', 'travel-photo-link');
-        link.href = '../' + photo.src;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        const img = make('img');
-        img.src = '../' + photo.src;
-        img.alt = photo.caption || `${city.name}旅途照片`;
-        img.loading = 'lazy';
-        link.append(img);
-        figure.append(link);
-        figure.append(make('figcaption', '', `${monthText(photo.month)}${photo.caption ? ' · ' + photo.caption : ''}`));
+        if(photo.type==='video'){
+          const video=make('video');video.src=source;video.controls=true;video.preload='none';video.playsInline=true;video.setAttribute('aria-label',photo.caption||city.name+'旅途视频');if(photo.poster&&mediaURL(photo.poster))video.poster=mediaURL(photo.poster);figure.append(video);
+        }else{
+          const link=make('a','travel-photo-link');link.href=source;link.target='_blank';link.rel='noopener noreferrer';const img=make('img');img.src=source;img.alt=photo.caption||city.name+'旅途照片';img.loading='lazy';link.append(img);figure.append(link);
+        }
+        figure.append(make('figcaption','',monthText(photo.month)+(photo.date?' · '+photo.date:'')+(photo.caption?' · '+photo.caption:'')));
         grid.append(figure);
       });
       if (grid.childElementCount) photos.append(grid);

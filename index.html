@@ -24,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Long+Cang&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/style.css?v=20261020-chapter-access-01">
-<link rel="stylesheet" href="assets/travels.css?v=20261012-02">
+<link rel="stylesheet" href="assets/travels.css?v=20261020-06">
 <link rel="stylesheet" href="assets/pastimes.css?v=20261010-05">
 <link rel="stylesheet" href="assets/admire.css?v=20261016-06&fit=20261016-01">
 <link rel="stylesheet" href="assets/writing.css?v=20261016-12">
@@ -179,7 +179,7 @@
       <div class="about-scroll reveal">
         <div class="avatar-ring">
           <div class="portrait">
-            <img src="assets/portrait.jpg" alt="Cheney 的画像" width="900" height="900">
+            <img data-profile-portrait src="assets/portrait.jpg" alt="Cheney 的画像" width="900" height="900">
           </div>
         </div>
         <!-- 竖排引首，两列，中夹一道界行。四句四字，各对应本站一节：技艺/足迹/读书/往来。
@@ -192,7 +192,7 @@
       </div>
 
       <div class="about-body reveal" style="--i:1">
-        <h3 class="about-greet">你好，我是 Cheney</h3>
+        <h3 class="about-greet" data-profile-greeting>你好，我是 Cheney</h3>
         <p class="about-lead">一名处在科学、技术与创作交汇点的探索者。</p>
         <p>我喜欢理解复杂事物的规律，也喜欢将想法付诸实践。<br>通过代码与 AI 探索新的可能，在科学与创作之间寻找连接。</p>
         <p class="about-motto"><strong>保持好奇，持续探索，认真创造。</strong></p>
@@ -200,7 +200,7 @@
         <!-- 四项条目。习←技艺/作品，好←足迹/读书，期←首屏题词；
              籍贯由你提供。 -->
         <dl class="about-facts">
-          <div><dt>籍</dt><dd><a class="about-origin-link" href="henan.html" target="_blank" rel="noopener" aria-label="在新标签打开河南十八城导览">河南</a></dd></div>
+          <div><dt>籍</dt><dd><a class="about-origin-link" data-profile-field="hometown" href="henan.html" target="_blank" rel="noopener" aria-label="在新标签打开河南十八城导览">河南</a></dd></div>
           <div><dt>习</dt><dd><a class="about-fact-link" href="#works" aria-label="写作，前往作品">写作</a>和 <a class="about-fact-link" href="about/ai.html?v=20261019-ai-01" target="_blank" rel="noopener noreferrer" aria-label="AI 探索，在新标签页打开">AI 探索</a></dd></div>
           <div><dt>好</dt><dd><a class="about-fact-link" href="#travels" aria-label="远游，前往足迹">远游</a>，<a class="about-fact-link" href="#reading" aria-label="旧书，前往读书">旧书</a></dd></div>
           <div><dt>期</dt><dd>不负此行</dd></div>
@@ -474,7 +474,7 @@
     <footer class="colophon">
       <p class="colophon-poem">山不在高，有仙则名；水不在深，有龙则灵</p>
       <div class="colophon-seal" aria-hidden="true">C</div>
-      <p class="colophon-meta">© 2026 Cheney · <a href="/admin/">书斋管理</a></p>
+      <p class="colophon-meta">© 2026 Cheney</p>
     </footer>
   </div>
 </section>
@@ -1251,6 +1251,6 @@ var POEMS = [
 })();
 </script>
   <script src="assets/books.js?v=20261009-04"></script>
-  <script src="assets/travels.js?v=20261012-02" defer></script>
+  <script src="assets/travels.js?v=20261020-06" defer></script>
 </body>
 </html>

@@ -64,7 +64,7 @@ function createStore(root,dataDir){
  function history(id){return db.prepare('SELECT id,revision,draft,updated_at FROM history WHERE entry_id=? ORDER BY id DESC LIMIT 30').all(id).map(x=>({...x,draft:JSON.parse(x.draft)}));}
  function restore(id,version,revision){const row=get(id),old=db.prepare('SELECT draft FROM history WHERE id=? AND entry_id=?').get(version,id);if(!row||!old)throw fail('历史版本不存在',404);return save({id,collection:row.collection,revision,draft:JSON.parse(old.draft),publish:false});}
  function publicState(relative,preview){
-  const groups=relative.startsWith('writing/')?['articles','quotes']:relative==='index.html'?['works','articles','books']:relative.startsWith('works/')?['works']:relative==='about/index.html'?['profile']:relative==='books.html'?['books']:relative==='pastimes/detail.html'?['music']:[];
+  const groups=relative.startsWith('writing/')?['articles','quotes']:relative==='index.html'?['works','articles','books','profile']:relative.startsWith('works/')?['works']:relative==='about/index.html'?['profile']:relative==='books.html'?['books']:relative==='pastimes/detail.html'?['music']:[];
   const state={};for(const group of groups){if(preview||relative==='works/archive.html'||db.prepare('SELECT 1 FROM entries WHERE collection=? AND touched=1 LIMIT 1').get(group))state[group]=(preview?list(group):list(group).filter(x=>x.published||x.touched)).map(x=>({id:x.id,basePath:x.basePath,data:preview?x.draft:x.published,touched:x.touched}));}return state;
  }
  return{db,get,list,published,save,unpublish,history,restore,publicState,labels,profileFields,fail};
