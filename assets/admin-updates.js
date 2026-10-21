@@ -2,11 +2,12 @@
  'use strict';
  const current=document.querySelector('meta[name="cheney-admin-version"]')?.content;
  const nav=document.querySelector('.admin-bar nav');if(!nav)return;
- const badge=document.createElement('span');badge.className='admin-version-badge';badge.textContent=current?'后台 · 当前版本':'本机后台';nav.prepend(badge);
+ const needsCheck=!!current||!!window.CHENEY_GITHUB_CMS;
+ const badge=document.createElement('span');badge.className='admin-version-badge';badge.textContent=current?'后台 · 当前版本':needsCheck?'后台 · 需载入新版':'本机后台';nav.prepend(badge);
  const panel=document.createElement('section');panel.className='admin-update-notice';panel.hidden=true;panel.setAttribute('aria-live','polite');
- const message=document.createElement('span'),action=document.createElement('button'),check=document.createElement('button');action.type=check.type='button';check.textContent='检查后台新版';check.hidden=!current;check.className='admin-update-check';nav.append(check);panel.append(message,action);document.querySelector('.admin-bar').after(panel);
+ const message=document.createElement('span'),action=document.createElement('button'),check=document.createElement('button');action.type=check.type='button';check.textContent='检查后台新版';check.hidden=!needsCheck;check.className='admin-update-check';nav.append(check);panel.append(message,action);document.querySelector('.admin-bar').after(panel);
  let latest=null,checking=false,lastCheck=0;
- async function inspect(manual=false){if(checking||!current)return;checking=true;check.disabled=true;lastCheck=Date.now();try{
+ async function inspect(manual=false){if(checking||!needsCheck)return;checking=true;check.disabled=true;lastCheck=Date.now();try{
   const r=await fetch('/assets/admin-version.json?check='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(8000)});if(!r.ok)throw new Error();const data=await r.json();if(!/^[a-f0-9]{16}$/.test(data.version||''))throw new Error();latest=data;
   const old=data.version!==current;badge.textContent=old?'后台 · 有新版':'后台 · 已是新版';badge.dataset.state=old?'update':'ready';panel.hidden=!old;
   if(old){message.textContent='后台已有新版。保存当前修改后，载入新版即可看到最新入口和功能。';action.textContent='载入新版';}
