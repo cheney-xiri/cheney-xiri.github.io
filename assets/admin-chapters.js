@@ -44,6 +44,6 @@
   }if(!grid.children.length)grid.append(el('p','没有找到这个小节，可以换个关键词。'));};search.oninput=draw;draw();
  }
  for(const c of chapters)c.tools.unshift(['sections','小节目录']);
- const interaction=chapters.find(c=>c.key==='interaction');interaction.note='题壁、结盟、题跋与私人尺素';interaction.tools.push(['messages','评论与尺素']);
+ const interaction=chapters.find(c=>c.key==='interaction');interaction.note='题壁、结盟、题跋与私人尺素';interaction.tools.unshift(['messages','评论与尺素']);
  window.CHENEY_ADMIN_CHAPTERS={chapters,overview,sections};
 })();
