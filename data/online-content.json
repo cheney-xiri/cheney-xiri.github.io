@@ -44,5 +44,20 @@
     }
   ],
   "journey": {},
-  "animeNotes": {}
+  "animeNotes": {},
+  "pages": {
+    "index.html": {
+      "revision": 1,
+      "patches": [
+        {
+          "type": "text",
+          "selector": "#top > div:nth-of-type(5) > p:nth-of-type(2)",
+          "textIndex": 0,
+          "original": "自信人生二百年，会当击水三千里",
+          "value": "自信人生二百年，会当水击三千里",
+          "id": "685e5e08-7eba-4544-8bb4-0246e320001a"
+        }
+      ]
+    }
+  }
 }
