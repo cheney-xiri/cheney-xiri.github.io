@@ -11,7 +11,7 @@
   const current=()=>!closed&&(!ctx.isCurrent||ctx.isCurrent());
   const channel=()=>channels.find(x=>x.kind===selected);
   const buttons=new Map();
-  for(const c of channels){const b=el('button');b.type='button';b.disabled=true;b.dataset.kind=c.kind;b.append(el('strong',c.name),el('small',c.note),el('span','', 'inbox-channel-count'));b.onclick=()=>{selected=c.kind;draw();};tabs.append(b);buttons.set(c.kind,b);}
+  for(const c of channels){const b=el('button');b.type='button';b.disabled=true;b.dataset.kind=c.kind;b.append(el('strong',c.name),el('small',c.note),el('span','', 'inbox-channel-count'));b.onclick=()=>{serial++;selected=c.kind;if(c.kind!=='letter'){privateRecords=[];delete counts.letter;}draw();if(c.kind!=='letter'||service.authenticated)refresh();};tabs.append(b);buttons.set(c.kind,b);}
   function updateTabs(){for(const c of channels){const b=buttons.get(c.kind);b.setAttribute('aria-pressed',String(c.kind===selected));b.querySelector('.inbox-channel-count').textContent=counts[c.kind]===undefined?'':counts[c.kind]+' 条';}}
   function header(){const c=channel(),head=el('div',undefined,'inbox-channel-heading'),copy=el('div');copy.append(el('h3',c.name),el('p',c.kind==='letter'?'来信只在这里显示，不会公开。':'这里的评论向所有访客公开。','field-help'));head.append(copy);if(c.path){const a=el('a','打开公开页面 ↗');a.href='/interaction/'+c.path;a.target='_blank';a.rel='noopener';head.append(a);}stage.append(head);}
   function loginForm(){
@@ -35,7 +35,7 @@
    const version=++serial;
    try{const results=await Promise.all(channels.filter(c=>c.path).map(async c=>[c.kind,(await service.request('/api/messages?kind='+c.kind)).messages]));if(!current()||version!==serial)return;
     for(const [kind,records]of results){publicRecords[kind]=records;counts[kind]=records.length;}
-    if(service.authenticated){const {messages}=await service.request('/api/admin/messages',{admin:true});if(!current()||version!==serial)return;privateRecords=messages.filter(m=>m.kind==='letter');counts.letter=privateRecords.length;}
+    if(service.authenticated&&selected==='letter'){const {messages}=await service.request('/api/admin/messages',{admin:true});if(!current()||version!==serial)return;privateRecords=messages.filter(m=>m.kind==='letter');counts.letter=privateRecords.length;}
     else{privateRecords=[];delete counts.letter;}draw();
    }catch(e){if(current()){ctx.status(e.message,true);if(e.status===401){privateRecords=[];delete counts.letter;draw();}}}
   }
