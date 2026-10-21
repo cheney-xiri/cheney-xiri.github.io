@@ -6,7 +6,7 @@ const routes=new Map([
  ['/api/admin/login',['POST']],['/api/admin/logout',['POST']],
  ['/api/admin/messages',['GET']],['/api/owner/delete',['POST']]
 ]);
-export function createInteractionGateway(kv,password,{allowedOrigins=['https://cheney-xiri.github.io']}={}){
+export function createInteractionGateway(kv,password,{allowedOrigins=['https://cheney-xiri.github.io','https://cheney-xiri.netlify.app']}={}){
  const runtime=createEdgeHandler(kv,{entries:[]},{labels:{},profileFields:{}},password);
  return async(request,{clientIp='anonymous'}={})=>{
   const url=new URL(request.url),origin=request.headers.get('Origin'),allowed=origin===url.origin||allowedOrigins.includes(origin);
