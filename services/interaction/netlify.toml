@@ -1,7 +1,7 @@
 [build]
   base = "services/interaction"
   publish = "public"
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ../../server/interaction-gateway.mjs ../../server/edge-runtime.mjs ../../netlify.toml"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ../../server/interaction-gateway.mjs ../../server/edge-runtime.mjs"
 
 [build.environment]
   NODE_VERSION = "22"
@@ -15,4 +15,3 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
-
