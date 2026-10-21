@@ -20,7 +20,7 @@ test('cross-site gateway keeps letters private and requires an authenticated inb
   const post=await call('/api/messages',{method:'POST',body:{kind,text:'这是 '+kind+' 的测试留言',visibility:kind==='letter'?'public':'private'}});assert.equal(post.status,201);assert.equal(post.data.visibility,kind==='letter'?'private':'public');
   const feed=await call('/api/messages?kind='+kind);assert.equal(feed.data.messages.length,kind==='letter'?0:1);assert.equal(feed.headers.get('Access-Control-Allow-Origin'),origin);assert.match(feed.headers.get('Cache-Control'),/no-store/);
  }
- const mirrorOrigin='https://cheney-xiri.netlify.app';
+ const mirrorOrigin='https://cheney-xiri.pages.dev';
  const mirrorHeaders={Origin:mirrorOrigin};
  const mirrorFeed=await call('/api/messages?kind=wall',{headers:mirrorHeaders});
  assert.equal(mirrorFeed.status,200);assert.equal(mirrorFeed.data.messages.length,1);

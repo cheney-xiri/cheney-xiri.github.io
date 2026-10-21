@@ -6,6 +6,10 @@
 [build.environment]
   NODE_VERSION = "24"
 
+# Preserve the existing .html routes used by page edits and the content catalog.
+[build.processing.html]
+  pretty_urls = false
+
 # Public mirrors do not deploy a second database or private inbox function.
 [functions]
   directory = "services/website/functions"

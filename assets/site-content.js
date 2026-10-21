@@ -28,7 +28,7 @@
       if(p.type==='background'){remember(target,'backgroundImage');target.style.backgroundImage='url('+JSON.stringify(url)+')';}
     }}finally{applying=false;}
   }
-  function key(){let pathname=location.pathname.replace(/^\//,'');if(!pathname||pathname.endsWith('/'))pathname+='index.html';const search=new URLSearchParams(location.search);['v','cms-edit','cms-preview','writing','fit','ink'].forEach(x=>search.delete(x));search.sort();return pathname+(search.size?'?'+search:'');}
+  function key(){let pathname=(document.querySelector('meta[name="cheney-page-path"]')?.content||location.pathname).replace(/^\//,'');if(!pathname||pathname.endsWith('/'))pathname+='index.html';const search=new URLSearchParams(location.search);['v','cms-edit','cms-preview','writing','fit','ink'].forEach(x=>search.delete(x));search.sort();return pathname+(search.size?'?'+search:'');}
   const ready=fetch('/api/site-edits',{cache:'no-store'}).then(r=>r.ok?r.json():{}).then(data=>{const exact=key(),base=exact.split('?')[0];active=[...(data.pages?.[base]?.patches||[]),...(exact!==base?data.pages?.[exact]?.patches||[]:[])];apply();const observer=new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(()=>apply(),100);});observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['src','srcset','href','poster']});let mobile=innerWidth<=760;addEventListener('resize',()=>{if(mobile!==(innerWidth<=760)){mobile=innerWidth<=760;apply([...active]);}});}).catch(()=>{});
   window.CHENEY_PAGE_CONTENT={ready,apply,key};
 })();

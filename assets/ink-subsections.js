@@ -4,7 +4,8 @@
  if(document.documentElement.dataset.inkPreserve||document.body.id==='ink-home')return;
  const assetRoot=new URL('.',document.currentScript.src);
  const type=document.body.dataset.inkPage;
- const path=location.pathname;
+ const source=document.querySelector('meta[name="cheney-page-path"]')?.content;
+ const path=source?'/'+source:location.pathname;
  const topic=new URLSearchParams(location.search).get('topic');
  const imageUrl=key=>new URL('ink/subsections/'+key+'-v1.webp',assetRoot).href;
  // Each subsection chooses a scene independently of its foreground illustrations.
