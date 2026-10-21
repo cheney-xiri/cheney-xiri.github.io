@@ -15,6 +15,7 @@
     if (address.origin !== location.origin || !address.pathname.startsWith('/api/')) return originalFetch(input, options);
     const method = String(options.method || input?.method || 'GET').toUpperCase();
     const json = (data, status = 200) => Promise.resolve(new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } }));
+    if(address.pathname==='/api/messages'&&window.CHENEY_INTERACTION_SERVICE)return window.CHENEY_INTERACTION_SERVICE.request(address.pathname+address.search,{method,headers:options.headers,body:options.body}).then(data=>json(data)).catch(error=>json({error:error.message},503));
     if (method !== 'GET') return json({ error: '留言服务尚未连接，你的输入没有发送或保存。' }, 503);
     if (address.pathname === '/api/content-state') return json({ state: {} });
     if (address.pathname === '/api/site-edits') return snapshot.then(data=>data?json({pages:data.pages||{}}):originalFetch('/assets/site-edits.json',{cache:'no-store'}));
@@ -26,8 +27,11 @@
     if (address.pathname === '/api/admin/session') return json({ authenticated: false, configured: false, canSetup: false });
     return json({ error: '此功能暂未在预览站开放。' }, 503);
   };
-  document.addEventListener('DOMContentLoaded', () => {
-    for (const form of document.querySelectorAll('#interaction-form, #anime-comment-form, #comment-form')) {
+  document.addEventListener('DOMContentLoaded', async () => {
+    const forms=[...document.querySelectorAll('#interaction-form, #anime-comment-form, #comment-form')];for(const form of forms)for(const b of form.querySelectorAll('[type=submit]'))b.disabled=true;
+    const connected=await window.CHENEY_INTERACTION_SERVICE?.ready;
+    for (const form of forms) {
+      if(connected&&form.id==='interaction-form'&&!new URLSearchParams(location.search).has('cms-edit')){for(const b of form.querySelectorAll('[type=submit]'))b.disabled=false;continue;}
       const note = document.createElement('p');
       note.textContent = '留言服务尚未开放，当前输入不会发送或保存。';
       note.style.cssText = 'font:inherit;line-height:1.8;margin:1em 0;opacity:.85';

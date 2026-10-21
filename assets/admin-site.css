@@ -32,3 +32,5 @@
 .editor-actions{position:sticky;bottom:12px;z-index:5;background:#fbfcf8f5;border:1px solid #d6ddcf;border-radius:12px;padding:12px;box-shadow:0 4px 20px #18392a15}
 @media(max-width:1100px){.subsection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.subsection-grid{grid-template-columns:1fr}.subsection-card{padding:16px}.editor-actions{bottom:5px}.profile-field-group .field-grid{grid-template-columns:1fr}}
+
+.inbox-messages{display:grid;gap:16px;margin-top:18px}.inbox-messages .message-card>p{white-space:pre-wrap;overflow-wrap:anywhere}.inbox-private{border-left:3px solid #96524a}.inbox-messages time{font-size:.75rem;color:#586b61}
