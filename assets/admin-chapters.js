@@ -24,5 +24,26 @@
    const card=el('button',undefined,'admin-chapter-card');card.type='button';card.dataset.chapter=c.key;const img=el('img');img.src='/assets/ink/'+c.art+'.webp';img.alt='';img.loading='lazy';img.onerror=()=>img.remove();const copy=el('span',undefined,'admin-chapter-copy');copy.append(el('small',String(i).padStart(2,'0')+' / '+(c.group==='home'?'首页章节':catalog.pages.filter(x=>x.group===c.group).length+' 个页面')),el('strong',c.title),el('span',c.note),el('em','进入管理 ↗'));card.append(img,copy);card.onclick=()=>ctx.navigate('chapter:'+c.key);grid.append(card);
   }if(q){const matches=catalog.pages.filter(x=>(x.title+' '+x.path).toLowerCase().includes(q)).slice(0,20);if(matches.length){results.append(el('h3','相关页面'));for(const page of matches){const b=el('button',page.title);b.type='button';b.onclick=()=>ctx.navigate('pages',{scope:{path:page.path,group:page.group}});results.append(b);}}if(!grid.children.length&&!matches.length)results.append(el('p','没有找到匹配内容，可以换个关键词。'));}};search.oninput=draw;draw();
  }
- window.CHENEY_ADMIN_CHAPTERS={chapters,overview};
+ async function sections(box,ctx){
+  const c=chapters.find(x=>x.key===ctx.scope?.chapter);if(!c)return;
+  const catalog=await ctx.api('/api/admin/site-catalog');if(ctx.isCurrent&&!ctx.isCurrent())return;
+  box.className='workspace full';const panel=el('section',undefined,'full-panel subsection-directory');
+  panel.append(el('small',c.title+' / 内容目录'),el('h2','从要补充的小节开始'),el('p','先选小节，再集中编辑文字、图片和视频。保存草稿留待整理，发布后才会更新前台。','field-help'));
+  const quick=el('div',undefined,'subsection-shortcuts');
+  for(const [tool,label]of c.tools.filter(x=>!['sections','pages','sources'].includes(x[0]))){const b=el('button',label);b.type='button';b.onclick=()=>ctx.navigate('chapter:'+c.key,{tool});quick.append(b);}panel.append(quick);
+  if(c.key==='interaction'){const note=el('div',undefined,'interaction-admin-note');note.append(el('strong','公开评论与私人来信分开管理'),el('p','题壁、结盟、题跋向所有访客公开；尺素只进入站主信箱。'));panel.append(note);}
+  const search=el('input');search.type='search';search.placeholder='查找本章小节';search.setAttribute('aria-label','查找本章小节');panel.append(search);
+  const grid=el('div',undefined,'subsection-grid');panel.append(grid);box.replaceChildren(panel);
+  const home={path:'index.html',title:'主页 · '+c.title,home:true};
+  const pages=[home,...(c.group==='home'?[]:catalog.pages.filter(x=>x.group===c.group&&!/owner\.html/.test(x.path)&&!['craft/joseki-detail.html','pastimes/anime-scene.html','pastimes/anime-work.html','pastimes/game.html','pastimes/detail.html','works/entry.html','writing/entry.html'].includes(x.path)))];
+  const draw=()=>{grid.replaceChildren();for(const p of pages.filter(p=>p.title.toLowerCase().includes(search.value.trim().toLowerCase()))){
+   const card=el('article',undefined,'subsection-card');card.append(el('small',p.home?'主页展示':'独立小节'),el('h3',p.title.replace(/\s*[·|｜]\s*Cheney.*$/i,'')));
+   card.append(el('p',p.home?'首页标题、介绍、封面与跳转入口':'文字与说明 · 图片与视频 · 页面链接','field-help'));
+   const actions=el('div',undefined,'site-tools'),edit=el('button','编辑本小节');edit.type='button';edit.onclick=()=>ctx.navigate('chapter:'+c.key,{tool:'pages',scope:{...ctx.scope,path:p.path}});
+   const preview=el('a','查看前台 ↗');preview.href='/'+p.path+(p.home?'#'+c.section:'');preview.target='_blank';preview.rel='noopener';actions.append(edit,preview);card.append(actions);grid.append(card);
+  }if(!grid.children.length)grid.append(el('p','没有找到这个小节，可以换个关键词。'));};search.oninput=draw;draw();
+ }
+ for(const c of chapters)c.tools.unshift(['sections','小节目录']);
+ const interaction=chapters.find(c=>c.key==='interaction');interaction.note='题壁、结盟、题跋与私人尺素';interaction.tools.push(['messages','评论与尺素']);
+ window.CHENEY_ADMIN_CHAPTERS={chapters,overview,sections};
 })();

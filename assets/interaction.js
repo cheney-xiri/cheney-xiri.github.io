@@ -42,7 +42,7 @@
     parentInput.value = '';
     heading.textContent = '写下你的话';
     cancel.hidden = true;
-    if (kind === 'letter') visibilityField.hidden = false;
+    if (visibilityField) visibilityField.hidden = true;
   }
   cancel.addEventListener('click', resetReply);
 
@@ -50,10 +50,7 @@
     parentInput.value = message.id;
     heading.textContent = '回复 ' + message.name;
     cancel.hidden = false;
-    if (kind === 'letter') {
-      form.elements.visibility.value = 'public';
-      visibilityField.hidden = true;
-    }
+    if (kind === 'letter') return;
     form.scrollIntoView({ behavior: 'smooth', block: 'start' });
     form.elements.text.focus({ preventScroll: true });
   }
@@ -114,11 +111,12 @@
   }
 
   async function loadMessages() {
+    if(kind==='letter'){list.replaceChildren();list.hidden=true;return;}
     try {
       var response = await fetch(apiBase + '/api/messages?kind=' + encodeURIComponent(kind), { cache: 'no-store' });
       if (!response.ok) throw new Error('服务暂时不可用');
       var data = await response.json();
-      renderMessages(data.messages || []);
+      if(data.preview){list.replaceChildren(node('p','interaction-empty','评论服务尚未开放，开放后留言会展示在这里。'));return;}renderMessages(data.messages || []);
     } catch {
       list.replaceChildren(node('p','interaction-error','留言服务暂时没有连接，请稍后刷新重试。'));
     }
@@ -134,8 +132,8 @@
       siteName: String(fields.get('siteName') || '').trim(),
       siteUrl: String(fields.get('siteUrl') || '').trim(),
       article: String(fields.get('article') || '').trim(),
-      visibility: String(fields.get('visibility') || 'public'),
-      parentId: String(fields.get('parentId') || ''),
+      visibility: kind === 'letter' ? 'private' : 'public',
+      parentId: kind === 'letter' ? '' : String(fields.get('parentId') || ''),
       confirm: String(fields.get('confirm') || '')
     };
     if (payload.text.length < 2) return setStatus('请至少写下两个字。', 'error');

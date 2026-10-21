@@ -29,6 +29,7 @@
     { title: '齐鲁', ids: ['jinan', 'zibo', 'taian'] }
   ];
   const regionByCity = new Map(cityGroups.flatMap(group => group.ids.map(id => [id, group.title])));
+  const regionForCity = city => regionByCity.get(city.id) || ({河南:'中原',北京:'京津',天津:'京津',辽宁:'东北',吉林:'东北',黑龙江:'东北',湖北:'荆襄',重庆:'巴渝',山东:'齐鲁'})[city.province] || '其他';
   const citySequence = cities => {
     const byId = new Map(cities.map(city => [city.id, city]));
     const ids = cityGroups.flatMap(group => group.ids);
@@ -53,10 +54,11 @@
     displayedCities.forEach((city, index) => {
       const item = make('li', 'travel-city');
       item.dataset.cityId = city.id;
-      item.dataset.region = regionByCity.get(city.id) || '其他';
+      item.dataset.region = regionForCity(city);
       const visual = make('div', 'travel-city-visual');
       const image = make('img', 'travel-city-image');
       image.src = mediaURL(city.image) || `${directoryPage ? '../' : ''}assets/travel-covers/${city.id}.jpg`;
+      image.addEventListener('error',()=>{image.src='/assets/ink/scroll-river-v1.webp';},{once:true});
       image.alt = `${city.name}·${city.cover || '城市风景'}，城市印象照片`;
       image.loading = index < 4 ? 'eager' : 'lazy';
       image.decoding = 'async';
@@ -104,9 +106,10 @@
       };
       addFilter('全部', cities.length);
       cityGroups.forEach(group => {
-        const cityCount = group.ids.filter(id => cityById.has(id)).length;
+        const cityCount = cities.filter(city=>regionForCity(city)===group.title).length;
         if (cityCount) addFilter(group.title, cityCount);
       });
+      const otherCount=cities.filter(city=>regionForCity(city)==='其他').length;if(otherCount)addFilter('其他',otherCount);
       const applyFilter = () => {
         const query = (search?.value || '').trim().toLocaleLowerCase();
         let visible = 0;
@@ -162,12 +165,12 @@
         hero.classList.add('has-city-image');
         if (heroCaption) {
           heroCaption.textContent = `城市印象 · ${city.cover || city.name} ↗`;
-          heroCaption.hidden = false;
+          heroCaption.href=mediaURL(city.image)||'credits.html';
+          heroCaption.hidden = heroImage.dataset.placeholder==='true'||(city.image||'').includes('/assets/ink/');
         }
       }, { once: true });
       heroImage.addEventListener('error', () => {
-        heroImage.hidden = true;
-        hero.classList.remove('has-city-image');
+        heroImage.dataset.placeholder='true';heroImage.src='/assets/ink/scroll-river-v1.webp';
         if (heroCaption) heroCaption.hidden = true;
       }, { once: true });
       heroImage.src = mediaURL(city.image) || `../assets/travel-covers/${city.id}.jpg`;
@@ -192,40 +195,47 @@
       row.append(make('span', 'travel-visit-label', index === 0 ? '初至' : '再访'));
       visitList.append(row);
 
-      (visit.places || []).forEach(place => { if (place && place.name) placeItems.push({ month: visit.month, ...place }); });
+      (visit.places || []).forEach(place => { if(typeof place==='string')place={name:place};if (place && place.name) {placeItems.push({ month: visit.month, ...place });for(const photo of place.photos||[])photoItems.push({month:visit.month,...photo,type:'image',place:place.name});for(const video of place.videos||[])photoItems.push({month:visit.month,...video,type:'video',place:place.name});} });
       [...(visit.photos||[]).map((x,i)=>({...x,type:'image',order:x.order??i})),...(visit.videos||[]).map((x,i)=>({...x,type:'video',order:x.order??(visit.photos||[]).length+i}))].sort((a,b)=>a.order-b.order).forEach(item=>{if(item&&(item.src||item.url))photoItems.push({month:visit.month,...item});});
       if (visit.note && visit.note.trim()) noteItems.push({ month: visit.month, text: visit.note.trim() });
       (visit.flavors || []).forEach(flavor => { if (typeof flavor === 'string' && flavor.trim()) flavorItems.push({ month: visit.month, text: flavor.trim() }); });
     });
 
+    const landscapeNames=[...new Set([...placeItems.map(p=>p.name),...photoItems.map(p=>p.place||'')])];
+    const landscapeIds=new Map(landscapeNames.map((name,i)=>[name,'travel-landscape-'+i]));
     if (placeItems.length) {
       const list = make('ul', 'travel-place-items');
       placeItems.forEach(place => {
         const row = make('li', 'travel-place-item');
         row.append(make('span', 'travel-item-month', monthText(place.month)));
-        row.append(make('strong', '', place.name));
+        const placeLink=make('a','travel-place-gallery-link',place.name);placeLink.href='#'+landscapeIds.get(place.name);row.append(placeLink);
         if (place.note) row.append(make('p', '', place.note));
         list.append(row);
       });
       places.append(list);
     } else empty(places, '去过的具体地点，待续入此卷。');
 
-    if (photoItems.length) {
-      const grid = make('div', 'travel-photo-grid');
-      photoItems.forEach(photo => {
-        const source=mediaURL(photo.src||photo.url);if(!source)return;
-        const figure = make('figure', 'travel-photo');
-        if(photo.type==='video'){
-          const video=make('video');video.src=source;video.controls=true;video.preload='none';video.playsInline=true;video.setAttribute('aria-label',photo.caption||city.name+'旅途视频');if(photo.poster&&mediaURL(photo.poster))video.poster=mediaURL(photo.poster);figure.append(video);
-        }else{
-          const link=make('a','travel-photo-link');link.href=source;link.target='_blank';link.rel='noopener noreferrer';const img=make('img');img.src=source;img.alt=photo.caption||city.name+'旅途照片';img.loading='lazy';link.append(img);figure.append(link);
-        }
-        figure.append(make('figcaption','',monthText(photo.month)+(photo.date?' · '+photo.date:'')+(photo.caption?' · '+photo.caption:'')));
-        grid.append(figure);
+    if (landscapeNames.length) {
+      const index=make('nav','travel-landscape-index');index.setAttribute('aria-label','按地点查看沿途风景');
+      landscapeNames.forEach(place=>{const link=make('a','',place||'沿途风景');link.href='#'+landscapeIds.get(place);index.append(link);});photos.append(index);
+      landscapeNames.forEach(place=>{
+        const group=make('section','travel-landscape-group');group.id=landscapeIds.get(place);
+        const matching=photoItems.filter(photo=>(photo.place||'')===place&&mediaURL(photo.src||photo.url));
+        const heading=make('header','travel-landscape-head');heading.append(make('h3','',place||'沿途风景'),make('span','',matching.length+' 项影像'));group.append(heading);
+        const grid=make('div','travel-photo-grid');
+        matching.forEach(photo=>{
+          const source=mediaURL(photo.src||photo.url),figure=make('figure','travel-photo');
+          if(photo.type==='video'){
+            const video=make('video');video.src=source;video.controls=true;video.preload='none';video.playsInline=true;video.setAttribute('aria-label',photo.caption||city.name+'旅途视频');if(photo.poster&&mediaURL(photo.poster))video.poster=mediaURL(photo.poster);figure.append(video);
+          }else{
+            const link=make('a','travel-photo-link');link.href=source;link.target='_blank';link.rel='noopener noreferrer';const img=make('img');img.src=source;img.alt=photo.caption||city.name+'旅途照片';img.loading='lazy';link.append(img);figure.append(link);
+          }
+          figure.append(make('figcaption','',monthText(photo.month)+(photo.date?' · '+photo.date:'')+(photo.caption?' · '+photo.caption:'')));grid.append(figure);
+        });
+        if(matching.length)group.append(grid);else empty(group,'这里的风景，等影像慢慢续上。');
+        photos.append(group);
       });
-      if (grid.childElementCount) photos.append(grid);
-      else empty(photos, '照片整理好之后，会在这里按到访时间陈列。');
-    } else empty(photos, '照片整理好之后，会在这里按到访时间陈列。');
+    } else empty(photos, '沿途的照片与视频，会在这里按地点收好。');
 
     if (noteItems.length) {
       noteItems.forEach(note => {

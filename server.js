@@ -377,7 +377,7 @@ async function handle(req, res) {
     if (!KINDS.has(kind)) return respond(res, 400, { error: '留言类别不正确' });
     const subject = kind === 'anime' ? url.searchParams.get('subject') || '' : '';
     if (kind === 'anime' && !ANIME_ID.test(subject)) return respond(res, 400, { error:'作品编号不正确' });
-    const visible = loadStore().messages.filter(message => message.kind === kind && (kind !== 'anime' || message.subject === subject) && message.visibility === 'public' && !containsPrivateContact([message.name,message.text,message.siteName,message.siteUrl,message.article]));
+    const visible = loadStore().messages.filter(message => message.kind !== 'letter' && message.kind === kind && (kind !== 'anime' || message.subject === subject) && message.visibility === 'public' && !containsPrivateContact([message.name,message.text,message.siteName,message.siteUrl,message.article]));
     return respond(res, 200, { messages: visible.slice(-120).reverse().map(publicView) });
   }
   if (url.pathname === '/api/messages' && req.method === 'POST') {
@@ -404,8 +404,8 @@ async function handle(req, res) {
       const parent = store.messages.find(message => message.id === parentId);
       if (!parent || parent.kind !== kind || (kind === 'anime' && parent.subject !== subject) || parent.visibility !== 'public' || parent.parentId) return respond(res, 400, { error: '无法回复这条留言' });
     }
-    const visibility = kind === 'letter' && body.visibility === 'private' && !parentId ? 'private' : 'public';
-    if (kind === 'letter' && !['private','public'].includes(body.visibility) && !parentId) return respond(res, 400, { error: '请选择可见范围' });
+    const visibility = kind === 'letter' ? 'private' : 'public';
+    if (kind === 'letter' && parentId) return respond(res, 400, { error: '尺素仅供站主私下阅读，不支持公开回复' });
     if (POST_GAP_MS > 0 && rateLimited(recentPosts, clientAddress(req), POST_GAP_MS)) return respond(res, 429, { error: '请稍等片刻再留言' });
     const message = { id: crypto.randomUUID(), kind, name, text, siteName, siteUrl, article, subject, visibility, parentId, createdAt: new Date().toISOString() };
     store.messages.push(message);
@@ -487,7 +487,7 @@ async function handle(req, res) {
     if (kind && kind !== 'anime') return respond(res, 400, { error:'留言类别不正确' });
     const visible = loadStore().messages.filter(message => kind === 'anime'
       ? message.kind === 'anime' && message.visibility === 'public'
-      : message.kind === 'letter' && message.visibility === 'private');
+      : message.kind === 'letter');
     return respond(res, 200, { messages:visible.slice(-200).reverse().map(publicView) });
   }
   if (url.pathname === '/api/owner/delete' && req.method === 'POST') {

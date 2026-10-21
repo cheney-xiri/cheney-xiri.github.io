@@ -81,3 +81,13 @@
 @media(prefers-reduced-motion:reduce){ .interaction-switch a{ transition:none; } }
 
 .interaction-hub .interaction-doors{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.interaction-hub .interaction-door h2{font:400 2rem/1.5 var(--font-head);margin:.8rem 0}.interaction-hub .interaction-door{min-height:14rem;background:rgba(245,244,231,.65)}@media(max-width:600px){.interaction-hub .interaction-doors{grid-template-columns:1fr}.interaction-hub .interaction-door{min-height:11rem}}
+
+/* Quiet, legible doorways in the scroll */
+.interaction-door{position:relative;border-radius:3px;border-top:1px solid currentColor;background:linear-gradient(135deg,rgba(241,244,229,.83),rgba(230,239,231,.6));transition:transform .2s ease}
+.interaction-door:hover{transform:translateY(-3px)}
+.interaction-door a::before{content:"";position:absolute;inset:0;z-index:1}.interaction-door:focus-within{outline:2px solid #7b3733;outline-offset:4px}
+.interaction-door h2,.interaction-door h3{color:#233e38}.interaction-door p{color:#344a43}
+.interaction-door-no{color:#7d4639}.interaction-hub .interaction-door{background:linear-gradient(135deg,rgba(241,244,229,.83),rgba(230,239,231,.6))}
+.letter-privacy{padding:12px 0;border-bottom:1px solid var(--rule);color:var(--zhu-deep);font-size:.85rem}
+.letter-explanation{padding:1.4rem;border-left:1px solid var(--rule)}.letter-explanation .interaction-feed-note{font-size:1rem;line-height:2.2}
+@media(prefers-reduced-motion:reduce){.interaction-door{transition:none}.interaction-door:hover{transform:none}}

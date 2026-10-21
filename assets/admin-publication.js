@@ -6,7 +6,7 @@
  let target,epoch=0,timer,attempts=0,checking=false;
  async function poll(){if(!target||app.hidden||checking)return;checking=true;const version=epoch;clearTimeout(timer);check.disabled=true;try{
   const fastPath=target.kind==='source'?target.path:'data/online-content.json';
-  const fast=await fetch('https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/'+fastPath+'?fresh='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(5000)}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const fast=(target.kind!=='source'||target.path==='assets/travels.json')&&await fetch('https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/'+fastPath+'?fresh='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(5000)}).then(r=>r.ok?r.json():null).catch(()=>null);
   const hash=fast&&Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(fast))))).map(x=>x.toString(16).padStart(2,'0')).join('');
   if(version!==epoch)return;
   if(hash===target.hash){box.dataset.state='ready';text.textContent='最新内容已同步，刷新前台即可查看。网站静态备份仍会自动更新。';front.href='/?v='+Date.now();return;}

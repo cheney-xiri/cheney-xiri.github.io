@@ -15,7 +15,7 @@
     if (address.origin !== location.origin || !address.pathname.startsWith('/api/')) return originalFetch(input, options);
     const method = String(options.method || input?.method || 'GET').toUpperCase();
     const json = (data, status = 200) => Promise.resolve(new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } }));
-    if (method !== 'GET') return json({ error: '预览站暂未开放提交功能，你的输入没有发送或保存。' }, 503);
+    if (method !== 'GET') return json({ error: '留言服务尚未连接，你的输入没有发送或保存。' }, 503);
     if (address.pathname === '/api/content-state') return json({ state: {} });
     if (address.pathname === '/api/site-edits') return snapshot.then(data=>data?json({pages:data.pages||{}}):originalFetch('/assets/site-edits.json',{cache:'no-store'}));
     if (address.pathname === '/api/messages') return json({ messages: [], preview: true });
@@ -29,7 +29,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     for (const form of document.querySelectorAll('#interaction-form, #anime-comment-form, #comment-form')) {
       const note = document.createElement('p');
-      note.textContent = '当前为预览站，留言提交暂未开放。';
+      note.textContent = '留言服务尚未开放，当前输入不会发送或保存。';
       note.style.cssText = 'font:inherit;line-height:1.8;margin:1em 0;opacity:.85';
       form.prepend(note);
       for (const button of form.querySelectorAll('[type="submit"]')) { button.disabled = true; button.textContent = '暂未开放'; }

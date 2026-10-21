@@ -37,6 +37,11 @@ test('public replies, private letters and contact blocking stay separate', async
     const privatePost = await request(base, '/api/messages', 'POST', {kind:'letter',name:'写信人',text:'只给站主看的内容。',visibility:'private'});
     assert.equal(privatePost.status, 201);
     assert.equal(privatePost.data.visibility, 'private');
+    const forgedPublic=await request(base,'/api/messages','POST',{kind:'letter',text:'参数被篡改也只能私下阅读。',visibility:'public'});
+    assert.equal(forgedPublic.status,201);assert.equal(forgedPublic.data.visibility,'private');
+    const noVisibility=await request(base,'/api/messages','POST',{kind:'letter',text:'不传可见范围仍是私信。'});
+    assert.equal(noVisibility.status,201);assert.equal(noVisibility.data.visibility,'private');
+    for(const kind of ['ally','featured']){const post=await request(base,'/api/messages','POST',{kind,text:'公开栏目留言测试。',visibility:'private'});assert.equal(post.data.visibility,'public');assert.equal((await request(base,'/api/messages?kind='+kind)).data.messages.length,1);}
     const publicLetters = await request(base, '/api/messages?kind=letter');
     assert.deepEqual(publicLetters.data.messages, []);
     const withoutPassword = await request(base, '/api/owner/messages');
@@ -47,8 +52,8 @@ test('public replies, private letters and contact blocking stay separate', async
     assert.equal(setup.status, 201);
     const inbox = await request(base, '/api/owner/messages', 'GET', null, ownerPassword);
     assert.equal(inbox.status, 200);
-    assert.equal(inbox.data.messages.length, 1);
-    assert.equal(inbox.data.messages[0].text, '只给站主看的内容。');
+    assert.equal(inbox.data.messages.length, 3);
+    assert.ok(inbox.data.messages.some(x=>x.text==='只给站主看的内容。'));
 
     const blockedPhone = await request(base, '/api/messages', 'POST', {kind:'wall',text:'请打 138 0013 8000 找我。'});
     assert.equal(blockedPhone.status, 400);

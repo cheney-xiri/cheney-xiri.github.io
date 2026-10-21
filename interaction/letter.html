@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css?v=20261009-21">
-  <link rel="stylesheet" href="../assets/interaction.css?v=20261009-02">
+  <link rel="stylesheet" href="../assets/interaction.css?v=20261021-01">
 <!-- ink-site:start -->
 <script>(function(){var h=document.documentElement,p=location.pathname,q=new URLSearchParams(location.search);h.classList.add('ink-site');if(p.endsWith('/pastimes/physics.html'))h.dataset.inkPreserve='physics';else if(p.endsWith('/craft/photography.html'))h.dataset.inkPreserve='photography';else if(p.endsWith('/pastimes/detail.html')&&q.get('topic')==='editing')h.dataset.inkPreserve='editing';})();</script>
 <link rel="stylesheet" href="../assets/ink-site.css?v=20261019-review-02">
@@ -30,7 +30,7 @@
   <header class="interaction-bar"><a href="../index.html#links" class="interaction-brand">Cheney <small>互动</small></a><a href="../index.html#links" class="interaction-back">返回互动总览</a></header>
   <main id="interaction-main" class="interaction-main">
     <nav class="interaction-crumb" aria-label="面包屑"><a href="../index.html#links">互动</a><span aria-hidden="true">／</span><span>尺素</span></nav>
-    <header class="interaction-hero"><p class="interaction-index">贰 · 往来</p><h1>尺素</h1><p>写一封信给 Cheney。你可以选择只让我看见，也可以把它公开留在这页。</p></header>
+    <header class="interaction-hero"><p class="interaction-index">贰 · 往来</p><h1>尺素</h1><p>写一封信给 Cheney。这封信只会送达我的私人信箱，不会出现在公开评论里。</p></header>
     <nav class="interaction-switch" aria-label="其他互动方式">
       <a href="wall.html" target="_blank" rel="noopener" data-kind="wall">题壁</a><a href="letter.html" target="_blank" rel="noopener" data-kind="letter">尺素</a><a href="ally.html" target="_blank" rel="noopener" data-kind="ally">结盟</a><a href="featured.html" target="_blank" rel="noopener" data-kind="featured">题跋</a>
     </nav>
@@ -46,21 +46,21 @@
           <label class="interaction-field" data-only="ally" hidden><span>网站地址 <small>选填</small></span><input name="siteUrl" type="url" inputmode="url" maxlength="240" placeholder="https://example.com"></label>
           <label class="interaction-field" data-only="featured" hidden><span>读过的文章或作品 <small>选填</small></span><input name="article" maxlength="80" placeholder="写下标题，方便大家对照阅读"></label>
           <label class="interaction-field"><span>留言内容</span><textarea name="text" rows="7" maxlength="1500" required placeholder="从这里开始写……"></textarea></label>
-          <fieldset class="interaction-visibility" data-only="letter" hidden><legend>谁能看见这封信</legend><label><input type="radio" name="visibility" value="private" checked><span>仅 Cheney 可见<small>不会出现在公开留言中</small></span></label><label><input type="radio" name="visibility" value="public"><span>公开可见<small>所有来访者都能阅读</small></span></label></fieldset>
+          <input type="hidden" name="visibility" value="private"><p class="letter-privacy">仅 Cheney 可见 · 不公开展示</p>
           <div class="interaction-honeypot" aria-hidden="true"><label>请留空<input name="confirm" tabindex="-1" autocomplete="off"></label></div>
           <p class="interaction-help">无需登录。请勿留下微信号、电话号码等私人联系方式。</p>
-          <div class="interaction-actions"><button type="submit">发布留言</button><button type="button" id="cancel-reply" hidden>取消回复</button></div>
+          <div class="interaction-actions"><button type="submit">寄出尺素</button><button type="button" id="cancel-reply" hidden>取消回复</button></div>
           <p id="interaction-status" class="interaction-status" role="status" aria-live="polite"></p>
         </form>
       </section>
-      <section class="interaction-feed" aria-labelledby="feed-heading">
-        <div class="interaction-section-head"><span>留痕</span><h2 id="feed-heading">公开尺素</h2></div>
-        <p class="interaction-feed-note">这里仅展示选择公开的信；私密尺素只会进入站主信箱。</p>
-        <div id="interaction-list" class="interaction-list"><p class="interaction-loading">正在翻阅留言……</p></div>
+      <section class="interaction-feed letter-explanation" aria-labelledby="feed-heading">
+        <div class="interaction-section-head"><span>留痕</span><h2 id="feed-heading">一封只给我的信</h2></div>
+        <p class="interaction-feed-note">有不便公开的话，可以在这里慢慢写。来信只有我登录后台后才能阅读，页面不会展示来信内容或来信列表。</p>
+        <div id="interaction-list" class="interaction-list" hidden></div>
       </section>
     </div>
     <footer class="interaction-footer"><span>有话慢慢说，字句皆可留</span><a href="../index.html#links">回到互动总览 ↑</a></footer>
   </main>
-  <script src="../assets/interaction.js?v=20261009-02" defer></script>
+  <script src="../assets/interaction.js?v=20261021-01" defer></script>
 </body>
 </html>
