@@ -21,6 +21,8 @@ function scan(dir) {
 }
 folders.forEach(scan);
 files.push(...rootFiles.filter(file => fs.existsSync(path.join(root, file))));
+const adminFiles=files.filter(file=>file==='admin/index.html'||file==='assets/interaction-service.json'||/^assets\/(?:admin[^/]*|github-admin|interaction-service)\.(?:js|css)$/.test(file)).sort();
+const adminHash=createHash('sha256');for(const file of adminFiles)adminHash.update(file).update(fs.readFileSync(path.join(root,file)));const adminVersion=adminHash.digest('hex').slice(0,16);
 const text = files.filter(file => /\.(html|css|js|json)$/.test(file)).map(file => fs.readFileSync(path.join(root, file), 'utf8')).join('\n');
 fs.mkdirSync(output, { recursive: true });
 const temp = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'cheney-public-seed-'));
@@ -35,6 +37,7 @@ try {
     if (/\.(html|css|js|json)$/.test(file)) {
       let content = bytes.toString('utf8').replace(/https?:\/\/(?:localhost|127\.0\.0\.1):(?:3000|3001)\b/g, '');
       if (file === 'admin/index.html') {
+        content=content.replace(/(<head[^>]*>)/i,'$1<meta name="cheney-admin-version" content="'+adminVersion+'">');
         content = content.replace(/href="\/cheney\/"/g, 'href="/"');
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261021-01" defer></script><script src="/assets/github-admin.js?v=20261021-01" defer></script>');
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
@@ -58,6 +61,7 @@ try {
 fs.mkdirSync(path.join(output, 'admin'), { recursive: true });
 const site = siteCatalog(root,written.map(x=>x.path));
 fs.writeFileSync(path.join(output, 'admin', 'catalog.json'), JSON.stringify({...catalog, site}));
+fs.writeFileSync(path.join(output,'assets/admin-version.json'),JSON.stringify({version:adminVersion,builtAt:new Date().toISOString()}));
 const hashJSON = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const snapshotPath = path.join(root,'data/online-content.json');
 fs.writeFileSync(path.join(output,'assets/publication.json'),JSON.stringify({builtAt:new Date().toISOString(),snapshotHash:hashJSON(fs.existsSync(snapshotPath)?JSON.parse(fs.readFileSync(snapshotPath,'utf8')):{}),sourceHashes:Object.fromEntries(site.sources.map(source=>[source.path,hashJSON(JSON.parse(fs.readFileSync(path.join(root,source.path),'utf8')))]))}));

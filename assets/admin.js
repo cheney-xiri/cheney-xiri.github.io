@@ -15,6 +15,7 @@
   }
   function showLogin(){ $('#login-screen').hidden=false;$('#admin-app').hidden=true;$('#logout').hidden=true;window.CHENEY_INTERACTION_SERVICE?.lock();window.CHENEY_ADMIN_INBOX?.dispose();$('#workspace').replaceChildren();csrf='';if(window.CHENEY_GITHUB_CMS)api('/api/admin/session').then(configureGithubLogin).catch(e=>$('#login-status').textContent=e.message); }
   function canLeave(){ if(window.CHENEY_BATCH_UPLOAD?.busy){status('正在批量上传，请等待完成后再切换页面。',true);return false;}return !dirty || confirm('当前修改还未保存，确认离开？'); }
+  window.CHENEY_ADMIN_STATE={canLeave};
   const notes={articles:'整理篇目、保存草稿，再发布到文存。',quotes:'按主题收好诗词与话语，保留准确的文字。',works:'补充封面、简介和创作近况，不放小说全文。',books:'整理书架与阅读入口。',music:'整理歌曲名称、歌手和播放页面，沿用现有歌单。',profile:'只填写想公开的个人信息，未确定的项目可以留空。',journey:'在原有三个阶段里补充文字、图片、视频与时间节点。',anime:'按作品整理观影手记。',messages:'查看公开留言与私信，私信仅在后台显示。',security:'设置至少 12 个字符的站主密码。'};
   async function enter(){
     meta=await api('/api/admin/meta');$('#login-screen').hidden=true;$('#admin-app').hidden=false;$('#logout').hidden=false;
