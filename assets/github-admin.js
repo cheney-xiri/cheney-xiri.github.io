@@ -14,9 +14,9 @@
   const encode = text => { let s = ''; for (const byte of new TextEncoder().encode(text)) s += String.fromCharCode(byte); return btoa(s); };
   const decode = text => new TextDecoder().decode(Uint8Array.from(atob(text.replace(/\s/g, '')), x => x.charCodeAt(0)));
   function drafts() { try { return JSON.parse(localStorage.getItem(DRAFT_KEY) || '{}'); } catch { return {}; } }
-  function keepDraft(id, value) { const all = drafts(); if (value) all[id] = value; else delete all[id]; localStorage.setItem(DRAFT_KEY, JSON.stringify(all)); }
+  function keepDraft(id, value) { const all = drafts(); if (value) all[id] = {...value,savedAt:new Date().toISOString()}; else delete all[id]; localStorage.setItem(DRAFT_KEY, JSON.stringify(all)); }
   function pageDrafts() { try { return JSON.parse(localStorage.getItem(PAGE_DRAFT_KEY) || '{}'); } catch { return {}; } }
-  function keepPageDraft(key,value) { const all=pageDrafts();if(value)all[key]=value;else delete all[key];localStorage.setItem(PAGE_DRAFT_KEY,JSON.stringify(all)); }
+  function keepPageDraft(key,value) { const all=pageDrafts();if(value)all[key]={...value,savedAt:new Date().toISOString()};else delete all[key];localStorage.setItem(PAGE_DRAFT_KEY,JSON.stringify(all)); }
   async function readSource(path) {
     const data=await github('/repos/'+REPO+'/contents/'+path+'?ref=main');
     return {sha:data.sha,data:data.content?JSON.parse(decode(data.content)):await github('/repos/'+REPO+'/contents/'+path+'?ref=main',{headers:{Accept:'application/vnd.github.raw+json'}})};
@@ -114,6 +114,18 @@
     if (p === '/api/admin/logout') { token = ''; catalog = null; documentState = null; fileSha = ''; publicationTarget=null; noteReads.clear(); return { ok: true }; }
     if (!token) throw new Error('请先登录后台');
     if(p==='/api/admin/publication')return {target:publicationTarget||{kind:'snapshot',hash:await digest(documentState)}};
+    if(p==='/api/admin/drafts'){
+      await readDocument();
+      const items=Object.values(drafts()).filter(x=>catalog.collections[x.collection]).map(x=>{
+        const remote=documentState.entries.find(r=>r.id===x.id),base=catalog.entries.find(r=>r.id===x.id);
+        return {kind:'entry',id:x.id,collection:x.collection,title:x.draft?.title||'未命名内容',savedAt:x.savedAt||'',stale:x.revision!==(remote?.revision??base?.revision??0),draft:x.draft};
+      });
+      for(const [path,draft]of Object.entries(pageDrafts())){
+        const page=catalog.site?.pages.find(x=>x.path===path.split('?')[0]);if(!page)continue;
+        items.push({kind:'page',path,group:page.group,title:page.title,savedAt:draft.savedAt||'',stale:draft.revision!==(documentState.pages?.[path]?.revision||0),draft});
+      }
+      return {items:items.sort((a,b)=>b.savedAt.localeCompare(a.savedAt))};
+    }
     if (p === '/api/admin/password') { await window.CHENEY_ADMIN_VAULT.change(body.currentPassword, body.password); return { ok: true, csrfToken: '' }; }
     if (p === '/api/admin/meta') return { collections: catalog.collections, profileFields: catalog.profileFields, storage: 'github', extraViews: ['pages','media','sources','journey','anime'] };
     if (p === '/api/admin/site-catalog') return catalog.site || {groups:{},pages:[],media:[],sources:[],chapters:[]};

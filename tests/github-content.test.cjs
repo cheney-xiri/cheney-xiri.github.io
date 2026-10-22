@@ -9,7 +9,7 @@ test('GitHub manager keeps credentials in memory, drafts local, and rejects stal
   let doc = { version: 1, entries: [], journey: {}, animeNotes: {} }, sha = 'one';
   const base = { id: 'articles:example', collection: 'articles', basePath: 'writing/example.html', revision: 1, draft: { title: '原题', body: '原文', order: 0 }, published: { title: '原题', body: '原文', order: 0 } };
   const context = { window: {}, location: { origin: 'https://example.test' }, URL, TextEncoder, TextDecoder, Blob, structuredClone, crypto: require('node:crypto').webcrypto, btoa, atob, localStorage: { getItem: k => storage.get(k) || null, setItem: (k,v) => storage.set(k,v) }, fetch: async (url, options = {}) => {
-    if (url === '/admin/catalog.json') return Response.json({ collections: { articles: '文存' }, profileFields: {}, entries: [base] });
+    if (url === '/admin/catalog.json') return Response.json({ collections: { articles: '文存' }, profileFields: {}, entries: [base],site:{pages:[{path:'index.html',title:'主页',group:'home'}]} });
     assert.equal(new URL(url).origin, 'https://api.github.com');
     assert.equal(options.headers.Authorization, 'Bearer ' + token);
     assert.ok(!JSON.stringify(options).includes(password));
@@ -31,10 +31,20 @@ test('GitHub manager keeps credentials in memory, drafts local, and rejects stal
   assert.ok(!JSON.stringify([...storage]).includes(password));
   let r = await call('/api/admin/save', { method: 'POST', body: { id: base.id, collection: 'articles', revision: 1, draft: { title: '新题', body: '未公开正文', order: 0 }, publish: false } });
   assert.equal(puts.length, 0); assert.equal(r.item.published.title, '原题');
+  const local=await call('/api/admin/drafts');
+  assert.equal(local.items.length,1);assert.equal(local.items[0].title,'新题');assert.equal(local.items[0].stale,false);assert.ok(local.items[0].savedAt);
   assert.ok(!JSON.stringify([...storage]).includes(token));
   r = await call('/api/admin/save', { method: 'POST', body: { ...r.item, publish: true } });
   assert.equal(puts.length, 1); assert.equal(doc.entries[0].data.title, '新题'); assert.equal(doc.entries[0].revision, 2);
   assert.equal(doc.entries[0].draft, undefined); assert.ok(!JSON.stringify(doc).includes(token));
+  assert.equal((await call('/api/admin/drafts')).items.length,0);
+  await call('/api/admin/page',{method:'POST',body:{path:'index.html',revision:0,patches:[{type:'text',value:'设备中的草稿'}],publish:false}});
+  assert.equal(puts.length,1);
+  assert.equal((await call('/api/admin/drafts')).items[0].stale,false);
+  doc.pages={'index.html':{revision:1,patches:[]}};
+  const conflict=(await call('/api/admin/drafts')).items[0];
+  assert.equal(conflict.stale,true);assert.equal(conflict.draft.patches[0].value,'设备中的草稿');
+  assert.ok(!JSON.stringify(conflict).includes(token));
   doc.entries[0].revision = 3;
   await assert.rejects(() => call('/api/admin/save', { method: 'POST', body: { ...r.item, publish: true } }), /更新/);
   assert.equal(puts.length, 1);
