@@ -121,13 +121,13 @@
    limit.onchange=()=>{historySave();for(const p of record.patches)if(isMedia(p)&&p.layout!=='inline')p.previewCount=Number(limit.value);pending=false;mark();preview();ctx.status('已更新折叠数量，确认后发布此页。');};
    const list=el('ol',undefined,'media-layout-list');box.append(list);
    for(const [index,p]of items.entries()){
-    const row=el('li');row.dataset.mediaId=p.id;row.draggable=true;const thumb=el(p.format==='image'?'img':'span');if(p.format==='image'){thumb.src=p.value;thumb.alt='';thumb.loading='lazy';}else thumb.textContent='▶';
+    const row=el('li');row.dataset.mediaId=p.id;row.draggable=true;const handle=el('span','⠿','media-layout-handle');handle.draggable=true;handle.title='按住拖动排序';handle.setAttribute('aria-label','拖动排序');const thumb=el(p.format==='image'?'img':'span');thumb.draggable=false;if(p.format==='image'){thumb.src=p.value;thumb.alt='';thumb.loading='lazy';}else thumb.textContent='▶';
     const info=el('div'),label=p.title||p.caption||p.alt||((p.format==='video'?'视频':'图片')+' '+(index+1));info.append(el('strong',(index+1)+' · '+label),el('small',p.layout==='inline'?'单独放置在正文中':'图集 · 超出部分可展开'));
     const tools=el('div',undefined,'media-layout-tools');
     const up=button('上移',()=>moveMedia(p.id,mediaNode(items[index-1]?.id||''),false)),down=button('下移',()=>moveMedia(p.id,mediaNode(items[index+1]?.id||''),true));up.disabled=!index;down.disabled=index===items.length-1;
     tools.append(up,down,button('定位',()=>{const n=mediaNode(p.id);const g=n?.closest('[data-cms-gallery]');if(n?.hidden&&g)g.querySelector('.cheney-gallery-toggle')?.click();n?.scrollIntoView({block:'center'});selectTarget(n);}),button('选择位置',()=>{movingId=p.id;ctx.status('在页面中点击目标段落：点击上半部放在前面，下半部放在后面。按 Esc 取消。');selection.textContent='正在移动 '+label+'：请点击页面中的目标位置。';if(innerWidth<1000)frameWrap.scrollIntoView({block:'start'});}));
     if(p.layout==='inline')tools.append(button('放回影像区',()=>{const d=frame.contentDocument,slot=d.querySelector('#photos .stage-section-content,#travel-photo-list')||root();historySave();Object.assign(p,{selector:slot.matches('#photos .stage-section-content')?'#photos .stage-section-content':pathOf(slot),position:'beforeend',layout:'gallery',previewCount:Number(limit.value)});mark();preview();manageMedia(true);}));
-    info.append(tools);row.append(thumb,info);list.append(row);
+    info.append(tools);row.append(handle,thumb,info);list.append(row);
     row.ondragstart=e=>{draggingId=p.id;e.dataTransfer.setData('text/cheney-media',p.id);e.dataTransfer.effectAllowed='move';};
     row.ondragover=e=>{if(draggingId){e.preventDefault();row.dataset.drop='true';}};row.ondragleave=()=>delete row.dataset.drop;
     row.ondrop=e=>{e.preventDefault();delete row.dataset.drop;const id=draggingId||e.dataTransfer.getData('text/cheney-media');moveMedia(id,mediaNode(p.id),e.clientY>row.getBoundingClientRect().top+row.clientHeight/2);};
