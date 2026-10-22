@@ -2911,7 +2911,7 @@
       ]
     },
     "travels/city.html?city=luoyang": {
-      "revision": 2,
+      "revision": 3,
       "patches": [
         {
           "id": "315cc3c7-7141-460c-b033-149a3c8cd633",
