@@ -703,7 +703,7 @@
       ]
     },
     "journey/university.html": {
-      "revision": 1,
+      "revision": 2,
       "patches": [
         {
           "id": "897e5d20-f3fe-46e3-98e8-31e4a5b80c41",
