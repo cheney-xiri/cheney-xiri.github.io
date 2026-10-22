@@ -39,7 +39,7 @@ try {
       if (file === 'admin/index.html') {
         content=content.replace(/(<head[^>]*>)/i,'$1<meta name="cheney-admin-version" content="'+adminVersion+'">');
         content = content.replace(/href="\/cheney\/"/g, 'href="/"');
-        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261021-01" defer></script><script src="/assets/github-admin.js?v=20261022-01" defer></script>');
+        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/admin-vault.js?v=20261021-01" defer></script><script src="/assets/github-admin.js?v=20261022-02" defer></script>');
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com'+serviceOrigin+'; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
@@ -49,9 +49,9 @@ try {
         const hydrate = '<script id="cheney-content-state" type="application/json">' + JSON.stringify({ state }).replace(/</g, '\\u003c') + '</script>';
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/github-preview.js?v=20261021-02"></script>' + hydrate);
         if (!content.includes('src="/assets/content-live.js')) content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/content-live.js?v=20261021-08" defer></script>');
-        content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261020-06"><script src="/assets/site-content.js?v=20261021-08" defer></script>');
+        content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261022-02"><script src="/assets/site-content.js?v=20261022-02" defer></script>');
       }
-      if(file === 'admin/index.html')content=content.replace(/((?:src|href)="\/assets\/(?:admin[^/\"]*|github-admin)\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261022-01');
+      if(file === 'admin/index.html')content=content.replace(/((?:src|href)="\/assets\/(?:admin[^/\"]*|github-admin)\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261022-02');
       content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/(?:content-live|ink-subsections)\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261021-08');
       content=content.replace('var h=document.documentElement,p=location.pathname,q=', 'var h=document.documentElement,p=document.querySelector(\'meta[name="cheney-page-path"]\')?.content?\'/\'+document.querySelector(\'meta[name="cheney-page-path"]\').content:location.pathname,q=');
       bytes = Buffer.from(content);

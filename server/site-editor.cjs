@@ -28,6 +28,14 @@ function catalog(root, files) {
 }
 const clean = value=>String(value??'').slice(0,65000);
 function safeUrl(value) { const s=String(value||'').trim(); if(s.startsWith('/')&&!s.startsWith('//')&&!/[\\\x00-\x1f]/.test(s)&&!s.split('/').includes('..'))return s;try{const u=new URL(s);if(['https:','http:'].includes(u.protocol))return u.href;}catch{}throw new Error('请使用有效的图片、视频或网页地址'); }
+const copyTags=new Set('a article aside audio b blockquote br caption cite code dd details div dl dt em figcaption figure h1 h2 h3 h4 h5 h6 hr i img li ol p picture pre section small source span strong sub summary sup table tbody td th thead tr ul video'.split(' '));
+const copyAttrs=new Set('class title href target rel src alt width height poster controls loop muted playsinline loading decoding aria-label role open colspan rowspan'.split(' '));
+function sanitizeTemplate(tree,depth=0,budget={left:1500}){
+  if(depth>30||--budget.left<0)throw new Error('复制模块过大，请选择更小的区域');if(typeof tree==='string')return clean(tree);
+  if(!tree||!copyTags.has(tree.tag)||!Array.isArray(tree.children))throw new Error('复制模块的内容不正确');
+  const attrs={};for(const [key,value]of Object.entries(tree.attrs||{})){if(!copyAttrs.has(key)||typeof value!=='string')continue;attrs[key]=['src','href','poster'].includes(key)?value?safeUrl(value):'':value.slice(0,4000);}
+  return {tag:tree.tag,attrs,children:tree.children.map(n=>sanitizeTemplate(n,depth+1,budget))};
+}
 function sanitizePages(pages) {
   if(!pages||typeof pages!=='object'||Array.isArray(pages))return {};
   const result={};
@@ -35,13 +43,15 @@ function sanitizePages(pages) {
     if(!/^(?:index\.html|books\.html|henan\.html|(?:about|journey|craft|pastimes|works|travels|figures|writing|interaction)\/[a-zA-Z0-9_./-]+\.html)(?:\?[^#]*)?$/.test(key)||key.includes('..'))throw new Error('页面地址不在可编辑范围内');
     if(!Array.isArray(record.patches)||record.patches.length>500)throw new Error('单页编辑项超出限制');
     const patches=record.patches.map(p=>{
-      if(!['text','image','video','link','background','block'].includes(p.type)||typeof p.selector!=='string'||p.selector.length>1800||!p.selector||/(?:^|[ >+~,])(?:script|style|head|input|textarea)(?:[ .#:[>+~,]|$)/i.test(p.selector))throw new Error('页面编辑目标不正确');
+      if(!['text','image','video','link','background','block','duplicate','hide'].includes(p.type)||typeof p.selector!=='string'||p.selector.length>1800||!p.selector||/(?:^|[ >+~,])(?:script|style|head|input|textarea)(?:[ .#:[>+~,]|$)/i.test(p.selector))throw new Error('页面编辑目标不正确');
       const item={id:clean(p.id).slice(0,120),type:p.type,selector:p.selector,original:clean(p.original),value:clean(p.value),textIndex:Math.max(0,Number(p.textIndex)||0)};
       if(p.type==='text')return item;
+      if(p.type==='hide')return item;
+      if(p.type==='duplicate'){if(!item.id)throw new Error('复制模块缺少编号');item.position=p.position==='beforebegin'?'beforebegin':'afterend';if(p.template)item.template=sanitizeTemplate(p.template);return item;}
       if(p.type==='link'){item.value=safeUrl(p.value);return item;}
       if(p.type==='block'){
         if(!['text','image','video','audio','link'].includes(p.format))throw new Error('新增内容类型不正确');
-        item.format=p.format;item.title=clean(p.title).slice(0,300);item.caption=clean(p.caption).slice(0,2000);item.position=p.position==='beforeend'?'beforeend':'afterend';
+        item.format=p.format;item.title=clean(p.title).slice(0,300);item.caption=clean(p.caption).slice(0,2000);item.position=['beforebegin','afterbegin','beforeend','afterend'].includes(p.position)?p.position:'afterend';
         if(p.format!=='text')item.value=safeUrl(p.value);
       }else item.value=safeUrl(p.value);
       item.alt=clean(p.alt).slice(0,2000);item.poster=p.poster?safeUrl(p.poster):'';item.fit=p.fit==='contain'?'contain':'cover';item.device=['mobile','desktop'].includes(p.device)?p.device:'all';

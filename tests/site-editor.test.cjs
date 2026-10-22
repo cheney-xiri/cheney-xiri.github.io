@@ -24,6 +24,14 @@ test('page publication sanitizes targets, media addresses and inserted blocks',(
  const pages=sanitizePages({'index.html':{revision:2,patches:[patch]}});
  assert.equal(pages['index.html'].patches[0].format,'video');
  assert.equal(pages['index.html'].patches[0].position,'beforeend');
+  const visual=sanitizePages({'index.html':{revision:3,patches:[{id:'copy',type:'duplicate',selector:'.craft-card',position:'beforebegin',value:''},{id:'hide',type:'hide',selector:'[data-cms-copy="copy"]',value:''},{...patch,position:'afterbegin'}]}})['index.html'].patches;
+  assert.equal(visual[0].position,'beforebegin');assert.equal(visual[1].type,'hide');assert.equal(visual[2].position,'afterbegin');
+  assert.throws(()=>sanitizePages({'index.html':{patches:[{id:'bad',type:'duplicate',selector:'script',value:''}]}}),/目标/);
+  const copied={id:'safe-copy',type:'duplicate',selector:'.craft-card',template:{tag:'a',attrs:{href:'https://example.test',onclick:'alert(1)',id:'do-not-duplicate'},children:['新卡片']}};
+  const template=sanitizePages({'index.html':{patches:[copied]}})['index.html'].patches[0].template;
+  assert.equal(template.attrs.onclick,undefined);assert.equal(template.attrs.id,undefined);assert.equal(template.children[0],'新卡片');
+  assert.throws(()=>sanitizePages({'index.html':{patches:[{...copied,template:{tag:'script',attrs:{},children:[]}}]}}),/复制模块/);
+  assert.throws(()=>sanitizePages({'index.html':{patches:[{...copied,template:{tag:'a',attrs:{href:'javascript:alert(1)'},children:[]}}]}}),/地址/);
  for(const value of ['javascript:alert(1)','data:text/html,test','//other.test/file','/../.site-data/owner.json'])assert.throws(()=>sanitizePages({'index.html':{patches:[{...patch,value}]}}),/地址/);
  assert.throws(()=>sanitizePages({'admin/index.html':{patches:[patch]}}),/页面地址/);
  assert.throws(()=>sanitizePages({'index.html':{patches:[{...patch,selector:'head > script'}]}}),/目标/);
