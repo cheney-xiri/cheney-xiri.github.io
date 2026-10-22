@@ -51,7 +51,7 @@ try {
         if (!content.includes('src="/assets/content-live.js')) content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/content-live.js?v=20261021-08" defer></script>');
         content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261022-02"><script src="/assets/site-content.js?v=20261022-02" defer></script>');
       }
-      if(file === 'admin/index.html')content=content.replace(/((?:src|href)="\/assets\/(?:admin[^/\"]*|github-admin)\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261022-03');
+      if(file === 'admin/index.html')content=content.replace(/((?:src|href)="\/assets\/(?:admin[^/\"]*|github-admin)\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261022-04');
       content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/(?:content-live|ink-subsections)\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261021-08');
       content=content.replace('var h=document.documentElement,p=location.pathname,q=', 'var h=document.documentElement,p=document.querySelector(\'meta[name="cheney-page-path"]\')?.content?\'/\'+document.querySelector(\'meta[name="cheney-page-path"]\').content:location.pathname,q=');
       bytes = Buffer.from(content);
