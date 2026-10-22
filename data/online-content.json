@@ -1357,7 +1357,7 @@
       ]
     },
     "travels/city.html?city=beijing": {
-      "revision": 2,
+      "revision": 3,
       "patches": [
         {
           "id": "d747ed33-4274-496b-9c7d-6fb7fb1e26a8",
