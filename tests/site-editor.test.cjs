@@ -2,6 +2,14 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const {sanitizePages}=require('../server/site-editor.cjs');
 
+test('subsection navigation follows chapter order and excludes owner-only screens',()=>{
+ const context={window:{}};vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(__dirname,'../assets/admin-navigation.js'),'utf8'),context);
+ const pages=[{path:'craft/guitar.html',group:'craft',title:'吉他'},{path:'craft/writing.html',group:'craft',title:'写作'},{path:'craft/go.html',group:'craft',title:'围棋'},{path:'craft/joseki-detail.html',group:'craft',title:'讲解模板'},{path:'interaction/owner.html',group:'interaction',title:'站主'}];
+ const api=context.window.CHENEY_ADMIN_NAVIGATION;
+ assert.deepEqual(Array.from(api.pages({pages},{group:'craft'}),p=>p.path),['craft/writing.html','craft/go.html','craft/guitar.html']);
+ assert.equal(api.pages({pages},{group:'interaction'}).length,0);
+});
+
 test('admin chapters follow homepage sections and reference existing art',()=>{
  const root=path.resolve(__dirname,'..'),context={window:{}};vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'assets/admin-chapters.js'),'utf8'),context);
  const chapters=context.window.CHENEY_ADMIN_CHAPTERS.chapters;

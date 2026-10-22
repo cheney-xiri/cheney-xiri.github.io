@@ -2,7 +2,7 @@
   'use strict';
   const $ = (q, root=document) => root.querySelector(q);
   const node = (tag, text, cls) => { const el=document.createElement(tag); if(text!==undefined)el.textContent=text; if(cls)el.className=cls; return el; };
-  let csrf='', meta=null, view='pages', entries=[], current=null, dirty=false, setup=false, activeChapter=null, navVersion=0;
+  let csrf='', meta=null, view='pages', entries=[], current=null, dirty=false, setup=false, activeChapter=null, navVersion=0,siteNavigation=null;
   const status=(message, bad=false)=>{ const el=$('#app-status'); el.textContent=message;el.dataset.error=String(bad); };
   async function api(url, options={}) {
     if(window.CHENEY_GITHUB_CMS)return window.CHENEY_GITHUB_CMS.request(url,options);
@@ -23,16 +23,19 @@
     const navButton=(key,label)=>{const b=node('button',label);b.type='button';b.dataset.view=key;nav.append(b);};
     navButton('pages','直接编辑网页');navButton('overview','内容与工具');if(meta.storage==='github')navButton('drafts','草稿与待发布');nav.append(node('small','按个人主页管理','admin-nav-group'));for(const c of window.CHENEY_ADMIN_CHAPTERS.chapters)navButton('chapter:'+c.key,c.title);nav.append(node('small','常用工具','admin-nav-group'));for(const [key,label]of Object.entries({media:'素材库',sources:'全部专题资料'}))navButton(key,label);
     let mobile=document.querySelector('#admin-mobile-nav');if(!mobile){const label=node('label','切换管理章节','admin-mobile-navigation');mobile=node('select');mobile.id='admin-mobile-nav';label.append(mobile);nav.before(label);}mobile.replaceChildren();for(const b of nav.querySelectorAll('[data-view]')){const o=node('option',b.textContent);o.value=b.dataset.view;mobile.append(o);}mobile.onchange=async()=>{await navigate(mobile.value);mobile.value=activeChapter?'chapter:'+activeChapter.key:view;};
+    siteNavigation=window.CHENEY_ADMIN_NAVIGATION.mount({nav,mobile,catalog:await api('/api/admin/site-catalog'),chapters:window.CHENEY_ADMIN_CHAPTERS.chapters,navigate});
     if(meta.storage==='edge-kv'){$('#cloud-note').hidden=false;$('#cloud-note').textContent='发布后通常一分钟内同步。请避免在两个设备上同时修改同一篇内容。';}
     if(meta.storage==='github'){$('#cloud-note').hidden=false;$('#cloud-note').replaceChildren(document.createTextNode('草稿只保存在当前设备，发布后的内容通过 GitHub 保存并自动更新网站。发布记录公开，请只发布想公开的文字和图片。'),document.createTextNode(' '));const a=node('a','查看发布进度 ↗');a.href='https://github.com/'+window.CHENEY_GITHUB_CMS.repo+'/actions';a.target='_blank';a.rel='noopener noreferrer';$('#cloud-note').append(a);const details=node('details'),summary=node('summary','发布说明 · 内容发布后公开');while($('#cloud-note').firstChild)details.append($('#cloud-note').firstChild);details.prepend(summary);$('#cloud-note').append(details);$('button[data-view="security"]').textContent='密码与设备';}
     if(view==='pages'&&!meta.extraViews?.includes('pages')&&!window.CHENEY_SITE_ADMIN)view='articles';
     await navigate(view);
   }
   async function navigate(next,options={}){
+    if(view==='pages'&&window.CHENEY_VISUAL_EDITOR.beforeLeave&&!await window.CHENEY_VISUAL_EDITOR.beforeLeave())return;
     if(!canLeave())return;window.CHENEY_ADMIN_INBOX?.dispose();const version=++navVersion;current=null;dirty=false;status('');window.scrollTo({top:0,behavior:'instant'});
     activeChapter=next.startsWith('chapter:')?window.CHENEY_ADMIN_CHAPTERS.chapters.find(c=>c.key===next.slice(8)):null;
     if(next.startsWith('chapter:')&&!activeChapter){status('没有找到这个章节。',true);return;}
     view=activeChapter?(options.tool||'pages'):next;const mobile=document.querySelector('#admin-mobile-nav');if(mobile)mobile.value=activeChapter?'chapter:'+activeChapter.key:view;
+    siteNavigation?.sync({chapter:activeChapter?.key,key:options.scope?.path});
     const scope=options.scope||(activeChapter?{chapter:activeChapter.key,section:activeChapter.section,group:activeChapter.group,sources:activeChapter.sources}:undefined);
     document.querySelectorAll('[data-view]').forEach(b=>{const yes=b.dataset.view===(activeChapter?'chapter:'+activeChapter.key:view);b.classList.toggle('is-active',yes);if(yes)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
     $('#view-title').textContent=activeChapter?.title||({...meta.collections,overview:'网站总览',drafts:'草稿与待发布',pages:'直接编辑网页',media:'素材库',sources:'专题资料',journey:'行旅',anime:'观影手记',messages:'留言与来信',security:'登录设置'})[view]||'内容管理';
@@ -43,6 +46,7 @@
     const ctx={api,status,canLeave,meta,scope,navigate,uploadImage:upload,setDirty:value=>dirty=value,isCurrent:()=>navVersion===version};
     try{if(view==='drafts')await window.CHENEY_ADMIN_DRAFTS.mount($('#workspace'),ctx);else if(view==='sections')await window.CHENEY_ADMIN_CHAPTERS.sections($('#workspace'),ctx);else if(view==='overview')await window.CHENEY_ADMIN_CHAPTERS.overview($('#workspace'),ctx);else if(['pages','media','sources'].includes(view))await window.CHENEY_SITE_ADMIN.mount(view,ctx);else if(meta.collections[view])await loadCollection(options.selectId);else if(view==='journey')await journey();else if(view==='travels')await window.CHENEY_TRAVELS_ADMIN.mount({...ctx,field,node,button});else if(view==='anime')await anime();else if(view==='messages')await messages();else security();}catch(e){if(version===navVersion)status(e.message,true);}
   }
+  window.addEventListener('cheney-admin-page-changed',e=>siteNavigation?.sync(e.detail));
   document.addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b)navigate(b.dataset.view);});
   function field(form,label,key,value='',type='text',wide=false){
     const wrap=node('label',label,wide?'field-wide':'');const input=node(type==='textarea'?'textarea':'input');input.name=key;if(type!=='textarea')input.type=type;else input.rows=key==='body'?18:3;input.value=value??'';
