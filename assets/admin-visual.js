@@ -28,12 +28,13 @@
   const canvas=el('div',undefined,'visual-canvas'),body=el('div',undefined,'visual-editor-body');canvas.append(frameWrap);body.append(canvas,inspector);actions.append(save,publish,undo,view);studio.append(bar,sectionLinks,directory,actions,selection,commands,body,changes);box.replaceChildren(studio);
   const root=()=>{const d=frame.contentDocument;if(!d)return null;return key.split('?')[0]==='index.html'&&currentSection?d.getElementById(currentSection):d.querySelector('main')||d.body;};
   const pause=()=>frame.contentDocument?.querySelectorAll('video,audio').forEach(m=>{m.autoplay=false;m.pause();});
-  const preview=()=>frame.contentWindow?.CHENEY_PAGE_CONTENT?.apply([...baseline,...record.patches]);
+  const preview=()=>{frame.contentWindow?.CHENEY_PAGE_CONTENT?.apply([...baseline,...record.patches]);for(const n of frame.contentDocument?.querySelectorAll('[data-cms-block]')||[])if(record.patches.some(p=>p.id===n.dataset.cmsBlock&&isMedia(p))){n.draggable=true;n.title='拖动调整图片或视频的位置';}};
   const mark=()=>{clean=false;ctx.setDirty(true);paintHistory();};
   function closeInspector(){if(pending&&!confirm('输入内容尚未加入页面，确认收起并放弃这次输入？'))return false;pending=false;ctx.setDirty(!clean);inspector.hidden=true;return true;}
   function canReplacePanel(){if(pending&&!confirm('输入内容尚未加入页面，确认切换编辑对象并放弃这次输入？'))return false;pending=false;ctx.setDirty(!clean);return true;}
   function historySave(){history.push(structuredClone(record.patches));if(history.length>40)history.shift();}
   function put(p,options={}){
+   if(isMedia(p)&&p.previewCount===undefined){const at=placement(p);p.previewCount=record.patches.find(x=>isMedia(x)&&x.layout!=='inline'&&groupOf(x)===JSON.stringify([at.selector,at.position||'afterend']))?.previewCount||6;}
    if(record.patches.length>=500&&!record.patches.some(x=>x.id===p.id))throw Error('本页编辑项已达上限，请先整理修改记录。');
    historySave();const old=record.patches.find(x=>x.id===p.id||!['block','duplicate'].includes(p.type)&&x.type===p.type&&x.selector===p.selector&&(x.textIndex||0)===(p.textIndex||0)&&(x.device||'all')===(p.device||'all'));
    pending=false;p.id=old?.id||p.id||crypto.randomUUID();if(old)p.original=old.original;
@@ -60,6 +61,7 @@
    try{const r=await ctx.api('/api/admin/page',{method:'POST',body:{path:key,revision:record.revision,patches:record.patches,publish:publishNow}});record=structuredClone(r.record);clean=true;ctx.setDirty(false);paintHistory();ctx.status(publishNow?'本页修改已提交发布，可在发布状态中查看生效进度。':'本页草稿已保存在当前设备。');return true;}catch(e){ctx.status(e.message,true);return false;}finally{save.disabled=publish.disabled=false;}
   }
   async function loadRecord(next){
+   movingId=draggingId='';
    const stamp=++loading;const r=await ctx.api('/api/admin/page?path='+encodeURIComponent(next));if(stamp!==loading||ctx.isCurrent&&!ctx.isCurrent())return false;
    const base=next.includes('?')?(await ctx.api('/api/admin/page?path='+encodeURIComponent(next.split('?')[0]))).published?.patches||[]:[];
    if(stamp!==loading)return false;key=next;pending=false;record=structuredClone(r.record);baseline=base;clean=true;ctx.setDirty(false);selected=null;history=[];pageSelect.value=key;view.href='/'+key;window.dispatchEvent(new CustomEvent('cheney-admin-page-changed',{detail:{key,chapter:key==='index.html'?ctx.scope?.chapter:undefined}}));drawSectionLinks();paintHistory();closeInspector();
@@ -93,6 +95,45 @@
    span.focus();const range=frame.contentDocument.createRange();range.selectNodeContents(span);const selection=frame.contentWindow.getSelection();selection.removeAllRanges();selection.addRange(range);
   }
   function finishInline(){inline?.finish();}
+  const isMedia=p=>p.type==='block'&&['image','video'].includes(p.format);
+  let movingId='',draggingId='';
+  const mediaNode=id=>frame.contentDocument?.querySelector('[data-cms-block="'+CSS.escape(id)+'"]');
+  const placement=p=>frame.contentWindow?.CHENEY_PAGE_CONTENT?.mediaPlacement(p)||p;
+  const groupOf=p=>JSON.stringify([placement(p).selector,placement(p).position||'afterend']);
+  function moveMedia(id,target,after=false){
+   if(pending){ctx.status('请先应用右侧尚未加入页面的内容，再移动图片。',true);return;}
+   if(window.CHENEY_BATCH_UPLOAD?.busy){ctx.status('请等待本批上传结束，再调整位置。',true);return;}
+   const item=record.patches.find(p=>p.id===id&&isMedia(p));if(!item||!target)return;
+   const source=mediaNode(id),otherNode=target.closest('[data-cms-block]'),other=record.patches.find(p=>p.id===otherNode?.dataset.cmsBlock&&isMedia(p));
+   if(source?.contains(target))return;
+   let next;
+   if(other){const at=placement(other);if(at.selector.includes(id))return;next={...item,selector:at.selector,position:at.position,layout:other.layout||'gallery',previewCount:other.previewCount||6};}
+   else {if(target.closest('[data-cms-gallery],[data-editor-ui],nav,footer,button,summary,dialog'))return;const anchor=target.closest('p,h1,h2,h3,h4,figure,article,section,div');if(!anchor||source?.contains(anchor))return;next={...item,selector:pathOf(anchor),position:after?'afterend':'beforebegin',layout:'inline'};}
+   finishInline();historySave();record.patches=record.patches.filter(p=>p.id!==id);
+   const index=other?record.patches.findIndex(p=>p.id===other.id)+(after?1:0):record.patches.length;
+   record.patches.splice(index,0,next);movingId=draggingId='';pending=false;mark();preview();selectTarget(mediaNode(id));mediaNode(id)?.scrollIntoView({block:'nearest'});manageMedia(true);ctx.status('位置已调整，可继续拖动；确认后发布此页。');
+  }
+  function manageMedia(force=false){
+   if(!force&&!canReplacePanel())return;const box=panel('图片与视频布局'),items=record.patches.filter(isMedia);
+   box.append(el('p','拖动清单调整先后；也可把页面中的图片拖到另一张图片或段落前后。手机可用“上移／下移”和“选择位置”。','media-layout-help'));
+   if(!items.length){box.append(el('p','本页还没有补充影像。'),button('添加图片／视频',()=>add('image')));return;}
+   const limit=select(box,'图集默认展示数量',{'3':'3 项','6':'6 项','9':'9 项','12':'12 项'},String(items.find(p=>p.layout!=='inline')?.previewCount||6));
+   limit.onchange=()=>{historySave();for(const p of record.patches)if(isMedia(p)&&p.layout!=='inline')p.previewCount=Number(limit.value);pending=false;mark();preview();ctx.status('已更新折叠数量，确认后发布此页。');};
+   const list=el('ol',undefined,'media-layout-list');box.append(list);
+   for(const [index,p]of items.entries()){
+    const row=el('li');row.dataset.mediaId=p.id;row.draggable=true;const thumb=el(p.format==='image'?'img':'span');if(p.format==='image'){thumb.src=p.value;thumb.alt='';thumb.loading='lazy';}else thumb.textContent='▶';
+    const info=el('div'),label=p.title||p.caption||p.alt||((p.format==='video'?'视频':'图片')+' '+(index+1));info.append(el('strong',(index+1)+' · '+label),el('small',p.layout==='inline'?'单独放置在正文中':'图集 · 超出部分可展开'));
+    const tools=el('div',undefined,'media-layout-tools');
+    const up=button('上移',()=>moveMedia(p.id,mediaNode(items[index-1]?.id||''),false)),down=button('下移',()=>moveMedia(p.id,mediaNode(items[index+1]?.id||''),true));up.disabled=!index;down.disabled=index===items.length-1;
+    tools.append(up,down,button('定位',()=>{const n=mediaNode(p.id);const g=n?.closest('[data-cms-gallery]');if(n?.hidden&&g)g.querySelector('.cheney-gallery-toggle')?.click();n?.scrollIntoView({block:'center'});selectTarget(n);}),button('选择位置',()=>{movingId=p.id;ctx.status('在页面中点击目标段落：点击上半部放在前面，下半部放在后面。按 Esc 取消。');selection.textContent='正在移动 '+label+'：请点击页面中的目标位置。';if(innerWidth<1000)frameWrap.scrollIntoView({block:'start'});}));
+    if(p.layout==='inline')tools.append(button('放回影像区',()=>{const d=frame.contentDocument,slot=d.querySelector('#photos .stage-section-content,#travel-photo-list')||root();historySave();Object.assign(p,{selector:slot.matches('#photos .stage-section-content')?'#photos .stage-section-content':pathOf(slot),position:'beforeend',layout:'gallery',previewCount:Number(limit.value)});mark();preview();manageMedia(true);}));
+    info.append(tools);row.append(thumb,info);list.append(row);
+    row.ondragstart=e=>{draggingId=p.id;e.dataTransfer.setData('text/cheney-media',p.id);e.dataTransfer.effectAllowed='move';};
+    row.ondragover=e=>{if(draggingId){e.preventDefault();row.dataset.drop='true';}};row.ondragleave=()=>delete row.dataset.drop;
+    row.ondrop=e=>{e.preventDefault();delete row.dataset.drop;const id=draggingId||e.dataTransfer.getData('text/cheney-media');moveMedia(id,mediaNode(p.id),e.clientY>row.getBoundingClientRect().top+row.clientHeight/2);};
+    row.ondragend=()=>{draggingId='';list.querySelectorAll('[data-drop]').forEach(n=>delete n.dataset.drop);};
+   }
+  }
   function editMedia(target=selected,type){
    if(!target||!canReplacePanel())return;type||=target.tagName==='IMG'?'image':['AUDIO','VIDEO'].includes(target.tagName)?'video':'background';const box=panel(type==='background'?'更换背景':type==='image'?'更换图片':'更换音视频'),original=type==='background'?target.style.backgroundImage:target.getAttribute('src')||target.querySelector('source')?.getAttribute('src')||'',address=field(box,'素材地址',type==='background'?'':original),caption=field(box,'图片说明',target.alt||''),poster=type==='video'?field(box,'视频封面地址',target.getAttribute('poster')||''):null,fit=type==='image'?select(box,'显示方式',{cover:'填满图片区域',contain:'完整显示图片'},target.style.objectFit==='contain'?'contain':'cover'):null;
    box.append(button('选择或上传素材',()=>helpers.pickMedia(ctx,(src,item)=>{if((type==='image'||type==='background')&&item.type!=='image'||type==='video'&&!['video','audio'].includes(item.type)){ctx.status('请选择与当前区域相符的素材。',true);return;}address.value=src;})),button('应用素材',()=>attempt(()=>put({type,selector:pathOf(target),original,value:url(address.value),alt:caption.value,poster:poster?.value?url(poster.value):'',fit:fit?.value||'cover'})),'primary'));
@@ -109,7 +150,7 @@
   function hide(){finishInline();if(!selected||['HTML','BODY'].includes(selected.tagName))return;if(!confirm('隐藏选中的这部分内容？可以通过撤销或修改记录恢复。'))return;attempt(()=>put({type:'hide',selector:pathOf(selected),value:'',original:''}));selectTarget(null);closeInspector();}
   function enterLink(){const a=selected?.closest('a');if(!a){ctx.status('请先选择需要打开的小节入口。',true);return;}const u=new URL(a.href);if(u.origin!==location.origin){ctx.status('这个链接指向站外，只能修改链接地址。');return;}const path=helpers.keyOf(u,null);if(!catalog.pages.some(p=>p.path.split('?')[0]===path.split('?')[0])){ctx.status('这个链接不属于可编辑站内页面。',true);return;}openPage(path,u.hash);}
   const command=(label,fn,needs=false)=>{const b=button(label,()=>{fn();if(innerWidth<1000&&!inspector.hidden)inspector.scrollIntoView({block:'start',behavior:'smooth'});});if(needs)b.dataset.needsSelection='true';commands.append(b);return b;};
-  command('选择上级区域',()=>{finishInline();if(selected?.parentElement&&!['BODY','HTML'].includes(selected.parentElement.tagName))selectTarget(selected.parentElement);},true);command('修改文字',()=>editText(),true);command('更换素材',()=>editMedia(),true);command('修改链接',editLink,true);command('补充文字',()=>{selectTarget(null);add('text');});command('添加图片／视频',()=>{selectTarget(null);add('image');});command('复制模块',duplicate,true);command('隐藏所选内容',hide,true);
+  command('选择上级区域',()=>{finishInline();if(selected?.parentElement&&!['BODY','HTML'].includes(selected.parentElement.tagName))selectTarget(selected.parentElement);},true);command('修改文字',()=>editText(),true);command('更换素材',()=>editMedia(),true);command('修改链接',editLink,true);command('补充文字',()=>{selectTarget(null);add('text');});command('添加图片／视频',()=>{selectTarget(null);add('image');});command('图片排序与位置',()=>manageMedia());command('复制模块',duplicate,true);command('隐藏所选内容',hide,true);
   mode.onchange=()=>{finishInline();frame.dataset.mode=mode.value;if(frame.contentDocument)frame.contentDocument.documentElement.dataset.cheneyEditing=String(mode.value==='edit');closeInspector();};frame.dataset.mode='browse';
   const bound=new WeakSet();
   async function attach(){
@@ -125,8 +166,18 @@
     const overlayStyle=d.createElement('style');overlayStyle.textContent='.cheney-editor-overlay{position:fixed!important;z-index:2147483640!important;display:flex;gap:4px;padding:4px;background:#f6f5e9!important;border:1px solid #7c947f!important;border-radius:6px!important;box-shadow:0 4px 18px #163c3340!important}.cheney-editor-overlay[hidden]{display:none!important}.cheney-editor-overlay button{font:13px/1.5 system-ui!important;color:#254738!important;background:#fffef6!important;border:1px solid #b8c9b8!important;border-radius:3px!important;padding:6px 9px!important;cursor:pointer!important}';d.head.append(overlayStyle);
     d.addEventListener('pointerover',e=>{if(inline||e.target.closest('[data-editor-ui]'))return;hover?.removeAttribute('data-cheney-edit-hover');if(safe(e.target)){hover=e.target;hover.setAttribute('data-cheney-edit-hover','');const r=hover.getBoundingClientRect();overlay.hidden=false;overlay.style.left=Math.max(4,Math.min(w.innerWidth-145,r.right-140))+'px';overlay.style.top=Math.max(4,Math.min(w.innerHeight-44,r.top-35))+'px';}},true);
     w.addEventListener('scroll',()=>overlay.hidden=true,true);
+    d.addEventListener('dragstart',e=>{const n=e.target.closest('[data-cms-block]');if(!n||!record.patches.some(p=>p.id===n.dataset.cmsBlock&&isMedia(p)))return;draggingId=n.dataset.cmsBlock;e.dataTransfer.setData('text/cheney-media',draggingId);e.dataTransfer.effectAllowed='move';overlay.hidden=true;},true);
+    let dropTarget;
+    const clearDrop=()=>{dropTarget?.removeAttribute('data-media-drop');dropTarget=null;};
+    d.addEventListener('dragover',e=>{if(!draggingId)return;e.preventDefault();e.dataTransfer.dropEffect='move';clearDrop();dropTarget=e.target.closest('[data-cms-block],p,h2,h3,figure,article,section');if(dropTarget)dropTarget.setAttribute('data-media-drop',e.clientY>dropTarget.getBoundingClientRect().top+dropTarget.clientHeight/2?'after':'before');if(e.clientY<70)w.scrollBy(0,-18);else if(e.clientY>w.innerHeight-70)w.scrollBy(0,18);},true);
+    d.addEventListener('drop',e=>{if(!draggingId)return;e.preventDefault();e.stopImmediatePropagation();const target=dropTarget||e.target,after=target.getAttribute('data-media-drop')==='after';clearDrop();moveMedia(draggingId,target,after);},true);
+    d.addEventListener('dragend',()=>{draggingId='';clearDrop();},true);
+    d.addEventListener('keydown',e=>{if(e.key==='Escape'){movingId=draggingId='';clearDrop();selectTarget(null);ctx.status('已取消移动。');}},true);
+    const dragStyle=d.createElement('style');dragStyle.textContent='[data-media-drop="before"]{box-shadow:0 -4px 0 #ba783d!important}[data-media-drop="after"]{box-shadow:0 4px 0 #ba783d!important}[data-cms-block][draggable="true"]{cursor:grab}';d.head.append(dragStyle);
     d.addEventListener('click',e=>{
      if(e.target.closest('[data-editor-ui]'))return;
+     if(movingId){e.preventDefault();e.stopImmediatePropagation();const r=e.target.getBoundingClientRect();moveMedia(movingId,e.target,e.clientY>r.top+r.height/2);return;}
+     if(e.target.closest('.cheney-gallery-toggle'))return;
      if(mode.value==='browse'){
       const a=e.target.closest('a');if(a){const u=new URL(a.href);if(u.origin!==location.origin){e.preventDefault();ctx.status('站外链接可在“查看公开页面”中打开。');return;}e.preventDefault();e.stopImmediatePropagation();if(u.hash&&u.pathname===w.location.pathname&&u.search===w.location.search)d.getElementById(decodeURIComponent(u.hash.slice(1)))?.scrollIntoView();else openPage(helpers.keyOf(u,null),u.hash);}else if(safe(e.target)&&!e.target.closest('button,summary,details,video,audio')){e.preventDefault();e.stopImmediatePropagation();selectTarget(e.target);if(e.target.tagName==='IMG')editMedia(e.target);else editText(e.target);}return;
      }

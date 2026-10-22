@@ -32,6 +32,8 @@ test('page publication sanitizes targets, media addresses and inserted blocks',(
  const pages=sanitizePages({'index.html':{revision:2,patches:[patch]}});
  assert.equal(pages['index.html'].patches[0].format,'video');
  assert.equal(pages['index.html'].patches[0].position,'beforeend');
+ const layout=sanitizePages({'index.html':{patches:[{...patch,layout:'inline',previewCount:3},{...patch,id:'gallery',layout:'gallery',previewCount:999}]}})['index.html'].patches;
+ assert.equal(layout[0].layout,'inline');assert.equal(layout[0].previewCount,3);assert.equal(layout[1].previewCount,24);
   const visual=sanitizePages({'index.html':{revision:3,patches:[{id:'copy',type:'duplicate',selector:'.craft-card',position:'beforebegin',value:''},{id:'hide',type:'hide',selector:'[data-cms-copy="copy"]',value:''},{...patch,position:'afterbegin'}]}})['index.html'].patches;
   assert.equal(visual[0].position,'beforebegin');assert.equal(visual[1].type,'hide');assert.equal(visual[2].position,'afterbegin');
   assert.throws(()=>sanitizePages({'index.html':{patches:[{id:'bad',type:'duplicate',selector:'script',value:''}]}}),/目标/);

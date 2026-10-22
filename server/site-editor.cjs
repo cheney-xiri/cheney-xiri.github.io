@@ -52,6 +52,7 @@ function sanitizePages(pages) {
       if(p.type==='block'){
         if(!['text','image','video','audio','link'].includes(p.format))throw new Error('新增内容类型不正确');
         item.format=p.format;item.title=clean(p.title).slice(0,300);item.caption=clean(p.caption).slice(0,2000);item.position=['beforebegin','afterbegin','beforeend','afterend'].includes(p.position)?p.position:'afterend';
+        if(['image','video'].includes(p.format)){if(['inline','gallery'].includes(p.layout))item.layout=p.layout;item.previewCount=Math.max(1,Math.min(24,Math.floor(Number(p.previewCount)||6)));}
         if(p.format!=='text')item.value=safeUrl(p.value);
       }else item.value=safeUrl(p.value);
       item.alt=clean(p.alt).slice(0,2000);item.poster=p.poster?safeUrl(p.poster):'';item.fit=p.fit==='contain'?'contain':'cover';item.device=['mobile','desktop'].includes(p.device)?p.device:'all';
