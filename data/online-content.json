@@ -756,7 +756,7 @@
       ]
     },
     "journey/university.html": {
-      "revision": 3,
+      "revision": 4,
       "patches": [
         {
           "id": "897e5d20-f3fe-46e3-98e8-31e4a5b80c41",
@@ -1366,19 +1366,6 @@
           "alt": "a83bcad252bc99fa835235ddaaa6b580.jpg"
         },
         {
-          "id": "f6856810-a910-494e-895f-ce36232aa870",
-          "type": "block",
-          "format": "image",
-          "selector": "#photos .stage-section-content",
-          "position": "beforeend",
-          "title": "",
-          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/6334f1bd-b9d4-4bab-8460-77d6bd300406.webp",
-          "caption": "",
-          "alt": "IMG_20241031_184704.jpg",
-          "layout": "gallery",
-          "previewCount": 6
-        },
-        {
           "id": "588f3f20-3bca-46a1-80ea-c6af38124246",
           "type": "block",
           "format": "image",
@@ -1441,6 +1428,114 @@
           "caption": "",
           "alt": "mmexport1726368771621_edit_59802.jpg",
           "layout": "gallery",
+          "previewCount": 6
+        },
+        {
+          "id": "499edda6-5419-4a55-8c60-f41753734d0d",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/2b373665-f115-488a-82f2-7fdf9ac241c6.webp",
+          "caption": "",
+          "alt": "43f3f426ae640077e2ad93d757a90094.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "0751da41-94ec-4e56-ae4e-785da521c304",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/23c52a32-1cc4-4cfe-b830-a88eb97a532a.webp",
+          "caption": "",
+          "alt": "e7184bb33231dba6b1bda122edb29e6d.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "4444f823-87ba-4138-bb71-51eb687b258a",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/f59db056-d221-4bb7-8769-acd6e46b28ee.webp",
+          "caption": "",
+          "alt": "79d097d960837d0548c8286db5c95d62.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "a55bda6d-09ab-403d-aca8-af87d41cfcc4",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/8cdf8a6b-e1b7-4ca0-abb4-658a63e07a31.webp",
+          "caption": "",
+          "alt": "6d1f765a971e8fdc2e6d10ce57d39d0a.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "55a66701-42d1-4b1c-9b10-e44d4f81ce18",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/1c35b9db-0965-46ef-9334-b67d5a2d0371.webp",
+          "caption": "",
+          "alt": "226a1995646f8063b50eae9d74960dd3.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "8f71da1a-4f2f-4d1d-ba48-095007592ee7",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/0a1d8512-b7cd-4732-8c00-f29a832e363b.webp",
+          "caption": "",
+          "alt": "65e6fc74c946e8adecfd1aacc4adf190.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "b9bd8a88-a3d9-4cc8-9afc-5538dbae395c",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/6750221f-1064-4f1d-81ed-5036715d5573.webp",
+          "caption": "",
+          "alt": "dac9aad9bf4f5b4d1f30a72e866f07a5.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "7f5c16a8-6c76-425f-9945-55b2d24f2d42",
+          "type": "block",
+          "format": "image",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/7a21ac26-310d-467e-91aa-2c8f082311ea.webp",
+          "caption": "",
+          "alt": "7158790fa08fbe732c19d1d143ba4b8e.jpg",
+          "previewCount": 6
+        },
+        {
+          "id": "7589c5a2-4d70-498f-a0e1-8c7532012138",
+          "type": "block",
+          "format": "video",
+          "selector": "#stage-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/7cfe8418-1200-49bd-ba6d-b18c9ebc90df.mp4",
+          "caption": "",
+          "alt": "a0ceebebc1d5bd9c0a44c8d45fe2442b.mp4",
           "previewCount": 6
         }
       ]
