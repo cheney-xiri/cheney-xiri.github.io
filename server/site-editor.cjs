@@ -2,6 +2,7 @@
 const fs = require('node:fs'), path = require('node:path');
 const groups = { home:'首页与章节', about:'关于我与 AI 探索', journey:'行旅', craft:'技艺', pastimes:'志趣', works:'作品', travels:'足迹', figures:'仰止与追星', writing:'文存与句笺', interaction:'互动', books:'读书', other:'其他页面' };
 const sources = [
+  ['assets/pastime-library.json','志趣 · 动漫片单与游戏目录'],
   ['assets/travels.json','足迹 · 城市与到访记录'], ['assets/pastimes.json','志趣 · 各项爱好资料'],
   ['assets/music-selection.json','听歌 · 常听歌曲与完整歌单'], ['assets/joseki-books.json','围棋 · 书中棋谱资料'],
   ['assets/joseki-josekle.json','围棋 · 定式棋谱'], ['assets/joseki-pachi.json','围棋 · 传统定式'], ['assets/joseki-variations.json','围棋 · 变化分支']

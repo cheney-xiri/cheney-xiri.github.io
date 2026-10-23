@@ -1,5 +1,6 @@
-(function () {
+(async function () {
   'use strict';
+  await window.CHENEY_PASTIME_LIBRARY?.ready;
   if (document.body.dataset.page !== 'work') return;
 
   const $ = id => document.getElementById(id);

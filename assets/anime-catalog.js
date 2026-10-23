@@ -1,5 +1,6 @@
-(function(){
+(async function(){
   'use strict';
+  await window.CHENEY_PASTIME_LIBRARY?.ready;
   const works=window.CHENEY_ANIME_WORKS||[];
   const groups=window.CHENEY_ANIME_GROUPS||{};
   const $=id=>document.getElementById(id);
@@ -34,7 +35,8 @@
     const sectionWorks=works.filter(w=>section==='animation'?isAnimation(w.group):!isAnimation(w.group));
     const groupKeys=section==='animation'?['animation-cn','animation-world']:['cn-film','cn-anime','jp-film','jp-series','other-film'];
     const heroNames=section==='animation'?['熊出没','喜羊羊与灰太狼','海绵宝宝','葫芦娃']:['长安三万里','剑来','起风了','寻梦环游记'];
-    for(const name of heroNames){const work=works.find(w=>w.title===name);if(!work)continue;const a=node('a','ac-hero-poster');a.href=detailHref(work);a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',`打开${work.title}作品小档`);a.append(art(work,'ac-hero-poster-art',true),node('span','',work.title));$('hero-posters').append(a)}
+    const heroWorks=heroNames.map(name=>sectionWorks.find(w=>w.title===name)).filter(Boolean);for(const work of sectionWorks)if(heroWorks.length<4&&!heroWorks.includes(work))heroWorks.push(work);
+    for(const work of heroWorks){const a=node('a','ac-hero-poster');a.href=detailHref(work);a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',`打开${work.title}作品小档`);a.append(art(work,'ac-hero-poster-art',true),node('span','',work.title));$('hero-posters').append(a)}
     $('total-count').textContent=`共 ${sectionWorks.length} 部 · 持续增补`;
     let activeGroup=groupKeys[0];
     const tabs=$('group-tabs'),search=$('work-search'),grid=$('work-grid');
@@ -65,7 +67,7 @@
     $('work-summary').textContent=work.summary;
     $('work-cover').append(art(work,'aw-cover-art',true));
     $('work-meta').append(node('span','',groups[work.group].label),node('span','',groups[work.group].kind));
-    $('work-source').href=`https://bangumi.tv/subject/${work.bgm}`;
+    if(work.sourceUrl||work.bgm)$('work-source').href=work.sourceUrl||`https://bangumi.tv/subject/${work.bgm}`;else $('work-source').remove();
     $('work-reading').textContent=work.summary;
     const dl=$('work-facts');
     const region=work.group.startsWith('cn-')||work.group==='animation-cn'?'中国':work.group.startsWith('jp-')?'日本':'其他地区';

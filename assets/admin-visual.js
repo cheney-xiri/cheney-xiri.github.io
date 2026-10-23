@@ -47,7 +47,7 @@
   function drawSectionLinks(){
    sectionLinks.replaceChildren();const chapters=window.CHENEY_ADMIN_CHAPTERS.chapters,c=chapters.find(c=>c.key===ctx.scope?.chapter)||chapters.find(c=>c.group===catalog.pages.find(p=>p.path===key)?.group);
    if(!c){sectionLinks.append(button('主页',()=>openPage('index.html')));return;}
-   sectionLinks.append(button(c.title+' · 主页',()=>openPage('index.html','#'+c.section)));
+   if(c.key==='pastimes')sectionLinks.append(button('补充片单、游戏与歌曲',()=>ctx.navigate('chapter:pastimes',{tool:'library'})));sectionLinks.append(button(c.title+' · 主页',()=>openPage('index.html','#'+c.section)));
    for(const p of window.CHENEY_ADMIN_NAVIGATION.pages(catalog,c)){const b=button(window.CHENEY_ADMIN_NAVIGATION.name(p),()=>openPage(p.path));b.dataset.path=p.path;b.setAttribute('aria-current',String(p.path===key));sectionLinks.append(b);}
   }
   search.oninput=drawDirectory;drawDirectory();

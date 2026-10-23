@@ -193,26 +193,6 @@
     const playlist = playlists[active] || {};
     document.getElementById('music-cover-title').textContent = playlist.title || groupMeta[active].title;
     document.getElementById('music-cover-subtitle').textContent = playlist.subtitle || groupMeta[active].subtitle;
-    const featured = tracks('favorites').find(track => track.pinned);
-    const featureLink = document.getElementById('music-feature-link');
-    if (featured && featureLink) {
-      featureLink.href = resolvedLink(featured).url;
-      document.getElementById('music-feature-title').textContent = featured.title;
-      document.getElementById('music-feature-artist').textContent = featured.meta;
-      const sleeve = room.querySelector('.music-record-sleeve');
-      const cover = artUrl(featured);
-      if (sleeve && cover && !sleeve.querySelector('.music-feature-cover')) {
-        const image = document.createElement('img');
-        image.className = 'music-feature-cover';
-        image.alt = '坂本龙一 Playing the Piano USA 2010 / Korea 2011 专辑封面';
-        image.width = 640;
-        image.height = 561;
-        image.addEventListener('load', () => sleeve.classList.add('has-album-cover'));
-        image.addEventListener('error', () => { image.remove(); sleeve.classList.remove('has-album-cover'); });
-        image.src = cover;
-        sleeve.append(image);
-      }
-    }
     if (playlistLink) { playlistLink.hidden = true; playlistLink.removeAttribute('href'); }
     if (linksHost) {
       linksHost.replaceChildren();

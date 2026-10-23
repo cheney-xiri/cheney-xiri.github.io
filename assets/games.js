@@ -1,5 +1,6 @@
-(function(){
+(async function(){
   'use strict';
+  await window.CHENEY_PASTIME_LIBRARY?.ready;
   const games=window.CHENEY_GAMES||[];
   const $=id=>document.getElementById(id);
   const make=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node};
@@ -15,7 +16,8 @@
   }
   if(document.body.dataset.page==='catalog'){
     const collage=$('hero-collage');
-    ['wzry','delta-pc','it-takes-two','egg-party'].forEach(id=>{const game=games.find(item=>item.id===id);const figure=make('figure','hero-cover');figure.append(art(game,'hero-cover-art',true),make('figcaption','',game.name));collage.append(figure)});
+    const picked=['wzry','delta-pc','it-takes-two','egg-party'].map(id=>games.find(g=>g.id===id)).filter(Boolean);for(const g of games)if(picked.length<4&&!picked.includes(g))picked.push(g);
+    picked.forEach(game=>{const a=link(game,'hero-cover'),copy=make('span','hero-cover-copy');copy.append(make('small','',platformName[game.platform]+' / '+game.genre),make('strong','',game.name),make('em','','打开游戏小档 ↗'));a.append(art(game,'hero-cover-art',true),copy);collage.append(a)});
     let platform='mobile',genre='全部',query='';
     $('total-count').textContent=`共 ${games.length} 款游戏，按平台归卷。`;
     for(const key of ['mobile','pc']) $(`${key}-count`).textContent=`${games.filter(g=>g.platform===key).length} 款`;

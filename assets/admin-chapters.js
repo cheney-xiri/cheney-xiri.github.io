@@ -5,7 +5,7 @@
   {key:'about',title:'关于我',section:'about',group:'about',art:'scroll-bamboo-v1',note:'自述、个性小档与 AI 探索',tools:[['profile','个性小档'],['pages','本章图文']]},
   {key:'journey',title:'行旅',section:'journey',group:'journey',art:'scroll-journey-v1',note:'求学经历、阶段照片与视频',tools:[['journey','求学经历'],['pages','本章图文']]},
   {key:'craft',title:'技艺',section:'craft',group:'craft',art:'chapter-craft-v1',note:'写作、围棋、摄影与清音',sources:['joseki-'],tools:[['pages','本章图文'],['sources','围棋资料']]},
-  {key:'pastimes',title:'志趣',section:'pastimes',group:'pastimes',art:'chapter-pastimes-v1',note:'听歌、物理与宇宙、剪视频等',sources:['pastimes.json','music-selection.json'],tools:[['pages','本章图文'],['music','歌单'],['anime','观影手记'],['sources','志趣资料']]},
+  {key:'pastimes',title:'志趣',section:'pastimes',group:'pastimes',art:'chapter-pastimes-v1',note:'听歌、物理与宇宙、剪视频等',sources:['pastimes.json','pastime-library.json','music-selection.json'],tools:[['pages','本章图文'],['library','片单与游戏'],['music','歌单'],['anime','观影手记'],['sources','志趣资料']]},
   {key:'works',title:'作品',section:'works',group:'works',art:'chapter-works-v1',note:'作品介绍、人物与创作近况',tools:[['works','作品目录'],['pages','本章图文']]},
   {key:'travels',title:'足迹',section:'travels',group:'travels',art:'scroll-river-v1',note:'城市、到访记录与沿途影像',sources:['travels.json'],tools:[['travels','城市与影像'],['sources','城市资料'],['pages','本章图文']]},
   {key:'admire',title:'仰止',section:'admire',group:'figures',art:'scroll-admire-v1',note:'仰慕的人、诗篇与追星',tools:[['pages','人物与诗篇']]},
