@@ -3294,7 +3294,7 @@
       ]
     },
     "travels/city.html?city=chongqing": {
-      "revision": 1,
+      "revision": 2,
       "patches": [
         {
           "id": "ff5dd698-ad1c-4bf8-9aa6-6f496439428c",
