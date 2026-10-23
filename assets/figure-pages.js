@@ -3,7 +3,7 @@
   document.querySelectorAll('[data-poem-fold]').forEach(function (fold) {
     var lines = Array.from(fold.querySelectorAll('.fp-poem-line'));
     var toggle = fold.querySelector('[data-poem-toggle]');
-    if (!toggle || lines.length <= 24) return;
+    if (!toggle || !lines.length) return;
     var expanded = false;
     function renderFold() {
       lines.forEach(function (line, index) { line.hidden = !expanded && index >= 8; });

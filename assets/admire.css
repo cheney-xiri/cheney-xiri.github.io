@@ -248,6 +248,12 @@
 .fp-reader--library .fp-reader-panel h3{ overflow-wrap:anywhere; }
 .fp-reader--library .fp-poem{ font-size:1.1rem; letter-spacing:.02em; overflow-wrap:anywhere; }
 .fp-poem-line{ display:block; }
+.figure-page--mao .fp-poem--complete,.figure-page--li .fp-poem--complete{height:auto;max-height:none;overflow:visible;line-clamp:unset;-webkit-line-clamp:unset}
+.figure-page .fp-poem-line[hidden]{display:none}
+.figure-page .fp-poem-fold{scroll-margin-top:5rem;margin-bottom:1.4rem}
+.figure-page .fp-poem-toggle{min-height:44px;padding:.4rem 0;background:none;border:0;border-bottom:1px solid currentColor;color:var(--is-red-deep,var(--admire-accent));font:inherit;font-size:.85rem;cursor:pointer}
+.figure-page .fp-poem-toggle[hidden]{display:none}
+.fp-poem-preface{font-size:.84rem;line-height:1.9;color:var(--admire-muted);margin-block:1rem}
 /* Qu Yuan: complete originals stay in document flow, with a reachable index. */
 .figure-page--qu [data-complete-poems]{scroll-margin-top:1rem;background:transparent;border:0;box-shadow:none;column-gap:1.5rem}
 .figure-page--qu [data-complete-poems]>.fp-reader-tabs{position:sticky;top:1rem;max-height:calc(100svh - 3rem);align-self:start;scrollbar-width:thin}
