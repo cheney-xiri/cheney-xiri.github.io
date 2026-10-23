@@ -1,7 +1,7 @@
 /* Apply owner-published text and media changes without replacing chapter layouts. */
 (() => {
   'use strict';
-  const latest=new Map(),saved=new Map(); let active=[],timer,applying=false,insertionTails=new Map();
+  const latest=new Map(),saved=new Map(),galleryStates=new Map(); let active=[],timer,applying=false,insertionTails=new Map();
   const remember=(target,key)=>{let map=saved.get(target);if(!map){map=new Map();saved.set(target,map);}if(!map.has(key))map.set(key,key==='nodeValue'?target.nodeValue:key==='backgroundImage'||key==='objectFit'?target.style[key]:target.getAttribute(key));};
   function reset(){for(const [target,values]of saved)for(const [key,value]of values){if(key==='nodeValue')target.nodeValue=value;else if(key==='backgroundImage'||key==='objectFit')target.style[key]=value;else if(value===null)target.removeAttribute(key);else target.setAttribute(key,value);}saved.clear();latest.clear();document.querySelectorAll('[data-cms-block],[data-cms-copy],[data-cms-gallery]').forEach(n=>n.remove());document.querySelectorAll('[data-cms-placeholder]').forEach(n=>{n.hidden=false;n.removeAttribute('data-cms-placeholder');});}
   const allowed=value=>{try{const u=new URL(value,location.origin);return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}};
@@ -28,10 +28,10 @@
     const placed=mediaPlacement(p),anchor=matching(placed);if(!anchor)return null;
     const group=JSON.stringify([placed.selector,placed.position||'afterend']);
     let gallery=[...document.querySelectorAll('[data-cms-gallery]')].find(n=>n.dataset.cmsGallery===group);
-    if(!gallery){gallery=document.createElement('div');gallery.className='cheney-media-gallery';gallery.dataset.cmsGallery=group;
+    if(!gallery){gallery=document.createElement('div');gallery.className='cheney-media-gallery';gallery.dataset.cmsGallery=group;gallery.dataset.expanded=String(galleryStates.get(group)===true);
       const grid=document.createElement('div');grid.className='cheney-media-grid';grid.id='cms-gallery-'+p.id;gallery.append(grid);
       const toggle=document.createElement('button');toggle.type='button';toggle.className='cheney-gallery-toggle';toggle.setAttribute('aria-controls',grid.id);toggle.setAttribute('aria-expanded','false');gallery.append(toggle);
-      toggle.onclick=()=>{gallery.dataset.expanded=String(gallery.dataset.expanded!=='true');refreshGallery(gallery);if(gallery.dataset.expanded!=='true')toggle.scrollIntoView({block:'nearest'});};
+      toggle.onclick=()=>{gallery.dataset.expanded=String(gallery.dataset.expanded!=='true');galleryStates.set(group,gallery.dataset.expanded==='true');refreshGallery(gallery);if(gallery.dataset.expanded!=='true')toggle.scrollIntoView({block:'nearest'});};
       insert(anchor,placed.position||'afterend',gallery);
     }
     return gallery;
@@ -64,7 +64,7 @@
   }
   function apply(patches){
     if(applying)return;applying=true;insertionTails=new Map();
-    if(patches!==undefined){reset();active=patches;}
+    if(patches!==undefined){for(const g of document.querySelectorAll('[data-cms-gallery]'))galleryStates.set(g.dataset.cmsGallery,g.dataset.expanded==='true');reset();active=patches;}
     try{
      const additions=active.filter(p=>p.type==='block'||p.type==='duplicate');
      for(let pass=0;pass<Math.min(additions.length,30);pass++)for(const p of additions){if(p.type==='block')block(p);else duplicate(p);}
