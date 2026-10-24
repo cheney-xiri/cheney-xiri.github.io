@@ -43,6 +43,17 @@ try {
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com'+serviceOrigin+'; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
+        const fontLinks = [];
+        content = content.replace(/<link\b[^>]*href=["']https:\/\/fonts\.googleapis\.com\/css2\?[^"']+["'][^>]*>/gi, match => {
+          const href = match.match(/href=["']([^"']+)["']/i)?.[1];
+          if (!href || !/\brel=["']stylesheet["']/i.test(match)) return match;
+          fontLinks.push('<meta data-cheney-fonts-href="' + href + '">');
+          return '';
+        });
+        if (fontLinks.length) {
+          content = content.replace(/<link\b[^>]*href=["']https:\/\/fonts\.(?:googleapis|gstatic)\.com["'][^>]*>/gi, '');
+          content = content.replace(/(<head[^>]*>)/i, '$1' + fontLinks.join('') + '<script src="/assets/font-loader.js?v=20261024-01" defer></script>');
+        }
         content = content.replace(/(<head[^>]*>)/i, '$1<meta name="cheney-page-path" content="'+file+'">');
         if (file === 'index.html') content = content.replace('href="/cheney/admin/"', 'href="/admin/"');
         const state = store.publicState(file, false);
@@ -52,7 +63,9 @@ try {
         content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261023-01"><script src="/assets/site-content.js?v=20261023-01" defer></script>');
       }
       if(file === 'admin/index.html')content=content.replace(/((?:src|href)="\/assets\/(?:admin[^/\"]*|github-admin)\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261023-02');
+      if (file === 'assets/ink-site.css') content=content.replace(/^@import\s+url\(["']https:\/\/fonts\.googleapis\.com\/css2\?[^\n]+\r?\n/m, '');
       content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/(?:content-live|ink-subsections)\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261021-08');
+      if (file.endsWith('.html')) content=content.replace(/(href="(?:\/|\.\.\/|\.\/)?assets\/ink-site\.css\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-01');
       content=content.replace('var h=document.documentElement,p=location.pathname,q=', 'var h=document.documentElement,p=document.querySelector(\'meta[name="cheney-page-path"]\')?.content?\'/\'+document.querySelector(\'meta[name="cheney-page-path"]\').content:location.pathname,q=');
       bytes = Buffer.from(content);
     }
