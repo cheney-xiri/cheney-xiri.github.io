@@ -57,11 +57,12 @@
       item.dataset.region = regionForCity(city);
       const visual = make('div', 'travel-city-visual');
       const image = make('img', 'travel-city-image');
-      image.src = mediaURL(city.image) || `${directoryPage ? '../' : ''}assets/travel-covers/${city.id}.jpg`;
-      image.addEventListener('error',()=>{image.src='/assets/ink/scroll-river-v1.webp';},{once:true});
       image.alt = `${city.name}·${city.cover || '城市风景'}，城市印象照片`;
-      image.loading = index < 4 ? 'eager' : 'lazy';
+      image.loading = directoryPage && index < 4 ? 'eager' : 'lazy';
       image.decoding = 'async';
+      if (!directoryPage) image.fetchPriority = 'low';
+      image.addEventListener('error',()=>{image.src='/assets/ink/scroll-river-v1.webp';},{once:true});
+      image.src = mediaURL(city.image) || `${directoryPage ? '../' : ''}assets/travel-covers/${city.id}.jpg`;
       visual.append(image);
       visual.append(make('span', 'travel-city-number', String(index + 1).padStart(2, '0')));
       visual.append(make('span', 'travel-city-province', city.province));
