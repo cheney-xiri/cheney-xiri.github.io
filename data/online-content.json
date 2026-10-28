@@ -3294,7 +3294,7 @@
       ]
     },
     "travels/city.html?city=chongqing": {
-      "revision": 2,
+      "revision": 3,
       "patches": [
         {
           "id": "ff5dd698-ad1c-4bf8-9aa6-6f496439428c",
@@ -3358,6 +3358,18 @@
           "previewCount": 6
         },
         {
+          "id": "051acafe-3e08-4827-9a83-b21312767951",
+          "type": "block",
+          "format": "image",
+          "selector": "#travel-main",
+          "position": "beforeend",
+          "title": "",
+          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/37f7705b-ddfa-4e17-b4fd-3a7658b0cdf4.webp",
+          "caption": "",
+          "alt": "IMG_20260125_205348.jpg",
+          "previewCount": 6
+        },
+        {
           "id": "5e8c30fb-c0e1-497f-8f0d-b3521085d8fa",
           "type": "block",
           "format": "image",
@@ -3369,18 +3381,6 @@
           "alt": "IMG_20260125_191529.jpg",
           "previewCount": 6,
           "layout": "gallery"
-        },
-        {
-          "id": "051acafe-3e08-4827-9a83-b21312767951",
-          "type": "block",
-          "format": "image",
-          "selector": "#travel-main",
-          "position": "beforeend",
-          "title": "",
-          "value": "https://raw.githubusercontent.com/cheney-xiri/cheney-xiri.github.io/main/assets/cms-uploads/37f7705b-ddfa-4e17-b4fd-3a7658b0cdf4.webp",
-          "caption": "",
-          "alt": "IMG_20260125_205348.jpg",
-          "previewCount": 6
         },
         {
           "id": "eef13ba4-d031-4065-907e-673eea754eb8",
