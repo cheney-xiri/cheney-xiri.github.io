@@ -64,6 +64,7 @@ try {
         content = content.replace(/(<head[^>]*>)/i, '$1<link rel="stylesheet" href="/assets/site-content.css?v=20261023-01"><script src="/assets/site-content.js?v=20261023-01" defer></script>');
       }
       if(file === 'admin/index.html')content=content.replace(/((?:src|href)="\/assets\/(?:admin[^/\"]*|github-admin)\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261023-02');
+      if(file.endsWith('.html'))content=content.replace(/((?:src|href)="(?:\/|\.\.\/|\.\/)?assets\/(?:books\.js|style\.css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261031-books-01');
       if (file === 'assets/ink-site.css') content=content.replace(/^@import\s+url\(["']https:\/\/fonts\.googleapis\.com\/css2\?[^\n]+\r?\n/m, '');
       content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/(?:content-live|ink-subsections)\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261021-08');
       if (file.endsWith('.html')) content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/travels\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-02');
