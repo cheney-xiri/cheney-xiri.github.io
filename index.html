@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -841,7 +841,7 @@ var POEMS = [
   var drift = $('#hero-drift');
   if (drift && typeof POEMS !== 'undefined' && POEMS.length) {
     var calm = reduce.matches;
-    var narrow = window.matchMedia('(max-width: 768px)').matches;
+    var narrow = window.matchMedia('(max-width: 800px)').matches;
 
     /* 洗牌：同一批内不重复，且每次打开抽到的是另一组 */
     var pool = POEMS.slice();
@@ -854,8 +854,8 @@ var POEMS = [
        若各句各用随机速度，慢的会被快的追上，同一轨道的字会叠成一团——
        手机上实测过，确实糊了。等距之后间距恒为 (视口 + 句宽) / 轨内句数，
        只要它大于最长那句，就永不重叠。速度只在不同轨道之间变化，保住参差感。 */
-    var laneY = narrow ? ['20%', '40%'] : ['13%', '30%', '47%', '62%'];
-    var laneDur = narrow ? [64, 82] : [58, 74, 66, 88];
+    var laneY = narrow ? ['11%', '18%', '25%', '85%'] : ['13%', '30%', '47%', '62%'];
+    var laneDur = narrow ? [34, 38, 36, 42] : [58, 74, 66, 88];
     var perLane = narrow ? 2 : 4;
     var laneCount = laneY.length;
     /* 轨道都在远山之上（远山占底部约 34vh，顶端约在 66% 处），

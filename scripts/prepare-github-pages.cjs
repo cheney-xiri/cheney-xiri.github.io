@@ -43,6 +43,7 @@ try {
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com'+serviceOrigin+'; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
+        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/mobile-navigation.js?v=20261031-01" defer></script>');
         const fontLinks = [];
         content = content.replace(/<link\b[^>]*href=["']https:\/\/fonts\.googleapis\.com\/css2\?[^"']+["'][^>]*>/gi, match => {
           const href = match.match(/href=["']([^"']+)["']/i)?.[1];
@@ -66,6 +67,7 @@ try {
       if (file === 'assets/ink-site.css') content=content.replace(/^@import\s+url\(["']https:\/\/fonts\.googleapis\.com\/css2\?[^\n]+\r?\n/m, '');
       content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/(?:content-live|ink-subsections)\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261021-08');
       if (file.endsWith('.html')) content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/travels\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-02');
+      if (file.endsWith('.html')) content=content.replace(/((?:src|href)="(?:\/|\.\.\/|\.\/)?assets\/ink-mobile\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261031-01');
       if (file.endsWith('.html')) content=content.replace(/(href="(?:\/|\.\.\/|\.\/)?assets\/ink-site\.css\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-01');
       content=content.replace('var h=document.documentElement,p=location.pathname,q=', 'var h=document.documentElement,p=document.querySelector(\'meta[name="cheney-page-path"]\')?.content?\'/\'+document.querySelector(\'meta[name="cheney-page-path"]\').content:location.pathname,q=');
       bytes = Buffer.from(content);

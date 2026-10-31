@@ -7,8 +7,19 @@
   inset:0;width:100%;height:100%;opacity:1;mask-image:none;filter:none;
  }
  .ink-site #ink-home .hero-veil {
-  background:radial-gradient(ellipse 83% 45% at 50% 46%,rgba(190,215,206,.22),rgba(190,215,206,.08) 70%,transparent);
+  background:radial-gradient(ellipse 78% 48% at 50% 49%,rgba(190,215,206,.76),rgba(190,215,206,.45) 58%,transparent 88%);
  }
+ .ink-site #ink-home .hero-drift {
+  inset:0;height:100%;max-height:none;z-index:1;
+ }
+ .ink-site #ink-home .hero-drift .drift-line {
+  opacity:.94;color:#1c3d43;font-size:clamp(.78rem,3.1vw,.86rem);
+  text-shadow:0 1px 5px rgba(221,237,229,.7);
+ }
+ .ink-site #ink-home .hero-drift .drift-line:nth-child(4n) {
+  color:#e5f2e9;text-shadow:0 1px 5px rgba(8,38,40,.85);
+ }
+ .ink-site #ink-home .hero-inner{z-index:3}
  .ink-site #ink-home #about{--mobile-ink-scene:url('ink/mobile/about-v1.webp');--mobile-ink-pigment:184,203,181}
  .ink-site #ink-home #journey{--mobile-ink-scene:url('ink/mobile/journey-v1.webp');--mobile-ink-pigment:185,204,181}
  .ink-site #ink-home #craft{--mobile-ink-scene:url('ink/mobile/craft-v1.webp');--mobile-ink-pigment:181,198,180}
@@ -31,7 +42,7 @@
   background-repeat:no-repeat;background-position:center center;background-size:cover;
  }
  .mobile-ink-art[data-ready=true] {
-  background-image:linear-gradient(90deg,rgba(var(--mobile-ink-pigment),.32),rgba(var(--mobile-ink-pigment),.68) 13%,rgba(var(--mobile-ink-pigment),.68) 87%,rgba(var(--mobile-ink-pigment),.32)),var(--mobile-ink-scene);
+  background-image:linear-gradient(90deg,rgba(var(--mobile-ink-pigment),.56),rgba(var(--mobile-ink-pigment),.89) 16%,rgba(var(--mobile-ink-pigment),.89) 84%,rgba(var(--mobile-ink-pigment),.56)),var(--mobile-ink-scene);
  }
  html.ink-site:not([data-ink-preserve]) body[data-ink-backdrop]:not(#ink-home) {
   --mobile-ink-scene:url('ink/mobile/reading-v1.webp');
@@ -67,7 +78,7 @@
  html.ink-site:not([data-ink-preserve]) .mobile-page-scene {
   position:fixed;inset:0;z-index:-1;pointer-events:none;
   background-color:rgb(var(--sub-pigment));
-  background-image:linear-gradient(90deg,rgba(var(--sub-pigment),.62),rgba(var(--sub-pigment),.72) 15%,rgba(var(--sub-pigment),.72) 85%,rgba(var(--sub-pigment),.62)),var(--mobile-ink-scene);
+  background-image:linear-gradient(90deg,rgba(var(--sub-pigment),.76),rgba(var(--sub-pigment),.9) 15%,rgba(var(--sub-pigment),.9) 85%,rgba(var(--sub-pigment),.76)),var(--mobile-ink-scene);
   background-size:cover;background-position:center center;background-repeat:no-repeat;
  }
 }
