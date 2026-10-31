@@ -43,7 +43,7 @@ try {
         content = content.replace('content="noindex,nofollow"', 'content="noindex,nofollow"><meta name="referrer" content="no-referrer"');
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com'+serviceOrigin+'; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
-        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/mobile-navigation.js?v=20261031-01" defer></script>');
+        content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/mobile-navigation.js?v=20261031-02" defer></script>');
         const fontLinks = [];
         content = content.replace(/<link\b[^>]*href=["']https:\/\/fonts\.googleapis\.com\/css2\?[^"']+["'][^>]*>/gi, match => {
           const href = match.match(/href=["']([^"']+)["']/i)?.[1];
