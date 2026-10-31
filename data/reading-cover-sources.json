@@ -502,5 +502,691 @@
     "edition": "居里夫人（全译本）",
     "cover": "https://cdn.weread.qq.com/outpic/210/3001023210.jpg",
     "url": "https://weread.qq.com/web/bookDetail/74f325e0811e332b1g01019b"
+  },
+  {
+    "title": "月亮与六便士",
+    "author": "威廉·萨默塞特·毛姆",
+    "edition": "月亮与六便士",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/9/27326009/t6_27326009.jpg",
+    "url": "https://weread.qq.com/web/reader/12c32b9071a0f63912c88de"
+  },
+  {
+    "title": "百年孤独",
+    "author": "加西亚·马尔克斯",
+    "edition": "百年孤独",
+    "cover": "https://cdn.weread.qq.com/weread/cover/49/yuewen_935536/t6_yuewen_9355361682243599.jpg",
+    "url": "https://weread.qq.com/web/reader/8bc329705e46708bcb0c164"
+  },
+  {
+    "title": "刀锋",
+    "author": "威廉·萨默塞特·毛姆",
+    "edition": "刀锋",
+    "cover": "https://cdn.weread.qq.com/weread/cover/56/cpplatform_bjjn1i32y65zfxql2gbabm/t6_cpplatform_bjjn1i32y65zfxql2gbabm1763345062.jpg",
+    "url": "https://weread.qq.com/web/reader/2d132dd0813ababd4g015c21"
+  },
+  {
+    "title": "追风筝的人",
+    "author": "卡勒德·胡赛尼",
+    "edition": "追风筝的人",
+    "cover": "https://cdn.weread.qq.com/weread/cover/16/cpplatform_fgegrkvpdiuer8i5mqtfbd/t6_cpplatform_fgegrkvpdiuer8i5mqtfbd1747980877.jpg",
+    "url": "https://weread.qq.com/web/reader/68a32ff0813ab9f5eg016ee7"
+  },
+  {
+    "title": "孤独是人生常态",
+    "author": "阿图尔·叔本华",
+    "edition": "孤独是人生常态",
+    "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_4wyrbcxgi5bdqjwnuqzj3d/t6_cpplatform_4wyrbcxgi5bdqjwnuqzj3d1698054532.jpg",
+    "url": "https://weread.qq.com/web/reader/4bd329d0813ab83e3g0114a7"
+  },
+  {
+    "title": "你当像鸟飞往你的山",
+    "author": "塔拉·韦斯特弗",
+    "edition": "你当像鸟飞往你的山",
+    "cover": "https://cdn.weread.qq.com/weread/cover/22/YueWen_26713355/t6_YueWen_26713355.jpg",
+    "url": "https://weread.qq.com/web/reader/8b832b5071979d0b8b86c0d"
+  },
+  {
+    "title": "霍乱时期的爱情",
+    "author": "加西亚·马尔克斯",
+    "edition": "霍乱时期的爱情",
+    "cover": "https://cdn.weread.qq.com/weread/cover/2/yuewen_26441414/t6_yuewen_264414141682244020.jpg",
+    "url": "https://weread.qq.com/web/reader/99632b00719376c6996d2d2"
+  },
+  {
+    "title": "了不起的盖茨比",
+    "author": "菲茨杰拉德",
+    "edition": "了不起的盖茨比",
+    "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_krmw5ujtr7zx8qcpfbydkm/t6_cpplatform_krmw5ujtr7zx8qcpfbydkm1755850940.jpg",
+    "url": "https://weread.qq.com/web/reader/32b32a80813aba4f4g016610"
+  },
+  {
+    "title": "理智与情感",
+    "author": "简·奥斯汀",
+    "edition": "理智与情感",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/946/650946/t6_650946.jpg",
+    "url": "https://weread.qq.com/web/reader/77f321a059eec277f7ed831"
+  },
+  {
+    "title": "西西弗神话",
+    "author": "阿尔贝·加缪",
+    "edition": "西西弗神话",
+    "cover": "https://cdn.weread.qq.com/weread/cover/94/cpplatform_m8dtlsy5cbazzkfbpwdwk5/t6_cpplatform_m8dtlsy5cbazzkfbpwdwk51786703217.jpg",
+    "url": "https://weread.qq.com/web/reader/1f7320a0813abbe97g016198"
+  },
+  {
+    "title": "热牛奶",
+    "author": "黛博拉·利维",
+    "edition": "热牛奶",
+    "cover": "https://cdn.weread.qq.com/weread/cover/58/cpPlatform_oMmqrC7cackxuoebLUUv1e/t6_cpPlatform_oMmqrC7cackxuoebLUUv1e.jpg",
+    "url": "https://weread.qq.com/web/reader/e82327e0813ab7050g015e72"
+  },
+  {
+    "title": "窄门",
+    "author": "安德烈·纪德",
+    "edition": "窄门",
+    "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_bqzkybmwsj1jgdqhlwdc5k/t6_cpplatform_bqzkybmwsj1jgdqhlwdc5k1746526432.jpg",
+    "url": "https://weread.qq.com/web/reader/a97325a0813ab9eb8g01118a"
+  },
+  {
+    "title": "面纱",
+    "author": "威廉·萨默塞特·毛姆",
+    "edition": "面纱",
+    "cover": "https://cdn.weread.qq.com/weread/cover/51/cpplatform_o6tqmwbmtltwumrtmcxqxw/t6_cpplatform_o6tqmwbmtltwumrtmcxqxw1743158129.jpg",
+    "url": "https://weread.qq.com/web/reader/ae332e50813ab9cd8g0119b8"
+  },
+  {
+    "title": "双城记",
+    "author": "查尔斯·狄更斯",
+    "edition": "双城记",
+    "cover": "https://cdn.weread.qq.com/weread/cover/67/3300010567/t6_3300010567.jpg",
+    "url": "https://weread.qq.com/web/reader/f5c32900813ab6aa0g0172c4"
+  },
+  {
+    "title": "小妇人",
+    "author": "路易莎·梅·奥尔科特",
+    "edition": "小妇人",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/871/43540871/t6_43540871.jpg",
+    "url": "https://weread.qq.com/web/reader/bbb3292072986187bbb44c8"
+  },
+  {
+    "title": "荒原狼",
+    "author": "赫尔曼·黑塞",
+    "edition": "荒原狼",
+    "cover": "https://cdn.weread.qq.com/weread/cover/16/cpplatform_4puvfyhhfbl4b7fwpe5tkf/t6_cpplatform_4puvfyhhfbl4b7fwpe5tkf1762157895.jpg",
+    "url": "https://weread.qq.com/web/reader/c79322d0813abaaa7g011479"
+  },
+  {
+    "title": "人类群星闪耀时",
+    "author": "斯蒂芬·茨威格",
+    "edition": "人类群星闪耀时",
+    "cover": "https://cdn.weread.qq.com/weread/cover/27/cpPlatform_pBq289vbkdzstcJDwj9NPQ/t6_cpPlatform_pBq289vbkdzstcJDwj9NPQ.jpg",
+    "url": "https://weread.qq.com/web/reader/9b4321b0813ab7123g012a0e"
+  },
+  {
+    "title": "罗生门",
+    "author": "芥川龙之介",
+    "edition": "罗生门",
+    "cover": "https://cdn.weread.qq.com/weread/cover/1/YueWen_22781908/t6_YueWen_22781908.jpg",
+    "url": "https://weread.qq.com/web/reader/40d327d0715b9fd440dd1a8"
+  },
+  {
+    "title": "安娜·卡列尼娜",
+    "author": "列夫·托尔斯泰",
+    "edition": "安娜·卡列尼娜",
+    "cover": "https://cdn.weread.qq.com/weread/cover/92/cpplatform_mzq1emgsxfcc3gcwnqkn7k/t6_cpplatform_mzq1emgsxfcc3gcwnqkn7k1765181481.jpg",
+    "url": "https://weread.qq.com/web/reader/2a5326a0813abae42g0109ca"
+  },
+  {
+    "title": "老人与海",
+    "author": "欧内斯特·海明威",
+    "edition": "老人与海",
+    "cover": "https://cdn.weread.qq.com/weread/cover/96/cpplatform_tl5qvavm89ccsnxfdbacbk/t6_cpplatform_tl5qvavm89ccsnxfdbacbk1764062548.jpg",
+    "url": "https://weread.qq.com/web/reader/46532e00813abaca4g010be6"
+  },
+  {
+    "title": "包法利夫人",
+    "author": "居斯塔夫·福楼拜",
+    "edition": "包法利夫人",
+    "cover": "https://cdn.weread.qq.com/weread/cover/60/yuewen_40933504/t6_yuewen_409335041737620639.jpg",
+    "url": "https://weread.qq.com/web/reader/fac320a072709880fac67a9"
+  },
+  {
+    "title": "简·爱",
+    "author": "夏洛蒂·勃朗特",
+    "edition": "简·爱",
+    "cover": "https://cdn.weread.qq.com/weread/cover/68/cpplatform_dz3fb9heixxcw6vzfskfal/t6_cpplatform_dz3fb9heixxcw6vzfskfal1787551662.jpg",
+    "url": "https://weread.qq.com/web/reader/b0332080813abbf27g019be7"
+  },
+  {
+    "title": "人间草木",
+    "author": "汪曾祺",
+    "edition": "人间草木",
+    "cover": "https://cdn.weread.qq.com/weread/cover/29/cpplatform_upag3zycm4hc3phjzggzml/t6_cpplatform_upag3zycm4hc3phjzggzml1714117740.jpg",
+    "url": "https://weread.qq.com/web/reader/7fa32530813ab8c38g010ecd"
+  },
+  {
+    "title": "呐喊",
+    "author": "鲁迅",
+    "edition": "呐喊",
+    "cover": "https://cdn.weread.qq.com/weread/cover/20/YueWen_35990248/t6_YueWen_35990248.jpg",
+    "url": "https://weread.qq.com/web/reader/308321f072252ae83088d68"
+  },
+  {
+    "title": "文城",
+    "author": "余华",
+    "edition": "文城",
+    "cover": "https://cdn.weread.qq.com/weread/cover/25/3300020525/t6_3300020525.jpg",
+    "url": "https://weread.qq.com/web/reader/dbc32e60813ab6e84g0159d0"
+  },
+  {
+    "title": "第七天",
+    "author": "余华",
+    "edition": "第七天",
+    "cover": "https://cdn.weread.qq.com/weread/cover/71/yuewen_728774/t6_yuewen_7287741682413408.jpg",
+    "url": "https://weread.qq.com/web/reader/a14323405b1ec6a147a2c71"
+  },
+  {
+    "title": "人生海海",
+    "author": "麦家",
+    "edition": "人生海海",
+    "cover": "https://cdn.weread.qq.com/weread/cover/97/YueWen_25131764/t6_YueWen_25131764.jpg",
+    "url": "https://weread.qq.com/web/reader/63932e60717f7af46396445"
+  },
+  {
+    "title": "怀念狼",
+    "author": "贾平凹",
+    "edition": "怀念狼",
+    "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_fuyvnpxmptw25tbax3rpdg/t6_cpplatform_fuyvnpxmptw25tbax3rpdg1790666436.jpg",
+    "url": "https://weread.qq.com/web/reader/91a32320813abc1e4g019f3f"
+  },
+  {
+    "title": "秦腔",
+    "author": "贾平凹",
+    "edition": "秦腔",
+    "cover": "https://cdn.weread.qq.com/weread/cover/21/YueWen_23303897/t6_YueWen_23303897.jpg",
+    "url": "https://weread.qq.com/web/reader/53532b10716396d95356091"
+  },
+  {
+    "title": "极花",
+    "author": "贾平凹",
+    "edition": "极花",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/216/858216/t6_858216.jpg",
+    "url": "https://weread.qq.com/web/reader/9ad32b505d18689adf7d769"
+  },
+  {
+    "title": "高兴",
+    "author": "贾平凹",
+    "edition": "高兴",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/747/42849747/t6_42849747.jpg",
+    "url": "https://weread.qq.com/web/reader/f6d32ce0728dd5d3f6dbb41"
+  },
+  {
+    "title": "老生",
+    "author": "贾平凹",
+    "edition": "老生",
+    "cover": "https://cdn.weread.qq.com/weread/cover/28/3300016828/t6_3300016828.jpg",
+    "url": "https://weread.qq.com/web/reader/5c8325d0813ab6d12g018634"
+  },
+  {
+    "title": "带灯",
+    "author": "贾平凹",
+    "edition": "带灯",
+    "cover": "https://cdn.weread.qq.com/weread/cover/31/yuewen_180253/t6_yuewen_1802531745563811.jpg",
+    "url": "https://weread.qq.com/web/reader/f3632d5052c01df36d01605"
+  },
+  {
+    "title": "局外人",
+    "author": "阿尔贝·加缪",
+    "edition": "局外人",
+    "cover": "https://cdn.weread.qq.com/weread/cover/44/YueWen_912325/t6_YueWen_912325.jpg",
+    "url": "https://weread.qq.com/web/reader/7bd329e05debc57bdc79852"
+  },
+  {
+    "title": "古炉",
+    "author": "贾平凹",
+    "edition": "古炉",
+    "cover": "https://cdn.weread.qq.com/weread/cover/57/YueWen_33601943/t6_YueWen_33601943.jpg",
+    "url": "https://weread.qq.com/web/reader/6dd323607200b9976dd38a6"
+  },
+  {
+    "title": "废都",
+    "author": "贾平凹",
+    "edition": "废都",
+    "cover": "https://cdn.weread.qq.com/weread/cover/95/cpPlatform_qwj675BS4QB4G8Ksq2NscT/t6_cpPlatform_qwj675BS4QB4G8Ksq2NscT.jpg",
+    "url": "https://weread.qq.com/web/reader/ee532aa0813ab7719g011133"
+  },
+  {
+    "title": "鼠疫",
+    "author": "阿尔贝·加缪",
+    "edition": "鼠疫",
+    "cover": "https://cdn.weread.qq.com/weread/cover/31/cpplatform_r4fbetczxwu42mab3qu7ky/t6_cpplatform_r4fbetczxwu42mab3qu7ky1788945063.jpg",
+    "url": "https://weread.qq.com/web/reader/923325b0813abc07bg017921"
+  },
+  {
+    "title": "白夜行",
+    "author": "东野圭吾",
+    "edition": "白夜行",
+    "cover": "https://cdn.weread.qq.com/weread/cover/1/yuewen_230107/t6_yuewen_2301071682244014.jpg",
+    "url": "https://weread.qq.com/web/reader/65032c105382db65050e7aa"
+  },
+  {
+    "title": "恶意",
+    "author": "东野圭吾",
+    "edition": "恶意",
+    "cover": "https://cdn.weread.qq.com/weread/cover/29/3300020529/t6_3300020529.jpg",
+    "url": "https://weread.qq.com/web/reader/f7932970813ab6e84g019b96"
+  },
+  {
+    "title": "新参者",
+    "author": "东野圭吾",
+    "edition": "新参者",
+    "cover": "https://cdn.weread.qq.com/weread/cover/7/yuewen_840704/t6_yuewen_8407041785220013.jpg",
+    "url": "https://weread.qq.com/web/reader/d1a32f605cd400d1aa92eb2"
+  },
+  {
+    "title": "解忧杂货店",
+    "author": "东野圭吾",
+    "edition": "解忧杂货店",
+    "cover": "https://cdn.weread.qq.com/weread/cover/27/3300020527/t6_3300020527.jpg",
+    "url": "https://weread.qq.com/web/reader/6d132250813ab6e84g017ca5"
+  },
+  {
+    "title": "圣女的救济",
+    "author": "东野圭吾",
+    "edition": "圣女的救济",
+    "cover": "https://cdn.weread.qq.com/weread/cover/51/851251/t6_851251.jpg",
+    "url": "https://weread.qq.com/web/reader/8a1320905cfd338a1c0c71c"
+  },
+  {
+    "title": "秘密",
+    "author": "东野圭吾",
+    "edition": "秘密",
+    "cover": "https://cdn.weread.qq.com/weread/cover/85/22451285/t6_22451285.jpg",
+    "url": "https://weread.qq.com/web/reader/0a032350715694550a01faa"
+  },
+  {
+    "title": "嫌疑人X的献身",
+    "author": "东野圭吾",
+    "edition": "嫌疑人X的献身",
+    "cover": "https://cdn.weread.qq.com/weread/cover/59/cpplatform_gnveypvmpcpiaen24cumub/t6_cpplatform_gnveypvmpcpiaen24cumub1785219967.jpg",
+    "url": "https://weread.qq.com/web/reader/55a32390813ab6e85g011abb"
+  },
+  {
+    "title": "红手指",
+    "author": "东野圭吾",
+    "edition": "红手指",
+    "cover": "https://cdn.weread.qq.com/weread/cover/6/yuewen_840703/t6_yuewen_8407031735116108.jpg",
+    "url": "https://weread.qq.com/web/reader/58b329e05cd3ff58b3473e0"
+  },
+  {
+    "title": "解密",
+    "author": "麦家",
+    "edition": "解密（陈思诚导演，刘昊然主演电影同步上映中）",
+    "cover": "https://cdn.weread.qq.com/weread/cover/32/yuewen_827184/t6_yuewen_8271841721702514.jpg",
+    "url": "https://weread.qq.com/web/reader/e1c32c205c9f30e1cdf7d38"
+  },
+  {
+    "title": "兄弟",
+    "author": "余华",
+    "edition": "兄弟",
+    "cover": "https://cdn.weread.qq.com/weread/cover/3/yuewen_834466/t6_yuewen_8344661758521400.jpg",
+    "url": "https://weread.qq.com/web/reader/b0f32f805cbba2b0f901ea8"
+  },
+  {
+    "title": "生死疲劳",
+    "author": "莫言",
+    "edition": "生死疲劳【中国诺奖得主代表作】",
+    "cover": "https://cdn.weread.qq.com/weread/cover/79/yuewen_26435427/t6_yuewen_264354271701758059.jpg",
+    "url": "https://weread.qq.com/web/reader/c2f320f071935f63c2f1313"
+  },
+  {
+    "title": "蛙",
+    "author": "莫言",
+    "edition": "蛙【中国诺奖得主代表作】",
+    "cover": "https://cdn.weread.qq.com/weread/cover/73/yuewen_26435421/t6_yuewen_264354211701748538.jpg",
+    "url": "https://weread.qq.com/web/reader/f5432d3071935f5df546a42"
+  },
+  {
+    "title": "沧浪之水",
+    "author": "阎真",
+    "edition": "沧浪之水",
+    "cover": "https://cdn.weread.qq.com/weread/cover/49/yuewen_674073/t6_yuewen_6740731774011595.jpg",
+    "url": "https://weread.qq.com/web/reader/7c632ef05a49197c62b53f0"
+  },
+  {
+    "title": "丰乳肥臀",
+    "author": "莫言",
+    "edition": "丰乳肥臀【中国诺奖得主代表作】",
+    "cover": "https://cdn.weread.qq.com/weread/cover/82/yuewen_26447797/t6_yuewen_264477971701748559.jpg",
+    "url": "https://weread.qq.com/web/reader/ea532d2071938fb5ea51430"
+  },
+  {
+    "title": "红树林",
+    "author": "莫言",
+    "edition": "红树林",
+    "cover": "https://cdn.weread.qq.com/weread/cover/36/cpPlatform_sXYkoTkqyn48pLPqrKpokH/t6_cpPlatform_sXYkoTkqyn48pLPqrKpokH.jpg",
+    "url": "https://weread.qq.com/web/reader/58932920813ab7410g0193fa"
+  },
+  {
+    "title": "檀香刑",
+    "author": "莫言",
+    "edition": "檀香刑【中国诺奖得主代表作】",
+    "cover": "https://cdn.weread.qq.com/weread/cover/81/yuewen_26435429/t6_yuewen_264354291701748545.jpg",
+    "url": "https://weread.qq.com/web/reader/1e03256071935f651e0050c"
+  },
+  {
+    "title": "南渡北归",
+    "author": "岳南",
+    "edition": "南渡北归（经典全三册礼盒装）",
+    "cover": "https://cdn.weread.qq.com/weread/cover/13/yuewen_825862/t6_yuewen_8258621676547091.jpg",
+    "url": "https://weread.qq.com/web/bookDetail/a7632bc05c9a06a763645b0"
+  },
+  {
+    "title": "生命册",
+    "author": "李佩甫",
+    "edition": "生命册",
+    "cover": "https://cdn.weread.qq.com/weread/cover/51/yuewen_702682/t6_yuewen_7026821762501420.jpg",
+    "url": "https://weread.qq.com/web/reader/6f0324b05ab8da6f0a211b8"
+  },
+  {
+    "title": "哲学的故事",
+    "author": "威尔·杜兰特",
+    "edition": "哲学的故事",
+    "cover": "https://cdn.weread.qq.com/weread/cover/52/YueWen_23783430/t6_YueWen_23783430.jpg",
+    "url": "https://weread.qq.com/web/reader/e5832af0716ae806e581eab"
+  },
+  {
+    "title": "海底两万里",
+    "author": "儒勒·凡尔纳",
+    "edition": "海底两万里",
+    "cover": "https://cdn.weread.qq.com/weread/cover/94/YueWen_699617/t6_YueWen_699617.jpg",
+    "url": "https://weread.qq.com/web/reader/3c1322c05aace13c1201302"
+  },
+  {
+    "title": "杜甫传",
+    "author": "冯至",
+    "edition": "杜甫传",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/975/34615975/t6_34615975.jpg",
+    "url": "https://weread.qq.com/web/reader/cf3329e0721032a7cf3bf6d"
+  },
+  {
+    "title": "人间失格",
+    "author": "太宰治",
+    "edition": "人间失格",
+    "cover": "https://cdn.weread.qq.com/weread/cover/51/cpplatform_2mh7vpmja7epydval9eriw/t6_cpplatform_2mh7vpmja7epydval9eriw1772681224.jpg",
+    "url": "https://weread.qq.com/web/reader/a38328e0813abb394g019669"
+  },
+  {
+    "title": "高老头",
+    "author": "巴尔扎克",
+    "edition": "高老头",
+    "cover": "https://cdn.weread.qq.com/weread/cover/45/cpplatform_fnccjme2hhzg1ga4gix5v3/t6_cpplatform_fnccjme2hhzg1ga4gix5v31732783929.jpg",
+    "url": "https://weread.qq.com/web/reader/686329d0813ab968fg01796b"
+  },
+  {
+    "title": "羊脂球",
+    "author": "居伊·德·莫泊桑",
+    "edition": "羊脂球",
+    "cover": "https://cdn.weread.qq.com/weread/cover/87/YueWen_699610/t6_YueWen_699610.jpg",
+    "url": "https://weread.qq.com/web/reader/f3632b505aacdaf366131d7"
+  },
+  {
+    "title": "呼啸山庄",
+    "author": "艾米莉·勃朗特",
+    "edition": "呼啸山庄",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/883/842883/t6_842883.jpg",
+    "url": "https://weread.qq.com/web/reader/fbd321a05cdc83fbd64bd37"
+  },
+  {
+    "title": "伊甸之东",
+    "author": "约翰·斯坦贝克",
+    "edition": "伊甸之东",
+    "cover": "https://cdn.weread.qq.com/weread/cover/4/cpplatform_nwucemroviwvsv1yqcqbir/t6_cpplatform_nwucemroviwvsv1yqcqbir1747380887.jpg",
+    "url": "https://weread.qq.com/web/reader/fc332560813ab9f00g0174d0"
+  },
+  {
+    "title": "罪与罚",
+    "author": "陀思妥耶夫斯基",
+    "edition": "罪与罚",
+    "cover": "https://cdn.weread.qq.com/weread/cover/53/YueWen_38818164/t6_YueWen_38818164.jpg",
+    "url": "https://weread.qq.com/web/reader/cb73280072505174cb7179d"
+  },
+  {
+    "title": "巴黎圣母院",
+    "author": "维克多·雨果",
+    "edition": "巴黎圣母院",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/179/926179/t6_926179.jpg",
+    "url": "https://weread.qq.com/web/reader/c0432af05e21e3c0472496c"
+  },
+  {
+    "title": "愤怒的葡萄",
+    "author": "约翰·斯坦贝克",
+    "edition": "愤怒的葡萄",
+    "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_29108643/t6_YueWen_29108643.jpg",
+    "url": "https://weread.qq.com/web/reader/7e232bf071bc29a37e28a0a"
+  },
+  {
+    "title": "许三观卖血记",
+    "author": "余华",
+    "edition": "许三观卖血记",
+    "cover": "https://cdn.weread.qq.com/weread/cover/2/yuewen_834465/t6_yuewen_8344651758512100.jpg",
+    "url": "https://weread.qq.com/web/reader/b1a327905cbba1b1ad515cf"
+  },
+  {
+    "title": "枕草子",
+    "author": "清少纳言",
+    "edition": "枕草子",
+    "cover": "https://cdn.weread.qq.com/weread/cover/91/YueWen_24019371/t6_YueWen_24019371.jpg",
+    "url": "https://weread.qq.com/web/reader/ea432d60716e81abea41219"
+  },
+  {
+    "title": "在细雨中呼喊",
+    "author": "余华",
+    "edition": "在细雨中呼喊",
+    "cover": "https://cdn.weread.qq.com/weread/cover/4/yuewen_834467/t6_yuewen_8344671758542700.jpg",
+    "url": "https://weread.qq.com/web/reader/801324d05cbba380129b0a1"
+  },
+  {
+    "title": "白鹿原",
+    "author": "陈忠实",
+    "edition": "白鹿原",
+    "cover": "https://cdn.weread.qq.com/weread/cover/78/YueWen_812443/t6_YueWen_812443.jpg",
+    "url": "https://weread.qq.com/web/reader/47532ac05c659b47554a825"
+  },
+  {
+    "title": "遥远的救世主",
+    "author": "豆豆",
+    "edition": "遥远的救世主（《天道》影视原著）",
+    "cover": "https://cdn.weread.qq.com/weread/cover/27/cpplatform_jaexyfgcdv21qcn89p91jg/t6_cpplatform_jaexyfgcdv21qcn89p91jg1788937965.jpg",
+    "url": "https://weread.qq.com/web/reader/24e32400813abbf82g011d29"
+  },
+  {
+    "title": "一句顶一万句",
+    "author": "刘震云",
+    "edition": "一句顶一万句",
+    "cover": "https://cdn.weread.qq.com/weread/cover/40/yuewen_934835/t6_yuewen_9348351742212502.jpg",
+    "url": "https://weread.qq.com/web/reader/e2832f705e43b3e28c3f39e"
+  },
+  {
+    "title": "受戒",
+    "author": "汪曾祺",
+    "edition": "受戒",
+    "cover": "https://cdn.weread.qq.com/weread/cover/53/YueWen_31283888/t6_YueWen_31283888.jpg",
+    "url": "https://weread.qq.com/web/reader/79f3296071dd5ab079f8895"
+  },
+  {
+    "title": "我们仨",
+    "author": "杨绛",
+    "edition": "我们仨",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/626/858626/t6_858626.jpg",
+    "url": "https://weread.qq.com/web/reader/fb232f205d1a02fb2f5ae3b"
+  },
+  {
+    "title": "人生",
+    "author": "路遥",
+    "edition": "人生",
+    "cover": "https://cdn.weread.qq.com/weread/cover/70/yuewen_25164497/t6_yuewen_251644971679989190.jpg",
+    "url": "https://weread.qq.com/web/reader/4b432b80717ffad14b4fff8"
+  },
+  {
+    "title": "我与地坛",
+    "author": "史铁生",
+    "edition": "我与地坛",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/44/674044/t6_674044.jpg",
+    "url": "https://weread.qq.com/web/reader/43f327705a48fc43feb9160"
+  },
+  {
+    "title": "文化苦旅",
+    "author": "余秋雨",
+    "edition": "文化苦旅",
+    "cover": "https://cdn.weread.qq.com/weread/cover/53/yuewen_600142/t6_yuewen_6001421715150411.jpg",
+    "url": "https://weread.qq.com/web/reader/12c3298059284e12c485f93"
+  },
+  {
+    "title": "乡土中国",
+    "author": "费孝通",
+    "edition": "乡土中国",
+    "cover": "https://cdn.weread.qq.com/weread/cover/89/yuewen_651366/t6_yuewen_6513661742315957.jpg",
+    "url": "https://weread.qq.com/web/bookDetail/22e32b3059f06622e6e5c85"
+  },
+  {
+    "title": "星空的琴弦",
+    "author": "汪诘",
+    "edition": "星空的琴弦",
+    "cover": "https://cdn.weread.qq.com/weread/cover/27/cpplatform_7s4an7b23lcyrkrdi1psp5/t6_cpplatform_7s4an7b23lcyrkrdi1psp51690272554.jpg",
+    "url": "https://weread.qq.com/web/reader/b6e32440813ab7ffag0102cd"
+  },
+  {
+    "title": "三体",
+    "author": "刘慈欣",
+    "edition": "三体全集（全三册）",
+    "cover": "https://cdn.weread.qq.com/weread/cover/80/yuewen_695233/t6_yuewen_6952331784884457.jpg",
+    "url": "https://weread.qq.com/web/reader/ce032b305a9bc1ce0b0dd2a"
+  },
+  {
+    "title": "傲慢与偏见",
+    "author": "简·奥斯汀",
+    "edition": "傲慢与偏见",
+    "cover": "https://cdn.weread.qq.com/weread/cover/85/yuewen_833793/t6_yuewen_8337931686560195.jpg",
+    "url": "https://weread.qq.com/web/reader/ced32a605cb901ced50d3f5"
+  },
+  {
+    "title": "中国历代政治得失",
+    "author": "钱穆",
+    "edition": "中国历代政治得失",
+    "cover": "https://cdn.weread.qq.com/weread/cover/54/yuewen_23523072/t6_yuewen_235230721689681600.jpg",
+    "url": "https://weread.qq.com/web/reader/ffa323707166ef00ffa7080"
+  },
+  {
+    "title": "悲惨世界",
+    "author": "维克多·雨果",
+    "edition": "悲惨世界",
+    "cover": "https://cdn.weread.qq.com/weread/cover/56/YueWen_32468076/t6_YueWen_32468076.jpg",
+    "url": "https://weread.qq.com/web/reader/38332c9071ef6c6c3831d9d"
+  },
+  {
+    "title": "战争与和平",
+    "author": "列夫·托尔斯泰",
+    "edition": "战争与和平",
+    "cover": "https://cdn.weread.qq.com/weread/cover/56/cpplatform_uxdif4sa6vxopxpharw37p/t6_cpplatform_uxdif4sa6vxopxpharw37p1779445118.jpg",
+    "url": "https://weread.qq.com/web/reader/89f32570813abb754g01925e"
+  },
+  {
+    "title": "卡拉马佐夫兄弟",
+    "author": "陀思妥耶夫斯基",
+    "edition": "卡拉马佐夫兄弟",
+    "cover": "https://cdn.weread.qq.com/weread/cover/7/cpplatform_njsahkleikqa9bysv3yu1a/t6_cpplatform_njsahkleikqa9bysv3yu1a1765353150.jpg",
+    "url": "https://weread.qq.com/web/reader/21632e20813abae7cg0178d4"
+  },
+  {
+    "title": "基督山伯爵",
+    "author": "大仲马",
+    "edition": "基督山伯爵",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/107/853107/t6_853107.jpg",
+    "url": "https://weread.qq.com/web/reader/98d327d05d047398d8a6b97"
+  },
+  {
+    "title": "悉达多",
+    "author": "赫尔曼·黑塞",
+    "edition": "悉达多",
+    "cover": "https://cdn.weread.qq.com/weread/cover/47/cpplatform_1vkb19hbqaow1ycaccpttd/t6_cpplatform_1vkb19hbqaow1ycaccpttd1781174752.jpg",
+    "url": "https://weread.qq.com/web/reader/28132570813abb94ag01013d"
+  },
+  {
+    "title": "克拉拉与太阳",
+    "author": "石黑一雄",
+    "edition": "克拉拉与太阳（彩虹版石黑一雄作品）",
+    "cover": "https://cdn.weread.qq.com/weread/cover/88/YueWen_37072270/t6_YueWen_37072270.jpg",
+    "url": "https://weread.qq.com/web/reader/15c323f07235ad8e15ce531"
+  },
+  {
+    "title": "不能承受的生命之轻",
+    "author": "米兰·昆德拉",
+    "edition": "不能承受的生命之轻（米兰·昆德拉作品系列·2022版）",
+    "cover": "https://cdn.weread.qq.com/weread/cover/3/YueWen_43896728/t6_YueWen_43896728.jpg",
+    "url": "https://weread.qq.com/web/reader/d9f32bf0729dcf98d9fccdb"
+  },
+  {
+    "title": "沉思录",
+    "author": "马可·奥勒留",
+    "edition": "沉思录",
+    "cover": "https://cdn.weread.qq.com/weread/cover/36/cpplatform_qkxe9ggu7ftbrjrvzbkpii/t6_cpplatform_qkxe9ggu7ftbrjrvzbkpii1762765451.jpg",
+    "url": "https://weread.qq.com/web/reader/56532600813abab7fg01859c"
+  },
+  {
+    "title": "宇宙的琴弦",
+    "author": "布莱恩·格林",
+    "edition": "宇宙的琴弦（第一推动丛书·物理系列）",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/894/934894/t6_934894.jpg",
+    "url": "https://weread.qq.com/web/reader/c00324b05e43eec00c448c3"
+  },
+  {
+    "title": "献给阿尔吉侬的花束",
+    "author": "丹尼尔·凯斯",
+    "edition": "献给阿尔吉侬的花束",
+    "cover": "https://cdn.weread.qq.com/weread/cover/11/yuewen_857863/t6_yuewen_8578631681827306.jpg",
+    "url": "https://weread.qq.com/web/reader/03b326005d170703ba15f85"
+  },
+  {
+    "title": "苏菲的世界",
+    "author": "乔斯坦·贾德",
+    "edition": "苏菲的世界",
+    "cover": "https://cdn.weread.qq.com/weread/cover/13/YueWen_703157/t6_YueWen_703157.jpg",
+    "url": "https://weread.qq.com/web/reader/9ef32b805abab59ef601a6c"
+  },
+  {
+    "title": "果壳中的宇宙",
+    "author": "史蒂芬·霍金",
+    "edition": "果壳中的宇宙",
+    "cover": "https://cdn.weread.qq.com/weread/cover/22/YueWen_757876/t6_YueWen_757876.jpg",
+    "url": "https://weread.qq.com/web/reader/8cd32bd05b90748cdef0f4e"
+  },
+  {
+    "title": "小王子",
+    "author": "安托万·德·圣埃克苏佩里",
+    "edition": "小王子",
+    "cover": "https://cdn.weread.qq.com/weread/cover/40/yuewen_216212/t6_yuewen_2162121686560140.jpg",
+    "url": "https://weread.qq.com/web/reader/04e32e30534c9404e504598"
+  },
+  {
+    "title": "追忆似水年华",
+    "author": "马塞尔·普鲁斯特",
+    "edition": "追忆似水年华",
+    "cover": "https://cdn.weread.qq.com/weread/cover/4/cpplatform_ghk4ssjswgxtkgzqourkn2/t6_cpplatform_ghk4ssjswgxtkgzqourkn21783394871.jpg",
+    "url": "https://weread.qq.com/web/reader/54632fd0813abbb4cg01692e"
+  },
+  {
+    "title": "古文观止",
+    "author": "吴楚材、吴调侯选编",
+    "edition": "古文观止",
+    "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/892/40400892/t6_40400892.jpg",
+    "url": "https://weread.qq.com/web/reader/fef329e0726877fcfeff8fc"
+  },
+  {
+    "title": "额尔古纳河右岸",
+    "author": "迟子建",
+    "edition": "茅盾文学奖获奖作品全集：额尔古纳河右岸",
+    "cover": "https://cdn.weread.qq.com/outpic/407/3004054407.jpg",
+    "url": "https://weread.qq.com/web/bookDetail/e30324b0811e7d2c0g017a8c"
   }
 ]
