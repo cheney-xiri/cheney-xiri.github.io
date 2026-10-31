@@ -43,7 +43,7 @@
     { title: '围城', meta: '钱钟书 · 长篇小说', note: '机锋与幽默交织，映出知识分子的处境和人情世态。', cover: 'https://p1-tt.byteimg.com/origin/tos-cn-i-qvj2lq49k0/74b1fb292cb4483182dc07fc2d62033a.jpg', colors: ['#6b586c', '#d3b682'] },
     { title: '沉默的大多数', meta: '王小波 · 随笔集', note: '以理性、幽默与独立判断，谈思想、生活和表达的自由。', cover: 'https://cdn.weread.qq.com/weread/cover/85/yuewen_912825/t6_yuewen_9128251776069077.jpg', colors: ['#4b6269', '#d4b77e'] },
     {"title":"月亮与六便士","meta":"威廉·萨默塞特·毛姆","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
-    {"title":"孤独是人生常态","meta":"季羡林","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
+    {"title":"孤独是人生常态","meta":"阿图尔·叔本华","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
     {"title":"刀锋","meta":"威廉·萨默塞特·毛姆","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
     {"title":"追风筝的人","meta":"卡勒德·胡赛尼","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
     {"title":"你当像鸟飞往你的山","meta":"塔拉·韦斯特弗","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
