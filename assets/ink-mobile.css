@@ -21,6 +21,17 @@
  }
  .ink-site #ink-home .hero-inner{z-index:3}
  .ink-site #ink-home .hero-quote em{color:#173a3c;text-shadow:0 1px 4px rgba(224,240,230,.95)}
+ .ink-site #ink-home #admire .admire-masthead-copy p{font-size:.98rem;line-height:1.6}
+ .ink-site #ink-home #admire .admire-masthead-copy span{font-size:.81rem;line-height:1.7}
+ .ink-site #ink-home #admire .admire-books{background:rgba(213,226,217,.72);box-shadow:0 14px 30px -24px rgba(23,49,48,.6)}
+ .ink-site #ink-home #admire .admire-book{padding:1rem 1rem .1rem}
+ .ink-site #ink-home #admire .admire-book-top{font-size:.73rem;line-height:1.5}
+ .ink-site #ink-home #admire .admire-book-body{grid-template-columns:minmax(0,1fr) 5.75rem;gap:.75rem}
+ .ink-site #ink-home #admire .admire-book-body img{width:5.75rem;height:5.75rem;box-shadow:0 4px 13px rgba(22,50,48,.18)}
+ .ink-site #ink-home #admire .admire-book-body p{font-size:.83rem;line-height:1.7}
+ .ink-site #ink-home #admire .admire-book-note{font-size:.88rem;line-height:1.75}
+ .ink-site #ink-home #admire .admire-book-bottom{font-size:.79rem}
+ .ink-site #ink-home #admire .admire-follow-intro p,.ink-site #ink-home #admire .admire-fan-entry p{font-size:.81rem;line-height:1.6}
  .ink-site #ink-home #about{--mobile-ink-scene:url('ink/mobile/about-v1.webp');--mobile-ink-pigment:184,203,181}
  .ink-site #ink-home #journey{--mobile-ink-scene:url('ink/mobile/journey-v1.webp');--mobile-ink-pigment:185,204,181}
  .ink-site #ink-home #craft{--mobile-ink-scene:url('ink/mobile/craft-v1.webp');--mobile-ink-pigment:181,198,180}

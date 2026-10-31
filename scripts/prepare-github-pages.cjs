@@ -67,7 +67,7 @@ try {
       if (file === 'assets/ink-site.css') content=content.replace(/^@import\s+url\(["']https:\/\/fonts\.googleapis\.com\/css2\?[^\n]+\r?\n/m, '');
       content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/(?:content-live|ink-subsections)\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261021-08');
       if (file.endsWith('.html')) content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/travels\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-02');
-      if (file.endsWith('.html')) content=content.replace(/((?:src|href)="(?:\/|\.\.\/|\.\/)?assets\/ink-mobile\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261031-03');
+      if (file.endsWith('.html')) content=content.replace(/((?:src|href)="(?:\/|\.\.\/|\.\/)?assets\/ink-mobile\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261031-04');
       if (file.endsWith('.html')) content=content.replace(/(href="(?:\/|\.\.\/|\.\/)?assets\/ink-site\.css\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-01');
       content=content.replace('var h=document.documentElement,p=location.pathname,q=', 'var h=document.documentElement,p=document.querySelector(\'meta[name="cheney-page-path"]\')?.content?\'/\'+document.querySelector(\'meta[name="cheney-page-path"]\').content:location.pathname,q=');
       bytes = Buffer.from(content);
