@@ -64,6 +64,7 @@
 .craft-work-meta{ margin-top:1rem; margin-bottom:.35rem; color:var(--zhu-deep); font-size:.75rem; letter-spacing:.1em; }
 .craft-work-card h3{ margin-top:0; margin-bottom:.45rem; color:var(--ink); font-family:var(--font-head); font-size:1.2rem; font-weight:400; }
 .craft-work-description{ margin-top:0; margin-bottom:.8rem; color:var(--ink-2); font-size:.92rem; line-height:1.75; }
+body[data-craft-skill="poetry"] .craft-work-description{white-space:pre-line;overflow-wrap:anywhere;line-height:2}
 .craft-work-audio{ display:block; width:calc(100% - 2rem); margin-bottom:.9rem; }
 .craft-work-card > a{ display:inline-flex; min-height:2.5rem; align-items:center; color:var(--zhu-deep); font-size:.86rem; text-decoration:none; }
 .craft-work-card > a:hover,.craft-work-card > a:focus-visible{ text-decoration:underline; }

@@ -186,6 +186,7 @@
   var jump = document.querySelector('.craft-detail-jump');
   jump.firstChild.textContent = '浏览' + profile.archiveTitle + ' ';
 
+  if (key === 'poetry' && Array.isArray(window.CHENEY_USER_POEMS)) item.works = window.CHENEY_USER_POEMS;
   var worksPanel = document.getElementById('craft-detail-works');
   if (!item.works.length) {
     var empty = document.createElement('div');
