@@ -201,6 +201,53 @@
     emptyNote.textContent = profile.emptyNote;
     empty.append(mark, emptyTitle, emptyNote);
     worksPanel.appendChild(empty);
+  } else if (key === 'poetry') {
+    worksPanel.classList.add('poetry-reader');
+    var poemIndex = document.createElement('nav');
+    poemIndex.className = 'poetry-index';
+    poemIndex.setAttribute('aria-label', '诗稿目录');
+    var indexHeading = document.createElement('h3');
+    indexHeading.textContent = '诗稿目录';
+    var indexList = document.createElement('div');
+    indexList.className = 'poetry-index-list';
+    poemIndex.append(indexHeading, indexList);
+    var poemPage = document.createElement('article');
+    poemPage.className = 'poetry-page';
+    poemPage.setAttribute('aria-live', 'polite');
+    var poemMeta = document.createElement('p');
+    poemMeta.className = 'poetry-page-meta';
+    var poemTitle = document.createElement('h3');
+    var poemBody = document.createElement('div');
+    poemBody.className = 'poetry-page-body';
+    poemPage.append(poemMeta, poemTitle, poemBody);
+    var poemButtons = [];
+    function showPoem(index) {
+      var work = item.works[index];
+      poemMeta.textContent = work.category || '诗稿';
+      poemTitle.textContent = work.title || '未题';
+      poemBody.textContent = work.description || '';
+      poemButtons.forEach(function (button, n) {
+        if (n === index) button.setAttribute('aria-current', 'true');
+        else button.removeAttribute('aria-current');
+      });
+    }
+    item.works.forEach(function (work, index) {
+      var button = document.createElement('button');
+      button.type = 'button';
+      var label = document.createElement('strong');
+      label.textContent = work.title || '未题';
+      var preview = document.createElement('span');
+      preview.textContent = (work.description || '').split(/[，。\n]/)[0];
+      button.append(label, preview);
+      button.addEventListener('click', function () {
+        showPoem(index);
+        if (window.matchMedia('(max-width:700px)').matches) poemPage.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+      poemButtons.push(button);
+      indexList.appendChild(button);
+    });
+    worksPanel.append(poemIndex, poemPage);
+    showPoem(0);
   } else {
     item.works.forEach(function (work) {
       var card = document.createElement('article');

@@ -65,6 +65,19 @@
 .craft-work-card h3{ margin-top:0; margin-bottom:.45rem; color:var(--ink); font-family:var(--font-head); font-size:1.2rem; font-weight:400; }
 .craft-work-description{ margin-top:0; margin-bottom:.8rem; color:var(--ink-2); font-size:.92rem; line-height:1.75; }
 body[data-craft-skill="poetry"] .craft-work-description{white-space:pre-line;overflow-wrap:anywhere;line-height:2}
+body[data-craft-skill="poetry"] .poetry-reader:not([hidden]){display:grid;grid-template-columns:minmax(12rem,16rem) minmax(0,1fr);gap:0;align-items:start;border-top:1px solid rgba(48,74,65,.3)}
+.poetry-index{min-width:0;padding:1.2rem 1rem 1.2rem 0;border-right:1px solid rgba(48,74,65,.25)}
+.poetry-index h3{margin:0 0 .75rem;color:#2b5148;font-size:.85rem;letter-spacing:.12em}
+.poetry-index-list{max-height:32rem;overflow:auto;overscroll-behavior:contain}
+.poetry-index-list button{display:block;width:100%;padding:.7rem .8rem;border:0;border-left:2px solid transparent;background:transparent;color:#29453f;text-align:left;cursor:pointer;font:inherit}
+.poetry-index-list button strong,.poetry-index-list button span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.poetry-index-list button strong{font-size:.86rem;font-weight:500}.poetry-index-list button span{margin-top:.2rem;color:#4c665e;font-size:.72rem}
+.poetry-index-list button[aria-current="true"]{border-left-color:#a6523d;background:rgba(222,232,215,.75)}
+.poetry-index-list button:focus-visible{outline:2px solid #a6523d;outline-offset:-2px}
+.poetry-page{min-width:0;min-height:19rem;padding:1.6rem clamp(1rem,4vw,3rem);color:#203e36}
+.poetry-page-meta{margin:0 0 .8rem;color:#6b6650;font-size:.78rem;line-height:1.6}.poetry-page h3{margin:0 0 1.4rem;font-family:var(--font-head);font-size:clamp(1.35rem,2vw,1.8rem);font-weight:400;line-height:1.5}
+.poetry-page-body{white-space:pre-line;overflow-wrap:anywhere;line-height:2.2;font-size:1rem}
+@media(max-width:700px){body[data-craft-skill="poetry"] .poetry-reader:not([hidden]){grid-template-columns:minmax(0,1fr)}.poetry-index{padding:1rem 0;border-right:0;border-bottom:1px solid rgba(48,74,65,.25)}.poetry-index-list{max-height:12rem}.poetry-page{min-height:0;padding:1.4rem .4rem 2rem}.poetry-page-body{font-size:.96rem;line-height:2}}
 .craft-work-audio{ display:block; width:calc(100% - 2rem); margin-bottom:.9rem; }
 .craft-work-card > a{ display:inline-flex; min-height:2.5rem; align-items:center; color:var(--zhu-deep); font-size:.86rem; text-decoration:none; }
 .craft-work-card > a:hover,.craft-work-card > a:focus-visible{ text-decoration:underline; }
