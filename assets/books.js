@@ -68,7 +68,7 @@
     {"title":"文城","meta":"余华","note":"书架照片中的书目。","cover":"https://cdn.weread.qq.com/weread/cover/25/3300020525/t6_3300020525.jpg","colors":["#526b63","#d3c49f"],"url":"https://weread.qq.com/web/reader/dbc32e60813ab6e84g0159d0"},
     {"title":"第七天","meta":"余华","note":"书架照片中的书目。","cover":"https://cdn.weread.qq.com/weread/cover/71/yuewen_728774/t6_yuewen_7287741682413408.jpg","colors":["#526b63","#d3c49f"],"url":"https://weread.qq.com/web/reader/a14323405b1ec6a147a2c71"},
     {"title":"呐喊","meta":"鲁迅","note":"书架照片中的书目。","cover":"https://cdn.weread.qq.com/weread/cover/20/YueWen_35990248/t6_YueWen_35990248.jpg","colors":["#526b63","#d3c49f"],"url":"https://weread.qq.com/web/reader/308321f072252ae83088d68"},
-    {"title":"晚熟的人","meta":"莫言","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
+    {"title":"晚熟的人","meta":"莫言","note":"书架照片中的书目。","cover":"https://imagepphcloud.thepaper.cn/pph/image/100/171/44.jpg","colors":["#526b63","#d3c49f"]},
     {"title":"古文观止","meta":"吴楚材、吴调侯选编","note":"书架照片中的书目。","cover":"https://wfqqreader-1252317822.image.myqcloud.com/cover/892/40400892/t6_40400892.jpg","colors":["#526b63","#d3c49f"],"url":"https://weread.qq.com/web/reader/fef329e0726877fcfeff8fc"},
     {"title":"红尘万丈","meta":"作者待核对","note":"书架照片中的书目。","cover":"","colors":["#526b63","#d3c49f"]},
     {"title":"人生海海","meta":"麦家","note":"书架照片中的书目。","cover":"https://cdn.weread.qq.com/weread/cover/97/YueWen_25131764/t6_YueWen_25131764.jpg","colors":["#526b63","#d3c49f"],"url":"https://weread.qq.com/web/reader/63932e60717f7af46396445"},
