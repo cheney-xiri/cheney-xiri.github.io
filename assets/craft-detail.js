@@ -301,14 +301,16 @@
   }
 
   var toggle = document.getElementById('craft-works-toggle');
-  toggle.firstChild.textContent = '展开' + profile.toggleName + ' ';
-  toggle.addEventListener('click', function () {
-    var expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    worksPanel.hidden = expanded;
-    toggle.firstChild.textContent = (expanded ? '展开' : '收起') + profile.toggleName + ' ';
-    toggle.querySelector('span').textContent = expanded ? '＋' : '－';
-  });
+  if (toggle) {
+    toggle.firstChild.textContent = '展开' + profile.toggleName + ' ';
+    toggle.addEventListener('click', function () {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      worksPanel.hidden = expanded;
+      toggle.firstChild.textContent = (expanded ? '展开' : '收起') + profile.toggleName + ' ';
+      toggle.querySelector('span').textContent = expanded ? '＋' : '－';
+    });
+  }
 
   function setSibling(id, siblingKey, direction) {
     var link = document.getElementById(id);
