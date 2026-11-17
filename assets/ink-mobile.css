@@ -1,6 +1,7 @@
 /* Independent portrait paintings for phone screens. Desktop art and type remain
    owned by their existing stylesheets. Protected interiors are excluded. */
 @media (max-width:800px) {
+ .ink-site #ink-home :is(.hero,section.juan){position:relative!important;top:auto}
  .ink-site #ink-home .ink-mountains-far {
   background-image:url('ink/mobile/opening-v1.webp');
   background-size:cover;background-position:center center;

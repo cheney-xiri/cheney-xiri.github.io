@@ -994,6 +994,7 @@ var POEMS = [
   var chapterLabel = $('#chapter-label');
   var chapterPrev = $('#chapter-prev');
   var chapterNext = $('#chapter-next');
+  var mobileScroll = window.matchMedia('(max-width: 800px)');
 
   /* 所有分隔条均不占文档高度，章节紧邻排列。
      直接累加每节实际高度，避免为了测量而临时摘除 sticky，导致页面闪动。 */
@@ -1059,6 +1060,7 @@ var POEMS = [
     layoutOf().forEach(function (x) {
       if (x.top <= y) { best = x.el; chapterIndex++; }
     });
+    if (best && best === lastPage) return;
     var title = best && !best.classList.contains('hero') ? best.querySelector('.juan-title').textContent : '开篇';
     var chapterText = (chapterIndex === 1 ? '序' : String(chapterIndex - 1).padStart(2, '0')) + ' · ' + title;
     if (chapterLabel && chapterLabel.textContent !== chapterText) chapterLabel.textContent = chapterText;
@@ -1099,7 +1101,7 @@ var POEMS = [
      （实测触控板分 20 次共推 600px，页面一动不动，每步都被拉回原处）。
      这里自己接管滚轮：累计到阈值就整页翻一次，连续输入与离散滚轮都响应，
      所有章节使用同一套翻页手势；超一屏的节增加阅读停靠点，确保内容完整。 */
-  if (document.documentElement.classList.contains('snap-on')) {
+  {
     var lock = false, acc = 0, lastWheelAt = 0, lastWheelDir = 0, armed = true;
     var stops = function (readingStops) {
       var out = [];
@@ -1139,6 +1141,7 @@ var POEMS = [
       jump(t);
     };
     window.addEventListener('wheel', function (e) {
+      if (mobileScroll.matches || !document.documentElement.classList.contains('snap-on')) return;
       if (e.ctrlKey || e.metaKey) return;        // 手势缩放，不拦
       if ($('#cc-dialog').open || $('#poem-dialog').open || (drawer && drawer.getAttribute('data-open') === 'true')) return;
       if (!e.deltaY || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
@@ -1160,6 +1163,7 @@ var POEMS = [
     if (chapterPrev) chapterPrev.addEventListener('click', function () { turn(-1, true); });
     if (chapterNext) chapterNext.addEventListener('click', function () { turn(1, true); });
     document.addEventListener('keydown', function (e) {
+      if (mobileScroll.matches || !document.documentElement.classList.contains('snap-on')) return;
       var t = e.target;
       if ($('#cc-dialog').open || $('#poem-dialog').open || (drawer && drawer.getAttribute('data-open') === 'true')) return;
       if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;

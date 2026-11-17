@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  var mobileLiReader = document.body.classList.contains('figure-page--li') && window.matchMedia('(max-width: 800px)');
   document.querySelectorAll('[data-poem-fold]').forEach(function (fold) {
     var lines = Array.from(fold.querySelectorAll('.fp-poem-line'));
     var toggle = fold.querySelector('[data-poem-toggle]');
@@ -17,7 +18,10 @@
       var above = fold.getBoundingClientRect().top < 0;
       expanded = !expanded;
       renderFold();
-      if (!expanded && above) fold.scrollIntoView({ block: 'start', behavior: 'instant' });
+      if (!expanded && above) {
+        if (mobileLiReader && mobileLiReader.matches) toggle.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+        else fold.scrollIntoView({ block: 'start', behavior: 'instant' });
+      }
     });
   });
   document.querySelectorAll('[data-reader]').forEach(function (reader) {
@@ -35,7 +39,7 @@
         panels[i].hidden = i !== index;
       });
       if (moveFocus) tabs[index].focus();
-      if (userAction && reader.hasAttribute('data-complete-poems') && reader.getBoundingClientRect().top < -80) {
+      if (userAction && !(mobileLiReader && mobileLiReader.matches) && reader.hasAttribute('data-complete-poems') && reader.getBoundingClientRect().top < -80) {
         reader.scrollIntoView({ block: 'start', behavior: 'instant' });
       }
     }
