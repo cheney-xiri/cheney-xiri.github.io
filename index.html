@@ -946,9 +946,22 @@ var POEMS = [
   var layoutCache = null;   // 版式位置缓存，见 layoutOf
   var chapterHash = location.hash;
   var navigationEntry = performance.getEntriesByType('navigation')[0];
-  var initialChapterTouched = navigationEntry && navigationEntry.type === 'back_forward';
+  var restoringHistory = navigationEntry && navigationEntry.type === 'back_forward';
+  var initialChapterTouched = restoringHistory;
   window.addEventListener('pageshow', function (event) {
     if (event.persisted) initialChapterTouched = true;
+    var saved = history.state && history.state.contentEntryScroll;
+    if ((event.persisted || restoringHistory) && saved && saved.width === window.innerWidth) {
+      requestAnimationFrame(function () { window.scrollTo({top: saved.y, behavior: 'instant'}); });
+    }
+  });
+  document.addEventListener('click', function (event) {
+    if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    var link = event.target.closest('#reading a[href], #writing a[href], #works a[href], #admire a[href], .interest-card--reading a[href]');
+    if (!link || (link.target && link.target !== '_self') || link.hasAttribute('download')) return;
+    var destination = new URL(link.href);
+    if (destination.origin !== location.origin || destination.pathname === location.pathname) return;
+    history.replaceState({ ...history.state, contentEntryScroll: { y: window.scrollY, width: window.innerWidth } }, '');
   });
 
   var stackGuard = function () {
