@@ -1,34 +1,81 @@
-/* Keep link feedback independent of View Transition support. */
-#ink-home :is(#reading, #writing, #works, #admire, #pastimes) a:is(
-  .book-more, .chapter-entry-title, .works-entry-link, .works-thumb,
-  .admire-book, .admire-fan-entry, [href="books.html"], [href^="writing/"],
-  [href^="works/archive.html"]
-):active {
-  outline: 2px solid var(--is-red, #a54134);
+/* Chapter entrances always leave text readable. Animate small details instead
+   of the scrolling surface so sticky chapters and touch gestures stay native. */
+#ink-home :is(.juan, .hero) :is(a[href], button):focus-visible {
+  outline: 2px solid currentColor;
   outline-offset: 3px;
+}
+#ink-home .juan :is(a[href], button):active {
+  outline: 2px solid var(--is-red, #a54134);
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
 
-  ::view-transition-group(root) {
-    animation-duration: 220ms;
-  }
+  /* The incoming document supplies the gesture. Shared pages (e.g. music
+     and editing) use the topic that their own renderer sets on the body. */
+  html[data-entry-theme] { --entry-arrival: entry-rise; }
+  html:is([data-entry-theme="reading"], [data-entry-theme="works"]) { --entry-arrival: entry-leaf; }
+  html:is([data-entry-theme="travels"], [data-entry-theme="journey"]) { --entry-arrival: entry-trace; }
+  html:is([data-entry-theme="focus"], [data-entry-theme="orbit"], [data-entry-theme="figures"]) { --entry-arrival: entry-focus; }
+  html:is([data-entry-theme="craft"], [data-entry-theme="about"]) { --entry-arrival: entry-settle; }
+  html[data-entry-theme="writing"] { --entry-arrival: entry-ink; }
+  html[data-entry-theme="letter"] { --entry-arrival: entry-unfold; }
+  html[data-entry-theme="pastimes"] { --entry-arrival: entry-frame; }
+  html[data-entry-theme="sound"], html:has(body[data-topic="music"]) { --entry-arrival: entry-resonate; }
 
-  ::view-transition-old(root) {
-    animation: 220ms ease-out both entry-page-out;
-  }
-
+  ::view-transition-group(root) { animation-duration: 240ms; }
+  ::view-transition-old(root) { animation: 190ms ease-out both entry-out; }
   ::view-transition-new(root) {
-    animation: 220ms cubic-bezier(.2, .65, .25, 1) both entry-page-in;
+    animation: 240ms cubic-bezier(.18,.68,.24,1) both var(--entry-arrival, entry-rise);
+  }
+
+  /* Follow the existing chapter selection. The small stagger belongs to
+     an actual chronology, shelf or trail and never gates access to links. */
+  #ink-home #top .seal { animation: entry-stamp 310ms ease-out; }
+  #ink-home #poem-dialog[open] blockquote { animation: entry-ink 320ms ease-out; }
+  #ink-home #about.is-current .portrait { animation: entry-focus 390ms ease-out; }
+  #ink-home #journey.is-current .journey-era { animation: entry-trace 320ms ease-out backwards; }
+  #ink-home #craft.is-current .craft-family-head h3 {
+    transform-origin: left center;
+    animation: entry-brush 360ms ease-out backwards;
+  }
+  #ink-home #pastimes.is-current .interest-card-art img { animation: entry-frame 360ms ease-out; }
+  #ink-home #works.is-current .works-thumb img,
+  #ink-home #reading.is-current .book-cover {
+    transform-origin: left center;
+    animation: entry-leaf 360ms ease-out backwards;
+  }
+  #ink-home #travels.is-current .travel-city-number { animation: entry-pin 320ms ease-out backwards; }
+  #ink-home #admire.is-current .admire-book-body img { animation: entry-focus 420ms ease-out; }
+  #ink-home #writing.is-current .wen-curated-seal { animation: entry-stamp 310ms ease-out; }
+  #ink-home #links.is-current .interaction-door-no { display: inline-block; animation: entry-ink 300ms ease-out backwards; }
+  #ink-home #contact.is-current .ccard-mark svg { animation: entry-unfold 320ms ease-out; }
+  #ink-home #cc-dialog[open] .cc-dialog-body { animation: entry-unfold 260ms ease-out; }
+
+  #ink-home .is-current :is(.journey-entry,.craft-family,.travel-city,.interaction-door,.shelf > li):nth-child(2) { --entry-delay: 45ms; }
+  #ink-home .is-current :is(.journey-entry,.craft-family,.travel-city,.interaction-door,.shelf > li):nth-child(n+3) { --entry-delay: 90ms; }
+  #ink-home :is(#journey,#craft,#travels,#links,#reading).is-current :is(.journey-era,.craft-family-head h3,.travel-city-number,.interaction-door-no,.book-cover) { animation-delay: var(--entry-delay, 0ms); }
+
+  @media (hover: hover) and (pointer: fine) {
+    #ink-home .shelf .book-cover,
+    #ink-home .works-thumb img,
+    #ink-home .travel-city-number { transition: translate 180ms ease-out; }
+    #ink-home .book-link:hover .book-cover,
+    #ink-home .works-thumb:hover img { translate: 0 -3px; }
+    #ink-home .travel-city:has(a:hover) .travel-city-number { translate: 0 -2px; }
   }
 }
-
-@keyframes entry-page-out {
-  to { opacity: 0; }
-}
-
-@keyframes entry-page-in {
-  from { opacity: 0; transform: translateY(7px); }
-  to { opacity: 1; transform: none; }
-}
+@keyframes entry-out { to { opacity: 0; } }
+@keyframes entry-rise { from { opacity: .35; transform: translateY(7px); } }
+@keyframes entry-leaf { from { opacity: .45; transform: perspective(920px) rotateY(-2deg) translateX(7px); } }
+@keyframes entry-trace { from { opacity: .45; transform: translateX(-12px); } }
+@keyframes entry-focus { from { opacity: .4; transform: scale(1.025); } }
+@keyframes entry-settle { from { opacity: .5; transform: translateY(-5px) scale(1.012); } }
+@keyframes entry-ink { from { opacity: .28; } }
+@keyframes entry-unfold { from { opacity: .5; transform: perspective(720px) rotateX(-4deg) translateY(8px); } }
+@keyframes entry-frame { from { opacity: .5; transform: translateX(6px) scale(1.015); } }
+@keyframes entry-resonate { from { opacity: .4; transform: scale(.99); } 68% { transform: scale(1.002); } }
+@keyframes entry-brush { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+@keyframes entry-pin { from { opacity: .45; transform: translateY(-6px); } 75% { transform: translateY(1px); } }
+@keyframes entry-stamp { from { opacity: .3; transform: rotate(-5deg) scale(1.14); } }

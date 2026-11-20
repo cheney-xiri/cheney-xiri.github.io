@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
 const crypto = require('node:crypto');
+const { withEntryDesign } = require('./server/entry-design.cjs');
 
 const ROOT = __dirname;
 const DATA_DIR = process.env.CHENEY_DATA_DIR || path.join(ROOT, '.site-data');
@@ -281,7 +282,7 @@ function staticFile(req, res, pathname) {
   if (!mime) return respond(res, 404, { error: '页面不存在' });
   if (relative.endsWith('.html')) {
     let html = fs.readFileSync(file, 'utf8');
-    if (parts[0] !== 'admin') html = admin.decorate(relative, html, req);
+    if (parts[0] !== 'admin') html = withEntryDesign(relative, admin.decorate(relative, html, req));
     const bytes = Buffer.from(html);
     res.writeHead(200, { 'Content-Type': mime, 'Content-Length': bytes.length, 'Cache-Control':'no-store', 'Vary':'Cookie', 'X-Content-Type-Options':'nosniff' });
     return res.end(bytes);

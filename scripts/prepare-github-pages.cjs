@@ -9,13 +9,7 @@ const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'dist');
 const folders = ['about', 'admin', 'craft', 'figures', 'writing', 'works', 'interaction', 'journey', 'travels', 'pastimes', 'assets'];
 const rootFiles = ['index.html', 'books.html', 'henan.html', 'poems.json', 'admire-dark.png', 'hero-night.png', 'interaction-desktop.png', 'mobile-hero-final.png'];
-const entryTransitionPages = new Set([
-  'index.html', 'books.html', 'writing/index.html', 'writing/lines.html',
-  'works/archive.html', 'works/unsent-summer/index.html', 'works/future-letter/index.html',
-  'works/sd-webui/index.html', 'works/z-image/index.html',
-  'figures/mao.html', 'figures/qu.html', 'figures/li.html',
-  'figures/ke.html', 'figures/jay.html', 'figures/tfboys.html'
-]);
+const { withEntryDesign } = require('../server/entry-design.cjs');
 const files = [];
 const serviceConfig=JSON.parse(fs.readFileSync(path.join(root,'assets/interaction-service.json'),'utf8'));
 let serviceOrigin='';if(serviceConfig.url){const u=new URL(serviceConfig.url);if(u.protocol!=='https:'||u.username||u.password||u.pathname!=='/'||u.search||u.hash)throw new Error('Invalid interaction service origin');serviceOrigin=' '+u.origin;}
@@ -51,10 +45,7 @@ try {
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com'+serviceOrigin+'; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/mobile-navigation.js?v=20261031-02" defer></script>');
-        if (entryTransitionPages.has(file)) {
-          const stylesheet = path.posix.relative(path.posix.dirname(file), 'assets/entry-transitions.css');
-          content = content.replace(/<\/head>/i, `<link rel="stylesheet" href="${stylesheet}?v=20261120-01">\n$&`);
-        }
+        content = withEntryDesign(file, content);
         const fontLinks = [];
         content = content.replace(/<link\b[^>]*href=["']https:\/\/fonts\.googleapis\.com\/css2\?[^"']+["'][^>]*>/gi, match => {
           const href = match.match(/href=["']([^"']+)["']/i)?.[1];
@@ -78,7 +69,7 @@ try {
       if(file.endsWith('.html'))content=content.replace(/((?:src|href)="(?:\/|\.\.\/|\.\/)?assets\/(?:books\.js|style\.css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261101-books-05');
       if (file === 'assets/ink-site.css') content=content.replace(/^@import\s+url\(["']https:\/\/fonts\.googleapis\.com\/css2\?[^\n]+\r?\n/m, '');
       content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/(?:content-live|ink-subsections)\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261021-08');
-      if (file.endsWith('.html')) content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/travels\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-02');
+      if (file.endsWith('.html')) content=content.replace(/(src="(?:\/|\.\.\/|\.\/)?assets\/travels\.js\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261120-chapters-1');
       if (file.endsWith('.html')) content=content.replace(/((?:src|href)="(?:\/|\.\.\/|\.\/)?assets\/ink-mobile\.(?:js|css)\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261117-scroll-01');
       if (file.endsWith('.html')) content=content.replace(/(href="(?:\/|\.\.\/|\.\/)?assets\/ink-site\.css\?v=)[^"]+/g,(_match,prefix)=>prefix+'20261024-01');
       content=content.replace('var h=document.documentElement,p=location.pathname,q=', 'var h=document.documentElement,p=document.querySelector(\'meta[name="cheney-page-path"]\')?.content?\'/\'+document.querySelector(\'meta[name="cheney-page-path"]\').content:location.pathname,q=');

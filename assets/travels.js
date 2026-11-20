@@ -74,8 +74,6 @@
       foot.append(make('span', 'travel-city-visits', `${city.visits.length} 次到访`));
       const link = make('a', 'travel-city-open', '翻阅此城');
       link.href = `${directoryPage ? 'city.html' : 'travels/city.html'}?city=${encodeURIComponent(city.id)}`;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
       link.setAttribute('aria-label', `翻阅${city.name}的足迹，${city.visits.length}次到访`);
       foot.append(link);
       info.append(foot);
