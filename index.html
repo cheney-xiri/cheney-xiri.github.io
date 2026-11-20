@@ -948,11 +948,24 @@ var POEMS = [
   var navigationEntry = performance.getEntriesByType('navigation')[0];
   var restoringHistory = navigationEntry && navigationEntry.type === 'back_forward';
   var initialChapterTouched = restoringHistory;
+  var returningEntry = null;
+  function alignReturningEntry() {
+    if (!returningEntry) return;
+    var anchor = document.getElementById(returningEntry.id);
+    if (!anchor) return;
+    var offset = anchor.getBoundingClientRect().top - returningEntry.top;
+    if (Math.abs(offset) > 1) window.scrollBy({top: offset, behavior: 'instant'});
+  }
   window.addEventListener('pageshow', function (event) {
     if (event.persisted) initialChapterTouched = true;
     var saved = history.state && history.state.contentEntryScroll;
     if ((event.persisted || restoringHistory) && saved && saved.width === window.innerWidth) {
-      requestAnimationFrame(function () { window.scrollTo({top: saved.y, behavior: 'instant'}); });
+      returningEntry = saved.id ? saved : null;
+      requestAnimationFrame(function () {
+        if (saved.id) alignReturningEntry();
+        else window.scrollTo({top: saved.y, behavior: 'instant'});
+      });
+      setTimeout(function () { returningEntry = null; }, 2000);
     }
   });
   document.addEventListener('click', function (event) {
@@ -961,7 +974,9 @@ var POEMS = [
     if (!link || (link.target && link.target !== '_self') || link.hasAttribute('download')) return;
     var destination = new URL(link.href);
     if (destination.origin !== location.origin || destination.pathname === location.pathname) return;
-    history.replaceState({ ...history.state, contentEntryScroll: { y: window.scrollY, width: window.innerWidth } }, '');
+    history.replaceState({ ...history.state, contentEntryScroll: {
+      y: window.scrollY, width: window.innerWidth, id: link.id, top: link.getBoundingClientRect().top
+    } }, '');
   });
 
   var stackGuard = function () {
@@ -979,6 +994,7 @@ var POEMS = [
        曾经的条件是「必须每节都装得下一屏」，往来加了四个互动模块变高之后，
        正是它把整页翻页整个关掉了（滚轮退回原生滚动，一页一页的翻页消失）。 */
     document.documentElement.classList.toggle('snap-on', fits >= 1);
+    alignReturningEntry();
     if (typeof jumpToChapter === 'function' && !initialChapterTouched && location.hash) {
       requestAnimationFrame(function () {
         if (!initialChapterTouched && location.hash) jumpToChapter(location.hash);
@@ -1058,7 +1074,7 @@ var POEMS = [
     });
   });
   ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(function (type) {
-    window.addEventListener(type, function () { initialChapterTouched = true; }, { once: true, passive: true });
+    window.addEventListener(type, function () { initialChapterTouched = true; returningEntry = null; }, { passive: true });
   });
   window.addEventListener('load', function () {
     if (!initialChapterTouched && location.hash) jumpToChapter(location.hash);
