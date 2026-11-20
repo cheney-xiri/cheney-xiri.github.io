@@ -9,6 +9,13 @@ const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'dist');
 const folders = ['about', 'admin', 'craft', 'figures', 'writing', 'works', 'interaction', 'journey', 'travels', 'pastimes', 'assets'];
 const rootFiles = ['index.html', 'books.html', 'henan.html', 'poems.json', 'admire-dark.png', 'hero-night.png', 'interaction-desktop.png', 'mobile-hero-final.png'];
+const entryTransitionPages = new Set([
+  'index.html', 'books.html', 'writing/index.html', 'writing/lines.html',
+  'works/archive.html', 'works/unsent-summer/index.html', 'works/future-letter/index.html',
+  'works/sd-webui/index.html', 'works/z-image/index.html',
+  'figures/mao.html', 'figures/qu.html', 'figures/li.html',
+  'figures/ke.html', 'figures/jay.html', 'figures/tfboys.html'
+]);
 const files = [];
 const serviceConfig=JSON.parse(fs.readFileSync(path.join(root,'assets/interaction-service.json'),'utf8'));
 let serviceOrigin='';if(serviceConfig.url){const u=new URL(serviceConfig.url);if(u.protocol!=='https:'||u.username||u.password||u.pathname!=='/'||u.search||u.hash)throw new Error('Invalid interaction service origin');serviceOrigin=' '+u.origin;}
@@ -44,6 +51,10 @@ try {
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com'+serviceOrigin+'; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/mobile-navigation.js?v=20261031-02" defer></script>');
+        if (entryTransitionPages.has(file)) {
+          const stylesheet = path.posix.relative(path.posix.dirname(file), 'assets/entry-transitions.css');
+          content = content.replace(/<\/head>/i, `<link rel="stylesheet" href="${stylesheet}?v=20261120-01">\n$&`);
+        }
         const fontLinks = [];
         content = content.replace(/<link\b[^>]*href=["']https:\/\/fonts\.googleapis\.com\/css2\?[^"']+["'][^>]*>/gi, match => {
           const href = match.match(/href=["']([^"']+)["']/i)?.[1];
