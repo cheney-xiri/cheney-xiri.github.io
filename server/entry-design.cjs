@@ -7,6 +7,7 @@ const themes = {
   'craft/dizi.html': 'sound', 'craft/guitar.html': 'sound',
   'pastimes/physics.html': 'orbit', 'interaction/letter.html': 'letter'
 };
+const entryVersion = '20261120-chapters-2';
 
 // The development server and both public builds use the same entry treatment.
 function withEntryDesign(file, html) {
@@ -14,7 +15,9 @@ function withEntryDesign(file, html) {
   if (section === 'admin' || file === 'journey/edit.html' || file === 'interaction/owner.html') return html;
   const theme = themes[file] || section;
   return html.replace(/<html\b/i, '<html data-entry-theme="' + theme + '"')
-    .replace(/<\/head>/i, '<link rel="stylesheet" href="/assets/entry-transitions.css?v=20261120-chapters-1">\n$&');
+    .replace(/<\/head>/i, `<link rel="stylesheet" href="/assets/entry-transitions.css?v=${entryVersion}">
+<script src="/assets/entry-motion.js?v=${entryVersion}" defer></script>
+$&`);
 }
 
 module.exports = { withEntryDesign };

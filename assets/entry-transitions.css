@@ -24,38 +24,43 @@
   html[data-entry-theme="pastimes"] { --entry-arrival: entry-frame; }
   html[data-entry-theme="sound"], html:has(body[data-topic="music"]) { --entry-arrival: entry-resonate; }
 
-  ::view-transition-group(root) { animation-duration: 240ms; }
-  ::view-transition-old(root) { animation: 190ms ease-out both entry-out; }
+  ::view-transition-group(root) { animation-duration: 390ms; }
+  ::view-transition-old(root) { animation: 250ms ease-out both entry-out; }
   ::view-transition-new(root) {
-    animation: 240ms cubic-bezier(.18,.68,.24,1) both var(--entry-arrival, entry-rise);
+    animation: 390ms cubic-bezier(.2,.65,.3,1) both var(--entry-arrival, entry-rise);
   }
 
-  /* Follow the existing chapter selection. The small stagger belongs to
-     an actual chronology, shelf or trail and never gates access to links. */
-  #ink-home #top .seal { animation: entry-stamp 310ms ease-out; }
-  #ink-home #poem-dialog[open] blockquote { animation: entry-ink 320ms ease-out; }
-  #ink-home #about.is-current .portrait { animation: entry-focus 390ms ease-out; }
-  #ink-home #journey.is-current .journey-era { animation: entry-trace 320ms ease-out backwards; }
-  #ink-home #craft.is-current .craft-family-head h3 {
-    transform-origin: left center;
-    animation: entry-brush 360ms ease-out backwards;
+  /* Each element enters independently of the homepage's chapter tracker.
+     The same in-page animation also works when navigation is a plain load. */
+  .entry-in-view[data-entry-motion] {
+    animation: 620ms cubic-bezier(.2,.65,.26,1) var(--entry-delay, 90ms) backwards var(--chapter-motion);
   }
-  #ink-home #pastimes.is-current .interest-card-art img { animation: entry-frame 360ms ease-out; }
-  #ink-home #works.is-current .works-thumb img,
-  #ink-home #reading.is-current .book-cover {
-    transform-origin: left center;
-    animation: entry-leaf 360ms ease-out backwards;
+  [data-entry-motion="stamp"] { --chapter-motion: chapter-stamp; }
+  [data-entry-motion="portrait"] { --chapter-motion: chapter-portrait; }
+  [data-entry-motion="timeline"] { --chapter-motion: chapter-timeline; }
+  [data-entry-motion="brush"] { --chapter-motion: chapter-brush; }
+  [data-entry-motion="frame"] { --chapter-motion: chapter-frame; }
+  [data-entry-motion="leaf"] { --chapter-motion: chapter-leaf; transform-origin: left center; }
+  [data-entry-motion="landmark"] { --chapter-motion: chapter-landmark; }
+  [data-entry-motion="letter"] { --chapter-motion: chapter-letter; }
+  [data-entry-motion="heading"] {
+    --chapter-motion: var(--heading-motion, chapter-title);
+    --entry-delay: 150ms;
   }
-  #ink-home #travels.is-current .travel-city-number { animation: entry-pin 320ms ease-out backwards; }
-  #ink-home #admire.is-current .admire-book-body img { animation: entry-focus 420ms ease-out; }
-  #ink-home #writing.is-current .wen-curated-seal { animation: entry-stamp 310ms ease-out; }
-  #ink-home #links.is-current .interaction-door-no { display: inline-block; animation: entry-ink 300ms ease-out backwards; }
-  #ink-home #contact.is-current .ccard-mark svg { animation: entry-unfold 320ms ease-out; }
-  #ink-home #cc-dialog[open] .cc-dialog-body { animation: entry-unfold 260ms ease-out; }
 
-  #ink-home .is-current :is(.journey-entry,.craft-family,.travel-city,.interaction-door,.shelf > li):nth-child(2) { --entry-delay: 45ms; }
-  #ink-home .is-current :is(.journey-entry,.craft-family,.travel-city,.interaction-door,.shelf > li):nth-child(n+3) { --entry-delay: 90ms; }
-  #ink-home :is(#journey,#craft,#travels,#links,#reading).is-current :is(.journey-era,.craft-family-head h3,.travel-city-number,.interaction-door-no,.book-cover) { animation-delay: var(--entry-delay, 0ms); }
+  html:is([data-entry-theme="journey"], [data-entry-theme="travels"]) { --heading-motion: chapter-timeline; }
+  html:is([data-entry-theme="craft"], [data-entry-theme="writing"]) { --heading-motion: chapter-brush; }
+  html:is([data-entry-theme="works"], [data-entry-theme="reading"]) { --heading-motion: chapter-leaf; }
+  html:is([data-entry-theme="figures"], [data-entry-theme="about"], [data-entry-theme="focus"], [data-entry-theme="orbit"]) {
+    --heading-motion: chapter-portrait;
+  }
+  html:is([data-entry-theme="pastimes"], [data-entry-theme="sound"]) { --heading-motion: chapter-frame; }
+  html:is([data-entry-theme="interaction"], [data-entry-theme="letter"]) { --heading-motion: chapter-letter; }
+
+  #ink-home :is(.journey-entry, .travel-city, .interaction-door, .shelf > li):nth-child(3n+2) { --entry-delay: 155ms; }
+  #ink-home :is(.journey-entry, .travel-city, .interaction-door, .shelf > li):nth-child(3n+3) { --entry-delay: 220ms; }
+  #ink-home #poem-dialog[open] blockquote { animation: chapter-title 520ms ease-out; }
+  #ink-home #cc-dialog[open] .cc-dialog-body { animation: chapter-letter 520ms ease-out; }
 
   @media (hover: hover) and (pointer: fine) {
     #ink-home .shelf .book-cover,
@@ -76,6 +81,12 @@
 @keyframes entry-unfold { from { opacity: .5; transform: perspective(720px) rotateX(-4deg) translateY(8px); } }
 @keyframes entry-frame { from { opacity: .5; transform: translateX(6px) scale(1.015); } }
 @keyframes entry-resonate { from { opacity: .4; transform: scale(.99); } 68% { transform: scale(1.002); } }
-@keyframes entry-brush { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
-@keyframes entry-pin { from { opacity: .45; transform: translateY(-6px); } 75% { transform: translateY(1px); } }
-@keyframes entry-stamp { from { opacity: .3; transform: rotate(-5deg) scale(1.14); } }
+@keyframes chapter-title { from { opacity: .22; translate: 0 14px; } }
+@keyframes chapter-stamp { from { opacity: .2; scale: 1.25; rotate: -8deg; } 65% { scale: .97; } }
+@keyframes chapter-portrait { from { opacity: .28; scale: 1.08; } }
+@keyframes chapter-timeline { from { opacity: .35; translate: -20px 0; } }
+@keyframes chapter-brush { from { opacity: .4; clip-path: inset(-12% 92% -16% -4%); } to { clip-path: inset(-12% -4% -16% -4%); } }
+@keyframes chapter-frame { from { opacity: .42; translate: 12px 0; scale: 1.07; } }
+@keyframes chapter-leaf { from { opacity: .4; rotate: y -13deg; translate: 0 12px; } }
+@keyframes chapter-landmark { from { opacity: .35; translate: 0 13px; scale: .97; } }
+@keyframes chapter-letter { from { opacity: .36; translate: 0 14px; rotate: x -10deg; } }
