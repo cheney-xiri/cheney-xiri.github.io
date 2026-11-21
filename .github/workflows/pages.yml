@@ -24,12 +24,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  publish:
+  build:
     if: github.event_name != 'push' || !startsWith(github.event.head_commit.message, 'Bootstrap ')
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -60,6 +57,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Publish preview
         id: deployment
         uses: actions/deploy-pages@v4
