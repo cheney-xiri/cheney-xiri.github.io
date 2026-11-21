@@ -45,7 +45,7 @@ try {
         content = content.replace(/(<head[^>]*>)/i, '$1<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; connect-src \'self\' https://api.github.com https://raw.githubusercontent.com'+serviceOrigin+'; img-src \'self\' https: data: blob:; media-src \'self\' https: blob:; frame-src \'self\'; style-src \'self\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'">');
       } else if (file.endsWith('.html')) {
         if (file === 'pastimes/physics.html') {
-          content = content.replace(/(space-chronicle\.(?:js|css)\?v=)[\w-]+/g, (_, asset) => asset + '20261121-event-ruler');
+          content = content.replace(/(space-chronicle\.(?:js|css)\?v=)[\w-]+/g, (_, asset) => asset + '20261121-event-history');
         }
         content = content.replace(/(<head[^>]*>)/i, '$1<script src="/assets/mobile-navigation.js?v=20261031-02" defer></script>');
         content = withEntryDesign(file, content);
