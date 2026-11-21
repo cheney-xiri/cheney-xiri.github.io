@@ -23,6 +23,25 @@
   const last = nodes.length - 1;
   const clamp = value => Math.max(0, Math.min(last, value));
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const eraStarts = [
+    [-5000, '史前与古代观天'],
+    [1500, '望远镜与近代天文学'],
+    [1900, '现代宇宙学的起点'],
+    [1957, '太空时代开启'],
+    [1990, '空间望远镜与深空探测'],
+    [2015, '引力波与多国深空探索'],
+    [2025, '2025 年至今']
+  ];
+  const eras = eraStarts.map(([year, title]) => ({
+    title,
+    start: nodes.findIndex(node => Number(node.dataset.year) >= year)
+  })).filter(era => era.start >= 0);
+  const eraPicker = document.createElement('select');
+  eraPicker.className = 'chronicle-era-picker';
+  eraPicker.setAttribute('aria-label', '按时代跳转');
+  eras.forEach(era => eraPicker.add(new Option(era.title, String(era.start))));
+  eraPicker.addEventListener('change', () => select(Number(eraPicker.value)));
+  nav.prepend(eraPicker);
   let width = 1, height = 1, step = 1, labelWidth = 110, focus = 0, selected = -1;
   let pointer, animation, frameId = 0, suppressClick = false;
   const colors = [[110,222,224],[110,177,247],[166,148,240],[239,162,194],[255,204,143]];
@@ -106,6 +125,8 @@
     stories[index].hidden = false;
     nodes[index].setAttribute('aria-current','step');
     counter.textContent = String(index+1).padStart(2,'0')+' / '+nodes.length;
+    const era = eras.findLast(item => item.start <= index);
+    if (era) eraPicker.value = String(era.start);
     prev.disabled = index===0;
     next.disabled = index===last;
   }
@@ -123,7 +144,8 @@
   function select(value) {
     const index = clamp(Math.round(value));
     commit(index);
-    if (!reduced.matches && Math.abs(index-focus)>.01) {
+    const distance = Math.abs(index-focus);
+    if (!reduced.matches && distance > .01 && distance <= 7) {
       animation = {from:focus,to:index,start:performance.now(),duration:Math.min(520,200+Math.abs(index-focus)*60)};
     } else { animation=null; focus=index; }
     queue();

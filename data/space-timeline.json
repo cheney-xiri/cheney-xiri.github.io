@@ -1,17 +1,307 @@
 {
   "title": "全球宇宙探索 · 突破的轨迹",
-  "intro": "从认识宇宙，到走向深空。世界各地的发现，在这里相遇。",
+  "intro": "从古代文明的星历和天文遗址，到跨国望远镜、载人航天和深空探测。沿星轨浏览人类认识宇宙的重要时刻。",
   "events": [
+    {
+      "id": "goseck",
+      "year": "-4900",
+      "date": "约公元前4900—4550年",
+      "title": "戈瑟克环形遗址留下史前观天线索",
+      "who": "中欧新石器时代居民 · 今德国萨克森-安哈尔特",
+      "kind": "史前天文遗址",
+      "text": "考古团队发现，戈瑟克环形围沟的部分出入口与当地冬至日出和日落的方向相合。这一布局提供了史前社群留意太阳周年运动的线索。遗址也可能具有仪式用途，年代来自考古测定。",
+      "source": "https://idw-online.de/de/news818930"
+    },
+    {
+      "id": "egyptian-star-time",
+      "year": "-2500",
+      "date": "约公元前2500年·古王国中期",
+      "title": "古埃及用星空定时和纪年",
+      "who": "古埃及 · 尼罗河流域",
+      "kind": "历法与计时",
+      "text": "古埃及人把一年分为365天，并把天狼星重新出现在黎明天空的时节与尼罗河泛滥周期联系起来。夜晚也利用依次升起的星群计时。这个年份概括有证据的时代。",
+      "source": "https://www.metmuseum.org/essays/telling-time-in-ancient-egypt"
+    },
+    {
+      "id": "babylon-venus",
+      "year": "-1650",
+      "date": "约公元前17世纪·现存泥板为后世抄本",
+      "title": "古巴比伦记录金星的出没",
+      "who": "两河流域 · 古巴比伦与尼尼微",
+      "kind": "行星观测",
+      "text": "后世泥板保存了与阿米萨杜卡王时期相关的金星出没序列，显示两河流域已长期追踪行星周期。现存文本含推算和传抄成分，古代观测的具体年份仍有争议。",
+      "source": "https://www.cambridge.org/core/books/cambridge-history-of-science/science-and-ancient-mesopotamia/C48D6E70188ED938863F479B692D465B"
+    },
+    {
+      "id": "nebra-disc",
+      "year": "-1600",
+      "date": "约公元前1600年·埋藏年代",
+      "title": "内布拉星空盘记录青铜时代的天空",
+      "who": "中欧 · 今德国萨克森-安哈尔特",
+      "kind": "天空图像",
+      "text": "这件青铜盘以金箔表现天体和星群，其中一簇常被解释为昴星团。盘的用途仍有解释空间，伴随出土物为它的埋藏年代提供了线索。",
+      "source": "https://www.landesmuseum-vorgeschichte.de/himmelsscheibe-von-nebra/datierung"
+    },
+    {
+      "id": "chankillo",
+      "year": "-250",
+      "date": "约公元前250年",
+      "title": "昌基洛用地平线塔列追踪太阳",
+      "who": "安第斯文明 · 今秘鲁卡斯马河谷",
+      "kind": "太阳历",
+      "text": "从指定位置观察，太阳在一年中沿十三座塔构成的地平线移动。遗址为前哥伦布时期安第斯社会如何用建筑记录周年太阳位置提供了实物证据。",
+      "source": "https://whc.unesco.org/en/list/1624/"
+    },
+    {
+      "id": "antikythera",
+      "year": "-100",
+      "date": "约公元前2至前1世纪",
+      "title": "安提基特拉机械用齿轮演算天象",
+      "who": "古希腊化世界 · 安提基特拉沉船",
+      "kind": "天文仪器",
+      "text": "这台古代齿轮装置把太阳、月亮和历法周期转成机械读数，还能用周期表预测可能出现的日食和月食。现存部件的研究仍在推进。",
+      "source": "https://www.nature.com/articles/nature05357"
+    },
+    {
+      "id": "almagest",
+      "year": "150",
+      "date": "约公元2世纪",
+      "title": "托勒密汇编《天文学大成》",
+      "who": "罗马治下的埃及 · 亚历山大里亚",
+      "kind": "数学天文",
+      "text": "托勒密汇集古希腊天文传统、星表和预测行星位置的几何方法。这部著作经阿拉伯文等语言传播，长期影响欧亚的数学天文研究。",
+      "source": "https://www.loc.gov/static/collections/finding-our-place-in-the-cosmos-with-carl-sagan/articles-and-essays/modeling-the-cosmos/ancient-greek-astronomy-and-cosmology.html"
+    },
+    {
+      "id": "aryabhatiya",
+      "year": "499",
+      "date": "499年",
+      "title": "阿耶波多写成《阿耶波多历数书》",
+      "who": "南亚 · 古印度",
+      "kind": "数学天文",
+      "text": "阿耶波多把数表和计算规则用于天文，讨论日月食，并用地球自转解释天体看起来每天向西移动的现象。",
+      "source": "https://www.cc.kyoto-su.ac.jp/~yanom/pdf/yano_papers/Yano_1980.pdf"
+    },
+    {
+      "id": "dunhuang",
+      "year": "680",
+      "date": "约公元7世纪",
+      "title": "敦煌星图绘出全天星官",
+      "who": "中国 · 唐代天文传统",
+      "kind": "星图",
+      "text": "敦煌星图以分幅和北极区图记录星官，是现存最早的一批完整星图之一。它留下了唐代如何组织整片可见天空的直观证据。",
+      "source": "https://idp.bl.uk/discover/learning/chinese-astronomy/about-this-resource/"
+    },
+    {
+      "id": "al-sufi",
+      "year": "964",
+      "date": "约964年",
+      "title": "苏菲编绘《恒星图像书》",
+      "who": "波斯 · 伊斯兰天文学",
+      "kind": "星表与星图",
+      "text": "阿卜杜勒-拉赫曼·苏菲把托勒密的星表与阿拉伯星名和观测传统结合，绘出从地面和从天球外看同一星座的图样。",
+      "source": "https://www.loc.gov/static/collections/finding-our-place-in-the-cosmos-with-carl-sagan/articles-and-essays/modeling-the-cosmos/astronomical-innovation-in-the-islamic-world.html"
+    },
+    {
+      "id": "guest-star-1054",
+      "year": "1054",
+      "date": "1054年",
+      "title": "中日记录后来形成蟹状星云的客星",
+      "who": "东亚 · 中国与日本历史记录",
+      "kind": "超新星观测",
+      "text": "中国、日本的历史记载保存了这颗亮客星的观测证据。今天可用历史记录给爆发定年，并把它与蟹状星云及中心脉冲星联系起来。",
+      "source": "https://science.nasa.gov/image-article/apod-2025-august-8-dawn-of-the-crab/"
+    },
+    {
+      "id": "maya-venus",
+      "year": "1350",
+      "date": "约14至16世纪初·现存抄本",
+      "title": "玛雅手稿保存系统的金星表",
+      "who": "中美洲 · 尤卡坦地区",
+      "kind": "历算与行星",
+      "text": "《德累斯顿手抄本》保存了依据更早传统编成的金星周期表和日月食相关表格。表格把反复出现的天象转换成可计算的历法周期。",
+      "source": "https://www.slub-dresden.de/en/explore/manuscripts/the-dresden-maya-codex/content"
+    },
+    {
+      "id": "ulugh-beg",
+      "year": "1420",
+      "date": "15世纪上半叶",
+      "title": "撒马尔罕天文台以大型仪器测星",
+      "who": "中亚 · 帖木儿时期撒马尔罕",
+      "kind": "星表与仪器",
+      "text": "兀鲁伯召集学者建造大型子午仪器，以裸眼测量恒星位置并编订星表。遗址保留了前望远镜时代利用大型建筑提升观测精度的做法。",
+      "source": "https://whc.unesco.org/document/221321"
+    },
+    {
+      "id": "copernicus",
+      "year": "1543",
+      "date": "1543年",
+      "title": "《天体运行论》提出系统的日心模型",
+      "who": "欧洲 · 哥白尼",
+      "kind": "宇宙模型",
+      "text": "哥白尼把地球列为绕太阳运行的行星，并以地球自转解释天空每天的视运动。这套模型开启了围绕行星轨道和观测证据的长期检验。",
+      "source": "https://www.loc.gov/static/collections/finding-our-place-in-the-cosmos-with-carl-sagan/articles-and-essays/modeling-the-cosmos/whose-revolution-copernicus-brahe-and-kepler.html"
+    },
+    {
+      "id": "kepler",
+      "year": "1609",
+      "date": "1609年（第三定律发表于1619年）",
+      "title": "开普勒从火星数据推导行星运动定律",
+      "who": "欧洲 · 第谷观测资料 / 开普勒",
+      "kind": "轨道定律",
+      "text": "开普勒用第谷积累的观测检验火星轨道，提出椭圆和等面积定律，随后发现周期与轨道尺度的关系。行星运动开始能用同一组数学关系描述。",
+      "source": "https://pwg.gsfc.nasa.gov/stargaze/Stimelin.htm"
+    },
+    {
+      "id": "galileo-moons",
+      "year": "1610",
+      "date": "1609—1610年",
+      "title": "望远镜揭示木星的四颗卫星",
+      "who": "欧洲 · 伽利略等早期望远镜观测者",
+      "kind": "光学观测",
+      "text": "伽利略连续观测到四颗亮点绕木星运动，并发表结果。后来对金星相位的观测也为检验太阳系模型提供了新证据。",
+      "source": "https://heasarc.gsfc.nasa.gov/docs/heasarc/headates/1600.html"
+    },
+    {
+      "id": "newton-principia",
+      "year": "1687",
+      "date": "1687年",
+      "title": "牛顿用万有引力解释天体运动",
+      "who": "英国 · 牛顿",
+      "kind": "引力理论",
+      "text": "《自然哲学的数学原理》用运动定律和万有引力把地面物体与天体的运动放在同一框架中，解释了为何能得到开普勒描述的轨道规律。",
+      "source": "https://heasarc.gsfc.nasa.gov/docs/heasarc/headates/1600.html"
+    },
+    {
+      "id": "jaipur",
+      "year": "1725",
+      "date": "18世纪上半叶",
+      "title": "斋浦尔建造裸眼天文观测仪器群",
+      "who": "印度 · 贾伊·辛格二世",
+      "kind": "天文台",
+      "text": "简塔·曼塔尔以大型石砌仪器测定时间和天体位置。它汇集不同天文传统，体现了印度历史上利用固定仪器开展位置观测的技术。",
+      "source": "https://whc.unesco.org/en/list/1338"
+    },
+    {
+      "id": "uranus",
+      "year": "1781",
+      "date": "1781年",
+      "title": "望远镜发现天王星",
+      "who": "英国 · 威廉·赫歇尔",
+      "kind": "行星发现",
+      "text": "赫歇尔发现一个会相对恒星移动的天体，后续轨道计算确认它是行星。太阳系已知行星范围由此越过了土星。",
+      "source": "https://ssd.jpl.nasa.gov/planets/discovery.html"
+    },
+    {
+      "id": "stellar-parallax",
+      "year": "1838",
+      "date": "1838年",
+      "title": "恒星视差给出直接测距",
+      "who": "欧洲 · 贝塞尔及同期测量者",
+      "kind": "恒星测距",
+      "text": "贝塞尔发表天鹅座61的视差测量，用地球公转提供的基线估算恒星距离。可靠的视差测量为后来更远距离的标定奠定基础。",
+      "source": "https://cosmology.carnegiescience.edu/timeline.html"
+    },
+    {
+      "id": "neptune",
+      "year": "1846",
+      "date": "1846-09-23",
+      "title": "根据轨道扰动推算并找到海王星",
+      "who": "法国、英国与德意志地区 · 勒维耶、亚当斯、伽勒等",
+      "kind": "行星发现",
+      "text": "天王星轨道的偏差促使科学家推算一颗未知行星的位置。伽勒与达雷斯特根据勒维耶的预测在柏林找到它，显示引力理论能预测新的天体。",
+      "source": "https://www.nasa.gov/history/175-years-ago-astronomers-discover-neptune-the-eighth-planet/"
+    },
+    {
+      "id": "leavitt",
+      "year": "1912",
+      "date": "1912年",
+      "title": "勒维特建立造父变星测距关系",
+      "who": "美国哈佛大学天文台 · 小麦哲伦云观测",
+      "kind": "宇宙测距",
+      "text": "勒维特研究小麦哲伦云的变星，发现周期越长的造父变星通常越亮。经过绝对亮度标定，这一规律可以用来测量远处星系的距离。",
+      "source": "https://platestacks.cfa.harvard.edu/henrietta-swan-leavitt/variable-stars"
+    },
+    {
+      "id": "relativity",
+      "year": "1915",
+      "date": "1915年",
+      "title": "广义相对论重新解释引力",
+      "who": "欧洲 · 爱因斯坦",
+      "kind": "时空理论",
+      "text": "广义相对论把引力描述为物质能量使时空弯曲。后来它为宇宙膨胀、黑洞和引力波提供了共同的理论框架。",
+      "source": "https://www.royalsociety.org/-/media/policy/projects/space2075/space-2075-report.pdf"
+    },
+    {
+      "id": "eclipse-1919",
+      "year": "1919",
+      "date": "1919-05-29",
+      "title": "跨越大西洋观测日食，检验光线偏折",
+      "who": "普林西比岛、巴西索布拉尔 · 英国观测队",
+      "kind": "相对论检验",
+      "text": "两队在日全食时拍摄太阳附近的恒星。比较恒星影像位置后，结果支持太阳引力使光线偏折的预言。",
+      "source": "https://www.esa.int/Science_Exploration/Space_Science/Relativity_and_the_1919_eclipse"
+    },
+    {
+      "id": "andromeda-cepheid",
+      "year": "1923",
+      "date": "1923年（底片）",
+      "title": "仙女座变星揭示银河系外还有星系",
+      "who": "美国 · 威尔逊山天文台 / 埃德温·哈勃",
+      "kind": "河外星系",
+      "text": "哈勃在仙女座拍摄底片中找到造父变星，随后根据勒维特关系估算距离。这个距离远超银河系范围，表明仙女座是独立的星系。",
+      "source": "https://science.nasa.gov/missions/hubble/hubble-views-the-star-that-changed-the-universe/"
+    },
+    {
+      "id": "goddard",
+      "year": "1926",
+      "date": "1926-03-16",
+      "title": "首枚液体燃料火箭飞行",
+      "who": "美国 · 罗伯特·戈达德",
+      "kind": "火箭技术",
+      "text": "戈达德在马萨诸塞州完成液体燃料火箭试飞，验证独立储存并输送燃料与氧化剂的方案，为后来的液体火箭发展提供了实践基础。",
+      "source": "https://www.nasa.gov/rocket-engine-test-facility-origins-of-the-retf/"
+    },
+    {
+      "id": "lemaitre",
+      "year": "1927",
+      "date": "1927年",
+      "title": "勒梅特提出膨胀宇宙并估算其速率",
+      "who": "比利时 · 乔治·勒梅特",
+      "kind": "宇宙学",
+      "text": "勒梅特从广义相对论得到膨胀宇宙模型，结合已有星系距离和速度数据估算膨胀速率。国际天文学联合会后来建议将相关关系称为哈勃—勒梅特定律。",
+      "source": "https://iauarchive.eso.org/news/pressreleases/detail/iau1812/"
+    },
     {
       "id": "expansion",
       "year": "1929",
       "date": "1929",
-      "title": "宇宙膨胀，进入观测视野",
-      "who": "美国威尔逊山天文台 · 欧洲理论研究",
+      "title": "星系的距离与退行速度呈现关联",
+      "who": "美国 · 埃德温·哈勃 / 威尔逊山天文台",
       "kind": "宇宙学",
-      "text": "哈勃发表星系距离与退行速度之间的关系。与斯里弗的光谱观测、勒梅特等人的理论工作相结合，宇宙膨胀逐渐成为可检验的物理图景。",
+      "text": "哈勃发表星系距离与退行速度之间的观测关系，使用的速度数据很大一部分来自斯里弗等人的光谱测量。与勒梅特此前的膨胀模型相互参照，这组观测成为检验宇宙膨胀的依据。",
       "image": "hubble-ultra-deep",
       "source": "https://science.nasa.gov/missions/hubble/nasa-celebrates-edwin-hubbles-discovery-of-a-new-universe/"
+    },
+    {
+      "id": "pluto",
+      "year": "1930",
+      "date": "1930-02-18",
+      "title": "比较照片找到冥王星",
+      "who": "美国 · 洛厄尔天文台 / 克莱德·汤博",
+      "kind": "太阳系边缘",
+      "text": "汤博通过比较不同夜晚的照片，发现相对背景恒星移动的冥王星。后续发现的众多外太阳系天体改变了人们对这片区域的认识。",
+      "source": "https://ssd.jpl.nasa.gov/planets/discovery.html"
+    },
+    {
+      "id": "jansky",
+      "year": "1933",
+      "date": "1933年（发表）",
+      "title": "来自银河系的无线电信号开启射电天文",
+      "who": "美国 · 贝尔实验室 / 卡尔·央斯基",
+      "kind": "射电天文",
+      "text": "央斯基在研究通信杂讯时发现一项信号随恒星日重复，方向指向银河系中心附近。天文学从此多了一个观察宇宙的波段。",
+      "source": "https://www.nrao.edu/archives/jansky-finding-aid"
     },
     {
       "id": "sputnik",
@@ -20,9 +310,29 @@
       "title": "第一颗人造地球卫星",
       "who": "苏联 · Sputnik 1",
       "kind": "航天起点",
-      "text": "斯普特尼克 1 号进入地球轨道。来自太空的无线电信号，让人造卫星从设想成为现实，也开启了航天时代。",
+      "text": "斯普特尼克一号由拜科努尔发射，进入地球轨道并播发可由地面接收的无线电信号。人造卫星由此成为研究高层大气、通信和观测地球的新平台。",
       "image": "blue-marble",
       "source": "https://www.esa.int/About_Us/50_years_of_ESA/Sputnik_60_years_of_the_space_age"
+    },
+    {
+      "id": "luna-2",
+      "year": "1959",
+      "date": "1959-09-13（世界时）",
+      "title": "月球二号首次到达月球表面",
+      "who": "苏联 · 月球二号",
+      "kind": "月球探测",
+      "text": "月球二号按计划撞击月面，成为第一件到达月球表面的人造物。任务证明人类制造的装置可以抵达另一颗天体。",
+      "source": "https://www.nasa.gov/wp-content/uploads/static/history/ap11ann/chronology.htm"
+    },
+    {
+      "id": "luna-3",
+      "year": "1959",
+      "date": "1959-10-07（拍摄）",
+      "title": "月球三号拍下首批月背照片",
+      "who": "苏联 · 月球三号",
+      "kind": "月球探测",
+      "text": "月球三号绕过月球，将人类第一次直接拍到的月球背面影像传回。照片虽不清晰，已经显示月背和正面地貌的明显差别。",
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/chronology.html"
     },
     {
       "id": "gagarin",
@@ -31,9 +341,49 @@
       "title": "人类第一次进入太空",
       "who": "苏联 · 尤里·加加林 / 东方一号",
       "kind": "载人探索",
-      "text": "加加林乘东方一号完成绕地飞行，成为第一位进入太空的人。人类开始亲自离开地面，体验轨道飞行。",
+      "text": "加加林乘东方一号绕地飞行，成为首位进入太空并完成轨道飞行的人。这次飞行验证了载人入轨、在轨运行和返回地球的基本流程。",
       "image": "earthrise",
       "source": "https://www.esa.int/Science_Exploration/Space_Science/12_April"
+    },
+    {
+      "id": "alouette",
+      "year": "1962",
+      "date": "1962-09-29",
+      "title": "加拿大云雀一号探测电离层",
+      "who": "加拿大 · 国防研究电信机构 / 美国发射支持",
+      "kind": "空间科学",
+      "text": "加拿大研制的云雀一号从太空向地球电离层发射无线电波，测量反射信号，为研究电离层结构和无线电传播提供数据。",
+      "source": "https://www.asc-csa.gc.ca/eng/satellites/alouette.asp"
+    },
+    {
+      "id": "mariner-2",
+      "year": "1962",
+      "date": "1962-12-14",
+      "title": "水手二号完成首次成功的行星飞掠",
+      "who": "美国 · NASA / 喷气推进实验室",
+      "kind": "金星探测",
+      "text": "水手二号飞掠金星并传回测量结果，显示金星极其炽热。这是探测器第一次成功飞掠另一颗行星并取得科学数据。",
+      "source": "https://www.jpl.nasa.gov/timeline/"
+    },
+    {
+      "id": "tereshkova",
+      "year": "1963",
+      "date": "1963-06-16",
+      "title": "捷列什科娃成为首位进入太空的女性",
+      "who": "苏联 · 东方六号",
+      "kind": "载人航天",
+      "text": "瓦莲京娜·捷列什科娃单独驾驶东方六号进入地球轨道。她的飞行开启了女性参与载人航天的历史。",
+      "source": "https://www.nasa.gov/specials/timeline/"
+    },
+    {
+      "id": "leonov",
+      "year": "1965",
+      "date": "1965-03-18",
+      "title": "列昂诺夫实现首次太空行走",
+      "who": "苏联 · 上升二号",
+      "kind": "出舱活动",
+      "text": "阿列克谢·列昂诺夫离开上升二号，在飞船外停留约十二分钟，展示了人在轨道上离开舱体并返回的可能性。",
+      "source": "https://www.nasa.gov/specials/timeline/"
     },
     {
       "id": "cmb",
@@ -47,26 +397,256 @@
       "source": "https://science.nasa.gov/mission/cobe/science/"
     },
     {
+      "id": "mariner-4",
+      "year": "1965",
+      "date": "1965-07-14",
+      "title": "水手四号传回首批火星近距离图像",
+      "who": "美国 · NASA / 喷气推进实验室",
+      "kind": "火星探测",
+      "text": "水手四号成功飞掠火星并传回近距离图像，显示布满撞击坑的地形。数据让人们能够用实地观测检验此前对火星表面的推测。",
+      "source": "https://science.nasa.gov/mission/mariner-program/"
+    },
+    {
+      "id": "luna-9",
+      "year": "1966",
+      "date": "1966-02-03",
+      "title": "月球九号首次在月面软着陆",
+      "who": "苏联 · 月球九号",
+      "kind": "月球着陆",
+      "text": "月球九号在月面平稳落下并传回全景照片。软着陆证明探测器可以抵达月表后继续工作。",
+      "source": "https://science.nasa.gov/moon/missions/"
+    },
+    {
+      "id": "pulsar-discovery",
+      "year": "1967",
+      "date": "1967年（发现） · 1968年（发表）",
+      "title": "发现首颗脉冲星",
+      "who": "英国剑桥大学 · 乔斯琳·贝尔·伯奈尔等",
+      "kind": "射电天文",
+      "text": "贝尔·伯奈尔在巡天记录中发现周期极为稳定的射电脉冲。后续研究把此类信号与快速自转的中子星联系起来。",
+      "source": "https://www.cam.ac.uk/stories/journeysofdiscovery-pulsars"
+    },
+    {
+      "id": "wresat",
+      "year": "1967",
+      "date": "1967-11-29",
+      "title": "澳大利亚首颗卫星从本土升空",
+      "who": "澳大利亚 · 伍默拉 / 美国提供运载火箭",
+      "kind": "空间科学",
+      "text": "澳大利亚研制的 WRESAT 从伍默拉发射，用于高层大气等科学观测，展示了南半球本土发射场参与空间科学的能力。",
+      "source": "https://www.space.gov.au/australian-space-milestones"
+    },
+    {
+      "id": "apollo-8",
+      "year": "1968",
+      "date": "1968-12-24（进入月球轨道）",
+      "title": "阿波罗八号首次载人绕月",
+      "who": "美国 · 阿波罗八号",
+      "kind": "载人绕月",
+      "text": "三名宇航员搭乘阿波罗八号进入月球轨道并安全返航，验证了载人往返地月空间的能力，也在月球附近拍下著名的地出照片。",
+      "source": "https://www.nasa.gov/specials/timeline/"
+    },
+    {
       "id": "apollo",
       "year": "1969",
       "date": "1969-07-20",
       "title": "人类首次载人登月",
       "who": "美国 · 阿波罗 11 号",
       "kind": "载人探索",
-      "text": "阿波罗 11 号实现首次载人登月。月面活动、实验与带回的样本，让对另一颗天体的研究进入新的阶段。",
+      "text": "鹰号登月舱在静海着陆，阿姆斯特朗与奥尔德林踏上月面，柯林斯留守月球轨道。乘组带回的月岩和布设的实验装置开启了以月表实测和实验室样品研究相结合的阶段。",
       "image": "apollo-bootprint",
       "source": "https://www.nasa.gov/mission/apollo-11/"
+    },
+    {
+      "id": "ohsumi",
+      "year": "1970",
+      "date": "1970-02-11",
+      "title": "大隅号成为日本首颗人造卫星",
+      "who": "日本 · 东京大学宇宙航空研究所",
+      "kind": "人造卫星",
+      "text": "大隅号由日本研制的 Lambda 火箭发射入轨，验证了本国运载与卫星技术，开启日本卫星探索史。",
+      "source": "https://global.jaxa.jp/projects/past_project/sat.html"
+    },
+    {
+      "id": "dongfanghong",
+      "year": "1970",
+      "date": "1970-04-24",
+      "title": "东方红一号成为中国首颗人造卫星",
+      "who": "中国 · 长征一号 / 东方红一号",
+      "kind": "人造卫星",
+      "text": "长征一号把东方红一号送入地球轨道。卫星进行了无线电播送与跟踪相关试验，标志着中国具备独立研制并发射卫星的能力。",
+      "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n6760209/n6760215/c6809206/content.html"
+    },
+    {
+      "id": "luna-16",
+      "year": "1970",
+      "date": "1970-09-24（返回地球）",
+      "title": "月球十六号首次以无人方式送回月壤",
+      "who": "苏联 · 月球十六号",
+      "kind": "自动采样返回",
+      "text": "探测器在月表钻取样本，再由返回装置把样本送回地球，验证了无人探测器独立完成地外采样返回的能力。",
+      "source": "https://science.nasa.gov/moon/missions/"
     },
     {
       "id": "venera",
       "year": "1970",
       "date": "1970-12-15",
-      "title": "从金星地表传回数据",
+      "title": "金星七号从另一颗行星表面传回数据",
       "who": "苏联 · 金星 7 号",
       "kind": "行星探测",
-      "text": "金星 7 号在金星实现软着陆，并从地表传回数据。这是人类探测器在另一颗行星表面取得的突破。",
+      "text": "金星七号穿过金星大气并降至表面。地面团队从着陆后仍能收到的微弱信号中提取数据，实现首次从另一颗行星表面向地球传输测量结果。",
       "image": "nasa-pia00248",
       "source": "https://science.nasa.gov/deep-space-exploration/"
+    },
+    {
+      "id": "salyut",
+      "year": "1971",
+      "date": "1971-04-19",
+      "title": "礼炮一号成为世界首座空间站",
+      "who": "苏联 · 礼炮一号",
+      "kind": "空间站",
+      "text": "礼炮一号发射入轨，尝试把短期载人飞行扩展为持续驻留和工作。随后联盟十一号乘组完成了首次登驻。",
+      "source": "https://www.nasa.gov/missions/station/50-years-ago-launch-of-salyut-the-worlds-first-space-station/"
+    },
+    {
+      "id": "mariner-9",
+      "year": "1971",
+      "date": "1971-11-13（抵达）",
+      "title": "水手九号首次环绕另一颗行星",
+      "who": "美国 · NASA / 喷气推进实验室",
+      "kind": "火星轨道探测",
+      "text": "水手九号进入火星轨道，在尘暴消退后持续拍摄，展示了火星上的巨型火山、峡谷和古河道。绕行让探测从瞬时飞掠变为系统制图。",
+      "source": "https://science.nasa.gov/mission/mariner-program/"
+    },
+    {
+      "id": "pioneer-jupiter",
+      "year": "1973",
+      "date": "1973-12-04（世界时）",
+      "title": "先驱者十号完成首度木星近距探测",
+      "who": "美国 · NASA / 埃姆斯研究中心",
+      "kind": "木星探测",
+      "text": "先驱者十号穿过小行星带，飞越木星并传回大气和磁层数据。实测的强辐射环境也影响了后续木星探测器的设计。",
+      "source": "https://science.nasa.gov/mission/pioneer-10/"
+    },
+    {
+      "id": "mariner-mercury",
+      "year": "1974",
+      "date": "1974-03-29",
+      "title": "水手十号首度飞掠水星",
+      "who": "美国 · NASA / 喷气推进实验室",
+      "kind": "水星探测",
+      "text": "水手十号先借金星引力改变轨道，随后近距离探测水星，拍到带有陨击坑的地表并取得水星磁场的证据。",
+      "source": "https://www.jpl.nasa.gov/missions/mariner-10/"
+    },
+    {
+      "id": "aryabhatta",
+      "year": "1975",
+      "date": "1975-04-19",
+      "title": "印度首颗卫星阿耶波多号入轨",
+      "who": "印度空间研究组织 · 苏联发射支持",
+      "kind": "空间科学",
+      "text": "印度研制的阿耶波多号搭载天文与空间物理实验设备，由苏联火箭发射。这是印度建立本国卫星研制能力的重要一站。",
+      "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+    },
+    {
+      "id": "apollo-soyuz",
+      "year": "1975",
+      "date": "1975-07-17（对接）",
+      "title": "阿波罗与联盟号在轨对接",
+      "who": "美国 NASA · 苏联载人航天团队",
+      "kind": "国际合作",
+      "text": "两国飞船通过过渡舱实现对接，宇航员能够往返两舱并开展共同实验。这次飞行检验了国际载人航天对接与协作的可行性。",
+      "source": "https://www.nasa.gov/specials/timeline/"
+    },
+    {
+      "id": "hokulea",
+      "year": "1976",
+      "date": "1976年",
+      "title": "霍库莱阿号用传统观星术驶抵塔希提",
+      "who": "夏威夷、密克罗尼西亚与塔希提 · 毛·皮艾卢格",
+      "kind": "原住民导航",
+      "text": "密克罗尼西亚领航员毛·皮艾卢格利用星位、太阳、月亮和涌浪引导传统双体独木舟，由夏威夷抵达塔希提，展示了太平洋原住民世代传承的观天导航技术。",
+      "source": "https://naturalhistory.si.edu/research/anthropology/programs/recovering-voices/outreach/news-research-updates/canoe-collections-pacific-islands"
+    },
+    {
+      "id": "viking-1",
+      "year": "1976",
+      "date": "1976-07-20",
+      "title": "维京一号在火星着陆并持续工作",
+      "who": "美国 · NASA / 维京计划",
+      "kind": "火星着陆",
+      "text": "维京一号在火星传回地面影像和气象等数据，并开展生命迹象实验，使人类得以长期直接测量火星地表环境。",
+      "source": "https://www.nasa.gov/specials/timeline/"
+    },
+    {
+      "id": "ariane",
+      "year": "1979",
+      "date": "1979-12-24",
+      "title": "欧洲阿丽亚娜一号从库鲁首飞",
+      "who": "欧洲空间局 · 法国 CNES / 法属圭亚那",
+      "kind": "运载火箭",
+      "text": "阿丽亚娜一号在库鲁完成首次飞行，欧洲由此建立自主的轨道发射能力。库鲁后来成为多项欧洲与国际科学任务的出发地。",
+      "source": "https://www.esa.int/articles/about-us/who-we-are/history/thirty-years-of-ariane"
+    },
+    {
+      "id": "shuttle-first",
+      "year": "1981",
+      "date": "1981-04-12",
+      "title": "哥伦比亚号完成航天飞机首飞",
+      "who": "美国 · NASA / STS-1",
+      "kind": "航天运输",
+      "text": "哥伦比亚号带着两名宇航员进入地球轨道，并以滑翔方式降落跑道。飞行验证了轨道飞行器返回后可以再次使用的工程路线。",
+      "source": "https://www.nasa.gov/specials/timeline/"
+    },
+    {
+      "id": "canadarm",
+      "year": "1981",
+      "date": "1981-11-12（随航天飞机发射）",
+      "title": "加拿大机械臂首次进入太空",
+      "who": "加拿大 · 美国航天飞机 STS-2",
+      "kind": "空间机器人",
+      "text": "加拿大研制的机械臂随哥伦比亚号升空并完成在轨测试。它后来参与卫星释放、回收与维修，也是空间站机器人技术的先驱。",
+      "source": "https://www.asc-csa.gc.ca/eng/canadarm/flight.asp"
+    },
+    {
+      "id": "mir",
+      "year": "1986",
+      "date": "1986-02-19（世界时）",
+      "title": "和平号以模块化方式扩建空间站",
+      "who": "苏联、俄罗斯 · 和平号与国际访问任务",
+      "kind": "空间站",
+      "text": "和平号核心舱发射后，陆续接入多个实验舱，形成可在轨扩建的空间站。长期驻留和国际合作经验后来用于国际空间站。",
+      "source": "https://www.nasa.gov/history/35-years-ago-launch-of-mir-space-stations-first-module/"
+    },
+    {
+      "id": "giotto",
+      "year": "1986",
+      "date": "1986-03-14（世界时）",
+      "title": "乔托号近距离飞越哈雷彗星",
+      "who": "欧洲空间局 · 苏联、日本等国际协同观测",
+      "kind": "彗星探测",
+      "text": "欧洲的乔托号在距哈雷彗核约600千米处掠过，拍到彗核并测量气体和尘埃。同期多个国家的探测任务组成了联合观测网。",
+      "source": "https://www.esa.int/missions/about-us/directorates/science/giotto-overview"
+    },
+    {
+      "id": "sn1987a",
+      "year": "1987",
+      "date": "1987-02-23（爆发信号抵达地球）",
+      "title": "大麦哲伦云超新星开启联合观测",
+      "who": "智利天文台 · 多国光学与中微子观测站",
+      "kind": "恒星爆发",
+      "text": "南天的 SN 1987A 成为近代最重要的超新星之一。光学跟踪与地面中微子记录共同揭示大质量恒星核心坍缩的过程。",
+      "source": "https://www.eso.org/public/news/eso0708/"
+    },
+    {
+      "id": "voyager-neptune",
+      "year": "1989",
+      "date": "1989-08-25",
+      "title": "旅行者二号首次飞掠海王星",
+      "who": "美国 · NASA / 全球深空通信站",
+      "kind": "外行星探测",
+      "text": "旅行者二号近距离观测海王星及海卫一，完成同一艘探测器先后访问四颗巨行星的旅程。它传回的图像改变了对外太阳系行星天气和卫星地质的认识。",
+      "source": "https://science.nasa.gov/mission/voyager/voyager-2/"
     },
     {
       "id": "hubble",
@@ -75,7 +655,7 @@
       "title": "哈勃升空，打开新的观测窗口",
       "who": "NASA · ESA",
       "kind": "空间天文",
-      "text": "哈勃空间望远镜发射升空。这项美国与欧洲合作的任务，后来在恒星、星系、宇宙膨胀与深场观测中留下了大量成果。",
+      "text": "哈勃进入地球轨道，避开大气湍流与部分波段吸收。在经历在轨维修后，它通过深场、恒星测距等长期观测，把天文学能看清的空间尺度向外推进。",
       "image": "hubble-deep-1995",
       "source": "https://science.nasa.gov/mission/hubble/"
     },
@@ -84,20 +664,40 @@
       "year": "1992",
       "date": "1992",
       "title": "首批确认的系外行星",
-      "who": "阿雷西博观测 · Wolszczan 与 Frail",
+      "who": "波多黎各 · 阿雷西博天文台 / 沃尔什钱与弗雷尔",
       "kind": "系外世界",
-      "text": "脉冲星 PSR B1257+12 周围的行星得到确认。它们围绕恒星遗迹运行，与后来发现的类太阳恒星周围行星，需要分别看待。",
+      "text": "天文学家从脉冲星 PSR B1257+12 的无线电脉冲到达时刻变化中识别出行星引力的影响。这是首批得到确认的太阳系外行星，绕行的中心天体是一颗中子星。",
       "image": "crab",
       "source": "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up/"
+    },
+    {
+      "id": "cobe-map",
+      "year": "1992",
+      "date": "1992年",
+      "title": "COBE 测出微波背景的微小起伏",
+      "who": "美国 · NASA / COBE 团队",
+      "kind": "早期宇宙",
+      "text": "卫星在近乎均匀的宇宙微波背景中测出微小的温度差异。这些差异保存了早期宇宙物质分布的信息，有助于解释后来星系结构如何长成。",
+      "source": "https://science.nasa.gov/mission/cobe/science/"
+    },
+    {
+      "id": "brazil-scd",
+      "year": "1993",
+      "date": "1993-02-09",
+      "title": "巴西首颗自主研制卫星发射",
+      "who": "巴西 · 国家空间研究院 INPE",
+      "kind": "地球观测基础设施",
+      "text": "SCD-1 入轨后中继地面站采集的环境和水文数据。工程让巴西建立了本国卫星研制与运行能力，也扩大了对地面环境的连续观测。",
+      "source": "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/30-anos-do-satelite-scd-1"
     },
     {
       "id": "pegasi",
       "year": "1995",
       "date": "1995-10-06",
-      "title": "在另一颗太阳旁，找到行星",
+      "title": "发现首颗获确认的类太阳恒星行星",
       "who": "瑞士团队 · 法国上普罗旺斯天文台",
       "kind": "系外世界",
-      "text": "迈耶与奎洛兹宣布发现飞马座 51 b。这颗绕类太阳恒星运行的行星，成为系外行星研究的标志性突破。",
+      "text": "迈耶与奎洛兹用径向速度法发现飞马座 51 b。它在很近的轨道上绕类太阳恒星运行，这一意外结果促使天文学家重新考虑巨行星的形成和迁移。",
       "image": "nasa-pia21376",
       "source": "https://science.nasa.gov/universe/exoplanets/nobel-winners-changed-our-understanding-with-exoplanet-discovery/"
     },
@@ -108,9 +708,29 @@
       "title": "宇宙膨胀，竟在加速",
       "who": "超新星宇宙学计划 · 高红移超新星搜索团队",
       "kind": "宇宙学",
-      "text": "两个国际研究团队通过遥远超新星的观测，提出宇宙正在加速膨胀的证据。这一发现改变了对宇宙演化的认识，也推动了暗能量研究。",
+      "text": "两个团队比较遥远 Ia 型超新星的亮度与红移，发现它们比减速膨胀模型预期的更暗。这支持宇宙近代处在加速膨胀阶段，并推动了对暗能量的研究。",
       "image": "deepfield",
       "source": "https://science.nasa.gov/dark-energy/"
+    },
+    {
+      "id": "iss",
+      "year": "1998",
+      "date": "1998—2000年",
+      "title": "国际空间站启动建造与持续驻留",
+      "who": "俄罗斯、美国、日本、加拿大及欧洲伙伴",
+      "kind": "国际空间站",
+      "text": "1998 年曙光号升空，开始在轨组装。2000 年首批长期乘组进驻，跨国合作由对接试验走向常驻实验室。",
+      "source": "https://www.nasa.gov/history/space-station-20th-historical-origins-of-iss/"
+    },
+    {
+      "id": "shenzhou5",
+      "year": "2003",
+      "date": "2003-10-15",
+      "title": "神舟五号实现中国首次载人航天飞行",
+      "who": "中国 · 杨利伟 / 神舟五号",
+      "kind": "载人航天",
+      "text": "杨利伟乘神舟五号进入地球轨道并返回，中国由此实现本国首次载人太空飞行。",
+      "source": "https://www.cnsa.gov.cn/n6758968/n6758972/c6798458/content.html"
     },
     {
       "id": "huygens",
@@ -119,9 +739,19 @@
       "title": "惠更斯，抵达泰坦表面",
       "who": "ESA · NASA · 意大利航天局",
       "kind": "行星探测",
-      "text": "惠更斯探测器穿过泰坦浓厚的大气，在表面着陆并传回数据。卡西尼—惠更斯任务将国际合作带到了外太阳系的卫星世界。",
+      "text": "欧洲空间局的惠更斯探测器穿过泰坦大气，拍到地表并传回气象与成分数据，随后着陆。这是人类探测器第一次在外太阳系的天体表面着陆。",
       "image": "nasa-pia01533",
       "source": "https://www.esa.int/Science_Exploration/Space_Science/Cassini-Huygens/Europe_reaches_new_frontier_Huygens_lands_on_Titan"
+    },
+    {
+      "id": "chandrayaan-water",
+      "year": "2009",
+      "date": "2009年9月（发表）",
+      "title": "月船一号数据揭示月表水与羟基信号",
+      "who": "印度空间研究组织 · NASA / 月球矿物制图仪",
+      "kind": "月球科学",
+      "text": "月船一号携带的成像光谱仪测出了与水及羟基相关的吸收特征，推动了对月表水的来源、分布与变化的研究。",
+      "source": "https://science.nasa.gov/mission/chandrayaan-1/"
     },
     {
       "id": "hayabusa",
@@ -130,9 +760,39 @@
       "title": "把小行星的物质带回地球",
       "who": "日本 · JAXA / 隼鸟号",
       "kind": "样本返回",
-      "text": "隼鸟号返回舱回到地球，带回丝川小行星的微粒。小行星研究由远距离影像，进一步走向对返回样本的实验室分析。",
+      "text": "隼鸟号返回舱在澳大利亚伍默拉回收，后来确认舱内含有丝川小行星颗粒。这是首次把小行星物质带回地球，研究人员可以直接把样本与陨石比对。",
       "image": "nasa-pia00333",
       "source": "https://global.jaxa.jp/activity/pr/jaxas/pdf/jaxatoday002.pdf"
+    },
+    {
+      "id": "voyager-interstellar",
+      "year": "2012",
+      "date": "2012-08-25",
+      "title": "旅行者一号越过日球层顶",
+      "who": "美国 · NASA / 喷气推进实验室",
+      "kind": "星际空间",
+      "text": "粒子与等离子体等观测表明，旅行者一号穿过太阳风主导区域与星际介质的边界。这是探测器首次直接测量日球层外的星际环境。",
+      "source": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
+    },
+    {
+      "id": "alma",
+      "year": "2013",
+      "date": "2013-03-13",
+      "title": "智利阿塔卡马的 ALMA 正式启用",
+      "who": "智利 · ESO、北美与东亚合作伙伴",
+      "kind": "毫米波天文",
+      "text": "分布在高海拔干旱地区的天线协同观测，让研究者能研究可见光难以穿透的寒冷气体与尘埃，并分辨恒星和行星诞生的结构。",
+      "source": "https://www.eso.org/public/news/eso1312/"
+    },
+    {
+      "id": "mangalyaan",
+      "year": "2014",
+      "date": "2014-09-24",
+      "title": "印度首枚火星探测器进入火星轨道",
+      "who": "印度空间研究组织 · 火星轨道器任务",
+      "kind": "火星轨道探测",
+      "text": "印度火星轨道器成功完成减速入轨，验证了该国的行星际导航与远距离运行能力，随后开展火星表面与大气观测。",
+      "source": "https://new1.isro.gov.in/ISRO_EN/FAQ_MarsOrbiterMission.html"
     },
     {
       "id": "philae",
@@ -146,9 +806,19 @@
       "source": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Touchdown%21_Rosetta_s_Philae_probe_lands_on_comet"
     },
     {
+      "id": "new-horizons",
+      "year": "2015",
+      "date": "2015-07-14",
+      "title": "新视野号首次飞越冥王星",
+      "who": "美国 · NASA / 约翰斯·霍普金斯应用物理实验室等",
+      "kind": "柯伊伯带",
+      "text": "新视野号传回冥王星与冥卫一的近距离图像，发现广阔的氮冰平原和复杂地形，为认识柯伊伯带天体的地质活动提供了资料。",
+      "source": "https://science.nasa.gov/missions/new-horizons/10-things-looking-back-at-pluto/"
+    },
+    {
       "id": "gw150914",
       "year": "2015",
-      "date": "2015-09-14",
+      "date": "2015-09-14（探测） · 2016-02-11（公布）",
       "title": "第一次，直接探测到引力波",
       "who": "LIGO · 国际科学合作",
       "kind": "引力与时空",
@@ -157,15 +827,35 @@
       "source": "https://www.ligo.caltech.edu/WA/news/ligo20160211"
     },
     {
+      "id": "gaia-dr1",
+      "year": "2016",
+      "date": "2016-09-14",
+      "title": "盖亚公布首批十亿级恒星数据",
+      "who": "欧洲空间局 · 盖亚数据处理联盟",
+      "kind": "银河系测绘",
+      "text": "第一批数据发布给出逾十亿颗恒星的位置和亮度，包括较小样本的视差和自行。持续改进的星表使研究者可以研究银河系的结构与演化。",
+      "source": "https://www.esa.int/media/first-data-from-esa-s-gaia-mission"
+    },
+    {
       "id": "gw170817",
       "year": "2017",
       "date": "2017-08-17",
-      "title": "引力波与光，同时讲述一次并合",
+      "title": "引力波与光共同揭示中子星并合",
       "who": "LIGO–Virgo · 世界多座天文台",
       "kind": "多信使天文",
-      "text": "GW170817 的引力波信号与随后观测到的电磁辐射相互对应。全球多台望远镜追踪同一事件，多信使天文学迎来关键进展。",
+      "text": "LIGO 与 Virgo 联合探测双中子星并合产生的引力波。伽马射线和随后多波段观测指向同一事件，让同一场宇宙爆发可以同时用时空波动和光来研究。",
       "image": "nasa-pia11435",
       "source": "https://www.eso.org/public/news/eso1733/"
+    },
+    {
+      "id": "meerkat",
+      "year": "2018",
+      "date": "2018-07-13",
+      "title": "南非 MeerKAT 射电望远镜启用",
+      "who": "南非射电天文台 · 北开普省",
+      "kind": "射电天文",
+      "text": "64 面天线组成的阵列在启用时展示了银河系中心的射电图像。它由南非主导建设，也是平方千米阵列计划的重要前导设施。",
+      "source": "https://www.sarao.ac.za/news/meerkat-radio-telescope-inaugurated-in-south-africa-reveals-clearest-view-yet-of-centre-of-the-milky-way/"
     },
     {
       "id": "change4",
@@ -174,7 +864,7 @@
       "title": "首次软着陆月球背面",
       "who": "中国 · 嫦娥四号 / 鹊桥中继星",
       "kind": "探月突破",
-      "text": "嫦娥四号在月球背面成功软着陆，并通过鹊桥中继星传回影像。地月中继通信让月球背面的就位探测得以实现。",
+      "text": "着陆器与玉兔二号在月背冯·卡门撞击坑成功着陆。由于月球本体挡住地球方向的无线电视线，任务借助鹊桥中继星把月面数据传回地面。",
       "image": "nasa-pia15515",
       "source": "https://www.cnsa.gov.cn/n6759533/c6805034/content.html"
     },
@@ -182,12 +872,22 @@
       "id": "eht-m87",
       "year": "2019",
       "date": "2019-04-10",
-      "title": "全球望远镜，拼出黑洞阴影",
-      "who": "事件视界望远镜 EHT · 国际合作",
+      "title": "全球射电望远镜联手公布首张黑洞影像",
+      "who": "事件视界望远镜 EHT · 含智利、墨西哥、欧洲、夏威夷和南极等观测站",
       "kind": "黑洞成像",
-      "text": "EHT 协作组发布 M87* 的黑洞阴影影像。来自世界多地的射电望远镜共同组成虚拟的地球尺度望远镜，影像由观测数据重建。",
+      "text": "位于世界多地的毫米波射电望远镜同步观测，由协作组将数据重建为 M87 星系中心的亮环与暗区。这是首次直接成像黑洞周围的事件视界尺度结构。",
       "image": "m87-eht",
       "source": "https://www.eso.org/public/news/eso1907/"
+    },
+    {
+      "id": "fast",
+      "year": "2020",
+      "date": "2020-01-11",
+      "title": "中国 FAST 通过国家验收",
+      "who": "中国科学院国家天文台 · 贵州",
+      "kind": "射电天文",
+      "text": "500 米口径球面射电望远镜通过验收并进入正式运行阶段，利用高灵敏度接收信号，开展脉冲星和中性氢等观测。",
+      "source": "https://www.nao.cas.cn/news/gd/202001/t20200111_6407308.html"
     },
     {
       "id": "hayabusa2",
@@ -199,6 +899,36 @@
       "text": "隼鸟 2 号返回舱携带龙宫小行星样本抵达地球。返回样本为研究小天体的物质组成及太阳系早期历史提供了直接材料。",
       "image": "nasa-pia02477",
       "source": "https://www.hayabusa2.jaxa.jp/en/topics/20201206_fireball/"
+    },
+    {
+      "id": "change5",
+      "year": "2020",
+      "date": "2020-12-17（北京时间）",
+      "title": "嫦娥五号把月球正面的新样本带回地球",
+      "who": "中国 · 嫦娥五号",
+      "kind": "月球采样",
+      "text": "嫦娥五号在月球正面风暴洋区域采样并完成返回，带回数十年来首批新采集的月球样品，为定年和研究较晚期月球火山活动提供材料。",
+      "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c6810872/content.html"
+    },
+    {
+      "id": "hope-mars",
+      "year": "2021",
+      "date": "2021-02-09",
+      "title": "阿联酋希望号进入火星轨道",
+      "who": "阿联酋航天局 / 穆罕默德·本·拉希德航天中心 · 国际伙伴",
+      "kind": "火星大气",
+      "text": "希望号进入火星轨道，展开对不同地方时下的大气观测，研究火星低层天气与高层氢、氧逸散的联系。",
+      "source": "https://space.gov.ae/en/about-us/initiatives-and-projects/initiatives-and-projects-listing/emirates-mars-mission-hope-probe"
+    },
+    {
+      "id": "ingenuity",
+      "year": "2021",
+      "date": "2021-04-19",
+      "title": "机智号在火星完成首次动力飞行",
+      "who": "美国 · NASA / 喷气推进实验室",
+      "kind": "行星飞行",
+      "text": "机智号直升机在火星稀薄的大气中自主起飞、悬停并降落，首次证明了动力飞行器能在地球以外的天体大气中受控飞行。",
+      "source": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
     },
     {
       "id": "tianwen",
@@ -218,7 +948,7 @@
       "title": "看见银河系中心黑洞的阴影",
       "who": "事件视界望远镜 EHT · 国际合作",
       "kind": "黑洞成像",
-      "text": "EHT 发布人马座 A* 的首张影像。对银河系中心恒星轨道的研究，与事件视界尺度的射电观测，开始在同一对象上相互补充。",
+      "text": "EHT 公布银河系中心黑洞人马座 A* 的图像。这个目标周围的气体在拍摄期间就会明显变化，研究团队通过多种成像方法检验可重复出现的环状结构。",
       "image": "sgra-eht",
       "source": "https://www.eso.org/public/news/eso2208-eht-mw/"
     },
@@ -226,18 +956,48 @@
       "id": "webb",
       "year": "2022",
       "date": "2022-07-12",
-      "title": "韦伯，展开红外宇宙的细节",
+      "title": "韦伯望远镜发布首批科学影像与光谱",
       "who": "NASA · ESA · 加拿大航天局",
       "kind": "空间天文",
-      "text": "韦伯首批完整彩色科学影像与光谱公开展示，涵盖深场、恒星形成区等对象。这个国际合作任务把红外观测带向新的深度与精度。",
+      "text": "韦伯公开星系深场、恒星形成区及其他目标的首批科学影像与光谱。其红外观测能穿过一部分尘埃，并看到因宇宙膨胀而被移到红外波段的遥远星系光线。",
       "image": "cliffs",
       "source": "https://science.nasa.gov/missions/webb/nasas-webb-reveals-cosmic-cliffs-glittering-landscape-of-star-birth/"
+    },
+    {
+      "id": "dart",
+      "year": "2022",
+      "date": "2022-09-26（撞击）",
+      "title": "DART 撞击试验改变小行星卫星轨道",
+      "who": "NASA · 约翰斯·霍普金斯应用物理实验室 / 国际观测",
+      "kind": "行星防御",
+      "text": "飞船撞上小行星狄狄莫斯的卫星迪莫弗斯，后续观测确认双星系统里卫星的绕行周期缩短。这是利用动能撞击改变天体轨道的实际验证。",
+      "source": "https://science.nasa.gov/mission/dart/"
+    },
+    {
+      "id": "tiangong",
+      "year": "2022",
+      "date": "2022-11-03",
+      "title": "天宫空间站完成三舱基本构型",
+      "who": "中国载人航天工程 · 天和、问天与梦天",
+      "kind": "空间站",
+      "text": "梦天实验舱完成转位，空间站形成以天和核心舱为中轴、两个实验舱分居两侧的基本构型，扩大在轨科研与乘员长期驻留的能力。",
+      "source": "https://www.cmse.gov.cn/fxrw/mengtian/mtjj/202211/t20221106_51285.html"
+    },
+    {
+      "id": "danuri",
+      "year": "2022",
+      "date": "2022年12月",
+      "title": "韩国 Danuri 进入月球观测轨道",
+      "who": "韩国航空宇宙研究院 · NASA 等合作伙伴",
+      "kind": "月球轨道探测",
+      "text": "韩国首个探月器 Danuri 抵达月球，携带多种观测仪器。其搭载的 ShadowCam 可拍摄月球极区永久阴影处的地形，为后续探测提供资料。",
+      "source": "https://www.kari.re.kr//eng/contents/193"
     },
     {
       "id": "chandrayaan",
       "year": "2023",
       "date": "2023-08-23",
-      "title": "月船三号，着陆月球南极附近",
+      "title": "印度月船三号在月球南部高纬地区着陆",
       "who": "印度 · ISRO / 月船三号",
       "kind": "探月突破",
       "text": "月船三号着陆器在月球南部高纬地区成功软着陆，巡视器随后驶出开展探测。这里是南极附近区域，并非月球南极点。",
@@ -245,13 +1005,33 @@
       "source": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html"
     },
     {
+      "id": "osiris-rex",
+      "year": "2023",
+      "date": "2023-09-24",
+      "title": "OSIRIS-REx 带回贝努小行星样本",
+      "who": "美国 · NASA / 亚利桑那大学等",
+      "kind": "小行星采样",
+      "text": "返回舱降落在犹他州，将近地小行星贝努的样本交给实验室。研究者得以直接检测早期太阳系小天体保留的矿物与有机物。",
+      "source": "https://science.nasa.gov/mission/osiris-rex/"
+    },
+    {
+      "id": "slim",
+      "year": "2024",
+      "date": "2024-01-20（日本时间）",
+      "title": "日本 SLIM 验证月面高精度着陆",
+      "who": "日本 · JAXA",
+      "kind": "月球着陆",
+      "text": "SLIM 在月面落下并验证百米级精确着陆技术，使探测任务能更接近特定科学目标。实际着陆姿态影响了早期太阳能供电。",
+      "source": "https://global.jaxa.jp/press/2024/01/file/jaxa_doc01_20240125_e.pdf"
+    },
+    {
       "id": "change6",
       "year": "2024",
       "date": "2024-06-25",
-      "title": "首次，带回月球背面的样本",
+      "title": "嫦娥六号实现首次月球背面采样返回",
       "who": "中国 · 嫦娥六号 / 国际搭载合作",
       "kind": "样本返回",
-      "text": "嫦娥六号返回器携带月球背面样本回到地球，实现世界首次月背采样返回。对月球的研究，获得了来自背面的直接样本。",
+      "text": "嫦娥六号在月球背面的南极—艾特肯盆地区域采样，经月球轨道交会和地球再入，把样品带回。这是人类首次取得来自月背的可直接在实验室研究的样品。",
       "image": "nasa-pia00001",
       "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n10518102/n10518147/c10565180/content.html"
     },
