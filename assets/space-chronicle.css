@@ -5,9 +5,27 @@
 .chronicle-heading p:last-child { font-size:.85rem; line-height:1.8; margin:.4rem 0 0; color:#536158 }
 .chronicle-period { white-space:nowrap; color:#405e54; text-align:right; font:1.1rem/1.5 Georgia,serif }
 .chronicle-period small { display:block; font:.7rem/1.7 sans-serif }
-.chronicle-stage { isolation:isolate; position:relative; overflow:hidden; color:#edf4f5; border:1px solid #344454; border-radius:8px; background:#09131f }
-.chronicle-nebula { position:absolute; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 20% 30%,#11445555,transparent 52%),radial-gradient(ellipse at 81% 19%,#45336866,transparent 48%),#09131f }
-.chronicle-nebula::before { content:""; position:absolute; inset:0; opacity:.29; background:url('physics/deepfield-small.webp') center 39%/cover; mask-image:linear-gradient(#000 4%,#000b 43%,transparent 84%) }
+.chronicle-stage {
+  isolation:isolate; position:relative; overflow:hidden; color:#edf4f5;
+  border:1px solid #405465; border-radius:12px; background:#080f1b;
+  box-shadow:0 14px 34px #04101c38;
+}
+.chronicle-nebula {
+  position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(115deg,#08141e,#0b1424 54%,#21192a);
+}
+.chronicle-nebula::before,.chronicle-nebula::after { content:""; position:absolute; inset:0 }
+.chronicle-nebula::before {
+  background:url('physics/tarantula-small.webp') 65% 44% / cover no-repeat;
+  opacity:.68;
+  mask-image:linear-gradient(#000 8%,#000 48%,transparent 84%);
+}
+.chronicle-nebula::after {
+  background:
+    radial-gradient(ellipse at 17% 22%,#18536444,transparent 50%),
+    radial-gradient(ellipse at 76% 32%,transparent 12%,#070f1a60 66%,#070e19ba 100%),
+    linear-gradient(180deg,#071321b0 0%,#0a142591 25%,#070f1bd1 66%,#080f1b 100%);
+}
 .chronicle-scene { position:relative; height:clamp(19rem,30vw,25rem); touch-action:pan-y pinch-zoom; cursor:grab; user-select:none }
 .chronicle-scene.is-dragging,.chronicle-scene.is-dragging * { cursor:grabbing }
 .chronicle-scene canvas,.chronicle-nodes { position:absolute; inset:0; width:100%; height:100%; pointer-events:none }
@@ -31,7 +49,7 @@
 .chronicle-node small { font:.72rem/1.5 sans-serif; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; color:#cad8e1 }
 .chronicle-node.is-active b { color:#fff; font-weight:700; font-size:1.18rem }
 .chronicle-node.is-active small,.chronicle-node:hover small { color:#fff }
-.chronicle-navigation { display:flex; align-items:center; justify-content:flex-end; gap:.7rem; padding:.35rem 1.5rem; border-bottom:1px solid #bdd9eb2b; color:#bcd0da; font:.74rem/1.4 Consolas,monospace }
+.chronicle-navigation { display:flex; align-items:center; justify-content:flex-end; gap:.7rem; padding:.35rem 1.5rem; border-bottom:1px solid #bdd9eb2b; color:#bcd0da; font:.74rem/1.4 Consolas,monospace; background:#0a1322a6 }
 .chronicle-arrow { width:44px; height:44px; border:1px solid #a8c9d45c; border-radius:50%; background:#0e1c2b; color:#e0edf3; font-size:1.05rem; cursor:pointer }
 .chronicle-arrow:disabled { opacity:.27; cursor:default }
 .chronicle-arrow:hover:enabled { background:#24374a }
@@ -43,7 +61,7 @@
   font:.76rem/1.35 sans-serif; cursor:pointer; color-scheme:dark
 }
 .chronicle-years,.chronicle-progress {display:none}
-.chronicle-stories { padding:1.35rem clamp(1.25rem,3vw,2.75rem) 1.6rem; background:#0a1520d9 }
+.chronicle-stories { padding:1.35rem clamp(1.25rem,3vw,2.75rem) 1.6rem; background:linear-gradient(108deg,#111f31eb,#0a1420f2 66%); }
 .chronicle-story { display:grid; grid-template-columns:minmax(5rem,auto) minmax(0,1fr); column-gap:1.7rem; align-items:start }
 .chronicle-story[hidden] { display:none }
 .chronicle-story.has-photo { grid-template-columns:minmax(5rem,auto) minmax(0,1fr) 7.8rem }
@@ -67,6 +85,10 @@
   .chronicle-heading { flex-wrap:wrap; gap:.5rem }
   .chronicle-period { display:flex; gap:.7rem; align-items:baseline; font-size:.95rem }
   .chronicle-scene { height:17rem }
+  .chronicle-nebula::before {
+    height:17rem; background-position:61% 35%; opacity:.64;
+    mask-image:linear-gradient(#000 8%,#000 54%,transparent 100%);
+  }
   .chronicle-stage-label { inset:1rem 1rem auto; font-size:.65rem }
   .chronicle-navigation { padding:.2rem .75rem }
   .chronicle-era-picker { max-width:50%; font-size:.71rem }
