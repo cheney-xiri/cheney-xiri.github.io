@@ -113,7 +113,6 @@
       node.style.setProperty('--star-color', ink(p.x/width,1));
       node.style.setProperty('--depth-light', near ? 1 : Math.min(.96,.48 + (p.depth-.78)*1.05));
       node.style.zIndex = near ? 3 : 1;
-      node.classList.toggle('is-active',near);
       node.classList.toggle('label-above',i%2===1);
       // Tuck labels inward when the star is at a screen edge.
       const half = labelWidth/2;
@@ -125,10 +124,12 @@
     if (selected >= 0) {
       stories[selected].hidden = true;
       nodes[selected].removeAttribute('aria-current');
+      nodes[selected].classList.remove('is-active');
     }
     selected = index;
     stories[index].hidden = false;
     nodes[index].setAttribute('aria-current','step');
+    nodes[index].classList.add('is-active');
     counter.textContent = String(index+1).padStart(2,'0')+' / '+nodes.length;
     counter.setAttribute('aria-label', nodes[index].getAttribute('aria-label')+'，第 '+(index+1)+' 个，共 '+nodes.length+' 个');
     const era = eras.findLast(item => item.start <= index);
@@ -160,6 +161,7 @@
   nodes.forEach((node,i) => {
     stories[i].hidden = true;
     node.removeAttribute('aria-current');
+    node.classList.remove('is-active');
     node.querySelector('small').textContent = stories[i].querySelector('h3').textContent;
     node.removeAttribute('title');
     node.tabIndex=-1;
