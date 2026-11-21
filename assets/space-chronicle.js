@@ -1,137 +1,196 @@
 (function () {
   'use strict';
-  const section = document.getElementById('space-timeline');
-  if (!section) return;
-  const stories = [...section.querySelectorAll('[data-chronicle-story]')];
-  if (!stories.length) return;
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const periods = [
-    {end:1979, title:'从观测宇宙到踏上月球'},
-    {end:2009, title:'望远镜与行星探测器'},
-    {end:2019, title:'引力波、月背与黑洞'},
-    {end:Infinity, title:'深空观测与样本返回'}
-  ];
-  const layout = document.createElement('div');
-  layout.className = 'history-layout';
-  const tabs = document.createElement('div');
-  tabs.className = 'history-periods';
-  tabs.setAttribute('role','tablist');
-  tabs.setAttribute('aria-label','探索时期');
-  const pages = document.createElement('div');
-  pages.className = 'history-pages';
-  const buttons = [], panels = [];
-  let active = 0, requested = null, timer, resizeFrame;
-  const byPeriod = periods.map(() => []);
-  for (const story of stories) {
-    const year = Number(story.querySelector('.chronicle-year>span').textContent);
-    byPeriod[periods.findIndex(period => year <= period.end)].push(story);
-  }
+  const scene = document.getElementById('chronicle-scene');
+  if (!scene) return;
+  const section = scene.closest('section');
+  const nodes = Array.from(scene.querySelectorAll('[data-chronicle-index]'));
+  const stories = Array.from(section.querySelectorAll('[data-chronicle-story]'));
+  if (!nodes.length || nodes.length !== stories.length) return;
 
-  function makeEvent(story, open) {
-    const date = story.querySelector('.chronicle-year>span').textContent;
-    const title = story.querySelector('h3').textContent;
-    const item = document.createElement('li');
-    const entry = document.createElement('details');
-    entry.open = open;
-    const summary = document.createElement('summary');
-    const year = document.createElement('span');
-    year.className = 'history-year';
-    year.textContent = date;
-    const heading = document.createElement('strong');
-    heading.textContent = title;
-    const mark = document.createElement('i');
-    mark.setAttribute('aria-hidden','true');
-    summary.append(year, heading, mark);
-    const body = document.createElement('div');
-    body.className = 'history-detail';
-    const copy = story.querySelector('.chronicle-copy');
-    copy.querySelector('h3').remove();
-    body.append(copy);
-    const photo = story.querySelector('.chronicle-photo');
-    if (photo) body.append(photo);
-    entry.append(summary, body);
-    item.append(entry);
-    return item;
-  }
-  byPeriod.forEach((group, i) => {
-    if (!group.length) return;
-    const index = panels.length;
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.id = 'history-tab-' + i;
-    button.setAttribute('role','tab');
-    const range = document.createElement('span');
-    const eventYear = record => record.querySelector('.chronicle-year>span').textContent;
-    range.textContent = eventYear(group[0]) + '—' + eventYear(group[group.length - 1]);
-    const name = document.createElement('strong');
-    name.textContent = periods[i].title;
-    button.append(range,name);
-    const panel = document.createElement('div');
-    panel.className = 'history-period';
-    panel.id = 'history-period-' + i;
-    panel.setAttribute('role','tabpanel');
-    panel.setAttribute('aria-labelledby',button.id);
-    button.setAttribute('aria-controls',panel.id);
-    const list = document.createElement('ol');
-    list.className = 'history-events';
-    group.forEach((story, j) => list.append(makeEvent(story, j === 0)));
-    panel.append(list);
-    panels.push(panel);
-    buttons.push(button);
-    button.addEventListener('click', () => select(index));
-    tabs.append(button);
-    pages.append(panel);
-  });
-  layout.append(tabs,pages);
-  section.querySelector('.chronicle-stage').replaceWith(layout);
-  section.querySelector('.chronicle-navigation').remove();
+  const canvas = scene.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+  const nav = section.querySelector('.chronicle-navigation');
+  const prev = nav.querySelector('[data-chronicle-step="-1"]');
+  const next = nav.querySelector('[data-chronicle-step="1"]');
+  const counter = section.querySelector('#chronicle-position');
+  nav.querySelector('.chronicle-years').remove();
+  nav.insertBefore(counter, next);
+  scene.after(nav);
   section.querySelector('.chronicle-progress').remove();
+  scene.removeAttribute('title');
+  scene.setAttribute('aria-label','探索星轨，可左右拖动，或用方向键切换探索事件');
 
-  function fit() {
-    pages.style.height = panels[active].offsetHeight + 'px';
+  const last = nodes.length - 1;
+  const clamp = value => Math.max(0, Math.min(last, value));
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let width = 1, height = 1, step = 1, labelWidth = 110, focus = 0, selected = -1;
+  let pointer, animation, frameId = 0, suppressClick = false;
+  const colors = [[110,222,224],[110,177,247],[166,148,240],[239,162,194],[255,204,143]];
+  function ink(u, opacity) {
+    const t = Math.max(0, Math.min(.9999, u)) * (colors.length - 1);
+    const a = colors[Math.floor(t)], b = colors[Math.ceil(t)];
+    const channels = a.map((c,i) => Math.round(c + (b[i]-c) * (t % 1)));
+    return 'rgba(' + channels.join(',') + ',' + opacity + ')';
   }
-  function show(index) {
-    const moveFocus = panels[active].contains(document.activeElement);
-    active = index;
-    buttons.forEach((button,i) => {
-      button.setAttribute('aria-selected',String(i === index));
-      button.tabIndex = i === index ? 0 : -1;
-      panels[i].inert = i !== index;
-    });
-    if (moveFocus) buttons[index].focus({preventScroll:true});
-    const button = buttons[index];
-    if (tabs.scrollWidth > tabs.clientWidth) {
-      tabs.scrollTo({left:button.offsetLeft - (tabs.clientWidth - button.offsetWidth)/2, behavior:'instant'});
+  // Perspective projection shared by the luminous strands and their event stars.
+  function project(t, strand = 0) {
+    const angle = t * .86 - .7;
+    const twist = angle * .82 + .55;
+    const z = .9 * Math.cos(angle) + strand * .18 * Math.cos(twist);
+    const depth = 4.6 / (4.6 - z);
+    const y = Math.sin(angle) + .19 * Math.sin(t * .48 + .65) + strand * .17 * Math.sin(twist);
+    const anchor = .5 - .23*Math.max(0,1-focus/3) + .23*Math.max(0,1-(last-focus)/3);
+    return { x:width * anchor + (t - focus) * step * depth,
+      y:height * (.49 - .153 * y * depth + .024 * z), depth };
+  }
+  function drawOrbit() {
+    ctx.clearRect(0,0,width,height);
+    const span = width / step * .95 + 2;
+    const start = focus - span, end = focus + span;
+    const slices = Math.ceil(width / 4);
+    const palette = ctx.createLinearGradient(0,0,width,0);
+    for (let i=0; i<=48; i++) {
+      const p=project(start+(end-start)*i/48);
+      const u=Math.max(0,Math.min(1,p.x/width));
+      palette.addColorStop(u,ink(u, Math.min(1,.36+1.5*(p.depth-.8))));
     }
-    fit();
+    ctx.strokeStyle = palette;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    function strand(offset, thickness, alpha) {
+      ctx.beginPath();
+      for (let i=0; i<=slices; i++) {
+        const p = project(start + (end-start)*i/slices, offset);
+        if (i) ctx.lineTo(p.x,p.y); else ctx.moveTo(p.x,p.y);
+      }
+      ctx.lineWidth = thickness;
+      ctx.globalAlpha = alpha;
+      ctx.stroke();
+    }
+    // A translucent, twisting band with fine illuminated edges. Width and
+    // foreshortening come from the projected cross-section, not a flat stroke.
+    strand(0,17,.055);
+    for (let i=-8; i<=8; i++) strand(i/8,1.25,Math.abs(i)===8?.92:.43);
+    strand(0,1.65,.95);
+    ctx.globalAlpha=1;
   }
-  function select(index) {
-    requested = index;
-    show(index);
-    pages.scrollTo({left:index * pages.clientWidth,behavior:reduce.matches ? 'instant' : 'smooth'});
+  function paint() {
+    if (ctx) drawOrbit();
+    const current = pointer?.dragged ? Math.round(focus) : selected;
+    nodes.forEach((node,i) => {
+      const p = project(i);
+      const shown = p.x > 18 && p.x < width-18;
+      node.hidden = !shown;
+      if (!shown) return;
+      const near = i === current;
+      node.style.left = p.x + 'px';
+      node.style.top = p.y + 'px';
+      node.style.setProperty('--diameter', (near ? 9 : 5.5*p.depth) + 'px');
+      node.style.setProperty('--star-color', ink(p.x/width,1));
+      node.style.setProperty('--depth-light', near ? 1 : Math.min(.96,.48 + (p.depth-.78)*1.05));
+      node.style.zIndex = near ? 3 : 1;
+      node.classList.toggle('is-active',near);
+      node.classList.toggle('label-above',i%2===1);
+      // Tuck labels inward when the star is at a screen edge.
+      const half = labelWidth/2;
+      node.style.setProperty('--nudge', (Math.max(half+5,Math.min(width-half-5,p.x))-p.x) + 'px');
+    });
   }
-  function settled() {
-    clearTimeout(timer);
-    const index = Math.min(panels.length-1, Math.max(0, Math.round(pages.scrollLeft / pages.clientWidth)));
-    if (requested !== null && Math.abs(pages.scrollLeft - requested * pages.clientWidth) > 2) return;
-    requested = null;
-    if (index !== active) show(index);
+  function commit(index) {
+    if (selected === index) return;
+    if (selected >= 0) {
+      stories[selected].hidden = true;
+      nodes[selected].removeAttribute('aria-current');
+    }
+    selected = index;
+    stories[index].hidden = false;
+    nodes[index].setAttribute('aria-current','step');
+    counter.textContent = String(index+1).padStart(2,'0')+' / '+nodes.length;
+    prev.disabled = index===0;
+    next.disabled = index===last;
   }
-  pages.addEventListener('pointerdown', () => { requested = null; }, {passive:true});
-  pages.addEventListener('wheel', () => { requested = null; }, {passive:true});
-  pages.addEventListener('scroll', () => { clearTimeout(timer); timer = setTimeout(settled,150); }, {passive:true});
-  pages.addEventListener('scrollend',settled);
-  tabs.addEventListener('keydown', event => {
-    const target = {ArrowLeft:active-1,ArrowRight:active+1,Home:0,End:panels.length-1}[event.key];
-    if (target === undefined) return;
-    event.preventDefault();
-    select(Math.max(0, Math.min(panels.length-1, target)));
-    buttons[active].focus({preventScroll:true});
+  function frame(now) {
+    frameId = 0;
+    if (animation) {
+      const t = Math.min(1,(now-animation.start)/animation.duration);
+      focus = animation.to + (animation.from-animation.to)*Math.pow(1-t,3);
+      if (t===1) animation=null;
+    }
+    paint();
+    if (animation) queue();
+  }
+  function queue() { if (!frameId) frameId=requestAnimationFrame(frame); }
+  function select(value) {
+    const index = clamp(Math.round(value));
+    commit(index);
+    if (!reduced.matches && Math.abs(index-focus)>.01) {
+      animation = {from:focus,to:index,start:performance.now(),duration:Math.min(520,200+Math.abs(index-focus)*60)};
+    } else { animation=null; focus=index; }
+    queue();
+  }
+  nodes.forEach((node,i) => {
+    node.querySelector('small').textContent = stories[i].querySelector('h3').textContent;
+    node.removeAttribute('title');
+    node.tabIndex=-1;
+    node.addEventListener('click',event=>{ if (!suppressClick || event.detail===0) select(i); });
   });
-  show(0);
-  const sizes = new ResizeObserver(() => {
-    cancelAnimationFrame(resizeFrame);
-    resizeFrame = requestAnimationFrame(fit);
+  prev.addEventListener('click',()=>select(selected-1));
+  next.addEventListener('click',()=>select(selected+1));
+  scene.addEventListener('keydown',event=>{
+    const target={ArrowLeft:selected-1,ArrowRight:selected+1,Home:0,End:last}[event.key];
+    if (target!==undefined) { event.preventDefault(); select(target); }
   });
-  panels.forEach(panel => sizes.observe(panel));
+  scene.addEventListener('pointerdown',event=>{
+    if (!event.isPrimary || event.button!==0) return;
+    suppressClick=false;
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY,from:focus,lastX:event.clientX,time:event.timeStamp,speed:0,dragged:false};
+  });
+  scene.addEventListener('pointermove',event=>{
+    if (!pointer || pointer.id!==event.pointerId) return;
+    const dx=event.clientX-pointer.x, dy=event.clientY-pointer.y;
+    if (!pointer.dragged) {
+      if (Math.abs(dy)>8 && Math.abs(dy)>Math.abs(dx)) { pointer=null; return; }
+      if (Math.abs(dx)<6) return;
+      pointer.dragged=true;
+      animation=null;
+      scene.setPointerCapture(event.pointerId);
+      scene.classList.add('is-dragging');
+    }
+    const dt=Math.max(1,event.timeStamp-pointer.time);
+    pointer.speed=.4*pointer.speed+.6*(pointer.lastX-event.clientX)/dt;
+    pointer.time=event.timeStamp; pointer.lastX=event.clientX;
+    focus=clamp(pointer.from-dx/step);
+    queue();
+  });
+  function release(event) {
+    if (!pointer || pointer.id!==event.pointerId) return;
+    const gesture=pointer;
+    pointer=null;
+    if (!gesture.dragged) return;
+    scene.classList.remove('is-dragging');
+    if (scene.hasPointerCapture(event.pointerId)) scene.releasePointerCapture(event.pointerId);
+    suppressClick=true;
+    const coast=!reduced.matches && event.type==='pointerup' && event.timeStamp-gesture.time<80
+      ? Math.max(-1,Math.min(1,gesture.speed*85/step)) : 0;
+    select(focus + coast);
+  }
+  window.addEventListener('pointerup',release);
+  scene.addEventListener('pointercancel',release);
+  scene.addEventListener('lostpointercapture',release);
+  function resize() {
+    width=scene.clientWidth; height=scene.clientHeight;
+    if (!width || !height) return;
+    step = Math.min(174, Math.max(110,width/6.6));
+    labelWidth = Math.min(138,Math.max(95,width/9));
+    scene.style.setProperty('--label-width',labelWidth+'px');
+    const dpr=Math.min(window.devicePixelRatio||1,2);
+    canvas.width=Math.round(width*dpr); canvas.height=Math.round(height*dpr);
+    if(ctx) ctx.setTransform(dpr,0,0,dpr,0,0);
+    queue();
+  }
+  reduced.addEventListener('change',()=>{if(reduced.matches)select(selected)});
+  scene.dataset.renderer='orbital-ribbon';
+  commit(0);
+  resize();
+  new ResizeObserver(resize).observe(scene);
 }());
