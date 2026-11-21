@@ -13,6 +13,7 @@
   const prev = nav.querySelector('[data-chronicle-step="-1"]');
   const next = nav.querySelector('[data-chronicle-step="1"]');
   const counter = section.querySelector('#chronicle-position');
+  const directionHint = scene.querySelector('.chronicle-stage-label span:last-child');
   nav.querySelector('.chronicle-years').remove();
   nav.insertBefore(counter, next);
   scene.after(nav);
@@ -43,7 +44,7 @@
   eraPicker.addEventListener('change', () => select(Number(eraPicker.value)));
   nav.prepend(eraPicker);
   let width = 1, height = 1, step = 1, labelWidth = 110, focus = 0, selected = -1;
-  let pointer, animation, frameId = 0, suppressClick = false, wheelTimer;
+  let pointer, animation, frameId = 0, suppressClick = false, wheelTimer, wheelStart;
   let firstVisible = 0, lastVisible = -1;
   nodes.forEach(node => { node.hidden = true; });
   const colors = [[110,222,224],[110,177,247],[166,148,240],[239,162,194],[255,204,143]];
@@ -136,6 +137,8 @@
     if (era) eraPicker.value = String(era.start);
     prev.disabled = index===0;
     next.disabled = index===last;
+    directionHint.textContent = index === 0 ? '历史起点 · 左拖看后来' :
+      index === last ? '最近记录 · 右拖看更早' : '右拖看更早 · 左拖看后来';
   }
   function frame(now) {
     frameId = 0;
@@ -150,6 +153,7 @@
   function queue() { if (!frameId) frameId=requestAnimationFrame(frame); }
   function select(value) {
     clearTimeout(wheelTimer);
+    wheelStart = null;
     const index = clamp(Math.round(value));
     commit(index);
     const distance = Math.abs(index-focus);
@@ -157,6 +161,16 @@
       animation = {from:focus,to:index,start:performance.now(),duration:Math.min(520,200+Math.abs(index-focus)*60)};
     } else { animation=null; focus=index; }
     queue();
+  }
+  // A deliberate short swipe should advance one event in either direction,
+  // even when released slowly. Longer drags settle on the nearest star.
+  function snapGesture(origin, startIndex) {
+    const distance = focus - origin;
+    let index = Math.round(focus);
+    if (Math.abs(distance) * step >= 28) {
+      index = distance > 0 ? Math.max(index, startIndex + 1) : Math.min(index, startIndex - 1);
+    }
+    select(index);
   }
   nodes.forEach((node,i) => {
     stories[i].hidden = true;
@@ -184,7 +198,7 @@
   scene.addEventListener('pointerdown',event=>{
     if (!event.isPrimary || event.button!==0) return;
     suppressClick=false;
-    pointer={id:event.pointerId,x:event.clientX,y:event.clientY,lastX:event.clientX,time:event.timeStamp,speed:0,dragged:false};
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY,lastX:event.clientX,dragged:false};
   });
   scene.addEventListener('pointermove',event=>{
     if (!pointer || pointer.id!==event.pointerId) return;
@@ -195,14 +209,19 @@
       pointer.dragged=true;
       animation=null;
       clearTimeout(wheelTimer);
-      pointer.from=focus;
+      wheelStart=null;
+      pointer.origin=focus;
+      pointer.startIndex=selected;
       scene.setPointerCapture(event.pointerId);
       scene.classList.add('is-dragging');
     }
-    const dt=Math.max(1,event.timeStamp-pointer.time);
-    pointer.speed=.4*pointer.speed+.6*(pointer.lastX-event.clientX)/dt;
-    pointer.time=event.timeStamp; pointer.lastX=event.clientX;
-    focus=clamp(pointer.from-dx/step);
+    focus=clamp(focus+(pointer.lastX-event.clientX)/step);
+    pointer.lastX=event.clientX;
+    // Discard distance spent pulling past an endpoint so reversal works immediately.
+    if (focus===0 || focus===last) {
+      pointer.origin=focus;
+      pointer.startIndex=focus;
+    }
     commit(Math.round(focus));
     queue();
   });
@@ -214,9 +233,8 @@
     scene.classList.remove('is-dragging');
     if (scene.hasPointerCapture(event.pointerId)) scene.releasePointerCapture(event.pointerId);
     suppressClick=true;
-    const coast=!reduced.matches && event.type==='pointerup' && event.timeStamp-gesture.time<90
-      ? Math.max(-1.35,Math.min(1.35,gesture.speed*105/step)) : 0;
-    select(focus + coast);
+    if (event.type==='pointerup') snapGesture(gesture.origin, gesture.startIndex);
+    else select(focus);
   }
   window.addEventListener('pointerup',release);
   scene.addEventListener('pointercancel',release);
@@ -234,11 +252,13 @@
     if (destination === focus) return;
     event.preventDefault();
     animation = null;
+    if (!wheelStart) wheelStart = {origin:focus,index:selected};
     focus = destination;
+    if (focus===0 || focus===last) wheelStart = {origin:focus,index:focus};
     commit(Math.round(focus));
     queue();
     clearTimeout(wheelTimer);
-    wheelTimer = setTimeout(() => select(focus), 140);
+    wheelTimer = setTimeout(() => snapGesture(wheelStart.origin,wheelStart.index), 140);
   }, {passive:false});
   function resize() {
     width=scene.clientWidth; height=scene.clientHeight;
