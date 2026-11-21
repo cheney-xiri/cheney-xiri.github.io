@@ -43,7 +43,9 @@
   eraPicker.addEventListener('change', () => select(Number(eraPicker.value)));
   nav.prepend(eraPicker);
   let width = 1, height = 1, step = 1, labelWidth = 110, focus = 0, selected = -1;
-  let pointer, animation, frameId = 0, suppressClick = false;
+  let pointer, animation, frameId = 0, suppressClick = false, wheelTimer;
+  let firstVisible = 0, lastVisible = -1;
+  nodes.forEach(node => { node.hidden = true; });
   const colors = [[110,222,224],[110,177,247],[166,148,240],[239,162,194],[255,204,143]];
   function ink(u, opacity) {
     const t = Math.max(0, Math.min(.9999, u)) * (colors.length - 1);
@@ -52,20 +54,18 @@
     return 'rgba(' + channels.join(',') + ',' + opacity + ')';
   }
   // Perspective projection shared by the luminous strands and their event stars.
-  function project(t, strand = 0) {
-    const angle = t * .86 - .7;
+  function project(x, strand = 0) {
+    const u = x / width;
+    const angle = (u - .5) * 3.8 - .32;
     const twist = angle * .82 + .55;
     const z = .9 * Math.cos(angle) + strand * .18 * Math.cos(twist);
     const depth = 4.6 / (4.6 - z);
-    const y = Math.sin(angle) + .19 * Math.sin(t * .48 + .65) + strand * .17 * Math.sin(twist);
-    const anchor = .5 - .23*Math.max(0,1-focus/3) + .23*Math.max(0,1-(last-focus)/3);
-    return { x:width * anchor + (t - focus) * step * depth,
-      y:height * (.49 - .153 * y * depth + .024 * z), depth };
+    const y = Math.sin(angle) + strand * .20 * Math.sin(twist);
+    return { x, y:height * (.50 - .18 * y * depth + .024 * z), depth };
   }
   function drawOrbit() {
     ctx.clearRect(0,0,width,height);
-    const span = width / step * .95 + 2;
-    const start = focus - span, end = focus + span;
+    const start = 0, end = width;
     const slices = Math.ceil(width / 4);
     const palette = ctx.createLinearGradient(0,0,width,0);
     for (let i=0; i<=48; i++) {
@@ -94,14 +94,19 @@
     ctx.globalAlpha=1;
   }
   function paint() {
-    if (ctx) drawOrbit();
-    const current = pointer?.dragged ? Math.round(focus) : selected;
-    nodes.forEach((node,i) => {
-      const p = project(i);
-      const shown = p.x > 18 && p.x < width-18;
-      node.hidden = !shown;
-      if (!shown) return;
-      const near = i === current;
+    const center = width / 2;
+    const first = Math.max(0, Math.ceil(focus - (center-15)/step));
+    const end = Math.min(last, Math.floor(focus + (center-15)/step));
+    for (let i=firstVisible; i<=lastVisible; i++) {
+      if (i < first || i > end) nodes[i].hidden = true;
+    }
+    firstVisible = first;
+    lastVisible = end;
+    for (let i=first; i<=end; i++) {
+      const node = nodes[i];
+      const p = project(center + (i-focus)*step);
+      node.hidden = false;
+      const near = i === selected;
       node.style.left = p.x + 'px';
       node.style.top = p.y + 'px';
       node.style.setProperty('--diameter', (near ? 9 : 5.5*p.depth) + 'px');
@@ -113,7 +118,7 @@
       // Tuck labels inward when the star is at a screen edge.
       const half = labelWidth/2;
       node.style.setProperty('--nudge', (Math.max(half+5,Math.min(width-half-5,p.x))-p.x) + 'px');
-    });
+    }
   }
   function commit(index) {
     if (selected === index) return;
@@ -125,6 +130,7 @@
     stories[index].hidden = false;
     nodes[index].setAttribute('aria-current','step');
     counter.textContent = String(index+1).padStart(2,'0')+' / '+nodes.length;
+    counter.setAttribute('aria-label', nodes[index].getAttribute('aria-label')+'，第 '+(index+1)+' 个，共 '+nodes.length+' 个');
     const era = eras.findLast(item => item.start <= index);
     if (era) eraPicker.value = String(era.start);
     prev.disabled = index===0;
@@ -142,6 +148,7 @@
   }
   function queue() { if (!frameId) frameId=requestAnimationFrame(frame); }
   function select(value) {
+    clearTimeout(wheelTimer);
     const index = clamp(Math.round(value));
     commit(index);
     const distance = Math.abs(index-focus);
@@ -158,6 +165,14 @@
     node.tabIndex=-1;
     node.addEventListener('click',event=>{ if (!suppressClick || event.detail===0) select(i); });
   });
+  // The luminous track itself is a target, including the gaps between stars.
+  scene.addEventListener('click', event => {
+    if (suppressClick || event.target.closest('.chronicle-node')) return;
+    const bounds = scene.getBoundingClientRect();
+    const x = event.clientX - bounds.left;
+    const index = focus + (x-width/2)/step;
+    if (index >= -.4 && index <= last+.4 && Math.abs(event.clientY-bounds.top-project(x).y) <= 26) select(index);
+  });
   prev.addEventListener('click',()=>select(selected-1));
   next.addEventListener('click',()=>select(selected+1));
   scene.addEventListener('keydown',event=>{
@@ -167,7 +182,7 @@
   scene.addEventListener('pointerdown',event=>{
     if (!event.isPrimary || event.button!==0) return;
     suppressClick=false;
-    pointer={id:event.pointerId,x:event.clientX,y:event.clientY,from:focus,lastX:event.clientX,time:event.timeStamp,speed:0,dragged:false};
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY,lastX:event.clientX,time:event.timeStamp,speed:0,dragged:false};
   });
   scene.addEventListener('pointermove',event=>{
     if (!pointer || pointer.id!==event.pointerId) return;
@@ -177,6 +192,8 @@
       if (Math.abs(dx)<6) return;
       pointer.dragged=true;
       animation=null;
+      clearTimeout(wheelTimer);
+      pointer.from=focus;
       scene.setPointerCapture(event.pointerId);
       scene.classList.add('is-dragging');
     }
@@ -184,6 +201,7 @@
     pointer.speed=.4*pointer.speed+.6*(pointer.lastX-event.clientX)/dt;
     pointer.time=event.timeStamp; pointer.lastX=event.clientX;
     focus=clamp(pointer.from-dx/step);
+    commit(Math.round(focus));
     queue();
   });
   function release(event) {
@@ -194,13 +212,32 @@
     scene.classList.remove('is-dragging');
     if (scene.hasPointerCapture(event.pointerId)) scene.releasePointerCapture(event.pointerId);
     suppressClick=true;
-    const coast=!reduced.matches && event.type==='pointerup' && event.timeStamp-gesture.time<80
-      ? Math.max(-1,Math.min(1,gesture.speed*85/step)) : 0;
+    const coast=!reduced.matches && event.type==='pointerup' && event.timeStamp-gesture.time<90
+      ? Math.max(-1.35,Math.min(1.35,gesture.speed*105/step)) : 0;
     select(focus + coast);
   }
   window.addEventListener('pointerup',release);
   scene.addEventListener('pointercancel',release);
-  scene.addEventListener('lostpointercapture',release);
+  scene.addEventListener('lostpointercapture',event=>{
+    // Touch starts with implicit capture on the label. Its capture-loss event
+    // bubbles here when the drag transfers to the scene.
+    if (event.target === scene) release(event);
+  });
+  scene.addEventListener('wheel', event => {
+    if (pointer || event.ctrlKey) return;
+    const sideways = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+    if (!sideways && !event.shiftKey) return;
+    const units = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? width : 1;
+    const destination = clamp(focus + (sideways ? event.deltaX : event.deltaY)*units/step);
+    if (destination === focus) return;
+    event.preventDefault();
+    animation = null;
+    focus = destination;
+    commit(Math.round(focus));
+    queue();
+    clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(() => select(focus), 140);
+  }, {passive:false});
   function resize() {
     width=scene.clientWidth; height=scene.clientHeight;
     if (!width || !height) return;
@@ -209,7 +246,10 @@
     scene.style.setProperty('--label-width',labelWidth+'px');
     const dpr=Math.min(window.devicePixelRatio||1,2);
     canvas.width=Math.round(width*dpr); canvas.height=Math.round(height*dpr);
-    if(ctx) ctx.setTransform(dpr,0,0,dpr,0,0);
+    if(ctx) {
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      drawOrbit();
+    }
     queue();
   }
   reduced.addEventListener('change',()=>{if(reduced.matches)select(selected)});

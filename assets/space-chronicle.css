@@ -20,6 +20,11 @@
 .chronicle-node[hidden] { display:none }
 .chronicle-node i { position:absolute; top:50%; left:50%; width:var(--diameter,6px); height:var(--diameter,6px); transform:translate(-50%,-50%); border-radius:50%; background:#f7fbff; box-shadow:0 0 6px 1px var(--star-color),0 0 13px var(--star-color) }
 .chronicle-node.is-active i::after { content:""; position:absolute; inset:-6px; border:1px solid #e8f6ffaf; border-radius:50% }
+.chronicle-node.is-active i { box-shadow:0 0 4px white,0 0 11px 2px var(--star-color),0 0 26px 8px var(--star-color) }
+@media (hover:hover) and (pointer:fine) {
+  .chronicle-node:not(.is-active):hover i { outline:1px solid #d2edff; outline-offset:4px }
+  .chronicle-node:hover b { color:white }
+}
 .chronicle-node span { position:absolute; display:grid; gap:.24rem; width:var(--label-width,110px); left:50%; top:calc(50% + 18px); transform:translateX(calc(-50% + var(--nudge,0px))); text-align:center; text-shadow:0 1px 5px #07101e,0 0 7px #07101e }
 .chronicle-node.label-above span { bottom:calc(50% + 18px); top:auto }
 .chronicle-node b { font:400 .98rem/1.2 Consolas,monospace; letter-spacing:.02em }
@@ -30,6 +35,8 @@
 .chronicle-arrow { width:44px; height:44px; border:1px solid #a8c9d45c; border-radius:50%; background:#0e1c2b; color:#e0edf3; font-size:1.05rem; cursor:pointer }
 .chronicle-arrow:disabled { opacity:.27; cursor:default }
 .chronicle-arrow:hover:enabled { background:#24374a }
+.chronicle-arrow:active:enabled { background:#324e63 }
+.chronicle-navigation #chronicle-position { white-space:nowrap; font-variant-numeric:tabular-nums }
 .chronicle-era-picker {
   margin-right:auto; min-width:0; max-width:58%; min-height:40px; padding:.25rem .45rem;
   color:#d7e8f0; background:#122233; border:1px solid #a8c9d457; border-radius:5px;
@@ -55,6 +62,7 @@
 .chronicle-photo .space-zoom { display:none }
 .space-chronicle :focus-visible { outline:2px solid #c6e4ff; outline-offset:-2px }
 @media (prefers-reduced-motion:no-preference) { .chronicle-story:not([hidden]) { animation:orbit-story .23s ease-out } @keyframes orbit-story { from { opacity:.55; translate:0 4px } } }
+.chronicle-scene.is-dragging ~ .chronicle-stories .chronicle-story { animation:none }
 @media(max-width:680px) {
   .chronicle-heading { flex-wrap:wrap; gap:.5rem }
   .chronicle-period { display:flex; gap:.7rem; align-items:baseline; font-size:.95rem }
