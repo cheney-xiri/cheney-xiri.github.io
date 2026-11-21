@@ -254,6 +254,126 @@
       "text": "嫦娥六号返回器携带月球背面样本回到地球，实现世界首次月背采样返回。对月球的研究，获得了来自背面的直接样本。",
       "image": "nasa-pia00001",
       "source": "https://www.cnsa.gov.cn/n6758823/n6758844/n10518102/n10518147/c10565180/content.html"
+    },
+    {
+      "id": "blue-ghost-1",
+      "year": "2025",
+      "date": "2025-03-02",
+      "title": "蓝色幽灵在月球危海软着陆",
+      "who": "美国 · Firefly Aerospace / NASA",
+      "kind": "商业月球探测",
+      "text": "蓝色幽灵一号在月球正面的危海着陆，把十项 NASA 科学与技术载荷送到月表。任务在一个月球白昼内开展观测与实验，涉及月壤、月尘和太阳风等研究。",
+      "source": "https://www.nasa.gov/news-release/nasa-science-continues-after-fireflys-first-moon-mission-concludes/"
+    },
+    {
+      "id": "tianwen-2-launch",
+      "year": "2025",
+      "date": "2025-05-29",
+      "title": "天问二号启程，飞向地球准卫星",
+      "who": "中国 · 国家航天局",
+      "kind": "小行星探测",
+      "text": "天问二号从西昌发射升空，开启中国首次小行星探测与采样返回任务。首个目标是近地小行星 2016 HO3。它绕太阳公转，在随地球运动的参考系中看起来像在绕地球转，因此被称为地球的准卫星。",
+      "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10676920/content.html"
+    },
+    {
+      "id": "proba-3-eclipse",
+      "year": "2025",
+      "date": "2025-06-16",
+      "title": "欧洲双星在轨制造人工日食",
+      "who": "欧洲 · 欧洲空间局 / Proba-3",
+      "kind": "太阳观测",
+      "text": "欧洲空间局公布 Proba-3 的首批日冕影像。一颗卫星挡住太阳的明亮圆面，另一颗在约 150 米外的阴影中观测暗得多的日冕。这种精密编队让探测器可以反复创造观测条件。",
+      "source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Proba-3_s_first_artificial_solar_eclipse"
+    },
+    {
+      "id": "rubin-first-look",
+      "year": "2025",
+      "date": "2025-06-23",
+      "title": "鲁宾天文台公开首批天图",
+      "who": "美国 NSF、DOE · 智利帕琼山",
+      "kind": "光学巡天",
+      "text": "坐落在智利的鲁宾天文台公布首批公开影像，展示它用大视场反复拍摄夜空的能力。比较同一片天空在不同时间的图像，可以发现移动的小行星，以及亮度随时间变化的天体。",
+      "source": "https://rubinobservatory.org/news/first-imagery-rubin"
+    },
+    {
+      "id": "atlas-interstellar",
+      "year": "2025",
+      "date": "2025-07-01",
+      "title": "发现第三个已知星际天体 3I/ATLAS",
+      "who": "智利 ATLAS 巡天站 · 夏威夷大学 / NASA",
+      "kind": "星际天体",
+      "text": "智利的 ATLAS 巡天望远镜向小行星中心报告了这颗彗星。后续观测确认它沿双曲线轨道穿过太阳系，成为第三个已知来自太阳系外的天体，也为比较其他恒星系统的彗星物质提供了机会。",
+      "source": "https://science.nasa.gov/solar-system/comets/3i-atlas/"
+    },
+    {
+      "id": "spherex-first-map",
+      "year": "2025",
+      "date": "2025-12-18",
+      "title": "SPHEREx 发布首张红外全天图",
+      "who": "美国 · NASA / 喷气推进实验室",
+      "kind": "红外巡天",
+      "text": "SPHEREx 用 102 个红外波段完成首次全天测绘。分波段的图像可帮助研究者识别银河系内的气体和尘埃，并为测量远方星系的三维分布提供数据。",
+      "source": "https://www.jpl.nasa.gov/news/nasas-spherex-observatory-completes-first-cosmic-map-like-no-other/"
+    },
+    {
+      "id": "artemis-ii-return",
+      "year": "2026",
+      "date": "2026-04-10",
+      "title": "阿耳忒弥斯二号载人绕月后返回",
+      "who": "美国 NASA · 加拿大航天局",
+      "kind": "载人绕月",
+      "text": "猎户座飞船搭载四名宇航员，于 4 月 1 日升空、6 日飞掠月球、10 日在太平洋溅落。人类自阿波罗 17 号以来首次再次载人飞往月球附近，任务检验了飞船的生命保障、深空运行和高速再入能力。",
+      "source": "https://www.nasa.gov/news-release/nasa-welcomes-record-setting-artemis-ii-moonfarers-back-to-earth/"
+    },
+    {
+      "id": "smile-launch",
+      "year": "2026",
+      "date": "2026-05-19",
+      "title": "中欧联合发射 SMILE 磁层探测卫星",
+      "who": "中国科学院 · 欧洲空间局",
+      "kind": "空间天气",
+      "text": "中欧联合研制的 SMILE 卫星从法属圭亚那升空。任务以软 X 射线成像观测太阳风迎面冲击地球磁层的区域，并以紫外观测追踪极光，把磁层边界与地球上空的响应联系起来。",
+      "source": "https://www.esa.int/Science_Exploration/Space_Science/Smile/Smile_factsheet2"
+    },
+    {
+      "id": "tianwen-2-rendezvous",
+      "year": "2026",
+      "date": "2026-07-02（抵近成像）",
+      "title": "天问二号抵近小行星 2016 HO3",
+      "who": "中国 · 国家航天局",
+      "kind": "小行星近距探测",
+      "text": "国家航天局 7 月 6 日公布，天问二号已与目标小行星交会并开始科学探测。7 月 2 日，探测器在约 20 千米外拍摄到小行星影像。近距离观测有助于了解它的形貌，并为后续采样选区提供依据。",
+      "source": "https://www.cnsa.gov.cn/n6758823/n6758838/c10760422/content.html"
+    },
+    {
+      "id": "euclid-early-quasars",
+      "year": "2026",
+      "date": "2026-07-06",
+      "title": "欧几里得望远镜找到极早期类星体",
+      "who": "欧洲空间局 · 欧几里得国际科研团队",
+      "kind": "早期宇宙",
+      "text": "欧几里得团队公布一批早期类星体，最早的两个在宇宙约 6.7 亿岁时已发光。这些由超大质量黑洞吸积供能的天体，为研究早期黑洞如何迅速长大提供了新的观测证据。",
+      "source": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_the_most_ancient_quasar_in_the_Universe"
+    },
+    {
+      "id": "bepicolombo-transfer-separation",
+      "year": "2026",
+      "date": "2026-09-03",
+      "title": "贝皮科伦坡分离转移舱，进入水星抵达阶段",
+      "who": "欧洲空间局 · 日本宇宙航空研究开发机构",
+      "kind": "水星探测",
+      "text": "贝皮科伦坡在接近水星途中成功分离水星转移舱。此后，仍连接在一起的欧洲水星行星轨道器与日本水星磁层轨道器，由欧洲轨道器的推进系统承担后续导航和轨道调整。",
+      "source": "https://www.esa.int/et/articles/about-us/directorates/operations/bepicolombo-begins-mercury-arrival-with-mtm-separation-success"
+    },
+    {
+      "id": "escapade-earth-flybys",
+      "year": "2026",
+      "date": "2026-11-07 至 11-09",
+      "title": "ESCAPADE 双探测器借地球引力飞向火星",
+      "who": "美国 · NASA / 加州大学伯克利分校等",
+      "kind": "火星探测",
+      "text": "两艘探测器分别在 11 月 7 日和 9 日飞掠地球，同时点火加速，成功转入驶向火星的轨道。这是 NASA 首次用这种带动力的地球飞掠把探测器送往火星。任务最终将研究太阳风如何影响火星大气流失。",
+      "source": "https://science.nasa.gov/science-research/heliophysics/nasas-escapade-completes-powered-earth-flybys-now-en-route-to-mars/"
     }
   ]
 }

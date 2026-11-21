@@ -129,6 +129,8 @@
     queue();
   }
   nodes.forEach((node,i) => {
+    stories[i].hidden = true;
+    node.removeAttribute('aria-current');
     node.querySelector('small').textContent = stories[i].querySelector('h3').textContent;
     node.removeAttribute('title');
     node.tabIndex=-1;
@@ -190,7 +192,10 @@
   }
   reduced.addEventListener('change',()=>{if(reduced.matches)select(selected)});
   scene.dataset.renderer='orbital-ribbon';
-  commit(0);
+  const requestedYear = new URLSearchParams(window.location.search).get('year');
+  const initialNode = nodes.findIndex(node => node.dataset.year === requestedYear);
+  focus = Math.max(0, initialNode);
+  commit(focus);
   resize();
   new ResizeObserver(resize).observe(scene);
 }());
